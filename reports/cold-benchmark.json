@@ -1,0 +1,242 @@
+{
+  "256": {
+    "native": [
+      {
+        "elapsed_seconds": 0.4458040000026813,
+        "wddm_local_peak_bytes": 184549376,
+        "wddm_samples": 38,
+        "metrics": {
+          "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "driver_api": 13040,
+          "cufft_version": 11401,
+          "views": 180,
+          "n": 256,
+          "batch": 16,
+          "slab": 256,
+          "slabs": 1,
+          "launches_bp": 12,
+          "budget_bytes": 805306368,
+          "redzones_verified": true,
+          "peak_owned_bytes": 76814240,
+          "host_pinned_bytes": 9699328,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 7383023616,
+          "free_at_allocation_bytes": 7292846080,
+          "filter_ms": 3.2415,
+          "bp_ms": 17.5253,
+          "h2d_ms": 2.9544,
+          "d2h_ms": 7.2116,
+          "wall_ms": 354.964
+        }
+      },
+      {
+        "elapsed_seconds": 0.34306310000101803,
+        "wddm_local_peak_bytes": 184549376,
+        "wddm_samples": 29,
+        "metrics": {
+          "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "driver_api": 13040,
+          "cufft_version": 11401,
+          "views": 180,
+          "n": 256,
+          "batch": 16,
+          "slab": 256,
+          "slabs": 1,
+          "launches_bp": 12,
+          "budget_bytes": 805306368,
+          "redzones_verified": true,
+          "peak_owned_bytes": 76814240,
+          "host_pinned_bytes": 9699328,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 7383023616,
+          "free_at_allocation_bytes": 7292846080,
+          "filter_ms": 2.0623,
+          "bp_ms": 15.3018,
+          "h2d_ms": 1.6672,
+          "d2h_ms": 6.1968,
+          "wall_ms": 269.335
+        }
+      },
+      {
+        "elapsed_seconds": 0.3442228000058094,
+        "wddm_local_peak_bytes": 184549376,
+        "wddm_samples": 30,
+        "metrics": {
+          "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "driver_api": 13040,
+          "cufft_version": 11401,
+          "views": 180,
+          "n": 256,
+          "batch": 16,
+          "slab": 256,
+          "slabs": 1,
+          "launches_bp": 12,
+          "budget_bytes": 805306368,
+          "redzones_verified": true,
+          "peak_owned_bytes": 76814240,
+          "host_pinned_bytes": 9699328,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 7383023616,
+          "free_at_allocation_bytes": 7292846080,
+          "filter_ms": 1.6231,
+          "bp_ms": 15.1085,
+          "h2d_ms": 1.9079,
+          "d2h_ms": 5.5155,
+          "wall_ms": 271.295
+        }
+      }
+    ],
+    "astra": [
+      {
+        "elapsed_seconds": 2.5967380000001867,
+        "wddm_local_peak_bytes": 211812352,
+        "wddm_samples": 196,
+        "metrics": {
+          "astra_version": "2.5.0",
+          "algorithm_seconds": 0.2383475000024191,
+          "io_algorithm_seconds": 0.4764722000036272
+        }
+      },
+      {
+        "elapsed_seconds": 2.4276215999998385,
+        "wddm_local_peak_bytes": 211812352,
+        "wddm_samples": 180,
+        "metrics": {
+          "astra_version": "2.5.0",
+          "algorithm_seconds": 0.21631229999911739,
+          "io_algorithm_seconds": 0.47138170000107493
+        }
+      },
+      {
+        "elapsed_seconds": 2.086466000000655,
+        "wddm_local_peak_bytes": 211812352,
+        "wddm_samples": 160,
+        "metrics": {
+          "astra_version": "2.5.0",
+          "algorithm_seconds": 0.19994309999310644,
+          "io_algorithm_seconds": 0.4351320999994641
+        }
+      }
+    ]
+  },
+  "512": {
+    "native": [
+      {
+        "elapsed_seconds": 0.9559980999983964,
+        "wddm_local_peak_bytes": 654311424,
+        "wddm_samples": 88,
+        "metrics": {
+          "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "driver_api": 13040,
+          "cufft_version": 11401,
+          "views": 180,
+          "n": 512,
+          "batch": 16,
+          "slab": 512,
+          "slabs": 1,
+          "launches_bp": 12,
+          "budget_bytes": 805306368,
+          "redzones_verified": true,
+          "peak_owned_bytes": 546576288,
+          "host_pinned_bytes": 9699328,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 7383023616,
+          "free_at_allocation_bytes": 6823084032,
+          "filter_ms": 1.676,
+          "bp_ms": 154.6667,
+          "h2d_ms": 2.3971,
+          "d2h_ms": 35.5333,
+          "wall_ms": 878.616
+        }
+      },
+      {
+        "elapsed_seconds": 1.1562084999968647,
+        "wddm_local_peak_bytes": 654311424,
+        "wddm_samples": 105,
+        "metrics": {
+          "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "driver_api": 13040,
+          "cufft_version": 11401,
+          "views": 180,
+          "n": 512,
+          "batch": 16,
+          "slab": 512,
+          "slabs": 1,
+          "launches_bp": 12,
+          "budget_bytes": 805306368,
+          "redzones_verified": true,
+          "peak_owned_bytes": 546576288,
+          "host_pinned_bytes": 9699328,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 7383023616,
+          "free_at_allocation_bytes": 6823084032,
+          "filter_ms": 1.8658,
+          "bp_ms": 171.568,
+          "h2d_ms": 2.3238,
+          "d2h_ms": 41.1069,
+          "wall_ms": 1048.885
+        }
+      },
+      {
+        "elapsed_seconds": 1.2379147000028752,
+        "wddm_local_peak_bytes": 654311424,
+        "wddm_samples": 114,
+        "metrics": {
+          "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+          "driver_api": 13040,
+          "cufft_version": 11401,
+          "views": 180,
+          "n": 512,
+          "batch": 16,
+          "slab": 512,
+          "slabs": 1,
+          "launches_bp": 12,
+          "budget_bytes": 805306368,
+          "redzones_verified": true,
+          "peak_owned_bytes": 546576288,
+          "host_pinned_bytes": 9699328,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 7383023616,
+          "free_at_allocation_bytes": 6823084032,
+          "filter_ms": 3.244,
+          "bp_ms": 154.441,
+          "h2d_ms": 2.8299,
+          "d2h_ms": 39.8185,
+          "wall_ms": 1148.511
+        }
+      }
+    ],
+    "astra": [
+      {
+        "elapsed_seconds": 4.175782300000719,
+        "wddm_local_peak_bytes": 681574400,
+        "wddm_samples": 354,
+        "metrics": {
+          "astra_version": "2.5.0",
+          "algorithm_seconds": 0.5483760999995866,
+          "io_algorithm_seconds": 2.4019480000060867
+        }
+      },
+      {
+        "elapsed_seconds": 4.820325399996364,
+        "wddm_local_peak_bytes": 681574400,
+        "wddm_samples": 412,
+        "metrics": {
+          "astra_version": "2.5.0",
+          "algorithm_seconds": 0.5793520000006538,
+          "io_algorithm_seconds": 2.903627099993173
+        }
+      },
+      {
+        "elapsed_seconds": 4.967394899998908,
+        "wddm_local_peak_bytes": 681574400,
+        "wddm_samples": 418,
+        "metrics": {
+          "astra_version": "2.5.0",
+          "algorithm_seconds": 0.5883544999960577,
+          "io_algorithm_seconds": 2.746489400000428
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "compiler": "g++.exe (x86_64-win32-sjlj-rev1, Built by MinGW-W64 project) 6.2.0",
+  "nvrtc": "12.9.86",
+  "rebuilds": 2,
+  "executable_sha256": "658db372cc274083024d68b547297c5f602259d1738b287c63f1282684280dd0",
+  "ptx_sha256": "8697e37dc4acd3de47ad6454a07db132f7203cbbe0544f2b5d125a684741e122",
+  "identical": true
+}

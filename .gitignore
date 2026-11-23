@@ -1,0 +1,13 @@
+.venv/
+tools/
+data/
+build/
+dist/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+*.partial.*
+
+/SHA256SUMS
+/reports/**/walnut-viewer.html
+/reports/walnut-viewer.html

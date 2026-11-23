@@ -1,0 +1,7 @@
+# Provenance and licensing
+
+- Measured projections: Alexander Meaney, **Cone-Beam Computed Tomography Dataset of a Walnut**, University of Helsinki, [Zenodo record 6986012](https://doi.org/10.5281/zenodo.6986012), CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). The distributed fixtures and previews are modified: uniform angular subsampling, optional five-pixel circular left shift, intensity binning, per-view air normalization, negative logarithm, and FDK reconstruction. The original data are already dark/flat corrected. The duplicate final view is omitted. No affiliation or endorsement is implied. See `fixtures/walnut-s8-b8/frames.json` for individual TIFF SHA-256.
+- Geometry, metadata and rotation-center note: https://zenodo.org/records/6986012 . Background ROI convention: https://github.com/Diagonalizable/HelTomo .
+- L. A. Feldkamp, L. C. Davis, J. W. Kress, “Practical cone-beam algorithm,” JOSA A 1, 612–619 (1984), doi:10.1364/JOSAA.1.000612.
+- External reference only: [ASTRA Toolbox FDK_CUDA](https://astra-toolbox.com/docs/algs/FDK_CUDA.html), GPL-3.0. The native executable does not link to ASTRA and uses no ASTRA kernel. Comparative Python scripts use a separately installed ASTRA distribution.
+- NVIDIA driver, NVRTC and cuFFT are external NVIDIA software subject to NVIDIA terms. No NVIDIA DLL is redistributed here. The core uses the CUDA Driver API (https://docs.nvidia.com/cuda/cuda-driver-api/) and cuFFT (https://docs.nvidia.com/cuda/cufft/).
