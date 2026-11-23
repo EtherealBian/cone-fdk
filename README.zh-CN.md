@@ -1,5 +1,7 @@
 # ConeFDK · Windows 单 GPU 锥束 CT 重建
 
+**孔隙测量实验：** [查看钴铬试件的逐孔结果、误差和验收标准](https://github.com/EtherealBian/cone-fdk/tree/measurement-lab/pores)。下文是已发布的 CT 重建器；自动找孔精度尚未通过最终验收。
+
 给定一圈等角间隔的平板 X 射线投影，重建可按毫米坐标读取的三维衰减体。**重建引擎是原生 C++ / CUDA**：手写锥束加权、有限离散 Ram-Lak 响应、反投影；只把一维批量 FFT 交给 NVIDIA cuFFT。Python 不在重建执行路径中，用来准备数据、调用独立的 ASTRA GPU 基线和做验收。
 
 - [与上一发布版的同机 A/B](reports/OPTIMIZATION.md) · [逐次原始计时](reports/native-ab.json)

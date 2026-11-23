@@ -1,5 +1,7 @@
 # ConeFDK · Single-GPU cone-beam CT reconstruction
 
+**Pore measurement (experimental):** [review real CoCr specimens and the release gates](https://github.com/EtherealBian/cone-fdk/tree/measurement-lab/pores). This is separate from the validated reconstruction below; automatic per-pore precision has not passed confirmation.
+
 Reconstruct a 3D attenuation volume from a full rotation of X-ray projections on a Windows PC. ConeFDK uses native C++ and CUDA for cone weighting, filtering and backprojection; cuFFT provides the batched 1D transforms. Python prepares input and checks the result against independent implementations. It is not needed in the reconstruction executable.
 
 [中文文档](README.zh-CN.md) · [Windows release](https://github.com/EtherealBian/cone-fdk/releases/tag/v0.1.0) · [Download the offline slice viewer](https://github.com/EtherealBian/cone-fdk/releases/download/v0.1.0/walnut-512-viewer.html)
