@@ -7,6 +7,7 @@ from tempfile import TemporaryDirectory
 
 import numpy as np
 from denoise import Denoise
+from freeze import DEV, HOLDOUT, NAMES, checked_manifest, identity, token
 from local_model import median_stack
 from pore_check import ROOT, native, reference
 from residual_model import features, fit, probability
@@ -14,7 +15,10 @@ from review import write_review
 from validate import ORIGIN, SPEC, final_gates, objects, score, sha, stack, verified
 
 
-def run(i, cache, out, fetch, variant="A"):
+def run(i, cache, out, fetch, variant="A", *, permit=None):
+    if i in HOLDOUT and not permit:
+        raise ValueError("Reserved specimens require a frozen, replayed development pass")
+    pipeline_id = token(identity(variant))
     from block_model import HALO, train_threshold
     from block_model import features as patch_features
     from boundary_model import ensemble
@@ -96,13 +100,9 @@ def run(i, cache, out, fetch, variant="A"):
     report = dict(
         specimen=i,
         role="development" if i in [2, 3, 5] else "confirmation",
-        method=(
-            "multiscale boundary ensemble C"
-            if is_c
-            else "blockwise NLM classifier B"
-            if is_b
-            else "calibrated NLM residual classifier A"
-        ),
+        method=NAMES[variant],
+        pipeline_id=pipeline_id,
+        confirmation_manifest=permit,
         source={"raw": rs, "segmented": ss},
         calibration_z=[160, 184],
         evaluation_z=[400, 528],
@@ -131,8 +131,26 @@ if __name__ == "__main__":
     ap.add_argument("--model", choices=["A", "B", "C"], default="A")
     ap.add_argument("--out", type=Path)
     ap.add_argument("--fetch", action="store_true")
-    ap.add_argument("--specimens", type=int, nargs="+", choices=list(SPEC), required=True)
+    group = ap.add_mutually_exclusive_group(required=True)
+    group.add_argument("--specimens", type=int, nargs="+", choices=DEV, help="Development only")
+    group.add_argument(
+        "--confirm", type=Path, help="Published freeze manifest; evaluates BOTH holdouts"
+    )
+    ap.add_argument(
+        "--development-dir",
+        type=Path,
+        help="Complete development evidence used to create the manifest",
+    )
     args = ap.parse_args()
+    if bool(args.confirm) != bool(args.development_dir):
+        ap.error("--confirm and --development-dir must be supplied together")
+    permit = None
+    if args.confirm:
+        if not args.out or args.out.exists():
+            ap.error("Confirmation requires an explicit, new --out directory")
+        permit = checked_manifest(args.confirm, args.development_dir, args.cache, args.model)
+        args.out.mkdir(parents=True, exist_ok=False)
+        (args.out / "freeze.json").write_bytes(args.confirm.read_bytes())
     results = [
         run(
             i,
@@ -140,7 +158,8 @@ if __name__ == "__main__":
             args.out or ROOT / ("build/candidate-" + args.model),
             args.fetch,
             args.model,
+            permit=permit,
         )
-        for i in args.specimens
+        for i in (HOLDOUT if args.confirm else args.specimens)
     ]
     raise SystemExit(0 if all(results) else 1)

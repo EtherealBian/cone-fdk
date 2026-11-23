@@ -6,13 +6,16 @@ numerical consistency, not external traceability or independence of test data.
 """
 
 import argparse
+import base64
 import csv
+import io
 import json
 import re
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
 import numpy as np
+from PIL import Image
 from pore_check import reference
 from validate import ORIGIN, SOURCES, SPEC, final_gates, objects, score, sha, stack, verified
 
@@ -37,6 +40,24 @@ def decode(triples, size, binary=False):
         out[start : start + count] = value
         end = start + count
     return out
+
+
+def verify_review_images(payload, raw):
+    """Check every displayed grayscale pixel against the authenticated raw uint16 TIFF stack."""
+    lo, hi = np.percentile(raw, [1, 99])
+    require([payload["low"], payload["high"]] == [lo, hi], "Wrong raw display window")
+    for z, (layer, source) in enumerate(zip(payload["layers"], raw, strict=True)):
+        expected = np.clip((source.astype(float) - lo) * 255 / max(hi - lo, 1), 0, 255).astype(
+            "u1"
+        )
+        with Image.open(io.BytesIO(base64.b64decode(layer["image"], validate=True))) as image:
+            require(
+                image.mode == "L" and image.size == source.shape[::-1],
+                f"Invalid raw review plane {z}",
+            )
+            np.testing.assert_array_equal(
+                np.asarray(image), expected, err_msg=f"Wrong raw plane {z}"
+            )
 
 
 def replay(directory, i, cache=None):
@@ -87,7 +108,8 @@ def replay(directory, i, cache=None):
         ref[z] = decode(layer["reference"], 65536, True).reshape(256, 256)
     if cache is not None:
         # Pin the replay to the authenticated archives and independently reload test labels.
-        verified(cache, i, "raw", False)
+        raw, _ = verified(cache, i, "raw", False)
+        verify_review_images(p, stack(raw, i, "raw", 400, 528))
         seg, _ = verified(cache, i, "segmented", False)
         np.testing.assert_array_equal(ref, stack(seg, i, "segmented", 400, 528))
     require(
@@ -131,16 +153,41 @@ def main():
     ap.add_argument("directory", type=Path)
     ap.add_argument("--cache", type=Path, help="Required for confirmation; local NIST archives")
     ap.add_argument("--development", type=int, nargs="+", choices=[2, 3, 5])
+    ap.add_argument(
+        "--development-dir",
+        type=Path,
+        help="Original development reviews bound to the freeze manifest",
+    )
     a = ap.parse_args()
     if not __debug__:
         ap.error("Do not run the audit with Python -O")
     if not a.development and a.cache is None:
         ap.error("Confirmation requires the authenticated source archives (--cache)")
+    freeze_id = None
+    if not a.development:
+        from freeze import NAMES, checked_manifest, token
+
+        manifest = a.directory / "freeze.json"
+        if a.development_dir is None or not manifest.is_file():
+            ap.error(
+                "Confirmation requires freeze.json and --development-dir for independent replay"
+            )
+        frozen = json.loads(manifest.read_text(encoding="utf8"))
+        model = frozen["pipeline"]["model"]
+        freeze_id = checked_manifest(manifest, a.development_dir, a.cache, model)
     specimens = a.development or [4, 6]
     methods = set()
     ok = True
     for i in specimens:
         method, gates = replay(a.directory, i, a.cache)
+        if freeze_id is not None:
+            report = json.loads((a.directory / f"sample{i}.json").read_text(encoding="utf8"))
+            require(
+                method == NAMES[model]
+                and report.get("confirmation_manifest") == freeze_id
+                and report.get("pipeline_id") == token(frozen["pipeline"]),
+                "Confirmation not bound to this frozen candidate",
+            )
         methods.add(method)
         fail = [k for k, passed in gates.items() if not passed]
         ok &= not fail

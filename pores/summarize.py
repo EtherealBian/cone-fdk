@@ -39,7 +39,7 @@ def render():
         "",
         "1. 点击试件编号读 JSON（包括原始档案 SHA-256、区域坐标、所有门槛和阈值扰动结果）；同目录的 `*-pores.csv`、`*-matches.csv`、`*-cases.csv`（候选方法）分别是完整预测、符合条件的匹配和逐对象定位表。",
         "2. 在[实验附件](https://github.com/EtherealBian/cone-fdk/releases/tag/measurement-evidence-1)选择方法与试件，解压。打开 `*-cases.html` 查看漏检和体积误差最大的孔：左为原始局部切片，右为差异，旁边给出精确 TIFF 与 XYZ。`*-review.html` 可浏览区域内全部 128 层以及所有预测 ID。无需显卡或联网。",
-        "3. 从独立复核器重算，而非相信 JSON 中的 pass 字段：`python pores/audit.py build/candidate-C --development 2 3 5 --cache <archive-directory>`。最终确认省略 `--development`，强制读取 4 和 6 以及经校验的参考压缩包。",
+        "3. 从独立复核器重算，而非相信 JSON 中的 pass 字段：`python pores/audit.py build/candidate-C --development 2 3 5 --cache <archive-directory>`。最终确认需另提供 `--development-dir` 和提前公开的冻结清单，强制核对 4 和 6；见[操作步骤](README.md#protect-the-confirmation-specimens)。",
         "",
         "## 明确区分两个误差来源",
         "",
