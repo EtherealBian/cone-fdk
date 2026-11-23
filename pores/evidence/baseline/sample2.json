@@ -1,0 +1,147 @@
+{
+  "protocol": 1,
+  "final_gates": {
+    "dice": false,
+    "precision": false,
+    "recall": false,
+    "porosity_absolute": true,
+    "porosity_relative": true,
+    "object_prediction": false,
+    "object_reference": false,
+    "median_abs_volume_error_pct": false,
+    "p95_abs_volume_error_pct": false,
+    "median_abs_diameter_error_pct": false,
+    "p95_centroid_displacement_vox": false
+  },
+  "final_passed": false,
+  "specimen": 2,
+  "role": "development",
+  "source": {
+    "raw": {
+      "filepath": "raw/set1sample2raw.zip",
+      "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/raw/set1sample2raw.zip",
+      "sha256": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+      "size": 1248685767
+    },
+    "segmented": {
+      "filepath": "segmented/set1sample2segmented.zip",
+      "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/segmented/set1sample2segmented.zip",
+      "sha256": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+      "size": 6373937
+    }
+  },
+  "calibration_z": [
+    160,
+    184
+  ],
+  "evaluation_z": [
+    400,
+    528
+  ],
+  "origin_xyz": [
+    360,
+    376,
+    400
+  ],
+  "threshold": 44690,
+  "metrics": {
+    "tp": 58030,
+    "fp": 14318,
+    "fn": 16546,
+    "tn": 8299714,
+    "dice": 0.7899322098499905,
+    "precision": 0.802095427655222,
+    "recall": 0.7781323750268183,
+    "predicted_porosity_pct": 0.8624553680419922,
+    "reference_porosity_pct": 0.8890151977539062,
+    "porosity_error_pp": -0.026559829711914062
+  },
+  "baseline_gates": {
+    "dice": true,
+    "precision": true,
+    "recall": true,
+    "porosity": true
+  },
+  "baseline_passed": true,
+  "sensitivity": {
+    "44190": {
+      "tp": 55651,
+      "fp": 10929,
+      "fn": 18925,
+      "tn": 8303103,
+      "dice": 0.7885034996741194,
+      "precision": 0.835851607089216,
+      "recall": 0.7462320317528427,
+      "predicted_porosity_pct": 0.7936954498291016,
+      "reference_porosity_pct": 0.8890151977539062,
+      "porosity_error_pp": -0.09531974792480469
+    },
+    "45190": {
+      "tp": 60276,
+      "fp": 18337,
+      "fn": 14300,
+      "tn": 8295695,
+      "dice": 0.7869494545953039,
+      "precision": 0.7667434139391703,
+      "recall": 0.8082493027247372,
+      "predicted_porosity_pct": 0.9371399879455566,
+      "reference_porosity_pct": 0.8890151977539062,
+      "porosity_error_pp": 0.04812479019165039
+    }
+  },
+  "objects": {
+    "criterion": "both interior and >=64 voxels; descending IoU >=0.5, unique matches",
+    "eligible_prediction": 51,
+    "eligible_reference": 73,
+    "matches": 35,
+    "matched_fraction_prediction": 0.6862745098039216,
+    "matched_fraction_reference": 0.4794520547945205,
+    "median_abs_volume_error_pct": 14.418212478920744,
+    "p95_abs_volume_error_pct": 30.682938445052983,
+    "median_abs_diameter_error_pct": 4.883979439286179,
+    "p95_centroid_displacement_vox": 1.449913087383587
+  },
+  "table_sha256": "a76c992a09fa7fedfd2ed17a52c8df1d65179e3b7ca049508f47e5f93db2b594",
+  "review": {
+    "objects": 128,
+    "layers": 128,
+    "mask_encoding": "lossless start/length/stable-ID; both volumes round-trip checked",
+    "display_window_uint16": [
+      45273.0,
+      56000.0
+    ]
+  },
+  "review_sha256": "f0dedfdd73b091695c3b416d19c9831e92616ee959e4ccd96f493efa7b720ec9",
+  "same_mask_scipy_rows": 128,
+  "second_slab_depth": 37,
+  "native": {
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "shape_zyx": [
+      128,
+      256,
+      256
+    ],
+    "spacing_xyz_um": [
+      2.45,
+      2.45,
+      2.45
+    ],
+    "threshold_f32": 44690,
+    "filter": "median-xy",
+    "connectivity": 6,
+    "slab_depth": 8,
+    "device_buffer_bytes": 4194304,
+    "roi_voxels": 8388608,
+    "pore_voxels": 72348,
+    "porosity": 0.008624553680419922,
+    "components": 128,
+    "interior_components": 90,
+    "interior_pore_voxels": 43118,
+    "spanning_xyz": [
+      0,
+      0,
+      0
+    ],
+    "elapsed_s": 0.268254
+  }
+}

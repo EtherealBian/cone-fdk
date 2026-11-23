@@ -2,3 +2,4 @@
 *.npz binary
 *.gif binary
 *.png binary
+pores/evidence/**/*.csv -text whitespace=cr-at-eol

@@ -1,0 +1,53 @@
+{
+  "input": "Published NIST binary mask, NOT raw-to-mask detection",
+  "specimen": 3,
+  "source": {
+    "filepath": "segmented/set1sample3segmented.zip",
+    "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/segmented/set1sample3segmented.zip",
+    "sha256": "f94c64a99f5f0e7971a3e0e2f7c932183009938aa5d284bcd23f4657674e6009",
+    "size": 31314874
+  },
+  "origin_xyz": [
+    360,
+    376,
+    400
+  ],
+  "count_error_voxels": 0,
+  "all_rows_checked": 303,
+  "float_rtol": 1e-12,
+  "slab_depths": [
+    8,
+    37
+  ],
+  "table_sha256": "80d459dd52fa513b465d6e6adb7e11575b7f2e66aefdbcfd265b2f60b1e017d9",
+  "native": {
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "shape_zyx": [
+      128,
+      256,
+      256
+    ],
+    "spacing_xyz_um": [
+      2.77,
+      2.77,
+      2.77
+    ],
+    "threshold_f32": 0,
+    "filter": "none",
+    "connectivity": 6,
+    "slab_depth": 8,
+    "device_buffer_bytes": 4194304,
+    "roi_voxels": 8388608,
+    "pore_voxels": 1494660,
+    "porosity": 0.1781773567199707,
+    "components": 303,
+    "interior_components": 224,
+    "interior_pore_voxels": 6377,
+    "spanning_xyz": [
+      1,
+      1,
+      1
+    ],
+    "elapsed_s": 0.280066
+  }
+}

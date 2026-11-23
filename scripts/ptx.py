@@ -8,14 +8,14 @@ import sys
 root = pathlib.Path(__file__).resolve().parents[1]
 
 
-def compile_ptx():
+def compile_ptx(source_file="src/kernels.cu", output_file="build/kernels.ptx"):
     lib = pathlib.Path(sys.prefix) / "Lib/site-packages/nvidia/cuda_nvrtc/bin"
     _cookie = os.add_dll_directory(str(lib))
     os.environ["PATH"] = str(lib) + os.pathsep + os.environ["PATH"]
     _builtins = C.CDLL(str(next(lib.glob("nvrtc-builtins64*.dll"))))
     dll = C.CDLL(str(next(p for p in lib.glob("nvrtc64_*.dll") if ".alt" not in p.name)))
     prog = C.c_void_p()
-    source = (root / "src/kernels.cu").read_bytes()
+    source = (root / source_file).read_bytes()
 
     def ck(n):
         if n:
@@ -33,10 +33,10 @@ def compile_ptx():
     ck(dll.nvrtcGetPTXSize(prog, C.byref(s)))
     b = C.create_string_buffer(s.value)
     ck(dll.nvrtcGetPTX(prog, b))
-    (root / "build").mkdir(exist_ok=True)
-    (root / "build/kernels.ptx").write_bytes(b.raw)
+    (root / output_file).parent.mkdir(parents=True, exist_ok=True)
+    (root / output_file).write_bytes(b.raw)
     ck(dll.nvrtcDestroyProgram(C.byref(prog)))
 
 
 if __name__ == "__main__":
-    compile_ptx()
+    compile_ptx(*sys.argv[1:])

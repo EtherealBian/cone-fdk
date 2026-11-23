@@ -1,0 +1,62 @@
+[
+  {
+    "filepath": "raw/set1sample4raw.zip",
+    "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/raw/set1sample4raw.zip",
+    "sha256": "9f25e1436e094d6d8edf0d2f9ad25a67d9703c07a68b40a5709d6ce97c28eb02",
+    "size": 1268166915
+  },
+  {
+    "filepath": "raw/set1sample3raw.zip",
+    "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/raw/set1sample3raw.zip",
+    "sha256": "460ea68425d9ac387485b65a3aa2b3f25da31cfe9de8181d4c1a5b0a982d26c8",
+    "size": 1309952292
+  },
+  {
+    "filepath": "raw/set1sample2raw.zip",
+    "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/raw/set1sample2raw.zip",
+    "sha256": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+    "size": 1248685767
+  },
+  {
+    "filepath": "raw/set1sample6raw.zip",
+    "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/raw/set1sample6raw.zip",
+    "sha256": "fd0d422b51efe7210fd8f39fa0724787afdb9ed514cc3e5ebcf32e2651c5b739",
+    "size": 1317735379
+  },
+  {
+    "filepath": "raw/set1sample5raw.zip",
+    "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/raw/set1sample5raw.zip",
+    "sha256": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37",
+    "size": 1059819981
+  },
+  {
+    "filepath": "segmented/set1sample2segmented.zip",
+    "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/segmented/set1sample2segmented.zip",
+    "sha256": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+    "size": 6373937
+  },
+  {
+    "filepath": "segmented/set1sample5segmented.zip",
+    "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/segmented/set1sample5segmented.zip",
+    "sha256": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b",
+    "size": 14103654
+  },
+  {
+    "filepath": "segmented/set1sample4segmented.zip",
+    "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/segmented/set1sample4segmented.zip",
+    "sha256": "c3a97f8a8b8a02c1090fefc001390717d14c6fb3a68f63e922fb9ab03772d078",
+    "size": 4570134
+  },
+  {
+    "filepath": "segmented/set1sample6segmented.zip",
+    "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/segmented/set1sample6segmented.zip",
+    "sha256": "75315f42e8e27c96583728cc2dee3bc81bc39a856a80dd89471a07bf84546d45",
+    "size": 21625784
+  },
+  {
+    "filepath": "segmented/set1sample3segmented.zip",
+    "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/segmented/set1sample3segmented.zip",
+    "sha256": "f94c64a99f5f0e7971a3e0e2f7c932183009938aa5d284bcd23f4657674e6009",
+    "size": 31314874
+  }
+]
