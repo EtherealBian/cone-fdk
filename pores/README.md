@@ -2,18 +2,21 @@
 
 This branch adds native Windows x64 CUDA connectivity and component metrology for an **in-material rectangular ROI**. A separate research pipeline evaluates segmentation of NIST CoCr XCT TIFF stacks. They are already reconstructed scans, not ConeFDK projection inputs. The production tag remains the walnut reconstruction release until the [strict per-specimen gates](FINAL-GATE.md) pass.
 
+**[逐件验收结果 / measured results](RESULTS.md)** · **[Offline numerical reviews and native mask preview](https://github.com/EtherealBian/cone-fdk/releases/tag/measurement-evidence-1)**
+
 ## Reproduce
 
 Use Python 3.12 x64, the repository root `requirements-win.lock`, and an x64 MSVC Developer PowerShell or MinGW via `-Cxx`. From the repository root:
 
 ```powershell
 .\pores\Build.ps1
-.\.venv\Scripts\python.exe -m pytest -q tests pores
+.\.venv\Scripts\python.exe -m pytest -q tests pores/test_pores.py
 # Protocol 1: verifies official SHA-256 digests before reading the scans.
 .\.venv\Scripts\python.exe pores/validate.py --fetch
-# Experimental second algorithm; install only if needed.
+# Research candidates and full checks; these need the extra research dependencies.
 .\.venv\Scripts\python.exe -m pip install -r pores/research-requirements.lock
-.\.venv\Scripts\python.exe pores/candidate.py --fetch --specimens 2 3 5
+.\.venv\Scripts\python.exe -m pytest -q tests pores
+.\.venv\Scripts\python.exe pores/candidate.py --model C --fetch --specimens 2 3 5
 ```
 
 Both evaluators intentionally exit **nonzero** if any selected specimen misses the final precision target. Subset runs cannot certify the full set. `--cache` selects the archive directory; `--out` selects the evidence directory. Every scan writes a CSV, one-to-one object matches, JSON and an offline HTML review. The review accepts every CSV ID and every Z index, shows the exact source TIFF name, and can display raw, native-verified component overlay, reference only or disagreements. All visual slices are contrast-windowed; the original intensities are not quantized for the baseline measurement. Reports include exact counts, not values rounded for display. For the experimental candidate, model inputs include 3D median + CUDA NLM features, per-scan supervised calibration slices and the published per-scan intensity mapping. **Not zero-label transfer.**
@@ -44,4 +47,10 @@ For your own single-channel numbered TIFF slices, preserve source names, byte ha
 .\.venv\Scripts\python.exe pores/import_stack.py C:\scans\part-A C:\scans\part-A-roi --xywh 360 376 256 256 --z 400 528 --spacing 2.45 2.45 2.45
 ```
 
-This creates a new directory with `roi.f32` and `volume.json`. It does not assign a threshold or certify the input. Candidate B (`candidate.py --model B`) adds overlapping 5×5 patch estimates and uses guarded out-of-fold count and Dice calibration. Both A and B are experimental.
+This creates a new directory with `roi.f32` and `volume.json`. It does not assign a threshold or certify the input. Candidate B (`candidate.py --model B`) adds overlapping 5×5 patch estimates and uses guarded out-of-fold count and Dice calibration. Candidate C directly accumulates 5×5 and 7×7 patch distances in one native CUDA pass, adds local boundary curvature and calibrates two separately trained predictors with guard slices. A, B and C are experimental. The classifier is research Python/scikit-learn; the standalone measurement executable is native C++/CUDA.
+
+### Inspect mistakes rather than just the mean
+
+After running a research candidate, execute `python pores/cases.py build/candidate-C 2 3 5` and `python pores/stratify.py build/candidate-C 2 3 5`. The case index covers **both** eligible component sets and jumps from mismatches to exact source coordinates. The size-band tables include absolute equivalent-diameter and centroid differences in µm; their small-sample percentiles are descriptive, not alternative release criteria. `python pores/audit.py build/candidate-C --development 2 3 5 --cache <archive-directory>` independently decodes the offline masks and checks all counts, pairings, object rows, digests, unrounded gates and source labels. It returns nonzero for a failed candidate.
+
+The final numerical check requires the full independent pair, not a chosen subset: `python pores/audit.py <frozen-candidate-output> --cache <archive-directory>`. Passing this replay is necessary, not sufficient: the predictor must have been frozen before opening the two evaluation regions. A submitted development run cannot be converted to confirmation by changing a flag.
