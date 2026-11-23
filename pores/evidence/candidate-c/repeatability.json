@@ -1,0 +1,19 @@
+{
+  "specimen": 2,
+  "method": "multiscale boundary ensemble C",
+  "full_fresh_process": true,
+  "same_machine": true,
+  "checked_fields": [
+    "metrics",
+    "objects",
+    "final_gates",
+    "table_sha256",
+    "review_sha256",
+    "probability_threshold",
+    "source"
+  ],
+  "table_sha256": "8d251465fed59931e8a0b3b8c0af4af656fc20aeeb795f447a80c99859675707",
+  "review_sha256": "92afecab55165e572eda138fe2608a4a6e215427e7a4ee53be6fefbb8bf5b35d",
+  "passed_numerical_identity": true,
+  "accuracy_gate_passed": false
+}

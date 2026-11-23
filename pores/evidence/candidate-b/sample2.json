@@ -1,0 +1,140 @@
+{
+  "specimen": 2,
+  "role": "development",
+  "method": "blockwise NLM classifier B",
+  "source": {
+    "raw": {
+      "filepath": "raw/set1sample2raw.zip",
+      "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/raw/set1sample2raw.zip",
+      "sha256": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+      "size": 1248685767
+    },
+    "segmented": {
+      "filepath": "segmented/set1sample2segmented.zip",
+      "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/segmented/set1sample2segmented.zip",
+      "sha256": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+      "size": 6373937
+    }
+  },
+  "calibration_z": [
+    160,
+    184
+  ],
+  "evaluation_z": [
+    400,
+    528
+  ],
+  "origin_xyz": [
+    360,
+    376,
+    400
+  ],
+  "probability_threshold": 0.83,
+  "metrics": {
+    "tp": 69570,
+    "fp": 2933,
+    "fn": 5006,
+    "tn": 8311099,
+    "dice": 0.9460222057533706,
+    "precision": 0.9595465015240748,
+    "recall": 0.9328738468139884,
+    "predicted_porosity_pct": 0.8643031120300293,
+    "reference_porosity_pct": 0.8890151977539062,
+    "porosity_error_pp": -0.024712085723876953
+  },
+  "objects": {
+    "criterion": "both interior and >=64 voxels; descending IoU >=0.5, unique matches",
+    "eligible_prediction": 67,
+    "eligible_reference": 73,
+    "matches": 66,
+    "matched_fraction_prediction": 0.9850746268656716,
+    "matched_fraction_reference": 0.9041095890410958,
+    "median_abs_volume_error_pct": 4.980645161290326,
+    "p95_abs_volume_error_pct": 18.836271696050293,
+    "median_abs_diameter_error_pct": 1.6703866760478414,
+    "p95_centroid_displacement_vox": 0.7855838852824708
+  },
+  "final_gates": {
+    "dice": false,
+    "precision": true,
+    "recall": true,
+    "porosity_absolute": true,
+    "porosity_relative": true,
+    "object_prediction": true,
+    "object_reference": true,
+    "median_abs_volume_error_pct": true,
+    "p95_abs_volume_error_pct": false,
+    "median_abs_diameter_error_pct": true,
+    "p95_centroid_displacement_vox": true
+  },
+  "final_passed": false,
+  "sensitivity": {
+    "0.7799999999999999": {
+      "tp": 70275,
+      "fp": 3539,
+      "fn": 4301,
+      "tn": 8310493,
+      "dice": 0.9471662510950872,
+      "precision": 0.9520551656867261,
+      "recall": 0.9423272902810556,
+      "predicted_porosity_pct": 0.8799314498901367,
+      "reference_porosity_pct": 0.8890151977539062,
+      "porosity_error_pp": -0.009083747863769531
+    },
+    "0.88": {
+      "tp": 68510,
+      "fp": 2279,
+      "fn": 6066,
+      "tn": 8311753,
+      "dice": 0.9425927836824545,
+      "precision": 0.9678057325290652,
+      "recall": 0.9186601587642137,
+      "predicted_porosity_pct": 0.8438706398010254,
+      "reference_porosity_pct": 0.8890151977539062,
+      "porosity_error_pp": -0.04514455795288086
+    }
+  },
+  "table_sha256": "f860a5966d6b3c1a9e1ae0e0a95a2dbc23c2a211a241682d67343eb5eb92ea33",
+  "review_sha256": "33f8503be246bbbce69b4029eb4a7758e8918dd98aa4695aaa9484a6725c2eaf",
+  "review": {
+    "objects": 203,
+    "layers": 128,
+    "mask_encoding": "lossless start/length/stable-ID; both volumes round-trip checked",
+    "display_window_uint16": [
+      45273.0,
+      56000.0
+    ]
+  },
+  "same_mask_scipy_rows": 203,
+  "second_slab_depth": 37,
+  "native": {
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "shape_zyx": [
+      128,
+      256,
+      256
+    ],
+    "spacing_xyz_um": [
+      2.45,
+      2.45,
+      2.45
+    ],
+    "threshold_f32": -0.8299999833106995,
+    "filter": "none",
+    "connectivity": 6,
+    "slab_depth": 8,
+    "device_buffer_bytes": 4194304,
+    "roi_voxels": 8388608,
+    "pore_voxels": 72503,
+    "porosity": 0.008643031120300293,
+    "components": 203,
+    "interior_components": 163,
+    "interior_pore_voxels": 46173,
+    "spanning_xyz": [
+      0,
+      0,
+      0
+    ],
+    "elapsed_s": 0.274587
+  }
+}
