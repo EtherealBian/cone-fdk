@@ -1,0 +1,98 @@
+{
+  "19": {
+    "detector": 426,
+    "full": 455,
+    "target": 450,
+    "actual": 450,
+    "reason": "edited",
+    "changed": 24
+  },
+  "27": {
+    "detector": 698,
+    "full": 810,
+    "target": 790,
+    "actual": 790,
+    "reason": "edited",
+    "changed": 92
+  },
+  "28": {
+    "detector": 223,
+    "full": 250,
+    "target": 245,
+    "actual": 245,
+    "reason": "edited",
+    "changed": 22
+  },
+  "30": {
+    "detector": 84,
+    "full": 106,
+    "target": 102,
+    "actual": 102,
+    "reason": "edited",
+    "changed": 18
+  },
+  "32": {
+    "detector": 126,
+    "full": 160,
+    "target": 154,
+    "actual": 154,
+    "reason": "edited",
+    "changed": 28
+  },
+  "36": {
+    "detector": 234,
+    "full": 276,
+    "target": 268,
+    "actual": 268,
+    "reason": "edited",
+    "changed": 34
+  },
+  "38": {
+    "detector": 214,
+    "full": 228,
+    "target": 225,
+    "actual": 225,
+    "reason": "edited",
+    "changed": 11
+  },
+  "55": {
+    "detector": 1224,
+    "full": 1223,
+    "target": 1223,
+    "actual": 1223,
+    "reason": "edited",
+    "changed": 1
+  },
+  "56": {
+    "detector": 336,
+    "full": 396,
+    "target": 385,
+    "actual": 385,
+    "reason": "edited",
+    "changed": 49
+  },
+  "76": {
+    "detector": 320,
+    "full": 347,
+    "target": 342,
+    "actual": 342,
+    "reason": "edited",
+    "changed": 22
+  },
+  "77": {
+    "detector": 115,
+    "full": 140,
+    "target": 135,
+    "actual": 135,
+    "reason": "edited",
+    "changed": 20
+  },
+  "85": {
+    "detector": 417,
+    "full": 487,
+    "target": 474,
+    "actual": 474,
+    "reason": "edited",
+    "changed": 57
+  }
+}

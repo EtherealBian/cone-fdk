@@ -1,0 +1,143 @@
+{
+  "fraction": "9/11",
+  "specimens": {
+    "2": {
+      "rows": {
+        "17": {
+          "detector_label": 16,
+          "detector": 151,
+          "full": 180,
+          "reference": 159,
+          "iou": 0.8787878787878788
+        },
+        "22": {
+          "detector_label": 20,
+          "detector": 65,
+          "full": 87,
+          "reference": 71,
+          "iou": 0.8133333333333334
+        },
+        "23": {
+          "detector_label": 21,
+          "detector": 194,
+          "full": 227,
+          "reference": 221,
+          "iou": 0.8693693693693694
+        },
+        "25": {
+          "detector_label": 22,
+          "detector": 77,
+          "full": 107,
+          "reference": 95,
+          "iou": 0.7916666666666666
+        },
+        "26": {
+          "detector_label": 23,
+          "detector": 400,
+          "full": 429,
+          "reference": 407,
+          "iou": 0.8299319727891157
+        },
+        "27": {
+          "detector_label": 24,
+          "detector": 119,
+          "full": 149,
+          "reference": 123,
+          "iou": 0.8333333333333334
+        },
+        "36": {
+          "detector_label": 28,
+          "detector": 312,
+          "full": 341,
+          "reference": 312,
+          "iou": 0.8516320474777448
+        },
+        "37": {
+          "detector_label": 30,
+          "detector": 235,
+          "full": 268,
+          "reference": 261,
+          "iou": 0.837037037037037
+        },
+        "42": {
+          "detector_label": 38,
+          "detector": 172,
+          "full": 185,
+          "reference": 171,
+          "iou": 0.9269662921348315
+        },
+        "43": {
+          "detector_label": 39,
+          "detector": 177,
+          "full": 214,
+          "reference": 171,
+          "iou": 0.8913043478260869
+        },
+        "48": {
+          "detector_label": 40,
+          "detector": 86,
+          "full": 110,
+          "reference": 84,
+          "iou": 0.8478260869565217
+        },
+        "49": {
+          "detector_label": 41,
+          "detector": 110,
+          "full": 134,
+          "reference": 115,
+          "iou": 0.9067796610169492
+        },
+        "50": {
+          "detector_label": 42,
+          "detector": 404,
+          "full": 431,
+          "reference": 401,
+          "iou": 0.8985849056603774
+        }
+      },
+      "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+      "mask": "ce9813b5c0b4a258c1be5948ff1bf766ee81cf5f90b829452cb12e4631e67d60",
+      "full_mask": "bac1fbf4a601744d5f3ab5d0e41e0ebc159e8df84fa747cafdb1f2c0b22ae5a3",
+      "cal_reference": "e6160ae3db5edc35c134c1fc55df5b0ca5afad911209c6962ac5eadd8c6455ce",
+      "max_cpu_cuda_score_difference": 0.0,
+      "profiles": "7028af2a2a84f7b39652705193543a970bbef5c7aabbc79726e12ddec1c7d7ab",
+      "curvature_cal": "87097614274068fd7cb851c961d23d006f6ac6a66a938ff8d3b502994d7a8c74",
+      "directional_pairs": 13
+    },
+    "3": {
+      "rows": {
+        "50": {
+          "detector_label": 42,
+          "detector": 84,
+          "full": 103,
+          "reference": 112,
+          "iou": 0.5193798449612403
+        }
+      },
+      "raw": "460ea68425d9ac387485b65a3aa2b3f25da31cfe9de8181d4c1a5b0a982d26c8",
+      "mask": "377f036ed3956f6939c542b9fd129c3945362207f0be6c0dc1414f4a1ffccff3",
+      "full_mask": "7b1690fa368d609de969a08df0309fca5d44d4aef56c57f30166dd7cbb196a30",
+      "cal_reference": "3ea426d8b82fdf00a7710700d4c15df0592df587e6b2e45274f4ef59be567c57",
+      "max_cpu_cuda_score_difference": 0.0,
+      "profiles": "99ecbef7f430be6a680a733b905412d5202b1038075659869a01f3bbb5152ff3",
+      "curvature_cal": "f02bac8cb10a105a57afea9ac228ed7ff7b63234778a6d1ca68c58534f0b80c9",
+      "directional_pairs": 1
+    },
+    "5": {
+      "rows": {},
+      "raw": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37",
+      "mask": "256d4f9a7c057391254641298ee5a69afa3c8f153fc2cc6ea7743ac2df8471ab",
+      "full_mask": "256d4f9a7c057391254641298ee5a69afa3c8f153fc2cc6ea7743ac2df8471ab",
+      "cal_reference": "9cd3e4d1a6dba9d1eed3510487c7a86c0c55c2bd99602f52255b51f6e2547a9e",
+      "max_cpu_cuda_score_difference": 0.0,
+      "profiles": "c599584b5873caf26bd213feab0a05197ae41b5d2e6731a055347cb89c071d8c",
+      "curvature_cal": "0b3e1318a9d443aa471f705eb44093cee56e16bcb7297be49f52b7cf2ce4cab3",
+      "directional_pairs": 0
+    }
+  },
+  "mean_relative_l1": {
+    "0": "352013774460660073297/2310321706543169799480",
+    "9/11": "621752948556191929/5777445586126710496",
+    "1": "1002611041810698059/9232054771401277920"
+  }
+}
