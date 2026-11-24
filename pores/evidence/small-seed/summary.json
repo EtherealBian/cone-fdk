@@ -1,0 +1,49 @@
+{
+  "criteria": {
+    "rescue_two_specimens": true,
+    "no_new_unmatched": false,
+    "no_lost_matches": true,
+    "common_p95": true,
+    "outperform_geometry": true
+  },
+  "advance": false,
+  "development": {
+    "2": {
+      "gained": [
+        12,
+        87
+      ],
+      "lost": [],
+      "extra_unmatched": 12,
+      "shared_p95": [
+        14.889277389277376,
+        14.889277389277376
+      ],
+      "improved_iou": [
+        87
+      ]
+    },
+    "3": {
+      "gained": [
+        71
+      ],
+      "lost": [],
+      "extra_unmatched": 16,
+      "shared_p95": [
+        19.357864357864358,
+        19.357864357864358
+      ],
+      "improved_iou": []
+    },
+    "5": {
+      "gained": [],
+      "lost": [],
+      "extra_unmatched": 5,
+      "shared_p95": [
+        17.006385961268883,
+        17.006385961268883
+      ],
+      "improved_iou": []
+    }
+  }
+}

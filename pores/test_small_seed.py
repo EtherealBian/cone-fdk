@@ -47,3 +47,65 @@ def test_connected_geometry_tie_order_and_unreachable():
     a[1, 1, 5] = False
     with pytest.raises(ValueError, match="Not enough"):
         fill(seed, a, cost, 4)
+
+
+def test_archived_entrants_against_native_tables_and_intersections():
+    import csv
+    import json
+    from collections import Counter
+
+    from pore_axial_raw import sha
+    from pore_axial_score import read_mask
+    from pore_small_seed import ARMS, E
+
+    seal = json.loads((E / "predictions.json").read_bytes())
+    audit = json.loads((E / "overlap.json").read_bytes())["specimens"]
+    summary = json.loads((E / "summary.json").read_bytes())
+    assert not summary["advance"] and {k for k, b in summary["criteria"].items() if not b} == {
+        "no_new_unmatched"
+    }
+    for i in (2, 3, 5):
+        r = seal["specimens"][str(i)]
+        p = E / f"sample{i}.json"
+        a = json.loads(p.read_bytes())
+        assert sha(p) == audit[str(i)]["score_sha256"]
+        rows = json.loads((E / f"sample{i}-seeds.json").read_bytes())
+        entered = {q["seed_id"]: q["final"] for q in rows if q["final"] >= 64}
+        assert len(rows) == {2: 17, 3: 27, 5: 10}[i] and len(entered) == {2: 14, 3: 17, 5: 5}[i]
+        for k in ARMS:
+            m = read_mask(E, i, k, r["masks"][k])
+            arm = a["arms"][k]
+            tab = E / f"sample{i}-{k}-pores.csv"
+            assert sha(tab) == arm["table_sha256"] and arm["native"]["pore_voxels"] == m.sum()
+            with tab.open(newline="") as f:
+                tr = {int(q["id"]): q for q in csv.DictReader(f)}
+            with (E / f"sample{i}-{k}-matches.csv").open(newline="") as f:
+                hits = {int(q["pred_id"]): int(q["ref_scipy_label"]) for q in csv.DictReader(f)}
+            ov = audit[str(i)]["arms"][k]
+            counts = Counter()
+            gained = []
+            for q in ov["rows"]:
+                pid = q["prediction"]
+                assert (
+                    q["voxels"] == int(tr[pid]["voxels"]) == entered[q["seed"]]
+                    and int(tr[pid]["faces"]) == 0
+                )
+                assert hits.get(pid) == (None if q["matched"] is None else int(q["matched"]))
+                if pid not in hits:
+                    counts[q["category"]] += 1
+                else:
+                    gained.append(hits[pid])
+                assert q["iou"] == q["intersection"] / (
+                    q["voxels"] + q["ref_voxels"] - q["intersection"]
+                )
+            assert (
+                set(entered) == {q["seed"] for q in ov["rows"]}
+                and counts == ov["unmatched_counts"]
+            )
+            c = a["comparisons"][k]
+            assert (
+                sorted(gained) == sorted(map(int, c["gained"]))
+                and not c["lost"]
+                and sum(counts.values()) == c["extra_unmatched"]
+                and c["shared_p95"][0] == c["shared_p95"][1]
+            )

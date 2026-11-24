@@ -1,0 +1,867 @@
+{
+  "protocol": "Post-score descriptive analysis; maximum non-background intersection, tie by smallest label. Not relabeling or a classifier.",
+  "specimens": {
+    "2": {
+      "reference_mask": "0141328870f75714d73c0e02e1f0b943056d6a88238e9bb70537a5031ab9ec26",
+      "score_sha256": "029a968be18ce6740f6eb51771a71635e88bffa20991ec8f2cd23ef751c4737c",
+      "arms": {
+        "gray": {
+          "rows": [
+            {
+              "seed": 88426,
+              "prediction": 88169,
+              "voxels": 128,
+              "matched": 12,
+              "largest_ref": 12,
+              "ref_voxels": 94,
+              "intersection": 81,
+              "iou": 0.574468085106383,
+              "category": "eligible"
+            },
+            {
+              "seed": 744214,
+              "prediction": 613653,
+              "voxels": 74,
+              "matched": null,
+              "largest_ref": null,
+              "ref_voxels": 0,
+              "intersection": 0,
+              "iou": 0.0,
+              "category": "no overlap"
+            },
+            {
+              "seed": 1478078,
+              "prediction": 1347517,
+              "voxels": 95,
+              "matched": null,
+              "largest_ref": 23,
+              "ref_voxels": 49,
+              "intersection": 40,
+              "iou": 0.38461538461538464,
+              "category": "below 64"
+            },
+            {
+              "seed": 2294595,
+              "prediction": 2229058,
+              "voxels": 67,
+              "matched": null,
+              "largest_ref": 26,
+              "ref_voxels": 1490,
+              "intersection": 33,
+              "iou": 0.021653543307086614,
+              "category": "eligible"
+            },
+            {
+              "seed": 2520430,
+              "prediction": 2389613,
+              "voxels": 151,
+              "matched": null,
+              "largest_ref": 46,
+              "ref_voxels": 60,
+              "intersection": 47,
+              "iou": 0.2865853658536585,
+              "category": "below 64"
+            },
+            {
+              "seed": 2685241,
+              "prediction": 2619704,
+              "voxels": 80,
+              "matched": null,
+              "largest_ref": 51,
+              "ref_voxels": 25,
+              "intersection": 22,
+              "iou": 0.26506024096385544,
+              "category": "below 64"
+            },
+            {
+              "seed": 2962976,
+              "prediction": 2897439,
+              "voxels": 136,
+              "matched": null,
+              "largest_ref": 56,
+              "ref_voxels": 83,
+              "intersection": 56,
+              "iou": 0.34355828220858897,
+              "category": "eligible"
+            },
+            {
+              "seed": 3283606,
+              "prediction": 3218325,
+              "voxels": 65,
+              "matched": null,
+              "largest_ref": null,
+              "ref_voxels": 0,
+              "intersection": 0,
+              "iou": 0.0,
+              "category": "no overlap"
+            },
+            {
+              "seed": 3470499,
+              "prediction": 3339427,
+              "voxels": 72,
+              "matched": null,
+              "largest_ref": 68,
+              "ref_voxels": 17,
+              "intersection": 12,
+              "iou": 0.15584415584415584,
+              "category": "below 64"
+            },
+            {
+              "seed": 4114231,
+              "prediction": 4114231,
+              "voxels": 103,
+              "matched": null,
+              "largest_ref": 85,
+              "ref_voxels": 44,
+              "intersection": 41,
+              "iou": 0.3867924528301887,
+              "category": "below 64"
+            },
+            {
+              "seed": 4231654,
+              "prediction": 4166373,
+              "voxels": 140,
+              "matched": 87,
+              "largest_ref": 87,
+              "ref_voxels": 91,
+              "intersection": 85,
+              "iou": 0.5821917808219178,
+              "category": "eligible"
+            },
+            {
+              "seed": 4436688,
+              "prediction": 4371151,
+              "voxels": 80,
+              "matched": null,
+              "largest_ref": 95,
+              "ref_voxels": 41,
+              "intersection": 33,
+              "iou": 0.375,
+              "category": "below 64"
+            },
+            {
+              "seed": 5465980,
+              "prediction": 5335418,
+              "voxels": 148,
+              "matched": null,
+              "largest_ref": 111,
+              "ref_voxels": 75,
+              "intersection": 73,
+              "iou": 0.4866666666666667,
+              "category": "eligible"
+            },
+            {
+              "seed": 5846216,
+              "prediction": 5781193,
+              "voxels": 104,
+              "matched": null,
+              "largest_ref": 126,
+              "ref_voxels": 63,
+              "intersection": 63,
+              "iou": 0.6057692307692307,
+              "category": "below 64"
+            }
+          ],
+          "unmatched_counts": {
+            "no overlap": 2,
+            "below 64": 7,
+            "eligible": 3
+          }
+        },
+        "geometry": {
+          "rows": [
+            {
+              "seed": 88426,
+              "prediction": 88169,
+              "voxels": 128,
+              "matched": 12,
+              "largest_ref": 12,
+              "ref_voxels": 94,
+              "intersection": 89,
+              "iou": 0.6691729323308271,
+              "category": "eligible"
+            },
+            {
+              "seed": 744214,
+              "prediction": 678422,
+              "voxels": 74,
+              "matched": null,
+              "largest_ref": null,
+              "ref_voxels": 0,
+              "intersection": 0,
+              "iou": 0.0,
+              "category": "no overlap"
+            },
+            {
+              "seed": 1478078,
+              "prediction": 1412286,
+              "voxels": 95,
+              "matched": null,
+              "largest_ref": 23,
+              "ref_voxels": 49,
+              "intersection": 40,
+              "iou": 0.38461538461538464,
+              "category": "below 64"
+            },
+            {
+              "seed": 2294595,
+              "prediction": 2228803,
+              "voxels": 67,
+              "matched": null,
+              "largest_ref": 26,
+              "ref_voxels": 1490,
+              "intersection": 32,
+              "iou": 0.02098360655737705,
+              "category": "eligible"
+            },
+            {
+              "seed": 2520430,
+              "prediction": 2454638,
+              "voxels": 151,
+              "matched": null,
+              "largest_ref": 46,
+              "ref_voxels": 60,
+              "intersection": 52,
+              "iou": 0.3270440251572327,
+              "category": "below 64"
+            },
+            {
+              "seed": 2685241,
+              "prediction": 2619449,
+              "voxels": 80,
+              "matched": null,
+              "largest_ref": 51,
+              "ref_voxels": 25,
+              "intersection": 24,
+              "iou": 0.2962962962962963,
+              "category": "below 64"
+            },
+            {
+              "seed": 2962976,
+              "prediction": 2897184,
+              "voxels": 136,
+              "matched": null,
+              "largest_ref": 56,
+              "ref_voxels": 83,
+              "intersection": 58,
+              "iou": 0.36024844720496896,
+              "category": "eligible"
+            },
+            {
+              "seed": 3283606,
+              "prediction": 3217814,
+              "voxels": 65,
+              "matched": null,
+              "largest_ref": null,
+              "ref_voxels": 0,
+              "intersection": 0,
+              "iou": 0.0,
+              "category": "no overlap"
+            },
+            {
+              "seed": 3470499,
+              "prediction": 3404707,
+              "voxels": 72,
+              "matched": null,
+              "largest_ref": 68,
+              "ref_voxels": 17,
+              "intersection": 15,
+              "iou": 0.20270270270270271,
+              "category": "below 64"
+            },
+            {
+              "seed": 4114231,
+              "prediction": 4048695,
+              "voxels": 103,
+              "matched": null,
+              "largest_ref": 85,
+              "ref_voxels": 44,
+              "intersection": 38,
+              "iou": 0.3486238532110092,
+              "category": "below 64"
+            },
+            {
+              "seed": 4231654,
+              "prediction": 4166118,
+              "voxels": 140,
+              "matched": 87,
+              "largest_ref": 87,
+              "ref_voxels": 91,
+              "intersection": 84,
+              "iou": 0.5714285714285714,
+              "category": "eligible"
+            },
+            {
+              "seed": 4436688,
+              "prediction": 4370896,
+              "voxels": 80,
+              "matched": null,
+              "largest_ref": 95,
+              "ref_voxels": 41,
+              "intersection": 41,
+              "iou": 0.5125,
+              "category": "below 64"
+            },
+            {
+              "seed": 5465980,
+              "prediction": 5400188,
+              "voxels": 148,
+              "matched": 111,
+              "largest_ref": 111,
+              "ref_voxels": 75,
+              "intersection": 75,
+              "iou": 0.5067567567567568,
+              "category": "eligible"
+            },
+            {
+              "seed": 5846216,
+              "prediction": 5780680,
+              "voxels": 104,
+              "matched": null,
+              "largest_ref": 126,
+              "ref_voxels": 63,
+              "intersection": 60,
+              "iou": 0.5607476635514018,
+              "category": "below 64"
+            }
+          ],
+          "unmatched_counts": {
+            "no overlap": 2,
+            "below 64": 7,
+            "eligible": 2
+          }
+        }
+      }
+    },
+    "3": {
+      "reference_mask": "2acdd06abc9849b25982630ce0f4e09305624852d0293c16d92ea09e91ebe48d",
+      "score_sha256": "ca95e8027b4504ccd30d5dde3bffbde9c6afae7053ab443a62f897560352871b",
+      "arms": {
+        "gray": {
+          "rows": [
+            {
+              "seed": 332934,
+              "prediction": 267141,
+              "voxels": 83,
+              "matched": null,
+              "largest_ref": 25,
+              "ref_voxels": 27,
+              "intersection": 23,
+              "iou": 0.26436781609195403,
+              "category": "below 64"
+            },
+            {
+              "seed": 550634,
+              "prediction": 419817,
+              "voxels": 71,
+              "matched": null,
+              "largest_ref": 31,
+              "ref_voxels": 1,
+              "intersection": 1,
+              "iou": 0.014084507042253521,
+              "category": "below 64"
+            },
+            {
+              "seed": 1358126,
+              "prediction": 1227313,
+              "voxels": 86,
+              "matched": null,
+              "largest_ref": 57,
+              "ref_voxels": 52,
+              "intersection": 49,
+              "iou": 0.550561797752809,
+              "category": "below 64"
+            },
+            {
+              "seed": 1808407,
+              "prediction": 1677591,
+              "voxels": 135,
+              "matched": 71,
+              "largest_ref": 71,
+              "ref_voxels": 80,
+              "intersection": 76,
+              "iou": 0.5467625899280576,
+              "category": "eligible"
+            },
+            {
+              "seed": 1898840,
+              "prediction": 1833047,
+              "voxels": 87,
+              "matched": null,
+              "largest_ref": 74,
+              "ref_voxels": 33,
+              "intersection": 25,
+              "iou": 0.2631578947368421,
+              "category": "below 64"
+            },
+            {
+              "seed": 1938146,
+              "prediction": 1937634,
+              "voxels": 70,
+              "matched": null,
+              "largest_ref": 73,
+              "ref_voxels": 13,
+              "intersection": 11,
+              "iou": 0.1527777777777778,
+              "category": "below 64"
+            },
+            {
+              "seed": 3624327,
+              "prediction": 3558534,
+              "voxels": 83,
+              "matched": null,
+              "largest_ref": 119,
+              "ref_voxels": 18,
+              "intersection": 16,
+              "iou": 0.18823529411764706,
+              "category": "below 64"
+            },
+            {
+              "seed": 3654993,
+              "prediction": 3523922,
+              "voxels": 112,
+              "matched": null,
+              "largest_ref": null,
+              "ref_voxels": 0,
+              "intersection": 0,
+              "iou": 0.0,
+              "category": "no overlap"
+            },
+            {
+              "seed": 4134236,
+              "prediction": 4134236,
+              "voxels": 76,
+              "matched": null,
+              "largest_ref": 1,
+              "ref_voxels": 1152518,
+              "intersection": 36,
+              "iou": 3.12348706095485e-05,
+              "category": "face"
+            },
+            {
+              "seed": 4184673,
+              "prediction": 4053601,
+              "voxels": 69,
+              "matched": null,
+              "largest_ref": 1,
+              "ref_voxels": 1152518,
+              "intersection": 18,
+              "iou": 1.561728625357788e-05,
+              "category": "face"
+            },
+            {
+              "seed": 5015773,
+              "prediction": 4884701,
+              "voxels": 68,
+              "matched": null,
+              "largest_ref": 1,
+              "ref_voxels": 1152518,
+              "intersection": 39,
+              "iou": 3.3838099444100764e-05,
+              "category": "face"
+            },
+            {
+              "seed": 5052410,
+              "prediction": 4921593,
+              "voxels": 68,
+              "matched": null,
+              "largest_ref": 159,
+              "ref_voxels": 31,
+              "intersection": 24,
+              "iou": 0.32,
+              "category": "below 64"
+            },
+            {
+              "seed": 5402867,
+              "prediction": 5337075,
+              "voxels": 104,
+              "matched": null,
+              "largest_ref": 175,
+              "ref_voxels": 22,
+              "intersection": 22,
+              "iou": 0.21153846153846154,
+              "category": "below 64"
+            },
+            {
+              "seed": 5602778,
+              "prediction": 5471964,
+              "voxels": 154,
+              "matched": null,
+              "largest_ref": 185,
+              "ref_voxels": 31,
+              "intersection": 24,
+              "iou": 0.14906832298136646,
+              "category": "below 64"
+            },
+            {
+              "seed": 5618672,
+              "prediction": 5552624,
+              "voxels": 106,
+              "matched": null,
+              "largest_ref": 188,
+              "ref_voxels": 63,
+              "intersection": 56,
+              "iou": 0.49557522123893805,
+              "category": "below 64"
+            },
+            {
+              "seed": 5819677,
+              "prediction": 5688605,
+              "voxels": 142,
+              "matched": null,
+              "largest_ref": 193,
+              "ref_voxels": 1,
+              "intersection": 1,
+              "iou": 0.007042253521126761,
+              "category": "below 64"
+            },
+            {
+              "seed": 5923252,
+              "prediction": 5859510,
+              "voxels": 156,
+              "matched": null,
+              "largest_ref": 198,
+              "ref_voxels": 62,
+              "intersection": 58,
+              "iou": 0.3625,
+              "category": "below 64"
+            }
+          ],
+          "unmatched_counts": {
+            "below 64": 12,
+            "no overlap": 1,
+            "face": 3
+          }
+        },
+        "geometry": {
+          "rows": [
+            {
+              "seed": 332934,
+              "prediction": 267142,
+              "voxels": 83,
+              "matched": null,
+              "largest_ref": 25,
+              "ref_voxels": 27,
+              "intersection": 26,
+              "iou": 0.30952380952380953,
+              "category": "below 64"
+            },
+            {
+              "seed": 550634,
+              "prediction": 484842,
+              "voxels": 71,
+              "matched": null,
+              "largest_ref": 31,
+              "ref_voxels": 1,
+              "intersection": 1,
+              "iou": 0.014084507042253521,
+              "category": "below 64"
+            },
+            {
+              "seed": 1358126,
+              "prediction": 1292590,
+              "voxels": 86,
+              "matched": null,
+              "largest_ref": 57,
+              "ref_voxels": 52,
+              "intersection": 46,
+              "iou": 0.5,
+              "category": "below 64"
+            },
+            {
+              "seed": 1808407,
+              "prediction": 1742871,
+              "voxels": 135,
+              "matched": 71,
+              "largest_ref": 71,
+              "ref_voxels": 80,
+              "intersection": 79,
+              "iou": 0.5808823529411765,
+              "category": "eligible"
+            },
+            {
+              "seed": 1898840,
+              "prediction": 1833048,
+              "voxels": 87,
+              "matched": null,
+              "largest_ref": 74,
+              "ref_voxels": 33,
+              "intersection": 29,
+              "iou": 0.31868131868131866,
+              "category": "below 64"
+            },
+            {
+              "seed": 1938146,
+              "prediction": 1872354,
+              "voxels": 70,
+              "matched": null,
+              "largest_ref": 73,
+              "ref_voxels": 13,
+              "intersection": 13,
+              "iou": 0.18571428571428572,
+              "category": "below 64"
+            },
+            {
+              "seed": 3624327,
+              "prediction": 3558535,
+              "voxels": 83,
+              "matched": null,
+              "largest_ref": 119,
+              "ref_voxels": 18,
+              "intersection": 13,
+              "iou": 0.14772727272727273,
+              "category": "below 64"
+            },
+            {
+              "seed": 3654993,
+              "prediction": 3589201,
+              "voxels": 112,
+              "matched": null,
+              "largest_ref": null,
+              "ref_voxels": 0,
+              "intersection": 0,
+              "iou": 0.0,
+              "category": "no overlap"
+            },
+            {
+              "seed": 4134236,
+              "prediction": 4134236,
+              "voxels": 76,
+              "matched": null,
+              "largest_ref": 1,
+              "ref_voxels": 1152518,
+              "intersection": 36,
+              "iou": 3.12348706095485e-05,
+              "category": "face"
+            },
+            {
+              "seed": 4184673,
+              "prediction": 4118881,
+              "voxels": 69,
+              "matched": null,
+              "largest_ref": 1,
+              "ref_voxels": 1152518,
+              "intersection": 19,
+              "iou": 1.6484927570434022e-05,
+              "category": "face"
+            },
+            {
+              "seed": 5015773,
+              "prediction": 4950237,
+              "voxels": 68,
+              "matched": null,
+              "largest_ref": 1,
+              "ref_voxels": 1152518,
+              "intersection": 42,
+              "iou": 3.6441125024294085e-05,
+              "category": "face"
+            },
+            {
+              "seed": 5052410,
+              "prediction": 4986618,
+              "voxels": 68,
+              "matched": null,
+              "largest_ref": 159,
+              "ref_voxels": 31,
+              "intersection": 28,
+              "iou": 0.39436619718309857,
+              "category": "below 64"
+            },
+            {
+              "seed": 5402867,
+              "prediction": 5337075,
+              "voxels": 104,
+              "matched": null,
+              "largest_ref": 175,
+              "ref_voxels": 22,
+              "intersection": 22,
+              "iou": 0.21153846153846154,
+              "category": "below 64"
+            },
+            {
+              "seed": 5602778,
+              "prediction": 5536986,
+              "voxels": 154,
+              "matched": null,
+              "largest_ref": 185,
+              "ref_voxels": 31,
+              "intersection": 30,
+              "iou": 0.1935483870967742,
+              "category": "below 64"
+            },
+            {
+              "seed": 5618672,
+              "prediction": 5553136,
+              "voxels": 106,
+              "matched": null,
+              "largest_ref": 188,
+              "ref_voxels": 63,
+              "intersection": 60,
+              "iou": 0.5504587155963303,
+              "category": "below 64"
+            },
+            {
+              "seed": 5819677,
+              "prediction": 5753885,
+              "voxels": 142,
+              "matched": null,
+              "largest_ref": 193,
+              "ref_voxels": 1,
+              "intersection": 1,
+              "iou": 0.007042253521126761,
+              "category": "below 64"
+            },
+            {
+              "seed": 5923252,
+              "prediction": 5857716,
+              "voxels": 156,
+              "matched": null,
+              "largest_ref": 198,
+              "ref_voxels": 62,
+              "intersection": 62,
+              "iou": 0.3974358974358974,
+              "category": "below 64"
+            }
+          ],
+          "unmatched_counts": {
+            "below 64": 12,
+            "no overlap": 1,
+            "face": 3
+          }
+        }
+      }
+    },
+    "5": {
+      "reference_mask": "fe43b415326a8ac26e6522ec5143713fa0ea770f1ef944b72a779d6961549e10",
+      "score_sha256": "0ca0d763f286461d508a844f273af9618cec9a5c7c630b785847c133b1f09315",
+      "arms": {
+        "gray": {
+          "rows": [
+            {
+              "seed": 1094136,
+              "prediction": 963064,
+              "voxels": 69,
+              "matched": null,
+              "largest_ref": null,
+              "ref_voxels": 0,
+              "intersection": 0,
+              "iou": 0.0,
+              "category": "no overlap"
+            },
+            {
+              "seed": 1411135,
+              "prediction": 1280064,
+              "voxels": 75,
+              "matched": null,
+              "largest_ref": 35,
+              "ref_voxels": 22,
+              "intersection": 19,
+              "iou": 0.24358974358974358,
+              "category": "below 64"
+            },
+            {
+              "seed": 3340691,
+              "prediction": 3209619,
+              "voxels": 66,
+              "matched": null,
+              "largest_ref": 66,
+              "ref_voxels": 16,
+              "intersection": 10,
+              "iou": 0.1388888888888889,
+              "category": "below 64"
+            },
+            {
+              "seed": 4926297,
+              "prediction": 4795483,
+              "voxels": 97,
+              "matched": null,
+              "largest_ref": 86,
+              "ref_voxels": 35,
+              "intersection": 17,
+              "iou": 0.14782608695652175,
+              "category": "below 64"
+            },
+            {
+              "seed": 5214389,
+              "prediction": 5148853,
+              "voxels": 104,
+              "matched": null,
+              "largest_ref": 91,
+              "ref_voxels": 51,
+              "intersection": 50,
+              "iou": 0.47619047619047616,
+              "category": "below 64"
+            }
+          ],
+          "unmatched_counts": {
+            "no overlap": 1,
+            "below 64": 4
+          }
+        },
+        "geometry": {
+          "rows": [
+            {
+              "seed": 1094136,
+              "prediction": 1028344,
+              "voxels": 69,
+              "matched": null,
+              "largest_ref": null,
+              "ref_voxels": 0,
+              "intersection": 0,
+              "iou": 0.0,
+              "category": "no overlap"
+            },
+            {
+              "seed": 1411135,
+              "prediction": 1345599,
+              "voxels": 75,
+              "matched": null,
+              "largest_ref": 35,
+              "ref_voxels": 22,
+              "intersection": 22,
+              "iou": 0.29333333333333333,
+              "category": "below 64"
+            },
+            {
+              "seed": 3340691,
+              "prediction": 3274898,
+              "voxels": 66,
+              "matched": null,
+              "largest_ref": 66,
+              "ref_voxels": 16,
+              "intersection": 12,
+              "iou": 0.17142857142857143,
+              "category": "below 64"
+            },
+            {
+              "seed": 4926297,
+              "prediction": 4860505,
+              "voxels": 97,
+              "matched": null,
+              "largest_ref": 86,
+              "ref_voxels": 35,
+              "intersection": 18,
+              "iou": 0.15789473684210525,
+              "category": "below 64"
+            },
+            {
+              "seed": 5214389,
+              "prediction": 5148853,
+              "voxels": 104,
+              "matched": null,
+              "largest_ref": 91,
+              "ref_voxels": 51,
+              "intersection": 49,
+              "iou": 0.46226415094339623,
+              "category": "below 64"
+            }
+          ],
+          "unmatched_counts": {
+            "no overlap": 1,
+            "below 64": 4
+          }
+        }
+      }
+    }
+  }
+}
