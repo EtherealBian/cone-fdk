@@ -25,4 +25,6 @@ try {
     if($LASTEXITCODE){throw 'Rank patch compilation failed'}
     & $Python scripts/ptx.py pores/transfer_faces.cu build/pores/transfer_faces.ptx
     if($LASTEXITCODE){throw 'Transfer boundary compilation failed'}
+    & $Python scripts/ptx.py pores/spatial.cu build/pores/spatial.ptx
+    if($LASTEXITCODE){throw 'Spatial convolution compilation failed'}
 } finally {$env:Path=$old;Pop-Location}
