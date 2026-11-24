@@ -1,0 +1,31 @@
+{
+  "schema": 1,
+  "model": "0ae471662ffc9fe1f62d5b56697e9f1c43c48e4d311efe2558b6b68196ab7994",
+  "z": [
+    256,
+    352
+  ],
+  "shape_zyx": [
+    96,
+    256,
+    256
+  ],
+  "dtype": "<f4",
+  "specimens": {
+    "2": {
+      "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+      "segmented": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+      "probability": "c6adaf8582073f6eb8cd16b24cc2208657cfa43c7d284a8ed436861fa6bf23c8"
+    },
+    "3": {
+      "raw": "460ea68425d9ac387485b65a3aa2b3f25da31cfe9de8181d4c1a5b0a982d26c8",
+      "segmented": "f94c64a99f5f0e7971a3e0e2f7c932183009938aa5d284bcd23f4657674e6009",
+      "probability": "7ed6c14cdf404b9723a1d71aa003fc395ef4c03236135be4392331138e8bd534"
+    },
+    "5": {
+      "raw": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37",
+      "segmented": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b",
+      "probability": "dfcc6e4952338b1e529d0352540a5e12a4caaf2233c3d9db834fb2d76ad92f65"
+    }
+  }
+}
