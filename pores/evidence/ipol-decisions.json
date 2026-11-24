@@ -1,0 +1,315 @@
+{
+  "tools": {
+    "archive": "649ad40b8676e29309c478e351bb95ab7f1b2733a4994b94094b29f4758b6902",
+    "adapter": "363bf6232a9ec2e32c450505c3dbcf3329ba98a55e3b7489efdd89ca6c0a6d4c",
+    "library": "f176c90f3d118dd36945d93e1a3c40f3f461d639480d9f062c861ab4318b82a2",
+    "compiler": "g++.exe (Rev6, Built by MSYS2 project) 16.2.0"
+  },
+  "synthetic_pixel_audit": [
+    [
+      14,
+      14,
+      143.53890189194772,
+      143.53887939453125
+    ],
+    [
+      18,
+      20,
+      148.21104283302247,
+      148.2110595703125
+    ],
+    [
+      21,
+      23,
+      141.34198080298225,
+      141.34197998046875
+    ]
+  ],
+  "specimens": {
+    "2": {
+      "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+      "segmented": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+      "fit": {
+        "10": {
+          "tp": 1034,
+          "fp": 601,
+          "fn": 157,
+          "tn": 104704,
+          "dice": 0.7317763623496107,
+          "precision": 0.6324159021406728,
+          "recall": 0.8681780016792612,
+          "predicted_porosity_pct": 1.5352689302884615,
+          "reference_porosity_pct": 1.1183518629807692,
+          "porosity_error_pp": 0.4169170673076923
+        },
+        "15": {
+          "tp": 1077,
+          "fp": 156,
+          "fn": 114,
+          "tn": 105149,
+          "dice": 0.8886138613861386,
+          "precision": 0.8734793187347932,
+          "recall": 0.9042821158690176,
+          "predicted_porosity_pct": 1.1577899639423077,
+          "reference_porosity_pct": 1.1183518629807692,
+          "porosity_error_pp": 0.039438100961538464
+        },
+        "20": {
+          "tp": 1067,
+          "fp": 48,
+          "fn": 124,
+          "tn": 105257,
+          "dice": 0.9254119687771032,
+          "precision": 0.95695067264574,
+          "recall": 0.8958858102434929,
+          "predicted_porosity_pct": 1.0469876802884615,
+          "reference_porosity_pct": 1.1183518629807692,
+          "porosity_error_pp": -0.0713641826923077
+        },
+        "25": {
+          "tp": 964,
+          "fp": 22,
+          "fn": 227,
+          "tn": 105283,
+          "dice": 0.8856224161690399,
+          "precision": 0.9776876267748479,
+          "recall": 0.8094038623005877,
+          "predicted_porosity_pct": 0.9258563701923077,
+          "reference_porosity_pct": 1.1183518629807692,
+          "porosity_error_pp": -0.19249549278846154
+        },
+        "30": {
+          "tp": 849,
+          "fp": 18,
+          "fn": 342,
+          "tn": 105287,
+          "dice": 0.8250728862973761,
+          "precision": 0.9792387543252595,
+          "recall": 0.7128463476070529,
+          "predicted_porosity_pct": 0.8141150841346154,
+          "reference_porosity_pct": 1.1183518629807692,
+          "porosity_error_pp": -0.30423677884615385
+        },
+        "35": {
+          "tp": 717,
+          "fp": 41,
+          "fn": 474,
+          "tn": 105264,
+          "dice": 0.7357619291944587,
+          "precision": 0.945910290237467,
+          "recall": 0.6020151133501259,
+          "predicted_porosity_pct": 0.7117638221153846,
+          "reference_porosity_pct": 1.1183518629807692,
+          "porosity_error_pp": -0.40658804086538464
+        },
+        "40": {
+          "tp": 529,
+          "fp": 115,
+          "fn": 662,
+          "tn": 105190,
+          "dice": 0.576566757493188,
+          "precision": 0.8214285714285714,
+          "recall": 0.4441645675902603,
+          "predicted_porosity_pct": 0.6047175480769231,
+          "reference_porosity_pct": 1.1183518629807692,
+          "porosity_error_pp": -0.5136343149038461
+        }
+      },
+      "sigma": 20,
+      "masks": {
+        "ipol": "363965127fe42f3a55cc2b762a8f9fadd5ed75dce4c5a1317fb380b90606714c",
+        "fixed": "83cf44af4756cd12def1aee6d7fb924a5c917ed0d994e3131a10e8cbedebe21f"
+      }
+    },
+    "3": {
+      "raw": "460ea68425d9ac387485b65a3aa2b3f25da31cfe9de8181d4c1a5b0a982d26c8",
+      "segmented": "f94c64a99f5f0e7971a3e0e2f7c932183009938aa5d284bcd23f4657674e6009",
+      "fit": {
+        "10": {
+          "tp": 18212,
+          "fp": 1223,
+          "fn": 1634,
+          "tn": 85427,
+          "dice": 0.9272676357526539,
+          "precision": 0.9370722922562388,
+          "recall": 0.9176660284188249,
+          "predicted_porosity_pct": 18.24951171875,
+          "reference_porosity_pct": 18.63544170673077,
+          "porosity_error_pp": -0.3859299879807692
+        },
+        "15": {
+          "tp": 18546,
+          "fp": 718,
+          "fn": 1300,
+          "tn": 85932,
+          "dice": 0.9484019432370238,
+          "precision": 0.9627284053156147,
+          "recall": 0.9344956162450871,
+          "predicted_porosity_pct": 18.088942307692307,
+          "reference_porosity_pct": 18.63544170673077,
+          "porosity_error_pp": -0.5464993990384616
+        },
+        "20": {
+          "tp": 18601,
+          "fp": 492,
+          "fn": 1245,
+          "tn": 86158,
+          "dice": 0.955391766609312,
+          "precision": 0.9742313937044991,
+          "recall": 0.937266955557795,
+          "predicted_porosity_pct": 17.928372896634617,
+          "reference_porosity_pct": 18.63544170673077,
+          "porosity_error_pp": -0.7070688100961539
+        },
+        "25": {
+          "tp": 18627,
+          "fp": 461,
+          "fn": 1219,
+          "tn": 86189,
+          "dice": 0.9568500539374326,
+          "precision": 0.9758487007544007,
+          "recall": 0.9385770432328933,
+          "predicted_porosity_pct": 17.923677884615383,
+          "reference_porosity_pct": 18.63544170673077,
+          "porosity_error_pp": -0.7117638221153846
+        },
+        "30": {
+          "tp": 18386,
+          "fp": 582,
+          "fn": 1460,
+          "tn": 86068,
+          "dice": 0.9473901169681043,
+          "precision": 0.9693167439898777,
+          "recall": 0.9264335382444825,
+          "predicted_porosity_pct": 17.810997596153847,
+          "reference_porosity_pct": 18.63544170673077,
+          "porosity_error_pp": -0.8244441105769231
+        },
+        "35": {
+          "tp": 18020,
+          "fp": 874,
+          "fn": 1826,
+          "tn": 85776,
+          "dice": 0.930304594734125,
+          "precision": 0.9537419286545994,
+          "recall": 0.9079915348180994,
+          "predicted_porosity_pct": 17.74151141826923,
+          "reference_porosity_pct": 18.63544170673077,
+          "porosity_error_pp": -0.8939302884615384
+        },
+        "40": {
+          "tp": 17306,
+          "fp": 1408,
+          "fn": 2540,
+          "tn": 85242,
+          "dice": 0.8976141078838175,
+          "precision": 0.924762210110078,
+          "recall": 0.8720145117404011,
+          "predicted_porosity_pct": 17.572490985576923,
+          "reference_porosity_pct": 18.63544170673077,
+          "porosity_error_pp": -1.0629507211538463
+        }
+      },
+      "sigma": 25,
+      "masks": {
+        "ipol": "9cd8ab4045bbeda633c8dae741c9381c50daec16a06eb2ee546d58b8422ed02c",
+        "fixed": "27d0019952c917bc2d55dca6ce3d904cd9a51cef28d6bed4b743674e07013651"
+      }
+    },
+    "5": {
+      "raw": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37",
+      "segmented": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b",
+      "fit": {
+        "10": {
+          "tp": 16585,
+          "fp": 1056,
+          "fn": 590,
+          "tn": 88265,
+          "dice": 0.9527228860294118,
+          "precision": 0.9401394478771045,
+          "recall": 0.9656477438136827,
+          "predicted_porosity_pct": 16.56494140625,
+          "reference_porosity_pct": 16.127366286057693,
+          "porosity_error_pp": 0.4375751201923077
+        },
+        "15": {
+          "tp": 16670,
+          "fp": 743,
+          "fn": 505,
+          "tn": 88578,
+          "dice": 0.9639181218919857,
+          "precision": 0.9573307299144318,
+          "recall": 0.9705967976710335,
+          "predicted_porosity_pct": 16.350848858173077,
+          "reference_porosity_pct": 16.127366286057693,
+          "porosity_error_pp": 0.2234825721153846
+        },
+        "20": {
+          "tp": 16655,
+          "fp": 564,
+          "fn": 520,
+          "tn": 88757,
+          "dice": 0.9684828749200441,
+          "precision": 0.9672454846390615,
+          "recall": 0.9697234352256187,
+          "predicted_porosity_pct": 16.168682391826923,
+          "reference_porosity_pct": 16.127366286057693,
+          "porosity_error_pp": 0.04131610576923077
+        },
+        "25": {
+          "tp": 16603,
+          "fp": 455,
+          "fn": 572,
+          "tn": 88866,
+          "dice": 0.9699997078842053,
+          "precision": 0.9733262985109626,
+          "recall": 0.9666957787481805,
+          "predicted_porosity_pct": 16.017503004807693,
+          "reference_porosity_pct": 16.127366286057693,
+          "porosity_error_pp": -0.10986328125
+        },
+        "30": {
+          "tp": 16332,
+          "fp": 485,
+          "fn": 843,
+          "tn": 88836,
+          "dice": 0.9609319839962344,
+          "precision": 0.9711601355770946,
+          "recall": 0.9509170305676856,
+          "predicted_porosity_pct": 15.79120342548077,
+          "reference_porosity_pct": 16.127366286057693,
+          "porosity_error_pp": -0.3361628605769231
+        },
+        "35": {
+          "tp": 15993,
+          "fp": 783,
+          "fn": 1182,
+          "tn": 88538,
+          "dice": 0.9421224706194221,
+          "precision": 0.9533261802575107,
+          "recall": 0.9311790393013101,
+          "predicted_porosity_pct": 15.752704326923077,
+          "reference_porosity_pct": 16.127366286057693,
+          "porosity_error_pp": -0.37466195913461536
+        },
+        "40": {
+          "tp": 15695,
+          "fp": 1045,
+          "fn": 1480,
+          "tn": 88276,
+          "dice": 0.9255491670352352,
+          "precision": 0.9375746714456392,
+          "recall": 0.9138282387190684,
+          "predicted_porosity_pct": 15.718900240384615,
+          "reference_porosity_pct": 16.127366286057693,
+          "porosity_error_pp": -0.4084660456730769
+        }
+      },
+      "sigma": 25,
+      "masks": {
+        "ipol": "6ef4ebfe8cd66c62fa36c805223701ce9faf6b748f6aea8b61048301da82ffcd",
+        "fixed": "179a6714a9f222d61b0d2cc6c9c576d042a6e743e637c2962eb550328e60ad94"
+      }
+    }
+  }
+}
