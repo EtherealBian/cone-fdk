@@ -1,0 +1,5 @@
+# Single-voxel articulation diagnostic on candidate C
+
+Development-only question: does removing exactly one foreground voxel that separates an internal prediction into two plausible-size pieces correct the previously observed merge? For each original six-connected component not contacting a crop face, choose at most one voxel whose removal leaves exactly two connected components, each at least 64 voxels. Maximize the smaller daughter's voxel count; tie-break by lowest X-fastest voxel index. No further recursion, dilation, threshold changes or boundary-object intervention. No intensity, specimen-specific settings, reference labels, or edits by hand enter the cut decision.
+
+Apply the identical operator to all three published C prediction masks (2, 3, 5). Keep all objects, including any new false splits, in scores under the original 11 numerical gates. Record every removed voxel, both daughter volumes and every changed match. Report unchanged results if no such cut exists. An offline mask diagnostic informed by development failures is not a raw-to-mask pipeline, nor a way to unlock specimens 4/6.
