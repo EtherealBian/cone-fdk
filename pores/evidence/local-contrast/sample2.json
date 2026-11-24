@@ -1,0 +1,3390 @@
+{
+  "specimen": 2,
+  "origin_xyz": [
+    360,
+    376,
+    400
+  ],
+  "source_raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+  "source_segmented": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+  "h_report": "6496a3323f539e60d0f1339f97a9e0d6d3fa900da1ef9b421037e1ae426bc268",
+  "matches_file": "5ce2dd7fd2b750ed60be50c256b76adfebebc346c8195a133602b3de743b6082",
+  "raw_halo_zyx": "7a358085e9e7bec6c57b214662874ab49c2cd3c2bd3b236de74877f8cb9a0bf0",
+  "reference": {
+    "summary": {
+      "matched": 64,
+      "unmatched": 9,
+      "median_matched": 4.540612254212215,
+      "median_unmatched": 2.4868468295751045,
+      "undefined": 0,
+      "pairs": 576,
+      "twice_wins": 946,
+      "auc": 0.8211805555555556,
+      "supported": true,
+      "passes": true,
+      "size_bands": {
+        "64..127": [
+          13,
+          7
+        ],
+        "128..511": [
+          28,
+          1
+        ],
+        "512+": [
+          23,
+          1
+        ]
+      },
+      "unmatched_at_or_above_matched_median": [
+        86,
+        114
+      ]
+    },
+    "rows": [
+      {
+        "id": 8,
+        "stable_id": 88940,
+        "source_xyz": [
+          467,
+          467,
+          401
+        ],
+        "voxels": 227,
+        "shell_voxels": 1393,
+        "inside_median": 43391.0,
+        "shell_median": 51905.0,
+        "shell_mad": 1238.0,
+        "cnr": 4.638622234397198,
+        "matched": true,
+        "largest_overlap": {
+          "id": 153701,
+          "intersection": 200,
+          "voxels": 211,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 10,
+        "stable_id": 300312,
+        "source_xyz": [
+          383,
+          525,
+          404
+        ],
+        "voxels": 959,
+        "shell_voxels": 2596,
+        "inside_median": 41228.0,
+        "shell_median": 50808.5,
+        "shell_mad": 1276.5,
+        "cnr": 5.062247333463001,
+        "matched": true,
+        "largest_overlap": {
+          "id": 300824,
+          "intersection": 904,
+          "voxels": 979,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 14,
+        "stable_id": 574024,
+        "source_xyz": [
+          431,
+          570,
+          408
+        ],
+        "voxels": 232,
+        "shell_voxels": 1356,
+        "inside_median": 44949.5,
+        "shell_median": 51235.0,
+        "shell_mad": 1143.0,
+        "cnr": 3.709109071469938,
+        "matched": true,
+        "largest_overlap": {
+          "id": 574025,
+          "intersection": 208,
+          "voxels": 216,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 15,
+        "stable_id": 577717,
+        "source_xyz": [
+          540,
+          584,
+          408
+        ],
+        "voxels": 1769,
+        "shell_voxels": 5289,
+        "inside_median": 43620.0,
+        "shell_median": 51121.0,
+        "shell_mad": 1167.0,
+        "cnr": 4.3353514882895805,
+        "matched": true,
+        "largest_overlap": {
+          "id": 577717,
+          "intersection": 1531,
+          "voxels": 1615,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 17,
+        "stable_id": 705049,
+        "source_xyz": [
+          384,
+          570,
+          410
+        ],
+        "voxels": 423,
+        "shell_voxels": 1785,
+        "inside_median": 42380.0,
+        "shell_median": 50781.0,
+        "shell_mad": 1328.0,
+        "cnr": 4.266865113225058,
+        "matched": true,
+        "largest_overlap": {
+          "id": 640024,
+          "intersection": 393,
+          "voxels": 450,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 19,
+        "stable_id": 885951,
+        "source_xyz": [
+          550,
+          508,
+          413
+        ],
+        "voxels": 1090,
+        "shell_voxels": 3163,
+        "inside_median": 39302.0,
+        "shell_median": 51051.0,
+        "shell_mad": 1402.0,
+        "cnr": 5.652348026455432,
+        "matched": true,
+        "largest_overlap": {
+          "id": 885951,
+          "intersection": 1036,
+          "voxels": 1119,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 20,
+        "stable_id": 890773,
+        "source_xyz": [
+          508,
+          527,
+          413
+        ],
+        "voxels": 813,
+        "shell_voxels": 2839,
+        "inside_median": 45871.0,
+        "shell_median": 52430.0,
+        "shell_mad": 1240.0,
+        "cnr": 3.5677297511346677,
+        "matched": true,
+        "largest_overlap": {
+          "id": 1020824,
+          "intersection": 575,
+          "voxels": 604,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 22,
+        "stable_id": 917789,
+        "source_xyz": [
+          388,
+          377,
+          414
+        ],
+        "voxels": 513,
+        "shell_voxels": 1901,
+        "inside_median": 39762.0,
+        "shell_median": 50654.0,
+        "shell_mad": 1194.0,
+        "cnr": 6.152892254789846,
+        "matched": true,
+        "largest_overlap": {
+          "id": 918301,
+          "intersection": 476,
+          "voxels": 531,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 23,
+        "stable_id": 1016603,
+        "source_xyz": [
+          386,
+          507,
+          415
+        ],
+        "voxels": 110,
+        "shell_voxels": 923,
+        "inside_median": 44209.5,
+        "shell_median": 51502.0,
+        "shell_mad": 1194.0,
+        "cnr": 4.119534224022672,
+        "matched": true,
+        "largest_overlap": {
+          "id": 1016603,
+          "intersection": 106,
+          "voxels": 127,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 24,
+        "stable_id": 1017706,
+        "source_xyz": [
+          465,
+          511,
+          415
+        ],
+        "voxels": 232,
+        "shell_voxels": 1241,
+        "inside_median": 42176.5,
+        "shell_median": 51793.0,
+        "shell_mad": 1281.0,
+        "cnr": 5.063419507030974,
+        "matched": true,
+        "largest_overlap": {
+          "id": 1017705,
+          "intersection": 229,
+          "voxels": 258,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 28,
+        "stable_id": 1315050,
+        "source_xyz": [
+          593,
+          392,
+          420
+        ],
+        "voxels": 420,
+        "shell_voxels": 1803,
+        "inside_median": 42191.5,
+        "shell_median": 50694.0,
+        "shell_mad": 1259.0,
+        "cnr": 4.55508950154865,
+        "matched": true,
+        "largest_overlap": {
+          "id": 1315050,
+          "intersection": 396,
+          "voxels": 422,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 29,
+        "stable_id": 1327731,
+        "source_xyz": [
+          474,
+          442,
+          420
+        ],
+        "voxels": 85,
+        "shell_voxels": 901,
+        "inside_median": 49906.0,
+        "shell_median": 51773.0,
+        "shell_mad": 1350.0,
+        "cnr": 0.9327957392168913,
+        "matched": false,
+        "largest_overlap": {
+          "id": 1327732,
+          "intersection": 5,
+          "voxels": 7,
+          "touches_face": false,
+          "eligible": false
+        }
+      },
+      {
+        "id": 31,
+        "stable_id": 1373232,
+        "source_xyz": [
+          407,
+          620,
+          420
+        ],
+        "voxels": 146,
+        "shell_voxels": 1007,
+        "inside_median": 43296.0,
+        "shell_median": 51065.0,
+        "shell_mad": 1168.0,
+        "cnr": 4.486403005456908,
+        "matched": true,
+        "largest_overlap": {
+          "id": 1373232,
+          "intersection": 138,
+          "voxels": 169,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 32,
+        "stable_id": 1553258,
+        "source_xyz": [
+          465,
+          555,
+          423
+        ],
+        "voxels": 82,
+        "shell_voxels": 880,
+        "inside_median": 46883.0,
+        "shell_median": 51765.0,
+        "shell_mad": 1068.5,
+        "cnr": 3.081763114426521,
+        "matched": true,
+        "largest_overlap": {
+          "id": 1487979,
+          "intersection": 53,
+          "voxels": 64,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 35,
+        "stable_id": 1750928,
+        "source_xyz": [
+          503,
+          559,
+          426
+        ],
+        "voxels": 244,
+        "shell_voxels": 1464,
+        "inside_median": 43011.0,
+        "shell_median": 51494.0,
+        "shell_mad": 1135.5,
+        "cnr": 5.038930085988514,
+        "matched": true,
+        "largest_overlap": {
+          "id": 1685649,
+          "intersection": 230,
+          "voxels": 247,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 38,
+        "stable_id": 1978423,
+        "source_xyz": [
+          414,
+          424,
+          430
+        ],
+        "voxels": 87,
+        "shell_voxels": 1074,
+        "inside_median": 47507.0,
+        "shell_median": 51003.0,
+        "shell_mad": 978.5,
+        "cnr": 2.40983106298434,
+        "matched": false,
+        "largest_overlap": {
+          "id": 1978425,
+          "intersection": 25,
+          "voxels": 38,
+          "touches_face": false,
+          "eligible": false
+        }
+      },
+      {
+        "id": 42,
+        "stable_id": 2260920,
+        "source_xyz": [
+          543,
+          503,
+          434
+        ],
+        "voxels": 662,
+        "shell_voxels": 2639,
+        "inside_median": 42440.5,
+        "shell_median": 51281.0,
+        "shell_mad": 1244.0,
+        "cnr": 4.793276172952443,
+        "matched": true,
+        "largest_overlap": {
+          "id": 2261173,
+          "intersection": 597,
+          "voxels": 653,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 44,
+        "stable_id": 2266984,
+        "source_xyz": [
+          463,
+          527,
+          434
+        ],
+        "voxels": 326,
+        "shell_voxels": 2031,
+        "inside_median": 48279.5,
+        "shell_median": 52420.0,
+        "shell_mad": 1123.0,
+        "cnr": 2.4868468295751045,
+        "matched": false,
+        "largest_overlap": {
+          "id": 2267242,
+          "intersection": 171,
+          "voxels": 194,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 45,
+        "stable_id": 2380121,
+        "source_xyz": [
+          448,
+          457,
+          436
+        ],
+        "voxels": 886,
+        "shell_voxels": 2905,
+        "inside_median": 42344.0,
+        "shell_median": 51336.0,
+        "shell_mad": 1340.0,
+        "cnr": 4.526135006875779,
+        "matched": true,
+        "largest_overlap": {
+          "id": 2380123,
+          "intersection": 807,
+          "voxels": 850,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 49,
+        "stable_id": 2447391,
+        "source_xyz": [
+          390,
+          464,
+          437
+        ],
+        "voxels": 185,
+        "shell_voxels": 1187,
+        "inside_median": 43339.0,
+        "shell_median": 50804.0,
+        "shell_mad": 1259.0,
+        "cnr": 3.9992641139736165,
+        "matched": true,
+        "largest_overlap": {
+          "id": 2447137,
+          "intersection": 182,
+          "voxels": 201,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 50,
+        "stable_id": 2448795,
+        "source_xyz": [
+          514,
+          469,
+          437
+        ],
+        "voxels": 71,
+        "shell_voxels": 770,
+        "inside_median": 46287.0,
+        "shell_median": 52204.0,
+        "shell_mad": 1211.0,
+        "cnr": 3.295591927186634,
+        "matched": true,
+        "largest_overlap": {
+          "id": 2383516,
+          "intersection": 58,
+          "voxels": 70,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 53,
+        "stable_id": 2697332,
+        "source_xyz": [
+          475,
+          416,
+          441
+        ],
+        "voxels": 310,
+        "shell_voxels": 1627,
+        "inside_median": 43180.0,
+        "shell_median": 50876.0,
+        "shell_mad": 1118.0,
+        "cnr": 4.643006158257493,
+        "matched": true,
+        "largest_overlap": {
+          "id": 2697588,
+          "intersection": 278,
+          "voxels": 289,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 54,
+        "stable_id": 2739811,
+        "source_xyz": [
+          458,
+          582,
+          441
+        ],
+        "voxels": 155,
+        "shell_voxels": 1123,
+        "inside_median": 44895.0,
+        "shell_median": 51087.0,
+        "shell_mad": 1150.0,
+        "cnr": 3.6316928545035454,
+        "matched": true,
+        "largest_overlap": {
+          "id": 2739809,
+          "intersection": 122,
+          "voxels": 138,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 55,
+        "stable_id": 2763425,
+        "source_xyz": [
+          520,
+          418,
+          442
+        ],
+        "voxels": 3083,
+        "shell_voxels": 4653,
+        "inside_median": 37713.0,
+        "shell_median": 50069.0,
+        "shell_mad": 1454.0,
+        "cnr": 5.731779796487491,
+        "matched": true,
+        "largest_overlap": {
+          "id": 2763680,
+          "intersection": 3025,
+          "voxels": 3229,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 56,
+        "stable_id": 2849613,
+        "source_xyz": [
+          436,
+          499,
+          443
+        ],
+        "voxels": 310,
+        "shell_voxels": 1566,
+        "inside_median": 44289.5,
+        "shell_median": 51842.5,
+        "shell_mad": 1085.0,
+        "cnr": 4.695325996614492,
+        "matched": true,
+        "largest_overlap": {
+          "id": 2915401,
+          "intersection": 257,
+          "voxels": 264,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 57,
+        "stable_id": 2903437,
+        "source_xyz": [
+          500,
+          453,
+          444
+        ],
+        "voxels": 158,
+        "shell_voxels": 1171,
+        "inside_median": 47627.5,
+        "shell_median": 52323.0,
+        "shell_mad": 1042.0,
+        "cnr": 3.0394158935915097,
+        "matched": true,
+        "largest_overlap": {
+          "id": 2903693,
+          "intersection": 110,
+          "voxels": 115,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 58,
+        "stable_id": 2943462,
+        "source_xyz": [
+          589,
+          609,
+          444
+        ],
+        "voxels": 71,
+        "shell_voxels": 902,
+        "inside_median": 46250.0,
+        "shell_median": 50334.5,
+        "shell_mad": 1058.5,
+        "cnr": 2.602699581560844,
+        "matched": false,
+        "largest_overlap": {
+          "id": 2878184,
+          "intersection": 37,
+          "voxels": 77,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 59,
+        "stable_id": 2970170,
+        "source_xyz": [
+          417,
+          458,
+          445
+        ],
+        "voxels": 125,
+        "shell_voxels": 947,
+        "inside_median": 42548.0,
+        "shell_median": 51517.0,
+        "shell_mad": 1219.0,
+        "cnr": 4.9626805756731605,
+        "matched": true,
+        "largest_overlap": {
+          "id": 2970170,
+          "intersection": 118,
+          "voxels": 124,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 61,
+        "stable_id": 3090495,
+        "source_xyz": [
+          422,
+          416,
+          447
+        ],
+        "voxels": 144,
+        "shell_voxels": 1132,
+        "inside_median": 44775.0,
+        "shell_median": 51422.5,
+        "shell_mad": 1182.0,
+        "cnr": 3.793297228105471,
+        "matched": true,
+        "largest_overlap": {
+          "id": 3025471,
+          "intersection": 126,
+          "voxels": 144,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 67,
+        "stable_id": 3461937,
+        "source_xyz": [
+          408,
+          587,
+          452
+        ],
+        "voxels": 407,
+        "shell_voxels": 1949,
+        "inside_median": 41604.0,
+        "shell_median": 50671.0,
+        "shell_mad": 1152.0,
+        "cnr": 5.308687253623515,
+        "matched": true,
+        "largest_overlap": {
+          "id": 3525422,
+          "intersection": 387,
+          "voxels": 411,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 70,
+        "stable_id": 3567972,
+        "source_xyz": [
+          459,
+          489,
+          454
+        ],
+        "voxels": 164,
+        "shell_voxels": 1199,
+        "inside_median": 47600.0,
+        "shell_median": 52234.0,
+        "shell_mad": 1067.0,
+        "cnr": 2.9293253790201894,
+        "matched": true,
+        "largest_overlap": {
+          "id": 3567973,
+          "intersection": 106,
+          "voxels": 129,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 73,
+        "stable_id": 3879127,
+        "source_xyz": [
+          574,
+          424,
+          459
+        ],
+        "voxels": 329,
+        "shell_voxels": 1474,
+        "inside_median": 42172.0,
+        "shell_median": 50895.5,
+        "shell_mad": 1244.0,
+        "cnr": 4.72983934107241,
+        "matched": true,
+        "largest_overlap": {
+          "id": 3879384,
+          "intersection": 309,
+          "voxels": 342,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 74,
+        "stable_id": 4041173,
+        "source_xyz": [
+          572,
+          545,
+          461
+        ],
+        "voxels": 110,
+        "shell_voxels": 964,
+        "inside_median": 44853.5,
+        "shell_median": 51079.5,
+        "shell_mad": 1237.5,
+        "cnr": 3.39343795434447,
+        "matched": false,
+        "largest_overlap": {
+          "id": 4041174,
+          "intersection": 64,
+          "voxels": 90,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 76,
+        "stable_id": 4182497,
+        "source_xyz": [
+          584,
+          585,
+          463
+        ],
+        "voxels": 96,
+        "shell_voxels": 873,
+        "inside_median": 45182.0,
+        "shell_median": 50625.0,
+        "shell_mad": 1047.0,
+        "cnr": 3.5064500514146206,
+        "matched": true,
+        "largest_overlap": {
+          "id": 4117473,
+          "intersection": 74,
+          "voxels": 79,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 78,
+        "stable_id": 4310963,
+        "source_xyz": [
+          538,
+          575,
+          465
+        ],
+        "voxels": 186,
+        "shell_voxels": 1325,
+        "inside_median": 44869.0,
+        "shell_median": 51257.0,
+        "shell_mad": 1076.0,
+        "cnr": 4.0043187467811245,
+        "matched": true,
+        "largest_overlap": {
+          "id": 4246196,
+          "intersection": 144,
+          "voxels": 164,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 79,
+        "stable_id": 4315235,
+        "source_xyz": [
+          458,
+          592,
+          465
+        ],
+        "voxels": 2001,
+        "shell_voxels": 4235,
+        "inside_median": 39077.0,
+        "shell_median": 50788.0,
+        "shell_mad": 1219.0,
+        "cnr": 6.479869798384255,
+        "matched": true,
+        "largest_overlap": {
+          "id": 4314723,
+          "intersection": 1900,
+          "voxels": 2003,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 80,
+        "stable_id": 4319888,
+        "source_xyz": [
+          503,
+          610,
+          465
+        ],
+        "voxels": 914,
+        "shell_voxels": 2765,
+        "inside_median": 39384.0,
+        "shell_median": 50453.0,
+        "shell_mad": 1309.0,
+        "cnr": 5.70354332822493,
+        "matched": true,
+        "largest_overlap": {
+          "id": 4254866,
+          "intersection": 865,
+          "voxels": 924,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 81,
+        "stable_id": 4345864,
+        "source_xyz": [
+          367,
+          456,
+          466
+        ],
+        "voxels": 454,
+        "shell_voxels": 1870,
+        "inside_median": 41621.0,
+        "shell_median": 50661.0,
+        "shell_mad": 1262.0,
+        "cnr": 4.831534441892568,
+        "matched": true,
+        "largest_overlap": {
+          "id": 4345866,
+          "intersection": 412,
+          "voxels": 438,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 82,
+        "stable_id": 4437382,
+        "source_xyz": [
+          493,
+          557,
+          467
+        ],
+        "voxels": 4744,
+        "shell_voxels": 6756,
+        "inside_median": 37263.5,
+        "shell_median": 51096.0,
+        "shell_mad": 1400.0,
+        "cnr": 6.664209593185717,
+        "matched": true,
+        "largest_overlap": {
+          "id": 4437382,
+          "intersection": 4631,
+          "voxels": 4884,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 85,
+        "stable_id": 4501075,
+        "source_xyz": [
+          442,
+          550,
+          468
+        ],
+        "voxels": 96,
+        "shell_voxels": 943,
+        "inside_median": 45977.0,
+        "shell_median": 51830.0,
+        "shell_mad": 1144.0,
+        "cnr": 3.450869244070377,
+        "matched": true,
+        "largest_overlap": {
+          "id": 4435796,
+          "intersection": 78,
+          "voxels": 103,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 86,
+        "stable_id": 4504054,
+        "source_xyz": [
+          605,
+          561,
+          468
+        ],
+        "voxels": 1296,
+        "shell_voxels": 2752,
+        "inside_median": 37765.5,
+        "shell_median": 50206.0,
+        "shell_mad": 1464.5,
+        "cnr": 5.729602112167008,
+        "matched": false,
+        "largest_overlap": {
+          "id": 4504055,
+          "intersection": 1276,
+          "voxels": 1357,
+          "touches_face": true,
+          "eligible": false
+        }
+      },
+      {
+        "id": 88,
+        "stable_id": 4541269,
+        "source_xyz": [
+          444,
+          451,
+          469
+        ],
+        "voxels": 189,
+        "shell_voxels": 1163,
+        "inside_median": 43300.0,
+        "shell_median": 51610.0,
+        "shell_mad": 1188.0,
+        "cnr": 4.718028797348911,
+        "matched": true,
+        "largest_overlap": {
+          "id": 4476500,
+          "intersection": 179,
+          "voxels": 200,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 91,
+        "stable_id": 4758181,
+        "source_xyz": [
+          524,
+          530,
+          472
+        ],
+        "voxels": 4387,
+        "shell_voxels": 6869,
+        "inside_median": 37904.0,
+        "shell_median": 50790.0,
+        "shell_mad": 1332.0,
+        "cnr": 6.5251410860476025,
+        "matched": true,
+        "largest_overlap": {
+          "id": 4758182,
+          "intersection": 4300,
+          "voxels": 4580,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 93,
+        "stable_id": 4814944,
+        "source_xyz": [
+          455,
+          496,
+          473
+        ],
+        "voxels": 91,
+        "shell_voxels": 975,
+        "inside_median": 49158.0,
+        "shell_median": 52287.0,
+        "shell_mad": 1301.0,
+        "cnr": 1.6221995283645398,
+        "matched": false,
+        "largest_overlap": {
+          "id": 4880478,
+          "intersection": 51,
+          "voxels": 68,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 96,
+        "stable_id": 4887853,
+        "source_xyz": [
+          404,
+          525,
+          474
+        ],
+        "voxels": 395,
+        "shell_voxels": 2196,
+        "inside_median": 44114.0,
+        "shell_median": 51318.5,
+        "shell_mad": 1204.0,
+        "cnr": 4.036020495555756,
+        "matched": true,
+        "largest_overlap": {
+          "id": 5216056,
+          "intersection": 214,
+          "voxels": 233,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 97,
+        "stable_id": 4916238,
+        "source_xyz": [
+          373,
+          380,
+          475
+        ],
+        "voxels": 276,
+        "shell_voxels": 1514,
+        "inside_median": 42699.0,
+        "shell_median": 50732.5,
+        "shell_mad": 1177.0,
+        "cnr": 4.603671636580482,
+        "matched": true,
+        "largest_overlap": {
+          "id": 4916238,
+          "intersection": 263,
+          "voxels": 274,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 98,
+        "stable_id": 5070803,
+        "source_xyz": [
+          570,
+          471,
+          477
+        ],
+        "voxels": 978,
+        "shell_voxels": 2639,
+        "inside_median": 39075.5,
+        "shell_median": 50714.0,
+        "shell_mad": 1365.0,
+        "cnr": 5.7509602228339585,
+        "matched": true,
+        "largest_overlap": {
+          "id": 5070804,
+          "intersection": 925,
+          "voxels": 1014,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 99,
+        "stable_id": 5107444,
+        "source_xyz": [
+          603,
+          614,
+          477
+        ],
+        "voxels": 88,
+        "shell_voxels": 894,
+        "inside_median": 45403.5,
+        "shell_median": 50645.5,
+        "shell_mad": 1049.5,
+        "cnr": 3.3689190673428415,
+        "matched": true,
+        "largest_overlap": {
+          "id": 5107444,
+          "intersection": 66,
+          "voxels": 68,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 100,
+        "stable_id": 5124737,
+        "source_xyz": [
+          488,
+          426,
+          478
+        ],
+        "voxels": 150,
+        "shell_voxels": 1091,
+        "inside_median": 45316.5,
+        "shell_median": 51669.0,
+        "shell_mad": 1056.0,
+        "cnr": 4.057483474976393,
+        "matched": true,
+        "largest_overlap": {
+          "id": 5124992,
+          "intersection": 124,
+          "voxels": 127,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 102,
+        "stable_id": 5247791,
+        "source_xyz": [
+          406,
+          395,
+          480
+        ],
+        "voxels": 900,
+        "shell_voxels": 4136,
+        "inside_median": 44706.0,
+        "shell_median": 51058.0,
+        "shell_mad": 1184.5,
+        "cnr": 3.6170243175984234,
+        "matched": true,
+        "largest_overlap": {
+          "id": 5248046,
+          "intersection": 779,
+          "voxels": 857,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 103,
+        "stable_id": 5278081,
+        "source_xyz": [
+          488,
+          513,
+          480
+        ],
+        "voxels": 820,
+        "shell_voxels": 2279,
+        "inside_median": 39881.0,
+        "shell_median": 52153.0,
+        "shell_mad": 1345.0,
+        "cnr": 6.15416401509054,
+        "matched": true,
+        "largest_overlap": {
+          "id": 5343617,
+          "intersection": 788,
+          "voxels": 879,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 105,
+        "stable_id": 5322289,
+        "source_xyz": [
+          408,
+          430,
+          481
+        ],
+        "voxels": 3753,
+        "shell_voxels": 5451,
+        "inside_median": 37473.0,
+        "shell_median": 50640.0,
+        "shell_mad": 1442.0,
+        "cnr": 6.158820963958619,
+        "matched": true,
+        "largest_overlap": {
+          "id": 5322544,
+          "intersection": 3690,
+          "voxels": 3912,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 108,
+        "stable_id": 5484809,
+        "source_xyz": [
+          368,
+          553,
+          483
+        ],
+        "voxels": 703,
+        "shell_voxels": 2439,
+        "inside_median": 41489.0,
+        "shell_median": 50633.0,
+        "shell_mad": 1299.0,
+        "cnr": 4.7479164777936775,
+        "matched": true,
+        "largest_overlap": {
+          "id": 5484554,
+          "intersection": 650,
+          "voxels": 682,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 109,
+        "stable_id": 5515738,
+        "source_xyz": [
+          577,
+          417,
+          484
+        ],
+        "voxels": 1754,
+        "shell_voxels": 4550,
+        "inside_median": 39995.0,
+        "shell_median": 50463.0,
+        "shell_mad": 1344.0,
+        "cnr": 5.253399754613838,
+        "matched": true,
+        "largest_overlap": {
+          "id": 5515738,
+          "intersection": 1669,
+          "voxels": 1821,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 111,
+        "stable_id": 5558583,
+        "source_xyz": [
+          414,
+          585,
+          484
+        ],
+        "voxels": 1181,
+        "shell_voxels": 2922,
+        "inside_median": 40661.0,
+        "shell_median": 50792.5,
+        "shell_mad": 1283.0,
+        "cnr": 5.326269002055436,
+        "matched": true,
+        "largest_overlap": {
+          "id": 5558581,
+          "intersection": 1108,
+          "voxels": 1197,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 112,
+        "stable_id": 5594349,
+        "source_xyz": [
+          596,
+          468,
+          485
+        ],
+        "voxels": 100,
+        "shell_voxels": 957,
+        "inside_median": 46161.0,
+        "shell_median": 51579.0,
+        "shell_mad": 1013.0,
+        "cnr": 3.6074935190959456,
+        "matched": true,
+        "largest_overlap": {
+          "id": 5529835,
+          "intersection": 79,
+          "voxels": 90,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 113,
+        "stable_id": 5616168,
+        "source_xyz": [
+          399,
+          554,
+          485
+        ],
+        "voxels": 612,
+        "shell_voxels": 2384,
+        "inside_median": 42276.5,
+        "shell_median": 50913.5,
+        "shell_mad": 1139.5,
+        "cnr": 5.112397270381178,
+        "matched": true,
+        "largest_overlap": {
+          "id": 5616167,
+          "intersection": 590,
+          "voxels": 630,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 114,
+        "stable_id": 5617618,
+        "source_xyz": [
+          569,
+          559,
+          485
+        ],
+        "voxels": 68,
+        "shell_voxels": 768,
+        "inside_median": 43429.5,
+        "shell_median": 51381.0,
+        "shell_mad": 1103.5,
+        "cnr": 4.860184208407926,
+        "matched": false,
+        "largest_overlap": {
+          "id": 5617874,
+          "intersection": 57,
+          "voxels": 62,
+          "touches_face": false,
+          "eligible": false
+        }
+      },
+      {
+        "id": 116,
+        "stable_id": 5654183,
+        "source_xyz": [
+          526,
+          446,
+          486
+        ],
+        "voxels": 125,
+        "shell_voxels": 983,
+        "inside_median": 44650.0,
+        "shell_median": 51510.0,
+        "shell_mad": 1119.0,
+        "cnr": 4.134947819490119,
+        "matched": true,
+        "largest_overlap": {
+          "id": 5654183,
+          "intersection": 112,
+          "voxels": 126,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 119,
+        "stable_id": 5927040,
+        "source_xyz": [
+          487,
+          488,
+          490
+        ],
+        "voxels": 221,
+        "shell_voxels": 1227,
+        "inside_median": 44394.0,
+        "shell_median": 52288.0,
+        "shell_mad": 1264.0,
+        "cnr": 4.212365550085635,
+        "matched": true,
+        "largest_overlap": {
+          "id": 5927040,
+          "intersection": 213,
+          "voxels": 231,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 136,
+        "stable_id": 6586784,
+        "source_xyz": [
+          519,
+          505,
+          500
+        ],
+        "voxels": 1369,
+        "shell_voxels": 3368,
+        "inside_median": 39764.0,
+        "shell_median": 51940.0,
+        "shell_mad": 1320.5,
+        "cnr": 6.219310478899677,
+        "matched": true,
+        "largest_overlap": {
+          "id": 6587809,
+          "intersection": 1287,
+          "voxels": 1391,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 138,
+        "stable_id": 6598589,
+        "source_xyz": [
+          548,
+          551,
+          500
+        ],
+        "voxels": 346,
+        "shell_voxels": 1720,
+        "inside_median": 43150.5,
+        "shell_median": 51204.0,
+        "shell_mad": 1256.0,
+        "cnr": 4.324849786182133,
+        "matched": true,
+        "largest_overlap": {
+          "id": 6598589,
+          "intersection": 313,
+          "voxels": 346,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 143,
+        "stable_id": 6643039,
+        "source_xyz": [
+          454,
+          469,
+          501
+        ],
+        "voxels": 970,
+        "shell_voxels": 2998,
+        "inside_median": 41104.5,
+        "shell_median": 51668.0,
+        "shell_mad": 1296.0,
+        "cnr": 5.497672174175165,
+        "matched": true,
+        "largest_overlap": {
+          "id": 6643550,
+          "intersection": 918,
+          "voxels": 971,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 146,
+        "stable_id": 6655178,
+        "source_xyz": [
+          561,
+          516,
+          501
+        ],
+        "voxels": 478,
+        "shell_voxels": 2149,
+        "inside_median": 42114.0,
+        "shell_median": 51063.0,
+        "shell_mad": 1220.0,
+        "cnr": 4.9475555791443036,
+        "matched": true,
+        "largest_overlap": {
+          "id": 6655436,
+          "intersection": 436,
+          "voxels": 458,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 149,
+        "stable_id": 7064804,
+        "source_xyz": [
+          587,
+          580,
+          507
+        ],
+        "voxels": 176,
+        "shell_voxels": 1144,
+        "inside_median": 45291.0,
+        "shell_median": 51016.0,
+        "shell_mad": 1136.0,
+        "cnr": 3.399172181341116,
+        "matched": true,
+        "largest_overlap": {
+          "id": 7065059,
+          "intersection": 145,
+          "voxels": 155,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 150,
+        "stable_id": 7079906,
+        "source_xyz": [
+          585,
+          383,
+          508
+        ],
+        "voxels": 133,
+        "shell_voxels": 1108,
+        "inside_median": 44645.0,
+        "shell_median": 51211.5,
+        "shell_mad": 1099.5,
+        "cnr": 4.028234262940484,
+        "matched": true,
+        "largest_overlap": {
+          "id": 7079907,
+          "intersection": 113,
+          "voxels": 118,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 154,
+        "stable_id": 7181356,
+        "source_xyz": [
+          403,
+          524,
+          509
+        ],
+        "voxels": 1350,
+        "shell_voxels": 3680,
+        "inside_median": 41741.0,
+        "shell_median": 50747.5,
+        "shell_mad": 1221.5,
+        "cnr": 4.973230475011015,
+        "matched": true,
+        "largest_overlap": {
+          "id": 7181611,
+          "intersection": 1277,
+          "voxels": 1355,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 156,
+        "stable_id": 7279403,
+        "source_xyz": [
+          402,
+          395,
+          511
+        ],
+        "voxels": 259,
+        "shell_voxels": 1451,
+        "inside_median": 42829.0,
+        "shell_median": 51089.0,
+        "shell_mad": 1280.0,
+        "cnr": 4.352573182247403,
+        "matched": true,
+        "largest_overlap": {
+          "id": 7214378,
+          "intersection": 234,
+          "voxels": 248,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 157,
+        "stable_id": 7356097,
+        "source_xyz": [
+          552,
+          438,
+          512
+        ],
+        "voxels": 84,
+        "shell_voxels": 892,
+        "inside_median": 44602.0,
+        "shell_median": 51418.0,
+        "shell_mad": 1030.0,
+        "cnr": 4.4634262297014295,
+        "matched": true,
+        "largest_overlap": {
+          "id": 7355331,
+          "intersection": 69,
+          "voxels": 86,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 158,
+        "stable_id": 7439431,
+        "source_xyz": [
+          430,
+          508,
+          513
+        ],
+        "voxels": 87,
+        "shell_voxels": 982,
+        "inside_median": 48633.0,
+        "shell_median": 51932.5,
+        "shell_mad": 1211.0,
+        "cnr": 1.8377227587886258,
+        "matched": false,
+        "largest_overlap": {
+          "id": 7439431,
+          "intersection": 45,
+          "voxels": 60,
+          "touches_face": false,
+          "eligible": false
+        }
+      },
+      {
+        "id": 159,
+        "stable_id": 7486533,
+        "source_xyz": [
+          428,
+          436,
+          514
+        ],
+        "voxels": 81,
+        "shell_voxels": 853,
+        "inside_median": 45952.0,
+        "shell_median": 51198.0,
+        "shell_mad": 1127.0,
+        "cnr": 3.139643765939857,
+        "matched": true,
+        "largest_overlap": {
+          "id": 7486534,
+          "intersection": 60,
+          "voxels": 77,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 163,
+        "stable_id": 7867264,
+        "source_xyz": [
+          487,
+          387,
+          520
+        ],
+        "voxels": 101,
+        "shell_voxels": 907,
+        "inside_median": 44529.0,
+        "shell_median": 51316.0,
+        "shell_mad": 1112.0,
+        "cnr": 4.116698547273068,
+        "matched": true,
+        "largest_overlap": {
+          "id": 7801728,
+          "intersection": 90,
+          "voxels": 99,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 167,
+        "stable_id": 8010275,
+        "source_xyz": [
+          394,
+          434,
+          522
+        ],
+        "voxels": 94,
+        "shell_voxels": 874,
+        "inside_median": 45562.5,
+        "shell_median": 51604.0,
+        "shell_mad": 1137.0,
+        "cnr": 3.583936608071988,
+        "matched": true,
+        "largest_overlap": {
+          "id": 8010275,
+          "intersection": 76,
+          "voxels": 92,
+          "touches_face": false,
+          "eligible": true
+        }
+      }
+    ]
+  },
+  "prediction": {
+    "summary": {
+      "matched": 64,
+      "unmatched": 7,
+      "median_matched": 4.7007947057455794,
+      "median_unmatched": 3.527148075259418,
+      "undefined": 0,
+      "pairs": 448,
+      "twice_wins": 798,
+      "auc": 0.890625,
+      "supported": true,
+      "passes": true,
+      "size_bands": {
+        "64..127": [
+          16,
+          5
+        ],
+        "128..511": [
+          25,
+          1
+        ],
+        "512+": [
+          23,
+          1
+        ]
+      },
+      "unmatched_at_or_above_matched_median": []
+    },
+    "rows": [
+      {
+        "id": 153701,
+        "stable_id": 153701,
+        "source_xyz": [
+          460,
+          464,
+          402
+        ],
+        "voxels": 211,
+        "shell_voxels": 1254,
+        "inside_median": 42725.0,
+        "shell_median": 51733.5,
+        "shell_mad": 1177.5,
+        "cnr": 5.160212319953213,
+        "matched": true,
+        "largest_overlap": {
+          "id": 8,
+          "intersection": 200,
+          "voxels": 227,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 300824,
+        "stable_id": 300824,
+        "source_xyz": [
+          383,
+          527,
+          404
+        ],
+        "voxels": 979,
+        "shell_voxels": 2665,
+        "inside_median": 41234.0,
+        "shell_median": 50869.0,
+        "shell_mad": 1216.0,
+        "cnr": 5.344340845030423,
+        "matched": true,
+        "largest_overlap": {
+          "id": 10,
+          "intersection": 904,
+          "voxels": 959,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 456596,
+        "stable_id": 456596,
+        "source_xyz": [
+          507,
+          623,
+          406
+        ],
+        "voxels": 896,
+        "shell_voxels": 3378,
+        "inside_median": 44459.5,
+        "shell_median": 50836.5,
+        "shell_mad": 1197.0,
+        "cnr": 3.593339660135545,
+        "matched": false,
+        "largest_overlap": {
+          "id": 11,
+          "intersection": 868,
+          "voxels": 1101,
+          "touches_face": true,
+          "eligible": false
+        }
+      },
+      {
+        "id": 574025,
+        "stable_id": 574025,
+        "source_xyz": [
+          432,
+          570,
+          408
+        ],
+        "voxels": 216,
+        "shell_voxels": 1319,
+        "inside_median": 44740.0,
+        "shell_median": 51193.0,
+        "shell_mad": 1108.0,
+        "cnr": 3.9282390531610734,
+        "matched": true,
+        "largest_overlap": {
+          "id": 14,
+          "intersection": 208,
+          "voxels": 232,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 577717,
+        "stable_id": 577717,
+        "source_xyz": [
+          540,
+          584,
+          408
+        ],
+        "voxels": 1615,
+        "shell_voxels": 5106,
+        "inside_median": 43053.0,
+        "shell_median": 51060.0,
+        "shell_mad": 1181.0,
+        "cnr": 4.572944547950125,
+        "matched": true,
+        "largest_overlap": {
+          "id": 15,
+          "intersection": 1531,
+          "voxels": 1769,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 640024,
+        "stable_id": 640024,
+        "source_xyz": [
+          383,
+          572,
+          409
+        ],
+        "voxels": 450,
+        "shell_voxels": 1879,
+        "inside_median": 42461.0,
+        "shell_median": 50912.0,
+        "shell_mad": 1260.0,
+        "cnr": 4.523905879632307,
+        "matched": true,
+        "largest_overlap": {
+          "id": 17,
+          "intersection": 393,
+          "voxels": 423,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 885951,
+        "stable_id": 885951,
+        "source_xyz": [
+          550,
+          508,
+          413
+        ],
+        "voxels": 1119,
+        "shell_voxels": 2841,
+        "inside_median": 39430.0,
+        "shell_median": 50941.0,
+        "shell_mad": 1360.0,
+        "cnr": 5.708869950246388,
+        "matched": true,
+        "largest_overlap": {
+          "id": 19,
+          "intersection": 1036,
+          "voxels": 1090,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 918301,
+        "stable_id": 918301,
+        "source_xyz": [
+          388,
+          379,
+          414
+        ],
+        "voxels": 531,
+        "shell_voxels": 1858,
+        "inside_median": 39850.0,
+        "shell_median": 50752.0,
+        "shell_mad": 1148.5,
+        "cnr": 6.402523517469605,
+        "matched": true,
+        "largest_overlap": {
+          "id": 22,
+          "intersection": 476,
+          "voxels": 513,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 1016603,
+        "stable_id": 1016603,
+        "source_xyz": [
+          386,
+          507,
+          415
+        ],
+        "voxels": 127,
+        "shell_voxels": 957,
+        "inside_median": 44649.0,
+        "shell_median": 51571.0,
+        "shell_mad": 1177.0,
+        "cnr": 3.966716259215796,
+        "matched": true,
+        "largest_overlap": {
+          "id": 23,
+          "intersection": 106,
+          "voxels": 110,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 1017705,
+        "stable_id": 1017705,
+        "source_xyz": [
+          464,
+          511,
+          415
+        ],
+        "voxels": 258,
+        "shell_voxels": 1319,
+        "inside_median": 42421.5,
+        "shell_median": 51969.0,
+        "shell_mad": 1141.0,
+        "cnr": 5.643909312973526,
+        "matched": true,
+        "largest_overlap": {
+          "id": 24,
+          "intersection": 229,
+          "voxels": 232,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 1020824,
+        "stable_id": 1020824,
+        "source_xyz": [
+          511,
+          523,
+          415
+        ],
+        "voxels": 604,
+        "shell_voxels": 2398,
+        "inside_median": 43134.0,
+        "shell_median": 52190.0,
+        "shell_mad": 1289.5,
+        "cnr": 4.736865698193133,
+        "matched": true,
+        "largest_overlap": {
+          "id": 20,
+          "intersection": 575,
+          "voxels": 813,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 1315050,
+        "stable_id": 1315050,
+        "source_xyz": [
+          593,
+          392,
+          420
+        ],
+        "voxels": 422,
+        "shell_voxels": 1877,
+        "inside_median": 42189.0,
+        "shell_median": 50721.0,
+        "shell_mad": 1219.0,
+        "cnr": 4.720882001521173,
+        "matched": true,
+        "largest_overlap": {
+          "id": 28,
+          "intersection": 396,
+          "voxels": 420,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 1373232,
+        "stable_id": 1373232,
+        "source_xyz": [
+          407,
+          620,
+          420
+        ],
+        "voxels": 169,
+        "shell_voxels": 1058,
+        "inside_median": 43415.0,
+        "shell_median": 51241.5,
+        "shell_mad": 1103.0,
+        "cnr": 4.785949165044037,
+        "matched": true,
+        "largest_overlap": {
+          "id": 31,
+          "intersection": 138,
+          "voxels": 146,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 1487979,
+        "stable_id": 1487979,
+        "source_xyz": [
+          466,
+          556,
+          422
+        ],
+        "voxels": 64,
+        "shell_voxels": 831,
+        "inside_median": 46101.5,
+        "shell_median": 51732.0,
+        "shell_mad": 1012.0,
+        "cnr": 3.7526879656452263,
+        "matched": true,
+        "largest_overlap": {
+          "id": 32,
+          "intersection": 53,
+          "voxels": 82,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 1685649,
+        "stable_id": 1685649,
+        "source_xyz": [
+          504,
+          560,
+          425
+        ],
+        "voxels": 247,
+        "shell_voxels": 1479,
+        "inside_median": 43003.0,
+        "shell_median": 51551.0,
+        "shell_mad": 1110.0,
+        "cnr": 5.194186497302645,
+        "matched": true,
+        "largest_overlap": {
+          "id": 35,
+          "intersection": 230,
+          "voxels": 244,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 2261173,
+        "stable_id": 2261173,
+        "source_xyz": [
+          540,
+          504,
+          434
+        ],
+        "voxels": 653,
+        "shell_voxels": 2602,
+        "inside_median": 42109.0,
+        "shell_median": 51316.0,
+        "shell_mad": 1241.5,
+        "cnr": 5.0020430306089505,
+        "matched": true,
+        "largest_overlap": {
+          "id": 42,
+          "intersection": 597,
+          "voxels": 662,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 2267242,
+        "stable_id": 2267242,
+        "source_xyz": [
+          465,
+          528,
+          434
+        ],
+        "voxels": 194,
+        "shell_voxels": 1713,
+        "inside_median": 47164.0,
+        "shell_median": 52081.0,
+        "shell_mad": 1121.0,
+        "cnr": 2.9584933669459574,
+        "matched": false,
+        "largest_overlap": {
+          "id": 44,
+          "intersection": 171,
+          "voxels": 326,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 2380123,
+        "stable_id": 2380123,
+        "source_xyz": [
+          450,
+          457,
+          436
+        ],
+        "voxels": 850,
+        "shell_voxels": 2824,
+        "inside_median": 42110.5,
+        "shell_median": 51345.0,
+        "shell_mad": 1325.5,
+        "cnr": 4.699045581581757,
+        "matched": true,
+        "largest_overlap": {
+          "id": 45,
+          "intersection": 807,
+          "voxels": 886,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 2383516,
+        "stable_id": 2383516,
+        "source_xyz": [
+          515,
+          470,
+          436
+        ],
+        "voxels": 70,
+        "shell_voxels": 749,
+        "inside_median": 46192.0,
+        "shell_median": 52216.0,
+        "shell_mad": 1204.0,
+        "cnr": 3.3746946304709384,
+        "matched": true,
+        "largest_overlap": {
+          "id": 50,
+          "intersection": 58,
+          "voxels": 71,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 2447137,
+        "stable_id": 2447137,
+        "source_xyz": [
+          392,
+          463,
+          437
+        ],
+        "voxels": 201,
+        "shell_voxels": 1278,
+        "inside_median": 43602.0,
+        "shell_median": 50963.5,
+        "shell_mad": 1152.5,
+        "cnr": 4.308254859771762,
+        "matched": true,
+        "largest_overlap": {
+          "id": 49,
+          "intersection": 182,
+          "voxels": 185,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 2697588,
+        "stable_id": 2697588,
+        "source_xyz": [
+          475,
+          417,
+          441
+        ],
+        "voxels": 289,
+        "shell_voxels": 1567,
+        "inside_median": 42887.0,
+        "shell_median": 50721.0,
+        "shell_mad": 1124.0,
+        "cnr": 4.701032570942746,
+        "matched": true,
+        "largest_overlap": {
+          "id": 53,
+          "intersection": 278,
+          "voxels": 310,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 2739809,
+        "stable_id": 2739809,
+        "source_xyz": [
+          456,
+          582,
+          441
+        ],
+        "voxels": 138,
+        "shell_voxels": 1022,
+        "inside_median": 44645.0,
+        "shell_median": 50978.0,
+        "shell_mad": 1158.0,
+        "cnr": 3.688730552474333,
+        "matched": true,
+        "largest_overlap": {
+          "id": 54,
+          "intersection": 122,
+          "voxels": 155,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 2763680,
+        "stable_id": 2763680,
+        "source_xyz": [
+          519,
+          419,
+          442
+        ],
+        "voxels": 3229,
+        "shell_voxels": 5057,
+        "inside_median": 37931.0,
+        "shell_median": 50289.0,
+        "shell_mad": 1307.0,
+        "cnr": 6.3774726898330245,
+        "matched": true,
+        "largest_overlap": {
+          "id": 55,
+          "intersection": 3025,
+          "voxels": 3083,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 2878184,
+        "stable_id": 2878184,
+        "source_xyz": [
+          591,
+          610,
+          443
+        ],
+        "voxels": 77,
+        "shell_voxels": 918,
+        "inside_median": 46303.0,
+        "shell_median": 50434.5,
+        "shell_mad": 1006.5,
+        "cnr": 2.7686622680353237,
+        "matched": false,
+        "largest_overlap": {
+          "id": 58,
+          "intersection": 37,
+          "voxels": 71,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 2903693,
+        "stable_id": 2903693,
+        "source_xyz": [
+          500,
+          454,
+          444
+        ],
+        "voxels": 115,
+        "shell_voxels": 1050,
+        "inside_median": 47387.0,
+        "shell_median": 52165.5,
+        "shell_mad": 1104.5,
+        "cnr": 2.9181114478577728,
+        "matched": true,
+        "largest_overlap": {
+          "id": 57,
+          "intersection": 110,
+          "voxels": 158,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 2915401,
+        "stable_id": 2915401,
+        "source_xyz": [
+          432,
+          500,
+          444
+        ],
+        "voxels": 264,
+        "shell_voxels": 1382,
+        "inside_median": 43817.0,
+        "shell_median": 51598.5,
+        "shell_mad": 1147.0,
+        "cnr": 4.575893500320075,
+        "matched": true,
+        "largest_overlap": {
+          "id": 56,
+          "intersection": 257,
+          "voxels": 310,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 2970170,
+        "stable_id": 2970170,
+        "source_xyz": [
+          417,
+          458,
+          445
+        ],
+        "voxels": 124,
+        "shell_voxels": 935,
+        "inside_median": 42504.0,
+        "shell_median": 51553.0,
+        "shell_mad": 1239.0,
+        "cnr": 4.926123391851259,
+        "matched": true,
+        "largest_overlap": {
+          "id": 59,
+          "intersection": 118,
+          "voxels": 125,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 3025471,
+        "stable_id": 3025471,
+        "source_xyz": [
+          422,
+          418,
+          446
+        ],
+        "voxels": 144,
+        "shell_voxels": 1100,
+        "inside_median": 44689.0,
+        "shell_median": 51402.5,
+        "shell_mad": 1159.0,
+        "cnr": 3.9069833595738754,
+        "matched": true,
+        "largest_overlap": {
+          "id": 61,
+          "intersection": 126,
+          "voxels": 144,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 3525422,
+        "stable_id": 3525422,
+        "source_xyz": [
+          405,
+          579,
+          453
+        ],
+        "voxels": 411,
+        "shell_voxels": 1908,
+        "inside_median": 41501.0,
+        "shell_median": 50688.5,
+        "shell_mad": 1135.0,
+        "cnr": 5.459809561842483,
+        "matched": true,
+        "largest_overlap": {
+          "id": 67,
+          "intersection": 387,
+          "voxels": 407,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 3567973,
+        "stable_id": 3567973,
+        "source_xyz": [
+          460,
+          489,
+          454
+        ],
+        "voxels": 129,
+        "shell_voxels": 1139,
+        "inside_median": 47092.0,
+        "shell_median": 52079.0,
+        "shell_mad": 1020.0,
+        "cnr": 3.2977308014801765,
+        "matched": true,
+        "largest_overlap": {
+          "id": 70,
+          "intersection": 106,
+          "voxels": 164,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 3879384,
+        "stable_id": 3879384,
+        "source_xyz": [
+          575,
+          425,
+          459
+        ],
+        "voxels": 342,
+        "shell_voxels": 1492,
+        "inside_median": 42216.0,
+        "shell_median": 50969.0,
+        "shell_mad": 1233.0,
+        "cnr": 4.788173250363859,
+        "matched": true,
+        "largest_overlap": {
+          "id": 73,
+          "intersection": 309,
+          "voxels": 329,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 4041174,
+        "stable_id": 4041174,
+        "source_xyz": [
+          573,
+          545,
+          461
+        ],
+        "voxels": 90,
+        "shell_voxels": 1008,
+        "inside_median": 44066.0,
+        "shell_median": 50988.0,
+        "shell_mad": 1165.5,
+        "cnr": 4.005855887685107,
+        "matched": false,
+        "largest_overlap": {
+          "id": 74,
+          "intersection": 64,
+          "voxels": 110,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 4117473,
+        "stable_id": 4117473,
+        "source_xyz": [
+          584,
+          587,
+          462
+        ],
+        "voxels": 79,
+        "shell_voxels": 778,
+        "inside_median": 44750.0,
+        "shell_median": 50545.0,
+        "shell_mad": 1034.5,
+        "cnr": 3.7783218474305165,
+        "matched": true,
+        "largest_overlap": {
+          "id": 76,
+          "intersection": 74,
+          "voxels": 96,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 4246196,
+        "stable_id": 4246196,
+        "source_xyz": [
+          539,
+          578,
+          464
+        ],
+        "voxels": 164,
+        "shell_voxels": 1250,
+        "inside_median": 44598.5,
+        "shell_median": 51195.5,
+        "shell_mad": 1063.0,
+        "cnr": 4.185903612668954,
+        "matched": true,
+        "largest_overlap": {
+          "id": 78,
+          "intersection": 144,
+          "voxels": 186,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 4254866,
+        "stable_id": 4254866,
+        "source_xyz": [
+          505,
+          612,
+          464
+        ],
+        "voxels": 924,
+        "shell_voxels": 2768,
+        "inside_median": 39465.0,
+        "shell_median": 50453.0,
+        "shell_mad": 1252.0,
+        "cnr": 5.919572256492675,
+        "matched": true,
+        "largest_overlap": {
+          "id": 80,
+          "intersection": 865,
+          "voxels": 914,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 4314723,
+        "stable_id": 4314723,
+        "source_xyz": [
+          458,
+          590,
+          465
+        ],
+        "voxels": 2003,
+        "shell_voxels": 4223,
+        "inside_median": 39051.0,
+        "shell_median": 50808.0,
+        "shell_mad": 1178.0,
+        "cnr": 6.731738420344931,
+        "matched": true,
+        "largest_overlap": {
+          "id": 79,
+          "intersection": 1900,
+          "voxels": 2001,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 4345866,
+        "stable_id": 4345866,
+        "source_xyz": [
+          369,
+          456,
+          466
+        ],
+        "voxels": 438,
+        "shell_voxels": 1699,
+        "inside_median": 41346.0,
+        "shell_median": 50555.0,
+        "shell_mad": 1269.0,
+        "cnr": 4.894708750212739,
+        "matched": true,
+        "largest_overlap": {
+          "id": 81,
+          "intersection": 412,
+          "voxels": 454,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 4435796,
+        "stable_id": 4435796,
+        "source_xyz": [
+          443,
+          551,
+          467
+        ],
+        "voxels": 103,
+        "shell_voxels": 943,
+        "inside_median": 46333.0,
+        "shell_median": 51907.0,
+        "shell_mad": 1124.0,
+        "cnr": 3.3448500830271723,
+        "matched": true,
+        "largest_overlap": {
+          "id": 85,
+          "intersection": 78,
+          "voxels": 96,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 4437382,
+        "stable_id": 4437382,
+        "source_xyz": [
+          493,
+          557,
+          467
+        ],
+        "voxels": 4884,
+        "shell_voxels": 6783,
+        "inside_median": 37404.0,
+        "shell_median": 51198.0,
+        "shell_mad": 1322.0,
+        "cnr": 7.03776515599104,
+        "matched": true,
+        "largest_overlap": {
+          "id": 82,
+          "intersection": 4631,
+          "voxels": 4744,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 4476500,
+        "stable_id": 4476500,
+        "source_xyz": [
+          443,
+          454,
+          468
+        ],
+        "voxels": 200,
+        "shell_voxels": 1140,
+        "inside_median": 43276.0,
+        "shell_median": 51686.5,
+        "shell_mad": 1124.5,
+        "cnr": 5.044735022301382,
+        "matched": true,
+        "largest_overlap": {
+          "id": 88,
+          "intersection": 179,
+          "voxels": 189,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 4758182,
+        "stable_id": 4758182,
+        "source_xyz": [
+          525,
+          530,
+          472
+        ],
+        "voxels": 4580,
+        "shell_voxels": 7423,
+        "inside_median": 38175.0,
+        "shell_median": 50989.0,
+        "shell_mad": 1277.0,
+        "cnr": 6.7681476835811205,
+        "matched": true,
+        "largest_overlap": {
+          "id": 91,
+          "intersection": 4300,
+          "voxels": 4387,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 4822318,
+        "stable_id": 4822318,
+        "source_xyz": [
+          405,
+          525,
+          473
+        ],
+        "voxels": 96,
+        "shell_voxels": 988,
+        "inside_median": 43637.5,
+        "shell_median": 51103.0,
+        "shell_mad": 1203.0,
+        "cnr": 4.1857113589962776,
+        "matched": false,
+        "largest_overlap": {
+          "id": 96,
+          "intersection": 81,
+          "voxels": 395,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 4880478,
+        "stable_id": 4880478,
+        "source_xyz": [
+          453,
+          496,
+          474
+        ],
+        "voxels": 68,
+        "shell_voxels": 878,
+        "inside_median": 48610.5,
+        "shell_median": 52353.5,
+        "shell_mad": 1290.0,
+        "cnr": 1.9570689245898418,
+        "matched": false,
+        "largest_overlap": {
+          "id": 93,
+          "intersection": 51,
+          "voxels": 91,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 4916238,
+        "stable_id": 4916238,
+        "source_xyz": [
+          373,
+          380,
+          475
+        ],
+        "voxels": 274,
+        "shell_voxels": 1522,
+        "inside_median": 42636.5,
+        "shell_median": 50741.5,
+        "shell_mad": 1163.0,
+        "cnr": 4.700556840548413,
+        "matched": true,
+        "largest_overlap": {
+          "id": 97,
+          "intersection": 263,
+          "voxels": 276,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 5070804,
+        "stable_id": 5070804,
+        "source_xyz": [
+          571,
+          471,
+          477
+        ],
+        "voxels": 1014,
+        "shell_voxels": 2557,
+        "inside_median": 39110.0,
+        "shell_median": 50688.0,
+        "shell_mad": 1271.0,
+        "cnr": 6.144180970275389,
+        "matched": true,
+        "largest_overlap": {
+          "id": 98,
+          "intersection": 925,
+          "voxels": 978,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 5107444,
+        "stable_id": 5107444,
+        "source_xyz": [
+          603,
+          614,
+          477
+        ],
+        "voxels": 68,
+        "shell_voxels": 836,
+        "inside_median": 45111.5,
+        "shell_median": 50615.5,
+        "shell_mad": 1052.5,
+        "cnr": 3.527218185424399,
+        "matched": true,
+        "largest_overlap": {
+          "id": 99,
+          "intersection": 66,
+          "voxels": 88,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 5124992,
+        "stable_id": 5124992,
+        "source_xyz": [
+          487,
+          427,
+          478
+        ],
+        "voxels": 127,
+        "shell_voxels": 976,
+        "inside_median": 45059.0,
+        "shell_median": 51380.0,
+        "shell_mad": 1094.5,
+        "cnr": 3.895345902833767,
+        "matched": true,
+        "largest_overlap": {
+          "id": 100,
+          "intersection": 124,
+          "voxels": 150,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 5216056,
+        "stable_id": 5216056,
+        "source_xyz": [
+          415,
+          527,
+          479
+        ],
+        "voxels": 233,
+        "shell_voxels": 1351,
+        "inside_median": 42992.0,
+        "shell_median": 50977.0,
+        "shell_mad": 1262.0,
+        "cnr": 4.26767726974692,
+        "matched": true,
+        "largest_overlap": {
+          "id": 96,
+          "intersection": 214,
+          "voxels": 395,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 5248046,
+        "stable_id": 5248046,
+        "source_xyz": [
+          405,
+          396,
+          480
+        ],
+        "voxels": 857,
+        "shell_voxels": 4043,
+        "inside_median": 44179.0,
+        "shell_median": 50977.0,
+        "shell_mad": 1200.0,
+        "cnr": 3.820990152434912,
+        "matched": true,
+        "largest_overlap": {
+          "id": 102,
+          "intersection": 779,
+          "voxels": 900,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 5322544,
+        "stable_id": 5322544,
+        "source_xyz": [
+          407,
+          431,
+          481
+        ],
+        "voxels": 3912,
+        "shell_voxels": 5461,
+        "inside_median": 37713.5,
+        "shell_median": 50718.0,
+        "shell_mad": 1344.0,
+        "cnr": 6.526350507152814,
+        "matched": true,
+        "largest_overlap": {
+          "id": 105,
+          "intersection": 3690,
+          "voxels": 3753,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 5343617,
+        "stable_id": 5343617,
+        "source_xyz": [
+          488,
+          513,
+          481
+        ],
+        "voxels": 879,
+        "shell_voxels": 2367,
+        "inside_median": 40302.0,
+        "shell_median": 52252.0,
+        "shell_mad": 1278.0,
+        "cnr": 6.30685804048929,
+        "matched": true,
+        "largest_overlap": {
+          "id": 103,
+          "intersection": 788,
+          "voxels": 820,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 5484554,
+        "stable_id": 5484554,
+        "source_xyz": [
+          369,
+          552,
+          483
+        ],
+        "voxels": 682,
+        "shell_voxels": 2468,
+        "inside_median": 41227.5,
+        "shell_median": 50643.5,
+        "shell_mad": 1257.0,
+        "cnr": 5.052509937336214,
+        "matched": true,
+        "largest_overlap": {
+          "id": 108,
+          "intersection": 650,
+          "voxels": 703,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 5515738,
+        "stable_id": 5515738,
+        "source_xyz": [
+          577,
+          417,
+          484
+        ],
+        "voxels": 1821,
+        "shell_voxels": 4688,
+        "inside_median": 40075.0,
+        "shell_median": 50572.0,
+        "shell_mad": 1294.0,
+        "cnr": 5.471506570499089,
+        "matched": true,
+        "largest_overlap": {
+          "id": 109,
+          "intersection": 1669,
+          "voxels": 1754,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 5529835,
+        "stable_id": 5529835,
+        "source_xyz": [
+          594,
+          472,
+          484
+        ],
+        "voxels": 90,
+        "shell_voxels": 959,
+        "inside_median": 45776.5,
+        "shell_median": 51580.0,
+        "shell_mad": 1051.0,
+        "cnr": 3.72445967899374,
+        "matched": true,
+        "largest_overlap": {
+          "id": 112,
+          "intersection": 79,
+          "voxels": 100,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 5558581,
+        "stable_id": 5558581,
+        "source_xyz": [
+          412,
+          585,
+          484
+        ],
+        "voxels": 1197,
+        "shell_voxels": 2933,
+        "inside_median": 40677.0,
+        "shell_median": 50884.0,
+        "shell_mad": 1242.0,
+        "cnr": 5.543097570030279,
+        "matched": true,
+        "largest_overlap": {
+          "id": 111,
+          "intersection": 1108,
+          "voxels": 1181,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 5616167,
+        "stable_id": 5616167,
+        "source_xyz": [
+          398,
+          554,
+          485
+        ],
+        "voxels": 630,
+        "shell_voxels": 2475,
+        "inside_median": 42344.5,
+        "shell_median": 51041.0,
+        "shell_mad": 1130.0,
+        "cnr": 5.190892822821425,
+        "matched": true,
+        "largest_overlap": {
+          "id": 113,
+          "intersection": 590,
+          "voxels": 612,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 5654183,
+        "stable_id": 5654183,
+        "source_xyz": [
+          526,
+          446,
+          486
+        ],
+        "voxels": 126,
+        "shell_voxels": 971,
+        "inside_median": 44580.5,
+        "shell_median": 51533.0,
+        "shell_mad": 1131.0,
+        "cnr": 4.146239615615409,
+        "matched": true,
+        "largest_overlap": {
+          "id": 116,
+          "intersection": 112,
+          "voxels": 125,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 5927040,
+        "stable_id": 5927040,
+        "source_xyz": [
+          487,
+          488,
+          490
+        ],
+        "voxels": 231,
+        "shell_voxels": 1271,
+        "inside_median": 44549.0,
+        "shell_median": 52409.0,
+        "shell_mad": 1259.0,
+        "cnr": 4.210879562737123,
+        "matched": true,
+        "largest_overlap": {
+          "id": 119,
+          "intersection": 213,
+          "voxels": 221,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 6587809,
+        "stable_id": 6587809,
+        "source_xyz": [
+          520,
+          509,
+          500
+        ],
+        "voxels": 1391,
+        "shell_voxels": 3198,
+        "inside_median": 39848.0,
+        "shell_median": 51874.5,
+        "shell_mad": 1292.0,
+        "cnr": 6.278454426350829,
+        "matched": true,
+        "largest_overlap": {
+          "id": 136,
+          "intersection": 1287,
+          "voxels": 1369,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 6598589,
+        "stable_id": 6598589,
+        "source_xyz": [
+          548,
+          551,
+          500
+        ],
+        "voxels": 346,
+        "shell_voxels": 1650,
+        "inside_median": 43003.0,
+        "shell_median": 51118.0,
+        "shell_mad": 1246.5,
+        "cnr": 4.391089059889747,
+        "matched": true,
+        "largest_overlap": {
+          "id": 138,
+          "intersection": 313,
+          "voxels": 346,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 6643550,
+        "stable_id": 6643550,
+        "source_xyz": [
+          453,
+          471,
+          501
+        ],
+        "voxels": 971,
+        "shell_voxels": 2835,
+        "inside_median": 41073.0,
+        "shell_median": 51560.0,
+        "shell_mad": 1237.0,
+        "cnr": 5.718176713525509,
+        "matched": true,
+        "largest_overlap": {
+          "id": 143,
+          "intersection": 918,
+          "voxels": 970,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 6655436,
+        "stable_id": 6655436,
+        "source_xyz": [
+          563,
+          517,
+          501
+        ],
+        "voxels": 458,
+        "shell_voxels": 2036,
+        "inside_median": 41902.0,
+        "shell_median": 51017.0,
+        "shell_mad": 1186.0,
+        "cnr": 5.183797025825603,
+        "matched": true,
+        "largest_overlap": {
+          "id": 146,
+          "intersection": 436,
+          "voxels": 478,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 7065059,
+        "stable_id": 7065059,
+        "source_xyz": [
+          586,
+          581,
+          507
+        ],
+        "voxels": 155,
+        "shell_voxels": 1061,
+        "inside_median": 45061.0,
+        "shell_median": 50907.0,
+        "shell_mad": 1143.0,
+        "cnr": 3.44975763770794,
+        "matched": true,
+        "largest_overlap": {
+          "id": 149,
+          "intersection": 145,
+          "voxels": 176,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 7079907,
+        "stable_id": 7079907,
+        "source_xyz": [
+          586,
+          383,
+          508
+        ],
+        "voxels": 118,
+        "shell_voxels": 1039,
+        "inside_median": 44444.0,
+        "shell_median": 51160.0,
+        "shell_mad": 1075.0,
+        "cnr": 4.21384180525099,
+        "matched": true,
+        "largest_overlap": {
+          "id": 150,
+          "intersection": 113,
+          "voxels": 133,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 7080692,
+        "stable_id": 7080692,
+        "source_xyz": [
+          603,
+          386,
+          508
+        ],
+        "voxels": 71,
+        "shell_voxels": 801,
+        "inside_median": 45290.0,
+        "shell_median": 51241.0,
+        "shell_mad": 1138.0,
+        "cnr": 3.527148075259418,
+        "matched": false,
+        "largest_overlap": {
+          "id": 151,
+          "intersection": 42,
+          "voxels": 54,
+          "touches_face": false,
+          "eligible": false
+        }
+      },
+      {
+        "id": 7181611,
+        "stable_id": 7181611,
+        "source_xyz": [
+          402,
+          525,
+          509
+        ],
+        "voxels": 1355,
+        "shell_voxels": 3684,
+        "inside_median": 41754.0,
+        "shell_median": 50752.5,
+        "shell_mad": 1194.0,
+        "cnr": 5.083253851884542,
+        "matched": true,
+        "largest_overlap": {
+          "id": 154,
+          "intersection": 1277,
+          "voxels": 1350,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 7214378,
+        "stable_id": 7214378,
+        "source_xyz": [
+          401,
+          397,
+          510
+        ],
+        "voxels": 248,
+        "shell_voxels": 1261,
+        "inside_median": 42663.5,
+        "shell_median": 50824.0,
+        "shell_mad": 1291.0,
+        "cnr": 4.263502589239934,
+        "matched": true,
+        "largest_overlap": {
+          "id": 156,
+          "intersection": 234,
+          "voxels": 259,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 7355331,
+        "stable_id": 7355331,
+        "source_xyz": [
+          554,
+          435,
+          512
+        ],
+        "voxels": 86,
+        "shell_voxels": 880,
+        "inside_median": 44609.5,
+        "shell_median": 51391.0,
+        "shell_mad": 1000.0,
+        "cnr": 4.57405908539053,
+        "matched": true,
+        "largest_overlap": {
+          "id": 157,
+          "intersection": 69,
+          "voxels": 84,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 7486534,
+        "stable_id": 7486534,
+        "source_xyz": [
+          429,
+          436,
+          514
+        ],
+        "voxels": 77,
+        "shell_voxels": 813,
+        "inside_median": 45791.0,
+        "shell_median": 51193.0,
+        "shell_mad": 1124.0,
+        "cnr": 3.241636194566341,
+        "matched": true,
+        "largest_overlap": {
+          "id": 159,
+          "intersection": 60,
+          "voxels": 81,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 7801728,
+        "stable_id": 7801728,
+        "source_xyz": [
+          487,
+          387,
+          519
+        ],
+        "voxels": 99,
+        "shell_voxels": 912,
+        "inside_median": 44586.0,
+        "shell_median": 51360.0,
+        "shell_mad": 1084.0,
+        "cnr": 4.214945022780864,
+        "matched": true,
+        "largest_overlap": {
+          "id": 163,
+          "intersection": 90,
+          "voxels": 101,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 8010275,
+        "stable_id": 8010275,
+        "source_xyz": [
+          394,
+          434,
+          522
+        ],
+        "voxels": 92,
+        "shell_voxels": 847,
+        "inside_median": 45423.5,
+        "shell_median": 51657.0,
+        "shell_mad": 1117.0,
+        "cnr": 3.7640448963270874,
+        "matched": true,
+        "largest_overlap": {
+          "id": 167,
+          "intersection": 76,
+          "voxels": 94,
+          "touches_face": false,
+          "eligible": true
+        }
+      }
+    ]
+  }
+}

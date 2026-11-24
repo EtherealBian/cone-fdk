@@ -1,0 +1,583 @@
+{
+  "specimen": 5,
+  "origin_xyz": [
+    360,
+    376,
+    400
+  ],
+  "source_raw": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37",
+  "source_segmented": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b",
+  "h_report": "b1d9fd4d56363748c04ef38875023e1e8fa3d9bc3697f20ab02fb366ff049607",
+  "matches_file": "706818c4603c84a73e576feaf3b03c33d0956212f28d42c50c6c8d18fc89b7fb",
+  "raw_halo_zyx": "0732692827579d2c53e908f1dea10b8d3f3db6c0eea1e896cec8eb6eb5001a4f",
+  "reference": {
+    "summary": {
+      "matched": 7,
+      "unmatched": 5,
+      "median_matched": 5.258910688349578,
+      "median_unmatched": 3.094704032771241,
+      "undefined": 0,
+      "pairs": 35,
+      "twice_wins": 70,
+      "auc": 1.0,
+      "supported": true,
+      "passes": true,
+      "size_bands": {
+        "64..127": [
+          0,
+          2
+        ],
+        "128..511": [
+          4,
+          3
+        ],
+        "512+": [
+          3,
+          0
+        ]
+      },
+      "unmatched_at_or_above_matched_median": []
+    },
+    "rows": [
+      {
+        "id": 21,
+        "stable_id": 448588,
+        "source_xyz": [
+          435,
+          592,
+          406
+        ],
+        "voxels": 66,
+        "shell_voxels": 865,
+        "inside_median": 45069.5,
+        "shell_median": 50736.0,
+        "shell_mad": 1634.0,
+        "cnr": 2.3390464434358185,
+        "matched": false,
+        "largest_overlap": {
+          "id": 448845,
+          "intersection": 45,
+          "voxels": 49,
+          "touches_face": false,
+          "eligible": false
+        }
+      },
+      {
+        "id": 22,
+        "stable_id": 690239,
+        "source_xyz": [
+          422,
+          512,
+          410
+        ],
+        "voxels": 341,
+        "shell_voxels": 1736,
+        "inside_median": 44512.0,
+        "shell_median": 51829.0,
+        "shell_mad": 1160.0,
+        "cnr": 4.254524902664007,
+        "matched": true,
+        "largest_overlap": {
+          "id": 690494,
+          "intersection": 296,
+          "voxels": 318,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 25,
+        "stable_id": 828191,
+        "source_xyz": [
+          390,
+          539,
+          412
+        ],
+        "voxels": 916,
+        "shell_voxels": 3595,
+        "inside_median": 43155.5,
+        "shell_median": 51849.0,
+        "shell_mad": 1115.0,
+        "cnr": 5.258910688349578,
+        "matched": true,
+        "largest_overlap": {
+          "id": 828447,
+          "intersection": 774,
+          "voxels": 810,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 26,
+        "stable_id": 834385,
+        "source_xyz": [
+          440,
+          563,
+          412
+        ],
+        "voxels": 128,
+        "shell_voxels": 1248,
+        "inside_median": 48536.0,
+        "shell_median": 50948.0,
+        "shell_mad": 1526.5,
+        "cnr": 1.0657528410465429,
+        "matched": false,
+        "largest_overlap": {
+          "id": 901196,
+          "intersection": 56,
+          "voxels": 59,
+          "touches_face": false,
+          "eligible": false
+        }
+      },
+      {
+        "id": 38,
+        "stable_id": 1624778,
+        "source_xyz": [
+          561,
+          578,
+          424
+        ],
+        "voxels": 292,
+        "shell_voxels": 1593,
+        "inside_median": 43783.5,
+        "shell_median": 51466.0,
+        "shell_mad": 1086.0,
+        "cnr": 4.771432099151881,
+        "matched": true,
+        "largest_overlap": {
+          "id": 1690315,
+          "intersection": 233,
+          "voxels": 249,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 60,
+        "stable_id": 3695227,
+        "source_xyz": [
+          482,
+          474,
+          456
+        ],
+        "voxels": 145,
+        "shell_voxels": 1034,
+        "inside_median": 42923.0,
+        "shell_median": 52328.0,
+        "shell_mad": 1187.0,
+        "cnr": 5.344217011691136,
+        "matched": true,
+        "largest_overlap": {
+          "id": 3695227,
+          "intersection": 118,
+          "voxels": 119,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 67,
+        "stable_id": 4465585,
+        "source_xyz": [
+          536,
+          411,
+          468
+        ],
+        "voxels": 67,
+        "shell_voxels": 886,
+        "inside_median": 45264.0,
+        "shell_median": 51952.0,
+        "shell_mad": 1181.0,
+        "cnr": 3.819639457560939,
+        "matched": false,
+        "largest_overlap": {
+          "id": 4466096,
+          "intersection": 41,
+          "voxels": 46,
+          "touches_face": false,
+          "eligible": false
+        }
+      },
+      {
+        "id": 70,
+        "stable_id": 4571614,
+        "source_xyz": [
+          581,
+          569,
+          469
+        ],
+        "voxels": 182,
+        "shell_voxels": 1143,
+        "inside_median": 41914.5,
+        "shell_median": 51531.0,
+        "shell_mad": 1389.0,
+        "cnr": 4.669719502164635,
+        "matched": true,
+        "largest_overlap": {
+          "id": 4571358,
+          "intersection": 156,
+          "voxels": 165,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 74,
+        "stable_id": 4682360,
+        "source_xyz": [
+          479,
+          490,
+          471
+        ],
+        "voxels": 660,
+        "shell_voxels": 2695,
+        "inside_median": 40361.0,
+        "shell_median": 51011.0,
+        "shell_mad": 1269.0,
+        "cnr": 5.660619849035255,
+        "matched": true,
+        "largest_overlap": {
+          "id": 4748151,
+          "intersection": 526,
+          "voxels": 532,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 90,
+        "stable_id": 6781295,
+        "source_xyz": [
+          470,
+          497,
+          503
+        ],
+        "voxels": 1204,
+        "shell_voxels": 2884,
+        "inside_median": 37564.5,
+        "shell_median": 51200.0,
+        "shell_mad": 1357.5,
+        "cnr": 6.774967772260121,
+        "matched": true,
+        "largest_overlap": {
+          "id": 6781807,
+          "intersection": 1130,
+          "voxels": 1180,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 92,
+        "stable_id": 7123978,
+        "source_xyz": [
+          369,
+          556,
+          508
+        ],
+        "voxels": 142,
+        "shell_voxels": 1084,
+        "inside_median": 46103.0,
+        "shell_median": 52031.0,
+        "shell_mad": 1202.5,
+        "cnr": 3.325057149419756,
+        "matched": false,
+        "largest_overlap": {
+          "id": 7124234,
+          "intersection": 71,
+          "voxels": 72,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 105,
+        "stable_id": 7713297,
+        "source_xyz": [
+          376,
+          554,
+          517
+        ],
+        "voxels": 137,
+        "shell_voxels": 1070,
+        "inside_median": 46786.0,
+        "shell_median": 51766.5,
+        "shell_mad": 1085.5,
+        "cnr": 3.094704032771241,
+        "matched": false,
+        "largest_overlap": {
+          "id": 7845649,
+          "intersection": 7,
+          "voxels": 7,
+          "touches_face": false,
+          "eligible": false
+        }
+      }
+    ]
+  },
+  "prediction": {
+    "summary": {
+      "matched": 7,
+      "unmatched": 3,
+      "median_matched": 5.3080197982301325,
+      "median_unmatched": 5.030973399315882,
+      "undefined": 0,
+      "pairs": 21,
+      "twice_wins": 24,
+      "auc": 0.5714285714285714,
+      "supported": true,
+      "passes": false,
+      "size_bands": {
+        "64..127": [
+          1,
+          1
+        ],
+        "128..511": [
+          3,
+          1
+        ],
+        "512+": [
+          3,
+          1
+        ]
+      },
+      "unmatched_at_or_above_matched_median": [
+        3821473
+      ]
+    },
+    "rows": [
+      {
+        "id": 145481,
+        "stable_id": 145481,
+        "source_xyz": [
+          432,
+          432,
+          402
+        ],
+        "voxels": 422,
+        "shell_voxels": 1998,
+        "inside_median": 42238.5,
+        "shell_median": 51226.5,
+        "shell_mad": 1205.0,
+        "cnr": 5.030973399315882,
+        "matched": false,
+        "largest_overlap": {
+          "id": 1,
+          "intersection": 409,
+          "voxels": 383607,
+          "touches_face": true,
+          "eligible": false
+        }
+      },
+      {
+        "id": 690494,
+        "stable_id": 690494,
+        "source_xyz": [
+          421,
+          513,
+          410
+        ],
+        "voxels": 318,
+        "shell_voxels": 1678,
+        "inside_median": 44292.0,
+        "shell_median": 51876.0,
+        "shell_mad": 1159.0,
+        "cnr": 4.413578878231664,
+        "matched": true,
+        "largest_overlap": {
+          "id": 22,
+          "intersection": 296,
+          "voxels": 341,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 828447,
+        "stable_id": 828447,
+        "source_xyz": [
+          390,
+          540,
+          412
+        ],
+        "voxels": 810,
+        "shell_voxels": 3385,
+        "inside_median": 42674.0,
+        "shell_median": 51774.0,
+        "shell_mad": 1142.0,
+        "cnr": 5.374663670084953,
+        "matched": true,
+        "largest_overlap": {
+          "id": 25,
+          "intersection": 774,
+          "voxels": 916,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 1690315,
+        "stable_id": 1690315,
+        "source_xyz": [
+          562,
+          578,
+          425
+        ],
+        "voxels": 249,
+        "shell_voxels": 1502,
+        "inside_median": 43045.0,
+        "shell_median": 51386.0,
+        "shell_mad": 1091.5,
+        "cnr": 5.154308222440935,
+        "matched": true,
+        "largest_overlap": {
+          "id": 38,
+          "intersection": 233,
+          "voxels": 292,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 3695227,
+        "stable_id": 3695227,
+        "source_xyz": [
+          482,
+          474,
+          456
+        ],
+        "voxels": 119,
+        "shell_voxels": 971,
+        "inside_median": 42426.0,
+        "shell_median": 52208.0,
+        "shell_mad": 1243.0,
+        "cnr": 5.3080197982301325,
+        "matched": true,
+        "largest_overlap": {
+          "id": 60,
+          "intersection": 118,
+          "voxels": 145,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 3821473,
+        "stable_id": 3821473,
+        "source_xyz": [
+          520,
+          455,
+          458
+        ],
+        "voxels": 3751,
+        "shell_voxels": 6020,
+        "inside_median": 37132.0,
+        "shell_median": 51251.0,
+        "shell_mad": 1335.0,
+        "cnr": 7.133434481685429,
+        "matched": false,
+        "largest_overlap": {
+          "id": 2,
+          "intersection": 3605,
+          "voxels": 463218,
+          "touches_face": true,
+          "eligible": false
+        }
+      },
+      {
+        "id": 4571358,
+        "stable_id": 4571358,
+        "source_xyz": [
+          581,
+          568,
+          469
+        ],
+        "voxels": 165,
+        "shell_voxels": 1098,
+        "inside_median": 41521.0,
+        "shell_median": 51427.5,
+        "shell_mad": 1421.0,
+        "cnr": 4.702211617702246,
+        "matched": true,
+        "largest_overlap": {
+          "id": 70,
+          "intersection": 156,
+          "voxels": 182,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 4748151,
+        "stable_id": 4748151,
+        "source_xyz": [
+          478,
+          491,
+          472
+        ],
+        "voxels": 532,
+        "shell_voxels": 2325,
+        "inside_median": 39793.5,
+        "shell_median": 50589.0,
+        "shell_mad": 1355.0,
+        "cnr": 5.373774903269065,
+        "matched": true,
+        "largest_overlap": {
+          "id": 74,
+          "intersection": 526,
+          "voxels": 660,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 6781807,
+        "stable_id": 6781807,
+        "source_xyz": [
+          470,
+          499,
+          503
+        ],
+        "voxels": 1180,
+        "shell_voxels": 2767,
+        "inside_median": 37472.5,
+        "shell_median": 51120.0,
+        "shell_mad": 1349.0,
+        "cnr": 6.823656515905732,
+        "matched": true,
+        "largest_overlap": {
+          "id": 90,
+          "intersection": 1130,
+          "voxels": 1204,
+          "touches_face": false,
+          "eligible": true
+        }
+      },
+      {
+        "id": 7124234,
+        "stable_id": 7124234,
+        "source_xyz": [
+          369,
+          557,
+          508
+        ],
+        "voxels": 72,
+        "shell_voxels": 794,
+        "inside_median": 45083.0,
+        "shell_median": 51766.0,
+        "shell_mad": 1284.5,
+        "cnr": 3.509242308744325,
+        "matched": false,
+        "largest_overlap": {
+          "id": 92,
+          "intersection": 71,
+          "voxels": 142,
+          "touches_face": false,
+          "eligible": true
+        }
+      }
+    ]
+  }
+}
