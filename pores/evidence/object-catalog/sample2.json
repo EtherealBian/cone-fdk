@@ -1,0 +1,4402 @@
+{
+  "specimen": 2,
+  "reference_digest": "0141328870f75714d73c0e02e1f0b943056d6a88238e9bb70537a5031ab9ec26",
+  "source_records": {
+    "section-area": "6ce0e07f1789011179cd4464d3223183ca3d84bea9e4c2b6098f292ee5673637",
+    "axial-raw": "174cf93ba9987657564f22c9c25f7c732d15fa2c27c749fbf16a71c081f4f2d6",
+    "census-train": "edceb2501a5e9a384cb9e060580e77b7fd21e1bf97956dbf0eff6b54faa565ac",
+    "local-connectivity": "e5b0aed597e2a9ccba749f6538f9e8039d3bbe5ad15f020d8e5e83e4a8733138",
+    "two-scale": "f7769ba1f674dbb172790da85ac56075a07a726439393d2299ede82798985e81",
+    "five-plane": "a38017f4a8d0b9c0a998dd778e0e418e6ce8842be44b755d8ebf7ff912549a87",
+    "small-seed": "029a968be18ce6740f6eb51771a71635e88bffa20991ec8f2cd23ef751c4737c",
+    "mass": "e769d5f8843d0104024eb39c744cf5e911771901e008a8740fc8766bd998423e",
+    "forward": "d6e9e2fd28a831bf00e17faa558b45c270ac2fdcff6aaebe87eb74378b70e6f5",
+    "monotone": "2ced7cc8ee778eebd9a9ff176d77c005cf073b200616f7b6d93ed60875101018",
+    "orientation": "3538d1205b8341e5118cd4c3dcaedd0eb02b8e5dce5cf04fad395564a1f1c175",
+    "distance-target": "9d48a2816b77adcf5b28ae8c68cb2791da5d878311795d1311476142fe6a5769"
+  },
+  "input_arms": {
+    "section-area/control": {
+      "mask": "d62c60df2c8dd4f69dcdda1691e210bc7a0de2ccd0a7fe23416434e6a21f6554",
+      "canonical": "section-area/control",
+      "eligible_prediction": 49,
+      "eligible_reference": 49,
+      "matches": 48,
+      "p95": 16.602055535521096,
+      "two_criteria": false
+    },
+    "section-area/area": {
+      "mask": "7153d98d5e2a3c96f220a875420d97416d726ae08751560be97a52045f42299f",
+      "canonical": "section-area/area",
+      "eligible_prediction": 52,
+      "eligible_reference": 49,
+      "matches": 46,
+      "p95": 21.302373673799675,
+      "two_criteria": false
+    },
+    "axial-raw/plane": {
+      "mask": "7d2724598bec9c0d3bd43941df1653a6e8c5289a6fa7ffec46678f6a4f7e4d96",
+      "canonical": "axial-raw/plane",
+      "eligible_prediction": 45,
+      "eligible_reference": 49,
+      "matches": 43,
+      "p95": 28.674486803519063,
+      "two_criteria": false
+    },
+    "axial-raw/axial": {
+      "mask": "14501d3bbee9cfc7dbe489af0f9b2aaa78c7898a3f28ede8eeb3236d26ebae86",
+      "canonical": "axial-raw/axial",
+      "eligible_prediction": 44,
+      "eligible_reference": 49,
+      "matches": 42,
+      "p95": 17.43415139993087,
+      "two_criteria": false
+    },
+    "census-train/replacement": {
+      "mask": "df206fb85c9809852544ec21d9c0b982b9abd9c0c00a6c4f6bb07b9048e61ce2",
+      "canonical": "census-train/replacement",
+      "eligible_prediction": 44,
+      "eligible_reference": 49,
+      "matches": 42,
+      "p95": 21.043123543123542,
+      "two_criteria": false
+    },
+    "census-train/census": {
+      "mask": "e8929221eb9a199e126b897a9c1d1fac9201898e12e507b0018e12fcbdca33d5",
+      "canonical": "census-train/census",
+      "eligible_prediction": 44,
+      "eligible_reference": 49,
+      "matches": 42,
+      "p95": 14.889277389277389,
+      "two_criteria": false
+    },
+    "local-connectivity/census": {
+      "mask": "e8929221eb9a199e126b897a9c1d1fac9201898e12e507b0018e12fcbdca33d5",
+      "canonical": "census-train/census",
+      "eligible_prediction": 44,
+      "eligible_reference": 49,
+      "matches": 42,
+      "p95": 14.889277389277389,
+      "two_criteria": false
+    },
+    "local-connectivity/critical": {
+      "mask": "bc4815ae199991a2c397e1f460a30c446158d9fa6217fb17307f7d17ac2a61be",
+      "canonical": "local-connectivity/critical",
+      "eligible_prediction": 48,
+      "eligible_reference": 49,
+      "matches": 45,
+      "p95": 20.658984208279982,
+      "two_criteria": false
+    },
+    "two-scale/census": {
+      "mask": "e8929221eb9a199e126b897a9c1d1fac9201898e12e507b0018e12fcbdca33d5",
+      "canonical": "census-train/census",
+      "eligible_prediction": 44,
+      "eligible_reference": 49,
+      "matches": 42,
+      "p95": 14.889277389277389,
+      "two_criteria": false
+    },
+    "two-scale/fine": {
+      "mask": "b474fac47a2ec2ee03a2d69197e6ae41b4891fdaa3f9f31b922fa3b62d93d7c6",
+      "canonical": "two-scale/fine",
+      "eligible_prediction": 44,
+      "eligible_reference": 49,
+      "matches": 42,
+      "p95": 15.946386946386946,
+      "two_criteria": false
+    },
+    "two-scale/coarse": {
+      "mask": "fbdd93673eb0772fc19d6fa0eed4d692eb60b60bab8e6befe91e96f8e7fb63a8",
+      "canonical": "two-scale/coarse",
+      "eligible_prediction": 44,
+      "eligible_reference": 49,
+      "matches": 42,
+      "p95": 15.553613053613054,
+      "two_criteria": false
+    },
+    "five-plane/census": {
+      "mask": "e8929221eb9a199e126b897a9c1d1fac9201898e12e507b0018e12fcbdca33d5",
+      "canonical": "census-train/census",
+      "eligible_prediction": 44,
+      "eligible_reference": 49,
+      "matches": 42,
+      "p95": 14.889277389277389,
+      "two_criteria": false
+    },
+    "five-plane/slice": {
+      "mask": "272188909deb7b96f2820851476bf0f358f7bb7736209459ea80fa4775f5347b",
+      "canonical": "five-plane/slice",
+      "eligible_prediction": 47,
+      "eligible_reference": 49,
+      "matches": 46,
+      "p95": 21.19200244200244,
+      "two_criteria": false
+    },
+    "five-plane/volume": {
+      "mask": "90ab53fcf8fcc86dfc5f2d27a0334163ec2f454d5d40ab0504c9ef118e25f8be",
+      "canonical": "five-plane/volume",
+      "eligible_prediction": 45,
+      "eligible_reference": 49,
+      "matches": 44,
+      "p95": 11.092796092796092,
+      "two_criteria": false
+    },
+    "small-seed/census": {
+      "mask": "e8929221eb9a199e126b897a9c1d1fac9201898e12e507b0018e12fcbdca33d5",
+      "canonical": "census-train/census",
+      "eligible_prediction": 44,
+      "eligible_reference": 49,
+      "matches": 42,
+      "p95": 14.889277389277389,
+      "two_criteria": false
+    },
+    "small-seed/gray": {
+      "mask": "7541485c08c7eace4cb76d0b08b08435203e49c05169528b5790fd3997974b0f",
+      "canonical": "small-seed/gray",
+      "eligible_prediction": 58,
+      "eligible_reference": 49,
+      "matches": 44,
+      "p95": 20.57070707070707,
+      "two_criteria": false
+    },
+    "small-seed/geometry": {
+      "mask": "61a76ed41a3ac8b7c5d056071c4d4022592e5b0967d679feec6ace49bb79dd8d",
+      "canonical": "small-seed/geometry",
+      "eligible_prediction": 58,
+      "eligible_reference": 49,
+      "matches": 45,
+      "p95": 33.057382333978076,
+      "two_criteria": false
+    },
+    "mass/census": {
+      "mask": "e8929221eb9a199e126b897a9c1d1fac9201898e12e507b0018e12fcbdca33d5",
+      "canonical": "census-train/census",
+      "eligible_prediction": 44,
+      "eligible_reference": 49,
+      "matches": 42,
+      "p95": 14.889277389277389,
+      "two_criteria": false
+    },
+    "mass/mass": {
+      "mask": "89a51d1f5a4e2d7011c4de359d11a6b7e1a141a85c56478baef6a69844b6d65b",
+      "canonical": "mass/mass",
+      "eligible_prediction": 48,
+      "eligible_reference": 49,
+      "matches": 43,
+      "p95": 19.836829836829835,
+      "two_criteria": false
+    },
+    "mass/size": {
+      "mask": "2e8958d032797c5f4e5a35ead89ff0509b8408fb999dbe801b84c2eebe416933",
+      "canonical": "mass/size",
+      "eligible_prediction": 48,
+      "eligible_reference": 49,
+      "matches": 44,
+      "p95": 20.57070707070707,
+      "two_criteria": false
+    },
+    "mass/boundary": {
+      "mask": "3607f89e9cd8368788729b7010622da8c6eb03500c4a4f4f1227c66f3ce9e7d6",
+      "canonical": "mass/boundary",
+      "eligible_prediction": 48,
+      "eligible_reference": 49,
+      "matches": 43,
+      "p95": 20.16883116883117,
+      "two_criteria": false
+    },
+    "forward/census": {
+      "mask": "e8929221eb9a199e126b897a9c1d1fac9201898e12e507b0018e12fcbdca33d5",
+      "canonical": "census-train/census",
+      "eligible_prediction": 44,
+      "eligible_reference": 49,
+      "matches": 42,
+      "p95": 14.889277389277389,
+      "two_criteria": false
+    },
+    "forward/center": {
+      "mask": "c15291c7bf0cd5947ecc3f1627228520fcd1bc75673efff4f1ca0f0b44707a57",
+      "canonical": "forward/center",
+      "eligible_prediction": 44,
+      "eligible_reference": 49,
+      "matches": 42,
+      "p95": 20.58974358974359,
+      "two_criteria": false
+    },
+    "forward/blur": {
+      "mask": "2f68c48c61ca3e15aa9e42e78c9ed7ed1add721927b8284bd49659a1ef335f6d",
+      "canonical": "forward/blur",
+      "eligible_prediction": 626,
+      "eligible_reference": 49,
+      "matches": 0,
+      "p95": null,
+      "two_criteria": false
+    },
+    "monotone/census": {
+      "mask": "e8929221eb9a199e126b897a9c1d1fac9201898e12e507b0018e12fcbdca33d5",
+      "canonical": "census-train/census",
+      "eligible_prediction": 44,
+      "eligible_reference": 49,
+      "matches": 42,
+      "p95": 14.889277389277389,
+      "two_criteria": false
+    },
+    "monotone/blur": {
+      "mask": "2f68c48c61ca3e15aa9e42e78c9ed7ed1add721927b8284bd49659a1ef335f6d",
+      "canonical": "forward/blur",
+      "eligible_prediction": 626,
+      "eligible_reference": 49,
+      "matches": 0,
+      "p95": null,
+      "two_criteria": false
+    },
+    "monotone/band-sync": {
+      "mask": "69747ef73d922cdf8d57b3cb2fc8b2a4af6ec5845bfd36937ccd7d2ebacb4436",
+      "canonical": "monotone/band-sync",
+      "eligible_prediction": 47,
+      "eligible_reference": 49,
+      "matches": 20,
+      "p95": 40.40149282840815,
+      "two_criteria": false
+    },
+    "monotone/band-color": {
+      "mask": "be14f1cd2b77a26ec369d95aeaccd8fdb8b8073869821c0838b966fc34d8a431",
+      "canonical": "monotone/band-color",
+      "eligible_prediction": 50,
+      "eligible_reference": 49,
+      "matches": 27,
+      "p95": 27.382730382631046,
+      "two_criteria": false
+    },
+    "orientation/identity": {
+      "mask": "e8929221eb9a199e126b897a9c1d1fac9201898e12e507b0018e12fcbdca33d5",
+      "canonical": "census-train/census",
+      "eligible_prediction": 44,
+      "eligible_reference": 49,
+      "matches": 42,
+      "p95": 14.889277389277389,
+      "two_criteria": false
+    },
+    "orientation/mean8": {
+      "mask": "7c8b1e92b2ba0da3e8056eca4acd51ef81b51e052345a09a97bfb2af125bff35",
+      "canonical": "orientation/mean8",
+      "eligible_prediction": 45,
+      "eligible_reference": 49,
+      "matches": 43,
+      "p95": 19.10839160839161,
+      "two_criteria": false
+    },
+    "distance-target/sign": {
+      "mask": "9128a4a8d13dd2b13274c0d2a8d14c265c0c9149dc9dfaa7cb485c149dc35f48",
+      "canonical": "distance-target/sign",
+      "eligible_prediction": 43,
+      "eligible_reference": 49,
+      "matches": 39,
+      "p95": 30.7296914236416,
+      "two_criteria": false
+    },
+    "distance-target/distance": {
+      "mask": "b98b41d34ebd73d94408995770cae4b4ae889c24fa48b9474807474563dbfd75",
+      "canonical": "distance-target/distance",
+      "eligible_prediction": 44,
+      "eligible_reference": 49,
+      "matches": 40,
+      "p95": 25.51298701298701,
+      "two_criteria": false
+    },
+    "distance-target/census": {
+      "mask": "e8929221eb9a199e126b897a9c1d1fac9201898e12e507b0018e12fcbdca33d5",
+      "canonical": "census-train/census",
+      "eligible_prediction": 44,
+      "eligible_reference": 49,
+      "matches": 42,
+      "p95": 14.889277389277389,
+      "two_criteria": false
+    }
+  },
+  "independent_csv_by_unique_mask": {
+    "d62c60df2c8dd4f69dcdda1691e210bc7a0de2ccd0a7fe23416434e6a21f6554": [
+      "section-area/sample2-control-matches.csv"
+    ],
+    "7153d98d5e2a3c96f220a875420d97416d726ae08751560be97a52045f42299f": [
+      "section-area/sample2-area-matches.csv"
+    ],
+    "7d2724598bec9c0d3bd43941df1653a6e8c5289a6fa7ffec46678f6a4f7e4d96": [
+      "axial-raw/sample2-plane-matches.csv"
+    ],
+    "14501d3bbee9cfc7dbe489af0f9b2aaa78c7898a3f28ede8eeb3236d26ebae86": [
+      "axial-raw/sample2-axial-matches.csv"
+    ],
+    "df206fb85c9809852544ec21d9c0b982b9abd9c0c00a6c4f6bb07b9048e61ce2": [
+      "census-train/sample2-replacement-matches.csv"
+    ],
+    "e8929221eb9a199e126b897a9c1d1fac9201898e12e507b0018e12fcbdca33d5": [
+      "census-train/sample2-census-matches.csv",
+      "local-connectivity/sample2-census-matches.csv",
+      "two-scale/sample2-census-matches.csv",
+      "five-plane/sample2-census-matches.csv",
+      "small-seed/sample2-census-matches.csv",
+      "mass/sample2-census-matches.csv",
+      "forward/sample2-census-matches.csv",
+      "orientation/sample2-identity-matches.csv",
+      "distance-target/sample2-census-matches.csv"
+    ],
+    "bc4815ae199991a2c397e1f460a30c446158d9fa6217fb17307f7d17ac2a61be": [
+      "local-connectivity/sample2-critical-matches.csv"
+    ],
+    "b474fac47a2ec2ee03a2d69197e6ae41b4891fdaa3f9f31b922fa3b62d93d7c6": [
+      "two-scale/sample2-fine-matches.csv"
+    ],
+    "fbdd93673eb0772fc19d6fa0eed4d692eb60b60bab8e6befe91e96f8e7fb63a8": [
+      "two-scale/sample2-coarse-matches.csv"
+    ],
+    "272188909deb7b96f2820851476bf0f358f7bb7736209459ea80fa4775f5347b": [
+      "five-plane/sample2-slice-matches.csv"
+    ],
+    "90ab53fcf8fcc86dfc5f2d27a0334163ec2f454d5d40ab0504c9ef118e25f8be": [
+      "five-plane/sample2-volume-matches.csv"
+    ],
+    "7541485c08c7eace4cb76d0b08b08435203e49c05169528b5790fd3997974b0f": [
+      "small-seed/sample2-gray-matches.csv"
+    ],
+    "61a76ed41a3ac8b7c5d056071c4d4022592e5b0967d679feec6ace49bb79dd8d": [
+      "small-seed/sample2-geometry-matches.csv"
+    ],
+    "89a51d1f5a4e2d7011c4de359d11a6b7e1a141a85c56478baef6a69844b6d65b": [
+      "mass/sample2-mass-matches.csv"
+    ],
+    "2e8958d032797c5f4e5a35ead89ff0509b8408fb999dbe801b84c2eebe416933": [
+      "mass/sample2-size-matches.csv"
+    ],
+    "3607f89e9cd8368788729b7010622da8c6eb03500c4a4f4f1227c66f3ce9e7d6": [
+      "mass/sample2-boundary-matches.csv"
+    ],
+    "c15291c7bf0cd5947ecc3f1627228520fcd1bc75673efff4f1ca0f0b44707a57": [
+      "forward/sample2-center-matches.csv"
+    ],
+    "2f68c48c61ca3e15aa9e42e78c9ed7ed1add721927b8284bd49659a1ef335f6d": [
+      "forward/sample2-blur-matches.csv"
+    ],
+    "69747ef73d922cdf8d57b3cb2fc8b2a4af6ec5845bfd36937ccd7d2ebacb4436": [
+      "monotone/sample2-band-sync-matches.csv"
+    ],
+    "be14f1cd2b77a26ec369d95aeaccd8fdb8b8073869821c0838b966fc34d8a431": [
+      "monotone/sample2-band-color-matches.csv"
+    ],
+    "7c8b1e92b2ba0da3e8056eca4acd51ef81b51e052345a09a97bfb2af125bff35": [
+      "orientation/sample2-mean8-matches.csv"
+    ],
+    "9128a4a8d13dd2b13274c0d2a8d14c265c0c9149dc9dfaa7cb485c149dc35f48": [
+      "distance-target/sample2-sign-matches.csv"
+    ],
+    "b98b41d34ebd73d94408995770cae4b4ae889c24fa48b9474807474563dbfd75": [
+      "distance-target/sample2-distance-matches.csv"
+    ]
+  },
+  "unique_masks": 23,
+  "objects": {
+    "10": {
+      "reference_voxels": 883,
+      "masks_matched": 22,
+      "best_pct": 2.7180067950169877,
+      "observations": {
+        "section-area/control": {
+          "predicted": 816,
+          "absolute_error_pct": 7.587768969422424
+        },
+        "section-area/area": {
+          "predicted": 859,
+          "absolute_error_pct": 2.7180067950169877
+        },
+        "axial-raw/plane": {
+          "predicted": 798,
+          "absolute_error_pct": 9.626274065685164
+        },
+        "axial-raw/axial": {
+          "predicted": 819,
+          "absolute_error_pct": 7.2480181200453
+        },
+        "census-train/replacement": {
+          "predicted": 820,
+          "absolute_error_pct": 7.134767836919592
+        },
+        "census-train/census": {
+          "predicted": 837,
+          "absolute_error_pct": 5.209513023782559
+        },
+        "local-connectivity/critical": {
+          "predicted": 822,
+          "absolute_error_pct": 6.908267270668176
+        },
+        "two-scale/fine": {
+          "predicted": 835,
+          "absolute_error_pct": 5.436013590033975
+        },
+        "two-scale/coarse": {
+          "predicted": 832,
+          "absolute_error_pct": 5.775764439411098
+        },
+        "five-plane/slice": {
+          "predicted": 821,
+          "absolute_error_pct": 7.021517553793885
+        },
+        "five-plane/volume": {
+          "predicted": 849,
+          "absolute_error_pct": 3.8505096262740657
+        },
+        "small-seed/gray": {
+          "predicted": 837,
+          "absolute_error_pct": 5.209513023782559
+        },
+        "small-seed/geometry": {
+          "predicted": 837,
+          "absolute_error_pct": 5.209513023782559
+        },
+        "mass/mass": {
+          "predicted": 837,
+          "absolute_error_pct": 5.209513023782559
+        },
+        "mass/size": {
+          "predicted": 837,
+          "absolute_error_pct": 5.209513023782559
+        },
+        "mass/boundary": {
+          "predicted": 837,
+          "absolute_error_pct": 5.209513023782559
+        },
+        "forward/center": {
+          "predicted": 796,
+          "absolute_error_pct": 9.85277463193658
+        },
+        "monotone/band-sync": {
+          "predicted": 567,
+          "absolute_error_pct": 35.78708946772367
+        },
+        "monotone/band-color": {
+          "predicted": 677,
+          "absolute_error_pct": 23.32955832389581
+        },
+        "orientation/mean8": {
+          "predicted": 830,
+          "absolute_error_pct": 6.002265005662514
+        },
+        "distance-target/sign": {
+          "predicted": 797,
+          "absolute_error_pct": 9.739524348810871
+        },
+        "distance-target/distance": {
+          "predicted": 794,
+          "absolute_error_pct": 10.079275198187995
+        }
+      }
+    },
+    "12": {
+      "reference_voxels": 94,
+      "masks_matched": 7,
+      "best_pct": 15.957446808510639,
+      "observations": {
+        "section-area/control": {
+          "predicted": 79,
+          "absolute_error_pct": 15.957446808510639
+        },
+        "axial-raw/plane": {
+          "predicted": 64,
+          "absolute_error_pct": 31.914893617021278
+        },
+        "local-connectivity/critical": {
+          "predicted": 66,
+          "absolute_error_pct": 29.78723404255319
+        },
+        "five-plane/slice": {
+          "predicted": 70,
+          "absolute_error_pct": 25.53191489361702
+        },
+        "small-seed/gray": {
+          "predicted": 128,
+          "absolute_error_pct": 36.170212765957444
+        },
+        "small-seed/geometry": {
+          "predicted": 128,
+          "absolute_error_pct": 36.170212765957444
+        },
+        "mass/size": {
+          "predicted": 128,
+          "absolute_error_pct": 36.170212765957444
+        }
+      }
+    },
+    "13": {
+      "reference_voxels": 824,
+      "masks_matched": 22,
+      "best_pct": 0.24271844660194175,
+      "observations": {
+        "section-area/control": {
+          "predicted": 833,
+          "absolute_error_pct": 1.0922330097087378
+        },
+        "section-area/area": {
+          "predicted": 913,
+          "absolute_error_pct": 10.800970873786408
+        },
+        "axial-raw/plane": {
+          "predicted": 844,
+          "absolute_error_pct": 2.4271844660194173
+        },
+        "axial-raw/axial": {
+          "predicted": 848,
+          "absolute_error_pct": 2.912621359223301
+        },
+        "census-train/replacement": {
+          "predicted": 817,
+          "absolute_error_pct": 0.8495145631067961
+        },
+        "census-train/census": {
+          "predicted": 828,
+          "absolute_error_pct": 0.4854368932038835
+        },
+        "local-connectivity/critical": {
+          "predicted": 878,
+          "absolute_error_pct": 6.553398058252427
+        },
+        "two-scale/fine": {
+          "predicted": 826,
+          "absolute_error_pct": 0.24271844660194175
+        },
+        "two-scale/coarse": {
+          "predicted": 828,
+          "absolute_error_pct": 0.4854368932038835
+        },
+        "five-plane/slice": {
+          "predicted": 878,
+          "absolute_error_pct": 6.553398058252427
+        },
+        "five-plane/volume": {
+          "predicted": 796,
+          "absolute_error_pct": 3.3980582524271843
+        },
+        "small-seed/gray": {
+          "predicted": 828,
+          "absolute_error_pct": 0.4854368932038835
+        },
+        "small-seed/geometry": {
+          "predicted": 828,
+          "absolute_error_pct": 0.4854368932038835
+        },
+        "mass/mass": {
+          "predicted": 828,
+          "absolute_error_pct": 0.4854368932038835
+        },
+        "mass/size": {
+          "predicted": 828,
+          "absolute_error_pct": 0.4854368932038835
+        },
+        "mass/boundary": {
+          "predicted": 828,
+          "absolute_error_pct": 0.4854368932038835
+        },
+        "forward/center": {
+          "predicted": 805,
+          "absolute_error_pct": 2.3058252427184467
+        },
+        "monotone/band-sync": {
+          "predicted": 789,
+          "absolute_error_pct": 4.247572815533981
+        },
+        "monotone/band-color": {
+          "predicted": 839,
+          "absolute_error_pct": 1.8203883495145632
+        },
+        "orientation/mean8": {
+          "predicted": 832,
+          "absolute_error_pct": 0.970873786407767
+        },
+        "distance-target/sign": {
+          "predicted": 851,
+          "absolute_error_pct": 3.2766990291262137
+        },
+        "distance-target/distance": {
+          "predicted": 853,
+          "absolute_error_pct": 3.5194174757281553
+        }
+      }
+    },
+    "15": {
+      "reference_voxels": 1887,
+      "masks_matched": 22,
+      "best_pct": 0.052994170641229466,
+      "observations": {
+        "section-area/control": {
+          "predicted": 1825,
+          "absolute_error_pct": 3.2856385797562266
+        },
+        "section-area/area": {
+          "predicted": 1943,
+          "absolute_error_pct": 2.96767355590885
+        },
+        "axial-raw/plane": {
+          "predicted": 1855,
+          "absolute_error_pct": 1.695813460519343
+        },
+        "axial-raw/axial": {
+          "predicted": 1896,
+          "absolute_error_pct": 0.4769475357710652
+        },
+        "census-train/replacement": {
+          "predicted": 1848,
+          "absolute_error_pct": 2.066772655007949
+        },
+        "census-train/census": {
+          "predicted": 1886,
+          "absolute_error_pct": 0.052994170641229466
+        },
+        "local-connectivity/critical": {
+          "predicted": 1943,
+          "absolute_error_pct": 2.96767355590885
+        },
+        "two-scale/fine": {
+          "predicted": 1894,
+          "absolute_error_pct": 0.37095919448860626
+        },
+        "two-scale/coarse": {
+          "predicted": 1879,
+          "absolute_error_pct": 0.4239533651298357
+        },
+        "five-plane/slice": {
+          "predicted": 1888,
+          "absolute_error_pct": 0.052994170641229466
+        },
+        "five-plane/volume": {
+          "predicted": 1900,
+          "absolute_error_pct": 0.688924218335983
+        },
+        "small-seed/gray": {
+          "predicted": 1886,
+          "absolute_error_pct": 0.052994170641229466
+        },
+        "small-seed/geometry": {
+          "predicted": 1886,
+          "absolute_error_pct": 0.052994170641229466
+        },
+        "mass/mass": {
+          "predicted": 1886,
+          "absolute_error_pct": 0.052994170641229466
+        },
+        "mass/size": {
+          "predicted": 1886,
+          "absolute_error_pct": 0.052994170641229466
+        },
+        "mass/boundary": {
+          "predicted": 1886,
+          "absolute_error_pct": 0.052994170641229466
+        },
+        "forward/center": {
+          "predicted": 1827,
+          "absolute_error_pct": 3.179650238473768
+        },
+        "monotone/band-sync": {
+          "predicted": 1805,
+          "absolute_error_pct": 4.345521992580816
+        },
+        "monotone/band-color": {
+          "predicted": 1808,
+          "absolute_error_pct": 4.186539480657128
+        },
+        "orientation/mean8": {
+          "predicted": 1885,
+          "absolute_error_pct": 0.10598834128245893
+        },
+        "distance-target/sign": {
+          "predicted": 1898,
+          "absolute_error_pct": 0.5829358770535241
+        },
+        "distance-target/distance": {
+          "predicted": 1884,
+          "absolute_error_pct": 0.1589825119236884
+        }
+      }
+    },
+    "17": {
+      "reference_voxels": 166,
+      "masks_matched": 21,
+      "best_pct": 0.6024096385542169,
+      "observations": {
+        "section-area/control": {
+          "predicted": 167,
+          "absolute_error_pct": 0.6024096385542169
+        },
+        "section-area/area": {
+          "predicted": 178,
+          "absolute_error_pct": 7.228915662650603
+        },
+        "axial-raw/plane": {
+          "predicted": 147,
+          "absolute_error_pct": 11.44578313253012
+        },
+        "axial-raw/axial": {
+          "predicted": 156,
+          "absolute_error_pct": 6.024096385542169
+        },
+        "census-train/replacement": {
+          "predicted": 154,
+          "absolute_error_pct": 7.228915662650603
+        },
+        "census-train/census": {
+          "predicted": 161,
+          "absolute_error_pct": 3.0120481927710845
+        },
+        "local-connectivity/critical": {
+          "predicted": 161,
+          "absolute_error_pct": 3.0120481927710845
+        },
+        "two-scale/fine": {
+          "predicted": 161,
+          "absolute_error_pct": 3.0120481927710845
+        },
+        "two-scale/coarse": {
+          "predicted": 161,
+          "absolute_error_pct": 3.0120481927710845
+        },
+        "five-plane/slice": {
+          "predicted": 156,
+          "absolute_error_pct": 6.024096385542169
+        },
+        "five-plane/volume": {
+          "predicted": 156,
+          "absolute_error_pct": 6.024096385542169
+        },
+        "small-seed/gray": {
+          "predicted": 161,
+          "absolute_error_pct": 3.0120481927710845
+        },
+        "small-seed/geometry": {
+          "predicted": 161,
+          "absolute_error_pct": 3.0120481927710845
+        },
+        "mass/mass": {
+          "predicted": 161,
+          "absolute_error_pct": 3.0120481927710845
+        },
+        "mass/size": {
+          "predicted": 161,
+          "absolute_error_pct": 3.0120481927710845
+        },
+        "mass/boundary": {
+          "predicted": 176,
+          "absolute_error_pct": 6.024096385542169
+        },
+        "forward/center": {
+          "predicted": 156,
+          "absolute_error_pct": 6.024096385542169
+        },
+        "monotone/band-color": {
+          "predicted": 151,
+          "absolute_error_pct": 9.036144578313253
+        },
+        "orientation/mean8": {
+          "predicted": 159,
+          "absolute_error_pct": 4.216867469879518
+        },
+        "distance-target/sign": {
+          "predicted": 134,
+          "absolute_error_pct": 19.27710843373494
+        },
+        "distance-target/distance": {
+          "predicted": 147,
+          "absolute_error_pct": 11.44578313253012
+        }
+      }
+    },
+    "18": {
+      "reference_voxels": 1228,
+      "masks_matched": 22,
+      "best_pct": 0.3257328990228013,
+      "observations": {
+        "section-area/control": {
+          "predicted": 1224,
+          "absolute_error_pct": 0.3257328990228013
+        },
+        "section-area/area": {
+          "predicted": 1327,
+          "absolute_error_pct": 8.061889250814332
+        },
+        "axial-raw/plane": {
+          "predicted": 1287,
+          "absolute_error_pct": 4.804560260586319
+        },
+        "axial-raw/axial": {
+          "predicted": 1253,
+          "absolute_error_pct": 2.035830618892508
+        },
+        "census-train/replacement": {
+          "predicted": 1219,
+          "absolute_error_pct": 0.7328990228013029
+        },
+        "census-train/census": {
+          "predicted": 1237,
+          "absolute_error_pct": 0.7328990228013029
+        },
+        "local-connectivity/critical": {
+          "predicted": 1321,
+          "absolute_error_pct": 7.5732899022801305
+        },
+        "two-scale/fine": {
+          "predicted": 1240,
+          "absolute_error_pct": 0.9771986970684039
+        },
+        "two-scale/coarse": {
+          "predicted": 1232,
+          "absolute_error_pct": 0.3257328990228013
+        },
+        "five-plane/slice": {
+          "predicted": 1275,
+          "absolute_error_pct": 3.8273615635179152
+        },
+        "five-plane/volume": {
+          "predicted": 1206,
+          "absolute_error_pct": 1.791530944625407
+        },
+        "small-seed/gray": {
+          "predicted": 1237,
+          "absolute_error_pct": 0.7328990228013029
+        },
+        "small-seed/geometry": {
+          "predicted": 1237,
+          "absolute_error_pct": 0.7328990228013029
+        },
+        "mass/mass": {
+          "predicted": 1237,
+          "absolute_error_pct": 0.7328990228013029
+        },
+        "mass/size": {
+          "predicted": 1237,
+          "absolute_error_pct": 0.7328990228013029
+        },
+        "mass/boundary": {
+          "predicted": 1237,
+          "absolute_error_pct": 0.7328990228013029
+        },
+        "forward/center": {
+          "predicted": 1223,
+          "absolute_error_pct": 0.40716612377850164
+        },
+        "monotone/band-sync": {
+          "predicted": 1395,
+          "absolute_error_pct": 13.599348534201955
+        },
+        "monotone/band-color": {
+          "predicted": 1311,
+          "absolute_error_pct": 6.758957654723127
+        },
+        "orientation/mean8": {
+          "predicted": 1240,
+          "absolute_error_pct": 0.9771986970684039
+        },
+        "distance-target/sign": {
+          "predicted": 1308,
+          "absolute_error_pct": 6.514657980456026
+        },
+        "distance-target/distance": {
+          "predicted": 1301,
+          "absolute_error_pct": 5.944625407166124
+        }
+      }
+    },
+    "19": {
+      "reference_voxels": 13454,
+      "masks_matched": 22,
+      "best_pct": 1.486546751895347,
+      "observations": {
+        "section-area/control": {
+          "predicted": 12973,
+          "absolute_error_pct": 3.5751449383083096
+        },
+        "section-area/area": {
+          "predicted": 13734,
+          "absolute_error_pct": 2.0811654526534857
+        },
+        "axial-raw/plane": {
+          "predicted": 13053,
+          "absolute_error_pct": 2.980526237550171
+        },
+        "axial-raw/axial": {
+          "predicted": 13104,
+          "absolute_error_pct": 2.6014568158168574
+        },
+        "census-train/replacement": {
+          "predicted": 12973,
+          "absolute_error_pct": 3.5751449383083096
+        },
+        "census-train/census": {
+          "predicted": 12992,
+          "absolute_error_pct": 3.433922996878252
+        },
+        "local-connectivity/critical": {
+          "predicted": 13252,
+          "absolute_error_pct": 1.5014122194143005
+        },
+        "two-scale/fine": {
+          "predicted": 12978,
+          "absolute_error_pct": 3.5379812695109263
+        },
+        "two-scale/coarse": {
+          "predicted": 12968,
+          "absolute_error_pct": 3.6123086071056933
+        },
+        "five-plane/slice": {
+          "predicted": 13173,
+          "absolute_error_pct": 2.0885981864129626
+        },
+        "five-plane/volume": {
+          "predicted": 13062,
+          "absolute_error_pct": 2.91363163371488
+        },
+        "small-seed/gray": {
+          "predicted": 12992,
+          "absolute_error_pct": 3.433922996878252
+        },
+        "small-seed/geometry": {
+          "predicted": 12992,
+          "absolute_error_pct": 3.433922996878252
+        },
+        "mass/mass": {
+          "predicted": 12992,
+          "absolute_error_pct": 3.433922996878252
+        },
+        "mass/size": {
+          "predicted": 12992,
+          "absolute_error_pct": 3.433922996878252
+        },
+        "mass/boundary": {
+          "predicted": 12992,
+          "absolute_error_pct": 3.433922996878252
+        },
+        "forward/center": {
+          "predicted": 12800,
+          "absolute_error_pct": 4.861007878697785
+        },
+        "monotone/band-sync": {
+          "predicted": 13106,
+          "absolute_error_pct": 2.586591348297904
+        },
+        "monotone/band-color": {
+          "predicted": 12962,
+          "absolute_error_pct": 3.656905009662554
+        },
+        "orientation/mean8": {
+          "predicted": 12995,
+          "absolute_error_pct": 3.411624795599822
+        },
+        "distance-target/sign": {
+          "predicted": 13254,
+          "absolute_error_pct": 1.486546751895347
+        },
+        "distance-target/distance": {
+          "predicted": 13186,
+          "absolute_error_pct": 1.9919726475397652
+        }
+      }
+    },
+    "20": {
+      "reference_voxels": 829,
+      "masks_matched": 22,
+      "best_pct": 0.0,
+      "observations": {
+        "section-area/control": {
+          "predicted": 797,
+          "absolute_error_pct": 3.860072376357057
+        },
+        "section-area/area": {
+          "predicted": 875,
+          "absolute_error_pct": 5.548854041013269
+        },
+        "axial-raw/plane": {
+          "predicted": 825,
+          "absolute_error_pct": 0.4825090470446321
+        },
+        "axial-raw/axial": {
+          "predicted": 819,
+          "absolute_error_pct": 1.2062726176115801
+        },
+        "census-train/replacement": {
+          "predicted": 823,
+          "absolute_error_pct": 0.7237635705669482
+        },
+        "census-train/census": {
+          "predicted": 824,
+          "absolute_error_pct": 0.6031363088057901
+        },
+        "local-connectivity/critical": {
+          "predicted": 848,
+          "absolute_error_pct": 2.2919179734620023
+        },
+        "two-scale/fine": {
+          "predicted": 828,
+          "absolute_error_pct": 0.12062726176115803
+        },
+        "two-scale/coarse": {
+          "predicted": 823,
+          "absolute_error_pct": 0.7237635705669482
+        },
+        "five-plane/slice": {
+          "predicted": 828,
+          "absolute_error_pct": 0.12062726176115803
+        },
+        "five-plane/volume": {
+          "predicted": 814,
+          "absolute_error_pct": 1.8094089264173703
+        },
+        "small-seed/gray": {
+          "predicted": 824,
+          "absolute_error_pct": 0.6031363088057901
+        },
+        "small-seed/geometry": {
+          "predicted": 824,
+          "absolute_error_pct": 0.6031363088057901
+        },
+        "mass/mass": {
+          "predicted": 824,
+          "absolute_error_pct": 0.6031363088057901
+        },
+        "mass/size": {
+          "predicted": 824,
+          "absolute_error_pct": 0.6031363088057901
+        },
+        "mass/boundary": {
+          "predicted": 824,
+          "absolute_error_pct": 0.6031363088057901
+        },
+        "forward/center": {
+          "predicted": 798,
+          "absolute_error_pct": 3.7394451145958985
+        },
+        "monotone/band-sync": {
+          "predicted": 607,
+          "absolute_error_pct": 26.77925211097708
+        },
+        "monotone/band-color": {
+          "predicted": 696,
+          "absolute_error_pct": 16.043425814234016
+        },
+        "orientation/mean8": {
+          "predicted": 829,
+          "absolute_error_pct": 0.0
+        },
+        "distance-target/sign": {
+          "predicted": 827,
+          "absolute_error_pct": 0.24125452352231605
+        },
+        "distance-target/distance": {
+          "predicted": 821,
+          "absolute_error_pct": 0.9650180940892642
+        }
+      }
+    },
+    "22": {
+      "reference_voxels": 108,
+      "masks_matched": 18,
+      "best_pct": 0.9259259259259259,
+      "observations": {
+        "section-area/control": {
+          "predicted": 87,
+          "absolute_error_pct": 19.444444444444443
+        },
+        "section-area/area": {
+          "predicted": 126,
+          "absolute_error_pct": 16.666666666666668
+        },
+        "axial-raw/plane": {
+          "predicted": 71,
+          "absolute_error_pct": 34.25925925925926
+        },
+        "axial-raw/axial": {
+          "predicted": 81,
+          "absolute_error_pct": 25.0
+        },
+        "census-train/replacement": {
+          "predicted": 80,
+          "absolute_error_pct": 25.925925925925927
+        },
+        "census-train/census": {
+          "predicted": 86,
+          "absolute_error_pct": 20.37037037037037
+        },
+        "local-connectivity/critical": {
+          "predicted": 107,
+          "absolute_error_pct": 0.9259259259259259
+        },
+        "two-scale/fine": {
+          "predicted": 86,
+          "absolute_error_pct": 20.37037037037037
+        },
+        "two-scale/coarse": {
+          "predicted": 85,
+          "absolute_error_pct": 21.296296296296298
+        },
+        "five-plane/slice": {
+          "predicted": 85,
+          "absolute_error_pct": 21.296296296296298
+        },
+        "five-plane/volume": {
+          "predicted": 96,
+          "absolute_error_pct": 11.11111111111111
+        },
+        "small-seed/gray": {
+          "predicted": 86,
+          "absolute_error_pct": 20.37037037037037
+        },
+        "small-seed/geometry": {
+          "predicted": 86,
+          "absolute_error_pct": 20.37037037037037
+        },
+        "mass/mass": {
+          "predicted": 86,
+          "absolute_error_pct": 20.37037037037037
+        },
+        "mass/size": {
+          "predicted": 86,
+          "absolute_error_pct": 20.37037037037037
+        },
+        "mass/boundary": {
+          "predicted": 106,
+          "absolute_error_pct": 1.8518518518518519
+        },
+        "forward/center": {
+          "predicted": 81,
+          "absolute_error_pct": 25.0
+        },
+        "orientation/mean8": {
+          "predicted": 87,
+          "absolute_error_pct": 19.444444444444443
+        }
+      }
+    },
+    "24": {
+      "reference_voxels": 1883,
+      "masks_matched": 22,
+      "best_pct": 0.053106744556558685,
+      "observations": {
+        "section-area/control": {
+          "predicted": 1854,
+          "absolute_error_pct": 1.5400955921402018
+        },
+        "section-area/area": {
+          "predicted": 1976,
+          "absolute_error_pct": 4.938927243759958
+        },
+        "axial-raw/plane": {
+          "predicted": 1882,
+          "absolute_error_pct": 0.053106744556558685
+        },
+        "axial-raw/axial": {
+          "predicted": 1938,
+          "absolute_error_pct": 2.9208709506107278
+        },
+        "census-train/replacement": {
+          "predicted": 1860,
+          "absolute_error_pct": 1.2214551248008496
+        },
+        "census-train/census": {
+          "predicted": 1879,
+          "absolute_error_pct": 0.21242697822623474
+        },
+        "local-connectivity/critical": {
+          "predicted": 2028,
+          "absolute_error_pct": 7.700477960701009
+        },
+        "two-scale/fine": {
+          "predicted": 1877,
+          "absolute_error_pct": 0.3186404673393521
+        },
+        "two-scale/coarse": {
+          "predicted": 1871,
+          "absolute_error_pct": 0.6372809346787042
+        },
+        "five-plane/slice": {
+          "predicted": 1898,
+          "absolute_error_pct": 0.7966011683483802
+        },
+        "five-plane/volume": {
+          "predicted": 1856,
+          "absolute_error_pct": 1.4338821030270845
+        },
+        "small-seed/gray": {
+          "predicted": 1879,
+          "absolute_error_pct": 0.21242697822623474
+        },
+        "small-seed/geometry": {
+          "predicted": 1879,
+          "absolute_error_pct": 0.21242697822623474
+        },
+        "mass/mass": {
+          "predicted": 1879,
+          "absolute_error_pct": 0.21242697822623474
+        },
+        "mass/size": {
+          "predicted": 1879,
+          "absolute_error_pct": 0.21242697822623474
+        },
+        "mass/boundary": {
+          "predicted": 1879,
+          "absolute_error_pct": 0.21242697822623474
+        },
+        "forward/center": {
+          "predicted": 1856,
+          "absolute_error_pct": 1.4338821030270845
+        },
+        "monotone/band-sync": {
+          "predicted": 2075,
+          "absolute_error_pct": 10.196494954859267
+        },
+        "monotone/band-color": {
+          "predicted": 2056,
+          "absolute_error_pct": 9.187466808284652
+        },
+        "orientation/mean8": {
+          "predicted": 1873,
+          "absolute_error_pct": 0.5310674455655868
+        },
+        "distance-target/sign": {
+          "predicted": 1939,
+          "absolute_error_pct": 2.973977695167286
+        },
+        "distance-target/distance": {
+          "predicted": 1926,
+          "absolute_error_pct": 2.2835900159320235
+        }
+      }
+    },
+    "26": {
+      "reference_voxels": 1490,
+      "masks_matched": 20,
+      "best_pct": 1.74496644295302,
+      "observations": {
+        "section-area/control": {
+          "predicted": 1410,
+          "absolute_error_pct": 5.369127516778524
+        },
+        "section-area/area": {
+          "predicted": 1539,
+          "absolute_error_pct": 3.2885906040268456
+        },
+        "axial-raw/plane": {
+          "predicted": 1417,
+          "absolute_error_pct": 4.899328859060403
+        },
+        "axial-raw/axial": {
+          "predicted": 1422,
+          "absolute_error_pct": 4.563758389261745
+        },
+        "census-train/replacement": {
+          "predicted": 1421,
+          "absolute_error_pct": 4.630872483221476
+        },
+        "census-train/census": {
+          "predicted": 1433,
+          "absolute_error_pct": 3.825503355704698
+        },
+        "two-scale/fine": {
+          "predicted": 1436,
+          "absolute_error_pct": 3.6241610738255035
+        },
+        "two-scale/coarse": {
+          "predicted": 1432,
+          "absolute_error_pct": 3.8926174496644297
+        },
+        "five-plane/slice": {
+          "predicted": 1464,
+          "absolute_error_pct": 1.74496644295302
+        },
+        "five-plane/volume": {
+          "predicted": 1431,
+          "absolute_error_pct": 3.959731543624161
+        },
+        "small-seed/gray": {
+          "predicted": 1433,
+          "absolute_error_pct": 3.825503355704698
+        },
+        "small-seed/geometry": {
+          "predicted": 1433,
+          "absolute_error_pct": 3.825503355704698
+        },
+        "mass/mass": {
+          "predicted": 1433,
+          "absolute_error_pct": 3.825503355704698
+        },
+        "mass/size": {
+          "predicted": 1433,
+          "absolute_error_pct": 3.825503355704698
+        },
+        "mass/boundary": {
+          "predicted": 1433,
+          "absolute_error_pct": 3.825503355704698
+        },
+        "forward/center": {
+          "predicted": 1402,
+          "absolute_error_pct": 5.906040268456376
+        },
+        "monotone/band-color": {
+          "predicted": 1853,
+          "absolute_error_pct": 24.36241610738255
+        },
+        "orientation/mean8": {
+          "predicted": 1430,
+          "absolute_error_pct": 4.026845637583893
+        },
+        "distance-target/sign": {
+          "predicted": 1385,
+          "absolute_error_pct": 7.046979865771812
+        },
+        "distance-target/distance": {
+          "predicted": 1404,
+          "absolute_error_pct": 5.771812080536913
+        }
+      }
+    },
+    "27": {
+      "reference_voxels": 286,
+      "masks_matched": 19,
+      "best_pct": 9.79020979020979,
+      "observations": {
+        "section-area/control": {
+          "predicted": 249,
+          "absolute_error_pct": 12.937062937062937
+        },
+        "section-area/area": {
+          "predicted": 321,
+          "absolute_error_pct": 12.237762237762238
+        },
+        "axial-raw/plane": {
+          "predicted": 245,
+          "absolute_error_pct": 14.335664335664335
+        },
+        "axial-raw/axial": {
+          "predicted": 240,
+          "absolute_error_pct": 16.083916083916083
+        },
+        "census-train/replacement": {
+          "predicted": 235,
+          "absolute_error_pct": 17.832167832167833
+        },
+        "census-train/census": {
+          "predicted": 243,
+          "absolute_error_pct": 15.034965034965035
+        },
+        "two-scale/fine": {
+          "predicted": 240,
+          "absolute_error_pct": 16.083916083916083
+        },
+        "two-scale/coarse": {
+          "predicted": 241,
+          "absolute_error_pct": 15.734265734265735
+        },
+        "five-plane/slice": {
+          "predicted": 253,
+          "absolute_error_pct": 11.538461538461538
+        },
+        "five-plane/volume": {
+          "predicted": 258,
+          "absolute_error_pct": 9.79020979020979
+        },
+        "small-seed/gray": {
+          "predicted": 243,
+          "absolute_error_pct": 15.034965034965035
+        },
+        "small-seed/geometry": {
+          "predicted": 243,
+          "absolute_error_pct": 15.034965034965035
+        },
+        "mass/mass": {
+          "predicted": 243,
+          "absolute_error_pct": 15.034965034965035
+        },
+        "mass/size": {
+          "predicted": 243,
+          "absolute_error_pct": 15.034965034965035
+        },
+        "mass/boundary": {
+          "predicted": 243,
+          "absolute_error_pct": 15.034965034965035
+        },
+        "forward/center": {
+          "predicted": 228,
+          "absolute_error_pct": 20.27972027972028
+        },
+        "orientation/mean8": {
+          "predicted": 240,
+          "absolute_error_pct": 16.083916083916083
+        },
+        "distance-target/sign": {
+          "predicted": 217,
+          "absolute_error_pct": 24.125874125874127
+        },
+        "distance-target/distance": {
+          "predicted": 218,
+          "absolute_error_pct": 23.776223776223777
+        }
+      }
+    },
+    "28": {
+      "reference_voxels": 164,
+      "masks_matched": 0,
+      "best_pct": null,
+      "observations": {}
+    },
+    "29": {
+      "reference_voxels": 134,
+      "masks_matched": 20,
+      "best_pct": 0.746268656716418,
+      "observations": {
+        "section-area/control": {
+          "predicted": 137,
+          "absolute_error_pct": 2.2388059701492535
+        },
+        "section-area/area": {
+          "predicted": 161,
+          "absolute_error_pct": 20.149253731343283
+        },
+        "axial-raw/plane": {
+          "predicted": 135,
+          "absolute_error_pct": 0.746268656716418
+        },
+        "axial-raw/axial": {
+          "predicted": 127,
+          "absolute_error_pct": 5.223880597014926
+        },
+        "census-train/replacement": {
+          "predicted": 132,
+          "absolute_error_pct": 1.492537313432836
+        },
+        "census-train/census": {
+          "predicted": 129,
+          "absolute_error_pct": 3.7313432835820897
+        },
+        "local-connectivity/critical": {
+          "predicted": 131,
+          "absolute_error_pct": 2.2388059701492535
+        },
+        "two-scale/fine": {
+          "predicted": 128,
+          "absolute_error_pct": 4.477611940298507
+        },
+        "two-scale/coarse": {
+          "predicted": 129,
+          "absolute_error_pct": 3.7313432835820897
+        },
+        "five-plane/slice": {
+          "predicted": 133,
+          "absolute_error_pct": 0.746268656716418
+        },
+        "five-plane/volume": {
+          "predicted": 126,
+          "absolute_error_pct": 5.970149253731344
+        },
+        "small-seed/gray": {
+          "predicted": 129,
+          "absolute_error_pct": 3.7313432835820897
+        },
+        "small-seed/geometry": {
+          "predicted": 129,
+          "absolute_error_pct": 3.7313432835820897
+        },
+        "mass/mass": {
+          "predicted": 129,
+          "absolute_error_pct": 3.7313432835820897
+        },
+        "mass/size": {
+          "predicted": 129,
+          "absolute_error_pct": 3.7313432835820897
+        },
+        "mass/boundary": {
+          "predicted": 129,
+          "absolute_error_pct": 3.7313432835820897
+        },
+        "forward/center": {
+          "predicted": 121,
+          "absolute_error_pct": 9.701492537313433
+        },
+        "orientation/mean8": {
+          "predicted": 129,
+          "absolute_error_pct": 3.7313432835820897
+        },
+        "distance-target/sign": {
+          "predicted": 105,
+          "absolute_error_pct": 21.64179104477612
+        },
+        "distance-target/distance": {
+          "predicted": 120,
+          "absolute_error_pct": 10.447761194029852
+        }
+      }
+    },
+    "30": {
+      "reference_voxels": 764,
+      "masks_matched": 22,
+      "best_pct": 0.39267015706806285,
+      "observations": {
+        "section-area/control": {
+          "predicted": 761,
+          "absolute_error_pct": 0.39267015706806285
+        },
+        "section-area/area": {
+          "predicted": 841,
+          "absolute_error_pct": 10.078534031413612
+        },
+        "axial-raw/plane": {
+          "predicted": 784,
+          "absolute_error_pct": 2.6178010471204187
+        },
+        "axial-raw/axial": {
+          "predicted": 782,
+          "absolute_error_pct": 2.356020942408377
+        },
+        "census-train/replacement": {
+          "predicted": 792,
+          "absolute_error_pct": 3.6649214659685865
+        },
+        "census-train/census": {
+          "predicted": 789,
+          "absolute_error_pct": 3.2722513089005236
+        },
+        "local-connectivity/critical": {
+          "predicted": 805,
+          "absolute_error_pct": 5.366492146596858
+        },
+        "two-scale/fine": {
+          "predicted": 792,
+          "absolute_error_pct": 3.6649214659685865
+        },
+        "two-scale/coarse": {
+          "predicted": 789,
+          "absolute_error_pct": 3.2722513089005236
+        },
+        "five-plane/slice": {
+          "predicted": 803,
+          "absolute_error_pct": 5.104712041884817
+        },
+        "five-plane/volume": {
+          "predicted": 792,
+          "absolute_error_pct": 3.6649214659685865
+        },
+        "small-seed/gray": {
+          "predicted": 789,
+          "absolute_error_pct": 3.2722513089005236
+        },
+        "small-seed/geometry": {
+          "predicted": 789,
+          "absolute_error_pct": 3.2722513089005236
+        },
+        "mass/mass": {
+          "predicted": 789,
+          "absolute_error_pct": 3.2722513089005236
+        },
+        "mass/size": {
+          "predicted": 789,
+          "absolute_error_pct": 3.2722513089005236
+        },
+        "mass/boundary": {
+          "predicted": 789,
+          "absolute_error_pct": 3.2722513089005236
+        },
+        "forward/center": {
+          "predicted": 775,
+          "absolute_error_pct": 1.4397905759162304
+        },
+        "monotone/band-sync": {
+          "predicted": 799,
+          "absolute_error_pct": 4.5811518324607325
+        },
+        "monotone/band-color": {
+          "predicted": 805,
+          "absolute_error_pct": 5.366492146596858
+        },
+        "orientation/mean8": {
+          "predicted": 787,
+          "absolute_error_pct": 3.0104712041884816
+        },
+        "distance-target/sign": {
+          "predicted": 777,
+          "absolute_error_pct": 1.7015706806282722
+        },
+        "distance-target/distance": {
+          "predicted": 786,
+          "absolute_error_pct": 2.8795811518324608
+        }
+      }
+    },
+    "31": {
+      "reference_voxels": 154,
+      "masks_matched": 20,
+      "best_pct": 1.948051948051948,
+      "observations": {
+        "section-area/control": {
+          "predicted": 150,
+          "absolute_error_pct": 2.5974025974025974
+        },
+        "section-area/area": {
+          "predicted": 182,
+          "absolute_error_pct": 18.181818181818183
+        },
+        "axial-raw/plane": {
+          "predicted": 141,
+          "absolute_error_pct": 8.441558441558442
+        },
+        "axial-raw/axial": {
+          "predicted": 141,
+          "absolute_error_pct": 8.441558441558442
+        },
+        "census-train/replacement": {
+          "predicted": 134,
+          "absolute_error_pct": 12.987012987012987
+        },
+        "census-train/census": {
+          "predicted": 151,
+          "absolute_error_pct": 1.948051948051948
+        },
+        "local-connectivity/critical": {
+          "predicted": 163,
+          "absolute_error_pct": 5.8441558441558445
+        },
+        "two-scale/fine": {
+          "predicted": 150,
+          "absolute_error_pct": 2.5974025974025974
+        },
+        "two-scale/coarse": {
+          "predicted": 151,
+          "absolute_error_pct": 1.948051948051948
+        },
+        "five-plane/slice": {
+          "predicted": 148,
+          "absolute_error_pct": 3.896103896103896
+        },
+        "five-plane/volume": {
+          "predicted": 159,
+          "absolute_error_pct": 3.2467532467532467
+        },
+        "small-seed/gray": {
+          "predicted": 151,
+          "absolute_error_pct": 1.948051948051948
+        },
+        "small-seed/geometry": {
+          "predicted": 151,
+          "absolute_error_pct": 1.948051948051948
+        },
+        "mass/mass": {
+          "predicted": 151,
+          "absolute_error_pct": 1.948051948051948
+        },
+        "mass/size": {
+          "predicted": 151,
+          "absolute_error_pct": 1.948051948051948
+        },
+        "mass/boundary": {
+          "predicted": 129,
+          "absolute_error_pct": 16.233766233766232
+        },
+        "forward/center": {
+          "predicted": 136,
+          "absolute_error_pct": 11.688311688311689
+        },
+        "orientation/mean8": {
+          "predicted": 145,
+          "absolute_error_pct": 5.8441558441558445
+        },
+        "distance-target/sign": {
+          "predicted": 107,
+          "absolute_error_pct": 30.51948051948052
+        },
+        "distance-target/distance": {
+          "predicted": 113,
+          "absolute_error_pct": 26.623376623376622
+        }
+      }
+    },
+    "32": {
+      "reference_voxels": 142,
+      "masks_matched": 20,
+      "best_pct": 0.0,
+      "observations": {
+        "section-area/control": {
+          "predicted": 146,
+          "absolute_error_pct": 2.816901408450704
+        },
+        "section-area/area": {
+          "predicted": 195,
+          "absolute_error_pct": 37.32394366197183
+        },
+        "axial-raw/plane": {
+          "predicted": 146,
+          "absolute_error_pct": 2.816901408450704
+        },
+        "axial-raw/axial": {
+          "predicted": 125,
+          "absolute_error_pct": 11.971830985915492
+        },
+        "census-train/replacement": {
+          "predicted": 132,
+          "absolute_error_pct": 7.042253521126761
+        },
+        "census-train/census": {
+          "predicted": 134,
+          "absolute_error_pct": 5.633802816901408
+        },
+        "local-connectivity/critical": {
+          "predicted": 172,
+          "absolute_error_pct": 21.12676056338028
+        },
+        "two-scale/fine": {
+          "predicted": 133,
+          "absolute_error_pct": 6.338028169014085
+        },
+        "two-scale/coarse": {
+          "predicted": 133,
+          "absolute_error_pct": 6.338028169014085
+        },
+        "five-plane/slice": {
+          "predicted": 140,
+          "absolute_error_pct": 1.408450704225352
+        },
+        "five-plane/volume": {
+          "predicted": 152,
+          "absolute_error_pct": 7.042253521126761
+        },
+        "small-seed/gray": {
+          "predicted": 134,
+          "absolute_error_pct": 5.633802816901408
+        },
+        "small-seed/geometry": {
+          "predicted": 134,
+          "absolute_error_pct": 5.633802816901408
+        },
+        "mass/mass": {
+          "predicted": 134,
+          "absolute_error_pct": 5.633802816901408
+        },
+        "mass/size": {
+          "predicted": 134,
+          "absolute_error_pct": 5.633802816901408
+        },
+        "mass/boundary": {
+          "predicted": 142,
+          "absolute_error_pct": 0.0
+        },
+        "forward/center": {
+          "predicted": 123,
+          "absolute_error_pct": 13.380281690140846
+        },
+        "orientation/mean8": {
+          "predicted": 135,
+          "absolute_error_pct": 4.929577464788732
+        },
+        "distance-target/sign": {
+          "predicted": 132,
+          "absolute_error_pct": 7.042253521126761
+        },
+        "distance-target/distance": {
+          "predicted": 132,
+          "absolute_error_pct": 7.042253521126761
+        }
+      }
+    },
+    "33": {
+      "reference_voxels": 1348,
+      "masks_matched": 22,
+      "best_pct": 0.14836795252225518,
+      "observations": {
+        "section-area/control": {
+          "predicted": 1350,
+          "absolute_error_pct": 0.14836795252225518
+        },
+        "section-area/area": {
+          "predicted": 1447,
+          "absolute_error_pct": 7.344213649851632
+        },
+        "axial-raw/plane": {
+          "predicted": 1410,
+          "absolute_error_pct": 4.599406528189911
+        },
+        "axial-raw/axial": {
+          "predicted": 1390,
+          "absolute_error_pct": 3.115727002967359
+        },
+        "census-train/replacement": {
+          "predicted": 1362,
+          "absolute_error_pct": 1.0385756676557865
+        },
+        "census-train/census": {
+          "predicted": 1386,
+          "absolute_error_pct": 2.8189910979228485
+        },
+        "local-connectivity/critical": {
+          "predicted": 1440,
+          "absolute_error_pct": 6.824925816023739
+        },
+        "two-scale/fine": {
+          "predicted": 1389,
+          "absolute_error_pct": 3.0415430267062313
+        },
+        "two-scale/coarse": {
+          "predicted": 1385,
+          "absolute_error_pct": 2.744807121661721
+        },
+        "five-plane/slice": {
+          "predicted": 1409,
+          "absolute_error_pct": 4.525222551928783
+        },
+        "five-plane/volume": {
+          "predicted": 1360,
+          "absolute_error_pct": 0.8902077151335311
+        },
+        "small-seed/gray": {
+          "predicted": 1386,
+          "absolute_error_pct": 2.8189910979228485
+        },
+        "small-seed/geometry": {
+          "predicted": 1386,
+          "absolute_error_pct": 2.8189910979228485
+        },
+        "mass/mass": {
+          "predicted": 1386,
+          "absolute_error_pct": 2.8189910979228485
+        },
+        "mass/size": {
+          "predicted": 1386,
+          "absolute_error_pct": 2.8189910979228485
+        },
+        "mass/boundary": {
+          "predicted": 1386,
+          "absolute_error_pct": 2.8189910979228485
+        },
+        "forward/center": {
+          "predicted": 1378,
+          "absolute_error_pct": 2.2255192878338277
+        },
+        "monotone/band-sync": {
+          "predicted": 1479,
+          "absolute_error_pct": 9.718100890207715
+        },
+        "monotone/band-color": {
+          "predicted": 1437,
+          "absolute_error_pct": 6.602373887240356
+        },
+        "orientation/mean8": {
+          "predicted": 1388,
+          "absolute_error_pct": 2.9673590504451037
+        },
+        "distance-target/sign": {
+          "predicted": 1399,
+          "absolute_error_pct": 3.7833827893175074
+        },
+        "distance-target/distance": {
+          "predicted": 1418,
+          "absolute_error_pct": 5.192878338278931
+        }
+      }
+    },
+    "34": {
+      "reference_voxels": 377,
+      "masks_matched": 20,
+      "best_pct": 0.26525198938992045,
+      "observations": {
+        "section-area/control": {
+          "predicted": 389,
+          "absolute_error_pct": 3.183023872679045
+        },
+        "section-area/area": {
+          "predicted": 415,
+          "absolute_error_pct": 10.079575596816976
+        },
+        "axial-raw/plane": {
+          "predicted": 378,
+          "absolute_error_pct": 0.26525198938992045
+        },
+        "axial-raw/axial": {
+          "predicted": 378,
+          "absolute_error_pct": 0.26525198938992045
+        },
+        "census-train/replacement": {
+          "predicted": 386,
+          "absolute_error_pct": 2.387267904509284
+        },
+        "census-train/census": {
+          "predicted": 397,
+          "absolute_error_pct": 5.305039787798409
+        },
+        "local-connectivity/critical": {
+          "predicted": 401,
+          "absolute_error_pct": 6.36604774535809
+        },
+        "two-scale/fine": {
+          "predicted": 398,
+          "absolute_error_pct": 5.570291777188329
+        },
+        "two-scale/coarse": {
+          "predicted": 397,
+          "absolute_error_pct": 5.305039787798409
+        },
+        "five-plane/slice": {
+          "predicted": 391,
+          "absolute_error_pct": 3.713527851458886
+        },
+        "five-plane/volume": {
+          "predicted": 390,
+          "absolute_error_pct": 3.4482758620689653
+        },
+        "small-seed/gray": {
+          "predicted": 397,
+          "absolute_error_pct": 5.305039787798409
+        },
+        "small-seed/geometry": {
+          "predicted": 397,
+          "absolute_error_pct": 5.305039787798409
+        },
+        "mass/mass": {
+          "predicted": 397,
+          "absolute_error_pct": 5.305039787798409
+        },
+        "mass/size": {
+          "predicted": 397,
+          "absolute_error_pct": 5.305039787798409
+        },
+        "mass/boundary": {
+          "predicted": 397,
+          "absolute_error_pct": 5.305039787798409
+        },
+        "forward/center": {
+          "predicted": 381,
+          "absolute_error_pct": 1.0610079575596818
+        },
+        "orientation/mean8": {
+          "predicted": 391,
+          "absolute_error_pct": 3.713527851458886
+        },
+        "distance-target/sign": {
+          "predicted": 346,
+          "absolute_error_pct": 8.222811671087532
+        },
+        "distance-target/distance": {
+          "predicted": 357,
+          "absolute_error_pct": 5.305039787798409
+        }
+      }
+    },
+    "36": {
+      "reference_voxels": 263,
+      "masks_matched": 21,
+      "best_pct": 1.520912547528517,
+      "observations": {
+        "section-area/control": {
+          "predicted": 229,
+          "absolute_error_pct": 12.927756653992395
+        },
+        "section-area/area": {
+          "predicted": 249,
+          "absolute_error_pct": 5.32319391634981
+        },
+        "axial-raw/plane": {
+          "predicted": 220,
+          "absolute_error_pct": 16.34980988593156
+        },
+        "axial-raw/axial": {
+          "predicted": 217,
+          "absolute_error_pct": 17.490494296577946
+        },
+        "census-train/replacement": {
+          "predicted": 228,
+          "absolute_error_pct": 13.307984790874524
+        },
+        "census-train/census": {
+          "predicted": 234,
+          "absolute_error_pct": 11.02661596958175
+        },
+        "local-connectivity/critical": {
+          "predicted": 267,
+          "absolute_error_pct": 1.520912547528517
+        },
+        "two-scale/fine": {
+          "predicted": 232,
+          "absolute_error_pct": 11.787072243346008
+        },
+        "two-scale/coarse": {
+          "predicted": 233,
+          "absolute_error_pct": 11.406844106463879
+        },
+        "five-plane/slice": {
+          "predicted": 245,
+          "absolute_error_pct": 6.844106463878327
+        },
+        "five-plane/volume": {
+          "predicted": 202,
+          "absolute_error_pct": 23.193916349809886
+        },
+        "small-seed/gray": {
+          "predicted": 234,
+          "absolute_error_pct": 11.02661596958175
+        },
+        "small-seed/geometry": {
+          "predicted": 234,
+          "absolute_error_pct": 11.02661596958175
+        },
+        "mass/mass": {
+          "predicted": 234,
+          "absolute_error_pct": 11.02661596958175
+        },
+        "mass/size": {
+          "predicted": 234,
+          "absolute_error_pct": 11.02661596958175
+        },
+        "mass/boundary": {
+          "predicted": 274,
+          "absolute_error_pct": 4.182509505703422
+        },
+        "forward/center": {
+          "predicted": 221,
+          "absolute_error_pct": 15.96958174904943
+        },
+        "monotone/band-color": {
+          "predicted": 273,
+          "absolute_error_pct": 3.802281368821293
+        },
+        "orientation/mean8": {
+          "predicted": 232,
+          "absolute_error_pct": 11.787072243346008
+        },
+        "distance-target/sign": {
+          "predicted": 183,
+          "absolute_error_pct": 30.418250950570343
+        },
+        "distance-target/distance": {
+          "predicted": 210,
+          "absolute_error_pct": 20.15209125475285
+        }
+      }
+    },
+    "39": {
+      "reference_voxels": 1547,
+      "masks_matched": 22,
+      "best_pct": 0.9696186166774402,
+      "observations": {
+        "section-area/control": {
+          "predicted": 1532,
+          "absolute_error_pct": 0.9696186166774402
+        },
+        "section-area/area": {
+          "predicted": 1684,
+          "absolute_error_pct": 8.855850032320621
+        },
+        "axial-raw/plane": {
+          "predicted": 1596,
+          "absolute_error_pct": 3.167420814479638
+        },
+        "axial-raw/axial": {
+          "predicted": 1604,
+          "absolute_error_pct": 3.6845507433742726
+        },
+        "census-train/replacement": {
+          "predicted": 1570,
+          "absolute_error_pct": 1.486748545572075
+        },
+        "census-train/census": {
+          "predicted": 1601,
+          "absolute_error_pct": 3.490627020038785
+        },
+        "local-connectivity/critical": {
+          "predicted": 1953,
+          "absolute_error_pct": 26.244343891402714
+        },
+        "two-scale/fine": {
+          "predicted": 1604,
+          "absolute_error_pct": 3.6845507433742726
+        },
+        "two-scale/coarse": {
+          "predicted": 1600,
+          "absolute_error_pct": 3.425985778926955
+        },
+        "five-plane/slice": {
+          "predicted": 1623,
+          "absolute_error_pct": 4.912734324499031
+        },
+        "five-plane/volume": {
+          "predicted": 1562,
+          "absolute_error_pct": 0.9696186166774402
+        },
+        "small-seed/gray": {
+          "predicted": 1601,
+          "absolute_error_pct": 3.490627020038785
+        },
+        "small-seed/geometry": {
+          "predicted": 1601,
+          "absolute_error_pct": 3.490627020038785
+        },
+        "mass/mass": {
+          "predicted": 1601,
+          "absolute_error_pct": 3.490627020038785
+        },
+        "mass/size": {
+          "predicted": 1601,
+          "absolute_error_pct": 3.490627020038785
+        },
+        "mass/boundary": {
+          "predicted": 1601,
+          "absolute_error_pct": 3.490627020038785
+        },
+        "forward/center": {
+          "predicted": 1574,
+          "absolute_error_pct": 1.7453135100193924
+        },
+        "monotone/band-sync": {
+          "predicted": 1829,
+          "absolute_error_pct": 18.228829993535875
+        },
+        "monotone/band-color": {
+          "predicted": 1728,
+          "absolute_error_pct": 11.700064641241111
+        },
+        "orientation/mean8": {
+          "predicted": 1608,
+          "absolute_error_pct": 3.9431157078215904
+        },
+        "distance-target/sign": {
+          "predicted": 1616,
+          "absolute_error_pct": 4.460245636716225
+        },
+        "distance-target/distance": {
+          "predicted": 1616,
+          "absolute_error_pct": 4.460245636716225
+        }
+      }
+    },
+    "44": {
+      "reference_voxels": 274,
+      "masks_matched": 20,
+      "best_pct": 2.9197080291970803,
+      "observations": {
+        "section-area/control": {
+          "predicted": 262,
+          "absolute_error_pct": 4.37956204379562
+        },
+        "section-area/area": {
+          "predicted": 298,
+          "absolute_error_pct": 8.75912408759124
+        },
+        "axial-raw/plane": {
+          "predicted": 252,
+          "absolute_error_pct": 8.02919708029197
+        },
+        "axial-raw/axial": {
+          "predicted": 256,
+          "absolute_error_pct": 6.569343065693431
+        },
+        "census-train/replacement": {
+          "predicted": 253,
+          "absolute_error_pct": 7.664233576642336
+        },
+        "census-train/census": {
+          "predicted": 254,
+          "absolute_error_pct": 7.299270072992701
+        },
+        "local-connectivity/critical": {
+          "predicted": 251,
+          "absolute_error_pct": 8.394160583941606
+        },
+        "two-scale/fine": {
+          "predicted": 254,
+          "absolute_error_pct": 7.299270072992701
+        },
+        "two-scale/coarse": {
+          "predicted": 254,
+          "absolute_error_pct": 7.299270072992701
+        },
+        "five-plane/slice": {
+          "predicted": 260,
+          "absolute_error_pct": 5.109489051094891
+        },
+        "five-plane/volume": {
+          "predicted": 258,
+          "absolute_error_pct": 5.839416058394161
+        },
+        "small-seed/gray": {
+          "predicted": 254,
+          "absolute_error_pct": 7.299270072992701
+        },
+        "small-seed/geometry": {
+          "predicted": 254,
+          "absolute_error_pct": 7.299270072992701
+        },
+        "mass/mass": {
+          "predicted": 254,
+          "absolute_error_pct": 7.299270072992701
+        },
+        "mass/size": {
+          "predicted": 254,
+          "absolute_error_pct": 7.299270072992701
+        },
+        "mass/boundary": {
+          "predicted": 282,
+          "absolute_error_pct": 2.9197080291970803
+        },
+        "forward/center": {
+          "predicted": 234,
+          "absolute_error_pct": 14.598540145985401
+        },
+        "orientation/mean8": {
+          "predicted": 255,
+          "absolute_error_pct": 6.934306569343065
+        },
+        "distance-target/sign": {
+          "predicted": 247,
+          "absolute_error_pct": 9.854014598540147
+        },
+        "distance-target/distance": {
+          "predicted": 246,
+          "absolute_error_pct": 10.218978102189782
+        }
+      }
+    },
+    "47": {
+      "reference_voxels": 252,
+      "masks_matched": 20,
+      "best_pct": 1.1904761904761905,
+      "observations": {
+        "section-area/control": {
+          "predicted": 244,
+          "absolute_error_pct": 3.1746031746031744
+        },
+        "section-area/area": {
+          "predicted": 270,
+          "absolute_error_pct": 7.142857142857143
+        },
+        "axial-raw/plane": {
+          "predicted": 239,
+          "absolute_error_pct": 5.158730158730159
+        },
+        "axial-raw/axial": {
+          "predicted": 238,
+          "absolute_error_pct": 5.555555555555555
+        },
+        "census-train/replacement": {
+          "predicted": 246,
+          "absolute_error_pct": 2.380952380952381
+        },
+        "census-train/census": {
+          "predicted": 239,
+          "absolute_error_pct": 5.158730158730159
+        },
+        "local-connectivity/critical": {
+          "predicted": 241,
+          "absolute_error_pct": 4.365079365079365
+        },
+        "two-scale/fine": {
+          "predicted": 241,
+          "absolute_error_pct": 4.365079365079365
+        },
+        "two-scale/coarse": {
+          "predicted": 239,
+          "absolute_error_pct": 5.158730158730159
+        },
+        "five-plane/slice": {
+          "predicted": 249,
+          "absolute_error_pct": 1.1904761904761905
+        },
+        "five-plane/volume": {
+          "predicted": 246,
+          "absolute_error_pct": 2.380952380952381
+        },
+        "small-seed/gray": {
+          "predicted": 239,
+          "absolute_error_pct": 5.158730158730159
+        },
+        "small-seed/geometry": {
+          "predicted": 239,
+          "absolute_error_pct": 5.158730158730159
+        },
+        "mass/mass": {
+          "predicted": 239,
+          "absolute_error_pct": 5.158730158730159
+        },
+        "mass/size": {
+          "predicted": 239,
+          "absolute_error_pct": 5.158730158730159
+        },
+        "mass/boundary": {
+          "predicted": 261,
+          "absolute_error_pct": 3.5714285714285716
+        },
+        "forward/center": {
+          "predicted": 218,
+          "absolute_error_pct": 13.492063492063492
+        },
+        "orientation/mean8": {
+          "predicted": 240,
+          "absolute_error_pct": 4.761904761904762
+        },
+        "distance-target/sign": {
+          "predicted": 218,
+          "absolute_error_pct": 13.492063492063492
+        },
+        "distance-target/distance": {
+          "predicted": 238,
+          "absolute_error_pct": 5.555555555555555
+        }
+      }
+    },
+    "48": {
+      "reference_voxels": 277,
+      "masks_matched": 20,
+      "best_pct": 1.8050541516245486,
+      "observations": {
+        "section-area/control": {
+          "predicted": 271,
+          "absolute_error_pct": 2.1660649819494586
+        },
+        "section-area/area": {
+          "predicted": 298,
+          "absolute_error_pct": 7.581227436823105
+        },
+        "axial-raw/plane": {
+          "predicted": 261,
+          "absolute_error_pct": 5.776173285198556
+        },
+        "axial-raw/axial": {
+          "predicted": 259,
+          "absolute_error_pct": 6.498194945848375
+        },
+        "census-train/replacement": {
+          "predicted": 269,
+          "absolute_error_pct": 2.888086642599278
+        },
+        "census-train/census": {
+          "predicted": 266,
+          "absolute_error_pct": 3.9711191335740073
+        },
+        "local-connectivity/critical": {
+          "predicted": 270,
+          "absolute_error_pct": 2.527075812274368
+        },
+        "two-scale/fine": {
+          "predicted": 267,
+          "absolute_error_pct": 3.6101083032490973
+        },
+        "two-scale/coarse": {
+          "predicted": 266,
+          "absolute_error_pct": 3.9711191335740073
+        },
+        "five-plane/slice": {
+          "predicted": 283,
+          "absolute_error_pct": 2.1660649819494586
+        },
+        "five-plane/volume": {
+          "predicted": 259,
+          "absolute_error_pct": 6.498194945848375
+        },
+        "small-seed/gray": {
+          "predicted": 266,
+          "absolute_error_pct": 3.9711191335740073
+        },
+        "small-seed/geometry": {
+          "predicted": 266,
+          "absolute_error_pct": 3.9711191335740073
+        },
+        "mass/mass": {
+          "predicted": 266,
+          "absolute_error_pct": 3.9711191335740073
+        },
+        "mass/size": {
+          "predicted": 266,
+          "absolute_error_pct": 3.9711191335740073
+        },
+        "mass/boundary": {
+          "predicted": 282,
+          "absolute_error_pct": 1.8050541516245486
+        },
+        "forward/center": {
+          "predicted": 254,
+          "absolute_error_pct": 8.303249097472925
+        },
+        "orientation/mean8": {
+          "predicted": 266,
+          "absolute_error_pct": 3.9711191335740073
+        },
+        "distance-target/sign": {
+          "predicted": 247,
+          "absolute_error_pct": 10.830324909747292
+        },
+        "distance-target/distance": {
+          "predicted": 251,
+          "absolute_error_pct": 9.386281588447654
+        }
+      }
+    },
+    "49": {
+      "reference_voxels": 182,
+      "masks_matched": 21,
+      "best_pct": 2.7472527472527473,
+      "observations": {
+        "section-area/control": {
+          "predicted": 163,
+          "absolute_error_pct": 10.43956043956044
+        },
+        "section-area/area": {
+          "predicted": 187,
+          "absolute_error_pct": 2.7472527472527473
+        },
+        "axial-raw/plane": {
+          "predicted": 162,
+          "absolute_error_pct": 10.989010989010989
+        },
+        "axial-raw/axial": {
+          "predicted": 162,
+          "absolute_error_pct": 10.989010989010989
+        },
+        "census-train/replacement": {
+          "predicted": 164,
+          "absolute_error_pct": 9.89010989010989
+        },
+        "census-train/census": {
+          "predicted": 165,
+          "absolute_error_pct": 9.340659340659341
+        },
+        "local-connectivity/critical": {
+          "predicted": 164,
+          "absolute_error_pct": 9.89010989010989
+        },
+        "two-scale/fine": {
+          "predicted": 166,
+          "absolute_error_pct": 8.791208791208792
+        },
+        "two-scale/coarse": {
+          "predicted": 164,
+          "absolute_error_pct": 9.89010989010989
+        },
+        "five-plane/slice": {
+          "predicted": 163,
+          "absolute_error_pct": 10.43956043956044
+        },
+        "five-plane/volume": {
+          "predicted": 162,
+          "absolute_error_pct": 10.989010989010989
+        },
+        "small-seed/gray": {
+          "predicted": 165,
+          "absolute_error_pct": 9.340659340659341
+        },
+        "small-seed/geometry": {
+          "predicted": 165,
+          "absolute_error_pct": 9.340659340659341
+        },
+        "mass/mass": {
+          "predicted": 165,
+          "absolute_error_pct": 9.340659340659341
+        },
+        "mass/size": {
+          "predicted": 165,
+          "absolute_error_pct": 9.340659340659341
+        },
+        "mass/boundary": {
+          "predicted": 165,
+          "absolute_error_pct": 9.340659340659341
+        },
+        "forward/center": {
+          "predicted": 162,
+          "absolute_error_pct": 10.989010989010989
+        },
+        "monotone/band-color": {
+          "predicted": 168,
+          "absolute_error_pct": 7.6923076923076925
+        },
+        "orientation/mean8": {
+          "predicted": 165,
+          "absolute_error_pct": 9.340659340659341
+        },
+        "distance-target/sign": {
+          "predicted": 143,
+          "absolute_error_pct": 21.428571428571427
+        },
+        "distance-target/distance": {
+          "predicted": 159,
+          "absolute_error_pct": 12.637362637362637
+        }
+      }
+    },
+    "50": {
+      "reference_voxels": 165,
+      "masks_matched": 20,
+      "best_pct": 3.0303030303030303,
+      "observations": {
+        "section-area/control": {
+          "predicted": 158,
+          "absolute_error_pct": 4.242424242424242
+        },
+        "section-area/area": {
+          "predicted": 175,
+          "absolute_error_pct": 6.0606060606060606
+        },
+        "axial-raw/plane": {
+          "predicted": 145,
+          "absolute_error_pct": 12.121212121212121
+        },
+        "axial-raw/axial": {
+          "predicted": 138,
+          "absolute_error_pct": 16.363636363636363
+        },
+        "census-train/replacement": {
+          "predicted": 140,
+          "absolute_error_pct": 15.151515151515152
+        },
+        "census-train/census": {
+          "predicted": 145,
+          "absolute_error_pct": 12.121212121212121
+        },
+        "local-connectivity/critical": {
+          "predicted": 140,
+          "absolute_error_pct": 15.151515151515152
+        },
+        "two-scale/fine": {
+          "predicted": 143,
+          "absolute_error_pct": 13.333333333333334
+        },
+        "two-scale/coarse": {
+          "predicted": 145,
+          "absolute_error_pct": 12.121212121212121
+        },
+        "five-plane/slice": {
+          "predicted": 158,
+          "absolute_error_pct": 4.242424242424242
+        },
+        "five-plane/volume": {
+          "predicted": 160,
+          "absolute_error_pct": 3.0303030303030303
+        },
+        "small-seed/gray": {
+          "predicted": 145,
+          "absolute_error_pct": 12.121212121212121
+        },
+        "small-seed/geometry": {
+          "predicted": 145,
+          "absolute_error_pct": 12.121212121212121
+        },
+        "mass/mass": {
+          "predicted": 145,
+          "absolute_error_pct": 12.121212121212121
+        },
+        "mass/size": {
+          "predicted": 145,
+          "absolute_error_pct": 12.121212121212121
+        },
+        "mass/boundary": {
+          "predicted": 145,
+          "absolute_error_pct": 12.121212121212121
+        },
+        "forward/center": {
+          "predicted": 131,
+          "absolute_error_pct": 20.606060606060606
+        },
+        "orientation/mean8": {
+          "predicted": 144,
+          "absolute_error_pct": 12.727272727272727
+        },
+        "distance-target/sign": {
+          "predicted": 119,
+          "absolute_error_pct": 27.87878787878788
+        },
+        "distance-target/distance": {
+          "predicted": 124,
+          "absolute_error_pct": 24.848484848484848
+        }
+      }
+    },
+    "56": {
+      "reference_voxels": 83,
+      "masks_matched": 4,
+      "best_pct": 6.024096385542169,
+      "observations": {
+        "section-area/control": {
+          "predicted": 78,
+          "absolute_error_pct": 6.024096385542169
+        },
+        "section-area/area": {
+          "predicted": 101,
+          "absolute_error_pct": 21.686746987951807
+        },
+        "local-connectivity/critical": {
+          "predicted": 89,
+          "absolute_error_pct": 7.228915662650603
+        },
+        "five-plane/slice": {
+          "predicted": 71,
+          "absolute_error_pct": 14.457831325301205
+        }
+      }
+    },
+    "59": {
+      "reference_voxels": 704,
+      "masks_matched": 22,
+      "best_pct": 0.7102272727272727,
+      "observations": {
+        "section-area/control": {
+          "predicted": 699,
+          "absolute_error_pct": 0.7102272727272727
+        },
+        "section-area/area": {
+          "predicted": 787,
+          "absolute_error_pct": 11.789772727272727
+        },
+        "axial-raw/plane": {
+          "predicted": 747,
+          "absolute_error_pct": 6.107954545454546
+        },
+        "axial-raw/axial": {
+          "predicted": 746,
+          "absolute_error_pct": 5.965909090909091
+        },
+        "census-train/replacement": {
+          "predicted": 730,
+          "absolute_error_pct": 3.6931818181818183
+        },
+        "census-train/census": {
+          "predicted": 742,
+          "absolute_error_pct": 5.3977272727272725
+        },
+        "local-connectivity/critical": {
+          "predicted": 782,
+          "absolute_error_pct": 11.079545454545455
+        },
+        "two-scale/fine": {
+          "predicted": 742,
+          "absolute_error_pct": 5.3977272727272725
+        },
+        "two-scale/coarse": {
+          "predicted": 742,
+          "absolute_error_pct": 5.3977272727272725
+        },
+        "five-plane/slice": {
+          "predicted": 753,
+          "absolute_error_pct": 6.9602272727272725
+        },
+        "five-plane/volume": {
+          "predicted": 726,
+          "absolute_error_pct": 3.125
+        },
+        "small-seed/gray": {
+          "predicted": 742,
+          "absolute_error_pct": 5.3977272727272725
+        },
+        "small-seed/geometry": {
+          "predicted": 742,
+          "absolute_error_pct": 5.3977272727272725
+        },
+        "mass/mass": {
+          "predicted": 742,
+          "absolute_error_pct": 5.3977272727272725
+        },
+        "mass/size": {
+          "predicted": 742,
+          "absolute_error_pct": 5.3977272727272725
+        },
+        "mass/boundary": {
+          "predicted": 742,
+          "absolute_error_pct": 5.3977272727272725
+        },
+        "forward/center": {
+          "predicted": 743,
+          "absolute_error_pct": 5.5397727272727275
+        },
+        "monotone/band-sync": {
+          "predicted": 987,
+          "absolute_error_pct": 40.19886363636363
+        },
+        "monotone/band-color": {
+          "predicted": 869,
+          "absolute_error_pct": 23.4375
+        },
+        "orientation/mean8": {
+          "predicted": 744,
+          "absolute_error_pct": 5.681818181818182
+        },
+        "distance-target/sign": {
+          "predicted": 762,
+          "absolute_error_pct": 8.238636363636363
+        },
+        "distance-target/distance": {
+          "predicted": 767,
+          "absolute_error_pct": 8.948863636363637
+        }
+      }
+    },
+    "60": {
+      "reference_voxels": 1133,
+      "masks_matched": 22,
+      "best_pct": 0.617828773168579,
+      "observations": {
+        "section-area/control": {
+          "predicted": 1126,
+          "absolute_error_pct": 0.617828773168579
+        },
+        "section-area/area": {
+          "predicted": 1281,
+          "absolute_error_pct": 13.062665489849955
+        },
+        "axial-raw/plane": {
+          "predicted": 1219,
+          "absolute_error_pct": 7.590467784642542
+        },
+        "axial-raw/axial": {
+          "predicted": 1262,
+          "absolute_error_pct": 11.385701676963812
+        },
+        "census-train/replacement": {
+          "predicted": 1230,
+          "absolute_error_pct": 8.56134157105031
+        },
+        "census-train/census": {
+          "predicted": 1264,
+          "absolute_error_pct": 11.562224183583407
+        },
+        "local-connectivity/critical": {
+          "predicted": 1296,
+          "absolute_error_pct": 14.386584289496911
+        },
+        "two-scale/fine": {
+          "predicted": 1263,
+          "absolute_error_pct": 11.47396293027361
+        },
+        "two-scale/coarse": {
+          "predicted": 1262,
+          "absolute_error_pct": 11.385701676963812
+        },
+        "five-plane/slice": {
+          "predicted": 1251,
+          "absolute_error_pct": 10.414827890556046
+        },
+        "five-plane/volume": {
+          "predicted": 1252,
+          "absolute_error_pct": 10.503089143865843
+        },
+        "small-seed/gray": {
+          "predicted": 1264,
+          "absolute_error_pct": 11.562224183583407
+        },
+        "small-seed/geometry": {
+          "predicted": 1264,
+          "absolute_error_pct": 11.562224183583407
+        },
+        "mass/mass": {
+          "predicted": 1264,
+          "absolute_error_pct": 11.562224183583407
+        },
+        "mass/size": {
+          "predicted": 1264,
+          "absolute_error_pct": 11.562224183583407
+        },
+        "mass/boundary": {
+          "predicted": 1264,
+          "absolute_error_pct": 11.562224183583407
+        },
+        "forward/center": {
+          "predicted": 1244,
+          "absolute_error_pct": 9.796999117387466
+        },
+        "monotone/band-sync": {
+          "predicted": 1169,
+          "absolute_error_pct": 3.177405119152692
+        },
+        "monotone/band-color": {
+          "predicted": 1212,
+          "absolute_error_pct": 6.972639011473963
+        },
+        "orientation/mean8": {
+          "predicted": 1265,
+          "absolute_error_pct": 11.650485436893204
+        },
+        "distance-target/sign": {
+          "predicted": 1207,
+          "absolute_error_pct": 6.531332744924978
+        },
+        "distance-target/distance": {
+          "predicted": 1256,
+          "absolute_error_pct": 10.85613415710503
+        }
+      }
+    },
+    "62": {
+      "reference_voxels": 649,
+      "masks_matched": 22,
+      "best_pct": 3.5439137134052388,
+      "observations": {
+        "section-area/control": {
+          "predicted": 699,
+          "absolute_error_pct": 7.704160246533128
+        },
+        "section-area/area": {
+          "predicted": 772,
+          "absolute_error_pct": 18.952234206471495
+        },
+        "axial-raw/plane": {
+          "predicted": 718,
+          "absolute_error_pct": 10.631741140215716
+        },
+        "axial-raw/axial": {
+          "predicted": 709,
+          "absolute_error_pct": 9.244992295839754
+        },
+        "census-train/replacement": {
+          "predicted": 712,
+          "absolute_error_pct": 9.70724191063174
+        },
+        "census-train/census": {
+          "predicted": 701,
+          "absolute_error_pct": 8.012326656394453
+        },
+        "local-connectivity/critical": {
+          "predicted": 740,
+          "absolute_error_pct": 14.021571648690292
+        },
+        "two-scale/fine": {
+          "predicted": 703,
+          "absolute_error_pct": 8.320493066255779
+        },
+        "two-scale/coarse": {
+          "predicted": 701,
+          "absolute_error_pct": 8.012326656394453
+        },
+        "five-plane/slice": {
+          "predicted": 722,
+          "absolute_error_pct": 11.248073959938367
+        },
+        "five-plane/volume": {
+          "predicted": 672,
+          "absolute_error_pct": 3.5439137134052388
+        },
+        "small-seed/gray": {
+          "predicted": 701,
+          "absolute_error_pct": 8.012326656394453
+        },
+        "small-seed/geometry": {
+          "predicted": 701,
+          "absolute_error_pct": 8.012326656394453
+        },
+        "mass/mass": {
+          "predicted": 701,
+          "absolute_error_pct": 8.012326656394453
+        },
+        "mass/size": {
+          "predicted": 701,
+          "absolute_error_pct": 8.012326656394453
+        },
+        "mass/boundary": {
+          "predicted": 701,
+          "absolute_error_pct": 8.012326656394453
+        },
+        "forward/center": {
+          "predicted": 691,
+          "absolute_error_pct": 6.471494607087828
+        },
+        "monotone/band-sync": {
+          "predicted": 818,
+          "absolute_error_pct": 26.040061633281972
+        },
+        "monotone/band-color": {
+          "predicted": 777,
+          "absolute_error_pct": 19.722650231124806
+        },
+        "orientation/mean8": {
+          "predicted": 705,
+          "absolute_error_pct": 8.628659476117104
+        },
+        "distance-target/sign": {
+          "predicted": 726,
+          "absolute_error_pct": 11.864406779661017
+        },
+        "distance-target/distance": {
+          "predicted": 723,
+          "absolute_error_pct": 11.40215716486903
+        }
+      }
+    },
+    "63": {
+      "reference_voxels": 224,
+      "masks_matched": 5,
+      "best_pct": 1.7857142857142858,
+      "observations": {
+        "section-area/control": {
+          "predicted": 210,
+          "absolute_error_pct": 6.25
+        },
+        "section-area/area": {
+          "predicted": 241,
+          "absolute_error_pct": 7.589285714285714
+        },
+        "local-connectivity/critical": {
+          "predicted": 220,
+          "absolute_error_pct": 1.7857142857142858
+        },
+        "five-plane/slice": {
+          "predicted": 169,
+          "absolute_error_pct": 24.553571428571427
+        },
+        "five-plane/volume": {
+          "predicted": 170,
+          "absolute_error_pct": 24.107142857142858
+        }
+      }
+    },
+    "69": {
+      "reference_voxels": 1209,
+      "masks_matched": 22,
+      "best_pct": 0.1654259718775848,
+      "observations": {
+        "section-area/control": {
+          "predicted": 1207,
+          "absolute_error_pct": 0.1654259718775848
+        },
+        "section-area/area": {
+          "predicted": 1323,
+          "absolute_error_pct": 9.429280397022332
+        },
+        "axial-raw/plane": {
+          "predicted": 1249,
+          "absolute_error_pct": 3.3085194375516958
+        },
+        "axial-raw/axial": {
+          "predicted": 1260,
+          "absolute_error_pct": 4.218362282878412
+        },
+        "census-train/replacement": {
+          "predicted": 1262,
+          "absolute_error_pct": 4.383788254755997
+        },
+        "census-train/census": {
+          "predicted": 1264,
+          "absolute_error_pct": 4.549214226633581
+        },
+        "local-connectivity/critical": {
+          "predicted": 1331,
+          "absolute_error_pct": 10.090984284532672
+        },
+        "two-scale/fine": {
+          "predicted": 1264,
+          "absolute_error_pct": 4.549214226633581
+        },
+        "two-scale/coarse": {
+          "predicted": 1266,
+          "absolute_error_pct": 4.714640198511166
+        },
+        "five-plane/slice": {
+          "predicted": 1299,
+          "absolute_error_pct": 7.444168734491315
+        },
+        "five-plane/volume": {
+          "predicted": 1254,
+          "absolute_error_pct": 3.7220843672456576
+        },
+        "small-seed/gray": {
+          "predicted": 1264,
+          "absolute_error_pct": 4.549214226633581
+        },
+        "small-seed/geometry": {
+          "predicted": 1264,
+          "absolute_error_pct": 4.549214226633581
+        },
+        "mass/mass": {
+          "predicted": 1264,
+          "absolute_error_pct": 4.549214226633581
+        },
+        "mass/size": {
+          "predicted": 1264,
+          "absolute_error_pct": 4.549214226633581
+        },
+        "mass/boundary": {
+          "predicted": 1264,
+          "absolute_error_pct": 4.549214226633581
+        },
+        "forward/center": {
+          "predicted": 1266,
+          "absolute_error_pct": 4.714640198511166
+        },
+        "monotone/band-sync": {
+          "predicted": 1744,
+          "absolute_error_pct": 44.251447477253926
+        },
+        "monotone/band-color": {
+          "predicted": 1587,
+          "absolute_error_pct": 31.265508684863523
+        },
+        "orientation/mean8": {
+          "predicted": 1264,
+          "absolute_error_pct": 4.549214226633581
+        },
+        "distance-target/sign": {
+          "predicted": 1306,
+          "absolute_error_pct": 8.023159636062863
+        },
+        "distance-target/distance": {
+          "predicted": 1309,
+          "absolute_error_pct": 8.271298593879239
+        }
+      }
+    },
+    "72": {
+      "reference_voxels": 1081,
+      "masks_matched": 21,
+      "best_pct": 2.775208140610546,
+      "observations": {
+        "section-area/control": {
+          "predicted": 1020,
+          "absolute_error_pct": 5.642923219241443
+        },
+        "section-area/area": {
+          "predicted": 1182,
+          "absolute_error_pct": 9.343200740055504
+        },
+        "axial-raw/plane": {
+          "predicted": 1014,
+          "absolute_error_pct": 6.1979648473635525
+        },
+        "axial-raw/axial": {
+          "predicted": 1011,
+          "absolute_error_pct": 6.475485661424607
+        },
+        "census-train/replacement": {
+          "predicted": 999,
+          "absolute_error_pct": 7.585568917668825
+        },
+        "census-train/census": {
+          "predicted": 1028,
+          "absolute_error_pct": 4.902867715078631
+        },
+        "local-connectivity/critical": {
+          "predicted": 1035,
+          "absolute_error_pct": 4.25531914893617
+        },
+        "two-scale/fine": {
+          "predicted": 1023,
+          "absolute_error_pct": 5.365402405180388
+        },
+        "two-scale/coarse": {
+          "predicted": 1024,
+          "absolute_error_pct": 5.272895467160037
+        },
+        "five-plane/slice": {
+          "predicted": 1051,
+          "absolute_error_pct": 2.775208140610546
+        },
+        "five-plane/volume": {
+          "predicted": 1030,
+          "absolute_error_pct": 4.717853839037928
+        },
+        "small-seed/gray": {
+          "predicted": 1028,
+          "absolute_error_pct": 4.902867715078631
+        },
+        "small-seed/geometry": {
+          "predicted": 1028,
+          "absolute_error_pct": 4.902867715078631
+        },
+        "mass/mass": {
+          "predicted": 1028,
+          "absolute_error_pct": 4.902867715078631
+        },
+        "mass/size": {
+          "predicted": 1028,
+          "absolute_error_pct": 4.902867715078631
+        },
+        "mass/boundary": {
+          "predicted": 1028,
+          "absolute_error_pct": 4.902867715078631
+        },
+        "forward/center": {
+          "predicted": 983,
+          "absolute_error_pct": 9.06567992599445
+        },
+        "monotone/band-color": {
+          "predicted": 771,
+          "absolute_error_pct": 28.677150786308975
+        },
+        "orientation/mean8": {
+          "predicted": 1020,
+          "absolute_error_pct": 5.642923219241443
+        },
+        "distance-target/sign": {
+          "predicted": 979,
+          "absolute_error_pct": 9.435707678075856
+        },
+        "distance-target/distance": {
+          "predicted": 982,
+          "absolute_error_pct": 9.158186864014802
+        }
+      }
+    },
+    "73": {
+      "reference_voxels": 576,
+      "masks_matched": 22,
+      "best_pct": 0.8680555555555556,
+      "observations": {
+        "section-area/control": {
+          "predicted": 556,
+          "absolute_error_pct": 3.4722222222222223
+        },
+        "section-area/area": {
+          "predicted": 629,
+          "absolute_error_pct": 9.20138888888889
+        },
+        "axial-raw/plane": {
+          "predicted": 581,
+          "absolute_error_pct": 0.8680555555555556
+        },
+        "axial-raw/axial": {
+          "predicted": 601,
+          "absolute_error_pct": 4.340277777777778
+        },
+        "census-train/replacement": {
+          "predicted": 615,
+          "absolute_error_pct": 6.770833333333333
+        },
+        "census-train/census": {
+          "predicted": 614,
+          "absolute_error_pct": 6.597222222222222
+        },
+        "local-connectivity/critical": {
+          "predicted": 615,
+          "absolute_error_pct": 6.770833333333333
+        },
+        "two-scale/fine": {
+          "predicted": 614,
+          "absolute_error_pct": 6.597222222222222
+        },
+        "two-scale/coarse": {
+          "predicted": 612,
+          "absolute_error_pct": 6.25
+        },
+        "five-plane/slice": {
+          "predicted": 615,
+          "absolute_error_pct": 6.770833333333333
+        },
+        "five-plane/volume": {
+          "predicted": 614,
+          "absolute_error_pct": 6.597222222222222
+        },
+        "small-seed/gray": {
+          "predicted": 614,
+          "absolute_error_pct": 6.597222222222222
+        },
+        "small-seed/geometry": {
+          "predicted": 614,
+          "absolute_error_pct": 6.597222222222222
+        },
+        "mass/mass": {
+          "predicted": 614,
+          "absolute_error_pct": 6.597222222222222
+        },
+        "mass/size": {
+          "predicted": 614,
+          "absolute_error_pct": 6.597222222222222
+        },
+        "mass/boundary": {
+          "predicted": 614,
+          "absolute_error_pct": 6.597222222222222
+        },
+        "forward/center": {
+          "predicted": 610,
+          "absolute_error_pct": 5.902777777777778
+        },
+        "monotone/band-sync": {
+          "predicted": 750,
+          "absolute_error_pct": 30.208333333333332
+        },
+        "monotone/band-color": {
+          "predicted": 701,
+          "absolute_error_pct": 21.70138888888889
+        },
+        "orientation/mean8": {
+          "predicted": 616,
+          "absolute_error_pct": 6.944444444444445
+        },
+        "distance-target/sign": {
+          "predicted": 602,
+          "absolute_error_pct": 4.513888888888889
+        },
+        "distance-target/distance": {
+          "predicted": 616,
+          "absolute_error_pct": 6.944444444444445
+        }
+      }
+    },
+    "76": {
+      "reference_voxels": 93,
+      "masks_matched": 18,
+      "best_pct": 2.150537634408602,
+      "observations": {
+        "section-area/control": {
+          "predicted": 71,
+          "absolute_error_pct": 23.655913978494624
+        },
+        "section-area/area": {
+          "predicted": 103,
+          "absolute_error_pct": 10.75268817204301
+        },
+        "axial-raw/plane": {
+          "predicted": 66,
+          "absolute_error_pct": 29.032258064516128
+        },
+        "axial-raw/axial": {
+          "predicted": 81,
+          "absolute_error_pct": 12.903225806451612
+        },
+        "census-train/replacement": {
+          "predicted": 68,
+          "absolute_error_pct": 26.881720430107528
+        },
+        "census-train/census": {
+          "predicted": 87,
+          "absolute_error_pct": 6.451612903225806
+        },
+        "local-connectivity/critical": {
+          "predicted": 91,
+          "absolute_error_pct": 2.150537634408602
+        },
+        "two-scale/fine": {
+          "predicted": 88,
+          "absolute_error_pct": 5.376344086021505
+        },
+        "two-scale/coarse": {
+          "predicted": 86,
+          "absolute_error_pct": 7.526881720430108
+        },
+        "five-plane/slice": {
+          "predicted": 75,
+          "absolute_error_pct": 19.35483870967742
+        },
+        "five-plane/volume": {
+          "predicted": 91,
+          "absolute_error_pct": 2.150537634408602
+        },
+        "small-seed/gray": {
+          "predicted": 87,
+          "absolute_error_pct": 6.451612903225806
+        },
+        "small-seed/geometry": {
+          "predicted": 87,
+          "absolute_error_pct": 6.451612903225806
+        },
+        "mass/mass": {
+          "predicted": 87,
+          "absolute_error_pct": 6.451612903225806
+        },
+        "mass/size": {
+          "predicted": 87,
+          "absolute_error_pct": 6.451612903225806
+        },
+        "mass/boundary": {
+          "predicted": 108,
+          "absolute_error_pct": 16.129032258064516
+        },
+        "forward/center": {
+          "predicted": 75,
+          "absolute_error_pct": 19.35483870967742
+        },
+        "orientation/mean8": {
+          "predicted": 84,
+          "absolute_error_pct": 9.67741935483871
+        }
+      }
+    },
+    "78": {
+      "reference_voxels": 1019,
+      "masks_matched": 22,
+      "best_pct": 0.09813542688910697,
+      "observations": {
+        "section-area/control": {
+          "predicted": 1003,
+          "absolute_error_pct": 1.5701668302257115
+        },
+        "section-area/area": {
+          "predicted": 1066,
+          "absolute_error_pct": 4.612365063788028
+        },
+        "axial-raw/plane": {
+          "predicted": 1021,
+          "absolute_error_pct": 0.19627085377821393
+        },
+        "axial-raw/axial": {
+          "predicted": 1008,
+          "absolute_error_pct": 1.0794896957801767
+        },
+        "census-train/replacement": {
+          "predicted": 1012,
+          "absolute_error_pct": 0.6869479882237488
+        },
+        "census-train/census": {
+          "predicted": 1014,
+          "absolute_error_pct": 0.49067713444553485
+        },
+        "local-connectivity/critical": {
+          "predicted": 1070,
+          "absolute_error_pct": 5.004906771344455
+        },
+        "two-scale/fine": {
+          "predicted": 1015,
+          "absolute_error_pct": 0.39254170755642787
+        },
+        "two-scale/coarse": {
+          "predicted": 1014,
+          "absolute_error_pct": 0.49067713444553485
+        },
+        "five-plane/slice": {
+          "predicted": 1052,
+          "absolute_error_pct": 3.2384690873405297
+        },
+        "five-plane/volume": {
+          "predicted": 972,
+          "absolute_error_pct": 4.612365063788028
+        },
+        "small-seed/gray": {
+          "predicted": 1014,
+          "absolute_error_pct": 0.49067713444553485
+        },
+        "small-seed/geometry": {
+          "predicted": 1014,
+          "absolute_error_pct": 0.49067713444553485
+        },
+        "mass/mass": {
+          "predicted": 1014,
+          "absolute_error_pct": 0.49067713444553485
+        },
+        "mass/size": {
+          "predicted": 1014,
+          "absolute_error_pct": 0.49067713444553485
+        },
+        "mass/boundary": {
+          "predicted": 1014,
+          "absolute_error_pct": 0.49067713444553485
+        },
+        "forward/center": {
+          "predicted": 1001,
+          "absolute_error_pct": 1.7664376840039253
+        },
+        "monotone/band-sync": {
+          "predicted": 1279,
+          "absolute_error_pct": 25.515210991167812
+        },
+        "monotone/band-color": {
+          "predicted": 1172,
+          "absolute_error_pct": 15.014720314033367
+        },
+        "orientation/mean8": {
+          "predicted": 1018,
+          "absolute_error_pct": 0.09813542688910697
+        },
+        "distance-target/sign": {
+          "predicted": 1011,
+          "absolute_error_pct": 0.7850834151128557
+        },
+        "distance-target/distance": {
+          "predicted": 1018,
+          "absolute_error_pct": 0.09813542688910697
+        }
+      }
+    },
+    "80": {
+      "reference_voxels": 85,
+      "masks_matched": 20,
+      "best_pct": 0.0,
+      "observations": {
+        "section-area/control": {
+          "predicted": 83,
+          "absolute_error_pct": 2.3529411764705883
+        },
+        "section-area/area": {
+          "predicted": 98,
+          "absolute_error_pct": 15.294117647058824
+        },
+        "axial-raw/plane": {
+          "predicted": 79,
+          "absolute_error_pct": 7.0588235294117645
+        },
+        "axial-raw/axial": {
+          "predicted": 80,
+          "absolute_error_pct": 5.882352941176471
+        },
+        "census-train/replacement": {
+          "predicted": 78,
+          "absolute_error_pct": 8.235294117647058
+        },
+        "census-train/census": {
+          "predicted": 85,
+          "absolute_error_pct": 0.0
+        },
+        "local-connectivity/critical": {
+          "predicted": 89,
+          "absolute_error_pct": 4.705882352941177
+        },
+        "two-scale/fine": {
+          "predicted": 85,
+          "absolute_error_pct": 0.0
+        },
+        "two-scale/coarse": {
+          "predicted": 85,
+          "absolute_error_pct": 0.0
+        },
+        "five-plane/slice": {
+          "predicted": 83,
+          "absolute_error_pct": 2.3529411764705883
+        },
+        "five-plane/volume": {
+          "predicted": 85,
+          "absolute_error_pct": 0.0
+        },
+        "small-seed/gray": {
+          "predicted": 85,
+          "absolute_error_pct": 0.0
+        },
+        "small-seed/geometry": {
+          "predicted": 85,
+          "absolute_error_pct": 0.0
+        },
+        "mass/mass": {
+          "predicted": 85,
+          "absolute_error_pct": 0.0
+        },
+        "mass/size": {
+          "predicted": 85,
+          "absolute_error_pct": 0.0
+        },
+        "mass/boundary": {
+          "predicted": 106,
+          "absolute_error_pct": 24.705882352941178
+        },
+        "forward/center": {
+          "predicted": 78,
+          "absolute_error_pct": 8.235294117647058
+        },
+        "monotone/band-color": {
+          "predicted": 92,
+          "absolute_error_pct": 8.235294117647058
+        },
+        "orientation/mean8": {
+          "predicted": 85,
+          "absolute_error_pct": 0.0
+        },
+        "distance-target/distance": {
+          "predicted": 68,
+          "absolute_error_pct": 20.0
+        }
+      }
+    },
+    "83": {
+      "reference_voxels": 200,
+      "masks_matched": 20,
+      "best_pct": 0.5,
+      "observations": {
+        "section-area/control": {
+          "predicted": 191,
+          "absolute_error_pct": 4.5
+        },
+        "section-area/area": {
+          "predicted": 254,
+          "absolute_error_pct": 27.0
+        },
+        "axial-raw/plane": {
+          "predicted": 188,
+          "absolute_error_pct": 6.0
+        },
+        "axial-raw/axial": {
+          "predicted": 187,
+          "absolute_error_pct": 6.5
+        },
+        "census-train/replacement": {
+          "predicted": 195,
+          "absolute_error_pct": 2.5
+        },
+        "census-train/census": {
+          "predicted": 202,
+          "absolute_error_pct": 1.0
+        },
+        "local-connectivity/critical": {
+          "predicted": 205,
+          "absolute_error_pct": 2.5
+        },
+        "two-scale/fine": {
+          "predicted": 201,
+          "absolute_error_pct": 0.5
+        },
+        "two-scale/coarse": {
+          "predicted": 201,
+          "absolute_error_pct": 0.5
+        },
+        "five-plane/slice": {
+          "predicted": 203,
+          "absolute_error_pct": 1.5
+        },
+        "five-plane/volume": {
+          "predicted": 192,
+          "absolute_error_pct": 4.0
+        },
+        "small-seed/gray": {
+          "predicted": 202,
+          "absolute_error_pct": 1.0
+        },
+        "small-seed/geometry": {
+          "predicted": 202,
+          "absolute_error_pct": 1.0
+        },
+        "mass/mass": {
+          "predicted": 202,
+          "absolute_error_pct": 1.0
+        },
+        "mass/size": {
+          "predicted": 202,
+          "absolute_error_pct": 1.0
+        },
+        "mass/boundary": {
+          "predicted": 219,
+          "absolute_error_pct": 9.5
+        },
+        "forward/center": {
+          "predicted": 179,
+          "absolute_error_pct": 10.5
+        },
+        "orientation/mean8": {
+          "predicted": 199,
+          "absolute_error_pct": 0.5
+        },
+        "distance-target/sign": {
+          "predicted": 174,
+          "absolute_error_pct": 13.0
+        },
+        "distance-target/distance": {
+          "predicted": 180,
+          "absolute_error_pct": 10.0
+        }
+      }
+    },
+    "86": {
+      "reference_voxels": 843,
+      "masks_matched": 20,
+      "best_pct": 0.7117437722419929,
+      "observations": {
+        "section-area/control": {
+          "predicted": 763,
+          "absolute_error_pct": 9.489916963226571
+        },
+        "section-area/area": {
+          "predicted": 871,
+          "absolute_error_pct": 3.3214709371293
+        },
+        "axial-raw/plane": {
+          "predicted": 770,
+          "absolute_error_pct": 8.659549228944247
+        },
+        "axial-raw/axial": {
+          "predicted": 779,
+          "absolute_error_pct": 7.591933570581258
+        },
+        "census-train/replacement": {
+          "predicted": 776,
+          "absolute_error_pct": 7.947805456702254
+        },
+        "census-train/census": {
+          "predicted": 785,
+          "absolute_error_pct": 6.880189798339265
+        },
+        "local-connectivity/critical": {
+          "predicted": 837,
+          "absolute_error_pct": 0.7117437722419929
+        },
+        "two-scale/fine": {
+          "predicted": 787,
+          "absolute_error_pct": 6.6429418742586
+        },
+        "two-scale/coarse": {
+          "predicted": 783,
+          "absolute_error_pct": 7.117437722419929
+        },
+        "five-plane/slice": {
+          "predicted": 823,
+          "absolute_error_pct": 2.372479240806643
+        },
+        "five-plane/volume": {
+          "predicted": 785,
+          "absolute_error_pct": 6.880189798339265
+        },
+        "small-seed/gray": {
+          "predicted": 785,
+          "absolute_error_pct": 6.880189798339265
+        },
+        "small-seed/geometry": {
+          "predicted": 785,
+          "absolute_error_pct": 6.880189798339265
+        },
+        "mass/mass": {
+          "predicted": 785,
+          "absolute_error_pct": 6.880189798339265
+        },
+        "mass/size": {
+          "predicted": 785,
+          "absolute_error_pct": 6.880189798339265
+        },
+        "mass/boundary": {
+          "predicted": 785,
+          "absolute_error_pct": 6.880189798339265
+        },
+        "forward/center": {
+          "predicted": 745,
+          "absolute_error_pct": 11.625148279952551
+        },
+        "orientation/mean8": {
+          "predicted": 783,
+          "absolute_error_pct": 7.117437722419929
+        },
+        "distance-target/sign": {
+          "predicted": 568,
+          "absolute_error_pct": 32.62158956109134
+        },
+        "distance-target/distance": {
+          "predicted": 569,
+          "absolute_error_pct": 32.50296559905101
+        }
+      }
+    },
+    "87": {
+      "reference_voxels": 91,
+      "masks_matched": 10,
+      "best_pct": 7.6923076923076925,
+      "observations": {
+        "section-area/control": {
+          "predicted": 77,
+          "absolute_error_pct": 15.384615384615385
+        },
+        "section-area/area": {
+          "predicted": 84,
+          "absolute_error_pct": 7.6923076923076925
+        },
+        "local-connectivity/critical": {
+          "predicted": 78,
+          "absolute_error_pct": 14.285714285714286
+        },
+        "five-plane/slice": {
+          "predicted": 72,
+          "absolute_error_pct": 20.87912087912088
+        },
+        "small-seed/gray": {
+          "predicted": 140,
+          "absolute_error_pct": 53.84615384615385
+        },
+        "small-seed/geometry": {
+          "predicted": 140,
+          "absolute_error_pct": 53.84615384615385
+        },
+        "mass/mass": {
+          "predicted": 140,
+          "absolute_error_pct": 53.84615384615385
+        },
+        "mass/size": {
+          "predicted": 140,
+          "absolute_error_pct": 53.84615384615385
+        },
+        "mass/boundary": {
+          "predicted": 140,
+          "absolute_error_pct": 53.84615384615385
+        },
+        "orientation/mean8": {
+          "predicted": 66,
+          "absolute_error_pct": 27.47252747252747
+        }
+      }
+    },
+    "88": {
+      "reference_voxels": 511,
+      "masks_matched": 22,
+      "best_pct": 4.500978473581213,
+      "observations": {
+        "section-area/control": {
+          "predicted": 535,
+          "absolute_error_pct": 4.6966731898238745
+        },
+        "section-area/area": {
+          "predicted": 589,
+          "absolute_error_pct": 15.264187866927593
+        },
+        "axial-raw/plane": {
+          "predicted": 545,
+          "absolute_error_pct": 6.653620352250489
+        },
+        "axial-raw/axial": {
+          "predicted": 547,
+          "absolute_error_pct": 7.045009784735812
+        },
+        "census-train/replacement": {
+          "predicted": 544,
+          "absolute_error_pct": 6.457925636007828
+        },
+        "census-train/census": {
+          "predicted": 541,
+          "absolute_error_pct": 5.870841487279844
+        },
+        "local-connectivity/critical": {
+          "predicted": 575,
+          "absolute_error_pct": 12.524461839530332
+        },
+        "two-scale/fine": {
+          "predicted": 539,
+          "absolute_error_pct": 5.47945205479452
+        },
+        "two-scale/coarse": {
+          "predicted": 542,
+          "absolute_error_pct": 6.066536203522505
+        },
+        "five-plane/slice": {
+          "predicted": 571,
+          "absolute_error_pct": 11.741682974559687
+        },
+        "five-plane/volume": {
+          "predicted": 537,
+          "absolute_error_pct": 5.088062622309198
+        },
+        "small-seed/gray": {
+          "predicted": 541,
+          "absolute_error_pct": 5.870841487279844
+        },
+        "small-seed/geometry": {
+          "predicted": 541,
+          "absolute_error_pct": 5.870841487279844
+        },
+        "mass/mass": {
+          "predicted": 541,
+          "absolute_error_pct": 5.870841487279844
+        },
+        "mass/size": {
+          "predicted": 541,
+          "absolute_error_pct": 5.870841487279844
+        },
+        "mass/boundary": {
+          "predicted": 541,
+          "absolute_error_pct": 5.870841487279844
+        },
+        "forward/center": {
+          "predicted": 534,
+          "absolute_error_pct": 4.500978473581213
+        },
+        "monotone/band-sync": {
+          "predicted": 673,
+          "absolute_error_pct": 31.702544031311156
+        },
+        "monotone/band-color": {
+          "predicted": 630,
+          "absolute_error_pct": 23.28767123287671
+        },
+        "orientation/mean8": {
+          "predicted": 540,
+          "absolute_error_pct": 5.675146771037182
+        },
+        "distance-target/sign": {
+          "predicted": 555,
+          "absolute_error_pct": 8.610567514677104
+        },
+        "distance-target/distance": {
+          "predicted": 558,
+          "absolute_error_pct": 9.197651663405088
+        }
+      }
+    },
+    "90": {
+      "reference_voxels": 359,
+      "masks_matched": 22,
+      "best_pct": 0.0,
+      "observations": {
+        "section-area/control": {
+          "predicted": 376,
+          "absolute_error_pct": 4.735376044568246
+        },
+        "section-area/area": {
+          "predicted": 415,
+          "absolute_error_pct": 15.598885793871867
+        },
+        "axial-raw/plane": {
+          "predicted": 370,
+          "absolute_error_pct": 3.064066852367688
+        },
+        "axial-raw/axial": {
+          "predicted": 356,
+          "absolute_error_pct": 0.8356545961002786
+        },
+        "census-train/replacement": {
+          "predicted": 376,
+          "absolute_error_pct": 4.735376044568246
+        },
+        "census-train/census": {
+          "predicted": 359,
+          "absolute_error_pct": 0.0
+        },
+        "local-connectivity/critical": {
+          "predicted": 415,
+          "absolute_error_pct": 15.598885793871867
+        },
+        "two-scale/fine": {
+          "predicted": 359,
+          "absolute_error_pct": 0.0
+        },
+        "two-scale/coarse": {
+          "predicted": 359,
+          "absolute_error_pct": 0.0
+        },
+        "five-plane/slice": {
+          "predicted": 385,
+          "absolute_error_pct": 7.242339832869081
+        },
+        "five-plane/volume": {
+          "predicted": 328,
+          "absolute_error_pct": 8.635097493036211
+        },
+        "small-seed/gray": {
+          "predicted": 359,
+          "absolute_error_pct": 0.0
+        },
+        "small-seed/geometry": {
+          "predicted": 359,
+          "absolute_error_pct": 0.0
+        },
+        "mass/mass": {
+          "predicted": 359,
+          "absolute_error_pct": 0.0
+        },
+        "mass/size": {
+          "predicted": 359,
+          "absolute_error_pct": 0.0
+        },
+        "mass/boundary": {
+          "predicted": 359,
+          "absolute_error_pct": 0.0
+        },
+        "forward/center": {
+          "predicted": 349,
+          "absolute_error_pct": 2.785515320334262
+        },
+        "monotone/band-sync": {
+          "predicted": 424,
+          "absolute_error_pct": 18.105849582172702
+        },
+        "monotone/band-color": {
+          "predicted": 403,
+          "absolute_error_pct": 12.256267409470752
+        },
+        "orientation/mean8": {
+          "predicted": 358,
+          "absolute_error_pct": 0.2785515320334262
+        },
+        "distance-target/sign": {
+          "predicted": 347,
+          "absolute_error_pct": 3.3426183844011144
+        },
+        "distance-target/distance": {
+          "predicted": 362,
+          "absolute_error_pct": 0.8356545961002786
+        }
+      }
+    },
+    "93": {
+      "reference_voxels": 79,
+      "masks_matched": 1,
+      "best_pct": 15.189873417721518,
+      "observations": {
+        "section-area/control": {
+          "predicted": 67,
+          "absolute_error_pct": 15.189873417721518
+        }
+      }
+    },
+    "98": {
+      "reference_voxels": 594,
+      "masks_matched": 20,
+      "best_pct": 0.16835016835016836,
+      "observations": {
+        "section-area/control": {
+          "predicted": 582,
+          "absolute_error_pct": 2.0202020202020203
+        },
+        "section-area/area": {
+          "predicted": 641,
+          "absolute_error_pct": 7.912457912457913
+        },
+        "axial-raw/plane": {
+          "predicted": 593,
+          "absolute_error_pct": 0.16835016835016836
+        },
+        "axial-raw/axial": {
+          "predicted": 584,
+          "absolute_error_pct": 1.6835016835016836
+        },
+        "census-train/replacement": {
+          "predicted": 575,
+          "absolute_error_pct": 3.1986531986531985
+        },
+        "census-train/census": {
+          "predicted": 585,
+          "absolute_error_pct": 1.5151515151515151
+        },
+        "local-connectivity/critical": {
+          "predicted": 623,
+          "absolute_error_pct": 4.882154882154882
+        },
+        "two-scale/fine": {
+          "predicted": 583,
+          "absolute_error_pct": 1.8518518518518519
+        },
+        "two-scale/coarse": {
+          "predicted": 584,
+          "absolute_error_pct": 1.6835016835016836
+        },
+        "five-plane/slice": {
+          "predicted": 595,
+          "absolute_error_pct": 0.16835016835016836
+        },
+        "five-plane/volume": {
+          "predicted": 557,
+          "absolute_error_pct": 6.228956228956229
+        },
+        "small-seed/gray": {
+          "predicted": 585,
+          "absolute_error_pct": 1.5151515151515151
+        },
+        "small-seed/geometry": {
+          "predicted": 585,
+          "absolute_error_pct": 1.5151515151515151
+        },
+        "mass/mass": {
+          "predicted": 585,
+          "absolute_error_pct": 1.5151515151515151
+        },
+        "mass/size": {
+          "predicted": 585,
+          "absolute_error_pct": 1.5151515151515151
+        },
+        "mass/boundary": {
+          "predicted": 585,
+          "absolute_error_pct": 1.5151515151515151
+        },
+        "forward/center": {
+          "predicted": 556,
+          "absolute_error_pct": 6.397306397306397
+        },
+        "orientation/mean8": {
+          "predicted": 582,
+          "absolute_error_pct": 2.0202020202020203
+        },
+        "distance-target/sign": {
+          "predicted": 584,
+          "absolute_error_pct": 1.6835016835016836
+        },
+        "distance-target/distance": {
+          "predicted": 571,
+          "absolute_error_pct": 3.872053872053872
+        }
+      }
+    },
+    "103": {
+      "reference_voxels": 910,
+      "masks_matched": 22,
+      "best_pct": 0.10989010989010989,
+      "observations": {
+        "section-area/control": {
+          "predicted": 885,
+          "absolute_error_pct": 2.7472527472527473
+        },
+        "section-area/area": {
+          "predicted": 944,
+          "absolute_error_pct": 3.7362637362637363
+        },
+        "axial-raw/plane": {
+          "predicted": 922,
+          "absolute_error_pct": 1.3186813186813187
+        },
+        "axial-raw/axial": {
+          "predicted": 902,
+          "absolute_error_pct": 0.8791208791208791
+        },
+        "census-train/replacement": {
+          "predicted": 876,
+          "absolute_error_pct": 3.7362637362637363
+        },
+        "census-train/census": {
+          "predicted": 883,
+          "absolute_error_pct": 2.967032967032967
+        },
+        "local-connectivity/critical": {
+          "predicted": 938,
+          "absolute_error_pct": 3.076923076923077
+        },
+        "two-scale/fine": {
+          "predicted": 884,
+          "absolute_error_pct": 2.857142857142857
+        },
+        "two-scale/coarse": {
+          "predicted": 882,
+          "absolute_error_pct": 3.076923076923077
+        },
+        "five-plane/slice": {
+          "predicted": 917,
+          "absolute_error_pct": 0.7692307692307693
+        },
+        "five-plane/volume": {
+          "predicted": 869,
+          "absolute_error_pct": 4.5054945054945055
+        },
+        "small-seed/gray": {
+          "predicted": 883,
+          "absolute_error_pct": 2.967032967032967
+        },
+        "small-seed/geometry": {
+          "predicted": 883,
+          "absolute_error_pct": 2.967032967032967
+        },
+        "mass/mass": {
+          "predicted": 883,
+          "absolute_error_pct": 2.967032967032967
+        },
+        "mass/size": {
+          "predicted": 883,
+          "absolute_error_pct": 2.967032967032967
+        },
+        "mass/boundary": {
+          "predicted": 883,
+          "absolute_error_pct": 2.967032967032967
+        },
+        "forward/center": {
+          "predicted": 859,
+          "absolute_error_pct": 5.604395604395604
+        },
+        "monotone/band-sync": {
+          "predicted": 882,
+          "absolute_error_pct": 3.076923076923077
+        },
+        "monotone/band-color": {
+          "predicted": 882,
+          "absolute_error_pct": 3.076923076923077
+        },
+        "orientation/mean8": {
+          "predicted": 887,
+          "absolute_error_pct": 2.5274725274725274
+        },
+        "distance-target/sign": {
+          "predicted": 909,
+          "absolute_error_pct": 0.10989010989010989
+        },
+        "distance-target/distance": {
+          "predicted": 912,
+          "absolute_error_pct": 0.21978021978021978
+        }
+      }
+    },
+    "105": {
+      "reference_voxels": 584,
+      "masks_matched": 21,
+      "best_pct": 0.17123287671232876,
+      "observations": {
+        "section-area/control": {
+          "predicted": 560,
+          "absolute_error_pct": 4.109589041095891
+        },
+        "section-area/area": {
+          "predicted": 648,
+          "absolute_error_pct": 10.95890410958904
+        },
+        "axial-raw/plane": {
+          "predicted": 565,
+          "absolute_error_pct": 3.2534246575342465
+        },
+        "axial-raw/axial": {
+          "predicted": 565,
+          "absolute_error_pct": 3.2534246575342465
+        },
+        "census-train/replacement": {
+          "predicted": 580,
+          "absolute_error_pct": 0.684931506849315
+        },
+        "census-train/census": {
+          "predicted": 588,
+          "absolute_error_pct": 0.684931506849315
+        },
+        "local-connectivity/critical": {
+          "predicted": 605,
+          "absolute_error_pct": 3.595890410958904
+        },
+        "two-scale/fine": {
+          "predicted": 585,
+          "absolute_error_pct": 0.17123287671232876
+        },
+        "two-scale/coarse": {
+          "predicted": 587,
+          "absolute_error_pct": 0.5136986301369864
+        },
+        "five-plane/slice": {
+          "predicted": 603,
+          "absolute_error_pct": 3.2534246575342465
+        },
+        "five-plane/volume": {
+          "predicted": 571,
+          "absolute_error_pct": 2.2260273972602738
+        },
+        "small-seed/gray": {
+          "predicted": 588,
+          "absolute_error_pct": 0.684931506849315
+        },
+        "small-seed/geometry": {
+          "predicted": 588,
+          "absolute_error_pct": 0.684931506849315
+        },
+        "mass/mass": {
+          "predicted": 588,
+          "absolute_error_pct": 0.684931506849315
+        },
+        "mass/size": {
+          "predicted": 588,
+          "absolute_error_pct": 0.684931506849315
+        },
+        "mass/boundary": {
+          "predicted": 588,
+          "absolute_error_pct": 0.684931506849315
+        },
+        "forward/center": {
+          "predicted": 566,
+          "absolute_error_pct": 3.0821917808219177
+        },
+        "monotone/band-color": {
+          "predicted": 553,
+          "absolute_error_pct": 5.308219178082192
+        },
+        "orientation/mean8": {
+          "predicted": 581,
+          "absolute_error_pct": 0.5136986301369864
+        },
+        "distance-target/sign": {
+          "predicted": 549,
+          "absolute_error_pct": 5.993150684931507
+        },
+        "distance-target/distance": {
+          "predicted": 551,
+          "absolute_error_pct": 5.6506849315068495
+        }
+      }
+    },
+    "106": {
+      "reference_voxels": 354,
+      "masks_matched": 22,
+      "best_pct": 3.672316384180791,
+      "observations": {
+        "section-area/control": {
+          "predicted": 294,
+          "absolute_error_pct": 16.949152542372882
+        },
+        "section-area/area": {
+          "predicted": 335,
+          "absolute_error_pct": 5.367231638418079
+        },
+        "axial-raw/plane": {
+          "predicted": 297,
+          "absolute_error_pct": 16.10169491525424
+        },
+        "axial-raw/axial": {
+          "predicted": 314,
+          "absolute_error_pct": 11.299435028248588
+        },
+        "census-train/replacement": {
+          "predicted": 316,
+          "absolute_error_pct": 10.734463276836157
+        },
+        "census-train/census": {
+          "predicted": 328,
+          "absolute_error_pct": 7.344632768361582
+        },
+        "local-connectivity/critical": {
+          "predicted": 340,
+          "absolute_error_pct": 3.9548022598870056
+        },
+        "two-scale/fine": {
+          "predicted": 328,
+          "absolute_error_pct": 7.344632768361582
+        },
+        "two-scale/coarse": {
+          "predicted": 327,
+          "absolute_error_pct": 7.627118644067797
+        },
+        "five-plane/slice": {
+          "predicted": 325,
+          "absolute_error_pct": 8.192090395480227
+        },
+        "five-plane/volume": {
+          "predicted": 319,
+          "absolute_error_pct": 9.887005649717514
+        },
+        "small-seed/gray": {
+          "predicted": 328,
+          "absolute_error_pct": 7.344632768361582
+        },
+        "small-seed/geometry": {
+          "predicted": 328,
+          "absolute_error_pct": 7.344632768361582
+        },
+        "mass/mass": {
+          "predicted": 328,
+          "absolute_error_pct": 7.344632768361582
+        },
+        "mass/size": {
+          "predicted": 328,
+          "absolute_error_pct": 7.344632768361582
+        },
+        "mass/boundary": {
+          "predicted": 328,
+          "absolute_error_pct": 7.344632768361582
+        },
+        "forward/center": {
+          "predicted": 324,
+          "absolute_error_pct": 8.474576271186441
+        },
+        "monotone/band-sync": {
+          "predicted": 336,
+          "absolute_error_pct": 5.084745762711864
+        },
+        "monotone/band-color": {
+          "predicted": 341,
+          "absolute_error_pct": 3.672316384180791
+        },
+        "orientation/mean8": {
+          "predicted": 328,
+          "absolute_error_pct": 7.344632768361582
+        },
+        "distance-target/sign": {
+          "predicted": 278,
+          "absolute_error_pct": 21.468926553672315
+        },
+        "distance-target/distance": {
+          "predicted": 303,
+          "absolute_error_pct": 14.40677966101695
+        }
+      }
+    },
+    "107": {
+      "reference_voxels": 165,
+      "masks_matched": 20,
+      "best_pct": 4.848484848484849,
+      "observations": {
+        "section-area/control": {
+          "predicted": 143,
+          "absolute_error_pct": 13.333333333333334
+        },
+        "section-area/area": {
+          "predicted": 176,
+          "absolute_error_pct": 6.666666666666667
+        },
+        "axial-raw/plane": {
+          "predicted": 123,
+          "absolute_error_pct": 25.454545454545453
+        },
+        "axial-raw/axial": {
+          "predicted": 135,
+          "absolute_error_pct": 18.181818181818183
+        },
+        "census-train/replacement": {
+          "predicted": 130,
+          "absolute_error_pct": 21.21212121212121
+        },
+        "census-train/census": {
+          "predicted": 131,
+          "absolute_error_pct": 20.606060606060606
+        },
+        "local-connectivity/critical": {
+          "predicted": 134,
+          "absolute_error_pct": 18.78787878787879
+        },
+        "two-scale/fine": {
+          "predicted": 134,
+          "absolute_error_pct": 18.78787878787879
+        },
+        "two-scale/coarse": {
+          "predicted": 131,
+          "absolute_error_pct": 20.606060606060606
+        },
+        "five-plane/slice": {
+          "predicted": 135,
+          "absolute_error_pct": 18.181818181818183
+        },
+        "five-plane/volume": {
+          "predicted": 157,
+          "absolute_error_pct": 4.848484848484849
+        },
+        "small-seed/gray": {
+          "predicted": 131,
+          "absolute_error_pct": 20.606060606060606
+        },
+        "small-seed/geometry": {
+          "predicted": 131,
+          "absolute_error_pct": 20.606060606060606
+        },
+        "mass/mass": {
+          "predicted": 131,
+          "absolute_error_pct": 20.606060606060606
+        },
+        "mass/size": {
+          "predicted": 131,
+          "absolute_error_pct": 20.606060606060606
+        },
+        "mass/boundary": {
+          "predicted": 131,
+          "absolute_error_pct": 20.606060606060606
+        },
+        "forward/center": {
+          "predicted": 119,
+          "absolute_error_pct": 27.87878787878788
+        },
+        "orientation/mean8": {
+          "predicted": 130,
+          "absolute_error_pct": 21.21212121212121
+        },
+        "distance-target/sign": {
+          "predicted": 109,
+          "absolute_error_pct": 33.93939393939394
+        },
+        "distance-target/distance": {
+          "predicted": 123,
+          "absolute_error_pct": 25.454545454545453
+        }
+      }
+    },
+    "111": {
+      "reference_voxels": 75,
+      "masks_matched": 5,
+      "best_pct": 2.6666666666666665,
+      "observations": {
+        "section-area/control": {
+          "predicted": 69,
+          "absolute_error_pct": 8.0
+        },
+        "section-area/area": {
+          "predicted": 89,
+          "absolute_error_pct": 18.666666666666668
+        },
+        "local-connectivity/critical": {
+          "predicted": 77,
+          "absolute_error_pct": 2.6666666666666665
+        },
+        "five-plane/volume": {
+          "predicted": 67,
+          "absolute_error_pct": 10.666666666666666
+        },
+        "small-seed/geometry": {
+          "predicted": 148,
+          "absolute_error_pct": 97.33333333333333
+        }
+      }
+    }
+  },
+  "never_matched": [
+    28
+  ],
+  "unmixed_passing": [],
+  "bound": {
+    "reference": 49,
+    "needed": 45,
+    "union": 48,
+    "coverage": 0.9795918367346939,
+    "full_union_p95": 9.055944055944057,
+    "best_p95": 4.778983573504122,
+    "possible": true
+  }
+}

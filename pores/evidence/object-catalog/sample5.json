@@ -1,0 +1,1225 @@
+{
+  "specimen": 5,
+  "reference_digest": "fe43b415326a8ac26e6522ec5143713fa0ea770f1ef944b72a779d6961549e10",
+  "source_records": {
+    "section-area": "512a786c917c87824315cf7c96bb0a6efb03a65945b7c8fe2878f4fe6db450fc",
+    "axial-raw": "f634714bc302bc14340419f25fb9464789c02d79b5f9de6eae76c639988ab4e2",
+    "census-train": "83189df4452dbcbbf3463f16cfb7aefccb183a862e74193758ffd01bb1986c89",
+    "local-connectivity": "6b1860b2044ec601da755beaf6ff12e333d68cc2a4e1fbcd09ba695c50dcdcc3",
+    "two-scale": "efce274bdee345dfadbcb50dd8ea7f4002f9ef57d5c84125d66f1dee39f245c5",
+    "five-plane": "1da651c4d89a8500917925bbd0131b00b74db2f808d04ea7b4bfc4492b12a2b3",
+    "small-seed": "0ca0d763f286461d508a844f273af9618cec9a5c7c630b785847c133b1f09315",
+    "mass": "331b2960b58af8a3a4591ebf3ad2d4600d5c4622cbed9168bc3edf0ce19ba943",
+    "forward": "bb0f2e451226bfcf7ffa2998eb9a53bd5e12e9536f38709df7bbfeef4fb58097",
+    "monotone": "6900765fcaeece29915d35c905972dd92450dbbe062f6b1f8b7bf57cadb1df75",
+    "orientation": "4926257946d1af71a3c041d4256a7b5b71344a2d48df6a09c7abde2c819337fb",
+    "distance-target": "347fa82b039cc8f8a8588c18d0eddc1d72db04cd57a5a4eff9944be39817f400"
+  },
+  "input_arms": {
+    "section-area/control": {
+      "mask": "03206d3e560e135de42722fb5e9cc8bde799a8c250bfbe12392179ae3589af4a",
+      "canonical": "section-area/control",
+      "eligible_prediction": 11,
+      "eligible_reference": 12,
+      "matches": 10,
+      "p95": 19.86372675166686,
+      "two_criteria": false
+    },
+    "section-area/area": {
+      "mask": "c7ad0ce7325269c3681e60d5b6259d0f4a333b924338ea2991f28a55884aef94",
+      "canonical": "section-area/area",
+      "eligible_prediction": 10,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 14.189294429157364,
+      "two_criteria": false
+    },
+    "axial-raw/plane": {
+      "mask": "d93f394bbd308c11fbd2b28c17aa39cce5843e06cfe4d91bd78326d01874be09",
+      "canonical": "axial-raw/plane",
+      "eligible_prediction": 10,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 21.1743938528633,
+      "two_criteria": false
+    },
+    "axial-raw/axial": {
+      "mask": "7fb4b3f30b910cdadd7241fb0f1b69ab8d4fa3754ee3dc5422e7f5e61f8a6462",
+      "canonical": "axial-raw/axial",
+      "eligible_prediction": 10,
+      "eligible_reference": 12,
+      "matches": 10,
+      "p95": 22.34256100760955,
+      "two_criteria": false
+    },
+    "census-train/replacement": {
+      "mask": "1d0864420f7b5eeeae6c1056bcd0436fad24a26d0444b28dd02a9e945c38836e",
+      "canonical": "census-train/replacement",
+      "eligible_prediction": 12,
+      "eligible_reference": 12,
+      "matches": 10,
+      "p95": 16.267068168838584,
+      "two_criteria": false
+    },
+    "census-train/census": {
+      "mask": "7bc87d965c8d032f06f39ced69003cf34c1828242082f8c2a678cf7ce45b3d3b",
+      "canonical": "census-train/census",
+      "eligible_prediction": 11,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 17.006385961268887,
+      "two_criteria": false
+    },
+    "local-connectivity/census": {
+      "mask": "7bc87d965c8d032f06f39ced69003cf34c1828242082f8c2a678cf7ce45b3d3b",
+      "canonical": "census-train/census",
+      "eligible_prediction": 11,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 17.006385961268887,
+      "two_criteria": false
+    },
+    "local-connectivity/critical": {
+      "mask": "fafb3289af61fd82cbe70f1ef72eef80fab71f081cd430f7e9f568d9397a31b5",
+      "canonical": "local-connectivity/critical",
+      "eligible_prediction": 14,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 12.419093851132686,
+      "two_criteria": false
+    },
+    "two-scale/census": {
+      "mask": "7bc87d965c8d032f06f39ced69003cf34c1828242082f8c2a678cf7ce45b3d3b",
+      "canonical": "census-train/census",
+      "eligible_prediction": 11,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 17.006385961268887,
+      "two_criteria": false
+    },
+    "two-scale/fine": {
+      "mask": "05b6fa710be284e10cb4a50686bd79b278238226be22cf6c1bbe8d2f3c6b8223",
+      "canonical": "two-scale/fine",
+      "eligible_prediction": 11,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 16.744717304397486,
+      "two_criteria": false
+    },
+    "two-scale/coarse": {
+      "mask": "8a6e46686bfbb626f9c599baf5d4d6a0bb4c6b1f529718eab7e6fa548c41093a",
+      "canonical": "two-scale/coarse",
+      "eligible_prediction": 11,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 17.006385961268887,
+      "two_criteria": false
+    },
+    "five-plane/census": {
+      "mask": "7bc87d965c8d032f06f39ced69003cf34c1828242082f8c2a678cf7ce45b3d3b",
+      "canonical": "census-train/census",
+      "eligible_prediction": 11,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 17.006385961268887,
+      "two_criteria": false
+    },
+    "five-plane/slice": {
+      "mask": "9d04bc556dcd7e1dc5954d13535ce26f34cead24d03ad3f4281934746346b130",
+      "canonical": "five-plane/slice",
+      "eligible_prediction": 10,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 13.851912504386478,
+      "two_criteria": false
+    },
+    "five-plane/volume": {
+      "mask": "069b3cbbdf36396615fb4eb921260fb902d1f242ebad3245980de1c90bd4abd1",
+      "canonical": "five-plane/volume",
+      "eligible_prediction": 10,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 21.8945158750984,
+      "two_criteria": false
+    },
+    "small-seed/census": {
+      "mask": "7bc87d965c8d032f06f39ced69003cf34c1828242082f8c2a678cf7ce45b3d3b",
+      "canonical": "census-train/census",
+      "eligible_prediction": 11,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 17.006385961268887,
+      "two_criteria": false
+    },
+    "small-seed/gray": {
+      "mask": "07abedcc48ee2b7b2f6ae7ad34041c784c9f2668fccdacca75b1e64079619af1",
+      "canonical": "small-seed/gray",
+      "eligible_prediction": 16,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 17.006385961268887,
+      "two_criteria": false
+    },
+    "small-seed/geometry": {
+      "mask": "62a24fac5cf5c69b4c49fc45bd1384f0b9fdd595422e78ac02fa7477836eae6d",
+      "canonical": "small-seed/geometry",
+      "eligible_prediction": 16,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 17.006385961268887,
+      "two_criteria": false
+    },
+    "mass/census": {
+      "mask": "7bc87d965c8d032f06f39ced69003cf34c1828242082f8c2a678cf7ce45b3d3b",
+      "canonical": "census-train/census",
+      "eligible_prediction": 11,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 17.006385961268887,
+      "two_criteria": false
+    },
+    "mass/mass": {
+      "mask": "0d926e29a33d9fda0620ae4388dbef7686667ac03bb887f09eff30847631cad3",
+      "canonical": "mass/mass",
+      "eligible_prediction": 12,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 17.006385961268887,
+      "two_criteria": false
+    },
+    "mass/size": {
+      "mask": "0d926e29a33d9fda0620ae4388dbef7686667ac03bb887f09eff30847631cad3",
+      "canonical": "mass/mass",
+      "eligible_prediction": 12,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 17.006385961268887,
+      "two_criteria": false
+    },
+    "mass/boundary": {
+      "mask": "a0fbe41c7fd7a91900cae2cb1d3fb645fa42a9b7afca01df52478574aae7ab93",
+      "canonical": "mass/boundary",
+      "eligible_prediction": 12,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 23.59496237376691,
+      "two_criteria": false
+    },
+    "forward/census": {
+      "mask": "7bc87d965c8d032f06f39ced69003cf34c1828242082f8c2a678cf7ce45b3d3b",
+      "canonical": "census-train/census",
+      "eligible_prediction": 11,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 17.006385961268887,
+      "two_criteria": false
+    },
+    "forward/center": {
+      "mask": "a36253c245820bda9567fe97fe3b884b352769a3175850345ab10eebbe6ea8fd",
+      "canonical": "forward/center",
+      "eligible_prediction": 10,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 19.93042936503816,
+      "two_criteria": false
+    },
+    "forward/blur": {
+      "mask": "334a2b7c12b291bc1c9d169f75a7499b2cf23e1d81eeb503b61b7b6c24eb3296",
+      "canonical": "forward/blur",
+      "eligible_prediction": 403,
+      "eligible_reference": 12,
+      "matches": 0,
+      "p95": null,
+      "two_criteria": false
+    },
+    "monotone/census": {
+      "mask": "7bc87d965c8d032f06f39ced69003cf34c1828242082f8c2a678cf7ce45b3d3b",
+      "canonical": "census-train/census",
+      "eligible_prediction": 11,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 17.006385961268887,
+      "two_criteria": false
+    },
+    "monotone/blur": {
+      "mask": "334a2b7c12b291bc1c9d169f75a7499b2cf23e1d81eeb503b61b7b6c24eb3296",
+      "canonical": "forward/blur",
+      "eligible_prediction": 403,
+      "eligible_reference": 12,
+      "matches": 0,
+      "p95": null,
+      "two_criteria": false
+    },
+    "monotone/band-sync": {
+      "mask": "d7f792fccf7871ab5e6bf07fcf9b56fb6fd15448ec5cc479f9ed9531effa1c0c",
+      "canonical": "monotone/band-sync",
+      "eligible_prediction": 12,
+      "eligible_reference": 12,
+      "matches": 3,
+      "p95": 69.1923076923077,
+      "two_criteria": false
+    },
+    "monotone/band-color": {
+      "mask": "fc23b4b5a8089871eff87266f51520927bf91499b40d5635c23711af21ebdb8a",
+      "canonical": "monotone/band-color",
+      "eligible_prediction": 11,
+      "eligible_reference": 12,
+      "matches": 6,
+      "p95": 47.920316245620505,
+      "two_criteria": false
+    },
+    "orientation/identity": {
+      "mask": "7bc87d965c8d032f06f39ced69003cf34c1828242082f8c2a678cf7ce45b3d3b",
+      "canonical": "census-train/census",
+      "eligible_prediction": 11,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 17.006385961268887,
+      "two_criteria": false
+    },
+    "orientation/mean8": {
+      "mask": "caa6b5f241737df99393a06e56d0d5cc427adc58cf1f03d9f7d166944057c118",
+      "canonical": "orientation/mean8",
+      "eligible_prediction": 11,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 16.336638803800426,
+      "two_criteria": false
+    },
+    "distance-target/sign": {
+      "mask": "a838062cbf839b6855fd448364f1f42e147ea48c817921cf28cfbe5a3fdb7274",
+      "canonical": "distance-target/sign",
+      "eligible_prediction": 10,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 40.71459809323887,
+      "two_criteria": false
+    },
+    "distance-target/distance": {
+      "mask": "7622c913f1e4d80cf212a5e34837d88368df187e1d1af5047d0cee66e75f4208",
+      "canonical": "distance-target/distance",
+      "eligible_prediction": 10,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 26.276567829965888,
+      "two_criteria": false
+    },
+    "distance-target/census": {
+      "mask": "7bc87d965c8d032f06f39ced69003cf34c1828242082f8c2a678cf7ce45b3d3b",
+      "canonical": "census-train/census",
+      "eligible_prediction": 11,
+      "eligible_reference": 12,
+      "matches": 9,
+      "p95": 17.006385961268887,
+      "two_criteria": false
+    }
+  },
+  "independent_csv_by_unique_mask": {
+    "03206d3e560e135de42722fb5e9cc8bde799a8c250bfbe12392179ae3589af4a": [
+      "section-area/sample5-control-matches.csv"
+    ],
+    "c7ad0ce7325269c3681e60d5b6259d0f4a333b924338ea2991f28a55884aef94": [
+      "section-area/sample5-area-matches.csv"
+    ],
+    "d93f394bbd308c11fbd2b28c17aa39cce5843e06cfe4d91bd78326d01874be09": [
+      "axial-raw/sample5-plane-matches.csv"
+    ],
+    "7fb4b3f30b910cdadd7241fb0f1b69ab8d4fa3754ee3dc5422e7f5e61f8a6462": [
+      "axial-raw/sample5-axial-matches.csv"
+    ],
+    "1d0864420f7b5eeeae6c1056bcd0436fad24a26d0444b28dd02a9e945c38836e": [
+      "census-train/sample5-replacement-matches.csv"
+    ],
+    "7bc87d965c8d032f06f39ced69003cf34c1828242082f8c2a678cf7ce45b3d3b": [
+      "census-train/sample5-census-matches.csv",
+      "local-connectivity/sample5-census-matches.csv",
+      "two-scale/sample5-census-matches.csv",
+      "five-plane/sample5-census-matches.csv",
+      "small-seed/sample5-census-matches.csv",
+      "mass/sample5-census-matches.csv",
+      "forward/sample5-census-matches.csv",
+      "orientation/sample5-identity-matches.csv",
+      "distance-target/sample5-census-matches.csv"
+    ],
+    "fafb3289af61fd82cbe70f1ef72eef80fab71f081cd430f7e9f568d9397a31b5": [
+      "local-connectivity/sample5-critical-matches.csv"
+    ],
+    "05b6fa710be284e10cb4a50686bd79b278238226be22cf6c1bbe8d2f3c6b8223": [
+      "two-scale/sample5-fine-matches.csv"
+    ],
+    "8a6e46686bfbb626f9c599baf5d4d6a0bb4c6b1f529718eab7e6fa548c41093a": [
+      "two-scale/sample5-coarse-matches.csv"
+    ],
+    "9d04bc556dcd7e1dc5954d13535ce26f34cead24d03ad3f4281934746346b130": [
+      "five-plane/sample5-slice-matches.csv"
+    ],
+    "069b3cbbdf36396615fb4eb921260fb902d1f242ebad3245980de1c90bd4abd1": [
+      "five-plane/sample5-volume-matches.csv"
+    ],
+    "07abedcc48ee2b7b2f6ae7ad34041c784c9f2668fccdacca75b1e64079619af1": [
+      "small-seed/sample5-gray-matches.csv"
+    ],
+    "62a24fac5cf5c69b4c49fc45bd1384f0b9fdd595422e78ac02fa7477836eae6d": [
+      "small-seed/sample5-geometry-matches.csv"
+    ],
+    "0d926e29a33d9fda0620ae4388dbef7686667ac03bb887f09eff30847631cad3": [
+      "mass/sample5-mass-matches.csv",
+      "mass/sample5-size-matches.csv"
+    ],
+    "a0fbe41c7fd7a91900cae2cb1d3fb645fa42a9b7afca01df52478574aae7ab93": [
+      "mass/sample5-boundary-matches.csv"
+    ],
+    "a36253c245820bda9567fe97fe3b884b352769a3175850345ab10eebbe6ea8fd": [
+      "forward/sample5-center-matches.csv"
+    ],
+    "334a2b7c12b291bc1c9d169f75a7499b2cf23e1d81eeb503b61b7b6c24eb3296": [
+      "forward/sample5-blur-matches.csv"
+    ],
+    "d7f792fccf7871ab5e6bf07fcf9b56fb6fd15448ec5cc479f9ed9531effa1c0c": [
+      "monotone/sample5-band-sync-matches.csv"
+    ],
+    "fc23b4b5a8089871eff87266f51520927bf91499b40d5635c23711af21ebdb8a": [
+      "monotone/sample5-band-color-matches.csv"
+    ],
+    "caa6b5f241737df99393a06e56d0d5cc427adc58cf1f03d9f7d166944057c118": [
+      "orientation/sample5-mean8-matches.csv"
+    ],
+    "a838062cbf839b6855fd448364f1f42e147ea48c817921cf28cfbe5a3fdb7274": [
+      "distance-target/sample5-sign-matches.csv"
+    ],
+    "7622c913f1e4d80cf212a5e34837d88368df187e1d1af5047d0cee66e75f4208": [
+      "distance-target/sample5-distance-matches.csv"
+    ]
+  },
+  "unique_masks": 22,
+  "objects": {
+    "15": {
+      "reference_voxels": 452,
+      "masks_matched": 4,
+      "best_pct": 7.964601769911504,
+      "observations": {
+        "section-area/control": {
+          "predicted": 416,
+          "absolute_error_pct": 7.964601769911504
+        },
+        "axial-raw/axial": {
+          "predicted": 400,
+          "absolute_error_pct": 11.504424778761061
+        },
+        "census-train/replacement": {
+          "predicted": 407,
+          "absolute_error_pct": 9.955752212389381
+        },
+        "distance-target/sign": {
+          "predicted": 383,
+          "absolute_error_pct": 15.265486725663717
+        }
+      }
+    },
+    "19": {
+      "reference_voxels": 681,
+      "masks_matched": 20,
+      "best_pct": 0.14684287812041116,
+      "observations": {
+        "section-area/control": {
+          "predicted": 680,
+          "absolute_error_pct": 0.14684287812041116
+        },
+        "section-area/area": {
+          "predicted": 695,
+          "absolute_error_pct": 2.0558002936857562
+        },
+        "axial-raw/plane": {
+          "predicted": 668,
+          "absolute_error_pct": 1.908957415565345
+        },
+        "axial-raw/axial": {
+          "predicted": 700,
+          "absolute_error_pct": 2.790014684287812
+        },
+        "census-train/replacement": {
+          "predicted": 694,
+          "absolute_error_pct": 1.908957415565345
+        },
+        "census-train/census": {
+          "predicted": 718,
+          "absolute_error_pct": 5.4331864904552125
+        },
+        "local-connectivity/critical": {
+          "predicted": 705,
+          "absolute_error_pct": 3.5242290748898677
+        },
+        "two-scale/fine": {
+          "predicted": 717,
+          "absolute_error_pct": 5.286343612334802
+        },
+        "two-scale/coarse": {
+          "predicted": 718,
+          "absolute_error_pct": 5.4331864904552125
+        },
+        "five-plane/slice": {
+          "predicted": 694,
+          "absolute_error_pct": 1.908957415565345
+        },
+        "five-plane/volume": {
+          "predicted": 729,
+          "absolute_error_pct": 7.048458149779735
+        },
+        "small-seed/gray": {
+          "predicted": 718,
+          "absolute_error_pct": 5.4331864904552125
+        },
+        "small-seed/geometry": {
+          "predicted": 718,
+          "absolute_error_pct": 5.4331864904552125
+        },
+        "mass/mass": {
+          "predicted": 718,
+          "absolute_error_pct": 5.4331864904552125
+        },
+        "mass/boundary": {
+          "predicted": 718,
+          "absolute_error_pct": 5.4331864904552125
+        },
+        "forward/center": {
+          "predicted": 693,
+          "absolute_error_pct": 1.7621145374449338
+        },
+        "monotone/band-color": {
+          "predicted": 579,
+          "absolute_error_pct": 14.977973568281937
+        },
+        "orientation/mean8": {
+          "predicted": 723,
+          "absolute_error_pct": 6.167400881057269
+        },
+        "distance-target/sign": {
+          "predicted": 585,
+          "absolute_error_pct": 14.09691629955947
+        },
+        "distance-target/distance": {
+          "predicted": 663,
+          "absolute_error_pct": 2.643171806167401
+        }
+      }
+    },
+    "20": {
+      "reference_voxels": 232,
+      "masks_matched": 21,
+      "best_pct": 0.43103448275862066,
+      "observations": {
+        "section-area/control": {
+          "predicted": 237,
+          "absolute_error_pct": 2.1551724137931036
+        },
+        "section-area/area": {
+          "predicted": 241,
+          "absolute_error_pct": 3.8793103448275863
+        },
+        "axial-raw/plane": {
+          "predicted": 246,
+          "absolute_error_pct": 6.0344827586206895
+        },
+        "axial-raw/axial": {
+          "predicted": 235,
+          "absolute_error_pct": 1.293103448275862
+        },
+        "census-train/replacement": {
+          "predicted": 247,
+          "absolute_error_pct": 6.4655172413793105
+        },
+        "census-train/census": {
+          "predicted": 237,
+          "absolute_error_pct": 2.1551724137931036
+        },
+        "local-connectivity/critical": {
+          "predicted": 261,
+          "absolute_error_pct": 12.5
+        },
+        "two-scale/fine": {
+          "predicted": 235,
+          "absolute_error_pct": 1.293103448275862
+        },
+        "two-scale/coarse": {
+          "predicted": 237,
+          "absolute_error_pct": 2.1551724137931036
+        },
+        "five-plane/slice": {
+          "predicted": 255,
+          "absolute_error_pct": 9.913793103448276
+        },
+        "five-plane/volume": {
+          "predicted": 228,
+          "absolute_error_pct": 1.7241379310344827
+        },
+        "small-seed/gray": {
+          "predicted": 237,
+          "absolute_error_pct": 2.1551724137931036
+        },
+        "small-seed/geometry": {
+          "predicted": 237,
+          "absolute_error_pct": 2.1551724137931036
+        },
+        "mass/mass": {
+          "predicted": 237,
+          "absolute_error_pct": 2.1551724137931036
+        },
+        "mass/boundary": {
+          "predicted": 237,
+          "absolute_error_pct": 2.1551724137931036
+        },
+        "forward/center": {
+          "predicted": 233,
+          "absolute_error_pct": 0.43103448275862066
+        },
+        "monotone/band-sync": {
+          "predicted": 406,
+          "absolute_error_pct": 75.0
+        },
+        "monotone/band-color": {
+          "predicted": 367,
+          "absolute_error_pct": 58.189655172413794
+        },
+        "orientation/mean8": {
+          "predicted": 238,
+          "absolute_error_pct": 2.586206896551724
+        },
+        "distance-target/sign": {
+          "predicted": 244,
+          "absolute_error_pct": 5.172413793103448
+        },
+        "distance-target/distance": {
+          "predicted": 246,
+          "absolute_error_pct": 6.0344827586206895
+        }
+      }
+    },
+    "22": {
+      "reference_voxels": 83,
+      "masks_matched": 18,
+      "best_pct": 1.2048192771084338,
+      "observations": {
+        "section-area/control": {
+          "predicted": 96,
+          "absolute_error_pct": 15.662650602409638
+        },
+        "section-area/area": {
+          "predicted": 87,
+          "absolute_error_pct": 4.819277108433735
+        },
+        "axial-raw/plane": {
+          "predicted": 92,
+          "absolute_error_pct": 10.843373493975903
+        },
+        "axial-raw/axial": {
+          "predicted": 74,
+          "absolute_error_pct": 10.843373493975903
+        },
+        "census-train/replacement": {
+          "predicted": 84,
+          "absolute_error_pct": 1.2048192771084338
+        },
+        "census-train/census": {
+          "predicted": 88,
+          "absolute_error_pct": 6.024096385542169
+        },
+        "local-connectivity/critical": {
+          "predicted": 89,
+          "absolute_error_pct": 7.228915662650603
+        },
+        "two-scale/fine": {
+          "predicted": 87,
+          "absolute_error_pct": 4.819277108433735
+        },
+        "two-scale/coarse": {
+          "predicted": 87,
+          "absolute_error_pct": 4.819277108433735
+        },
+        "five-plane/slice": {
+          "predicted": 92,
+          "absolute_error_pct": 10.843373493975903
+        },
+        "five-plane/volume": {
+          "predicted": 81,
+          "absolute_error_pct": 2.4096385542168677
+        },
+        "small-seed/gray": {
+          "predicted": 88,
+          "absolute_error_pct": 6.024096385542169
+        },
+        "small-seed/geometry": {
+          "predicted": 88,
+          "absolute_error_pct": 6.024096385542169
+        },
+        "mass/mass": {
+          "predicted": 88,
+          "absolute_error_pct": 6.024096385542169
+        },
+        "mass/boundary": {
+          "predicted": 104,
+          "absolute_error_pct": 25.301204819277107
+        },
+        "forward/center": {
+          "predicted": 76,
+          "absolute_error_pct": 8.433734939759036
+        },
+        "orientation/mean8": {
+          "predicted": 87,
+          "absolute_error_pct": 4.819277108433735
+        },
+        "distance-target/distance": {
+          "predicted": 64,
+          "absolute_error_pct": 22.89156626506024
+        }
+      }
+    },
+    "26": {
+      "reference_voxels": 309,
+      "masks_matched": 19,
+      "best_pct": 12.297734627831716,
+      "observations": {
+        "section-area/control": {
+          "predicted": 237,
+          "absolute_error_pct": 23.300970873786408
+        },
+        "section-area/area": {
+          "predicted": 253,
+          "absolute_error_pct": 18.12297734627832
+        },
+        "axial-raw/plane": {
+          "predicted": 233,
+          "absolute_error_pct": 24.59546925566343
+        },
+        "axial-raw/axial": {
+          "predicted": 237,
+          "absolute_error_pct": 23.300970873786408
+        },
+        "census-train/replacement": {
+          "predicted": 246,
+          "absolute_error_pct": 20.388349514563107
+        },
+        "census-train/census": {
+          "predicted": 244,
+          "absolute_error_pct": 21.035598705501616
+        },
+        "local-connectivity/critical": {
+          "predicted": 271,
+          "absolute_error_pct": 12.297734627831716
+        },
+        "two-scale/fine": {
+          "predicted": 247,
+          "absolute_error_pct": 20.06472491909385
+        },
+        "two-scale/coarse": {
+          "predicted": 244,
+          "absolute_error_pct": 21.035598705501616
+        },
+        "five-plane/slice": {
+          "predicted": 260,
+          "absolute_error_pct": 15.857605177993527
+        },
+        "five-plane/volume": {
+          "predicted": 238,
+          "absolute_error_pct": 22.977346278317153
+        },
+        "small-seed/gray": {
+          "predicted": 244,
+          "absolute_error_pct": 21.035598705501616
+        },
+        "small-seed/geometry": {
+          "predicted": 244,
+          "absolute_error_pct": 21.035598705501616
+        },
+        "mass/mass": {
+          "predicted": 244,
+          "absolute_error_pct": 21.035598705501616
+        },
+        "mass/boundary": {
+          "predicted": 244,
+          "absolute_error_pct": 21.035598705501616
+        },
+        "forward/center": {
+          "predicted": 235,
+          "absolute_error_pct": 23.948220064724918
+        },
+        "orientation/mean8": {
+          "predicted": 248,
+          "absolute_error_pct": 19.741100323624597
+        },
+        "distance-target/sign": {
+          "predicted": 197,
+          "absolute_error_pct": 36.24595469255664
+        },
+        "distance-target/distance": {
+          "predicted": 221,
+          "absolute_error_pct": 28.478964401294498
+        }
+      }
+    },
+    "27": {
+      "reference_voxels": 222,
+      "masks_matched": 19,
+      "best_pct": 0.9009009009009009,
+      "observations": {
+        "section-area/control": {
+          "predicted": 207,
+          "absolute_error_pct": 6.756756756756757
+        },
+        "section-area/area": {
+          "predicted": 224,
+          "absolute_error_pct": 0.9009009009009009
+        },
+        "axial-raw/plane": {
+          "predicted": 214,
+          "absolute_error_pct": 3.6036036036036037
+        },
+        "axial-raw/axial": {
+          "predicted": 175,
+          "absolute_error_pct": 21.17117117117117
+        },
+        "census-train/replacement": {
+          "predicted": 212,
+          "absolute_error_pct": 4.504504504504505
+        },
+        "census-train/census": {
+          "predicted": 217,
+          "absolute_error_pct": 2.2522522522522523
+        },
+        "local-connectivity/critical": {
+          "predicted": 237,
+          "absolute_error_pct": 6.756756756756757
+        },
+        "two-scale/fine": {
+          "predicted": 217,
+          "absolute_error_pct": 2.2522522522522523
+        },
+        "two-scale/coarse": {
+          "predicted": 218,
+          "absolute_error_pct": 1.8018018018018018
+        },
+        "five-plane/slice": {
+          "predicted": 237,
+          "absolute_error_pct": 6.756756756756757
+        },
+        "five-plane/volume": {
+          "predicted": 177,
+          "absolute_error_pct": 20.27027027027027
+        },
+        "small-seed/gray": {
+          "predicted": 217,
+          "absolute_error_pct": 2.2522522522522523
+        },
+        "small-seed/geometry": {
+          "predicted": 217,
+          "absolute_error_pct": 2.2522522522522523
+        },
+        "mass/mass": {
+          "predicted": 217,
+          "absolute_error_pct": 2.2522522522522523
+        },
+        "mass/boundary": {
+          "predicted": 193,
+          "absolute_error_pct": 13.063063063063064
+        },
+        "forward/center": {
+          "predicted": 203,
+          "absolute_error_pct": 8.558558558558559
+        },
+        "orientation/mean8": {
+          "predicted": 216,
+          "absolute_error_pct": 2.7027027027027026
+        },
+        "distance-target/sign": {
+          "predicted": 125,
+          "absolute_error_pct": 43.693693693693696
+        },
+        "distance-target/distance": {
+          "predicted": 171,
+          "absolute_error_pct": 22.972972972972972
+        }
+      }
+    },
+    "42": {
+      "reference_voxels": 1153,
+      "masks_matched": 21,
+      "best_pct": 1.5611448395490026,
+      "observations": {
+        "section-area/control": {
+          "predicted": 1180,
+          "absolute_error_pct": 2.341717259323504
+        },
+        "section-area/area": {
+          "predicted": 1234,
+          "absolute_error_pct": 7.025151777970511
+        },
+        "axial-raw/plane": {
+          "predicted": 1220,
+          "absolute_error_pct": 5.810928013876843
+        },
+        "axial-raw/axial": {
+          "predicted": 1211,
+          "absolute_error_pct": 5.030355594102342
+        },
+        "census-train/replacement": {
+          "predicted": 1180,
+          "absolute_error_pct": 2.341717259323504
+        },
+        "census-train/census": {
+          "predicted": 1202,
+          "absolute_error_pct": 4.24978317432784
+        },
+        "local-connectivity/critical": {
+          "predicted": 1247,
+          "absolute_error_pct": 8.152645273200347
+        },
+        "two-scale/fine": {
+          "predicted": 1201,
+          "absolute_error_pct": 4.163052905464007
+        },
+        "two-scale/coarse": {
+          "predicted": 1200,
+          "absolute_error_pct": 4.076322636600174
+        },
+        "five-plane/slice": {
+          "predicted": 1224,
+          "absolute_error_pct": 6.157849089332177
+        },
+        "five-plane/volume": {
+          "predicted": 1186,
+          "absolute_error_pct": 2.862098872506505
+        },
+        "small-seed/gray": {
+          "predicted": 1202,
+          "absolute_error_pct": 4.24978317432784
+        },
+        "small-seed/geometry": {
+          "predicted": 1202,
+          "absolute_error_pct": 4.24978317432784
+        },
+        "mass/mass": {
+          "predicted": 1202,
+          "absolute_error_pct": 4.24978317432784
+        },
+        "mass/boundary": {
+          "predicted": 1202,
+          "absolute_error_pct": 4.24978317432784
+        },
+        "forward/center": {
+          "predicted": 1171,
+          "absolute_error_pct": 1.5611448395490026
+        },
+        "monotone/band-sync": {
+          "predicted": 1066,
+          "absolute_error_pct": 7.545533391153513
+        },
+        "monotone/band-color": {
+          "predicted": 1123,
+          "absolute_error_pct": 2.6019080659150045
+        },
+        "orientation/mean8": {
+          "predicted": 1204,
+          "absolute_error_pct": 4.423243712055507
+        },
+        "distance-target/sign": {
+          "predicted": 1199,
+          "absolute_error_pct": 3.98959236773634
+        },
+        "distance-target/distance": {
+          "predicted": 1215,
+          "absolute_error_pct": 5.377276669557675
+        }
+      }
+    },
+    "44": {
+      "reference_voxels": 65,
+      "masks_matched": 1,
+      "best_pct": 16.923076923076923,
+      "observations": {
+        "monotone/band-sync": {
+          "predicted": 76,
+          "absolute_error_pct": 16.923076923076923
+        }
+      }
+    },
+    "45": {
+      "reference_voxels": 341,
+      "masks_matched": 20,
+      "best_pct": 0.0,
+      "observations": {
+        "section-area/control": {
+          "predicted": 316,
+          "absolute_error_pct": 7.331378299120234
+        },
+        "section-area/area": {
+          "predicted": 316,
+          "absolute_error_pct": 7.331378299120234
+        },
+        "axial-raw/plane": {
+          "predicted": 320,
+          "absolute_error_pct": 6.158357771260997
+        },
+        "axial-raw/axial": {
+          "predicted": 354,
+          "absolute_error_pct": 3.812316715542522
+        },
+        "census-train/replacement": {
+          "predicted": 340,
+          "absolute_error_pct": 0.2932551319648094
+        },
+        "census-train/census": {
+          "predicted": 345,
+          "absolute_error_pct": 1.1730205278592376
+        },
+        "local-connectivity/critical": {
+          "predicted": 379,
+          "absolute_error_pct": 11.143695014662757
+        },
+        "two-scale/fine": {
+          "predicted": 350,
+          "absolute_error_pct": 2.6392961876832843
+        },
+        "two-scale/coarse": {
+          "predicted": 344,
+          "absolute_error_pct": 0.8797653958944281
+        },
+        "five-plane/slice": {
+          "predicted": 334,
+          "absolute_error_pct": 2.0527859237536656
+        },
+        "five-plane/volume": {
+          "predicted": 365,
+          "absolute_error_pct": 7.038123167155425
+        },
+        "small-seed/gray": {
+          "predicted": 345,
+          "absolute_error_pct": 1.1730205278592376
+        },
+        "small-seed/geometry": {
+          "predicted": 345,
+          "absolute_error_pct": 1.1730205278592376
+        },
+        "mass/mass": {
+          "predicted": 345,
+          "absolute_error_pct": 1.1730205278592376
+        },
+        "mass/boundary": {
+          "predicted": 401,
+          "absolute_error_pct": 17.59530791788856
+        },
+        "forward/center": {
+          "predicted": 335,
+          "absolute_error_pct": 1.7595307917888563
+        },
+        "monotone/band-color": {
+          "predicted": 331,
+          "absolute_error_pct": 2.932551319648094
+        },
+        "orientation/mean8": {
+          "predicted": 341,
+          "absolute_error_pct": 0.0
+        },
+        "distance-target/sign": {
+          "predicted": 239,
+          "absolute_error_pct": 29.912023460410555
+        },
+        "distance-target/distance": {
+          "predicted": 309,
+          "absolute_error_pct": 9.3841642228739
+        }
+      }
+    },
+    "60": {
+      "reference_voxels": 374,
+      "masks_matched": 20,
+      "best_pct": 6.149732620320855,
+      "observations": {
+        "section-area/control": {
+          "predicted": 320,
+          "absolute_error_pct": 14.438502673796792
+        },
+        "section-area/area": {
+          "predicted": 343,
+          "absolute_error_pct": 8.288770053475936
+        },
+        "axial-raw/plane": {
+          "predicted": 314,
+          "absolute_error_pct": 16.0427807486631
+        },
+        "axial-raw/axial": {
+          "predicted": 313,
+          "absolute_error_pct": 16.310160427807485
+        },
+        "census-train/replacement": {
+          "predicted": 332,
+          "absolute_error_pct": 11.229946524064172
+        },
+        "census-train/census": {
+          "predicted": 333,
+          "absolute_error_pct": 10.962566844919786
+        },
+        "local-connectivity/critical": {
+          "predicted": 337,
+          "absolute_error_pct": 9.893048128342246
+        },
+        "two-scale/fine": {
+          "predicted": 330,
+          "absolute_error_pct": 11.764705882352942
+        },
+        "two-scale/coarse": {
+          "predicted": 333,
+          "absolute_error_pct": 10.962566844919786
+        },
+        "five-plane/slice": {
+          "predicted": 341,
+          "absolute_error_pct": 8.823529411764707
+        },
+        "five-plane/volume": {
+          "predicted": 320,
+          "absolute_error_pct": 14.438502673796792
+        },
+        "small-seed/gray": {
+          "predicted": 333,
+          "absolute_error_pct": 10.962566844919786
+        },
+        "small-seed/geometry": {
+          "predicted": 333,
+          "absolute_error_pct": 10.962566844919786
+        },
+        "mass/mass": {
+          "predicted": 333,
+          "absolute_error_pct": 10.962566844919786
+        },
+        "mass/boundary": {
+          "predicted": 351,
+          "absolute_error_pct": 6.149732620320855
+        },
+        "forward/center": {
+          "predicted": 322,
+          "absolute_error_pct": 13.903743315508022
+        },
+        "monotone/band-color": {
+          "predicted": 310,
+          "absolute_error_pct": 17.112299465240643
+        },
+        "orientation/mean8": {
+          "predicted": 332,
+          "absolute_error_pct": 11.229946524064172
+        },
+        "distance-target/sign": {
+          "predicted": 292,
+          "absolute_error_pct": 21.925133689839573
+        },
+        "distance-target/distance": {
+          "predicted": 314,
+          "absolute_error_pct": 16.0427807486631
+        }
+      }
+    },
+    "62": {
+      "reference_voxels": 100,
+      "masks_matched": 0,
+      "best_pct": null,
+      "observations": {}
+    },
+    "69": {
+      "reference_voxels": 425,
+      "masks_matched": 20,
+      "best_pct": 0.23529411764705882,
+      "observations": {
+        "section-area/control": {
+          "predicted": 402,
+          "absolute_error_pct": 5.411764705882353
+        },
+        "section-area/area": {
+          "predicted": 426,
+          "absolute_error_pct": 0.23529411764705882
+        },
+        "axial-raw/plane": {
+          "predicted": 397,
+          "absolute_error_pct": 6.588235294117647
+        },
+        "axial-raw/axial": {
+          "predicted": 406,
+          "absolute_error_pct": 4.470588235294118
+        },
+        "census-train/replacement": {
+          "predicted": 411,
+          "absolute_error_pct": 3.2941176470588234
+        },
+        "census-train/census": {
+          "predicted": 426,
+          "absolute_error_pct": 0.23529411764705882
+        },
+        "local-connectivity/critical": {
+          "predicted": 443,
+          "absolute_error_pct": 4.235294117647059
+        },
+        "two-scale/fine": {
+          "predicted": 428,
+          "absolute_error_pct": 0.7058823529411765
+        },
+        "two-scale/coarse": {
+          "predicted": 426,
+          "absolute_error_pct": 0.23529411764705882
+        },
+        "five-plane/slice": {
+          "predicted": 420,
+          "absolute_error_pct": 1.1764705882352942
+        },
+        "five-plane/volume": {
+          "predicted": 435,
+          "absolute_error_pct": 2.3529411764705883
+        },
+        "small-seed/gray": {
+          "predicted": 426,
+          "absolute_error_pct": 0.23529411764705882
+        },
+        "small-seed/geometry": {
+          "predicted": 426,
+          "absolute_error_pct": 0.23529411764705882
+        },
+        "mass/mass": {
+          "predicted": 426,
+          "absolute_error_pct": 0.23529411764705882
+        },
+        "mass/boundary": {
+          "predicted": 426,
+          "absolute_error_pct": 0.23529411764705882
+        },
+        "forward/center": {
+          "predicted": 400,
+          "absolute_error_pct": 5.882352941176471
+        },
+        "monotone/band-color": {
+          "predicted": 387,
+          "absolute_error_pct": 8.941176470588236
+        },
+        "orientation/mean8": {
+          "predicted": 421,
+          "absolute_error_pct": 0.9411764705882353
+        },
+        "distance-target/sign": {
+          "predicted": 358,
+          "absolute_error_pct": 15.764705882352942
+        },
+        "distance-target/distance": {
+          "predicted": 413,
+          "absolute_error_pct": 2.823529411764706
+        }
+      }
+    }
+  },
+  "never_matched": [
+    62
+  ],
+  "unmixed_passing": [],
+  "bound": {
+    "reference": 12,
+    "needed": 11,
+    "union": 11,
+    "coverage": 0.9166666666666666,
+    "full_union_p95": 14.61040577545432,
+    "best_p95": 14.61040577545432,
+    "possible": true
+  }
+}
