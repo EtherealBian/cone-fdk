@@ -1,0 +1,139 @@
+{
+  "identity": {
+    "files": {
+      "pores/FORWARD-PILOT.md": "102059bfa72e7c9b0d93ec239c338d13e950815374c992ae05be3d6ae88b263a",
+      "scripts/pore_forward.py": "855c8a48bfa4faf3eaf7797420de3983db3144ea463f537440d29fc161e6beb0",
+      "scripts/pore_forward_gpu.py": "c62ba81d076482320390ad558f9d632923cf76fecb69f4a6a4a90b97e5cfc031",
+      "scripts/pore_forward.cu": "95001e5936f49806dd3ea1f8995f63722085b60f7943ac574b53b55c428eb66c",
+      "scripts/pore_mass.py": "e14a5276c3b13821d4f68d1d25773b6f6e43f6be38921173bcf1b83fd21754c6",
+      "pores/validate.py": "2c81e4f6731d3fe852edcbb693af30e401d3cdcaddb179c2744443c211afa3c9"
+    },
+    "ptx": "9bc0da8da7202302f89e728a0879452ea11138706c9f2267c4eacab92bb50256"
+  },
+  "pipeline_id": "36172430153127aad4a5a74b593772febfcd65df368add7332f91d5e8febb08b",
+  "specimens": {
+    "2": {
+      "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+      "segmented": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+      "raw_crop": "848c417a02b5ce7bd1403fe978c5b49158d2098e93df0e1527824a35a8c7fa4f",
+      "label_crop": "64a6dd983dba786676b5c824d1f44cdfd5b2ad6c18cb1cc282827108d35fb1b9",
+      "phases": {
+        "pore": {
+          "n": 508,
+          "median_x2": 67591
+        },
+        "material": {
+          "n": 493932,
+          "median_x2": 104300
+        },
+        "valid": true
+      },
+      "boundary": {
+        "pore": 2515,
+        "material": 3331
+      }
+    },
+    "3": {
+      "raw": "460ea68425d9ac387485b65a3aa2b3f25da31cfe9de8181d4c1a5b0a982d26c8",
+      "segmented": "f94c64a99f5f0e7971a3e0e2f7c932183009938aa5d284bcd23f4657674e6009",
+      "raw_crop": "f465c8c93e94386b3d4633e71eadd56fde0ef43f6639c4f0c1c53a14ba716d84",
+      "label_crop": "ebb255eb21fdff0d088cef698f2daef7bbf3bbd6bcded6320ded5d324bf6476d",
+      "phases": {
+        "pore": {
+          "n": 10430,
+          "median_x2": 41286
+        },
+        "material": {
+          "n": 320451,
+          "median_x2": 87530
+        },
+        "valid": true
+      },
+      "boundary": {
+        "pore": 31458,
+        "material": 34744
+      }
+    },
+    "5": {
+      "raw": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37",
+      "segmented": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b",
+      "raw_crop": "4c07286560b1477c55f047407d433b915cde63280a237b41906944c965444c18",
+      "label_crop": "c07dd4e472ecc03e7e0a2e2040074084fbb12a9fa03109a29226eadddb2e18d3",
+      "phases": {
+        "pore": {
+          "n": 26173,
+          "median_x2": 63614
+        },
+        "material": {
+          "n": 372311,
+          "median_x2": 105754
+        },
+        "valid": true
+      },
+      "boundary": {
+        "pore": 19973,
+        "material": 20794
+      }
+    }
+  },
+  "valid": true,
+  "active_set": 28,
+  "gram": [
+    [
+      0.5,
+      0.3399854732233337,
+      0.30396560164203357,
+      0.2786789924854836,
+      0.28064755998505786
+    ],
+    [
+      0.3399854732233337,
+      0.29037821387148194,
+      0.26194812162630904,
+      0.2458662485131162,
+      0.25015620697765295
+    ],
+    [
+      0.30396560164203357,
+      0.26194812162630904,
+      0.2508947254236956,
+      0.23647094195256305,
+      0.2335878187474113
+    ],
+    [
+      0.2786789924854836,
+      0.2458662485131162,
+      0.23647094195256305,
+      0.23394747631363297,
+      0.22227959504823713
+    ],
+    [
+      0.28064755998505786,
+      0.25015620697765295,
+      0.2335878187474113,
+      0.22227959504823713,
+      0.23459415899878824
+    ]
+  ],
+  "rhs": [
+    0.25778746763808835,
+    0.23010500347020277,
+    0.21904652393320462,
+    0.21090426283240693,
+    0.20898253694270247
+  ],
+  "shell_masses": [
+    0.0,
+    0.0,
+    0.23596794469109608,
+    0.4440799402299675,
+    0.31995211507893634
+  ],
+  "quantized": [
+    0,
+    0,
+    967,
+    1819,
+    1310
+  ]
+}
