@@ -38,3 +38,28 @@ def test_sections_keep_clipped_parent_but_exclude_clipped_planar_components():
         ka, ra = draw(g, a)
         kb, rb = draw(g, b)
         assert (ka, ra[:2]) == (kb, rb[:2])
+
+
+def test_screen_includes_coverage_and_common_id_support():
+    import copy
+
+    import pytest
+    from pore_section_score import compare
+
+    ref = {k: {"reference_voxels": 100, "voxels": 110 + k} for k in range(5)}
+    b = {
+        "references": ref,
+        "metrics": {"dice": 0.98},
+        "objects": {"matched_fraction_reference": 0.9, "matched_fraction_prediction": 0.95},
+    }
+    a = copy.deepcopy(b)
+    for row in a["references"].values():
+        row["voxels"] = 100
+    assert compare(b, a)["advance"]
+    a["objects"]["matched_fraction_reference"] = 0.89
+    assert not compare(b, a)["advance"]
+    a["references"][1]["voxels"] = None
+    assert not compare(b, a)["criteria"]["support"]
+    a["references"][1]["reference_voxels"] = 70
+    with pytest.raises(ValueError):
+        compare(b, a)
