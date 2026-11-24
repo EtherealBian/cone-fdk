@@ -1,0 +1,57 @@
+{
+  "plugin_source": "17770eb4bbd9e2215a1c2aa28106d3e72578ce02c9db736429ff325e932b4166",
+  "imagej_jar": "ebdcfdaa663851d710958561e1179e770ecbb17ee5eab51f7e95187fd107b00b",
+  "adapter_sha256": "7db6cf8a5f0063fe9d41ac22e16c874fcd5d9af76e21d0baa5123a48364f3cbb",
+  "java": "openjdk version \"21.0.1\" 2023-10-17 LTS\nOpenJDK Runtime Environment Temurin-21.0.1+12 (build 21.0.1+12-LTS)\nOpenJDK 64-Bit Server VM Temurin-21.0.1+12 (build 21.0.1+12-LTS, mixed mode, sharing)",
+  "javac": "javac 21.0.1",
+  "specimens": {
+    "2": {
+      "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+      "shape": [
+        8,
+        292,
+        140
+      ],
+      "byte_sha256": "bb03833fb4ed79beaa421fa1e63980cafa24c7cac665c5a424cc3de0eb179684",
+      "plugin_out": "d3e27615d92264eb8b7727e1d67c9dacb55597864053e4ef960a49d711ed384e",
+      "masks": {
+        "strict": "83cf44af4756cd12def1aee6d7fb924a5c917ed0d994e3131a10e8cbedebe21f",
+        "plugin": "83cf44af4756cd12def1aee6d7fb924a5c917ed0d994e3131a10e8cbedebe21f",
+        "printed": "2db2dc8f81b071ca730c1fe44460adc6d090928370601f5e90c09a25c54c7fa2",
+        "low": "f07114c0278576845042990214f5beb5a0846754acd0dfa61cbec80692dceb6c"
+      }
+    },
+    "3": {
+      "raw": "460ea68425d9ac387485b65a3aa2b3f25da31cfe9de8181d4c1a5b0a982d26c8",
+      "shape": [
+        8,
+        292,
+        140
+      ],
+      "byte_sha256": "8ce3fb12762618f9351ee0e12f6c66e1ee14e2660b1efa9ac91221cb3f924a9b",
+      "plugin_out": "64f32c15cb0d25fff23039395e92114c395f4680d41e90e73fb9debad983f2a1",
+      "masks": {
+        "strict": "27d0019952c917bc2d55dca6ce3d904cd9a51cef28d6bed4b743674e07013651",
+        "plugin": "27d0019952c917bc2d55dca6ce3d904cd9a51cef28d6bed4b743674e07013651",
+        "printed": "8c064a14eb4e420d6aaa6a4c5cc0a3fb2685f077e61f78ed7d5cb0becc92efc8",
+        "low": "863741f6feb560512b1eb38d523c8465b3dcd638d6f33f76effe8dac1bd07dd6"
+      }
+    },
+    "5": {
+      "raw": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37",
+      "shape": [
+        8,
+        292,
+        140
+      ],
+      "byte_sha256": "67af400446bb00a64679888a289e1c33dbb2a574f706659f0c754c78e4ad212f",
+      "plugin_out": "badfca3b6292b5e5c1b824f35bee3f9a60710cd99e200a7e297bd23d3ee0dee2",
+      "masks": {
+        "strict": "179a6714a9f222d61b0d2cc6c9c576d042a6e743e637c2962eb550328e60ad94",
+        "plugin": "179a6714a9f222d61b0d2cc6c9c576d042a6e743e637c2962eb550328e60ad94",
+        "printed": "fb286ac85e41db805288bf7ca10465cb8d7194e5c1d90997b777bb9b93cbda63",
+        "low": "14154727a9c5d37508d63205308b3918d321fcb7ce767e3138b5e589dfb411ed"
+      }
+    }
+  }
+}
