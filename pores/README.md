@@ -89,3 +89,5 @@ python scripts/pore_queue_bundle.py build/candidate-C build/candidate-D build/ca
 ```
 
 To check the committed tables without the scan archives, run `python scripts/pore_pairs_de.py pores/evidence/candidate-d pores/evidence/candidate-e --check` and `python scripts/pore_report_e.py --check`. The [sparse lattice](GRID-PILOT.md) and [orthogonal plane](PLANE-PILOT.md) calibration controls did not support changing the XY estimator. Confirmation specimens 4 and 6 remain reserved.
+
+[Small-pore confidence-shell control](SHELL-PILOT.md): a separate cross-fitted experiment restricted to calibration data checks whether expanding or contracting only uncertain one-voxel boundaries improves small-pore measurement without adding misses or unmatched predictions. Its results do not change the E score.

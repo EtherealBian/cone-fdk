@@ -62,3 +62,19 @@ def test_below_eligibility_is_a_real_miss_not_zero_error():
         and s["eligible_prediction"] == s["matches"] == 0
         and s["small_references"]["L:1"]["pred_voxels"] is None
     )
+
+
+def test_whole_calibration_census_excludes_boundary_objects():
+    from pore_calibration_census import census
+
+    a = np.zeros((20, 20, 20), bool)
+    a[:4, 2:6, 2:6] = True
+    a[5:9, 5:9, 5:9] = True
+    a[10:12, 10:14, 5:9] = True
+    a[13:17, 3:7, 3:11] = True
+    assert census(a) == {
+        "complete_32_63": 1,
+        "complete_64_127": 1,
+        "complete_ge128": 1,
+        "clipped_ge64": 1,
+    }

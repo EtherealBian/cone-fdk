@@ -1,0 +1,107 @@
+{
+  "specimen": 5,
+  "stage": "calibration only",
+  "calibration_z": [
+    160,
+    184
+  ],
+  "x_source": {
+    "L": [
+      360,
+      456
+    ],
+    "R": [
+      520,
+      616
+    ]
+  },
+  "raw_sha256": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37",
+  "reference_sha256": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b",
+  "checked_folds": {
+    "L": {
+      "base": {
+        "eligible_prediction": 0,
+        "eligible_reference": 0,
+        "matches": 0,
+        "clipped_prediction_ge64": 7,
+        "clipped_reference_ge64": 7,
+        "small_references": {}
+      },
+      "expand": {
+        "eligible_prediction": 0,
+        "eligible_reference": 0,
+        "matches": 0,
+        "clipped_prediction_ge64": 7,
+        "clipped_reference_ge64": 7,
+        "small_references": {}
+      },
+      "contract": {
+        "eligible_prediction": 0,
+        "eligible_reference": 0,
+        "matches": 0,
+        "clipped_prediction_ge64": 7,
+        "clipped_reference_ge64": 7,
+        "small_references": {}
+      }
+    },
+    "R": {
+      "base": {
+        "eligible_prediction": 0,
+        "eligible_reference": 0,
+        "matches": 0,
+        "clipped_prediction_ge64": 6,
+        "clipped_reference_ge64": 5,
+        "small_references": {}
+      },
+      "expand": {
+        "eligible_prediction": 0,
+        "eligible_reference": 0,
+        "matches": 0,
+        "clipped_prediction_ge64": 6,
+        "clipped_reference_ge64": 5,
+        "small_references": {}
+      },
+      "contract": {
+        "eligible_prediction": 0,
+        "eligible_reference": 0,
+        "matches": 0,
+        "clipped_prediction_ge64": 6,
+        "clipped_reference_ge64": 5,
+        "small_references": {}
+      }
+    }
+  },
+  "summary": {
+    "base": {
+      "eligible_reference": 0,
+      "eligible_prediction": 0,
+      "matches": 0,
+      "missed": 0,
+      "unmatched": 0
+    },
+    "expand": {
+      "eligible_reference": 0,
+      "eligible_prediction": 0,
+      "matches": 0,
+      "missed": 0,
+      "unmatched": 0,
+      "small_shared_ids": [],
+      "small_shared_n": 0,
+      "base_small_shared_p95_pct": null,
+      "arm_small_shared_p95_pct": null,
+      "decision": "insufficient pairs"
+    },
+    "contract": {
+      "eligible_reference": 0,
+      "eligible_prediction": 0,
+      "matches": 0,
+      "missed": 0,
+      "unmatched": 0,
+      "small_shared_ids": [],
+      "small_shared_n": 0,
+      "base_small_shared_p95_pct": null,
+      "arm_small_shared_p95_pct": null,
+      "decision": "insufficient pairs"
+    }
+  }
+}

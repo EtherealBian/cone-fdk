@@ -1,0 +1,132 @@
+{
+  "specimen": 3,
+  "stage": "calibration only",
+  "calibration_z": [
+    160,
+    184
+  ],
+  "x_source": {
+    "L": [
+      360,
+      456
+    ],
+    "R": [
+      520,
+      616
+    ]
+  },
+  "raw_sha256": "460ea68425d9ac387485b65a3aa2b3f25da31cfe9de8181d4c1a5b0a982d26c8",
+  "reference_sha256": "f94c64a99f5f0e7971a3e0e2f7c932183009938aa5d284bcd23f4657674e6009",
+  "checked_folds": {
+    "L": {
+      "base": {
+        "eligible_prediction": 0,
+        "eligible_reference": 0,
+        "matches": 0,
+        "clipped_prediction_ge64": 19,
+        "clipped_reference_ge64": 19,
+        "small_references": {}
+      },
+      "expand": {
+        "eligible_prediction": 0,
+        "eligible_reference": 0,
+        "matches": 0,
+        "clipped_prediction_ge64": 19,
+        "clipped_reference_ge64": 19,
+        "small_references": {}
+      },
+      "contract": {
+        "eligible_prediction": 0,
+        "eligible_reference": 0,
+        "matches": 0,
+        "clipped_prediction_ge64": 19,
+        "clipped_reference_ge64": 19,
+        "small_references": {}
+      }
+    },
+    "R": {
+      "base": {
+        "eligible_prediction": 1,
+        "eligible_reference": 1,
+        "matches": 1,
+        "clipped_prediction_ge64": 10,
+        "clipped_reference_ge64": 9,
+        "small_references": {
+          "R:20": {
+            "reference_voxels": 112,
+            "pred_voxels": 114,
+            "pred_fold_label": 14,
+            "iou": 0.674074074074074
+          }
+        }
+      },
+      "expand": {
+        "eligible_prediction": 1,
+        "eligible_reference": 1,
+        "matches": 1,
+        "clipped_prediction_ge64": 10,
+        "clipped_reference_ge64": 9,
+        "small_references": {
+          "R:20": {
+            "reference_voxels": 112,
+            "pred_voxels": 129,
+            "pred_fold_label": 14,
+            "iou": 0.6620689655172414
+          }
+        }
+      },
+      "contract": {
+        "eligible_prediction": 1,
+        "eligible_reference": 1,
+        "matches": 1,
+        "clipped_prediction_ge64": 10,
+        "clipped_reference_ge64": 9,
+        "small_references": {
+          "R:20": {
+            "reference_voxels": 112,
+            "pred_voxels": 90,
+            "pred_fold_label": 14,
+            "iou": 0.5905511811023622
+          }
+        }
+      }
+    }
+  },
+  "summary": {
+    "base": {
+      "eligible_reference": 1,
+      "eligible_prediction": 1,
+      "matches": 1,
+      "missed": 0,
+      "unmatched": 0
+    },
+    "expand": {
+      "eligible_reference": 1,
+      "eligible_prediction": 1,
+      "matches": 1,
+      "missed": 0,
+      "unmatched": 0,
+      "small_shared_ids": [
+        "R:20"
+      ],
+      "small_shared_n": 1,
+      "base_small_shared_p95_pct": 1.7857142857142858,
+      "arm_small_shared_p95_pct": 15.178571428571429,
+      "decision": "insufficient pairs"
+    },
+    "contract": {
+      "eligible_reference": 1,
+      "eligible_prediction": 1,
+      "matches": 1,
+      "missed": 0,
+      "unmatched": 0,
+      "small_shared_ids": [
+        "R:20"
+      ],
+      "small_shared_n": 1,
+      "base_small_shared_p95_pct": 1.7857142857142858,
+      "arm_small_shared_p95_pct": 19.642857142857142,
+      "decision": "insufficient pairs"
+    }
+  }
+}

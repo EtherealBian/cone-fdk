@@ -39,6 +39,13 @@ def render(root):
         if selected
         else "Neither arm meets the screening rule on all three specimens. Do not add a uniform confidence-shell correction to the production or research predictor on this evidence."
     )
+    counts = json.loads((root / "census.json").read_text(encoding="utf8"))
+    census_rows = []
+    for i in (2, 3, 5):
+        c = counts[str(i)]["whole"]
+        census_rows.append(
+            f"| {i} | {c['complete_32_63']} | {c['complete_64_127']} | {c['complete_ge128']} | {c['clipped_ge64']} |"
+        )
     return "\n".join(
         [
             MARK,
@@ -53,7 +60,19 @@ def render(root):
             "",
             "The denominator for each P95 is the shared subset in that row. A missing percentile means no common matched small pore, not zero error. The two test volumes are kept separate for connectivity; each fold trains on the opposite side only. These are calibration results and do not replace the [published E development evaluation](RESULTS-E.md).",
             "",
-            "Reproduce with `python scripts/pore_shell_pilot.py --cache <archive-directory> --out <empty-directory>` after compiling the CUDA kernels. `python scripts/pore_shell_report.py --check` independently rebuilds the summary table from the committed fold records, without reading a scan.",
+            "## Was the split itself responsible for the scarcity of small pores?",
+            "",
+            "Post-hoc count of the **entire original calibration crop**, before splitting. A component touching any of its six faces is clipped. A separate bounding-box implementation rereads the authenticated labels and checks the denominators of both folds for every arm.",
+            "",
+            "| Specimen | Complete 32–63 voxels | Complete 64–127 | Complete ≥128 | Clipped ≥64 |",
+            "|---|---:|---:|---:|---:|",
+            *census_rows,
+            "",
+            "Specimen 5 has no complete eligible pore even before splitting, not an error-free small-pore measurement. The original labels still contain voxel-level boundary examples from clipped pores; those do not supply complete reference volumes. More independent, complete small-pore calibration examples are needed before selecting a size correction. Do not take them from the reserved confirmation regions.",
+            "",
+            "[Full census and source hashes](evidence/shell-pilot/census.json). Recount with `python scripts/pore_calibration_census.py --cache <archive-directory> --records pores/evidence/shell-pilot --out pores/evidence/shell-pilot/census.json --check`.",
+            "",
+            "Reproduce with `python scripts/pore_shell_pilot.py --cache <archive-directory> --out <empty-directory>` after compiling the CUDA kernels. `python scripts/pore_shell_report.py --check` rebuilds the summary table from the committed fold records, without reading a scan.",
             "",
         ]
     )
