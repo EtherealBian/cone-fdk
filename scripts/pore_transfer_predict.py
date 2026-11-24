@@ -36,7 +36,10 @@ def blocks(raw, i, begin, end, single, ranked):
         yield a, b, rank_model.features(fields, med, i)
 
 
-def generate(cache, out):
+def generate(cache, out, z=Z):
+    if tuple(z) not in (Z, (552, 680)):
+        raise ValueError("Unregistered development slab")
+    shape = (z[1] - z[0], *SHAPE[1:])
     out.mkdir(parents=True, exist_ok=True)
     if any(out.iterdir()):
         raise ValueError("Use a new empty directory for blind baseline predictions")
@@ -65,7 +68,7 @@ def generate(cache, out):
                 raise ValueError("E baseline changed")
             path = out / f"sample{i}.f32"
             with path.open("xb") as fp:
-                for a, b, (x, mask) in blocks(raw, i, *Z, single, ranked):
+                for a, b, (x, mask) in blocks(raw, i, *z, single, ranked):
                     p = probability(model, x, mask)
                     if p.shape != (b - a, *SHAPE[1:]) or not np.isfinite(p).all():
                         raise ValueError("Invalid probabilities")
@@ -74,7 +77,7 @@ def generate(cache, out):
                 raw=rs["sha256"], segmented=ss["sha256"], probability=sha(path)
             )
             print(i, records[str(i)]["probability"], flush=True)
-    manifest = dict(schema=1, model=ident, z=Z, shape_zyx=SHAPE, dtype="<f4", specimens=records)
+    manifest = dict(schema=1, model=ident, z=z, shape_zyx=shape, dtype="<f4", specimens=records)
     (out / "baseline.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf8")
 
 
@@ -82,5 +85,6 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--cache", type=Path, required=True)
     ap.add_argument("--out", type=Path, required=True)
+    ap.add_argument("--split-pilot", action="store_true", help="Use the registered z=552:680 development slab")
     a = ap.parse_args()
-    generate(a.cache, a.out)
+    generate(a.cache, a.out, (552, 680) if a.split_pilot else Z)
