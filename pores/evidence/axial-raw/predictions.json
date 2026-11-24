@@ -1,0 +1,177 @@
+{
+  "identity": {
+    "files": {
+      "pores/AXIAL-RAW-PILOT.md": "1f644c540f537b3c3aab5d917d3439a47df5f7dcd16e8b733d0467741370bd28",
+      "scripts/pore_axial_raw.py": "81307691e315afdd18c41e23ce2aa416901cad54202d5fc93e046cd118f852e0",
+      "scripts/pore_shared_model.py": "f7fc15730d01718d5c09edf8ce16c535749735cd34dcc4717d1fc067ebe54d97",
+      "scripts/pore_spatial_model.py": "78745e9d0a09f94a38cfb71ce064d3eba538a1383b294dfda4cde8459319638c",
+      "scripts/pore_spatial_gpu.py": "c9c5bc78bee982f6bafaca6a1153abd74b3902983d18eeb332f8c0ccc254c060",
+      "pores/search_support.cu": "916e3e64038b020590a1761537d63df262830849c7fece520eae785da092a5e5",
+      "pores/spatial.cu": "04b4c13b5f38fb89a8dfe60d85a06dea6c0b0a1be26ce64102614b063766a1f9",
+      "pores/local_model.py": "5824b9d1e1865bc57acb6f0fa8afaa5600f47c49af2c099c0a330d8faea9bba2",
+      "pores/denoise.py": "0f41622de8d2b022dc956d592f297c142e31f5d1963eb49a0e7e88a241659493",
+      "pores/validate.py": "2c81e4f6731d3fe852edcbb693af30e401d3cdcaddb179c2744443c211afa3c9"
+    },
+    "ptx": {
+      "search-support.ptx": "1f814aa7f606b2cd4df63d18f9e636532982950a16da169f0b17e39039e6cf02",
+      "spatial.ptx": "82741408da39f040c74a8354cce00a34f78e07aecdf1c37a5548d61d133e0b40"
+    },
+    "torch": "2.15.0+cpu"
+  },
+  "pipeline_id": "d5f80db5fbd90785d3f0975740aaa29b1efa5add20fab43a6fc85930797bf672",
+  "specimens": {
+    "2": {
+      "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+      "segmented": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+      "cal_features": "582cd80ec5b1a4284057146d3bc4a757bdbf6e0c3367759da1fa430dd1ffaf2b",
+      "cal_mask": "e6160ae3db5edc35c134c1fc55df5b0ca5afad911209c6962ac5eadd8c6455ce",
+      "fixed_baseline": "9dde9e60ec69253b5f78d673b52caeaed1ada9477a6c6c288f087c190af7e9f6",
+      "masks": {
+        "plane": {
+          "file": "7d187bdf2648411313536871a8fbd5b87a1aa040840a91f9d22fff39ae42a1fd",
+          "mask": "7d2724598bec9c0d3bd43941df1653a6e8c5289a6fa7ffec46678f6a4f7e4d96",
+          "cpu_gpu_decision_disagreements": 0,
+          "max_abs_cpu_gpu": 7.433809624757259e-06,
+          "first_difference_xyz_native_cpu": null
+        },
+        "axial": {
+          "file": "0dc8fd06ce42c8857fce2a8361af72dcb1e433c535d8ab28f623531fd151bcfa",
+          "mask": "14501d3bbee9cfc7dbe489af0f9b2aaa78c7898a3f28ede8eeb3236d26ebae86",
+          "cpu_gpu_decision_disagreements": 0,
+          "max_abs_cpu_gpu": 6.0746492600571855e-06,
+          "first_difference_xyz_native_cpu": null
+        }
+      }
+    },
+    "3": {
+      "raw": "460ea68425d9ac387485b65a3aa2b3f25da31cfe9de8181d4c1a5b0a982d26c8",
+      "segmented": "f94c64a99f5f0e7971a3e0e2f7c932183009938aa5d284bcd23f4657674e6009",
+      "cal_features": "d161eeb0ce8298281b85ab561e3b7ca839ab51bd7c0c874df1c7bcda59c0d9b5",
+      "cal_mask": "3ea426d8b82fdf00a7710700d4c15df0592df587e6b2e45274f4ef59be567c57",
+      "fixed_baseline": "42b71941dceb7ab06183d3249bb2186d5b4f9d28586d58c1d4d728bb1f6dc0d0",
+      "masks": {
+        "plane": {
+          "file": "71d01855523ca6ffbe689a9d9d88664207a1c187325ceed90891254e1f72f365",
+          "mask": "d1f540b2874a55d910caca29124ea59c7631b6d8ddbaa0c1c1b56b442cd43603",
+          "cpu_gpu_decision_disagreements": 0,
+          "max_abs_cpu_gpu": 6.401947242551387e-06,
+          "first_difference_xyz_native_cpu": null
+        },
+        "axial": {
+          "file": "08df0cf68220e0a381f6b8a60a96d9c65d0fd524ddfb977ea95850314e43486b",
+          "mask": "107705d59bcdc994c411581b675ea835235ee6754f9be83fa9dbc07005f22143",
+          "cpu_gpu_decision_disagreements": 0,
+          "max_abs_cpu_gpu": 7.74361767952314e-06,
+          "first_difference_xyz_native_cpu": null
+        }
+      }
+    },
+    "5": {
+      "raw": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37",
+      "segmented": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b",
+      "cal_features": "dfac2e907548126015be9f88f8377f317af0996fdef0c6c1ee2187262e494012",
+      "cal_mask": "9cd3e4d1a6dba9d1eed3510487c7a86c0c55c2bd99602f52255b51f6e2547a9e",
+      "fixed_baseline": "64b531512e03b6c6e53c36291a9c5caeed0cd62f21ba26e6db05242e42b0b243",
+      "masks": {
+        "plane": {
+          "file": "fd7590ef744f99c430ba6fcdfcb155974406d0bca784d87a1309ba707f8ce6bc",
+          "mask": "d93f394bbd308c11fbd2b28c17aa39cce5843e06cfe4d91bd78326d01874be09",
+          "cpu_gpu_decision_disagreements": 0,
+          "max_abs_cpu_gpu": 6.400726555000347e-06,
+          "first_difference_xyz_native_cpu": null
+        },
+        "axial": {
+          "file": "25a8555591d9e4b6dee975e9d596d9bd70acf2219b6629740deb08b46ec09fc6",
+          "mask": "7fb4b3f30b910cdadd7241fb0f1b69ab8d4fa3754ee3dc5422e7f5e61f8a6462",
+          "cpu_gpu_decision_disagreements": 0,
+          "max_abs_cpu_gpu": 6.853140003926228e-06,
+          "first_difference_xyz_native_cpu": null
+        }
+      }
+    }
+  },
+  "fits": {
+    "plane": {
+      "init": "d89519805f56df2c9aab66f2242ae95b46aff3512ec10eba59f40397e62ad276",
+      "stream": "ed2b1b69b718286b26d139261beb59caf538cf5fa3084166141c8717fe195d29",
+      "weights": "093cdfde6d88a44d393352815896280295804acc887df25a19fd16eabbd33a81",
+      "trace": [
+        [
+          0,
+          0.07641427218914032
+        ],
+        [
+          300,
+          0.047054801136255264
+        ],
+        [
+          600,
+          0.047265391796827316
+        ],
+        [
+          900,
+          0.07499372959136963
+        ],
+        [
+          1200,
+          0.03633422031998634
+        ],
+        [
+          1500,
+          0.06045859679579735
+        ],
+        [
+          1799,
+          0.07410527765750885
+        ]
+      ]
+    },
+    "axial": {
+      "init": "d89519805f56df2c9aab66f2242ae95b46aff3512ec10eba59f40397e62ad276",
+      "stream": "ed2b1b69b718286b26d139261beb59caf538cf5fa3084166141c8717fe195d29",
+      "weights": "30e1ad8ed8091c5fd9c31becc5dc28ead3d9e948aca5123a9d42317ca8b7c942",
+      "trace": [
+        [
+          0,
+          0.07641427218914032
+        ],
+        [
+          300,
+          0.07402782142162323
+        ],
+        [
+          600,
+          0.05212174728512764
+        ],
+        [
+          900,
+          0.0637100487947464
+        ],
+        [
+          1200,
+          0.029498185962438583
+        ],
+        [
+          1500,
+          0.03592336177825928
+        ],
+        [
+          1799,
+          0.0567910335958004
+        ]
+      ]
+    }
+  },
+  "origin_xyz": [
+    360,
+    376,
+    256
+  ],
+  "shape_zyx": [
+    96,
+    256,
+    256
+  ],
+  "replay": "native one-plane vs independent FP64 CPU",
+  "replay_code": "d0053e854158dfd1bb5703fdd8c03fc7cffaa5e73a90154a670e4f174e9a1ce0"
+}
