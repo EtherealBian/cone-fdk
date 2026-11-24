@@ -1,0 +1,91 @@
+{
+  "identity": {
+    "files": {
+      "scripts/pore_small_seed.py": "4a457dd76ee1fb08e78f0e93c1fa792aa3e5bd0ca460c8b54bec9b7ebc55ad8d",
+      "scripts/pore_seed_gpu.py": "1e616de6c9d31791bf3fd85a37459f2060434359da0a72ed9ce9cfa095658c57",
+      "scripts/pore_seed_median.cu": "6d23142000dd33202b27235593da7edf45ee145f21550054fabd63144511a39f",
+      "scripts/pore_seed_score.py": "2dd6feaa58f3f4341dceb08e76ca9312cb012d854d9f7de807ac10a38d219d17",
+      "scripts/pore_contrast_audit.py": "1e66ec1a761bb9ee00775683e12109638bf45c512691f82a4ecfcc715868aac8",
+      "scripts/pore_axial_score.py": "cf22dc9c4da0ca48bc0468c5fce7f93f21f587aeb83151c9f0c43da9df3c3e16",
+      "scripts/pore_transfer.py": "f4092f168839be8b363dd48db5eaf62acf16ed9920f8e5e2c2e1d35f678b73ca",
+      "pores/local_model.py": "5824b9d1e1865bc57acb6f0fa8afaa5600f47c49af2c099c0a330d8faea9bba2",
+      "pores/validate.py": "2c81e4f6731d3fe852edcbb693af30e401d3cdcaddb179c2744443c211afa3c9",
+      "pores/SMALL-SEED-PILOT.md": "24c978bca2174d8f488951bfdf8302fe5c6c0078846b476baa68a39432771cf1"
+    },
+    "ptx": "bee9c9251435b4cbe3aecb074a5cdc4367bab992efe1e3d496fe27366fe66362",
+    "census": "d7467efcb92ffe1737983e8aa37544bfa72f88a1924f5a9c25617a2a18ee5e96"
+  },
+  "pipeline_id": "ce66fb2f2c4c0a293d59c673e699751e1a561e8c88cab93d3e5c8bd6d4b4c3fa",
+  "specimens": {
+    "2": {
+      "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+      "segmented": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+      "census": "e8929221eb9a199e126b897a9c1d1fac9201898e12e507b0018e12fcbdca33d5",
+      "raw_halo": "ec65fc7fbae20a9f5049033334a6bc96533c98907bdce5750b140daed69415b7",
+      "median7_u16": "f85134b86bbf7fb1a44d4072f0c777c6ffdff38e3f6da61c831717c64f4de599",
+      "median_cpu_differences": 0,
+      "growth_replay_differences": 0,
+      "seeds_sha256": "3c637a6051b17dd679ee5e6dbfae9d169eaf3ef71ba54deb36512a2ae1eb59fc",
+      "masks": {
+        "gray": {
+          "file": "00b2b36294ce04efac2357a2ed8dddd691816a365ce5fd5989706e46674ef3e4",
+          "mask": "7541485c08c7eace4cb76d0b08b08435203e49c05169528b5790fd3997974b0f"
+        },
+        "geometry": {
+          "file": "49bf07f0d56df97fb8601c6ca977f27dab342b8650a39ea824bc4c1ad438033b",
+          "mask": "61a76ed41a3ac8b7c5d056071c4d4022592e5b0967d679feec6ace49bb79dd8d"
+        }
+      }
+    },
+    "3": {
+      "raw": "460ea68425d9ac387485b65a3aa2b3f25da31cfe9de8181d4c1a5b0a982d26c8",
+      "segmented": "f94c64a99f5f0e7971a3e0e2f7c932183009938aa5d284bcd23f4657674e6009",
+      "census": "df02f68d9d5f09858fb12b8131160b76897e4df3c8c03dda06fccdf935170068",
+      "raw_halo": "24b28bce50b3e2bb186b934f575ef0259008bdfa86cb03c2f8026f17dc7bb4fe",
+      "median7_u16": "dbdaba3043c74dfbcf3e049b06995ea220d5f88845db095fb094ced579b7167c",
+      "median_cpu_differences": 0,
+      "growth_replay_differences": 0,
+      "seeds_sha256": "f2b51a03f4d74097fc26668d288c64fcb22d3b70a592a456d710b20b22967c62",
+      "masks": {
+        "gray": {
+          "file": "5653ed16f1c5c6e3f323c79fc286e5f92eb59b917e1626fff5073d2ed2eef729",
+          "mask": "ee806aed334b911ad6ddcb0a1d35b100de4fb7feefcc50f421707e35ea5592ef"
+        },
+        "geometry": {
+          "file": "c0dfce1af554127dc88852ba101759e847cf1397f7f777d1504ded2987c11ad6",
+          "mask": "2ebd1a6990469daaeb78fd5c509bfbfbb6b0429bf0d5f19795c767f7c5a265a9"
+        }
+      }
+    },
+    "5": {
+      "raw": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37",
+      "segmented": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b",
+      "census": "7bc87d965c8d032f06f39ced69003cf34c1828242082f8c2a678cf7ce45b3d3b",
+      "raw_halo": "28e9d76e0e50f6b50140accdc11a3087d64ef43d3d7a3376cf734daba8e5dd41",
+      "median7_u16": "04c926bd397c287b6288f1aef28ee91553bcd71ec01b9787586df2b0bda93f56",
+      "median_cpu_differences": 0,
+      "growth_replay_differences": 0,
+      "seeds_sha256": "e2a020321614befc6ade5a559bc1c598a354fa1c1134d2e0ab3130f1a3c8e54b",
+      "masks": {
+        "gray": {
+          "file": "31ea16b5c0b6534c41c98ed2635a3441e271026159c0c2c94866ba9b57bd24d2",
+          "mask": "07abedcc48ee2b7b2f6ae7ad34041c784c9f2668fccdacca75b1e64079619af1"
+        },
+        "geometry": {
+          "file": "4dfd55814d01fc7b8c640489e73523cfba7812218a3e6cd5a0f967b4c5ffe366",
+          "mask": "62a24fac5cf5c69b4c49fc45bd1384f0b9fdd595422e78ac02fa7477836eae6d"
+        }
+      }
+    }
+  },
+  "origin_xyz": [
+    360,
+    376,
+    256
+  ],
+  "shape_zyx": [
+    96,
+    256,
+    256
+  ]
+}

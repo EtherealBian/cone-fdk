@@ -1,0 +1,162 @@
+[
+  {
+    "label": 17,
+    "seed_id": 190872,
+    "seed_zyx": [
+      2,
+      233,
+      151
+    ],
+    "original": 14,
+    "inside_median_x2": 92566,
+    "shell_median_x2": 101422,
+    "allowed": 52,
+    "added": 35,
+    "final": 49,
+    "different_sites": 28
+  },
+  {
+    "label": 31,
+    "seed_id": 1094136,
+    "seed_zyx": [
+      16,
+      177,
+      247
+    ],
+    "original": 13,
+    "inside_median_x2": 93536,
+    "shell_median_x2": 100962,
+    "allowed": 114,
+    "added": 56,
+    "final": 69,
+    "different_sites": 40
+  },
+  {
+    "label": 38,
+    "seed_id": 1411135,
+    "seed_zyx": [
+      21,
+      136,
+      62
+    ],
+    "original": 29,
+    "inside_median_x2": 86080,
+    "shell_median_x2": 102153,
+    "allowed": 158,
+    "added": 46,
+    "final": 75,
+    "different_sites": 50
+  },
+  {
+    "label": 45,
+    "seed_id": 1694968,
+    "seed_zyx": [
+      25,
+      220,
+      247
+    ],
+    "original": 17,
+    "inside_median_x2": 87282,
+    "shell_median_x2": 97660,
+    "allowed": 105,
+    "added": 46,
+    "final": 63,
+    "different_sites": 38
+  },
+  {
+    "label": 46,
+    "seed_id": 1712504,
+    "seed_zyx": [
+      26,
+      33,
+      119
+    ],
+    "original": 36,
+    "inside_median_x2": 90633,
+    "shell_median_x2": 102761,
+    "allowed": 129,
+    "added": 26,
+    "final": 62,
+    "different_sites": 34
+  },
+  {
+    "label": 56,
+    "seed_id": 2618935,
+    "seed_zyx": [
+      39,
+      246,
+      54
+    ],
+    "original": 12,
+    "inside_median_x2": 81642,
+    "shell_median_x2": 97000,
+    "allowed": 64,
+    "added": 29,
+    "final": 41,
+    "different_sites": 16
+  },
+  {
+    "label": 58,
+    "seed_id": 2740307,
+    "seed_zyx": [
+      41,
+      208,
+      82
+    ],
+    "original": 21,
+    "inside_median_x2": 87138,
+    "shell_median_x2": 96687,
+    "allowed": 70,
+    "added": 27,
+    "final": 48,
+    "different_sites": 24
+  },
+  {
+    "label": 63,
+    "seed_id": 3340691,
+    "seed_zyx": [
+      50,
+      249,
+      146
+    ],
+    "original": 8,
+    "inside_median_x2": 94667,
+    "shell_median_x2": 101548,
+    "allowed": 90,
+    "added": 58,
+    "final": 66,
+    "different_sites": 32
+  },
+  {
+    "label": 78,
+    "seed_id": 4926297,
+    "seed_zyx": [
+      75,
+      43,
+      88
+    ],
+    "original": 17,
+    "inside_median_x2": 93464,
+    "shell_median_x2": 102401,
+    "allowed": 136,
+    "added": 80,
+    "final": 97,
+    "different_sites": 36
+  },
+  {
+    "label": 81,
+    "seed_id": 5214389,
+    "seed_zyx": [
+      79,
+      144,
+      180
+    ],
+    "original": 52,
+    "inside_median_x2": 85462,
+    "shell_median_x2": 103642,
+    "allowed": 224,
+    "added": 52,
+    "final": 104,
+    "different_sites": 32
+  }
+]
