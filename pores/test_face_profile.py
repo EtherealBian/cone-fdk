@@ -47,3 +47,36 @@ def test_internal_faces_only_and_flat_source_does_not_move_pore():
 def test_raw_guard_precedes_all_archive_access(i, sl):
     with pytest.raises(ValueError, match="Unregistered"):
         raw_slab(None, i, sl)
+
+
+@pytest.mark.parametrize("i,n", [(2, 4), (3, 2), (5, 1)])
+def test_complete_outside_interval_population_and_source_replay(i, n):
+    from pore_axial_raw import sha
+    from pore_face_profile import E
+    from pore_face_profile_score import diagnostic
+    from pore_region import EV, read
+    from test_region_evidence import native_rows
+
+    d = read(E / f"sample{i}.json")
+    g = read(E / f"sample{i}-choices.json")
+    prev = read(EV / "shell-volume" / f"sample{i}.json")
+    a, b = d["arms"].values()
+    h, k = [native_rows(E, i, name, v) for name, v in d["arms"].items()]
+    assert set(h) == set(k)
+    # In memory, native reference keys are integers, but JSON decoding returns strings.
+    aa = dict(a, references={int(j): v for j, v in a["references"].items()})
+    r = diagnostic(aa, g, prev)
+    assert r["p95"] == d["volume_audit"]["p95"]
+    assert (
+        len(prev["bound"]["outside_15"]) == n
+        and not d["advance"]
+        and b["objects"]["p95_abs_volume_error_pct"] > 15
+    )
+    for rid in prev["bound"]["outside_15"]:
+        _, size, ref = k[rid]
+        assert 100 * abs(size - ref) <= 15 * ref and r["rows"][rid]["actual"] == size
+    assert all(v["target"] == v["actual"] for v in g["objects"].values())
+    repair = read(E / "repair-replay.json")["identical_fit_choices_and_masks"]
+    assert len(repair) == 7 and all(sha(E / n) == v for n, v in repair.items())
+    rep = read(E / "replay.json")["byte_identical_tables"]
+    assert len(rep) == 12 and all(sha(E / n) == v for n, v in rep.items())
