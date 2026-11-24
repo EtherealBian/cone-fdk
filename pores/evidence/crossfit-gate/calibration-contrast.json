@@ -1,0 +1,54 @@
+{
+  "pipeline_id": "8624792a4678c7fabfc8ac01038f448619eef14033a2e25aa5224309a1665d90",
+  "calibration_z": [
+    160,
+    184
+  ],
+  "specimens": {
+    "2": {
+      "original": {
+        "fp": 794,
+        "fn": 824
+      },
+      "held_out": {
+        "fp": 1587,
+        "fn": 828
+      },
+      "changed": 1437,
+      "fixed": 320,
+      "broken": 1117,
+      "reference_voxels": 19612,
+      "total_voxels": 1572864
+    },
+    "3": {
+      "original": {
+        "fp": 6852,
+        "fn": 7483
+      },
+      "held_out": {
+        "fp": 6662,
+        "fn": 10653
+      },
+      "changed": 8310,
+      "fixed": 2665,
+      "broken": 5645,
+      "reference_voxels": 257035,
+      "total_voxels": 1572864
+    },
+    "5": {
+      "original": {
+        "fp": 3650,
+        "fn": 3201
+      },
+      "held_out": {
+        "fp": 3902,
+        "fn": 3869
+      },
+      "changed": 2708,
+      "fixed": 894,
+      "broken": 1814,
+      "reference_voxels": 253174,
+      "total_voxels": 1572864
+    }
+  }
+}

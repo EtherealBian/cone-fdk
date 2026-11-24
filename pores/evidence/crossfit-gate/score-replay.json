@@ -1,0 +1,35 @@
+{
+  "pipeline_id": "8624792a4678c7fabfc8ac01038f448619eef14033a2e25aa5224309a1665d90",
+  "arms": [
+    "curvature",
+    "previous",
+    "crossfit"
+  ],
+  "byte_identical_tables": {
+    "sample2-crossfit-matches.csv": "6af46821825808259523ddbba89bd874f254fd6f169c9f78d9b4b6faf381301c",
+    "sample2-crossfit-pores.csv": "6c71a622e7e89090f6207453656be1685f56b6e581be6218439371154494f38b",
+    "sample2-curvature-matches.csv": "d8b924016b548e03c53d0428eab957061a23b51f4b8fa4eeb563f7785159ca4c",
+    "sample2-curvature-pores.csv": "bef49ee49bb55328561be9b4d94408055f23e84252b6a4cc4369e26dd042171d",
+    "sample2-previous-matches.csv": "e933b8773ef9bd5449d82e3613972cc2657e2da989f297c2a68e7e00d6de6cbe",
+    "sample2-previous-pores.csv": "c9b5caf2615981636bbb082e090ac93173a0af2b6e0488c136b425f58b532aae",
+    "sample3-crossfit-matches.csv": "d0292746bd07b01dbc064d414ba04e54bce4a46009eb63249bcf4ce037829cc4",
+    "sample3-crossfit-pores.csv": "7e29b03ca5b2f65951c2553d22eee6860c977b61faa631539121c9da9a4ab437",
+    "sample3-curvature-matches.csv": "bb1842df56476d9dfb5381e1c5b6d193f18d19a698910669afc7ca17a147bf3a",
+    "sample3-curvature-pores.csv": "0287760b95f1dfd0de6ff8f8da2bd915a9fbd8089dfe9b38c985bd749c3cdcc5",
+    "sample3-previous-matches.csv": "0ff531b04db5a7eae56061d464879820da3c78481d121cf3c6ab5c2630134d21",
+    "sample3-previous-pores.csv": "7f7427bb0f3bd7ab2db7ed9ab366c1933d2caf0b958413b79e217d240a856843",
+    "sample5-crossfit-matches.csv": "61544a4db277ac0ee75581649b822c31577a61fe3ad765ad8eda7f028dd8694e",
+    "sample5-crossfit-pores.csv": "5ee417d6e44d1501ada4abe9eca80f936abbca6aaf80fec368c1834847f50c6a",
+    "sample5-curvature-matches.csv": "740025d50bd7864b1956b44f097dfe5cb246f00bc90749df4fcd88d5ddd5e8a6",
+    "sample5-curvature-pores.csv": "59d19c470256e97be627f408f1b247306b21ac0a81b9d6d729cd4306a4a55a8f",
+    "sample5-previous-matches.csv": "e5a596df306bada4c3106216e48c8b3a12373acf68eff66ab3982f4889dbfea1",
+    "sample5-previous-pores.csv": "e3ec67a2140f4cecd7e8f8eea0c041b1ca5f9d7009c18edb2d7510362099a1aa"
+  },
+  "semantic_json_sha256": {
+    "sample2.json": "2d04872d46a507e7db6d8b57104ae717fbca73e69515bea1915b6cb0b3c9ee24",
+    "sample3.json": "33496238c547a145f4974a12807aa054de2265bac0a5a272503b028b60ebd9e2",
+    "sample5.json": "b27a29e8bc44ec0e33fd3876bbba7791d065456d00ee6f911378e2dfebbca70a",
+    "summary.json": "e35cd44238073ef68b2cc9ec79c5643501628cbe6b5efd05fcb6dc2af0147a25"
+  },
+  "excluded_only": "arms.*.native.elapsed_s"
+}
