@@ -1,0 +1,56 @@
+{
+  "baseline": {
+    "schema": 1,
+    "model": "0ae471662ffc9fe1f62d5b56697e9f1c43c48e4d311efe2558b6b68196ab7994",
+    "z": [
+      552,
+      680
+    ],
+    "shape_zyx": [
+      128,
+      256,
+      256
+    ],
+    "dtype": "<f4",
+    "specimens": {
+      "2": {
+        "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+        "segmented": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+        "probability": "a2fb193ca5e9b811a372d04c8a90338f8d7850bf112d30d801d0afc4a55c0a73"
+      },
+      "3": {
+        "raw": "460ea68425d9ac387485b65a3aa2b3f25da31cfe9de8181d4c1a5b0a982d26c8",
+        "segmented": "f94c64a99f5f0e7971a3e0e2f7c932183009938aa5d284bcd23f4657674e6009",
+        "probability": "712dea685b917d16cad4273034372e99b2762dc3eb1b4190161a8d4ce4a73edb"
+      },
+      "5": {
+        "raw": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37",
+        "segmented": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b",
+        "probability": "06f2666336136da6b7a08b48f56792a6b7536537a2db37c0b8401434ed9aaf95"
+      }
+    }
+  },
+  "arms": {
+    "2": {
+      "base": "8ce794146abd6a467daa586430dd7b99b0923e608b03e2f4999923a69f9a7dce",
+      "arm": "3102a970ba0ce8e7fb99973ef34c8a68086fca1b7093cd3ee10ee60fb5ca6028",
+      "eligible": 79,
+      "flagged": 1,
+      "edited": 1
+    },
+    "3": {
+      "base": "8fa7b78e9240c79666f597a6d812f32b3ebcdcf208eef7d27416f71e1a028fc1",
+      "arm": "8fa7b78e9240c79666f597a6d812f32b3ebcdcf208eef7d27416f71e1a028fc1",
+      "eligible": 31,
+      "flagged": 0,
+      "edited": 0
+    },
+    "5": {
+      "base": "e812cda4ddbd671fe7adbc0fb5d3b7c39b03efc0f14f12b16b08e6ffb6623817",
+      "arm": "e812cda4ddbd671fe7adbc0fb5d3b7c39b03efc0f14f12b16b08e6ffb6623817",
+      "eligible": 8,
+      "flagged": 0,
+      "edited": 0
+    }
+  }
+}
