@@ -1,0 +1,228 @@
+{
+  "pipeline_id": "5e63e063912d9b2cbf9f6d44464bb9e3caf8e741039c56b3543ff7f7118d22d1",
+  "previous_overlap_sha256": "1e9626223ad7d2211a24f97a26d5423087d1c0e3b59e5cfb63c782f230415a69",
+  "development": {
+    "2": {
+      "census": {
+        "matches": 42,
+        "predictions": 44,
+        "references": 49,
+        "p95": 14.889277389277373,
+        "paired_p95": [
+          14.889277389277376,
+          14.889277389277376
+        ],
+        "gained": [],
+        "lost": [],
+        "dice": 0.9470154646625235,
+        "passed": 9,
+        "change_unmatched": 0
+      },
+      "mass": {
+        "matches": 43,
+        "predictions": 48,
+        "references": 49,
+        "p95": 19.836829836829832,
+        "paired_p95": [
+          14.889277389277376,
+          14.889277389277376
+        ],
+        "gained": [
+          87
+        ],
+        "lost": [],
+        "dice": 0.94582104724347,
+        "passed": 7,
+        "change_unmatched": 3,
+        "promotions": 4,
+        "below_rejected": 5
+      },
+      "size": {
+        "matches": 44,
+        "predictions": 48,
+        "references": 49,
+        "p95": 20.570707070707073,
+        "paired_p95": [
+          14.889277389277376,
+          14.889277389277376
+        ],
+        "gained": [
+          12,
+          87
+        ],
+        "lost": [],
+        "dice": 0.9460698784409293,
+        "passed": 8,
+        "change_unmatched": 2,
+        "promotions": 4,
+        "below_rejected": 7
+      },
+      "boundary": {
+        "matches": 43,
+        "predictions": 48,
+        "references": 49,
+        "p95": 20.16883116883116,
+        "paired_p95": [
+          14.889277389277376,
+          16.228529534981146
+        ],
+        "gained": [
+          87
+        ],
+        "lost": [],
+        "dice": 0.9447560352213574,
+        "passed": 7,
+        "change_unmatched": 3
+      }
+    },
+    "3": {
+      "census": {
+        "matches": 20,
+        "predictions": 22,
+        "references": 24,
+        "p95": 19.35786435786436,
+        "paired_p95": [
+          19.357864357864358,
+          19.357864357864358
+        ],
+        "gained": [],
+        "lost": [],
+        "dice": 0.9729062310990219,
+        "passed": 6,
+        "change_unmatched": 0
+      },
+      "mass": {
+        "matches": 21,
+        "predictions": 23,
+        "references": 24,
+        "p95": 22.510822510822504,
+        "paired_p95": [
+          19.357864357864358,
+          19.357864357864358
+        ],
+        "gained": [
+          71
+        ],
+        "lost": [],
+        "dice": 0.9728925060616882,
+        "passed": 6,
+        "change_unmatched": 0,
+        "promotions": 1,
+        "below_rejected": 12
+      },
+      "size": {
+        "matches": 20,
+        "predictions": 23,
+        "references": 24,
+        "p95": 19.35786435786436,
+        "paired_p95": [
+          19.357864357864358,
+          19.357864357864358
+        ],
+        "gained": [],
+        "lost": [],
+        "dice": 0.9728751897851226,
+        "passed": 5,
+        "change_unmatched": 1,
+        "promotions": 1,
+        "below_rejected": 11
+      },
+      "boundary": {
+        "matches": 21,
+        "predictions": 23,
+        "references": 24,
+        "p95": 22.510822510822504,
+        "paired_p95": [
+          19.357864357864358,
+          18.29421582433631
+        ],
+        "gained": [
+          71
+        ],
+        "lost": [],
+        "dice": 0.9728942220982156,
+        "passed": 7,
+        "change_unmatched": 0
+      }
+    },
+    "5": {
+      "census": {
+        "matches": 9,
+        "predictions": 11,
+        "references": 12,
+        "p95": 17.006385961268883,
+        "paired_p95": [
+          17.006385961268883,
+          17.006385961268883
+        ],
+        "gained": [],
+        "lost": [],
+        "dice": 0.9801124649205686,
+        "passed": 8,
+        "change_unmatched": 0
+      },
+      "mass": {
+        "matches": 9,
+        "predictions": 12,
+        "references": 12,
+        "p95": 17.006385961268883,
+        "paired_p95": [
+          17.006385961268883,
+          17.006385961268883
+        ],
+        "gained": [],
+        "lost": [],
+        "dice": 0.980082283944937,
+        "passed": 8,
+        "change_unmatched": 1,
+        "promotions": 1,
+        "below_rejected": 3
+      },
+      "size": {
+        "matches": 9,
+        "predictions": 12,
+        "references": 12,
+        "p95": 17.006385961268883,
+        "paired_p95": [
+          17.006385961268883,
+          17.006385961268883
+        ],
+        "gained": [],
+        "lost": [],
+        "dice": 0.980082283944937,
+        "passed": 8,
+        "change_unmatched": 1,
+        "promotions": 1,
+        "below_rejected": 3
+      },
+      "boundary": {
+        "matches": 9,
+        "predictions": 12,
+        "references": 12,
+        "p95": 23.594962373766915,
+        "paired_p95": [
+          17.006385961268883,
+          23.594962373766908
+        ],
+        "gained": [],
+        "lost": [],
+        "dice": 0.9800326338983741,
+        "passed": 6,
+        "change_unmatched": 1
+      }
+    }
+  },
+  "mass_screen": {
+    "rescue_two": true,
+    "no_new_unmatched": false,
+    "beat_size": false
+  },
+  "boundary_screen": {
+    "mass_pass": false,
+    "no_lost": true,
+    "coverage": false,
+    "paired_nonincreasing": false,
+    "paired_improved_two": false
+  },
+  "advance": false
+}

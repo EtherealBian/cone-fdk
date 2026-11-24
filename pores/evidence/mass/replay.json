@@ -1,0 +1,81 @@
+{
+  "pipeline_id": "5e63e063912d9b2cbf9f6d44464bb9e3caf8e741039c56b3543ff7f7118d22d1",
+  "predictions_sha256": "ad1e3cae38a419b3c35b4ff47208f3e4ce0df75a1ee75a5524b84c76629294d4",
+  "development": {
+    "2": {
+      "calibration_counts": [
+        1053,
+        1071736
+      ],
+      "phase_medians_x2": [
+        68466,
+        104282
+      ],
+      "verified_objects": 38,
+      "selected_mass": [
+        2520430,
+        4114231,
+        4231654,
+        5465980
+      ],
+      "selected_size": [
+        4231654,
+        2962976,
+        88426,
+        5465980
+      ],
+      "mask_differences": {
+        "mass": 0,
+        "size": 0,
+        "boundary": 0
+      },
+      "replayed_voxels_per_arm": 6291456
+    },
+    "3": {
+      "calibration_counts": [
+        22322,
+        700397
+      ],
+      "phase_medians_x2": [
+        41668,
+        87556
+      ],
+      "verified_objects": 45,
+      "selected_mass": [
+        1808407
+      ],
+      "selected_size": [
+        5923252
+      ],
+      "mask_differences": {
+        "mass": 0,
+        "size": 0,
+        "boundary": 0
+      },
+      "replayed_voxels_per_arm": 6291456
+    },
+    "5": {
+      "calibration_counts": [
+        79770,
+        802931
+      ],
+      "phase_medians_x2": [
+        62542,
+        105860
+      ],
+      "verified_objects": 19,
+      "selected_mass": [
+        5214389
+      ],
+      "selected_size": [
+        5214389
+      ],
+      "mask_differences": {
+        "mass": 0,
+        "size": 0,
+        "boundary": 0
+      },
+      "replayed_voxels_per_arm": 6291456
+    }
+  }
+}
