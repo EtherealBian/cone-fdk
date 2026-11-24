@@ -1,0 +1,3 @@
+e4e93874987eb69ed1cd3646a8b084f6afa2e35b979a23b2f4cfd89fa90a4327  candidate-E-sample2.zip
+8f49f586ccf1d885951c0dba8fc3ea8715f658993aa07cee54a454195f221e62  candidate-E-sample3.zip
+a7e6c3d5a1f0bc6529cc1f562647dd0f4a25cd2752d3e935a3f307e597a9733a  candidate-E-sample5.zip

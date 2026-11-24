@@ -1,0 +1,17 @@
+status,pred_id,reference_label,signed_volume_error_pct,source_x,source_y,source_z,source_tiff
+missed reference,,21,,437,594,408,set1sample5raw_0408.tif
+unmatched detection,145481,,,435,431,406,set1sample5raw_0406.tif
+unmatched detection,2952865,,,521,393,446,set1sample5raw_0446.tif
+unmatched detection,2985413,,,556,519,445,set1sample5raw_0445.tif
+unmatched detection,3719524,,,458,569,458,set1sample5raw_0458.tif
+matched,4465840,67,28.358208955223873,538,413,471,set1sample5raw_0471.tif
+matched,7778833,105,-21.167883211678827,375,558,517,set1sample5raw_0517.tif
+matched,7059467,92,-15.492957746478876,369,560,513,set1sample5raw_0513.tif
+matched,1624524,38,13.698630136986312,562,579,424,set1sample5raw_0424.tif
+matched,690238,22,6.74486803519061,425,507,412,set1sample5raw_0412.tif
+matched,4571358,70,-6.593406593406592,583,572,475,set1sample5raw_0475.tif
+matched,769614,26,5.46875,439,569,416,set1sample5raw_0416.tif
+matched,4682360,74,-4.2424242424242475,471,494,494,set1sample5raw_0494.tif
+matched,3629946,60,-2.758620689655178,483,478,458,set1sample5raw_0458.tif
+matched,827935,25,-1.4192139737991272,396,544,412,set1sample5raw_0412.tif
+matched,6781296,90,0.2491694352159568,464,504,516,set1sample5raw_0516.tif
