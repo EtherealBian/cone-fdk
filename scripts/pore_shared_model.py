@@ -12,8 +12,6 @@ def owned_objects(t):
         raise ValueError("Expected a nonempty binary calibration stack")
     lab, _ = ndi.label(t)
     cnt = np.bincount(lab.ravel())
-    distance, nearest = ndi.distance_transform_edt(~t, return_indices=True)
-    owner = lab[tuple(nearest)]
     records = []
     for j, box in enumerate(ndi.find_objects(lab), 1):
         if not 16 <= cnt[j] <= 511 or any(
@@ -21,7 +19,17 @@ def owned_objects(t):
         ):
             continue
         region = tuple(slice(s.start - 2, s.stop + 2) for s in box)
-        mask = (owner[region] == j) & (distance[region] <= 2)
+        # Include all possible distance-two competitors and exact-distance ties.
+        outer = tuple(
+            slice(max(0, s.start - 2), min(n, s.stop + 2))
+            for s, n in zip(region, t.shape, strict=True)
+        )
+        inner = tuple(
+            slice(s.start - o.start, s.stop - o.start) for s, o in zip(region, outer, strict=True)
+        )
+        local = lab[outer]
+        distance, nearest = ndi.distance_transform_edt(local == 0, return_indices=True)
+        mask = ((local[tuple(nearest)] == j) & (distance <= 2))[inner].copy()
         n = int(cnt[j])
         if np.count_nonzero(t[region] & mask) != n:
             raise ValueError("Incomplete or contaminated ownership")

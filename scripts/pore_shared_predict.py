@@ -22,6 +22,8 @@ def model_id():
         "pores/EXPERIMENT-H.md",
         "scripts/pore_shared_model.py",
         "scripts/pore_shared_predict.py",
+        "scripts/pore_transfer.py",
+        "pores/adaptive.cu",
     ]
     return dict(
         parent=f_id(),
@@ -48,7 +50,16 @@ def generate(cache, out):
             seg, ss = verified(cache, i, "segmented", False)
             raws[i] = raw
             records[str(i)] = dict(raw=rs["sha256"], segmented=ss["sha256"])
-            x[i] = np.concatenate([fields(raw, i, a, a + 4, gpu) for a in range(160, 184, 4)])
+            # Disk backing preserves all FP32 values with less committed private memory.
+            feat = out / f"calibration-features-{i}.npy"
+            disk = np.lib.format.open_memmap(
+                feat, mode="w+", dtype="<f4", shape=(24, 22, 272, 272)
+            )
+            for a in range(160, 184, 4):
+                disk[a - 160 : a - 156] = fields(raw, i, a, a + 4, gpu)
+            disk.flush()
+            del disk
+            x[i] = np.load(feat, mmap_mode="r")
             t[i] = stack(seg, i, "segmented", 160, 184)
             print("calibration ready", i, flush=True)
         net, fit = train(x, t)
