@@ -1,0 +1,134 @@
+{
+  "identity": {
+    "files": {
+      "pores/REGION-MEDOID-PILOT.md": "8e6d186ffc45b792af6c1a6fa7283efe0e4d5335a59418a3ac8503729f234a1f",
+      "scripts/pore_region.py": "f72b101841283f0e43fd931a5e409c6f07977004b1f97804b1843fcd991d158e",
+      "scripts/pore_region_gpu.py": "cf99067c5589f7c0736805c0cf9cc96cf13ab2a8b11be41141eb88b2cf87fdad",
+      "scripts/pore_region_score.py": "05d46c024b7f491c92bd3aa69716596d79f2cdc0ca29d61dfb7003cb5f16cbf7",
+      "pores/region_medoid.cu": "25cd1af02b2e2f50f719f1238abb632924f2743c638bc198cd402689c68616b3",
+      "scripts/pore_axial_score.py": "cf22dc9c4da0ca48bc0468c5fce7f93f21f587aeb83151c9f0c43da9df3c3e16",
+      "scripts/pore_section_score.py": "03ae9566275642b5266f57f6840b3d75593f937a183ef8539a285547d6421918",
+      "scripts/pore_monotone_score.py": "2d54df3b70783c4b8200bbc46c74b257fae34f62996689f5a36c064ee769f071",
+      "scripts/pore_transfer.py": "f4092f168839be8b363dd48db5eaf62acf16ed9920f8e5e2c2e1d35f678b73ca",
+      "pores/validate.py": "2c81e4f6731d3fe852edcbb693af30e401d3cdcaddb179c2744443c211afa3c9",
+      "pores/pore_check.py": "7046a18f709484d5074b3338bcf7f8449db42c4d3f39a8fdb1a39a1d59b6932b"
+    },
+    "parents": {
+      "section-area/control": "6249f11f71a9fecd773e5e50281129890169e9289606ac74587326ff6e084361",
+      "axial-raw/axial": "52e69b38e67424a1d405ec6a536f3727a866ad51a246bd0c21828531c115cf37",
+      "census-train/census": "d7467efcb92ffe1737983e8aa37544bfa72f88a1924f5a9c25617a2a18ee5e96",
+      "local-connectivity/critical": "5978d7c609b0a5d0da75ff4597a9014a0549a7bef9b74484bf13a6a38af7313a",
+      "five-plane/volume": "62c96e9fcce8ceb08944a4e733b3521cfbd9064e3adacf56c30fc23cf10efe0b",
+      "orientation/mean8": "fe0d446043232df7b0c591cd4133e5651673ce0cb3dd3be7049374bb67773c40",
+      "distance-target/distance": "626ffd293bd98bcdf18b050b99fc63b8143c6bf59a9642c3936c7110ea0a127b"
+    },
+    "compiled": {
+      "region-medoid.ptx": "f81a2299b77e6531aedddec6bdc0acb4838d9494ba73e64b7b6184c40a078faf",
+      "pores.ptx": "0d900a9bcdbaff294f4853cb3991b47b6db6f3795e70be8c14ea849cd5bd63b3",
+      "cone-pores.exe": "afb2edcdc1e969df968f722192aa2af3c9959abf1dbd338af5e27479f1196b06"
+    }
+  },
+  "pipeline_id": "8ef23316b7525053c2a523cefc533cbdff566240d8add6132f1e2e761f4bf2ba",
+  "shape_zyx": [
+    96,
+    256,
+    256
+  ],
+  "origin_xyz": [
+    360,
+    376,
+    256
+  ],
+  "specimens": {
+    "2": {
+      "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+      "segmented": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+      "donor_masks": [
+        "d62c60df2c8dd4f69dcdda1691e210bc7a0de2ccd0a7fe23416434e6a21f6554",
+        "14501d3bbee9cfc7dbe489af0f9b2aaa78c7898a3f28ede8eeb3236d26ebae86",
+        "e8929221eb9a199e126b897a9c1d1fac9201898e12e507b0018e12fcbdca33d5",
+        "bc4815ae199991a2c397e1f460a30c446158d9fa6217fb17307f7d17ac2a61be",
+        "90ab53fcf8fcc86dfc5f2d27a0334163ec2f454d5d40ab0504c9ef118e25f8be",
+        "7c8b1e92b2ba0da3e8056eca4acd51ef81b51e052345a09a97bfb2af125bff35",
+        "b98b41d34ebd73d94408995770cae4b4ae889c24fa48b9474807474563dbfd75"
+      ],
+      "masks": {
+        "majority": {
+          "mask": "d720d2ad3600dd5ff21e60e2c01bd58745d9de6e2fddc899acc3ebf8ce4d307b",
+          "file": "f12cc06bfad55877d39b9a7e1674d999f20502a70bc40722540acbc369a7dc65",
+          "cpu_gpu_differences": 0
+        },
+        "medoid": {
+          "mask": "3d30671f8c7b4136692928be3c826c9ca7c0fb007d145e4011c65c20b7a9e1aa",
+          "file": "97e684a67629c6bf9343bb0c8afae94492a1534e22733b6aa6f779eb30d27db5",
+          "cpu_gpu_differences": 0
+        }
+      },
+      "regions": 152,
+      "ledger_sha256": "4af5a4c60b9ecce844b9e3ed0fbfb38552cb89fd6109f25bee103a73b4d97a55",
+      "union_table": "cf5fb633ef8f47b3f488e1df9b4230fd0364e8c029b76dc3ac802fd44bd1aa67",
+      "union_mask": "eb801376c0eedb4c715cc3eb8a1c4328dced48b29037a153a0cc474f9761a21a",
+      "majority_medoid_differences": 1066
+    },
+    "3": {
+      "raw": "460ea68425d9ac387485b65a3aa2b3f25da31cfe9de8181d4c1a5b0a982d26c8",
+      "segmented": "f94c64a99f5f0e7971a3e0e2f7c932183009938aa5d284bcd23f4657674e6009",
+      "donor_masks": [
+        "94e71b3f854b061932c6e6f797e06df67f3a317f00a431951029732200528269",
+        "107705d59bcdc994c411581b675ea835235ee6754f9be83fa9dbc07005f22143",
+        "df02f68d9d5f09858fb12b8131160b76897e4df3c8c03dda06fccdf935170068",
+        "671e59add4074ade53f71c6a71968d01155bc5e8ddb737f7b3698e6942fa0cc2",
+        "4721597f29ccac391a22f46fddbd482b10a8a74fc0117067c1356a820daef99b",
+        "3e0614061a8b0c0b3e8948eb0f802dec7327008295ea213815ed1e0776756bee",
+        "261102ea73eb8ff5fc2165483e74b4fec39e256b31ebdb1148d51e4af47ad8ea"
+      ],
+      "masks": {
+        "majority": {
+          "mask": "465e8ddbdf8499bf6e752ff220b017331aac08e13ecc7d719d876c24672c4b51",
+          "file": "dc74f454fbb11487083c90ec6751d0c0920278476250022739783b5b969da553",
+          "cpu_gpu_differences": 0
+        },
+        "medoid": {
+          "mask": "df1dc440b8e174f465b712fc80fb1cf77ff5f3e0678698f7ea90a9f4d9411fc3",
+          "file": "2b7e9d6a5c70bc379389f3bc1edc52639e39f0d3836384f97b02a882944c5b9e",
+          "cpu_gpu_differences": 0
+        }
+      },
+      "regions": 362,
+      "ledger_sha256": "033c3691895d5bac08b3338844e76fe2570e7aa9c3888a53b30e5fb1cc1274f3",
+      "union_table": "63ba9ba66a3cb8e561708a8d87c184c0d00f2274f83ed9bd8be81c805c58f4d8",
+      "union_mask": "60f3a8c2767c68f043902906c12d49a075cf317854a94dc7a54ef673c583e3c7",
+      "majority_medoid_differences": 11857
+    },
+    "5": {
+      "raw": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37",
+      "segmented": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b",
+      "donor_masks": [
+        "03206d3e560e135de42722fb5e9cc8bde799a8c250bfbe12392179ae3589af4a",
+        "7fb4b3f30b910cdadd7241fb0f1b69ab8d4fa3754ee3dc5422e7f5e61f8a6462",
+        "7bc87d965c8d032f06f39ced69003cf34c1828242082f8c2a678cf7ce45b3d3b",
+        "fafb3289af61fd82cbe70f1ef72eef80fab71f081cd430f7e9f568d9397a31b5",
+        "069b3cbbdf36396615fb4eb921260fb902d1f242ebad3245980de1c90bd4abd1",
+        "caa6b5f241737df99393a06e56d0d5cc427adc58cf1f03d9f7d166944057c118",
+        "7622c913f1e4d80cf212a5e34837d88368df187e1d1af5047d0cee66e75f4208"
+      ],
+      "masks": {
+        "majority": {
+          "mask": "4f0d9f41f53e4ad890d614363ae99160ace197946e92ed0d596a3eb8f72781db",
+          "file": "1a2a3d778dde0b67915093992c8db71c710f9892627667f3da8beb4245c22d37",
+          "cpu_gpu_differences": 0
+        },
+        "medoid": {
+          "mask": "85a0ad4e235eecea2dee55fd2d0ed9a239a7e828c4cae81bba7f5a5993f2805f",
+          "file": "cc0ba6fab5a1f860d0b4fd704f5b1a60e97d9643e1bf4935c62697bf89709b78",
+          "cpu_gpu_differences": 0
+        }
+      },
+      "regions": 148,
+      "ledger_sha256": "c3372451bc57c20f1e86568b6cb303e3b71989d0aa94b0a85dd2fe38301221d9",
+      "union_table": "da5d95b719bcb73c87e9aec139f2a27486e08e4e4a8450138bfb648dcbb7ddfb",
+      "union_mask": "8910c4d795847bd8eb0928a8122d2bf512c6b01f020eaf6025dc5d06797c3b9c",
+      "majority_medoid_differences": 5523
+    }
+  }
+}
