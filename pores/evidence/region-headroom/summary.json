@@ -1,0 +1,32 @@
+{
+  "diagnostic_only": true,
+  "specimens": {
+    "2": {
+      "separable": true,
+      "reference": 49,
+      "needed": 45,
+      "max_coverage_count": 48,
+      "witness_count": 45,
+      "witness_p95": 8.442224442224441,
+      "possible": true
+    },
+    "3": {
+      "separable": true,
+      "reference": 24,
+      "needed": 22,
+      "max_coverage_count": 23,
+      "witness_count": 22,
+      "witness_p95": 14.483067404754152,
+      "possible": true
+    },
+    "5": {
+      "separable": true,
+      "reference": 12,
+      "needed": 11,
+      "max_coverage_count": 10,
+      "witness_count": 10,
+      "witness_p95": 11.215625703061454,
+      "possible": false
+    }
+  }
+}

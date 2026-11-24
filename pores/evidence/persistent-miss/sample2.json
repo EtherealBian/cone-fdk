@@ -1,0 +1,183 @@
+{
+  "specimen": 2,
+  "sources": {
+    "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+    "segmented": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310"
+  },
+  "catalog_sha256": "744f7f1438bbdd773365f5825a62d75ee4e35f61b8090b20c18eedfc6c348ea7",
+  "reference_digest": "0141328870f75714d73c0e02e1f0b943056d6a88238e9bb70537a5031ab9ec26",
+  "cases": {
+    "28": {
+      "reference_voxels": 164,
+      "bounds_xyz": [
+        [
+          377,
+          386
+        ],
+        [
+          547,
+          563
+        ],
+        [
+          281,
+          287
+        ]
+      ],
+      "inside": {
+        "count": 164,
+        "minimum": 41691,
+        "median": 47978.0,
+        "mean": 47833.76829268293,
+        "maximum": 52371
+      },
+      "material_shell": {
+        "count": 236,
+        "minimum": 41647,
+        "median": 49365.0,
+        "mean": 49170.41525423729,
+        "maximum": 54242
+      },
+      "donors": {
+        "section-area/control": {
+          "overlap_total": 82,
+          "best_seed": 1748757,
+          "best_reason": "below IoU",
+          "components": [
+            {
+              "seed": 1748757,
+              "voxels": 117,
+              "overlap": 82,
+              "clipped": false,
+              "eligible": true,
+              "iou": "82/199",
+              "coverage": "1/2",
+              "purity": "82/117"
+            }
+          ]
+        },
+        "axial-raw/axial": {
+          "overlap_total": 71,
+          "best_seed": 1749269,
+          "best_reason": "below IoU",
+          "components": [
+            {
+              "seed": 1749269,
+              "voxels": 103,
+              "overlap": 71,
+              "clipped": false,
+              "eligible": true,
+              "iou": "71/196",
+              "coverage": "71/164",
+              "purity": "71/103"
+            }
+          ]
+        },
+        "census-train/census": {
+          "overlap_total": 74,
+          "best_seed": 1749014,
+          "best_reason": "below IoU",
+          "components": [
+            {
+              "seed": 1749014,
+              "voxels": 105,
+              "overlap": 74,
+              "clipped": false,
+              "eligible": true,
+              "iou": "74/195",
+              "coverage": "37/82",
+              "purity": "74/105"
+            }
+          ]
+        },
+        "local-connectivity/critical": {
+          "overlap_total": 85,
+          "best_seed": 1748757,
+          "best_reason": "below IoU",
+          "components": [
+            {
+              "seed": 1748757,
+              "voxels": 114,
+              "overlap": 82,
+              "clipped": false,
+              "eligible": true,
+              "iou": "41/98",
+              "coverage": "1/2",
+              "purity": "41/57"
+            },
+            {
+              "seed": 1682195,
+              "voxels": 2,
+              "overlap": 2,
+              "clipped": false,
+              "eligible": false,
+              "iou": "1/82",
+              "coverage": "1/82",
+              "purity": "1"
+            },
+            {
+              "seed": 1747988,
+              "voxels": 1,
+              "overlap": 1,
+              "clipped": false,
+              "eligible": false,
+              "iou": "1/164",
+              "coverage": "1/164",
+              "purity": "1"
+            }
+          ]
+        },
+        "five-plane/volume": {
+          "overlap_total": 90,
+          "best_seed": 1683478,
+          "best_reason": "below IoU",
+          "components": [
+            {
+              "seed": 1683478,
+              "voxels": 138,
+              "overlap": 90,
+              "clipped": false,
+              "eligible": true,
+              "iou": "45/106",
+              "coverage": "45/82",
+              "purity": "15/23"
+            }
+          ]
+        },
+        "orientation/mean8": {
+          "overlap_total": 78,
+          "best_seed": 1749013,
+          "best_reason": "below IoU",
+          "components": [
+            {
+              "seed": 1749013,
+              "voxels": 111,
+              "overlap": 78,
+              "clipped": false,
+              "eligible": true,
+              "iou": "78/197",
+              "coverage": "39/82",
+              "purity": "26/37"
+            }
+          ]
+        },
+        "distance-target/distance": {
+          "overlap_total": 77,
+          "best_seed": 1749013,
+          "best_reason": "below IoU",
+          "components": [
+            {
+              "seed": 1749013,
+              "voxels": 106,
+              "overlap": 77,
+              "clipped": false,
+              "eligible": true,
+              "iou": "77/193",
+              "coverage": "77/164",
+              "purity": "77/106"
+            }
+          ]
+        }
+      }
+    }
+  }
+}
