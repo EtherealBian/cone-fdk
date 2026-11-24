@@ -52,6 +52,7 @@ def inventory(cache):
         if len(data) != f["size"] or hashlib.md5(data).hexdigest() != f["computed_md5"]:
             raise ValueError("Download mismatch")
         with np.load(BytesIO(data), allow_pickle=False) as z:
+            # z is relative to the deposited segmentation, not the uncropped NIST scan.
             masks, indices = z["slices"], z["z"]
             if (
                 indices.ndim != 1

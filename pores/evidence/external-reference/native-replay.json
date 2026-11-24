@@ -1,0 +1,163 @@
+{
+  "input_sha256": "c936b4d9292ebaed30a234a54fefecde5bdb8b838b1084a161c512aee42403a0",
+  "native_sha256": "afb2edcdc1e969df968f722192aa2af3c9959abf1dbd338af5e27479f1196b06",
+  "ptx_sha256": "0d900a9bcdbaff294f4853cb3991b47b6db6f3795e70be8c14ea849cd5bd63b3",
+  "specimens": {
+    "RBF_05": {
+      "methods": {
+        "Binary": {
+          "slab_depths": [
+            5,
+            31
+          ],
+          "all_components": 217,
+          "eligible": 51,
+          "pore_voxels": 8956,
+          "native_csv_sha256": "16bbd78ebbd45816bfb89e3a0a807070318b162c3d81718faf8218d768030a1d"
+        },
+        "Adaptive": {
+          "slab_depths": [
+            5,
+            31
+          ],
+          "all_components": 179,
+          "eligible": 61,
+          "pore_voxels": 11847,
+          "native_csv_sha256": "a55cbd5b3c2c65f00887c06ca8d74b2be7c587e826c2ea8fceddf7e75bbde6c7"
+        },
+        "UNet": {
+          "slab_depths": [
+            5,
+            31
+          ],
+          "all_components": 151,
+          "eligible": 55,
+          "pore_voxels": 9914,
+          "native_csv_sha256": "51f4f5199f3ddc9a7e9b6a78857eb934b31e814e998bf2d92b5002a19e7127f9"
+        }
+      },
+      "replayed_pairs": {
+        "Binary_vs_Adaptive": 51,
+        "Binary_vs_UNet": 51,
+        "Adaptive_vs_UNet": 55
+      }
+    },
+    "RBF_09": {
+      "methods": {
+        "Binary": {
+          "slab_depths": [
+            5,
+            31
+          ],
+          "all_components": 1375,
+          "eligible": 57,
+          "pore_voxels": 15999,
+          "native_csv_sha256": "646175896390976cf0701a488e6071ec9b324574646fc799d7e696cb32fe4aea"
+        },
+        "Adaptive": {
+          "slab_depths": [
+            5,
+            31
+          ],
+          "all_components": 205,
+          "eligible": 56,
+          "pore_voxels": 12852,
+          "native_csv_sha256": "8feb2c3317c7aad22fde55c18ec0ccb8d83454aeeaac1106cd1ac26544bc9951"
+        },
+        "UNet": {
+          "slab_depths": [
+            5,
+            31
+          ],
+          "all_components": 156,
+          "eligible": 46,
+          "pore_voxels": 10003,
+          "native_csv_sha256": "3927ed8c071acdcecec87cb5a7d3f0f603f92d5137ac1b412a3000a0361d7d5f"
+        }
+      },
+      "replayed_pairs": {
+        "Binary_vs_Adaptive": 56,
+        "Binary_vs_UNet": 46,
+        "Adaptive_vs_UNet": 46
+      }
+    },
+    "RBF_21": {
+      "methods": {
+        "Binary": {
+          "slab_depths": [
+            5,
+            31
+          ],
+          "all_components": 220,
+          "eligible": 72,
+          "pore_voxels": 16768,
+          "native_csv_sha256": "782a445f715c59b7b2bf3ad7f7b5491b98ba9a889a10089a4818509fb994cfbe"
+        },
+        "Adaptive": {
+          "slab_depths": [
+            5,
+            31
+          ],
+          "all_components": 203,
+          "eligible": 59,
+          "pore_voxels": 13802,
+          "native_csv_sha256": "457b31e333e74ab96a4e32fe8a5bad2001d2ae71e38ee875883482692df96625"
+        },
+        "UNet": {
+          "slab_depths": [
+            5,
+            31
+          ],
+          "all_components": 171,
+          "eligible": 53,
+          "pore_voxels": 11776,
+          "native_csv_sha256": "fb69dc87ff452eb12c5f7be08e75a9e1dc56e78cefa215c5fb9874a2d79bba7a"
+        }
+      },
+      "replayed_pairs": {
+        "Binary_vs_Adaptive": 59,
+        "Binary_vs_UNet": 53,
+        "Adaptive_vs_UNet": 53
+      }
+    },
+    "RBF_105": {
+      "methods": {
+        "Binary": {
+          "slab_depths": [
+            5,
+            31
+          ],
+          "all_components": 101,
+          "eligible": 26,
+          "pore_voxels": 6003,
+          "native_csv_sha256": "23d2dddb5ab55319076b31ed08c3848d6fbb9d67b06572f647558f6512d67b2c"
+        },
+        "Adaptive": {
+          "slab_depths": [
+            5,
+            31
+          ],
+          "all_components": 111,
+          "eligible": 31,
+          "pore_voxels": 6263,
+          "native_csv_sha256": "5330825aac9621c42d6b669a9553cfc678730c74ff3d6525007a2ffbe7fd21a4"
+        },
+        "UNet": {
+          "slab_depths": [
+            5,
+            31
+          ],
+          "all_components": 81,
+          "eligible": 18,
+          "pore_voxels": 4535,
+          "native_csv_sha256": "bc0cda1c64b6cfdfb24d9b29a3722e178689e0324fc78e25eff007e139a008fb"
+        }
+      },
+      "replayed_pairs": {
+        "Binary_vs_Adaptive": 26,
+        "Binary_vs_UNet": 18,
+        "Adaptive_vs_UNet": 18
+      }
+    }
+  }
+}

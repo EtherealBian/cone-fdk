@@ -39,16 +39,16 @@ python scripts/pore_retained_baseline.py --regenerated build/retained-e-fresh --
 
 [可索取的 CoCr 扫描、人工标注对照及不能用作独立试件的同源数据](EXTERNAL-DATA-INTAKE.md)。
 
-先要能看到**同一个孔的连续三维边界**。我们核查了 Miner、Hobdari、Stanton、Narra 发布的 [CMU KiltHub AMBench 数据 v1（CC BY 4.0）](https://doi.org/10.1184/R1/31378690.v1)。按[作者文件说明](https://ndownloader.figshare.com/files/62042347)，整卷分割是不同算法的输出；人工测试标注另存为带原始 z 序号的切片。下载全部 12 份 `_slices.npz`，核对发布者的文件大小与校验和；同一试件三份标注按真实 z 坐标取并集，绝不把三份标注算成三倍的深度。
+先要能看到**同一个孔的连续三维边界**。我们核查了 Miner、Hobdari、Stanton、Narra 发布的 [CMU KiltHub AMBench 数据 v1（CC BY 4.0）](https://doi.org/10.1184/R1/31378690.v1)。按[作者文件说明](https://ndownloader.figshare.com/files/62042347)，整卷分割是不同算法的输出；人工测试标注另存为带发布分割体 z 序号的切片（不是未裁剪 NIST 原图坐标）。下载全部 12 份 `_slices.npz`，核对发布者的文件大小与校验和；同一试件三份标注按真实 z 坐标取并集，绝不把三份标注算成三倍的深度。
 
-|外部试件|人工测试标注覆盖的原始 z 序号|连续段最大层数|
+|外部试件|人工测试标注覆盖的发布分割体 z 序号|连续段最大层数|
 |---|---|---:|
 |RBF_05|459、1756、1790、2154|1|
 |RBF_09|245、404、730、1915|1|
 |RBF_21|715、756、873、1088|1|
 |RBF_105|391、656、1192、2041|1|
 
-这批人工测试标签可用于比较**截面**，不能给出完整三维孔体积。这个结论仅限该版的人工测试分区，不否定原始扫描或方法生成的整卷分割的其他用途。没有把任何外部像素用于训练或正式计分。[文件 ID、SHA-256、形状和切片序号](evidence/retained-e/external-slices.json)来自两套单独下载的缓存，输出 SHA-256 均为 `542652c56abec69c7684f3459e56feea0251c5d7ca6e68e2333d3bd0b7874b7a`。
+这批人工测试标签可用于比较**截面**，不能给出完整三维孔体积。这个结论仅限该版的人工测试分区，不否定原始扫描或方法生成的整卷分割的其他用途。[四件整卷算法分割的逐孔对照](EXTERNAL-REFERENCE-AGREEMENT.md)说明，连续数字标签可以复核计数，但不同算法画出的孔边界并不等价。没有把任何外部像素用于训练或正式计分。[文件 ID、SHA-256、形状和切片序号](evidence/retained-e/external-slices.json)来自两套单独下载的缓存，输出 SHA-256 均为 `542652c56abec69c7684f3459e56feea0251c5d7ca6e68e2333d3bd0b7874b7a`。
 
 ```powershell
 python scripts/pore_external_slice_inventory.py --cache build/amb-new --out build/amb-new.json
