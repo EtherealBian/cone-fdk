@@ -1,0 +1,26 @@
+{
+  "fit": "5ad8a75662372f1a7e0c8ff3f08e06e34b388248c508d79de256848f3a07d63c",
+  "record": {
+    "raw": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37",
+    "segmented": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b",
+    "cal_features": "dfac2e907548126015be9f88f8377f317af0996fdef0c6c1ee2187262e494012",
+    "cal_mask": "9cd3e4d1a6dba9d1eed3510487c7a86c0c55c2bd99602f52255b51f6e2547a9e",
+    "fixed_baseline": "64b531512e03b6c6e53c36291a9c5caeed0cd62f21ba26e6db05242e42b0b243",
+    "masks": {
+      "plane": {
+        "file": "fd7590ef744f99c430ba6fcdfcb155974406d0bca784d87a1309ba707f8ce6bc",
+        "mask": "d93f394bbd308c11fbd2b28c17aa39cce5843e06cfe4d91bd78326d01874be09",
+        "cpu_gpu_decision_disagreements": 0,
+        "max_abs_cpu_gpu": 6.400726555000347e-06,
+        "first_difference_xyz_native_cpu": null
+      },
+      "axial": {
+        "file": "25a8555591d9e4b6dee975e9d596d9bd70acf2219b6629740deb08b46ec09fc6",
+        "mask": "7fb4b3f30b910cdadd7241fb0f1b69ab8d4fa3754ee3dc5422e7f5e61f8a6462",
+        "cpu_gpu_decision_disagreements": 0,
+        "max_abs_cpu_gpu": 6.853140003926228e-06,
+        "first_difference_xyz_native_cpu": null
+      }
+    }
+  }
+}
