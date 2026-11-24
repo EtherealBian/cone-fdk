@@ -32,3 +32,51 @@ def test_whole_boundary_handoff_symmetric_preserves_ambiguous_regions(tmp_path):
     delta[3:7, 3:7, [3, 7]] = True
     assert np.array_equal(outs[0], a ^ delta) and np.array_equal(outs[1], b ^ delta)
     assert sum(row["changed_voxels"] for row in g["regions"]) == 32
+
+
+@pytest.mark.parametrize("i,swaps,delta", [(2, 32, 2130), (3, 15, 478), (5, 8, 271)])
+def test_sealed_reciprocal_evidence(i, swaps, delta):
+    from pore_axial_raw import digest, sha
+    from pore_axial_score import read_mask
+    from pore_reciprocal import ARMS, E, parents
+    from pore_region import read
+    from test_region_evidence import native_rows
+
+    s = read(E / "predictions.json")
+    r = s["specimens"][str(i)]
+    p = E / f"sample{i}-choices.json"
+    assert sha(p) == r["ledger"]
+    g = read(p)
+    assert [sha(E / f"sample{i}-{k}-native.csv") for k in ("profile", "census", "union")] == g[
+        "tables"
+    ]
+    src, _, _ = parents(i)
+    outs = [read_mask(E, i, k, r["masks"][k]) for k in ARMS]
+    assert (
+        g["reasons"]["replace"] == swaps
+        and np.array_equal(src[0] ^ src[1], outs[0] ^ outs[1])
+        and np.array_equal(src[0] & src[1], outs[0] & outs[1])
+    )
+    assert sum(v["changed_voxels"] for v in g["regions"]) == delta
+    for v in g["regions"]:
+        assert sum(map(sum, v["sizes"])) - v["overlap"] == v["area"]
+        if v["reason"] == "replace":
+            assert (
+                all(len(ss) == 1 and ss[0] >= 64 for ss in v["sizes"])
+                and 2 * v["overlap"] >= v["area"]
+                and v["changed_voxels"] == v["area"] - v["overlap"]
+            )
+    d = read(E / f"sample{i}.json")
+    assert d["pipeline_id"] == s["pipeline_id"] and d["advance"] == (i == 5)
+    for k, m in zip(("profile", "census", *ARMS), (*src, *outs), strict=True):
+        arm = d["arms"][k]
+        native_rows(E, i, k, arm)
+        assert digest(m) == arm["mask_u8_sha256"]
+    for j, (k, base) in enumerate(zip(ARMS, ("profile", "census"), strict=True)):
+        c = d["comparisons"][k][base]
+        assert (
+            not c["gained"]
+            and not c["lost"]
+            and np.count_nonzero(src[j] != outs[j]) == delta
+            and d["arms"][k]["objects"]["eligible_prediction"] == g["eligible"][j]
+        )

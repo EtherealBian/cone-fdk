@@ -1,0 +1,42 @@
+{
+  "pipeline_id": "b75d71eac1a5495e6f96c412b5ae8637292377a48fd7a1114d8dad9209732af6",
+  "arms": [
+    "profile",
+    "census",
+    "forward",
+    "reverse"
+  ],
+  "byte_identical_tables": {
+    "sample2-census-matches.csv": "b44babe359991cba2e9923409c8dea0000fb4b27d7f12e1b8d4e39ba976f7e56",
+    "sample2-census-pores.csv": "c2786ce89e211a45ea2f3e37fc32130c6009910960924c5b92800da7c4cdf742",
+    "sample2-forward-matches.csv": "8f76390f039d5ba94bdd96fda23009ba2125b38b583cda0fe583e2b8ec0f4c46",
+    "sample2-forward-pores.csv": "192561ed40766a84c39954a13ed5f2bf9433cc57cef868e9c3a2fa0c709055d9",
+    "sample2-profile-matches.csv": "3aafae0f236f8e1ac9a6e0674ae9840f62c8bdb7d7327b549d897cec5022ca90",
+    "sample2-profile-pores.csv": "29fbedfeb3ac0d3b8da8f4855e24a0cd9a694b4e2315094574baae333245b582",
+    "sample2-reverse-matches.csv": "28bb00d4abebf01bc5bfd6f0cfd4a04a891187677a8aaecb11b0730d81df7c9a",
+    "sample2-reverse-pores.csv": "98439af1c1d51aff1f66db6ec651f4482003e1077ec38ff5f080b5cac590c638",
+    "sample3-census-matches.csv": "ced9e44cea4cef48710b778b129c432fe1fb20abf9d26b8e4185cf73e3032d57",
+    "sample3-census-pores.csv": "7e6d1415682aefe6ee971118ecb179f1cfd965109bb9bf79e632b845db3b3401",
+    "sample3-forward-matches.csv": "659e66f44cb705797b0c3d88536ee589e07a82eaada68224861c5c963bcdce07",
+    "sample3-forward-pores.csv": "10389e7577f9d431b43e05ba48432956dc9fbad6acc84e906fd1f7302351389d",
+    "sample3-profile-matches.csv": "a998f88ac730684fd29c4f59703b3de4fa1f69c986907e141a16c76d3381a6fb",
+    "sample3-profile-pores.csv": "2e3fa4c772b091115769da02ab49bb725424e237bd9a52a7b1eb64c6892e0cf2",
+    "sample3-reverse-matches.csv": "7693549275e18660cd37d80e2c40329b6863ad707bb58b41889c2f03a5f0db78",
+    "sample3-reverse-pores.csv": "0c7a794eb0eb27fd9993922b85cf81eed4e9c35f6e84256689fa3fa708f0183f",
+    "sample5-census-matches.csv": "3f19448c56b4e66bd344fc49c56a16863a4e681f6519e171afc41e63b741cde9",
+    "sample5-census-pores.csv": "e2c99559c2a3c765ab9a2f759fb8b5e552b8601ce7e301a09e792630c70170ad",
+    "sample5-forward-matches.csv": "c608a6956fbd116160c5c294a3305b37e01458e3bd053cc2a0e6f14515aca47b",
+    "sample5-forward-pores.csv": "64884409323997b9e0ee7fe882a7609c11827418d3f883a89ac67ec41ce233d7",
+    "sample5-profile-matches.csv": "3d4665a50bc52ece7dc91d1437b235e3cfe1e339bbb60eccf7613c5f16c03327",
+    "sample5-profile-pores.csv": "3cd2c31be3ebe84b3c5f5b4fd2dc9d833a0e694f9e16bf1ef95d18b226dbc3f8",
+    "sample5-reverse-matches.csv": "d8113f337cadede3e3ca6ad8e294647cd35348a1ecb5252e343a564acd101511",
+    "sample5-reverse-pores.csv": "c9db05b48f872a983d692bc22e07da64b2812d754855934374c36178943c8b8a"
+  },
+  "semantic_json_sha256": {
+    "sample2.json": "18bb28bf9a956e22e3b089ef1db122b2368b88a966c37d7005e6fcc31d789262",
+    "sample3.json": "068456bb99969d2a6c68e0035c4128c540e706f2884b6ddcaf63039f494dc3d0",
+    "sample5.json": "d535c251612e3657692fe6ffe3dbfa5aee9112b51bfa7bb4a835f84efff253ab",
+    "summary.json": "2ce11418f9fce8f6768287292b2c675fa75def6c410d97772d894e2101163ac6"
+  },
+  "excluded_only": "arms.*.native.elapsed_s"
+}
