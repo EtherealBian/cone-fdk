@@ -99,7 +99,10 @@ def source(cache, out):
 def metrics(a, b):
     # First array is reference, second is prediction.
     tn, fp, fn, tp = map(int, np.bincount((2 * a + b).ravel(), minlength=4))
-    div = lambda n, d: n / d if d else None
+
+    def div(n, d):
+        return n / d if d else None
+
     return dict(
         tn=tn,
         fp=fp,
@@ -135,15 +138,13 @@ def score(pred, panel):
             g = p[xy[:, 3], xy[:, 2]]
             c = g < 128
             m = (g >= 16) & (g <= 239)
-            hist = lambda mask: np.bincount(
-                (4 * a[mask] + 2 * b[mask] + c[mask]), minlength=8
-            ).tolist()
+            cells = 4 * a + 2 * b + c
             d0 = metrics(a, c)
             supported = all(min(q.sum(), len(q) - q.sum()) >= 32 for q in (a, c))
             rows[split] = dict(
                 count=len(a),
-                archive_fixed_printed=hist(np.ones(len(a), bool)),
-                intermediate_tones=hist(m),
+                archive_fixed_printed=np.bincount(cells, minlength=8).tolist(),
+                intermediate_tones=np.bincount(cells[m], minlength=8).tolist(),
                 archive_reference_printed=d0,
                 archive_reference_fixed=metrics(a, b),
                 printed_reference_fixed=metrics(c, b),

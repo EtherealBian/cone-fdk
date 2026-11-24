@@ -1,0 +1,110 @@
+{
+  "panel_sha256": "b33772f562af2f6a3397c3a8dfe4c492a64d14e71d11f6b5d549d2b76bf32884",
+  "partitions": {
+    "fit": {
+      "count": 7038,
+      "archive_fixed_printed": [
+        6846,
+        32,
+        11,
+        4,
+        9,
+        5,
+        34,
+        97
+      ],
+      "intermediate_tones": [
+        30,
+        21,
+        3,
+        1,
+        2,
+        2,
+        15,
+        19
+      ],
+      "archive_reference_printed": {
+        "tn": 6857,
+        "fp": 36,
+        "fn": 43,
+        "tp": 102,
+        "dice": 0.7208480565371025,
+        "precision": 0.7391304347826086,
+        "recall": 0.7034482758620689
+      },
+      "archive_reference_fixed": {
+        "tn": 6878,
+        "fp": 15,
+        "fn": 14,
+        "tp": 131,
+        "dice": 0.9003436426116839,
+        "precision": 0.8972602739726028,
+        "recall": 0.903448275862069
+      },
+      "printed_reference_fixed": {
+        "tn": 6855,
+        "fp": 45,
+        "fn": 37,
+        "tp": 101,
+        "dice": 0.7112676056338029,
+        "precision": 0.6917808219178082,
+        "recall": 0.7318840579710145
+      },
+      "sufficient": true,
+      "concordant": false
+    },
+    "check": {
+      "count": 13464,
+      "archive_fixed_printed": [
+        12293,
+        107,
+        19,
+        17,
+        4,
+        4,
+        101,
+        919
+      ],
+      "intermediate_tones": [
+        61,
+        64,
+        2,
+        4,
+        2,
+        3,
+        62,
+        49
+      ],
+      "archive_reference_printed": {
+        "tn": 12312,
+        "fp": 124,
+        "fn": 105,
+        "tp": 923,
+        "dice": 0.8896385542168674,
+        "precision": 0.8815663801337154,
+        "recall": 0.8978599221789884
+      },
+      "archive_reference_fixed": {
+        "tn": 12400,
+        "fp": 36,
+        "fn": 8,
+        "tp": 1020,
+        "dice": 0.9788867562380038,
+        "precision": 0.9659090909090909,
+        "recall": 0.9922178988326849
+      },
+      "printed_reference_fixed": {
+        "tn": 12297,
+        "fp": 120,
+        "fn": 111,
+        "tp": 936,
+        "dice": 0.8901569186875892,
+        "precision": 0.8863636363636364,
+        "recall": 0.8939828080229226
+      },
+      "sufficient": true,
+      "concordant": false
+    }
+  },
+  "concordant": false
+}

@@ -1,0 +1,119 @@
+{
+  "pdf_sha256": "6750add7c027cd08c158faa357aaa90a102a081bacae22b82cbbfbe794b92450",
+  "segmented": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+  "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+  "source_sha256": "b7b3fc225506906956a54f7a8da0cdf35bb02102176793fc467630cae7c176e0",
+  "score_sha256": "b173657a38b61dba63bab57d989e195f4364b1e2ac3d38c519ac0ca2eb3ebe79",
+  "partitions": {
+    "fit": {
+      "xyuv_sha256": "3783b7d8642cb4e8f6824a2cd931f26d74becaa6fea5f7635e156fb7fe14c7a9",
+      "archive_bit_differences": 0,
+      "cpu_filter_bit_differences": 0,
+      "count": 7038,
+      "archive_fixed_printed": [
+        6846,
+        32,
+        11,
+        4,
+        9,
+        5,
+        34,
+        97
+      ],
+      "intermediate_tones": [
+        30,
+        21,
+        3,
+        1,
+        2,
+        2,
+        15,
+        19
+      ],
+      "archive_reference_printed": {
+        "tn": 6857,
+        "fp": 36,
+        "fn": 43,
+        "tp": 102,
+        "dice": 0.7208480565371025,
+        "precision": 0.7391304347826086,
+        "recall": 0.7034482758620689
+      },
+      "archive_reference_fixed": {
+        "tn": 6878,
+        "fp": 15,
+        "fn": 14,
+        "tp": 131,
+        "dice": 0.9003436426116839,
+        "precision": 0.8972602739726028,
+        "recall": 0.903448275862069
+      },
+      "printed_reference_fixed": {
+        "tn": 6855,
+        "fp": 45,
+        "fn": 37,
+        "tp": 101,
+        "dice": 0.7112676056338029,
+        "precision": 0.6917808219178082,
+        "recall": 0.7318840579710145
+      },
+      "sufficient": true,
+      "concordant": false
+    },
+    "check": {
+      "xyuv_sha256": "c000eb18d671b0047cc5085cf2904ea38abb880ba5d036491416ffb5cc229908",
+      "archive_bit_differences": 0,
+      "cpu_filter_bit_differences": 0,
+      "count": 13464,
+      "archive_fixed_printed": [
+        12293,
+        107,
+        19,
+        17,
+        4,
+        4,
+        101,
+        919
+      ],
+      "intermediate_tones": [
+        61,
+        64,
+        2,
+        4,
+        2,
+        3,
+        62,
+        49
+      ],
+      "archive_reference_printed": {
+        "tn": 12312,
+        "fp": 124,
+        "fn": 105,
+        "tp": 923,
+        "dice": 0.8896385542168674,
+        "precision": 0.8815663801337154,
+        "recall": 0.8978599221789884
+      },
+      "archive_reference_fixed": {
+        "tn": 12400,
+        "fp": 36,
+        "fn": 8,
+        "tp": 1020,
+        "dice": 0.9788867562380038,
+        "precision": 0.9659090909090909,
+        "recall": 0.9922178988326849
+      },
+      "printed_reference_fixed": {
+        "tn": 12297,
+        "fp": 120,
+        "fn": 111,
+        "tp": 936,
+        "dice": 0.8901569186875892,
+        "precision": 0.8863636363636364,
+        "recall": 0.8939828080229226
+      },
+      "sufficient": true,
+      "concordant": false
+    }
+  }
+}
