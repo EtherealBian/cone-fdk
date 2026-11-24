@@ -1,0 +1,117 @@
+{
+  "fit_sha256": "9d84a1e90b220dda92d61c1644cb902dc700055728e1c68fa731f6f6ffaefb97",
+  "passed": true,
+  "specimens": {
+    "2": {
+      "source": {
+        "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+        "segmented": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+        "raw_crop": "e469d77b5e8dde7f3aabf438d1aacf39b1ded0c83e3ac023fd58d62af36b9d8c",
+        "label_crop": "8dac660a1791ba053f4c625f2cbbfe97fdcda6003f4b612e39438c988bf1d065"
+      },
+      "counts": {
+        "pore": 3862,
+        "material": 4882
+      },
+      "arms": {
+        "center": {
+          "rms": {
+            "pore": 0.5591969273589711,
+            "material": 0.35386845353058677
+          },
+          "balanced": 0.4679338019270693,
+          "integer_field": "9374e5e46478ddda39c538ea0377688e000c937c206c87b553112c22d13fa70d",
+          "cpu_gpu_differences": 0
+        },
+        "blur": {
+          "rms": {
+            "pore": 0.18019674775591518,
+            "material": 0.15299822676903915
+          },
+          "balanced": 0.1671516157509093,
+          "integer_field": "6db7d731b28d4d55b192999976b65384d043299d66b1b446bf9858955fba0790",
+          "cpu_gpu_differences": 0
+        }
+      },
+      "criteria": {
+        "support": true,
+        "balanced": true,
+        "both_sides": true
+      }
+    },
+    "3": {
+      "source": {
+        "raw": "460ea68425d9ac387485b65a3aa2b3f25da31cfe9de8181d4c1a5b0a982d26c8",
+        "segmented": "f94c64a99f5f0e7971a3e0e2f7c932183009938aa5d284bcd23f4657674e6009",
+        "raw_crop": "98cbb9d02559ed7572b259a24715b2880c6195c3e9c4e2610b54e22aaff4e9c0",
+        "label_crop": "7931566543443ff4a3d660b5767be410c7699533eac5f3d8d7213da207d1eb26"
+      },
+      "counts": {
+        "pore": 30232,
+        "material": 34001
+      },
+      "arms": {
+        "center": {
+          "rms": {
+            "pore": 0.5312061254614304,
+            "material": 0.3587399322158531
+          },
+          "balanced": 0.45325174389845424,
+          "integer_field": "f477948fdb45943391a07f8a8c6715f760de1e78fea44655ed6a7c523f75925c",
+          "cpu_gpu_differences": 0
+        },
+        "blur": {
+          "rms": {
+            "pore": 0.18128566101397153,
+            "material": 0.14813469878118518
+          },
+          "balanced": 0.16554210925360513,
+          "integer_field": "58995d81d7ba410a24902ebaadf91b2bb1dfcb9de0c28c6c64ea4217a0cfb090",
+          "cpu_gpu_differences": 0
+        }
+      },
+      "criteria": {
+        "support": true,
+        "balanced": true,
+        "both_sides": true
+      }
+    },
+    "5": {
+      "source": {
+        "raw": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37",
+        "segmented": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b",
+        "raw_crop": "e9e3d28bcb12cc801c2547c7f4250c7d96593e11d2819ad5921b59601e53cb2e",
+        "label_crop": "bd492718b6f65ea20561c7ae149ee2b19916f4f60403c42974991bf65e460e9e"
+      },
+      "counts": {
+        "pore": 15143,
+        "material": 15995
+      },
+      "arms": {
+        "center": {
+          "rms": {
+            "pore": 0.4442673472505435,
+            "material": 0.42347767389356317
+          },
+          "balanced": 0.43399701388335504,
+          "integer_field": "92f6d94e8073bd3549d29129f03e32c702f753dedab0d2eeccc23aaa09883978",
+          "cpu_gpu_differences": 0
+        },
+        "blur": {
+          "rms": {
+            "pore": 0.1531664098930792,
+            "material": 0.1527527537227807
+          },
+          "balanced": 0.15295972164172378,
+          "integer_field": "a9a7e4fef9892a737f7a2c1f76dece0dd3684d206eeef4565f2c197c4995d269",
+          "cpu_gpu_differences": 0
+        }
+      },
+      "criteria": {
+        "support": true,
+        "balanced": true,
+        "both_sides": true
+      }
+    }
+  }
+}
