@@ -1,0 +1,99 @@
+{
+  "identity": {
+    "parent": {
+      "files": {
+        "pores/LOCAL-PROFILE-PILOT.md": "4a22c0e1b543550986399cd2bebaf30d0e35f153a460e9371676ca905bb895f8",
+        "pores/local_profile.cu": "5439bed4f0792435036471d1370e0b233f2ed713734c6c89a6c933ee0e75d0e2",
+        "scripts/pore_local_profile.py": "d320ff9c2392bab6ce4e2c5428fcb64aee50c121caa2508b2055dae01d627d18",
+        "scripts/pore_profile_gpu.py": "4138e54368cd1cead48ce324b3583a8ae15983a60003f0069aa8a22eabc500f6",
+        "scripts/pore_profile_score.py": "6889eee2eaca7996331c283409f61da05fcf910d2843970c205f2df09fbcef80",
+        "scripts/pore_axial_raw.py": "81307691e315afdd18c41e23ce2aa416901cad54202d5fc93e046cd118f852e0",
+        "scripts/pore_monotone_score.py": "2d54df3b70783c4b8200bbc46c74b257fae34f62996689f5a36c064ee769f071",
+        "scripts/pore_section_score.py": "03ae9566275642b5266f57f6840b3d75593f937a183ef8539a285547d6421918",
+        "scripts/pore_transfer.py": "f4092f168839be8b363dd48db5eaf62acf16ed9920f8e5e2c2e1d35f678b73ca",
+        "pores/validate.py": "2c81e4f6731d3fe852edcbb693af30e401d3cdcaddb179c2744443c211afa3c9",
+        "pores/pore_check.py": "7046a18f709484d5074b3338bcf7f8449db42c4d3f39a8fdb1a39a1d59b6932b",
+        "pores/local_model.py": "5824b9d1e1865bc57acb6f0fa8afaa5600f47c49af2c099c0a330d8faea9bba2",
+        "pores/search_support.cu": "916e3e64038b020590a1761537d63df262830849c7fece520eae785da092a5e5",
+        "scripts/pore_search_support.py": "c3b63e159c23080a1d53c19d81a1b47275564658968ef1daff6e388bc778b1d2"
+      },
+      "compiled": {
+        "local-profile.ptx": "1264390993478e3ac566e3bae81d9b8913e587a0997017ae72f2ebaf7541c4a3",
+        "search-support.ptx": "1f814aa7f606b2cd4df63d18f9e636532982950a16da169f0b17e39039e6cf02",
+        "pores.ptx": "0d900a9bcdbaff294f4853cb3991b47b6db6f3795e70be8c14ea849cd5bd63b3",
+        "cone-pores.exe": "afb2edcdc1e969df968f722192aa2af3c9959abf1dbd338af5e27479f1196b06"
+      },
+      "versions": {
+        "numpy": "2.5.5",
+        "scipy": "1.18.1",
+        "scikit-learn": "1.9.1"
+      },
+      "parents": {
+        "axial-raw": "52e69b38e67424a1d405ec6a536f3727a866ad51a246bd0c21828531c115cf37",
+        "orientation": "fe0d446043232df7b0c591cd4133e5651673ce0cb3dd3be7049374bb67773c40",
+        "census-train": "d7467efcb92ffe1737983e8aa37544bfa72f88a1924f5a9c25617a2a18ee5e96"
+      }
+    },
+    "seal": "021d21ef1cb6df7ca6574c52536de6854ed089bdef8ed8be0a174cc6fa6f7306",
+    "ptx": "b8fbfd22c5d67712d82c68e99df54cd583aceeaba55e313d60ea7f05ed0cabdf",
+    "files": {
+      "pores/VOLUME-CURVATURE-PILOT.md": "c1b66eab4b305f973cf32cf48ac262cc419adde74ecad9750915973209285b56",
+      "pores/volume_curvature.cu": "7122c4e46b45cd2b44cafb77633b66d4f29d1d7464eab0f6e62181f524ab3413",
+      "scripts/pore_curvature_fields.py": "8472d2cfd1354db6c6578d096ecb6913e35d9f467e250ae9a1f3f37dcccd0af3",
+      "scripts/pore_volume_curvature.py": "c337ba296fe77a3906e0d19a33a8a35c26f93d8566df2d08139ea82d844a51f0",
+      "scripts/pore_volume_curvature_score.py": "7e9c983a77f0c67facb9d99d2062c5652e46b58442a7acbd979379bc1fff9c7d"
+    }
+  },
+  "pipeline_id": "f8cb8b39c4cad655c122f224bcacee75ed20b0bd1076a8e40e6b6a5395a1c219",
+  "specimens": {
+    "2": {
+      "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+      "segmented": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+      "cal_features": "582cd80ec5b1a4284057146d3bc4a757bdbf6e0c3367759da1fa430dd1ffaf2b",
+      "cal_mask": "e6160ae3db5edc35c134c1fc55df5b0ca5afad911209c6962ac5eadd8c6455ce",
+      "rows": 393216,
+      "void": 4905,
+      "profiles": "7028af2a2a84f7b39652705193543a970bbef5c7aabbc79726e12ddec1c7d7ab",
+      "curvature_cal": "87097614274068fd7cb851c961d23d006f6ac6a66a938ff8d3b502994d7a8c74",
+      "targets": "6cf931d3fbc649ecad50e4c205e8228cb02b85902a5527a6859bb34e3dbe94e5"
+    },
+    "3": {
+      "raw": "460ea68425d9ac387485b65a3aa2b3f25da31cfe9de8181d4c1a5b0a982d26c8",
+      "segmented": "f94c64a99f5f0e7971a3e0e2f7c932183009938aa5d284bcd23f4657674e6009",
+      "cal_features": "d161eeb0ce8298281b85ab561e3b7ca839ab51bd7c0c874df1c7bcda59c0d9b5",
+      "cal_mask": "3ea426d8b82fdf00a7710700d4c15df0592df587e6b2e45274f4ef59be567c57",
+      "rows": 393216,
+      "void": 64228,
+      "profiles": "99ecbef7f430be6a680a733b905412d5202b1038075659869a01f3bbb5152ff3",
+      "curvature_cal": "f02bac8cb10a105a57afea9ac228ed7ff7b63234778a6d1ca68c58534f0b80c9",
+      "targets": "54ca089ad23679550d413c56b327a57936b344dba0eb6201b0c1139a937f44f5"
+    },
+    "5": {
+      "raw": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37",
+      "segmented": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b",
+      "cal_features": "dfac2e907548126015be9f88f8377f317af0996fdef0c6c1ee2187262e494012",
+      "cal_mask": "9cd3e4d1a6dba9d1eed3510487c7a86c0c55c2bd99602f52255b51f6e2547a9e",
+      "rows": 393216,
+      "void": 63288,
+      "profiles": "c599584b5873caf26bd213feab0a05197ae41b5d2e6731a055347cb89c071d8c",
+      "curvature_cal": "0b3e1318a9d443aa471f705eb44093cee56e16bcb7297be49f52b7cf2ce4cab3",
+      "targets": "0f853654d7ade1e2c6e4ba38c105cd507f55222284a442285230f307a837aea4"
+    }
+  },
+  "fits": {
+    "profile": {
+      "weights": "2a72a2f1d9f713764797325928e7fb223cdc8abc0776199f35ef984e671c30dd",
+      "trees": 96,
+      "features": 46,
+      "nodes": 5856,
+      "cal_replay": 38054
+    },
+    "curvature": {
+      "weights": "710c2136251a17b5b11025df0341f1ed6833deccb21e3fe014bed9ebe7818860",
+      "trees": 96,
+      "features": 61,
+      "nodes": 5856,
+      "cal_replay": 38054
+    }
+  }
+}
