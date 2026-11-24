@@ -101,3 +101,44 @@ def test_exact_half_tie_then_whole_mask_copy():
 def test_source_guard_before_any_file_access(i, sl, kind):
     with pytest.raises(ValueError):
         load_source(None, i, sl, kind)
+
+
+@pytest.mark.parametrize(
+    "i,n,parents,good", [(2, 238, 34, 26), (3, 930, 39, 13), (5, 326, 15, 7)]
+)
+def test_sealed_decision_rows_against_native_and_calibration(i, n, parents, good):
+    from pore_axial_raw import sha
+    from pore_region import read
+    from pore_section_gate import E
+    from pore_section_gate_score import decisions
+    from test_region_evidence import native_rows
+
+    d = read(E / f"sample{i}.json")
+    s = read(E / f"sample{i}-choices.json")
+    f = read(E / "fit.json")
+    ss = f["rows"][str(i)]
+    q = [r for r in ss if "x" in r]
+    assert (
+        len(q) == n
+        and len({r["parent"] for r in q}) == parents
+        and np.array_equal(solve(f["rows"]), f["weights"])
+    )
+    assert all(correction(r, f["weights"]) == r["correction_1024"] for r in s["sections"])
+    a, b = [native_rows(E, i, k, v) for k, v in d["arms"].items()]
+    a1, b1 = d["arms"].values()
+    assert (
+        a.keys() == b.keys()
+        and decisions(a1, b1, s) == d["decisions"]
+        and sum(v["status"] == "correct" for v in d["decisions"]["rows"].values()) == good
+    )
+    for j, (_, vol, r) in a.items():
+        v = d["decisions"]["rows"][str(j)]
+        assert (
+            v["detector"] == vol
+            and v["reference"] == r
+            and b[j][1] == (v["full"] if v["selected"] == "face" else vol)
+        )
+        assert 100 * min(abs(vol - r), abs(v["full"] - r)) <= 15 * r
+    assert not d["advance"] and len(set(d["comparison"]["shared_p95"])) == 1
+    hashes = read(E / "score-replay.json")["byte_identical_tables"]
+    assert len(hashes) == 12 and all(sha(E / k) == v for k, v in hashes.items())

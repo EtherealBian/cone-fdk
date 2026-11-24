@@ -1,0 +1,28 @@
+{
+  "pipeline_id": "b31e112ea4027a99c604055349f30d4418fe3e727a49533c4d7be1634ed9ef36",
+  "arms": [
+    "curvature",
+    "gate"
+  ],
+  "byte_identical_tables": {
+    "sample2-curvature-matches.csv": "d8b924016b548e03c53d0428eab957061a23b51f4b8fa4eeb563f7785159ca4c",
+    "sample2-curvature-pores.csv": "bef49ee49bb55328561be9b4d94408055f23e84252b6a4cc4369e26dd042171d",
+    "sample2-gate-matches.csv": "e933b8773ef9bd5449d82e3613972cc2657e2da989f297c2a68e7e00d6de6cbe",
+    "sample2-gate-pores.csv": "c9b5caf2615981636bbb082e090ac93173a0af2b6e0488c136b425f58b532aae",
+    "sample3-curvature-matches.csv": "bb1842df56476d9dfb5381e1c5b6d193f18d19a698910669afc7ca17a147bf3a",
+    "sample3-curvature-pores.csv": "0287760b95f1dfd0de6ff8f8da2bd915a9fbd8089dfe9b38c985bd749c3cdcc5",
+    "sample3-gate-matches.csv": "0ff531b04db5a7eae56061d464879820da3c78481d121cf3c6ab5c2630134d21",
+    "sample3-gate-pores.csv": "7f7427bb0f3bd7ab2db7ed9ab366c1933d2caf0b958413b79e217d240a856843",
+    "sample5-curvature-matches.csv": "740025d50bd7864b1956b44f097dfe5cb246f00bc90749df4fcd88d5ddd5e8a6",
+    "sample5-curvature-pores.csv": "59d19c470256e97be627f408f1b247306b21ac0a81b9d6d729cd4306a4a55a8f",
+    "sample5-gate-matches.csv": "e5a596df306bada4c3106216e48c8b3a12373acf68eff66ab3982f4889dbfea1",
+    "sample5-gate-pores.csv": "e3ec67a2140f4cecd7e8f8eea0c041b1ca5f9d7009c18edb2d7510362099a1aa"
+  },
+  "semantic_json_sha256": {
+    "sample2.json": "8b0b22bfc4cbfa9c8b2d10ce8f04731c89daff2b7842f96aaaf28a8f4e585042",
+    "sample3.json": "5f41c4ef39c255b9e859a1c9365c802fce367bb51310dbce33eb030913ac09d8",
+    "sample5.json": "f5a4b91ba0bcf0df8e1f33dc40914a7ae83b9e3ce4af7faeae97af49403fd093",
+    "summary.json": "20115035142a3aa06fddb2d8886242669cbf001a3b1d4d6a0e1650353d1a421e"
+  },
+  "excluded_only": "arms.*.native.elapsed_s"
+}
