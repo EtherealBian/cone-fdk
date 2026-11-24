@@ -1,0 +1,5 @@
+# E/F/G agreement diagnostic (development evidence only)
+
+Registered after G development scoring, before inspecting disagreement statistics. Use only the original formal development crop for 2/3/5, from the published E/F/G viewer masks, authenticated against raw and segmented archives. Do not access 4/6. No learned predictor, threshold search, specimen selection or mixing metrics.
+
+Keep all unanimous voxels fixed. Report two masks: majority (at least two votes); reference-assisted disagreement repair (use the reference exactly where vote count is 1 or 2). The second is not runnable from raw data and cannot count toward acceptance. It minimizes voxel mismatches under the agreement constraint, not necessarily per-object volume P95. Report all eight vote patterns with true and false foreground totals, fixed false positives/negatives, all eleven metrics, native two-depth invariance, independent component rows and a ledger for every eligible reference object including misses. Report how many repaired-mask matches still exceed 15% individual absolute volume error (not itself a gate). No inference that votes are independent. Keep results whether good or bad.
