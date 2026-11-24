@@ -1,18 +1,26 @@
 # ConeFDK · Windows 单 GPU 锥束 CT 重建
 
-**孔隙测量开发基线：** [候选 E 的逐件结果、从原图重放与数据限制](pores/RETAINED-BASELINE.md)。正式开发区最差一件的匹配孔体积误差 P95 为 28.16%，门槛为 15%；未获验收。
+在一台 Windows 笔记本上，用 720 幅核桃 X 射线实测投影重建 **512³ 体数据**。原生 C++/CUDA 引擎完成锥束加权、cuFFT 分批滤波和按显存预算分块的反投影。Python 用来准备输入和独立校验；重建程序本身不需要 Python。
 
-**实验分支：** [CoCr 试件孔隙测量、逐件验收标准与记录](pores/README.md)。[D → E 逐孔体积误差、漏检与离线复核包](pores/RESULTS-E.md)；[小孔边界放宽或收紧的独立校准对照](pores/SHELL-PILOT.md)。[跨试件边界校准：三段新切片与可复核的合并误差](pores/RESULTS-TRANSFER.md)。三个开发试件仍未全部达标，核桃 CT 重建的稳定发布版不变。
-
-给定一圈等角间隔的平板 X 射线投影，重建可按毫米坐标读取的三维衰减体。**重建引擎是原生 C++ / CUDA**：手写锥束加权、有限离散 Ram-Lak 响应、反投影；只把一维批量 FFT 交给 NVIDIA cuFFT。Python 不在重建执行路径中，用来准备数据、调用独立的 ASTRA GPU 基线和做验收。
-
-- [与上一发布版的同机 A/B](reports/OPTIMIZATION.md) · [逐次原始计时](reports/native-ab.json)
-- [本机实测报告](reports/RESULTS.md) · [预先写定的验收标准](reports/ACCEPTANCE.md) · [720 角真实核桃浏览器](https://github.com/EtherealBian/cone-fdk/releases/download/v0.1.0/walnut-512-viewer.html)
-- [真实数据校正前后及 ASTRA 对比](reports/walnut-full.png) · [三正交截面](reports/walnut-full-orthogonal.png) · [合成工件与离面夹杂](reports/phantom-512.png)
+[English](README.md) · [个人主页项目详解](https://etherealbian.github.io/work/cone-fdk.html) · [Windows 稳定版 v0.1.0](https://github.com/EtherealBian/cone-fdk/releases/tag/v0.1.0) · [下载离线切片浏览器](https://github.com/EtherealBian/cone-fdk/releases/download/v0.1.0/walnut-512-viewer.html)
 
 ![720 角真实投影重建的核桃轴向切层](reports/walnut-sweep.gif)
 
-[English overview](README.md) · [Windows 发布包](https://github.com/EtherealBian/cone-fdk/releases/tag/v0.1.0)
+动图中的壳、隔膜和核仁均来自实测数据：[Alexander Meaney / 赫尔辛基大学](https://doi.org/10.5281/zenodo.6986012)，CC BY 4.0。离线浏览器可拖动查看 81 张预览切片，无需 CUDA。[数据署名与处理说明](NOTICE.md)
+
+## 重建实测
+
+| 问题 | RTX 5060 Laptop 上的结果 | 可复核记录 |
+|---|---|---|
+| 与独立实现相差多少？ | 720 角、512³ 输出，与 ASTRA FDK 的全体积相对 L2 差异 **0.02899%**，未拟合强度或配准。 | [数值对照](reports/RESULTS.md) |
+| 优化实际省了多少时间？ | 与上一版原生引擎同机对比，整进程中位数 **2.392 → 2.009 秒**，六组配对输出逐字节相同。 | [逐次计时](reports/native-ab.json) |
+| 超过显存还能重建吗？ | 以 **512 MiB 引擎设备缓冲预算**写出 1296³ FP32 体数据，落盘 8.71 GB；此规模用 ASTRA 抽查五层。 | [压力测试](reports/oversize.json) |
+
+## 扩展实验：在金属 CT 中逐孔测量
+
+[孔隙测量分支](pores/README.md)的输入是已重建的钴铬合金 CT。给定掩膜，CUDA 程序能逐孔计算体积、等效直径和质心。从灰度中自动找准孔边界则仍有误差：候选 E 在 2、3、5 号开发试件分别通过 **10/11、6/11、7/11** 项，最差试件的匹配孔体积误差 P95 为 **28.16%**，门槛为 **15%**。4、6 号保留件未启用；该实验不包含在稳定发布包内。
+
+[三件结果与原始档重放](pores/RETAINED-BASELINE.md) · [看同一切片上两个孔如何被连成一个](https://etherealbian.github.io/work/cone-fdk.html#pore-pair) · [四件外部试件的不同数字边界](pores/EXTERNAL-REFERENCE-AGREEMENT.md)
 
 ## 从源码运行
 
@@ -77,6 +85,3 @@ CLI 成功时 stdout 输出 JSON；失败返回非零并将错误写入 stderr�
 ## 适用边界
 
 这是面向工业 CT 算法与 GPU 工程的可复现原型，**不是经过计量检定的工业检测设备或医疗软件**。仅支持居中、平板、等角间隔的单圈锥束、正方体各向同性输出。圆轨迹 FDK 在离中平面处是近似；没有螺旋、短扫描/Parker、散射与硬化校正、金属伪影消除或实际缺陷检出认证。512³ 网格间距不等于系统真实空间分辨率；与 ASTRA 一致也不代表实物尺寸真值。许可证、数据署名及变换说明见 [NOTICE](NOTICE.md)。
-
-
-

@@ -1,18 +1,12 @@
-# ConeFDK · Single-GPU cone-beam CT reconstruction
+# ConeFDK · Single-GPU cone-beam CT
 
-**Pore metrology baseline (development only):** [Why keep E, what reproduced from raw scans, and what still fails](pores/RETAINED-BASELINE.md). Worst-specimen matched-volume P95: 28.16%; required: ≤15%.
+ConeFDK turns 720 measured X-ray projections of a walnut into a **512³ volume** on a Windows laptop. The C++/CUDA engine weights each projection, filters detector rows with cuFFT, and backprojects into slabs that fit the GPU memory budget. Python prepares the input and checks the output; the native executable runs without it.
 
-**Experimental branch:** [CoCr pore measurement, accuracy gates and evidence](pores/README.md). [D → E: same-pore errors, misses and three offline review packs](pores/RESULTS-E.md). [Cross-specimen boundary transfer: three new slabs, per-pore counts and a documented merge](pores/RESULTS-TRANSFER.md). The stable walnut reconstruction release is unchanged.
-
-Reconstruct a 3D attenuation volume from a full rotation of X-ray projections on a Windows PC. ConeFDK uses native C++ and CUDA for cone weighting, filtering and backprojection; cuFFT provides the batched 1D transforms. Python prepares input and checks the result against independent implementations. It is not needed in the reconstruction executable.
-
-[中文文档](README.zh-CN.md) · [Windows release](https://github.com/EtherealBian/cone-fdk/releases/tag/v0.1.0) · [Download the offline slice viewer](https://github.com/EtherealBian/cone-fdk/releases/download/v0.1.0/walnut-512-viewer.html)
+[中文](README.zh-CN.md) · [Project walkthrough](https://etherealbian.github.io/work/cone-fdk.html) · [Windows release v0.1.0](https://github.com/EtherealBian/cone-fdk/releases/tag/v0.1.0) · [Download the offline slice viewer](https://github.com/EtherealBian/cone-fdk/releases/download/v0.1.0/walnut-512-viewer.html)
 
 ![Axial sweep through a walnut reconstructed from 720 measured views](reports/walnut-sweep.gif)
 
 *The image is a sweep through measured data, not a rendering of a synthetic walnut. The downloadable HTML lets you scrub 81 preview slices without installing CUDA. Data: [Alexander Meaney / University of Helsinki](https://doi.org/10.5281/zenodo.6986012), CC BY 4.0; processing and attribution in [NOTICE](NOTICE.md).*
-
-**Measurement lab (experimental):** [Calibrated intensity model G, raw-weight replay and shared segmentation errors](pores/RESULTS-G.md) · [prospective false-split counterexample](pores/RESULTS-F.md). [Signed connectivity experiment](pores/RESULTS-LOCAL-CONNECTIVITY.md) and [source filter checks](pores/RESULTS-FILTER-PROFILE.md). No cross-specimen acceptance claim.
 
 ## What was measured
 
@@ -21,6 +15,12 @@ Reconstruct a 3D attenuation volume from a full rotation of X-ray projections on
 | Does the reconstruction agree with an independent implementation? | 720 measured views, 8×8 detector binning, 512³ FP32 output. Full-volume relative L2 difference from ASTRA FDK: **0.02899%**. No registration or fitted intensity scale. | [Numerical checks](reports/RESULTS.md) |
 | Did the optimization help the whole application? | Median process time **2.392 → 2.009 s**, including startup and output flush (−16.0%); 6/6 paired runs faster, identical output bytes. Compared with the previous native engine, **not** ASTRA. | [All A/B trials](reports/native-ab.json) |
 | Can it reconstruct a volume larger than VRAM? | Wrote and hashed a **1,296³ FP32** volume (8,707,129,344 bytes) with a **512 MiB engine-owned device-buffer budget**. Five slices checked against ASTRA; not a full-volume cross-check at this size. | [Stress record](reports/oversize.json) |
+
+## A second use: measuring pores in metal
+
+The [measurement lab](pores/README.md) starts from **already reconstructed** cobalt-chromium scans. Its CUDA counter measures connected pores in a supplied binary mask. Finding the pore boundary from grayscale is a separate experiment: on development specimens 2, 3 and 5, the retained model E passed **10/11, 6/11 and 7/11** criteria. Its worst matched-pore volume error (P95) was **28.16%**, above the **15%** limit. The two reserved specimens remain unopened. This work is not part of the stable reconstruction release.
+
+[Compare the three specimens and replay E](pores/RETAINED-BASELINE.md) · [Inspect a pore in the source slices](https://etherealbian.github.io/work/cone-fdk.html#pore-pair) · [Compare digital boundaries from four external specimens](pores/EXTERNAL-REFERENCE-AGREEMENT.md)
 
 ## Try it
 

@@ -4,6 +4,17 @@ This branch adds native Windows x64 CUDA connectivity and component metrology fo
 
 **当前开发比较基线：候选 E。** 同一方法在 2/3/5 号正式区域的最差逐孔体积 P95 为 28.16%（要求 ≤15%）。[八种候选的同口径比较、E 的从头重放及新数据核查](RETAINED-BASELINE.md)。保留 4、6 未启用。
 
+## 先看这三份证据
+
+| 想核对什么 | 从哪里开始 |
+|---|---|
+| 从灰度找孔，目前测到什么程度？ | [基线 E](RETAINED-BASELINE.md)列出三件的分母、误差及原始档重放结果；[最终验收标准](FINAL-GATE.md)说明何时才可打开 4、6 号。 |
+| 一个孔为什么会被量错？ | [D / E 逐孔对照](RESULTS-E.md)和[三个离线阅片包](https://github.com/EtherealBian/cone-fdk/releases/tag/measurement-evidence-3)把孔 ID、预测掩膜与参考切片对应起来，保留漏检和误检。 |
+| 给定一个掩膜，计数能否复现？ | [四件外部试件的计数与边界差异](EXTERNAL-REFERENCE-AGREEMENT.md)：不同 CUDA 分块得到相同逐孔表；不同分割方法可能给同一个孔明显不同的体积。 |
+
+<details>
+<summary>展开历次开发实验：候选比较、逐孔反例与复算记录</summary>
+
 [按三维结构清点校准支持：5 号五个配对均被截断，只有一个高估例子](RESULTS-OBSERVED-VOLUME.md)
 
 [逐件留出校准：三件保住原匹配，3 号体积误差 P95 却从 18.36% 升到 20.51%](RESULTS-CROSSFIT-GATE.md)
@@ -65,6 +76,8 @@ This branch adds native Windows x64 CUDA connectivity and component metrology fo
 **[D 与 E：哪些小孔测得更准、哪些丢了？](RESULTS-E.md)** · **[E 离线复核包（原图与 C/D/E 同坐标）](https://github.com/EtherealBian/cone-fdk/releases/tag/measurement-evidence-3)**
 
 **[C 与 D：逐孔配对、原始切片和全部失败项](RESULTS-D.md)** · **[D 离线复核包](https://github.com/EtherealBian/cone-fdk/releases/tag/measurement-evidence-2)** · **[基线和 A/B/C 的逐件结果](RESULTS.md)** · **[Offline numerical reviews and native mask preview](https://github.com/EtherealBian/cone-fdk/releases/tag/measurement-evidence-1)**
+
+</details>
 
 ## Reproduce
 
