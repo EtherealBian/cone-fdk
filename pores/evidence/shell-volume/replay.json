@@ -1,0 +1,28 @@
+{
+  "pipeline_id": "49dd5525b6d7201cb068b9410a327b40333ba8fe36f67d100907365332f88b1c",
+  "arms": [
+    "curvature",
+    "shell"
+  ],
+  "byte_identical_tables": {
+    "sample2-curvature-matches.csv": "d8b924016b548e03c53d0428eab957061a23b51f4b8fa4eeb563f7785159ca4c",
+    "sample2-curvature-pores.csv": "bef49ee49bb55328561be9b4d94408055f23e84252b6a4cc4369e26dd042171d",
+    "sample2-shell-matches.csv": "ec70954112bf43373b35e5c0849210e68ea464dea989154fdd349dc82878ae7c",
+    "sample2-shell-pores.csv": "051f70e5bfd041a61557afd9391a1b55ea23c4a959130a8daa11fdca2c00f2a8",
+    "sample3-curvature-matches.csv": "bb1842df56476d9dfb5381e1c5b6d193f18d19a698910669afc7ca17a147bf3a",
+    "sample3-curvature-pores.csv": "0287760b95f1dfd0de6ff8f8da2bd915a9fbd8089dfe9b38c985bd749c3cdcc5",
+    "sample3-shell-matches.csv": "7819a1cadf42ee822668f086c26f8ffa79b647f198d095dcaba4adf84da23599",
+    "sample3-shell-pores.csv": "db22e8eb59028461862f9adbff882373caec57ec13f54f13bcf85fd40ca6d027",
+    "sample5-curvature-matches.csv": "740025d50bd7864b1956b44f097dfe5cb246f00bc90749df4fcd88d5ddd5e8a6",
+    "sample5-curvature-pores.csv": "59d19c470256e97be627f408f1b247306b21ac0a81b9d6d729cd4306a4a55a8f",
+    "sample5-shell-matches.csv": "63781d772fc0c686906eaa9c1d5f0b660f5d7020f1888f36f05240efee572dcc",
+    "sample5-shell-pores.csv": "10b948676e4e15207906aa79fbb905e8f5e2d9e4e092e2e6aac50664a143b69a"
+  },
+  "semantic_json_sha256": {
+    "sample2.json": "a965d89852d31401134447266a3e3321f40f34b0a9a73931894dd0516de93189",
+    "sample3.json": "41a2083aa01e2acb0d3b2df8ef381956afd44b04a3ee6e14c6db3cbfc3ffdfe5",
+    "sample5.json": "7701621fb3a3acce2a30a0c0644716bdf33f8e655df23362cef1076355e04e49",
+    "summary.json": "8625d0a2b305b76e3fafb0e9ef0bc6249c3f1d20ec63f2e22b4d4b56a5469f89"
+  },
+  "excluded_only": "arms.*.native.elapsed_s"
+}

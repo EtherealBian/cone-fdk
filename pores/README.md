@@ -2,6 +2,8 @@
 
 This branch adds native Windows x64 CUDA connectivity and component metrology for an **in-material rectangular ROI**. A separate research pipeline evaluates segmentation of NIST CoCr XCT TIFF stacks. They are already reconstructed scans, not ConeFDK projection inputs. The production tag remains the walnut reconstruction release until the [strict per-specimen gates](FINAL-GATE.md) pass.
 
+[锁定孔再量边界：没有丢匹配，但旧体积估计的理想范围仍不够](RESULTS-SHELL-VOLUME.md)
+
 [三维灰度曲率：每件多找到一个孔，但同一批孔的体积误差都增加](RESULTS-VOLUME-CURVATURE.md)
 
 [三个灰度能否区分孔和材料：每件至少判错多少体素，实际又漏了哪些孔？](RESULTS-BYTE-WINDOW.md)

@@ -55,3 +55,44 @@ def test_few_or_clipped_donors_leave_detector_untouched():
 def test_predictor_rejects_other_specimens_before_source_reads(i):
     with pytest.raises(ValueError, match="registered"):
         parents(i)
+
+
+@pytest.mark.parametrize(
+    "i,outside,changed", [(2, [22, 56, 63, 87], 447), (3, [71, 137], 103), (5, [26], 18)]
+)
+def test_sealed_projection_and_attainable_interval(i, outside, changed):
+    from fractions import Fraction
+
+    from pore_axial_raw import digest, sha
+    from pore_axial_score import read_mask
+    from pore_region import read
+    from pore_shell_volume import E
+    from pore_shell_volume_score import bounds
+    from test_region_evidence import native_rows
+
+    s = read(E / f"sample{i}.json")
+    g = read(E / f"sample{i}-choices.json")
+    b = s["bound"]
+    p = read(E / "predictions.json")["specimens"][str(i)]
+    assert (
+        b == bounds(s["arms"]["curvature"], g)
+        and b["outside_15"] == outside
+        and b["p95"]["interval"] > 15
+    )
+    assert not s["comparison"]["lost"] and not s["comparison"]["gained"] and not s["advance"]
+    assert sum(r["changed"] for r in g["objects"].values()) == changed
+    assert all(
+        b["rows"][str(k)]["reference"] > max(b["rows"][str(k)]["interval"])
+        and Fraction(b["rows"][str(k)]["percent_errors"]["interval"]) > 15
+        for k in outside
+    )
+    hits = [native_rows(E, i, k, a) for k, a in s["arms"].items()]
+    assert set(hits[0]) == set(hits[1])
+    assert (
+        digest(read_mask(E, i, "shell", p["masks"]["shell"]))
+        == s["arms"]["shell"]["mask_u8_sha256"]
+    )
+    for f, n in [("prediction-replay.json", 7), ("replay.json", 12)]:
+        rec = read(E / f)
+        d = rec if n == 7 else rec["byte_identical_tables"]
+        assert len(d) == n and all(sha(E / k) == h for k, h in d.items())
