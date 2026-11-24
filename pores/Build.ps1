@@ -31,4 +31,6 @@ try {
     if($LASTEXITCODE){throw 'Patch statistic compilation failed'}
     & $Python scripts/ptx.py pores/latent.cu build/pores/latent.ptx
     if($LASTEXITCODE){throw 'Latent decision compilation failed'}
+    & $Python scripts/ptx.py pores/search_support.cu build/pores/search-support.ptx
+    if($LASTEXITCODE){throw 'Search support compilation failed'}
 } finally {$env:Path=$old;Pop-Location}
