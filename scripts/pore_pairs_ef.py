@@ -7,7 +7,14 @@ from pore_pairs_de import load, output, paired, summarize
 
 
 def run(old, new, check=False, *, stages=("e", "f")):
-    if tuple(stages) not in (("e", "f"), ("e", "g"), ("f", "g")):
+    if tuple(stages) not in (
+        ("e", "f"),
+        ("e", "g"),
+        ("f", "g"),
+        ("e", "h"),
+        ("f", "h"),
+        ("g", "h"),
+    ):
         raise ValueError("Unsupported stage pair")
     lhs, rhs = stages
     for i in (2, 3, 5):

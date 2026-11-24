@@ -26,3 +26,16 @@ def test_whole_object_loss_uses_distinct_background_and_true_context():
         np.testing.assert_array_equal(x[:, 0, 8:-8, 8:-8], t[reg])
         assert np.count_nonzero(x[:, 0, 8:-8, 8:-8][take]) == 32
     assert seen.max() == 1
+
+
+def test_shared_seal_rejects_mixed_weights_and_reserved_specimens():
+    import pytest
+    from pore_shared_score import shared_digest
+
+    rows = {str(i): {"weights": "same"} for i in (2, 3, 5)}
+    assert shared_digest({"specimens": rows}) == "same"
+    with pytest.raises(ValueError):
+        shared_digest({"specimens": dict(rows, **{"4": rows["2"]})})
+    rows["5"]["weights"] = "another"
+    with pytest.raises(ValueError):
+        shared_digest({"specimens": rows})

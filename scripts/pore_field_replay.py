@@ -17,9 +17,9 @@ from pore_spatial_predict import DEV, SHAPE, Denoise, Z, digest, sha, token, ver
 
 
 def load_layers(path, model):
-    if model not in ("F", "G"):
+    if model not in ("F", "G", "H"):
         raise ValueError("Unknown model")
-    dims = [22, 16, 16, 16, 16, 1] if model == "F" else [22, 12, 12, 12, 1]
+    dims = [22, 16, 16, 16, 16, 1] if model in ("F", "H") else [22, 12, 12, 12, 1]
     layers = []
     with np.load(path, allow_pickle=False) as f:
         n = len(dims) - 1
@@ -37,7 +37,7 @@ def load_layers(path, model):
                 or not np.isfinite(b).all()
             ):
                 raise ValueError("Malformed scan weights")
-            layers.append((w, b, DILATIONS[j] if model == "F" else 1))
+            layers.append((w, b, DILATIONS[j] if model in ("F", "H") else 1))
     return layers
 
 
@@ -62,6 +62,8 @@ def replay(model, folder, formal, cache):
 
     if model == "G":
         from pore_latent_predict import SEAL, model_id
+    elif model == "H":
+        from pore_shared_predict import SEAL, model_id
     elif model == "F":
         from pore_spatial_predict import SEAL, model_id
     else:
@@ -78,6 +80,10 @@ def replay(model, folder, formal, cache):
         or set(sealed["specimens"]) != {str(k) for k in DEV}
     ):
         raise ValueError("Source, environment or seal differs")
+    if model == "H":
+        from pore_shared_score import shared_digest
+
+        shared_digest(sealed)
     result = {}
     with torch.inference_mode(), Denoise(ROOT / "build/pores/adaptive.ptx", adaptive=True) as gpu:
         for i in DEV:
@@ -85,7 +91,7 @@ def replay(model, folder, formal, cache):
             s = f"sample{i}"
             wp = folder / (s + "-weights.npz")
             field = folder / (s + ".f32")
-            native_key = "logits" if model == "F" else "field"
+            native_key = "logits" if model in ("F", "H") else "field"
             if (
                 sha(wp) != rec["weights"]
                 or sha(field) != rec[native_key]
@@ -125,7 +131,7 @@ def replay(model, folder, formal, cache):
                     if j < len(pars) - 1:
                         v = v.relu()
                 v = v.numpy()[:, 0]
-                if model == "F":
+                if model in ("F", "H"):
                     pred = v + x[:, -1, 8:-8, 8:-8]
                 else:
                     pred = cpu_decision(x[:, 3, 3:-3, 3:-3] * 48 + 128, v, SETTINGS[i][2])[0][
@@ -139,7 +145,9 @@ def replay(model, folder, formal, cache):
                     ids = decode(layers[z + j]["objects"], 65536).reshape(256, 256)
                     if not np.array_equal(plane >= 0, ids != 0):
                         raise ValueError("Viewer mask differs from sealed field")
-            expected = rec["max_abs_cpu_gpu_logit" if model == "F" else "max_abs_cpu_gpu_margin"]
+            expected = rec[
+                "max_abs_cpu_gpu_logit" if model in ("F", "H") else "max_abs_cpu_gpu_margin"
+            ]
             if flips != rec["cpu_gpu_decision_disagreements"] or maxdiff != expected:
                 raise ValueError(
                     f"CPU replay differs from prediction transcript: {i}, {flips}, {maxdiff}, {expected}"
@@ -157,7 +165,7 @@ def replay(model, folder, formal, cache):
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument("--model", choices=["F", "G"], required=True)
+    ap.add_argument("--model", choices=["F", "G", "H"], required=True)
     for k in ("predictions", "formal", "cache", "out"):
         ap.add_argument("--" + k, type=Path, required=True)
     a = ap.parse_args()

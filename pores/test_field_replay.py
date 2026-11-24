@@ -4,10 +4,10 @@ from pore_agreement import compare
 from pore_field_replay import load_layers
 
 
-@pytest.mark.parametrize("model", ["F", "G"])
+@pytest.mark.parametrize("model", ["F", "G", "H"])
 @pytest.mark.parametrize("bad", ["extra", "shape", "dtype", "nan"])
 def test_weight_schema_rejects_corrupt_layers(tmp_path, model, bad):
-    d = [22, 16, 16, 16, 16, 1] if model == "F" else [22, 12, 12, 12, 1]
+    d = [22, 16, 16, 16, 16, 1] if model in ("F", "H") else [22, 12, 12, 12, 1]
     weights = {}
     for j, (ci, co) in enumerate(zip(d[:-1], d[1:], strict=True)):
         k = 1 if co == 1 else 3
