@@ -85,6 +85,8 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--cache", type=Path, required=True)
     ap.add_argument("--out", type=Path, required=True)
-    ap.add_argument("--split-pilot", action="store_true", help="Use the registered z=552:680 development slab")
+    ap.add_argument(
+        "--split-pilot", action="store_true", help="Use the registered z=552:680 development slab"
+    )
     a = ap.parse_args()
     generate(a.cache, a.out, (552, 680) if a.split_pilot else Z)
