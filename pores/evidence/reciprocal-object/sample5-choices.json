@@ -1,0 +1,2426 @@
+{
+  "tables": [
+    "3cd2c31be3ebe84b3c5f5b4fd2dc9d833a0e694f9e16bf1ef95d18b226dbc3f8",
+    "e2c99559c2a3c765ab9a2f759fb8b5e552b8601ce7e301a09e792630c70170ad",
+    "4271701bc1960c7d78dd794ffcd7960c8db287c30a946bef98a2d106291ea2e6"
+  ],
+  "eligible": [
+    11,
+    11
+  ],
+  "reasons": {
+    "component count": 65,
+    "clipped": 16,
+    "below 64": 10,
+    "replace": 8
+  },
+  "regions": [
+    {
+      "region": 1,
+      "union_seed": 2022,
+      "area": 299851,
+      "component_ids": [
+        [
+          2022,
+          337072,
+          1381048,
+          1967024,
+          4953334
+        ],
+        [
+          2022,
+          467892,
+          1460138,
+          1983457,
+          3351022,
+          3866796,
+          5177547
+        ]
+      ],
+      "sizes": [
+        [
+          297383,
+          47,
+          2,
+          1,
+          1
+        ],
+        [
+          295897,
+          3,
+          1,
+          1,
+          1,
+          1,
+          3
+        ]
+      ],
+      "overlap": 293490,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 2,
+      "union_seed": 9101,
+      "area": 32948,
+      "component_ids": [
+        [
+          9101
+        ],
+        [
+          9351,
+          2311276
+        ]
+      ],
+      "sizes": [
+        [
+          32623
+        ],
+        [
+          32369,
+          1
+        ]
+      ],
+      "overlap": 32045,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 3,
+      "union_seed": 11681,
+      "area": 23,
+      "component_ids": [
+        [
+          11681
+        ],
+        [
+          11681
+        ]
+      ],
+      "sizes": [
+        [
+          22
+        ],
+        [
+          23
+        ]
+      ],
+      "overlap": 22,
+      "reason": "clipped",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 4,
+      "union_seed": 27211,
+      "area": 193516,
+      "component_ids": [
+        [
+          27466
+        ],
+        [
+          27211,
+          4097568,
+          4097825,
+          4163105,
+          5209141,
+          5676122
+        ]
+      ],
+      "sizes": [
+        [
+          191907
+        ],
+        [
+          190960,
+          1,
+          1,
+          1,
+          2,
+          1
+        ]
+      ],
+      "overlap": 189357,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 5,
+      "union_seed": 29953,
+      "area": 2754,
+      "component_ids": [
+        [
+          29953
+        ],
+        [
+          29953
+        ]
+      ],
+      "sizes": [
+        [
+          2732
+        ],
+        [
+          2704
+        ]
+      ],
+      "overlap": 2682,
+      "reason": "clipped",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 6,
+      "union_seed": 32464,
+      "area": 74,
+      "component_ids": [
+        [
+          32464
+        ],
+        [
+          32464
+        ]
+      ],
+      "sizes": [
+        [
+          65
+        ],
+        [
+          64
+        ]
+      ],
+      "overlap": 55,
+      "reason": "clipped",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 7,
+      "union_seed": 36235,
+      "area": 627,
+      "component_ids": [
+        [
+          36235
+        ],
+        [
+          36235
+        ]
+      ],
+      "sizes": [
+        [
+          617
+        ],
+        [
+          613
+        ]
+      ],
+      "overlap": 603,
+      "reason": "clipped",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 8,
+      "union_seed": 44512,
+      "area": 107543,
+      "component_ids": [
+        [
+          44512,
+          5820399,
+          5820912
+        ],
+        [
+          44512,
+          3141371,
+          4499397,
+          5757653,
+          5823445,
+          5888983,
+          6079156,
+          6286525
+        ]
+      ],
+      "sizes": [
+        [
+          106608,
+          1,
+          1
+        ],
+        [
+          106120,
+          1,
+          1,
+          2,
+          2,
+          1,
+          1,
+          3
+        ]
+      ],
+      "overlap": 105198,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 9,
+      "union_seed": 53134,
+      "area": 1955,
+      "component_ids": [
+        [
+          53134
+        ],
+        [
+          53134,
+          1367436
+        ]
+      ],
+      "sizes": [
+        [
+          1909
+        ],
+        [
+          1902,
+          1
+        ]
+      ],
+      "overlap": 1857,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 10,
+      "union_seed": 57669,
+      "area": 1083,
+      "component_ids": [
+        [
+          57669
+        ],
+        [
+          57669
+        ]
+      ],
+      "sizes": [
+        [
+          1053
+        ],
+        [
+          1075
+        ]
+      ],
+      "overlap": 1045,
+      "reason": "clipped",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 11,
+      "union_seed": 62043,
+      "area": 1,
+      "component_ids": [
+        [
+          62043
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 12,
+      "union_seed": 62300,
+      "area": 1,
+      "component_ids": [
+        [
+          62300
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 13,
+      "union_seed": 62557,
+      "area": 1,
+      "component_ids": [
+        [
+          62557
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 14,
+      "union_seed": 62815,
+      "area": 1,
+      "component_ids": [
+        [
+          62815
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 15,
+      "union_seed": 63070,
+      "area": 619,
+      "component_ids": [
+        [
+          63070
+        ],
+        [
+          64357,
+          128350,
+          259421
+        ]
+      ],
+      "sizes": [
+        [
+          599
+        ],
+        [
+          472,
+          1,
+          1
+        ]
+      ],
+      "overlap": 454,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 16,
+      "union_seed": 90871,
+      "area": 1065,
+      "component_ids": [
+        [
+          90871
+        ],
+        [
+          91128,
+          92405
+        ]
+      ],
+      "sizes": [
+        [
+          1042
+        ],
+        [
+          1043,
+          1
+        ]
+      ],
+      "overlap": 1021,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 17,
+      "union_seed": 92918,
+      "area": 1,
+      "component_ids": [
+        [],
+        [
+          92918
+        ]
+      ],
+      "sizes": [
+        [],
+        [
+          1
+        ]
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 18,
+      "union_seed": 152063,
+      "area": 2,
+      "component_ids": [
+        [
+          152063
+        ],
+        [
+          152319
+        ]
+      ],
+      "sizes": [
+        [
+          2
+        ],
+        [
+          1
+        ]
+      ],
+      "overlap": 1,
+      "reason": "below 64",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 19,
+      "union_seed": 152832,
+      "area": 1,
+      "component_ids": [
+        [
+          152832
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 20,
+      "union_seed": 153344,
+      "area": 1,
+      "component_ids": [
+        [
+          153344
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 21,
+      "union_seed": 190872,
+      "area": 20,
+      "component_ids": [
+        [
+          255897
+        ],
+        [
+          190872,
+          255896
+        ]
+      ],
+      "sizes": [
+        [
+          17
+        ],
+        [
+          14,
+          3
+        ]
+      ],
+      "overlap": 14,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 22,
+      "union_seed": 272300,
+      "area": 1,
+      "component_ids": [
+        [
+          272300
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 23,
+      "union_seed": 328768,
+      "area": 5754,
+      "component_ids": [
+        [
+          328768,
+          2425646
+        ],
+        [
+          393536,
+          395073
+        ]
+      ],
+      "sizes": [
+        [
+          5615,
+          1
+        ],
+        [
+          5639,
+          1
+        ]
+      ],
+      "overlap": 5502,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 24,
+      "union_seed": 349583,
+      "area": 742,
+      "component_ids": [
+        [
+          349583
+        ],
+        [
+          349583
+        ]
+      ],
+      "sizes": [
+        [
+          697
+        ],
+        [
+          718
+        ]
+      ],
+      "overlap": 673,
+      "reason": "replace",
+      "iou": "673/742",
+      "changed_voxels": 69
+    },
+    {
+      "region": 25,
+      "union_seed": 390423,
+      "area": 241,
+      "component_ids": [
+        [
+          390423
+        ],
+        [
+          390423,
+          915228
+        ]
+      ],
+      "sizes": [
+        [
+          230
+        ],
+        [
+          237,
+          1
+        ]
+      ],
+      "overlap": 227,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 26,
+      "union_seed": 417185,
+      "area": 95,
+      "component_ids": [
+        [
+          417186
+        ],
+        [
+          417185
+        ]
+      ],
+      "sizes": [
+        [
+          87
+        ],
+        [
+          88
+        ]
+      ],
+      "overlap": 80,
+      "reason": "replace",
+      "iou": "16/19",
+      "changed_voxels": 15
+    },
+    {
+      "region": 27,
+      "union_seed": 426189,
+      "area": 134,
+      "component_ids": [
+        [
+          426189
+        ],
+        [
+          491981
+        ]
+      ],
+      "sizes": [
+        [
+          127
+        ],
+        [
+          126
+        ]
+      ],
+      "overlap": 119,
+      "reason": "replace",
+      "iou": "119/134",
+      "changed_voxels": 15
+    },
+    {
+      "region": 28,
+      "union_seed": 635905,
+      "area": 55,
+      "component_ids": [
+        [
+          636161
+        ],
+        [
+          635905
+        ]
+      ],
+      "sizes": [
+        [
+          50
+        ],
+        [
+          53
+        ]
+      ],
+      "overlap": 48,
+      "reason": "clipped",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 29,
+      "union_seed": 718812,
+      "area": 3,
+      "component_ids": [
+        [
+          718812
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          3
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 30,
+      "union_seed": 887709,
+      "area": 250,
+      "component_ids": [
+        [
+          887709
+        ],
+        [
+          887710
+        ]
+      ],
+      "sizes": [
+        [
+          235
+        ],
+        [
+          244
+        ]
+      ],
+      "overlap": 229,
+      "reason": "replace",
+      "iou": "229/250",
+      "changed_voxels": 21
+    },
+    {
+      "region": 31,
+      "union_seed": 1062207,
+      "area": 241,
+      "component_ids": [
+        [
+          1062207
+        ],
+        [
+          1062208
+        ]
+      ],
+      "sizes": [
+        [
+          227
+        ],
+        [
+          217
+        ]
+      ],
+      "overlap": 203,
+      "reason": "replace",
+      "iou": "203/241",
+      "changed_voxels": 38
+    },
+    {
+      "region": 32,
+      "union_seed": 1094134,
+      "area": 17,
+      "component_ids": [
+        [
+          1094134,
+          1094392,
+          1094905
+        ],
+        [
+          1094136
+        ]
+      ],
+      "sizes": [
+        [
+          3,
+          6,
+          1
+        ],
+        [
+          13
+        ]
+      ],
+      "overlap": 6,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 33,
+      "union_seed": 1143231,
+      "area": 1,
+      "component_ids": [
+        [
+          1143231
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 34,
+      "union_seed": 1143744,
+      "area": 1,
+      "component_ids": [
+        [
+          1143744
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 35,
+      "union_seed": 1233042,
+      "area": 13,
+      "component_ids": [
+        [
+          1233042
+        ],
+        [
+          1233555,
+          1299348
+        ]
+      ],
+      "sizes": [
+        [
+          11
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 36,
+      "union_seed": 1274185,
+      "area": 2,
+      "component_ids": [
+        [
+          1274185
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          2
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 37,
+      "union_seed": 1308608,
+      "area": 2,
+      "component_ids": [
+        [
+          1308608
+        ],
+        [
+          1308608
+        ]
+      ],
+      "sizes": [
+        [
+          2
+        ],
+        [
+          1
+        ]
+      ],
+      "overlap": 1,
+      "reason": "below 64",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 38,
+      "union_seed": 1346112,
+      "area": 35,
+      "component_ids": [
+        [
+          1346112
+        ],
+        [
+          1411135
+        ]
+      ],
+      "sizes": [
+        [
+          33
+        ],
+        [
+          29
+        ]
+      ],
+      "overlap": 27,
+      "reason": "below 64",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 39,
+      "union_seed": 1374402,
+      "area": 1,
+      "component_ids": [
+        [
+          1374402
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 40,
+      "union_seed": 1380804,
+      "area": 1,
+      "component_ids": [
+        [],
+        [
+          1380804
+        ]
+      ],
+      "sizes": [
+        [],
+        [
+          1
+        ]
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 41,
+      "union_seed": 1381305,
+      "area": 1,
+      "component_ids": [
+        [],
+        [
+          1381305
+        ]
+      ],
+      "sizes": [
+        [],
+        [
+          1
+        ]
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 42,
+      "union_seed": 1441352,
+      "area": 64,
+      "component_ids": [
+        [
+          1441352
+        ],
+        [
+          1441352
+        ]
+      ],
+      "sizes": [
+        [
+          62
+        ],
+        [
+          63
+        ]
+      ],
+      "overlap": 61,
+      "reason": "clipped",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 43,
+      "union_seed": 1572631,
+      "area": 14772,
+      "component_ids": [
+        [
+          1572631
+        ],
+        [
+          1572631
+        ]
+      ],
+      "sizes": [
+        [
+          14660
+        ],
+        [
+          14596
+        ]
+      ],
+      "overlap": 14484,
+      "reason": "clipped",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 44,
+      "union_seed": 1611422,
+      "area": 9,
+      "component_ids": [
+        [
+          1611422
+        ],
+        [
+          1611934
+        ]
+      ],
+      "sizes": [
+        [
+          9
+        ],
+        [
+          1
+        ]
+      ],
+      "overlap": 1,
+      "reason": "below 64",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 45,
+      "union_seed": 1612956,
+      "area": 1246,
+      "component_ids": [
+        [
+          1612956
+        ],
+        [
+          1612958
+        ]
+      ],
+      "sizes": [
+        [
+          1223
+        ],
+        [
+          1202
+        ]
+      ],
+      "overlap": 1179,
+      "reason": "replace",
+      "iou": "1179/1246",
+      "changed_voxels": 67
+    },
+    {
+      "region": 46,
+      "union_seed": 1673927,
+      "area": 352,
+      "component_ids": [
+        [
+          1673927
+        ],
+        [
+          1673927
+        ]
+      ],
+      "sizes": [
+        [
+          335
+        ],
+        [
+          345
+        ]
+      ],
+      "overlap": 328,
+      "reason": "replace",
+      "iou": "41/44",
+      "changed_voxels": 24
+    },
+    {
+      "region": 47,
+      "union_seed": 1694967,
+      "area": 27,
+      "component_ids": [
+        [
+          1694967
+        ],
+        [
+          1694968
+        ]
+      ],
+      "sizes": [
+        [
+          26
+        ],
+        [
+          17
+        ]
+      ],
+      "overlap": 16,
+      "reason": "below 64",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 48,
+      "union_seed": 1712504,
+      "area": 54,
+      "component_ids": [
+        [
+          1712504
+        ],
+        [
+          1712504,
+          1843320
+        ]
+      ],
+      "sizes": [
+        [
+          47
+        ],
+        [
+          36,
+          3
+        ]
+      ],
+      "overlap": 32,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 49,
+      "union_seed": 1824845,
+      "area": 51697,
+      "component_ids": [
+        [
+          1824845,
+          3194484,
+          4646290
+        ],
+        [
+          1825101,
+          2740307,
+          3983163,
+          3983420,
+          5881467
+        ]
+      ],
+      "sizes": [
+        [
+          51236,
+          1,
+          1
+        ],
+        [
+          51014,
+          21,
+          1,
+          2,
+          1
+        ]
+      ],
+      "overlap": 50580,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 50,
+      "union_seed": 1845623,
+      "area": 1,
+      "component_ids": [
+        [
+          1845623
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 51,
+      "union_seed": 1966175,
+      "area": 4,
+      "component_ids": [
+        [
+          1966175
+        ],
+        [
+          1966175
+        ]
+      ],
+      "sizes": [
+        [
+          4
+        ],
+        [
+          2
+        ]
+      ],
+      "overlap": 2,
+      "reason": "clipped",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 52,
+      "union_seed": 2053063,
+      "area": 4,
+      "component_ids": [
+        [
+          2053063
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          4
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 53,
+      "union_seed": 2053323,
+      "area": 1,
+      "component_ids": [
+        [
+          2053323
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 54,
+      "union_seed": 2063104,
+      "area": 2,
+      "component_ids": [
+        [],
+        [
+          2063104
+        ]
+      ],
+      "sizes": [
+        [],
+        [
+          2
+        ]
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 55,
+      "union_seed": 2115447,
+      "area": 10,
+      "component_ids": [
+        [
+          2115447
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          10
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 56,
+      "union_seed": 2162497,
+      "area": 106,
+      "component_ids": [
+        [
+          2162497
+        ],
+        [
+          2162498,
+          2618935
+        ]
+      ],
+      "sizes": [
+        [
+          101
+        ],
+        [
+          80,
+          12
+        ]
+      ],
+      "overlap": 87,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 57,
+      "union_seed": 2234880,
+      "area": 1,
+      "component_ids": [
+        [
+          2234880
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 58,
+      "union_seed": 2253403,
+      "area": 16,
+      "component_ids": [
+        [
+          2253403
+        ],
+        [
+          2318683
+        ]
+      ],
+      "sizes": [
+        [
+          16
+        ],
+        [
+          4
+        ]
+      ],
+      "overlap": 4,
+      "reason": "below 64",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 59,
+      "union_seed": 2450011,
+      "area": 1,
+      "component_ids": [
+        [],
+        [
+          2450011
+        ]
+      ],
+      "sizes": [
+        [],
+        [
+          1
+        ]
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 60,
+      "union_seed": 2468862,
+      "area": 1,
+      "component_ids": [
+        [
+          2468862
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 61,
+      "union_seed": 2599423,
+      "area": 149,
+      "component_ids": [
+        [
+          2599423
+        ],
+        [
+          2664701
+        ]
+      ],
+      "sizes": [
+        [
+          132
+        ],
+        [
+          136
+        ]
+      ],
+      "overlap": 119,
+      "reason": "clipped",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 62,
+      "union_seed": 2756297,
+      "area": 1,
+      "component_ids": [
+        [
+          2756297
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 63,
+      "union_seed": 2909138,
+      "area": 1,
+      "component_ids": [
+        [
+          2909138
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 64,
+      "union_seed": 3060862,
+      "area": 127,
+      "component_ids": [
+        [
+          3060862
+        ],
+        [
+          3125888,
+          3257473
+        ]
+      ],
+      "sizes": [
+        [
+          112
+        ],
+        [
+          78,
+          2
+        ]
+      ],
+      "overlap": 65,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 65,
+      "union_seed": 3060894,
+      "area": 339,
+      "component_ids": [
+        [
+          3060894
+        ],
+        [
+          3060894
+        ]
+      ],
+      "sizes": [
+        [
+          323
+        ],
+        [
+          333
+        ]
+      ],
+      "overlap": 317,
+      "reason": "replace",
+      "iou": "317/339",
+      "changed_voxels": 22
+    },
+    {
+      "region": 66,
+      "union_seed": 3340435,
+      "area": 17,
+      "component_ids": [
+        [
+          3340435,
+          3341206
+        ],
+        [
+          3340691
+        ]
+      ],
+      "sizes": [
+        [
+          13,
+          1
+        ],
+        [
+          8
+        ]
+      ],
+      "overlap": 5,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 67,
+      "union_seed": 3340694,
+      "area": 1,
+      "component_ids": [
+        [
+          3340694
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 68,
+      "union_seed": 3342319,
+      "area": 1,
+      "component_ids": [
+        [
+          3342319
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 69,
+      "union_seed": 3684729,
+      "area": 442,
+      "component_ids": [
+        [
+          3684729
+        ],
+        [
+          3684984,
+          3750531
+        ]
+      ],
+      "sizes": [
+        [
+          416
+        ],
+        [
+          426,
+          1
+        ]
+      ],
+      "overlap": 401,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 70,
+      "union_seed": 4090172,
+      "area": 10,
+      "component_ids": [
+        [
+          4090172
+        ],
+        [
+          4090428
+        ]
+      ],
+      "sizes": [
+        [
+          10
+        ],
+        [
+          1
+        ]
+      ],
+      "overlap": 1,
+      "reason": "below 64",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 71,
+      "union_seed": 4109521,
+      "area": 1,
+      "component_ids": [
+        [
+          4109521
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 72,
+      "union_seed": 4110034,
+      "area": 1,
+      "component_ids": [
+        [],
+        [
+          4110034
+        ]
+      ],
+      "sizes": [
+        [],
+        [
+          1
+        ]
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 73,
+      "union_seed": 4175571,
+      "area": 2,
+      "component_ids": [
+        [
+          4175571
+        ],
+        [
+          4175571
+        ]
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        [
+          2
+        ]
+      ],
+      "overlap": 1,
+      "reason": "below 64",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 74,
+      "union_seed": 4192816,
+      "area": 332,
+      "component_ids": [
+        [
+          4192816
+        ],
+        [
+          4192816
+        ]
+      ],
+      "sizes": [
+        [
+          325
+        ],
+        [
+          318
+        ]
+      ],
+      "overlap": 311,
+      "reason": "clipped",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 75,
+      "union_seed": 4700600,
+      "area": 2,
+      "component_ids": [
+        [
+          4700600
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          2
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 76,
+      "union_seed": 4902592,
+      "area": 1,
+      "component_ids": [
+        [
+          4902592
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 77,
+      "union_seed": 4926039,
+      "area": 32,
+      "component_ids": [
+        [
+          4926039,
+          4926041,
+          4926299,
+          4926809,
+          4926811,
+          4991834
+        ],
+        [
+          4926297
+        ]
+      ],
+      "sizes": [
+        [
+          11,
+          3,
+          1,
+          1,
+          4,
+          1
+        ],
+        [
+          17
+        ]
+      ],
+      "overlap": 6,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 78,
+      "union_seed": 4927325,
+      "area": 2,
+      "component_ids": [
+        [
+          4927325
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          2
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 79,
+      "union_seed": 4993376,
+      "area": 1,
+      "component_ids": [
+        [
+          4993376
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 80,
+      "union_seed": 5071555,
+      "area": 1,
+      "component_ids": [
+        [
+          5071555
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 81,
+      "union_seed": 5199970,
+      "area": 1,
+      "component_ids": [
+        [
+          5199970
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 82,
+      "union_seed": 5214389,
+      "area": 54,
+      "component_ids": [
+        [
+          5214389
+        ],
+        [
+          5214389
+        ]
+      ],
+      "sizes": [
+        [
+          47
+        ],
+        [
+          52
+        ]
+      ],
+      "overlap": 45,
+      "reason": "below 64",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 83,
+      "union_seed": 5265507,
+      "area": 3,
+      "component_ids": [
+        [
+          5265507
+        ],
+        [
+          5265764
+        ]
+      ],
+      "sizes": [
+        [
+          3
+        ],
+        [
+          1
+        ]
+      ],
+      "overlap": 1,
+      "reason": "below 64",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 84,
+      "union_seed": 5266021,
+      "area": 1,
+      "component_ids": [
+        [
+          5266021
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 85,
+      "union_seed": 5369885,
+      "area": 323,
+      "component_ids": [
+        [
+          5369886
+        ],
+        [
+          5369885
+        ]
+      ],
+      "sizes": [
+        [
+          291
+        ],
+        [
+          321
+        ]
+      ],
+      "overlap": 289,
+      "reason": "clipped",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 86,
+      "union_seed": 5398243,
+      "area": 1,
+      "component_ids": [
+        [],
+        [
+          5398243
+        ]
+      ],
+      "sizes": [
+        [],
+        [
+          1
+        ]
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 87,
+      "union_seed": 5398500,
+      "area": 1,
+      "component_ids": [
+        [
+          5398500
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 88,
+      "union_seed": 5459790,
+      "area": 1,
+      "component_ids": [
+        [
+          5459790
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 89,
+      "union_seed": 5499256,
+      "area": 7,
+      "component_ids": [
+        [
+          5499256,
+          5564794
+        ],
+        [
+          5499257
+        ]
+      ],
+      "sizes": [
+        [
+          5,
+          1
+        ],
+        [
+          6
+        ]
+      ],
+      "overlap": 5,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 90,
+      "union_seed": 5529088,
+      "area": 5,
+      "component_ids": [
+        [
+          5529088
+        ],
+        [
+          5529088
+        ]
+      ],
+      "sizes": [
+        [
+          5
+        ],
+        [
+          4
+        ]
+      ],
+      "overlap": 4,
+      "reason": "clipped",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 91,
+      "union_seed": 5564282,
+      "area": 1,
+      "component_ids": [
+        [
+          5564282
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 92,
+      "union_seed": 5609307,
+      "area": 1,
+      "component_ids": [
+        [],
+        [
+          5609307
+        ]
+      ],
+      "sizes": [
+        [],
+        [
+          1
+        ]
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 93,
+      "union_seed": 5674845,
+      "area": 1,
+      "component_ids": [
+        [
+          5674845
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          1
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 94,
+      "union_seed": 5675355,
+      "area": 2,
+      "component_ids": [
+        [
+          5675355
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          2
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 95,
+      "union_seed": 5761567,
+      "area": 10,
+      "component_ids": [
+        [
+          5761567
+        ],
+        [
+          5762079,
+          5827358
+        ]
+      ],
+      "sizes": [
+        [
+          9
+        ],
+        [
+          1,
+          2
+        ]
+      ],
+      "overlap": 2,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 96,
+      "union_seed": 5839742,
+      "area": 496,
+      "component_ids": [
+        [
+          5839743
+        ],
+        [
+          5839742
+        ]
+      ],
+      "sizes": [
+        [
+          483
+        ],
+        [
+          484
+        ]
+      ],
+      "overlap": 471,
+      "reason": "clipped",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 97,
+      "union_seed": 5940991,
+      "area": 241,
+      "component_ids": [
+        [
+          5940992
+        ],
+        [
+          5940991
+        ]
+      ],
+      "sizes": [
+        [
+          233
+        ],
+        [
+          241
+        ]
+      ],
+      "overlap": 233,
+      "reason": "clipped",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 98,
+      "union_seed": 5996509,
+      "area": 2,
+      "component_ids": [
+        [
+          5996509
+        ],
+        []
+      ],
+      "sizes": [
+        [
+          2
+        ],
+        []
+      ],
+      "overlap": 0,
+      "reason": "component count",
+      "iou": null,
+      "changed_voxels": 0
+    },
+    {
+      "region": 99,
+      "union_seed": 6202617,
+      "area": 34,
+      "component_ids": [
+        [
+          6202617
+        ],
+        [
+          6202617
+        ]
+      ],
+      "sizes": [
+        [
+          31
+        ],
+        [
+          33
+        ]
+      ],
+      "overlap": 30,
+      "reason": "clipped",
+      "iou": null,
+      "changed_voxels": 0
+    }
+  ]
+}
