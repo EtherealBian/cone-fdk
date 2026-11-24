@@ -43,4 +43,6 @@ try {
     if($LASTEXITCODE){throw 'Volume curvature compilation failed'}
     & $Python scripts/ptx.py pores/shell_volume.cu build/pores/shell-volume.ptx
     if($LASTEXITCODE){throw 'Shell volume compilation failed'}
+    & $Python scripts/ptx.py pores/face_profile.cu build/pores/face-profile.ptx
+    if($LASTEXITCODE){throw 'Oriented face profile compilation failed'}
 } finally {$env:Path=$old;Pop-Location}

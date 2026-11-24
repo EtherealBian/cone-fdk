@@ -1,0 +1,447 @@
+{
+  "objects": {
+    "26": {
+      "detector": 359,
+      "axis_delta": [
+        16,
+        22,
+        40
+      ],
+      "in_stay_out": [
+        104,
+        150,
+        182
+      ],
+      "target": 385,
+      "actual": 385,
+      "candidates": 125,
+      "changed": 26,
+      "reason": "edited",
+      "indices": "14adea19a4112903f659fead6f8e5f03d2aeaea2d776503f1f3c978d83659834"
+    },
+    "33": {
+      "detector": 146,
+      "axis_delta": [
+        67,
+        17,
+        2
+      ],
+      "in_stay_out": [
+        32,
+        88,
+        118
+      ],
+      "target": 175,
+      "actual": 175,
+      "candidates": 87,
+      "changed": 29,
+      "reason": "edited",
+      "indices": "96459a3807d63b295a1327ba45896168cb1a9fd29949c5ebc1e1f4bf3130bb27"
+    },
+    "43": {
+      "detector": 80,
+      "axis_delta": [
+        41,
+        13,
+        -1
+      ],
+      "in_stay_out": [
+        24,
+        39,
+        77
+      ],
+      "target": 98,
+      "actual": 98,
+      "candidates": 59,
+      "changed": 18,
+      "reason": "edited",
+      "indices": "61be18450bfc7f7e1df32a08361c4f7a4110eff6e1dde396f3a1fb0e286f1607"
+    },
+    "68": {
+      "detector": 65,
+      "axis_delta": [
+        29,
+        25,
+        15
+      ],
+      "in_stay_out": [
+        7,
+        41,
+        76
+      ],
+      "target": 88,
+      "actual": 88,
+      "candidates": 52,
+      "changed": 23,
+      "reason": "edited",
+      "indices": "438bf341be419faa5604e486d8d76f461a16df93eb1b4e5517d323ddc6ce6bd6"
+    },
+    "78": {
+      "detector": 88,
+      "axis_delta": [
+        41,
+        3,
+        16
+      ],
+      "in_stay_out": [
+        14,
+        58,
+        74
+      ],
+      "target": 108,
+      "actual": 108,
+      "candidates": 49,
+      "changed": 20,
+      "reason": "edited",
+      "indices": "3c504a11667f0fd452b4430fae484a5e377320ba0d88a67513ff038b5cf32204"
+    },
+    "107": {
+      "detector": 85,
+      "axis_delta": [
+        37,
+        22,
+        24
+      ],
+      "in_stay_out": [
+        6,
+        55,
+        89
+      ],
+      "target": 113,
+      "actual": 113,
+      "candidates": 53,
+      "changed": 28,
+      "reason": "edited",
+      "indices": "99611ecc1fd42cef9a609a6d3b9b698fefe0f7e2defa1575b5123964a4145f66"
+    },
+    "112": {
+      "detector": 141,
+      "axis_delta": [
+        69,
+        48,
+        5
+      ],
+      "in_stay_out": [
+        30,
+        74,
+        152
+      ],
+      "target": 182,
+      "actual": 182,
+      "candidates": 105,
+      "changed": 41,
+      "reason": "edited",
+      "indices": "6af4f6c81c4476af3e0489729149b5a89f34f14f92bf05469e98870e5c818b61"
+    },
+    "129": {
+      "detector": 264,
+      "axis_delta": [
+        33,
+        56,
+        33
+      ],
+      "in_stay_out": [
+        66,
+        130,
+        188
+      ],
+      "target": 305,
+      "actual": 305,
+      "candidates": 126,
+      "changed": 41,
+      "reason": "edited",
+      "indices": "f38159c33f905dac1185652d57ee51203f80bae6e74f6c22c364cab10742a7aa"
+    },
+    "144": {
+      "detector": 167,
+      "axis_delta": [
+        4,
+        31,
+        44
+      ],
+      "in_stay_out": [
+        34,
+        87,
+        113
+      ],
+      "target": 193,
+      "actual": 193,
+      "candidates": 72,
+      "changed": 26,
+      "reason": "edited",
+      "indices": "0690671f74ff889c557b552df249badeb00c60589200ccf128feb3dd80c4e882"
+    },
+    "145": {
+      "detector": 157,
+      "axis_delta": [
+        55,
+        26,
+        47
+      ],
+      "in_stay_out": [
+        20,
+        106,
+        148
+      ],
+      "target": 200,
+      "actual": 200,
+      "candidates": 107,
+      "changed": 43,
+      "reason": "edited",
+      "indices": "2403f10fd414c28a2a42a4e361ccf9da4ba11f71e70470dc58995b3734d5ff67"
+    },
+    "149": {
+      "detector": 248,
+      "axis_delta": [
+        11,
+        61,
+        39
+      ],
+      "in_stay_out": [
+        64,
+        105,
+        175
+      ],
+      "target": 285,
+      "actual": 285,
+      "candidates": 108,
+      "changed": 37,
+      "reason": "edited",
+      "indices": "241c02aa4f37c4d3436e1561791ad8b5d6a7ae5d7b003d382cc051260d454f0b"
+    },
+    "154": {
+      "detector": 387,
+      "axis_delta": [
+        49,
+        19,
+        32
+      ],
+      "in_stay_out": [
+        79,
+        216,
+        179
+      ],
+      "target": 420,
+      "actual": 420,
+      "candidates": 126,
+      "changed": 33,
+      "reason": "edited",
+      "indices": "ed4140cc0937567b566a76444a540aa496460886102036756b8701ae4f466fb3"
+    },
+    "155": {
+      "detector": 140,
+      "axis_delta": [
+        14,
+        21,
+        22
+      ],
+      "in_stay_out": [
+        31,
+        95,
+        88
+      ],
+      "target": 159,
+      "actual": 159,
+      "candidates": 61,
+      "changed": 19,
+      "reason": "edited",
+      "indices": "96acb22f4189c850ec6a7debd8e2bb40289b27abd38db537514d22681ddfb548"
+    },
+    "156": {
+      "detector": 1094,
+      "axis_delta": [
+        114,
+        24,
+        39
+      ],
+      "in_stay_out": [
+        302,
+        441,
+        479
+      ],
+      "target": 1153,
+      "actual": 1153,
+      "candidates": 341,
+      "changed": 59,
+      "reason": "edited",
+      "indices": "491f67bc4852e8db056f8e05b61e90363b47b576b8e5ccd5e76a030c14ecaccd"
+    },
+    "162": {
+      "detector": 877,
+      "axis_delta": [
+        -55,
+        49,
+        53
+      ],
+      "in_stay_out": [
+        269,
+        275,
+        316
+      ],
+      "target": 893,
+      "actual": 893,
+      "candidates": 214,
+      "changed": 16,
+      "reason": "edited",
+      "indices": "bd835f3e4254ece6a09c2e6fc3e0cdb85a9aad5874ce9928009ff425f10f1b68"
+    },
+    "169": {
+      "detector": 220,
+      "axis_delta": [
+        32,
+        -13,
+        11
+      ],
+      "in_stay_out": [
+        59,
+        130,
+        89
+      ],
+      "target": 230,
+      "actual": 230,
+      "candidates": 61,
+      "changed": 10,
+      "reason": "edited",
+      "indices": "7ddd7d731ccd0cb9fb6060e2b092b6a130f496a2e72c81694368960042c7635b"
+    },
+    "170": {
+      "detector": 3744,
+      "axis_delta": [
+        -278,
+        22,
+        -99
+      ],
+      "in_stay_out": [
+        1108,
+        1001,
+        753
+      ],
+      "target": 3626,
+      "actual": 3626,
+      "candidates": 841,
+      "changed": 118,
+      "reason": "edited",
+      "indices": "4cff78b3cc0dbc3b63e39475120a92d55bfc9b746775790d823e878a23efeec8"
+    },
+    "176": {
+      "detector": 588,
+      "axis_delta": [
+        26,
+        50,
+        36
+      ],
+      "in_stay_out": [
+        172,
+        224,
+        284
+      ],
+      "target": 625,
+      "actual": 625,
+      "candidates": 208,
+      "changed": 37,
+      "reason": "edited",
+      "indices": "52a8f4311536c657bfec12f80ebfbc3c5a169a878c08a85cecf5c0402e6d079d"
+    },
+    "184": {
+      "detector": 371,
+      "axis_delta": [
+        84,
+        25,
+        15
+      ],
+      "in_stay_out": [
+        115,
+        168,
+        239
+      ],
+      "target": 412,
+      "actual": 412,
+      "candidates": 178,
+      "changed": 41,
+      "reason": "edited",
+      "indices": "965a82824f7b68c02888048bd9bf4cc6c5a65917c6e9e67e24c57e516ef81b67"
+    },
+    "185": {
+      "detector": 275,
+      "axis_delta": [
+        -9,
+        22,
+        25
+      ],
+      "in_stay_out": [
+        109,
+        116,
+        147
+      ],
+      "target": 288,
+      "actual": 288,
+      "candidates": 110,
+      "changed": 13,
+      "reason": "edited",
+      "indices": "bb44013e11e9aff42b16de0cfe2fd216e5f3a12659365aec45c4ac254f211a2c"
+    },
+    "192": {
+      "detector": 103,
+      "axis_delta": [
+        43,
+        31,
+        9
+      ],
+      "in_stay_out": [
+        12,
+        67,
+        95
+      ],
+      "target": 131,
+      "actual": 131,
+      "candidates": 66,
+      "changed": 28,
+      "reason": "edited",
+      "indices": "c7b95bd9f67112462b8cc348e38be8701d2a8be70b2f1a11adb09e470af3f655"
+    },
+    "204": {
+      "detector": 211,
+      "axis_delta": [
+        81,
+        -6,
+        40
+      ],
+      "in_stay_out": [
+        56,
+        115,
+        171
+      ],
+      "target": 249,
+      "actual": 249,
+      "candidates": 134,
+      "changed": 38,
+      "reason": "edited",
+      "indices": "bb0ea9ee243761d9c1f5a73417a98acc69348b873419a8fa6a2875ebc9cee1c3"
+    },
+    "205": {
+      "detector": 81,
+      "axis_delta": [
+        69,
+        18,
+        16
+      ],
+      "in_stay_out": [
+        13,
+        31,
+        116
+      ],
+      "target": 115,
+      "actual": 115,
+      "candidates": 94,
+      "changed": 34,
+      "reason": "edited",
+      "indices": "410eac88c59b6ad39dbb3a12e7562214d1bc69e29aa5cedb0cb5b51226d81d9d"
+    }
+  },
+  "components": 229,
+  "oriented_faces": 10886,
+  "feature_bytes_checked": 522528,
+  "reasons": {
+    "edited": 23
+  }
+}
