@@ -12,7 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "pores"))
 from pore_check import reference
 from pore_split import DEV, SEALED, SHAPE, Z, split
 from pore_split_score import decision, ledger
-from pore_transfer import digest, sha, stack, verified
+from pore_transfer import digest, label, pairs, sha, stack, verified
 from validate import SPEC, final_gates, objects, score
 
 
@@ -52,6 +52,7 @@ def replay_split(folder, cache):
             "Different evaluation region",
         )
         require(r["ledger"] == ledger(base, arm, truth, rows), "Wrong intervention outcomes")
+        tx = label(truth)
         for name, mask in [("base", base), ("arm", arm)]:
             a = r[name]
             table = folder / f"{s}-{name}-pores.csv"
@@ -70,6 +71,18 @@ def replay_split(folder, cache):
                     m.read_bytes() == (folder / f"{s}-{name}-matches.csv").read_bytes(),
                     "Different one-to-one matches",
                 )
+            pred = label(mask)
+            matched = pairs(pred, tx, 64)
+            refs = {
+                str(k): dict(
+                    reference_voxels=int(tx[1][k]),
+                    pred=matched[k][0] if k in matched else None,
+                    voxels=int(pred[1][matched[k][0]]) if k in matched else None,
+                    iou=matched[k][1] if k in matched else None,
+                )
+                for k in np.flatnonzero(tx[2] & (tx[1] >= 64))
+            }
+            require(refs == a["references"], "Different full reference ledger")
             met = score(mask, truth)
             require(
                 o == a["objects"]

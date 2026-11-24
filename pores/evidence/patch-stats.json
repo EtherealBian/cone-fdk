@@ -1,0 +1,389 @@
+{
+  "2": {
+    "specimen": 2,
+    "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+    "segmented": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+    "fit": {
+      "dense": {
+        "20": {
+          "tp": 1750,
+          "fp": 454,
+          "fn": 127,
+          "tn": 210661,
+          "dice": 0.8576329331046312,
+          "precision": 0.794010889292196,
+          "recall": 0.9323388385721897,
+          "predicted_porosity_pct": 1.0347806490384615,
+          "reference_porosity_pct": 0.8812537560096154,
+          "porosity_error_pp": 0.15352689302884615
+        },
+        "30": {
+          "tp": 1638,
+          "fp": 78,
+          "fn": 239,
+          "tn": 211037,
+          "dice": 0.9117728917339271,
+          "precision": 0.9545454545454546,
+          "recall": 0.8726691529035695,
+          "predicted_porosity_pct": 0.8056640625,
+          "reference_porosity_pct": 0.8812537560096154,
+          "porosity_error_pp": -0.07558969350961539
+        },
+        "40": {
+          "tp": 1355,
+          "fp": 68,
+          "fn": 522,
+          "tn": 211047,
+          "dice": 0.8212121212121212,
+          "precision": 0.9522136331693605,
+          "recall": 0.7218966435801811,
+          "predicted_porosity_pct": 0.6681002103365384,
+          "reference_porosity_pct": 0.8812537560096154,
+          "porosity_error_pp": -0.21315354567307693
+        }
+      },
+      "selected": {
+        "20": {
+          "tp": 1747,
+          "fp": 1496,
+          "fn": 130,
+          "tn": 209619,
+          "dice": 0.682421875,
+          "precision": 0.5386987357385137,
+          "recall": 0.9307405434203516,
+          "predicted_porosity_pct": 1.5225923978365385,
+          "reference_porosity_pct": 0.8812537560096154,
+          "porosity_error_pp": 0.6413386418269231
+        },
+        "30": {
+          "tp": 1755,
+          "fp": 1243,
+          "fn": 122,
+          "tn": 209872,
+          "dice": 0.72,
+          "precision": 0.585390260173449,
+          "recall": 0.9350026638252531,
+          "predicted_porosity_pct": 1.4075646033653846,
+          "reference_porosity_pct": 0.8812537560096154,
+          "porosity_error_pp": 0.5263108473557693
+        },
+        "40": {
+          "tp": 1754,
+          "fp": 1253,
+          "fn": 123,
+          "tn": 209862,
+          "dice": 0.7182637182637183,
+          "precision": 0.5833056202194878,
+          "recall": 0.9344698987746404,
+          "predicted_porosity_pct": 1.4117901141826923,
+          "reference_porosity_pct": 0.8812537560096154,
+          "porosity_error_pp": 0.5305363581730769
+        }
+      }
+    },
+    "check": {
+      "dense": {
+        "30": {
+          "tp": 2860,
+          "fp": 250,
+          "fn": 89,
+          "tn": 209793,
+          "dice": 0.9440501732959234,
+          "precision": 0.9196141479099679,
+          "recall": 0.9698202780603594,
+          "predicted_porosity_pct": 1.4601487379807692,
+          "reference_porosity_pct": 1.3845590444711537,
+          "porosity_error_pp": 0.07558969350961539
+        }
+      },
+      "selected": {
+        "30": {
+          "tp": 2891,
+          "fp": 1507,
+          "fn": 58,
+          "tn": 208536,
+          "dice": 0.7869878862120594,
+          "precision": 0.657344247385175,
+          "recall": 0.9803323160393353,
+          "predicted_porosity_pct": 2.0648662860576925,
+          "reference_porosity_pct": 1.3845590444711537,
+          "porosity_error_pp": 0.6803072415865384
+        }
+      }
+    },
+    "transitions": {
+      "fn_fixed": 68,
+      "fn_added": 37,
+      "fp_fixed": 25,
+      "fp_added": 1282
+    },
+    "band": {
+      "dense": 30,
+      "selected": 30
+    },
+    "delta": {
+      "dice": -0.15706228708386405,
+      "precision": -0.2622699005247928,
+      "recall": 0.01051203797897593
+    },
+    "advance": false
+  },
+  "3": {
+    "specimen": 3,
+    "raw": "460ea68425d9ac387485b65a3aa2b3f25da31cfe9de8181d4c1a5b0a982d26c8",
+    "segmented": "f94c64a99f5f0e7971a3e0e2f7c932183009938aa5d284bcd23f4657674e6009",
+    "fit": {
+      "dense": {
+        "20": {
+          "tp": 35694,
+          "fp": 1484,
+          "fn": 1958,
+          "tn": 173856,
+          "dice": 0.9540024054523587,
+          "precision": 0.9600839205982032,
+          "recall": 0.9479974503346436,
+          "predicted_porosity_pct": 17.455115685096153,
+          "reference_porosity_pct": 17.677659254807693,
+          "porosity_error_pp": -0.22254356971153846
+        },
+        "30": {
+          "tp": 35667,
+          "fp": 956,
+          "fn": 1985,
+          "tn": 174384,
+          "dice": 0.9604039044092898,
+          "precision": 0.9738961854572263,
+          "recall": 0.9472803569531499,
+          "predicted_porosity_pct": 17.194542518028847,
+          "reference_porosity_pct": 17.677659254807693,
+          "porosity_error_pp": -0.48311673677884615
+        },
+        "40": {
+          "tp": 35036,
+          "fp": 943,
+          "fn": 2616,
+          "tn": 174397,
+          "dice": 0.9516643804919124,
+          "precision": 0.9737902665443731,
+          "recall": 0.9305216190375013,
+          "predicted_porosity_pct": 16.892183743990383,
+          "reference_porosity_pct": 17.677659254807693,
+          "porosity_error_pp": -0.7854755108173077
+        }
+      },
+      "selected": {
+        "20": {
+          "tp": 34569,
+          "fp": 3362,
+          "fn": 3083,
+          "tn": 171978,
+          "dice": 0.9147295026659434,
+          "precision": 0.9113653739685218,
+          "recall": 0.9181185594390736,
+          "predicted_porosity_pct": 17.80865009014423,
+          "reference_porosity_pct": 17.677659254807693,
+          "porosity_error_pp": 0.13099083533653846
+        },
+        "30": {
+          "tp": 34704,
+          "fp": 3335,
+          "fn": 2948,
+          "tn": 172005,
+          "dice": 0.9169914520880951,
+          "precision": 0.9123268224716738,
+          "recall": 0.921704026346542,
+          "predicted_porosity_pct": 17.859356219951923,
+          "reference_porosity_pct": 17.677659254807693,
+          "porosity_error_pp": 0.18169696514423078
+        },
+        "40": {
+          "tp": 34742,
+          "fp": 3323,
+          "fn": 2910,
+          "tn": 172017,
+          "dice": 0.9176803095738078,
+          "precision": 0.9127019571785104,
+          "recall": 0.9227132688834591,
+          "predicted_porosity_pct": 17.871563251201923,
+          "reference_porosity_pct": 17.677659254807693,
+          "porosity_error_pp": 0.19390399639423078
+        }
+      }
+    },
+    "check": {
+      "dense": {
+        "30": {
+          "tp": 29032,
+          "fp": 886,
+          "fn": 1641,
+          "tn": 181433,
+          "dice": 0.9582941360928191,
+          "precision": 0.9703857209706531,
+          "recall": 0.9465001793107946,
+          "predicted_porosity_pct": 14.046536959134615,
+          "reference_porosity_pct": 14.401010366586538,
+          "porosity_error_pp": -0.3544734074519231
+        }
+      },
+      "selected": {
+        "40": {
+          "tp": 28596,
+          "fp": 3563,
+          "fn": 2077,
+          "tn": 178756,
+          "dice": 0.9102368220015279,
+          "precision": 0.8892067539413538,
+          "recall": 0.9322857236005607,
+          "predicted_porosity_pct": 15.09868915264423,
+          "reference_porosity_pct": 14.401010366586538,
+          "porosity_error_pp": 0.6976787860576923
+        }
+      }
+    },
+    "transitions": {
+      "fn_fixed": 821,
+      "fn_added": 1257,
+      "fp_fixed": 217,
+      "fp_added": 2894
+    },
+    "band": {
+      "dense": 30,
+      "selected": 40
+    },
+    "delta": {
+      "dice": -0.048057314091291214,
+      "precision": -0.08117896702929928,
+      "recall": -0.014214455710233831
+    },
+    "advance": false
+  },
+  "5": {
+    "specimen": 5,
+    "raw": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37",
+    "segmented": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b",
+    "fit": {
+      "dense": {
+        "20": {
+          "tp": 31635,
+          "fp": 1248,
+          "fn": 763,
+          "tn": 179346,
+          "dice": 0.9691947120908074,
+          "precision": 0.9620472584618192,
+          "recall": 0.9764491635286129,
+          "predicted_porosity_pct": 15.438608022836538,
+          "reference_porosity_pct": 15.210899939903847,
+          "porosity_error_pp": 0.22770808293269232
+        },
+        "30": {
+          "tp": 31704,
+          "fp": 794,
+          "fn": 694,
+          "tn": 179800,
+          "dice": 0.9770710059171598,
+          "precision": 0.9755677272447535,
+          "recall": 0.9785789246249769,
+          "predicted_porosity_pct": 15.257850060096153,
+          "reference_porosity_pct": 15.210899939903847,
+          "porosity_error_pp": 0.046950120192307696
+        },
+        "40": {
+          "tp": 31539,
+          "fp": 603,
+          "fn": 859,
+          "tn": 179991,
+          "dice": 0.9773473814688565,
+          "precision": 0.9812394997199926,
+          "recall": 0.9734860176554109,
+          "predicted_porosity_pct": 15.090707632211538,
+          "reference_porosity_pct": 15.210899939903847,
+          "porosity_error_pp": -0.1201923076923077
+        }
+      },
+      "selected": {
+        "20": {
+          "tp": 31226,
+          "fp": 2246,
+          "fn": 1172,
+          "tn": 178348,
+          "dice": 0.9481099134659177,
+          "precision": 0.9328991395793499,
+          "recall": 0.9638249274646583,
+          "predicted_porosity_pct": 15.71514423076923,
+          "reference_porosity_pct": 15.210899939903847,
+          "porosity_error_pp": 0.5042442908653846
+        },
+        "30": {
+          "tp": 31303,
+          "fp": 2268,
+          "fn": 1095,
+          "tn": 178326,
+          "dice": 0.9490215101032303,
+          "precision": 0.9324416907449883,
+          "recall": 0.9662016173837891,
+          "predicted_porosity_pct": 15.761624849759615,
+          "reference_porosity_pct": 15.210899939903847,
+          "porosity_error_pp": 0.5507249098557693
+        },
+        "40": {
+          "tp": 31345,
+          "fp": 2267,
+          "fn": 1053,
+          "tn": 178327,
+          "dice": 0.949704590213604,
+          "precision": 0.932553849815542,
+          "recall": 0.967497993703315,
+          "predicted_porosity_pct": 15.780874399038462,
+          "reference_porosity_pct": 15.210899939903847,
+          "porosity_error_pp": 0.5699744591346154
+        }
+      }
+    },
+    "check": {
+      "dense": {
+        "40": {
+          "tp": 29285,
+          "fp": 375,
+          "fn": 748,
+          "tn": 182584,
+          "dice": 0.9811870738612568,
+          "precision": 0.9873567093728928,
+          "recall": 0.9750940631971498,
+          "predicted_porosity_pct": 13.925405649038462,
+          "reference_porosity_pct": 14.10052959735577,
+          "porosity_error_pp": -0.17512394831730768
+        }
+      },
+      "selected": {
+        "40": {
+          "tp": 29432,
+          "fp": 2224,
+          "fn": 601,
+          "tn": 180735,
+          "dice": 0.9542057741250466,
+          "precision": 0.92974475612838,
+          "recall": 0.979988679119635,
+          "predicted_porosity_pct": 14.862530048076923,
+          "reference_porosity_pct": 14.10052959735577,
+          "porosity_error_pp": 0.7620004507211539
+        }
+      }
+    },
+    "transitions": {
+      "fn_fixed": 557,
+      "fn_added": 410,
+      "fp_fixed": 126,
+      "fp_added": 1975
+    },
+    "band": {
+      "dense": 40,
+      "selected": 40
+    },
+    "delta": {
+      "dice": -0.026981299736210218,
+      "precision": -0.05761195324451274,
+      "recall": 0.004894615922485301
+    },
+    "advance": false
+  }
+}

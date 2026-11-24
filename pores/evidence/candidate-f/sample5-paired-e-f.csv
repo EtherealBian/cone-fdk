@@ -1,0 +1,13 @@
+reference_id,reference_voxels,status,e_pred_id,e_pred_voxels,e_signed_delta_vox,e_reference_only_vox,e_prediction_only_vox,e_miss_best_iou_pred_id,e_miss_best_iou_pred_vox,e_miss_best_pred_eligible,e_miss_best_iou,f_pred_id,f_pred_voxels,f_signed_delta_vox,f_reference_only_vox,f_prediction_only_vox,f_miss_best_iou_pred_id,f_miss_best_iou_pred_vox,f_miss_best_pred_eligible,f_miss_best_iou
+21,66,neither,,,,,,448845,50,False,0.45,,,,,,449102,36,False,0.43661971830985913
+22,341,shared,690238,364,23,19,42,,,,,690494,354,13,27,40,,,,
+25,916,shared,827935,903,-13,81,68,,,,,828191,896,-20,85,65,,,,
+26,128,shared,769614,135,7,37,44,,,,,834896,91,-37,51,14,,,,
+38,292,shared,1624524,332,40,8,48,,,,,1690314,302,10,26,36,,,,
+60,145,shared,3629946,141,-4,10,6,,,,,3695226,131,-14,15,1,,,,
+67,67,shared,4465840,86,19,15,34,,,,,4465840,72,5,20,25,,,,
+70,182,shared,4571358,170,-12,24,12,,,,,4571358,174,-8,21,13,,,,
+74,660,shared,4682360,632,-28,43,15,,,,,4682615,594,-66,88,22,,,,
+90,1204,shared,6781296,1207,3,26,29,,,,,6781551,1163,-41,71,30,,,,
+92,142,shared,7059467,120,-22,34,12,,,,,7124233,105,-37,39,2,,,,
+105,137,shared,7778833,108,-29,44,15,,,,,7779088,88,-49,51,2,,,,

@@ -1,0 +1,48 @@
+{
+  "2": {
+    "gates": 9,
+    "p95": 23.364334001873964,
+    "median": 4.411764705882348,
+    "matched": 69,
+    "prediction": 72,
+    "reference": 73,
+    "failed": [
+      "dice",
+      "p95_abs_volume_error_pct"
+    ],
+    "cpu_gpu_flips": 0
+  },
+  "3": {
+    "gates": 5,
+    "p95": 27.65663227316242,
+    "median": 11.64383561643836,
+    "matched": 25,
+    "prediction": 33,
+    "reference": 27,
+    "failed": [
+      "porosity_absolute",
+      "object_prediction",
+      "median_abs_volume_error_pct",
+      "p95_abs_volume_error_pct",
+      "median_abs_diameter_error_pct",
+      "p95_centroid_displacement_vox"
+    ],
+    "cpu_gpu_flips": 0
+  },
+  "5": {
+    "gates": 6,
+    "p95": 32.33633667883212,
+    "median": 7.462686567164178,
+    "matched": 11,
+    "prediction": 13,
+    "reference": 12,
+    "failed": [
+      "porosity_absolute",
+      "object_prediction",
+      "median_abs_volume_error_pct",
+      "p95_abs_volume_error_pct",
+      "median_abs_diameter_error_pct"
+    ],
+    "cpu_gpu_flips": 0
+  }
+}

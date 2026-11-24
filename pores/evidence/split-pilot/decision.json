@@ -1,0 +1,24 @@
+{
+  "criteria_by_specimen": {
+    "2": {
+      "no_unsupported": false,
+      "no_lost_ids": true,
+      "unmatched_not_worse": false,
+      "p95_not_worse": true
+    },
+    "3": {
+      "no_unsupported": true,
+      "no_lost_ids": true,
+      "unmatched_not_worse": true,
+      "p95_not_worse": true
+    },
+    "5": {
+      "no_unsupported": true,
+      "no_lost_ids": true,
+      "unmatched_not_worse": true,
+      "p95_not_worse": true
+    }
+  },
+  "two_rescues_on_two_specimens": false,
+  "decision": "fail"
+}

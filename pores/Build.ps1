@@ -27,4 +27,6 @@ try {
     if($LASTEXITCODE){throw 'Transfer boundary compilation failed'}
     & $Python scripts/ptx.py pores/spatial.cu build/pores/spatial.ptx
     if($LASTEXITCODE){throw 'Spatial convolution compilation failed'}
+    & $Python scripts/ptx.py pores/patch_stats.cu build/pores/patch-stats.ptx
+    if($LASTEXITCODE){throw 'Patch statistic compilation failed'}
 } finally {$env:Path=$old;Pop-Location}

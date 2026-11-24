@@ -1,0 +1,16 @@
+pred_id,ref_label,pred_voxels,ref_voxels,intersection_voxels,pred_eligible,ref_eligible,n_ref_covered_quarter_by_pred,n_pred_covered_quarter_by_ref
+145480,1,487,383607,454,True,False,0,2
+449102,21,36,66,31,False,True,1,0
+690494,22,354,341,314,True,True,1,1
+828191,25,896,916,831,True,True,1,1
+834641,26,1,128,1,False,True,0,1
+834896,26,91,128,77,True,True,1,1
+1690314,38,302,292,266,True,True,1,1
+3695226,60,131,145,130,True,True,1,1
+3719525,2,101,463218,82,True,False,0,2
+4465840,67,72,67,47,True,True,1,1
+4571358,70,174,182,161,True,True,1,1
+4682615,74,594,660,572,True,True,1,1
+6781551,90,1163,1204,1133,True,True,1,1
+7124233,92,105,142,103,True,True,1,1
+7779088,105,88,137,86,True,True,1,1

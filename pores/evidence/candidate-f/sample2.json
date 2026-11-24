@@ -1,0 +1,158 @@
+{
+  "specimen": 2,
+  "role": "development",
+  "method": "spatial residual field F",
+  "pipeline_id": "171d18a5b245d8909e57191b1de8d6760a0c3883b53af2ee3489cb9faab59523",
+  "confirmation_manifest": null,
+  "source": {
+    "raw": {
+      "filepath": "raw/set1sample2raw.zip",
+      "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/raw/set1sample2raw.zip",
+      "sha256": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+      "size": 1248685767
+    },
+    "segmented": {
+      "filepath": "segmented/set1sample2segmented.zip",
+      "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/segmented/set1sample2segmented.zip",
+      "sha256": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+      "size": 6373937
+    }
+  },
+  "origin_xyz": [
+    360,
+    376,
+    400
+  ],
+  "calibration_z": [
+    160,
+    184
+  ],
+  "evaluation_z": [
+    400,
+    528
+  ],
+  "logit_threshold": 0,
+  "probability_threshold": 0.5,
+  "metrics": {
+    "tp": 70625,
+    "fp": 4300,
+    "fn": 3951,
+    "tn": 8309732,
+    "dice": 0.9448097337141558,
+    "precision": 0.9426092759426092,
+    "recall": 0.9470204891654151,
+    "predicted_porosity_pct": 0.8931756019592285,
+    "reference_porosity_pct": 0.8890151977539062,
+    "porosity_error_pp": 0.004160404205322266
+  },
+  "objects": {
+    "criterion": "both interior and >=64 voxels; descending IoU >=0.5, unique matches",
+    "eligible_prediction": 72,
+    "eligible_reference": 73,
+    "matches": 69,
+    "matched_fraction_prediction": 0.9583333333333334,
+    "matched_fraction_reference": 0.9452054794520548,
+    "median_abs_volume_error_pct": 4.411764705882348,
+    "p95_abs_volume_error_pct": 23.364334001873964,
+    "median_abs_diameter_error_pct": 1.4927573906107439,
+    "p95_centroid_displacement_vox": 0.5947577884636331
+  },
+  "final_gates": {
+    "dice": false,
+    "precision": true,
+    "recall": true,
+    "porosity_absolute": true,
+    "porosity_relative": true,
+    "object_prediction": true,
+    "object_reference": true,
+    "median_abs_volume_error_pct": true,
+    "p95_abs_volume_error_pct": false,
+    "median_abs_diameter_error_pct": true,
+    "p95_centroid_displacement_vox": true
+  },
+  "final_passed": false,
+  "table_sha256": "ec03c99a2a364e18f436ae9fa26472da9acb04a32e9fd0f7305706c075ffc372",
+  "review_sha256": "ec3f2d0f2d07f1a38f07007daea6b841ae9d8dd9de17aeb87bed4a36b4b50315",
+  "review": {
+    "objects": 188,
+    "layers": 128,
+    "mask_encoding": "lossless start/length/stable-ID; both volumes round-trip checked",
+    "display_window_uint16": [
+      45273.0,
+      56000.0
+    ]
+  },
+  "same_mask_scipy_rows": 188,
+  "second_slab_depth": 37,
+  "native": {
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "shape_zyx": [
+      128,
+      256,
+      256
+    ],
+    "spacing_xyz_um": [
+      2.45,
+      2.45,
+      2.45
+    ],
+    "threshold_f32": 0,
+    "filter": "none",
+    "connectivity": 6,
+    "slab_depth": 8,
+    "device_buffer_bytes": 4194304,
+    "roi_voxels": 8388608,
+    "pore_voxels": 74925,
+    "porosity": 0.008931756019592285,
+    "components": 188,
+    "interior_components": 143,
+    "interior_pore_voxels": 47831,
+    "spanning_xyz": [
+      0,
+      0,
+      0
+    ],
+    "elapsed_s": 0.199784
+  },
+  "seal": {
+    "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+    "segmented": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+    "weights": "f05e7aaccc931d955920b0ef66a7b0c44f5abf5620e51c33985ff2531eefa3ab",
+    "logits": "2d6330d618aa842c5887dd5cbe60fe56a8cd5e1cfd14fd2efc9ea86957641538",
+    "mask": "a3faa82dbebc12a6a1564a19b849648b5a4dfa03039c5c166f10d6c24efc3864",
+    "max_abs_cpu_gpu_logit": 1.1444091796875e-05,
+    "cpu_gpu_decision_disagreements": 0,
+    "first_disagreement": null,
+    "calibration_training_trace": [
+      [
+        0,
+        0.05527491122484207
+      ],
+      [
+        200,
+        0.09045098721981049
+      ],
+      [
+        400,
+        0.04634907841682434
+      ],
+      [
+        600,
+        0.020020313560962677
+      ],
+      [
+        800,
+        0.041373737156391144
+      ],
+      [
+        1000,
+        0.02738957479596138
+      ],
+      [
+        1199,
+        0.02553434483706951
+      ]
+    ]
+  },
+  "reference_mask": "67c089f05ee64651281ef0a0810f9d68978048ff3981a4ed115ea4b51bcfd67a"
+}

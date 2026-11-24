@@ -10,6 +10,8 @@ Reconstruct a 3D attenuation volume from a full rotation of X-ray projections on
 
 *The image is a sweep through measured data, not a rendering of a synthetic walnut. The downloadable HTML lets you scrub 81 preview slices without installing CUDA. Data: [Alexander Meaney / University of Helsinki](https://doi.org/10.5281/zenodo.6986012), CC BY 4.0; processing and attribution in [NOTICE](NOTICE.md).*
 
+**Measurement lab (experimental):** [Candidate F and a prospective false-split counterexample](pores/RESULTS-F.md). No cross-specimen acceptance claim.
+
 ## What was measured
 
 | Question | Result on one RTX 5060 Laptop GPU | Evidence |

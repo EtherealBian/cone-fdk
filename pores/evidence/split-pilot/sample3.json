@@ -1,0 +1,1490 @@
+{
+  "specimen": 3,
+  "origin_xyz": [
+    360,
+    376,
+    552
+  ],
+  "shape_zyx": [
+    128,
+    256,
+    256
+  ],
+  "reference": "babdb1f68ad75a9378d91ab09eaa7e823c25c68f3fa2219af7535203d5a7c6ab",
+  "ledger": {
+    "counts": {
+      "events": 0,
+      "flagged": 0,
+      "edited": 0,
+      "rescued": 0,
+      "unsupported": 0,
+      "single_split": 0,
+      "unresolved_events": 0
+    },
+    "alerts": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 31
+    },
+    "parents": [
+      {
+        "pred": 11,
+        "native_id": 105826,
+        "seed_zyx": [
+          1,
+          157,
+          97
+        ],
+        "voxels": 131,
+        "core_sizes": [
+          85
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 15,
+            "reference_voxels": 143,
+            "hits": 106
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 15,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 18,
+        "native_id": 529374,
+        "seed_zyx": [
+          8,
+          19,
+          221
+        ],
+        "voxels": 214,
+        "core_sizes": [
+          171
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 33,
+            "reference_voxels": 224,
+            "hits": 202
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 33,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 28,
+        "native_id": 769334,
+        "seed_zyx": [
+          11,
+          189,
+          53
+        ],
+        "voxels": 243,
+        "core_sizes": [
+          175
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 42,
+            "reference_voxels": 295,
+            "hits": 219
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 42,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 32,
+        "native_id": 971576,
+        "seed_zyx": [
+          14,
+          211,
+          55
+        ],
+        "voxels": 349,
+        "core_sizes": [
+          260
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 55,
+            "reference_voxels": 377,
+            "hits": 339
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 55,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 39,
+        "native_id": 1247288,
+        "seed_zyx": [
+          19,
+          8,
+          55
+        ],
+        "voxels": 183,
+        "core_sizes": [
+          102
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 66,
+            "reference_voxels": 176,
+            "hits": 158
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 66,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 57,
+        "native_id": 2103608,
+        "seed_zyx": [
+          32,
+          25,
+          55
+        ],
+        "voxels": 139,
+        "core_sizes": [
+          89
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 86,
+            "reference_voxels": 157,
+            "hits": 119
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 86,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 60,
+        "native_id": 2217430,
+        "seed_zyx": [
+          33,
+          213,
+          213
+        ],
+        "voxels": 153,
+        "core_sizes": [
+          115
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 88,
+            "reference_voxels": 156,
+            "hits": 149
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 88,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 64,
+        "native_id": 2324295,
+        "seed_zyx": [
+          35,
+          119,
+          70
+        ],
+        "voxels": 115,
+        "core_sizes": [
+          89
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 92,
+            "reference_voxels": 116,
+            "hits": 113
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 92,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 80,
+        "native_id": 2771540,
+        "seed_zyx": [
+          42,
+          74,
+          83
+        ],
+        "voxels": 781,
+        "core_sizes": [
+          653
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 109,
+            "reference_voxels": 780,
+            "hits": 747
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 109,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 85,
+        "native_id": 2912318,
+        "seed_zyx": [
+          44,
+          112,
+          61
+        ],
+        "voxels": 2472,
+        "core_sizes": [
+          2281
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 112,
+            "reference_voxels": 2450,
+            "hits": 2392
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 112,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 86,
+        "native_id": 2935954,
+        "seed_zyx": [
+          44,
+          204,
+          145
+        ],
+        "voxels": 113,
+        "core_sizes": [
+          87
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 113,
+            "reference_voxels": 104,
+            "hits": 103
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 113,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 90,
+        "native_id": 3047756,
+        "seed_zyx": [
+          46,
+          129,
+          75
+        ],
+        "voxels": 351,
+        "core_sizes": [
+          266
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 115,
+            "reference_voxels": 314,
+            "hits": 296
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 115,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 100,
+        "native_id": 3451603,
+        "seed_zyx": [
+          52,
+          170,
+          210
+        ],
+        "voxels": 93,
+        "core_sizes": [
+          38
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 129,
+            "reference_voxels": 94,
+            "hits": 76
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 129,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 117,
+        "native_id": 4080721,
+        "seed_zyx": [
+          62,
+          68,
+          80
+        ],
+        "voxels": 132,
+        "core_sizes": [
+          80
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 144,
+            "reference_voxels": 136,
+            "hits": 118
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 144,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 118,
+        "native_id": 4151705,
+        "seed_zyx": [
+          63,
+          89,
+          152
+        ],
+        "voxels": 215,
+        "core_sizes": [
+          110
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 145,
+            "reference_voxels": 213,
+            "hits": 193
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 145,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 126,
+        "native_id": 4576137,
+        "seed_zyx": [
+          69,
+          211,
+          136
+        ],
+        "voxels": 302,
+        "core_sizes": [
+          246
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 156,
+            "reference_voxels": 311,
+            "hits": 283
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 156,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 149,
+        "native_id": 5326534,
+        "seed_zyx": [
+          81,
+          70,
+          197
+        ],
+        "voxels": 317,
+        "core_sizes": [
+          279
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 180,
+            "reference_voxels": 311,
+            "hits": 303
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 180,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 158,
+        "native_id": 5716432,
+        "seed_zyx": [
+          87,
+          57,
+          207
+        ],
+        "voxels": 96,
+        "core_sizes": [
+          60
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [],
+        "event": false,
+        "category": "tn",
+        "baseline_match": null,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 159,
+        "native_id": 5819236,
+        "seed_zyx": [
+          88,
+          203,
+          99
+        ],
+        "voxels": 210,
+        "core_sizes": [
+          74
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 194,
+            "reference_voxels": 217,
+            "hits": 186
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 194,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 162,
+        "native_id": 5915446,
+        "seed_zyx": [
+          90,
+          67,
+          53
+        ],
+        "voxels": 1950,
+        "core_sizes": [
+          1754
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 196,
+            "reference_voxels": 2054,
+            "hits": 1902
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 196,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 164,
+        "native_id": 6081654,
+        "seed_zyx": [
+          92,
+          204,
+          117
+        ],
+        "voxels": 300,
+        "core_sizes": [
+          192
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 200,
+            "reference_voxels": 307,
+            "hits": 271
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 200,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 168,
+        "native_id": 6204547,
+        "seed_zyx": [
+          94,
+          172,
+          130
+        ],
+        "voxels": 74,
+        "core_sizes": [],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [],
+        "event": false,
+        "category": "tn",
+        "baseline_match": null,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 171,
+        "native_id": 6416540,
+        "seed_zyx": [
+          97,
+          232,
+          155
+        ],
+        "voxels": 510,
+        "core_sizes": [
+          371
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 216,
+            "reference_voxels": 493,
+            "hits": 453
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 216,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 175,
+        "native_id": 6526637,
+        "seed_zyx": [
+          99,
+          150,
+          172
+        ],
+        "voxels": 156,
+        "core_sizes": [
+          114
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 222,
+            "reference_voxels": 158,
+            "hits": 147
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 222,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 182,
+        "native_id": 6724500,
+        "seed_zyx": [
+          102,
+          155,
+          147
+        ],
+        "voxels": 556,
+        "core_sizes": [
+          453
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 227,
+            "reference_voxels": 585,
+            "hits": 539
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 227,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 183,
+        "native_id": 6733082,
+        "seed_zyx": [
+          102,
+          189,
+          25
+        ],
+        "voxels": 102,
+        "core_sizes": [
+          66
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 229,
+            "reference_voxels": 87,
+            "hits": 78
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 229,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 184,
+        "native_id": 6738623,
+        "seed_zyx": [
+          102,
+          210,
+          190
+        ],
+        "voxels": 85,
+        "core_sizes": [],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 232,
+            "reference_voxels": 74,
+            "hits": 56
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 232,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 185,
+        "native_id": 6758967,
+        "seed_zyx": [
+          103,
+          34,
+          54
+        ],
+        "voxels": 144,
+        "core_sizes": [
+          62
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 230,
+            "reference_voxels": 214,
+            "hits": 135
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 230,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 191,
+        "native_id": 6933329,
+        "seed_zyx": [
+          105,
+          203,
+          80
+        ],
+        "voxels": 68,
+        "core_sizes": [
+          42
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [],
+        "event": false,
+        "category": "tn",
+        "baseline_match": null,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 210,
+        "native_id": 7853774,
+        "seed_zyx": [
+          119,
+          214,
+          205
+        ],
+        "voxels": 91,
+        "core_sizes": [
+          56
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 256,
+            "reference_voxels": 114,
+            "hits": 89
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 256,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      },
+      {
+        "pred": 217,
+        "native_id": 8043198,
+        "seed_zyx": [
+          122,
+          186,
+          189
+        ],
+        "voxels": 101,
+        "core_sizes": [
+          57
+        ],
+        "flagged": false,
+        "decision": "not flagged",
+        "removed_linear": [],
+        "daughter_seeds": [],
+        "covered_references": [
+          {
+            "reference": 261,
+            "reference_voxels": 93,
+            "hits": 80
+          }
+        ],
+        "event": false,
+        "category": "tn",
+        "baseline_match": 261,
+        "daughter_matches": [],
+        "rescued": false,
+        "unsupported": false,
+        "single_split": false
+      }
+    ],
+    "lost_reference_ids": [],
+    "gained_reference_ids": []
+  },
+  "base": {
+    "objects": {
+      "criterion": "both interior and >=64 voxels; descending IoU >=0.5, unique matches",
+      "eligible_prediction": 31,
+      "eligible_reference": 30,
+      "matches": 28,
+      "matched_fraction_prediction": 0.9032258064516129,
+      "matched_fraction_reference": 0.9333333333333333,
+      "median_abs_volume_error_pct": 4.220779220779219,
+      "p95_abs_volume_error_pct": 19.28352661314302,
+      "median_abs_diameter_error_pct": 1.4096826147967312,
+      "p95_centroid_displacement_vox": 1.2857702204896746
+    },
+    "metrics": {
+      "tp": 1634202,
+      "fp": 34947,
+      "fn": 38627,
+      "tn": 6680832,
+      "dice": 0.9779848939759628,
+      "precision": 0.9790629835922378,
+      "recall": 0.976909176012611,
+      "predicted_porosity_pct": 19.897806644439697,
+      "reference_porosity_pct": 19.941675662994385,
+      "porosity_error_pp": -0.0438690185546875
+    },
+    "gates_on_research_slab": {
+      "dice": true,
+      "precision": true,
+      "recall": true,
+      "porosity_absolute": true,
+      "porosity_relative": true,
+      "object_prediction": true,
+      "object_reference": true,
+      "median_abs_volume_error_pct": true,
+      "p95_abs_volume_error_pct": false,
+      "median_abs_diameter_error_pct": true,
+      "p95_centroid_displacement_vox": false
+    },
+    "table_sha256": "eb843baa73f5426141764af67a82988d7f7809096aacb7b45c3ee37411e9ac34",
+    "mask_u8_sha256": "8fa7b78e9240c79666f597a6d812f32b3ebcdcf208eef7d27416f71e1a028fc1",
+    "exact_components": 231,
+    "native": {
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "shape_zyx": [
+        128,
+        256,
+        256
+      ],
+      "spacing_xyz_um": [
+        2.77,
+        2.77,
+        2.77
+      ],
+      "threshold_f32": 0,
+      "filter": "none",
+      "connectivity": 6,
+      "slab_depth": 8,
+      "device_buffer_bytes": 4194304,
+      "roi_voxels": 8388608,
+      "pore_voxels": 1669149,
+      "porosity": 0.19897806644439697,
+      "components": 231,
+      "interior_components": 187,
+      "interior_pore_voxels": 11744,
+      "spanning_xyz": [
+        1,
+        1,
+        1
+      ],
+      "elapsed_s": 0.184274
+    },
+    "slab_depths": [
+      8,
+      37
+    ],
+    "references": {
+      "15": {
+        "reference_voxels": 143,
+        "pred": 11,
+        "voxels": 131,
+        "iou": 0.6309523809523809
+      },
+      "33": {
+        "reference_voxels": 224,
+        "pred": 18,
+        "voxels": 214,
+        "iou": 0.8559322033898306
+      },
+      "42": {
+        "reference_voxels": 295,
+        "pred": 28,
+        "voxels": 243,
+        "iou": 0.6865203761755486
+      },
+      "45": {
+        "reference_voxels": 65,
+        "pred": null,
+        "voxels": null,
+        "iou": null
+      },
+      "55": {
+        "reference_voxels": 377,
+        "pred": 32,
+        "voxels": 349,
+        "iou": 0.875968992248062
+      },
+      "66": {
+        "reference_voxels": 176,
+        "pred": 39,
+        "voxels": 183,
+        "iou": 0.7860696517412935
+      },
+      "86": {
+        "reference_voxels": 157,
+        "pred": 57,
+        "voxels": 139,
+        "iou": 0.672316384180791
+      },
+      "88": {
+        "reference_voxels": 156,
+        "pred": 60,
+        "voxels": 153,
+        "iou": 0.93125
+      },
+      "92": {
+        "reference_voxels": 116,
+        "pred": 64,
+        "voxels": 115,
+        "iou": 0.9576271186440678
+      },
+      "109": {
+        "reference_voxels": 780,
+        "pred": 80,
+        "voxels": 781,
+        "iou": 0.9176904176904177
+      },
+      "112": {
+        "reference_voxels": 2450,
+        "pred": 85,
+        "voxels": 2472,
+        "iou": 0.9454545454545454
+      },
+      "113": {
+        "reference_voxels": 104,
+        "pred": 86,
+        "voxels": 113,
+        "iou": 0.9035087719298246
+      },
+      "115": {
+        "reference_voxels": 314,
+        "pred": 90,
+        "voxels": 351,
+        "iou": 0.8021680216802168
+      },
+      "129": {
+        "reference_voxels": 94,
+        "pred": 100,
+        "voxels": 93,
+        "iou": 0.6846846846846847
+      },
+      "144": {
+        "reference_voxels": 136,
+        "pred": 117,
+        "voxels": 132,
+        "iou": 0.7866666666666666
+      },
+      "145": {
+        "reference_voxels": 213,
+        "pred": 118,
+        "voxels": 215,
+        "iou": 0.8212765957446808
+      },
+      "156": {
+        "reference_voxels": 311,
+        "pred": 126,
+        "voxels": 302,
+        "iou": 0.8575757575757575
+      },
+      "180": {
+        "reference_voxels": 311,
+        "pred": 149,
+        "voxels": 317,
+        "iou": 0.9323076923076923
+      },
+      "194": {
+        "reference_voxels": 217,
+        "pred": 159,
+        "voxels": 210,
+        "iou": 0.7717842323651453
+      },
+      "196": {
+        "reference_voxels": 2054,
+        "pred": 162,
+        "voxels": 1950,
+        "iou": 0.9048525214081827
+      },
+      "200": {
+        "reference_voxels": 307,
+        "pred": 164,
+        "voxels": 300,
+        "iou": 0.8065476190476191
+      },
+      "216": {
+        "reference_voxels": 493,
+        "pred": 171,
+        "voxels": 510,
+        "iou": 0.8236363636363636
+      },
+      "222": {
+        "reference_voxels": 158,
+        "pred": 175,
+        "voxels": 156,
+        "iou": 0.8802395209580839
+      },
+      "227": {
+        "reference_voxels": 585,
+        "pred": 182,
+        "voxels": 556,
+        "iou": 0.8953488372093024
+      },
+      "229": {
+        "reference_voxels": 87,
+        "pred": 183,
+        "voxels": 102,
+        "iou": 0.7027027027027027
+      },
+      "230": {
+        "reference_voxels": 214,
+        "pred": 185,
+        "voxels": 144,
+        "iou": 0.6053811659192825
+      },
+      "232": {
+        "reference_voxels": 74,
+        "pred": 184,
+        "voxels": 85,
+        "iou": 0.5436893203883495
+      },
+      "238": {
+        "reference_voxels": 180,
+        "pred": null,
+        "voxels": null,
+        "iou": null
+      },
+      "256": {
+        "reference_voxels": 114,
+        "pred": 210,
+        "voxels": 91,
+        "iou": 0.7672413793103449
+      },
+      "261": {
+        "reference_voxels": 93,
+        "pred": 217,
+        "voxels": 101,
+        "iou": 0.7017543859649122
+      }
+    }
+  },
+  "arm": {
+    "objects": {
+      "criterion": "both interior and >=64 voxels; descending IoU >=0.5, unique matches",
+      "eligible_prediction": 31,
+      "eligible_reference": 30,
+      "matches": 28,
+      "matched_fraction_prediction": 0.9032258064516129,
+      "matched_fraction_reference": 0.9333333333333333,
+      "median_abs_volume_error_pct": 4.220779220779219,
+      "p95_abs_volume_error_pct": 19.28352661314302,
+      "median_abs_diameter_error_pct": 1.4096826147967312,
+      "p95_centroid_displacement_vox": 1.2857702204896746
+    },
+    "metrics": {
+      "tp": 1634202,
+      "fp": 34947,
+      "fn": 38627,
+      "tn": 6680832,
+      "dice": 0.9779848939759628,
+      "precision": 0.9790629835922378,
+      "recall": 0.976909176012611,
+      "predicted_porosity_pct": 19.897806644439697,
+      "reference_porosity_pct": 19.941675662994385,
+      "porosity_error_pp": -0.0438690185546875
+    },
+    "gates_on_research_slab": {
+      "dice": true,
+      "precision": true,
+      "recall": true,
+      "porosity_absolute": true,
+      "porosity_relative": true,
+      "object_prediction": true,
+      "object_reference": true,
+      "median_abs_volume_error_pct": true,
+      "p95_abs_volume_error_pct": false,
+      "median_abs_diameter_error_pct": true,
+      "p95_centroid_displacement_vox": false
+    },
+    "table_sha256": "eb843baa73f5426141764af67a82988d7f7809096aacb7b45c3ee37411e9ac34",
+    "mask_u8_sha256": "8fa7b78e9240c79666f597a6d812f32b3ebcdcf208eef7d27416f71e1a028fc1",
+    "exact_components": 231,
+    "native": {
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "shape_zyx": [
+        128,
+        256,
+        256
+      ],
+      "spacing_xyz_um": [
+        2.77,
+        2.77,
+        2.77
+      ],
+      "threshold_f32": 0,
+      "filter": "none",
+      "connectivity": 6,
+      "slab_depth": 8,
+      "device_buffer_bytes": 4194304,
+      "roi_voxels": 8388608,
+      "pore_voxels": 1669149,
+      "porosity": 0.19897806644439697,
+      "components": 231,
+      "interior_components": 187,
+      "interior_pore_voxels": 11744,
+      "spanning_xyz": [
+        1,
+        1,
+        1
+      ],
+      "elapsed_s": 0.199819
+    },
+    "slab_depths": [
+      8,
+      37
+    ],
+    "references": {
+      "15": {
+        "reference_voxels": 143,
+        "pred": 11,
+        "voxels": 131,
+        "iou": 0.6309523809523809
+      },
+      "33": {
+        "reference_voxels": 224,
+        "pred": 18,
+        "voxels": 214,
+        "iou": 0.8559322033898306
+      },
+      "42": {
+        "reference_voxels": 295,
+        "pred": 28,
+        "voxels": 243,
+        "iou": 0.6865203761755486
+      },
+      "45": {
+        "reference_voxels": 65,
+        "pred": null,
+        "voxels": null,
+        "iou": null
+      },
+      "55": {
+        "reference_voxels": 377,
+        "pred": 32,
+        "voxels": 349,
+        "iou": 0.875968992248062
+      },
+      "66": {
+        "reference_voxels": 176,
+        "pred": 39,
+        "voxels": 183,
+        "iou": 0.7860696517412935
+      },
+      "86": {
+        "reference_voxels": 157,
+        "pred": 57,
+        "voxels": 139,
+        "iou": 0.672316384180791
+      },
+      "88": {
+        "reference_voxels": 156,
+        "pred": 60,
+        "voxels": 153,
+        "iou": 0.93125
+      },
+      "92": {
+        "reference_voxels": 116,
+        "pred": 64,
+        "voxels": 115,
+        "iou": 0.9576271186440678
+      },
+      "109": {
+        "reference_voxels": 780,
+        "pred": 80,
+        "voxels": 781,
+        "iou": 0.9176904176904177
+      },
+      "112": {
+        "reference_voxels": 2450,
+        "pred": 85,
+        "voxels": 2472,
+        "iou": 0.9454545454545454
+      },
+      "113": {
+        "reference_voxels": 104,
+        "pred": 86,
+        "voxels": 113,
+        "iou": 0.9035087719298246
+      },
+      "115": {
+        "reference_voxels": 314,
+        "pred": 90,
+        "voxels": 351,
+        "iou": 0.8021680216802168
+      },
+      "129": {
+        "reference_voxels": 94,
+        "pred": 100,
+        "voxels": 93,
+        "iou": 0.6846846846846847
+      },
+      "144": {
+        "reference_voxels": 136,
+        "pred": 117,
+        "voxels": 132,
+        "iou": 0.7866666666666666
+      },
+      "145": {
+        "reference_voxels": 213,
+        "pred": 118,
+        "voxels": 215,
+        "iou": 0.8212765957446808
+      },
+      "156": {
+        "reference_voxels": 311,
+        "pred": 126,
+        "voxels": 302,
+        "iou": 0.8575757575757575
+      },
+      "180": {
+        "reference_voxels": 311,
+        "pred": 149,
+        "voxels": 317,
+        "iou": 0.9323076923076923
+      },
+      "194": {
+        "reference_voxels": 217,
+        "pred": 159,
+        "voxels": 210,
+        "iou": 0.7717842323651453
+      },
+      "196": {
+        "reference_voxels": 2054,
+        "pred": 162,
+        "voxels": 1950,
+        "iou": 0.9048525214081827
+      },
+      "200": {
+        "reference_voxels": 307,
+        "pred": 164,
+        "voxels": 300,
+        "iou": 0.8065476190476191
+      },
+      "216": {
+        "reference_voxels": 493,
+        "pred": 171,
+        "voxels": 510,
+        "iou": 0.8236363636363636
+      },
+      "222": {
+        "reference_voxels": 158,
+        "pred": 175,
+        "voxels": 156,
+        "iou": 0.8802395209580839
+      },
+      "227": {
+        "reference_voxels": 585,
+        "pred": 182,
+        "voxels": 556,
+        "iou": 0.8953488372093024
+      },
+      "229": {
+        "reference_voxels": 87,
+        "pred": 183,
+        "voxels": 102,
+        "iou": 0.7027027027027027
+      },
+      "230": {
+        "reference_voxels": 214,
+        "pred": 185,
+        "voxels": 144,
+        "iou": 0.6053811659192825
+      },
+      "232": {
+        "reference_voxels": 74,
+        "pred": 184,
+        "voxels": 85,
+        "iou": 0.5436893203883495
+      },
+      "238": {
+        "reference_voxels": 180,
+        "pred": null,
+        "voxels": null,
+        "iou": null
+      },
+      "256": {
+        "reference_voxels": 114,
+        "pred": 210,
+        "voxels": 91,
+        "iou": 0.7672413793103449
+      },
+      "261": {
+        "reference_voxels": 93,
+        "pred": 217,
+        "voxels": 101,
+        "iou": 0.7017543859649122
+      }
+    }
+  }
+}
