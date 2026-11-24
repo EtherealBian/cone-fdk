@@ -1,0 +1,142 @@
+{
+  "specimen": 5,
+  "role": "development",
+  "method": "axial neck and boundary estimator D",
+  "pipeline_id": "7555f5bcee29dd1f91bdf7a2a859aafa368a709cbd571aa9b62c4957f00b18e7",
+  "confirmation_manifest": null,
+  "source": {
+    "raw": {
+      "filepath": "raw/set1sample5raw.zip",
+      "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/raw/set1sample5raw.zip",
+      "sha256": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37",
+      "size": 1059819981
+    },
+    "segmented": {
+      "filepath": "segmented/set1sample5segmented.zip",
+      "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/segmented/set1sample5segmented.zip",
+      "sha256": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b",
+      "size": 14103654
+    }
+  },
+  "calibration_z": [
+    160,
+    184
+  ],
+  "evaluation_z": [
+    400,
+    528
+  ],
+  "origin_xyz": [
+    360,
+    376,
+    400
+  ],
+  "probability_threshold": 0.5,
+  "metrics": {
+    "tp": 918491,
+    "fp": 15192,
+    "fn": 15716,
+    "tn": 7439209,
+    "dice": 0.9834529870602658,
+    "precision": 0.9837289529744035,
+    "recall": 0.9831771759363824,
+    "predicted_porosity_pct": 11.130368709564209,
+    "reference_porosity_pct": 11.13661527633667,
+    "porosity_error_pp": -0.0062465667724609375
+  },
+  "objects": {
+    "criterion": "both interior and >=64 voxels; descending IoU >=0.5, unique matches",
+    "eligible_prediction": 15,
+    "eligible_reference": 12,
+    "matches": 10,
+    "matched_fraction_prediction": 0.6666666666666666,
+    "matched_fraction_reference": 0.8333333333333334,
+    "median_abs_volume_error_pct": 7.648902821316611,
+    "p95_abs_volume_error_pct": 18.72661952554744,
+    "median_abs_diameter_error_pct": 2.528080808052052,
+    "p95_centroid_displacement_vox": 0.7097914427857632
+  },
+  "final_gates": {
+    "dice": true,
+    "precision": true,
+    "recall": true,
+    "porosity_absolute": true,
+    "porosity_relative": true,
+    "object_prediction": false,
+    "object_reference": false,
+    "median_abs_volume_error_pct": false,
+    "p95_abs_volume_error_pct": false,
+    "median_abs_diameter_error_pct": false,
+    "p95_centroid_displacement_vox": true
+  },
+  "final_passed": false,
+  "sensitivity": {
+    "0.45": {
+      "tp": 920473,
+      "fp": 17226,
+      "fn": 13734,
+      "tn": 7437175,
+      "dice": 0.9834607079628999,
+      "precision": 0.9816294994449178,
+      "recall": 0.9852987614094093,
+      "predicted_porosity_pct": 11.178243160247803,
+      "reference_porosity_pct": 11.13661527633667,
+      "porosity_error_pp": 0.04162788391113281
+    },
+    "0.55": {
+      "tp": 916264,
+      "fp": 13327,
+      "fn": 17943,
+      "tn": 7441074,
+      "dice": 0.9832224307569811,
+      "precision": 0.985663587534733,
+      "recall": 0.9807933359523103,
+      "predicted_porosity_pct": 11.08158826828003,
+      "reference_porosity_pct": 11.13661527633667,
+      "porosity_error_pp": -0.055027008056640625
+    }
+  },
+  "table_sha256": "bfd19e6ac7d974e18e2c9bc19fa7b8ce95116f0d8c638e6e20e2f2fa696aac30",
+  "review_sha256": "2a01f0d9eb0adfab12002b3161afc1f925c7e61c3330684ba95a58d82775b69b",
+  "review": {
+    "objects": 87,
+    "layers": 128,
+    "mask_encoding": "lossless start/length/stable-ID; both volumes round-trip checked",
+    "display_window_uint16": [
+      30591.0,
+      55726.0
+    ]
+  },
+  "same_mask_scipy_rows": 87,
+  "second_slab_depth": 37,
+  "native": {
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "shape_zyx": [
+      128,
+      256,
+      256
+    ],
+    "spacing_xyz_um": [
+      2.52,
+      2.52,
+      2.52
+    ],
+    "threshold_f32": -0.5,
+    "filter": "none",
+    "connectivity": 6,
+    "slab_depth": 8,
+    "device_buffer_bytes": 4194304,
+    "roi_voxels": 8388608,
+    "pore_voxels": 933683,
+    "porosity": 0.11130368709564209,
+    "components": 87,
+    "interior_components": 58,
+    "interior_pore_voxels": 5422,
+    "spanning_xyz": [
+      0,
+      0,
+      2
+    ],
+    "elapsed_s": 0.180888
+  }
+}

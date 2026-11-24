@@ -2,7 +2,7 @@
 
 This branch adds native Windows x64 CUDA connectivity and component metrology for an **in-material rectangular ROI**. A separate research pipeline evaluates segmentation of NIST CoCr XCT TIFF stacks. They are already reconstructed scans, not ConeFDK projection inputs. The production tag remains the walnut reconstruction release until the [strict per-specimen gates](FINAL-GATE.md) pass.
 
-**[逐件验收结果 / measured results](RESULTS.md)** · **[Offline numerical reviews and native mask preview](https://github.com/EtherealBian/cone-fdk/releases/tag/measurement-evidence-1)**
+**[C 与 D：逐孔配对、原始切片和全部失败项](RESULTS-D.md)** · **[D 离线复核包](https://github.com/EtherealBian/cone-fdk/releases/tag/measurement-evidence-2)** · **[基线和 A/B/C 的逐件结果](RESULTS.md)** · **[Offline numerical reviews and native mask preview](https://github.com/EtherealBian/cone-fdk/releases/tag/measurement-evidence-1)**
 
 ## Reproduce
 
@@ -47,7 +47,7 @@ For your own single-channel numbered TIFF slices, preserve source names, byte ha
 .\.venv\Scripts\python.exe pores/import_stack.py C:\scans\part-A C:\scans\part-A-roi --xywh 360 376 256 256 --z 400 528 --spacing 2.45 2.45 2.45
 ```
 
-This creates a new directory with `roi.f32` and `volume.json`. It does not assign a threshold or certify the input. Candidate B (`candidate.py --model B`) adds overlapping 5×5 patch estimates and uses guarded out-of-fold count and Dice calibration. Candidate C directly accumulates 5×5 and 7×7 patch distances in one native CUDA pass, adds local boundary curvature and calibrates two separately trained predictors with guard slices. A, B and C are experimental. The classifier is research Python/scikit-learn; the standalone measurement executable is native C++/CUDA.
+This creates a new directory with `roi.f32` and `volume.json`. It does not assign a threshold or certify the input. Candidate B (`candidate.py --model B`) adds overlapping 5×5 patch estimates and uses guarded out-of-fold count and Dice calibration. Candidate C directly accumulates 5×5 and 7×7 patch distances in one native CUDA pass, adds local boundary curvature and calibrates two separately trained predictors with guard slices. D adds the six-output CUDA filter and adjacent-Z boundary evidence. All four candidates are experimental. The classifier is research Python/scikit-learn; the standalone measurement executable is native C++/CUDA.
 
 ### Inspect mistakes rather than just the mean
 
@@ -62,3 +62,7 @@ The experimental snapshot predates the executable freeze lock and is development
 1. Re-run the frozen build on `--specimens 2 3 5`. `python pores/freeze.py <dev-output> --model C --cache <archive-directory> --out freeze.json` reloads the authenticated archives, checks the review planes and tables, and requires every gate on every development specimen. Failed runs cannot produce a manifest. The manifest binds the source, compiled measurement program, kernels, numerical software versions and exact development reports.
 2. **Publish the manifest before accessing either confirmation ROI**; a local hash alone does not prove the order of events. Independently keep the timestamped commit. Then `python pores/candidate.py --model C --confirm freeze.json --development-dir <dev-output> --cache <archive-directory> --out <new-directory>` rechecks the evidence and runs 4 and 6 together. It will not overwrite previous confirmation output.
 3. `python pores/audit.py <new-directory> --cache <archive-directory> --development-dir <dev-output>` replays both confirmation specimens and the original development evidence. Any failed specimen prevents acceptance. After inspection, the same holdouts cannot be described as unseen for a revised method.
+
+### Reproduce the D diagnostics
+
+After running `python pores/candidate.py --model D --specimens 2 3 5 --cache <archive-directory> --out build/candidate-D`, run `pores/cases.py`, `pores/stratify.py` and `scripts/pore_overlap.py` with arguments `build/candidate-D 2 3 5`. For the mechanism check, extract the three published C review ZIPs into `build/candidate-C` and run `python scripts/pore_cut.py build/candidate-C build/articulation-C --cache <archive-directory>`. `python scripts/pore_example.py build/candidate-C build/candidate-D sample3.png` renders the same four-panel raw-slice comparison. `python scripts/pore_report_d.py --check` checks the published comparison against the committed per-specimen records.

@@ -1,0 +1,45 @@
+{
+  "scope": "development-only mask ablation of C, not a confirmation pipeline",
+  "specimen": 3,
+  "source_review_sha256": "ea6b172ef6df3c0a8d1d7929967b7e6659ca9448b24dc12a95faa044ef2a7644",
+  "cut_count": 0,
+  "cuts": [],
+  "changed_matches": [],
+  "metrics": {
+    "tp": 1454459,
+    "fp": 40452,
+    "fn": 40201,
+    "tn": 6853496,
+    "dice": 0.973021881734871,
+    "precision": 0.9729401951019158,
+    "recall": 0.9731035820855579,
+    "predicted_porosity_pct": 17.820727825164795,
+    "reference_porosity_pct": 17.81773567199707,
+    "porosity_error_pp": 0.0029921531677246094
+  },
+  "objects": {
+    "criterion": "both interior and >=64 voxels; descending IoU >=0.5, unique matches",
+    "eligible_prediction": 28,
+    "eligible_reference": 27,
+    "matches": 24,
+    "matched_fraction_prediction": 0.8571428571428571,
+    "matched_fraction_reference": 0.8888888888888888,
+    "median_abs_volume_error_pct": 9.250034592500345,
+    "p95_abs_volume_error_pct": 38.13502673796792,
+    "median_abs_diameter_error_pct": 3.0784162399901502,
+    "p95_centroid_displacement_vox": 0.9501821512718542
+  },
+  "gates": {
+    "dice": true,
+    "precision": true,
+    "recall": true,
+    "porosity_absolute": true,
+    "porosity_relative": true,
+    "object_prediction": false,
+    "object_reference": false,
+    "median_abs_volume_error_pct": false,
+    "p95_abs_volume_error_pct": false,
+    "median_abs_diameter_error_pct": false,
+    "p95_centroid_displacement_vox": true
+  }
+}

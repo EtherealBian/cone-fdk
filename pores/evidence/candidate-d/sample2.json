@@ -1,0 +1,142 @@
+{
+  "specimen": 2,
+  "role": "development",
+  "method": "axial neck and boundary estimator D",
+  "pipeline_id": "7555f5bcee29dd1f91bdf7a2a859aafa368a709cbd571aa9b62c4957f00b18e7",
+  "confirmation_manifest": null,
+  "source": {
+    "raw": {
+      "filepath": "raw/set1sample2raw.zip",
+      "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/raw/set1sample2raw.zip",
+      "sha256": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+      "size": 1248685767
+    },
+    "segmented": {
+      "filepath": "segmented/set1sample2segmented.zip",
+      "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/segmented/set1sample2segmented.zip",
+      "sha256": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+      "size": 6373937
+    }
+  },
+  "calibration_z": [
+    160,
+    184
+  ],
+  "evaluation_z": [
+    400,
+    528
+  ],
+  "origin_xyz": [
+    360,
+    376,
+    400
+  ],
+  "probability_threshold": 0.5,
+  "metrics": {
+    "tp": 71086,
+    "fp": 4361,
+    "fn": 3490,
+    "tn": 8309671,
+    "dice": 0.9476680242362838,
+    "precision": 0.9421978342412555,
+    "recall": 0.9532021025531002,
+    "predicted_porosity_pct": 0.8993983268737793,
+    "reference_porosity_pct": 0.8890151977539062,
+    "porosity_error_pp": 0.010383129119873047
+  },
+  "objects": {
+    "criterion": "both interior and >=64 voxels; descending IoU >=0.5, unique matches",
+    "eligible_prediction": 68,
+    "eligible_reference": 73,
+    "matches": 66,
+    "matched_fraction_prediction": 0.9705882352941176,
+    "matched_fraction_reference": 0.9041095890410958,
+    "median_abs_volume_error_pct": 4.076332068808897,
+    "p95_abs_volume_error_pct": 20.681818181818173,
+    "median_abs_diameter_error_pct": 1.3406722078334377,
+    "p95_centroid_displacement_vox": 0.5625258133912853
+  },
+  "final_gates": {
+    "dice": false,
+    "precision": true,
+    "recall": true,
+    "porosity_absolute": true,
+    "porosity_relative": true,
+    "object_prediction": true,
+    "object_reference": true,
+    "median_abs_volume_error_pct": true,
+    "p95_abs_volume_error_pct": false,
+    "median_abs_diameter_error_pct": true,
+    "p95_centroid_displacement_vox": true
+  },
+  "final_passed": false,
+  "sensitivity": {
+    "0.45": {
+      "tp": 71286,
+      "fp": 4631,
+      "fn": 3290,
+      "tn": 8309401,
+      "dice": 0.947366322686105,
+      "precision": 0.938999170146344,
+      "recall": 0.9558839304870199,
+      "predicted_porosity_pct": 0.905001163482666,
+      "reference_porosity_pct": 0.8890151977539062,
+      "porosity_error_pp": 0.015985965728759766
+    },
+    "0.55": {
+      "tp": 70842,
+      "fp": 4146,
+      "fn": 3734,
+      "tn": 8309886,
+      "dice": 0.947313524644968,
+      "precision": 0.9447111537846056,
+      "recall": 0.9499302724737181,
+      "predicted_porosity_pct": 0.8939266204833984,
+      "reference_porosity_pct": 0.8890151977539062,
+      "porosity_error_pp": 0.0049114227294921875
+    }
+  },
+  "table_sha256": "7bc5d9014541cd113a8b6face26d2e9a04acf72fb622c741107389829bc8b473",
+  "review_sha256": "2d25086e17e600a964f0b4b3a252512a338a799017d6aefa16db0173f64b0221",
+  "review": {
+    "objects": 196,
+    "layers": 128,
+    "mask_encoding": "lossless start/length/stable-ID; both volumes round-trip checked",
+    "display_window_uint16": [
+      45273.0,
+      56000.0
+    ]
+  },
+  "same_mask_scipy_rows": 196,
+  "second_slab_depth": 37,
+  "native": {
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "shape_zyx": [
+      128,
+      256,
+      256
+    ],
+    "spacing_xyz_um": [
+      2.45,
+      2.45,
+      2.45
+    ],
+    "threshold_f32": -0.5,
+    "filter": "none",
+    "connectivity": 6,
+    "slab_depth": 8,
+    "device_buffer_bytes": 4194304,
+    "roi_voxels": 8388608,
+    "pore_voxels": 75447,
+    "porosity": 0.008993983268737793,
+    "components": 196,
+    "interior_components": 152,
+    "interior_pore_voxels": 48159,
+    "spanning_xyz": [
+      0,
+      0,
+      0
+    ],
+    "elapsed_s": 0.207058
+  }
+}

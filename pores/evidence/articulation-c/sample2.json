@@ -1,0 +1,71 @@
+{
+  "scope": "development-only mask ablation of C, not a confirmation pipeline",
+  "specimen": 2,
+  "source_review_sha256": "92afecab55165e572eda138fe2608a4a6e215427e7a4ee53be6fefbb8bf5b35d",
+  "cut_count": 1,
+  "cuts": [
+    {
+      "parent_id": 2267241,
+      "source_x": 464,
+      "source_y": 531,
+      "source_z": 437,
+      "daughter_voxels": [
+        98,
+        158
+      ]
+    }
+  ],
+  "changed_matches": [
+    {
+      "reference": 44,
+      "before": {
+        "pred_id": "2267241",
+        "ref_scipy_label": "44",
+        "iou": "0.6104972375690608",
+        "pred_voxels": "257",
+        "ref_voxels": "326",
+        "signed_volume_error_pct": "-21.165644171779142",
+        "signed_equiv_diameter_error_pct": "-7.621301117396517",
+        "centroid_displacement_vox": "0.5820576248292945"
+      },
+      "after": null
+    }
+  ],
+  "metrics": {
+    "tp": 70968,
+    "fp": 3626,
+    "fn": 3608,
+    "tn": 8310406,
+    "dice": 0.9515049943018034,
+    "precision": 0.9513901922406628,
+    "recall": 0.9516198240720876,
+    "predicted_porosity_pct": 0.8892297744750977,
+    "reference_porosity_pct": 0.8890151977539062,
+    "porosity_error_pp": 0.00021457672119140625
+  },
+  "objects": {
+    "criterion": "both interior and >=64 voxels; descending IoU >=0.5, unique matches",
+    "eligible_prediction": 74,
+    "eligible_reference": 73,
+    "matches": 70,
+    "matched_fraction_prediction": 0.9459459459459459,
+    "matched_fraction_reference": 0.958904109589041,
+    "median_abs_volume_error_pct": 2.9378568583189435,
+    "p95_abs_volume_error_pct": 22.067470599960128,
+    "median_abs_diameter_error_pct": 0.9788579494964811,
+    "p95_centroid_displacement_vox": 0.5271299081283067
+  },
+  "gates": {
+    "dice": true,
+    "precision": true,
+    "recall": true,
+    "porosity_absolute": true,
+    "porosity_relative": true,
+    "object_prediction": true,
+    "object_reference": true,
+    "median_abs_volume_error_pct": true,
+    "p95_abs_volume_error_pct": false,
+    "median_abs_diameter_error_pct": true,
+    "p95_centroid_displacement_vox": true
+  }
+}
