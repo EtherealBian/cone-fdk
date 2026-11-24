@@ -1,0 +1,19 @@
+{
+  "pipeline_id": "48af8abdd4f9cc0c22031c460f91c85329d17861bdbeb234307b9b2061ee7399",
+  "advance": false,
+  "order_helped_on_all": false,
+  "specimens": {
+    "2": {
+      "primary": false,
+      "ordering": true
+    },
+    "3": {
+      "primary": false,
+      "ordering": false
+    },
+    "5": {
+      "primary": false,
+      "ordering": false
+    }
+  }
+}
