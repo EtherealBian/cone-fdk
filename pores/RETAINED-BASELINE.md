@@ -37,6 +37,8 @@ python scripts/pore_retained_baseline.py --regenerated build/retained-e-fresh --
 
 ## 哪种新增数据值得投入？
 
+[可索取的 CoCr 扫描、人工标注对照及不能用作独立试件的同源数据](EXTERNAL-DATA-INTAKE.md)。
+
 先要能看到**同一个孔的连续三维边界**。我们核查了 Miner、Hobdari、Stanton、Narra 发布的 [CMU KiltHub AMBench 数据 v1（CC BY 4.0）](https://doi.org/10.1184/R1/31378690.v1)。按[作者文件说明](https://ndownloader.figshare.com/files/62042347)，整卷分割是不同算法的输出；人工测试标注另存为带原始 z 序号的切片。下载全部 12 份 `_slices.npz`，核对发布者的文件大小与校验和；同一试件三份标注按真实 z 坐标取并集，绝不把三份标注算成三倍的深度。
 
 |外部试件|人工测试标注覆盖的原始 z 序号|连续段最大层数|
