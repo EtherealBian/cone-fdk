@@ -1,0 +1,221 @@
+{
+  "identity": {
+    "parent": {
+      "parent": {
+        "files": {
+          "pores/AXIAL-RAW-PILOT.md": "1f644c540f537b3c3aab5d917d3439a47df5f7dcd16e8b733d0467741370bd28",
+          "scripts/pore_axial_raw.py": "81307691e315afdd18c41e23ce2aa416901cad54202d5fc93e046cd118f852e0",
+          "scripts/pore_shared_model.py": "f7fc15730d01718d5c09edf8ce16c535749735cd34dcc4717d1fc067ebe54d97",
+          "scripts/pore_spatial_model.py": "78745e9d0a09f94a38cfb71ce064d3eba538a1383b294dfda4cde8459319638c",
+          "scripts/pore_spatial_gpu.py": "c9c5bc78bee982f6bafaca6a1153abd74b3902983d18eeb332f8c0ccc254c060",
+          "pores/search_support.cu": "916e3e64038b020590a1761537d63df262830849c7fece520eae785da092a5e5",
+          "pores/spatial.cu": "04b4c13b5f38fb89a8dfe60d85a06dea6c0b0a1be26ce64102614b063766a1f9",
+          "pores/local_model.py": "5824b9d1e1865bc57acb6f0fa8afaa5600f47c49af2c099c0a330d8faea9bba2",
+          "pores/denoise.py": "0f41622de8d2b022dc956d592f297c142e31f5d1963eb49a0e7e88a241659493",
+          "pores/validate.py": "2c81e4f6731d3fe852edcbb693af30e401d3cdcaddb179c2744443c211afa3c9"
+        },
+        "ptx": {
+          "search-support.ptx": "1f814aa7f606b2cd4df63d18f9e636532982950a16da169f0b17e39039e6cf02",
+          "spatial.ptx": "82741408da39f040c74a8354cce00a34f78e07aecdf1c37a5548d61d133e0b40"
+        },
+        "torch": "2.15.0+cpu"
+      },
+      "files": {
+        "scripts/pore_census_train.py": "13fa5f20faba29b5ea4658db7e211d1e7104d715530d78c06ed87a34ef9e6fdc",
+        "scripts/pore_census_predict.py": "6eb34ddc0329e29e2e740fa910b277ba861ae8553ec0cc912f4937cdc18ca925",
+        "pores/CENSUS-TRAIN-PILOT.md": "6a4c6c692b51207da133d9e943a197e2ac184a25fff4e8f14d7d01f1fa3a38e1",
+        "scripts/pore_axial_replay.py": "d0053e854158dfd1bb5703fdd8c03fc7cffaa5e73a90154a670e4f174e9a1ce0"
+      }
+    },
+    "census": "d7467efcb92ffe1737983e8aa37544bfa72f88a1924f5a9c25617a2a18ee5e96",
+    "files": {
+      "pores/FIVE-PLANE-PILOT.md": "a9b1b548f0e40aec7e7a3484457ca691136f309d361747a1f9b837a393660ad6",
+      "scripts/pore_five_plane.py": "b92ff0a9b0072fd3a447fb251c78f585e797fdca0824395be55401a598a1a669",
+      "scripts/pore_five_score.py": "ce40853c18ae4a27a28b6786acfd2209dd50232b3c945068696f07358cc2ebc7"
+    }
+  },
+  "pipeline_id": "683ccca224e9d1a8741d58102f30a9940a02b48799d7ace64dbf3e2a2671f8ef",
+  "specimens": {
+    "2": {
+      "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+      "segmented": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+      "cal_mask": "e6160ae3db5edc35c134c1fc55df5b0ca5afad911209c6962ac5eadd8c6455ce",
+      "fields": "26db37698f3012c2df925aada89702aca760ea4d7d668d0b868a60ca68e74d62",
+      "cal_overlap_voxels_per_field": 1775616,
+      "census_mask": "e8929221eb9a199e126b897a9c1d1fac9201898e12e507b0018e12fcbdca33d5",
+      "transfer_fields": "18c8d9206895aa42cfa40ac2ab3a7fd535b0473e779763c61abf28430ce0c162",
+      "masks": {
+        "slice": {
+          "file": "aee021b6c0da4aa77c7c44b70a1da1e74ecac177e8a05a2d6ed7947eb173c456",
+          "mask": "272188909deb7b96f2820851476bf0f358f7bb7736209459ea80fa4775f5347b",
+          "max_abs_cpu_gpu": 1.1024852554442077e-05,
+          "cpu_gpu_decision_disagreements": 0,
+          "first_difference": null
+        },
+        "volume": {
+          "file": "f8e1612a24dd261fde50b890329d69f94bb9660c4e75dac4f7ab5f474cb8b506",
+          "mask": "90ab53fcf8fcc86dfc5f2d27a0334163ec2f454d5d40ab0504c9ef118e25f8be",
+          "max_abs_cpu_gpu": 1.0219285957902002e-05,
+          "cpu_gpu_decision_disagreements": 0,
+          "first_difference": null
+        }
+      }
+    },
+    "3": {
+      "raw": "460ea68425d9ac387485b65a3aa2b3f25da31cfe9de8181d4c1a5b0a982d26c8",
+      "segmented": "f94c64a99f5f0e7971a3e0e2f7c932183009938aa5d284bcd23f4657674e6009",
+      "cal_mask": "3ea426d8b82fdf00a7710700d4c15df0592df587e6b2e45274f4ef59be567c57",
+      "fields": "361a7ea2490ab030a01dc677dbcf65be152318050958d4cf4619802d82da720c",
+      "cal_overlap_voxels_per_field": 1775616,
+      "census_mask": "df02f68d9d5f09858fb12b8131160b76897e4df3c8c03dda06fccdf935170068",
+      "transfer_fields": "5ebad86a48128a6c918283eb5040234c2111600b8e9a507ef0440ba83efc0d06",
+      "masks": {
+        "slice": {
+          "file": "cd427d63022ecdfe6b20a7776519496291a3b16506997a575200ae852ef82550",
+          "mask": "59213cef2c309750dbdf0a10bd623589c6d870bbd003c3e921d334bc2012474c",
+          "max_abs_cpu_gpu": 7.962263964600425e-06,
+          "cpu_gpu_decision_disagreements": 0,
+          "first_difference": null
+        },
+        "volume": {
+          "file": "ed9b8c8a28189450441abe217be370260fd94ef8fd73ccc1a2179c3157ed2cd0",
+          "mask": "4721597f29ccac391a22f46fddbd482b10a8a74fc0117067c1356a820daef99b",
+          "max_abs_cpu_gpu": 9.144557168383471e-06,
+          "cpu_gpu_decision_disagreements": 0,
+          "first_difference": null
+        }
+      }
+    },
+    "5": {
+      "raw": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37",
+      "segmented": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b",
+      "cal_mask": "9cd3e4d1a6dba9d1eed3510487c7a86c0c55c2bd99602f52255b51f6e2547a9e",
+      "fields": "01ba444ed9fc6f6dafc6413067d65a3bd95cc61f1dda3a7adac571448a47868a",
+      "cal_overlap_voxels_per_field": 1775616,
+      "census_mask": "7bc87d965c8d032f06f39ced69003cf34c1828242082f8c2a678cf7ce45b3d3b",
+      "transfer_fields": "5f684625b82f0b4b51cc941cdaa03795efced91f3bff346792e85cd773c54805",
+      "masks": {
+        "slice": {
+          "file": "af6fdc69f0c49d743902a7e6b6e7563b07458604fc648d2c3e37fef988b52730",
+          "mask": "9d04bc556dcd7e1dc5954d13535ce26f34cead24d03ad3f4281934746346b130",
+          "max_abs_cpu_gpu": 9.325366352896935e-06,
+          "cpu_gpu_decision_disagreements": 0,
+          "first_difference": null
+        },
+        "volume": {
+          "file": "362cf870f3903f443ac3e48718e24be70b09a6508661617eb5ec5b2a8e4157ed",
+          "mask": "069b3cbbdf36396615fb4eb921260fb902d1f242ebad3245980de1c90bd4abd1",
+          "max_abs_cpu_gpu": 9.112215831663661e-06,
+          "cpu_gpu_decision_disagreements": 0,
+          "first_difference": null
+        }
+      }
+    }
+  },
+  "fits": {
+    "slice": {
+      "init": "33ed226c8319df0d5b35a7edfd81e35195fb75abb7dc1ff3ca6fcd584abbb4c3",
+      "weights": "614956b060e385888bf9411ca4806c9ef738c126e7f5120227a3c74638a44f76",
+      "trace": [
+        [
+          0,
+          0.13447807729244232
+        ],
+        [
+          256,
+          0.05526983365416527
+        ],
+        [
+          512,
+          0.013561075553297997
+        ],
+        [
+          768,
+          0.032435279339551926
+        ],
+        [
+          1024,
+          0.021998515352606773
+        ],
+        [
+          1280,
+          0.034371376037597656
+        ],
+        [
+          1535,
+          0.023872796446084976
+        ]
+      ]
+    },
+    "volume": {
+      "init": "33ed226c8319df0d5b35a7edfd81e35195fb75abb7dc1ff3ca6fcd584abbb4c3",
+      "weights": "b6c638cb7bf990edeb86e846562d3243b5eed65b4c7ddf27ccd68058e00fe80a",
+      "trace": [
+        [
+          0,
+          0.13447807729244232
+        ],
+        [
+          256,
+          0.04618166759610176
+        ],
+        [
+          512,
+          0.011977257207036018
+        ],
+        [
+          768,
+          0.025860227644443512
+        ],
+        [
+          1024,
+          0.012142390012741089
+        ],
+        [
+          1280,
+          0.022666141390800476
+        ],
+        [
+          1535,
+          0.02357943169772625
+        ]
+      ]
+    }
+  },
+  "coverage": {
+    "2": {
+      "unique_grid_tiles": 1536,
+      "unique_voxels": 1572864,
+      "total": 1572864,
+      "schedule_sha256": "087527f1dbbc4da7a8adbfb41036b6e2fd6f0f706a608726b80ccae09c15da32",
+      "common_sha256": "8a4831ede25ddf19d7655be1ac2084b8ae09e0dc2e65d1cf524698d8cdc3d627",
+      "augment_sha256": "da65986b69c40192b74fc92480a7e850ddd5799a287be4faa3e68300b3678c9a"
+    },
+    "3": {
+      "unique_grid_tiles": 1536,
+      "unique_voxels": 1572864,
+      "total": 1572864,
+      "schedule_sha256": "6cda5a2b5e65e7d3eb5c9bc0ae461507a44b1a9352eed29c1081afb70abd2ef6",
+      "common_sha256": "bd3c4b008efc8e0d67270ce1bf679e463c40421f0936e07020f7e32eafb266e2",
+      "augment_sha256": "5e761ce28a953a7b1d9252dd3af8577a46678d17c754dd74193f25e5e602e716"
+    },
+    "5": {
+      "unique_grid_tiles": 1536,
+      "unique_voxels": 1572864,
+      "total": 1572864,
+      "schedule_sha256": "54ff7f33abc68c0062477c5c0c90ab01d053d2b93a6f14e5cf0a4f65fbd80dbb",
+      "common_sha256": "b9d62a4695bf7d4c1a96761fe087d81b12b92f6dbb92ff9639c2db574cf1af5a",
+      "augment_sha256": "867fe5f0e96fe3f53a84d85b2b9871264400a2a51a52f06215e7de4b044010ad"
+    }
+  },
+  "origin_xyz": [
+    360,
+    376,
+    256
+  ],
+  "shape_zyx": [
+    96,
+    256,
+    256
+  ]
+}
