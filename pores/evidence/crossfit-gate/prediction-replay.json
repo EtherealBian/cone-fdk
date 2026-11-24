@@ -1,0 +1,16 @@
+{
+  "fit.json": "ae94aa02bf694ec773e1311ca81a10740b01b83214e56594c5dcdab97dfdbe74",
+  "fold2.npz": "6346abf418af493a8c48d36f6c2e83f9e9f2d021d7e966ef9c88e5ef7d2e2bb6",
+  "fold3.npz": "a61cd82944b04222ac47400623da264088cb3d08762c8bc9047ad12e60a736d7",
+  "fold5.npz": "efb33c1375940a545cfc4fb5e95acb7de53f0726854522ad36fa8c41f2b0c0f8",
+  "predictions.json": "10730e85f6ffe7e197ddd309b89f43fe21df4ba2d7444459800b620af65067c0",
+  "sample2-choices.json": "5e8517bbec9000706f08b1c342b95158af8b0fe13da9ffaf44d08d719d8a54ef",
+  "sample2-crossfit.npz": "7aac8eb7cae8310490a702fe96af306ff10e083eed1a1133874f90af16c079ea",
+  "sample2-oof.npz": "92102cede8569a3cc092ff9a776c0f2bab0ce99293adb4704ba40da011a7db8e",
+  "sample3-choices.json": "5fee09e562bec6d71181fb5e29553507dd1b57bbe0d01b02b3f3abb67cdfc17b",
+  "sample3-crossfit.npz": "00cbc088603bbc60bb263dfb5ce03751662aaf666065073579c8a4793de93bc1",
+  "sample3-oof.npz": "b66b02cacca49acc41b757a7d5de5956e17d73e054b4e20a3927522484413ff8",
+  "sample5-choices.json": "c1ae7fa117de58ac3564f4f0c4a5ea0c2608001049de9b86227c9436ec32c3d5",
+  "sample5-crossfit.npz": "c1932bf078aa9eb5586012e0a544450dd2e26152a48d38bff8c8923de228e07f",
+  "sample5-oof.npz": "858808d6e8b90c9c63a673de380e19ac53e613730c1aa34a35150891bdec8cd6"
+}
