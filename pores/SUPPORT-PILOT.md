@@ -1,0 +1,5 @@
+# First-stage median footprint: a calibration-only pilot
+
+All A–D models start with a 27-voxel median. Can changing only this shared preprocessing assumption improve the simplest source-informed estimator? Compare the full cube (27) with face-and-edge (19) and face-only (7) 3-D medians. Keep the CUDA 5×5 non-local means estimator, Bernsen window, raw mapping, per-specimen contrast value and ROI fixed across the three arms. This does not claim to reproduce Avizo or choose between C and D.
+
+Use development scans 2/3/5 only. Per arm/scan select a bandwidth (14/22/30/42 mapped units), contrast offset (−2/0/+2), threshold bias (−1/0/+1) by Dice on [160,168); tie-break in the order encoded in the script. Evaluate once on [176,184), leaving eight slices between blocks. Do not open the evaluation window or either reserved specimen. Promote a footprint as a standalone replacement for further investigation only if that same alternate increases check-block Dice by at least 0.005 over the cube on every development scan. This is a screening rule, not a change to any release gate. All arms and all checks must be published, irrespective of this decision.
