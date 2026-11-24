@@ -2,6 +2,8 @@
 
 This branch adds native Windows x64 CUDA connectivity and component metrology for an **in-material rectangular ROI**. A separate research pipeline evaluates segmentation of NIST CoCr XCT TIFF stacks. They are already reconstructed scans, not ConeFDK projection inputs. The production tag remains the walnut reconstruction release until the [strict per-specimen gates](FINAL-GATE.md) pass.
 
+**[候选 H：共享权重、逐孔体积误差与三个漏配反例](RESULTS-H.md)** · [三件原始档重放与离线复核包](https://github.com/EtherealBian/cone-fdk/releases/tag/measurement-evidence-6)
+
 **[候选 G：灰度校正和三种方法都判错的位置](RESULTS-G.md)** · [权重、原始切片与逐孔复核包](https://github.com/EtherealBian/cone-fdk/releases/tag/measurement-evidence-5)
 
 **[候选 F 的逐孔对照与新切片的误拆反例](RESULTS-F.md)** · [三件离线复核包](https://github.com/EtherealBian/cone-fdk/releases/tag/measurement-evidence-4)

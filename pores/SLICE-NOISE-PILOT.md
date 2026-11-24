@@ -5,3 +5,13 @@ A learned patch-weight curve overfit scan 2. H found only one eligible complete 
 Use only development 2,3,5. On each required native plane take four 32×32 windows outside the labeled rectangle: x starts 312 and 632, y starts 328 and 648 (all four combinations). Preserve one voxel of real 3-D context for the 3³ median in each window. Subtract the median-filtered value from the raw value in signed arithmetic. In each window compute median(|residual - median(residual)|); take the median across four windows as the slice scale. These are unlabelled locations, not asserted to be defect-free. Publish every MAD. Verify the result independently via sorting 27 raw values at every probe voxel; do not use the check annotation for noise estimation.
 
 Calibration anchor is the median slice scale over z=[160,168). On z=[176,184) compute `h_z=30*clip(scale_z/anchor,0.5,2)` in mapped units. No fitted coefficient. If any plane/anchor scale is zero or nonfinite, mark the scan unsupported, do not substitute a value. Against fixed h=30 use the identical square 5²/21² CUDA estimator, unchanged median, mapping and digital threshold, on x=[512,616), y=[376,632) with 18 original halo pixels. Seal the two predicted check-mask digests and all scale values for the three scans before decoding the check labels for this experiment. Other pilots have used this check population; it is not a new holdout. Publish all confusion counts, flips and actual bandwidths. Advance only if all three gain at least 0.005 Dice without decreasing precision or recall by more than 0.005. No formal or reserve annotations; this screen cannot authorize confirmation.
+
+## Held-apart check
+
+| Development specimen | Fixed h=30 Dice | Slice-normalized Dice | Check h range |
+|---|---:|---:|---:|
+| 2 | 0.94405 | 0.94445 | 28.84–30.42 |
+| 3 | 0.95829 | 0.95744 | 28.64–32.20 |
+| 5 | 0.98033 | 0.98028 | 28.39–30.93 |
+
+None gained the required 0.005 Dice. Do not advance. For each specimen the fixed arm reproduces the entire prior square-30 check score, including all four confusion counts. [Raw noise probes, bandwidths and masks sealed before scoring](evidence/slice-noise-predictions.json) · [all paired check counts and decisions](evidence/slice-noise-check.json).
