@@ -11,3 +11,5 @@
 - On 2026-11-24 the NIST development scans were newly filtered and segmented (candidate D). The specimen-3 comparison shows a windowed, enlarged raw crop with digital-reference and C/D prediction overlays. Source: Felix H. Kim et al., National Institute of Standards and Technology, DOI 10.18434/M32162. No endorsement.
 
 - On 2026-11-24 candidate E was evaluated on development specimens 2, 3 and 5 of the same NIST CoCr dataset. The offline review sheets contain contrast-windowed crops and C/D/E prediction overlays. These experimental measurements are not NIST-certified.
+
+- On 2026-11-24 the boundary-transfer pilot cropped and annotated 96 additional slices each of development specimens 2, 3 and 5. Source: Felix H. Kim et al., NIST, DOI 10.18434/M32162. The review planes and specimen-5 plate use contrast-windowed raw data, digital-reference masks and experimental predictions; not a NIST-endorsed measurement.

@@ -131,3 +131,39 @@ def test_exact_rounding_tie_is_even_not_always_up():
     assert c[0]["applied"] == 0
     b, c = correct(p, f, [0.25, 0])
     assert c[0]["applied"] == 1 and b.ravel().tolist() == [True, True, True, True, False, True]
+
+
+def test_optimistic_capacity_keeps_base_denominator_and_cannot_move_large_components():
+    from pore_transfer_report import capacity
+
+    r = dict(
+        base=dict(
+            references={
+                "7": dict(pred=1, voxels=64, reference_voxels=80),
+                "9": dict(pred=2, voxels=320, reference_voxels=270),
+                "10": dict(pred=None, voxels=None, reference_voxels=70),
+            }
+        ),
+        adjustments=[dict(pred=1, surface=56, outer=14)],
+    )
+    n, stuck, p95, ex = capacity(r)
+    assert n == 2 and stuck == 1 and ex[1:] == (9, 270, 320, 320, 320)
+    assert p95 == pytest.approx(np.percentile([2.5, 100 * 50 / 270], 95))
+
+
+def test_bridge_review_only_flags_disconnected_strong_cores_and_counts_misses():
+    from pore_bridge_review import compare, flag
+
+    p = np.zeros((12, 12, 20), "f4")
+    p[3:7, 3:7, 3:7] = 0.90
+    p[3:7, 3:7, 9:13] = 0.90
+    p[4, 4, 7:9] = 0.50
+    truth = p >= 0.9
+    original = p.copy()
+    lp, rows = flag(p)
+    assert len(rows) == 1 and rows[0]["core_sizes"] == [64, 64] and rows[0]["flagged"]
+    assert compare(lp, rows, truth)["counts"] == dict(tp=1, fn=0, fp=0, tn=0)
+    np.testing.assert_array_equal(p, original)
+    p[4, 4, 7:9] = 0.90
+    lp, rows = flag(p)
+    assert not rows[0]["flagged"] and compare(lp, rows, truth)["counts"]["fn"] == 1

@@ -1,6 +1,6 @@
 # ConeFDK · Windows 单 GPU 锥束 CT 重建
 
-**实验分支：** [CoCr 试件孔隙测量、逐件验收标准与记录](pores/README.md)。[D → E 逐孔体积误差、漏检与离线复核包](pores/RESULTS-E.md)；[小孔边界放宽或收紧的独立校准对照](pores/SHELL-PILOT.md)。三个开发试件仍未全部达标，核桃 CT 重建的稳定发布版不变。
+**实验分支：** [CoCr 试件孔隙测量、逐件验收标准与记录](pores/README.md)。[D → E 逐孔体积误差、漏检与离线复核包](pores/RESULTS-E.md)；[小孔边界放宽或收紧的独立校准对照](pores/SHELL-PILOT.md)。[跨试件边界校准：三段新切片与可复核的合并误差](pores/RESULTS-TRANSFER.md)。三个开发试件仍未全部达标，核桃 CT 重建的稳定发布版不变。
 
 给定一圈等角间隔的平板 X 射线投影，重建可按毫米坐标读取的三维衰减体。**重建引擎是原生 C++ / CUDA**：手写锥束加权、有限离散 Ram-Lak 响应、反投影；只把一维批量 FFT 交给 NVIDIA cuFFT。Python 不在重建执行路径中，用来准备数据、调用独立的 ASTRA GPU 基线和做验收。
 

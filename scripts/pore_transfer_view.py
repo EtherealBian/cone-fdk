@@ -9,8 +9,10 @@ from pathlib import Path
 
 import numpy as np
 from PIL import Image
+from pore_bridge_review import flag
 from pore_transfer import DEV, ROOT, Z, label
 from pore_transfer_replay import read_npz
+from scipy import ndimage as ndi
 
 sys.path.insert(0, str(ROOT / "pores"))
 from validate import stack, verified  # noqa: E402
@@ -32,7 +34,7 @@ def locator(lab, boxes, k):
 
 def build(folder, cache, i):
     rec = json.loads((folder / f"sample{i}.json").read_text())
-    _, base, arm, truth = read_npz(folder / f"sample{i}-review.npz")
+    prob, base, arm, truth = read_npz(folder / f"sample{i}-review.npz")
     raw, source = verified(cache, i, "raw", False)
     if source["sha256"] != rec["sealed"]["raw"]:
         raise ValueError("Different raw TIFF archive")
@@ -48,6 +50,18 @@ def build(folder, cache, i):
             box=None,
         )
     ]
+    lp, queue = flag(prob)
+    boxes = ndi.find_objects(lp)
+    for flagged in (r for r in queue if r["flagged"]):
+        pid = flagged["pred"]
+        cases.append(
+            dict(
+                title=f"待人工复核 · 疑似误连 E #{pid}",
+                note=f"仅用预测生成提醒。高置信核心体积：{', '.join(map(str, flagged['core_sizes']))} 体素；基线连通体 {flagged['voxels']} 体素。提醒不拆分掩膜，也不等于确认误连。",
+                **locator(lp, boxes, pid),
+            )
+        )
+    del lp
     lr, _, _, boxes = label(truth)
     for key, row in rec["base"]["references"].items():
         other = rec["arm"]["references"][key]

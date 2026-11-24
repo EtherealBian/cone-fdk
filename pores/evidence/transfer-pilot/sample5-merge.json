@@ -1,0 +1,35 @@
+{
+  "specimen": 5,
+  "reference": 42,
+  "pred": 24,
+  "predicted_voxels": 1548,
+  "reference_voxels": 1153,
+  "missed_reference_voxels": 6,
+  "reference_background_in_prediction": 119,
+  "overlaps": [
+    {
+      "reference": 26,
+      "overlap_voxels": 282,
+      "reference_voxels": 309,
+      "complete": true
+    },
+    {
+      "reference": 42,
+      "overlap_voxels": 1147,
+      "reference_voxels": 1153,
+      "complete": true
+    }
+  ],
+  "source_z": 280,
+  "source_xy_halfopen": [
+    498,
+    517,
+    529,
+    548
+  ],
+  "same_four_connected_prediction_section_hits": {
+    "42": 78,
+    "26": 13
+  },
+  "raw_sha256": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37"
+}

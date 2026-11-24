@@ -1,0 +1,1829 @@
+{
+  "2": {
+    "counts": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 48
+    },
+    "eligible": 48,
+    "rows": [
+      {
+        "pred": 10,
+        "native_id": 69001,
+        "seed_zyx": [
+          1,
+          13,
+          136
+        ],
+        "voxels": 843,
+        "core_sizes": [
+          749
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 10,
+            "reference_voxels": 883,
+            "hits": 819
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 11,
+        "native_id": 88170,
+        "seed_zyx": [
+          1,
+          88,
+          105
+        ],
+        "voxels": 96,
+        "core_sizes": [
+          81
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 12,
+            "reference_voxels": 94,
+            "hits": 85
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 13,
+        "native_id": 636003,
+        "seed_zyx": [
+          9,
+          180,
+          98
+        ],
+        "voxels": 879,
+        "core_sizes": [
+          799
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 13,
+            "reference_voxels": 824,
+            "hits": 808
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 14,
+        "native_id": 965819,
+        "seed_zyx": [
+          14,
+          188,
+          186
+        ],
+        "voxels": 1903,
+        "core_sizes": [
+          1778
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 15,
+            "reference_voxels": 1887,
+            "hits": 1828
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 16,
+        "native_id": 1268850,
+        "seed_zyx": [
+          19,
+          92,
+          113
+        ],
+        "voxels": 169,
+        "core_sizes": [
+          156
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 17,
+            "reference_voxels": 166,
+            "hits": 160
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 17,
+        "native_id": 1338520,
+        "seed_zyx": [
+          20,
+          108,
+          151
+        ],
+        "voxels": 1274,
+        "core_sizes": [
+          1208
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 18,
+            "reference_voxels": 1228,
+            "hits": 1204
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 18,
+        "native_id": 1363592,
+        "seed_zyx": [
+          20,
+          206,
+          135
+        ],
+        "voxels": 13157,
+        "core_sizes": [
+          12490
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 19,
+            "reference_voxels": 13454,
+            "hits": 12858
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 19,
+        "native_id": 1381254,
+        "seed_zyx": [
+          21,
+          19,
+          133
+        ],
+        "voxels": 830,
+        "core_sizes": [
+          756
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 20,
+            "reference_voxels": 829,
+            "hits": 787
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 23,
+        "native_id": 1482811,
+        "seed_zyx": [
+          22,
+          160,
+          58
+        ],
+        "voxels": 87,
+        "core_sizes": [
+          74
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 22,
+            "reference_voxels": 108,
+            "hits": 83
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 25,
+        "native_id": 1606595,
+        "seed_zyx": [
+          24,
+          131,
+          194
+        ],
+        "voxels": 1893,
+        "core_sizes": [
+          1787
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 24,
+            "reference_voxels": 1883,
+            "hits": 1834
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 26,
+        "native_id": 1617164,
+        "seed_zyx": [
+          24,
+          173,
+          11
+        ],
+        "voxels": 142,
+        "core_sizes": [
+          118
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 29,
+            "reference_voxels": 134,
+            "hits": 119
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 29,
+        "native_id": 1662750,
+        "seed_zyx": [
+          25,
+          95,
+          29
+        ],
+        "voxels": 266,
+        "core_sizes": [
+          229
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 27,
+            "reference_voxels": 286,
+            "hits": 250
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 33,
+        "native_id": 1683736,
+        "seed_zyx": [
+          25,
+          177,
+          23
+        ],
+        "voxels": 148,
+        "core_sizes": [
+          111
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 28,
+            "reference_voxels": 164,
+            "hits": 92
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 34,
+        "native_id": 1804053,
+        "seed_zyx": [
+          27,
+          135,
+          20
+        ],
+        "voxels": 761,
+        "core_sizes": [
+          706
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 30,
+            "reference_voxels": 764,
+            "hits": 739
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 36,
+        "native_id": 1815768,
+        "seed_zyx": [
+          27,
+          180,
+          215
+        ],
+        "voxels": 153,
+        "core_sizes": [
+          132
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 31,
+            "reference_voxels": 154,
+            "hits": 143
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 37,
+        "native_id": 1921872,
+        "seed_zyx": [
+          29,
+          83,
+          79
+        ],
+        "voxels": 1368,
+        "core_sizes": [
+          1300
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 33,
+            "reference_voxels": 1348,
+            "hits": 1325
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 38,
+        "native_id": 1980363,
+        "seed_zyx": [
+          30,
+          55,
+          202
+        ],
+        "voxels": 147,
+        "core_sizes": [
+          127
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 32,
+            "reference_voxels": 142,
+            "hits": 130
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 39,
+        "native_id": 2033675,
+        "seed_zyx": [
+          31,
+          8,
+          10
+        ],
+        "voxels": 383,
+        "core_sizes": [
+          349
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 34,
+            "reference_voxels": 377,
+            "hits": 361
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 40,
+        "native_id": 2087210,
+        "seed_zyx": [
+          31,
+          217,
+          41
+        ],
+        "voxels": 245,
+        "core_sizes": [
+          202
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 36,
+            "reference_voxels": 263,
+            "hits": 239
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 43,
+        "native_id": 2187524,
+        "seed_zyx": [
+          33,
+          97,
+          3
+        ],
+        "voxels": 1554,
+        "core_sizes": [
+          1438
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 39,
+            "reference_voxels": 1547,
+            "hits": 1488
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 48,
+        "native_id": 2326505,
+        "seed_zyx": [
+          35,
+          127,
+          232
+        ],
+        "voxels": 271,
+        "core_sizes": [
+          249
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 44,
+            "reference_voxels": 274,
+            "hits": 263
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 51,
+        "native_id": 2535227,
+        "seed_zyx": [
+          38,
+          175,
+          58
+        ],
+        "voxels": 245,
+        "core_sizes": [
+          218
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 47,
+            "reference_voxels": 252,
+            "hits": 237
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 52,
+        "native_id": 2548657,
+        "seed_zyx": [
+          38,
+          227,
+          176
+        ],
+        "voxels": 284,
+        "core_sizes": [
+          253
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 48,
+            "reference_voxels": 277,
+            "hits": 267
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 53,
+        "native_id": 2570246,
+        "seed_zyx": [
+          39,
+          56,
+          5
+        ],
+        "voxels": 171,
+        "core_sizes": [
+          154
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 49,
+            "reference_voxels": 182,
+            "hits": 164
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 54,
+        "native_id": 2724535,
+        "seed_zyx": [
+          41,
+          146,
+          182
+        ],
+        "voxels": 154,
+        "core_sizes": [
+          136
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 50,
+            "reference_voxels": 165,
+            "hits": 140
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 57,
+        "native_id": 2962720,
+        "seed_zyx": [
+          45,
+          53,
+          31
+        ],
+        "voxels": 71,
+        "core_sizes": [
+          52
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 56,
+            "reference_voxels": 83,
+            "hits": 64
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 60,
+        "native_id": 3086792,
+        "seed_zyx": [
+          47,
+          25,
+          199
+        ],
+        "voxels": 721,
+        "core_sizes": [
+          682
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 59,
+            "reference_voxels": 704,
+            "hits": 694
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 62,
+        "native_id": 3161015,
+        "seed_zyx": [
+          48,
+          59,
+          182
+        ],
+        "voxels": 1150,
+        "core_sizes": [
+          1075
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 60,
+            "reference_voxels": 1133,
+            "hits": 1097
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 65,
+        "native_id": 3264848,
+        "seed_zyx": [
+          49,
+          209,
+          79
+        ],
+        "voxels": 691,
+        "core_sizes": [
+          656
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 62,
+            "reference_voxels": 649,
+            "hits": 643
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 66,
+        "native_id": 3311337,
+        "seed_zyx": [
+          50,
+          134,
+          232
+        ],
+        "voxels": 223,
+        "core_sizes": [
+          162
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 63,
+            "reference_voxels": 224,
+            "hits": 192
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 68,
+        "native_id": 3536968,
+        "seed_zyx": [
+          53,
+          248,
+          71
+        ],
+        "voxels": 1196,
+        "core_sizes": [
+          1132
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 69,
+            "reference_voxels": 1209,
+            "hits": 1172
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 69,
+        "native_id": 3554020,
+        "seed_zyx": [
+          54,
+          58,
+          227
+        ],
+        "voxels": 1051,
+        "core_sizes": [
+          964
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 72,
+            "reference_voxels": 1081,
+            "hits": 1010
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 70,
+        "native_id": 3565002,
+        "seed_zyx": [
+          54,
+          101,
+          201
+        ],
+        "voxels": 584,
+        "core_sizes": [
+          553
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 73,
+            "reference_voxels": 576,
+            "hits": 565
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 71,
+        "native_id": 3579683,
+        "seed_zyx": [
+          54,
+          159,
+          34
+        ],
+        "voxels": 86,
+        "core_sizes": [
+          76
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 76,
+            "reference_voxels": 93,
+            "hits": 81
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 72,
+        "native_id": 3791544,
+        "seed_zyx": [
+          57,
+          218,
+          183
+        ],
+        "voxels": 1007,
+        "core_sizes": [
+          932
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 78,
+            "reference_voxels": 1019,
+            "hits": 982
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 75,
+        "native_id": 3896878,
+        "seed_zyx": [
+          59,
+          118,
+          45
+        ],
+        "voxels": 85,
+        "core_sizes": [
+          76
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 80,
+            "reference_voxels": 85,
+            "hits": 76
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 77,
+        "native_id": 4098228,
+        "seed_zyx": [
+          62,
+          136,
+          179
+        ],
+        "voxels": 205,
+        "core_sizes": [
+          183
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 83,
+            "reference_voxels": 200,
+            "hits": 194
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 80,
+        "native_id": 4215627,
+        "seed_zyx": [
+          64,
+          83,
+          74
+        ],
+        "voxels": 816,
+        "core_sizes": [
+          738
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 86,
+            "reference_voxels": 843,
+            "hits": 782
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 81,
+        "native_id": 4231653,
+        "seed_zyx": [
+          64,
+          145,
+          228
+        ],
+        "voxels": 88,
+        "core_sizes": [
+          71
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 87,
+            "reference_voxels": 91,
+            "hits": 81
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 82,
+        "native_id": 4252396,
+        "seed_zyx": [
+          64,
+          226,
+          235
+        ],
+        "voxels": 553,
+        "core_sizes": [
+          517
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 88,
+            "reference_voxels": 511,
+            "hits": 506
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 84,
+        "native_id": 4404395,
+        "seed_zyx": [
+          67,
+          52,
+          170
+        ],
+        "voxels": 70,
+        "core_sizes": [
+          56
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 93,
+            "reference_voxels": 79,
+            "hits": 65
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 87,
+        "native_id": 4439545,
+        "seed_zyx": [
+          67,
+          189,
+          248
+        ],
+        "voxels": 369,
+        "core_sizes": [
+          325
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 90,
+            "reference_voxels": 359,
+            "hits": 332
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 93,
+        "native_id": 5074225,
+        "seed_zyx": [
+          77,
+          109,
+          48
+        ],
+        "voxels": 581,
+        "core_sizes": [
+          535
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 98,
+            "reference_voxels": 594,
+            "hits": 552
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 98,
+        "native_id": 5228170,
+        "seed_zyx": [
+          79,
+          198,
+          137
+        ],
+        "voxels": 909,
+        "core_sizes": [
+          851
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 103,
+            "reference_voxels": 910,
+            "hits": 878
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 99,
+        "native_id": 5263113,
+        "seed_zyx": [
+          80,
+          79,
+          8
+        ],
+        "voxels": 580,
+        "core_sizes": [
+          514
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 105,
+            "reference_voxels": 584,
+            "hits": 561
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 100,
+        "native_id": 5275994,
+        "seed_zyx": [
+          80,
+          129,
+          89
+        ],
+        "voxels": 321,
+        "core_sizes": [
+          293
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 106,
+            "reference_voxels": 354,
+            "hits": 312
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 101,
+        "native_id": 5345982,
+        "seed_zyx": [
+          81,
+          146,
+          189
+        ],
+        "voxels": 157,
+        "core_sizes": [
+          133
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 107,
+            "reference_voxels": 165,
+            "hits": 148
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 104,
+        "native_id": 5465724,
+        "seed_zyx": [
+          83,
+          102,
+          123
+        ],
+        "voxels": 77,
+        "core_sizes": [
+          61
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 111,
+            "reference_voxels": 75,
+            "hits": 69
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      }
+    ]
+  },
+  "3": {
+    "counts": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 21
+    },
+    "eligible": 21,
+    "rows": [
+      {
+        "pred": 21,
+        "native_id": 290277,
+        "seed_zyx": [
+          4,
+          109,
+          228
+        ],
+        "voxels": 385,
+        "core_sizes": [
+          306
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 23,
+            "reference_voxels": 362,
+            "hits": 349
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 29,
+        "native_id": 492224,
+        "seed_zyx": [
+          7,
+          130,
+          191
+        ],
+        "voxels": 144,
+        "core_sizes": [
+          110
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 30,
+            "reference_voxels": 166,
+            "hits": 144
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 37,
+        "native_id": 961436,
+        "seed_zyx": [
+          14,
+          171,
+          155
+        ],
+        "voxels": 82,
+        "core_sizes": [
+          60
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 40,
+            "reference_voxels": 72,
+            "hits": 70
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 66,
+        "native_id": 2044678,
+        "seed_zyx": [
+          31,
+          51,
+          5
+        ],
+        "voxels": 88,
+        "core_sizes": [
+          72
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 80,
+            "reference_voxels": 89,
+            "hits": 85
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 86,
+        "native_id": 3114147,
+        "seed_zyx": [
+          47,
+          132,
+          162
+        ],
+        "voxels": 99,
+        "core_sizes": [
+          62
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 104,
+            "reference_voxels": 80,
+            "hits": 72
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 90,
+        "native_id": 3223516,
+        "seed_zyx": [
+          49,
+          47,
+          219
+        ],
+        "voxels": 203,
+        "core_sizes": [
+          126
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 108,
+            "reference_voxels": 147,
+            "hits": 132
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 105,
+        "native_id": 4274826,
+        "seed_zyx": [
+          65,
+          58,
+          137
+        ],
+        "voxels": 188,
+        "core_sizes": [
+          128
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 139,
+            "reference_voxels": 148,
+            "hits": 146
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 106,
+        "native_id": 4361002,
+        "seed_zyx": [
+          66,
+          139,
+          41
+        ],
+        "voxels": 181,
+        "core_sizes": [
+          92
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 137,
+            "reference_voxels": 198,
+            "hits": 159
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 113,
+        "native_id": 4727699,
+        "seed_zyx": [
+          72,
+          35,
+          146
+        ],
+        "voxels": 296,
+        "core_sizes": [
+          223
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 145,
+            "reference_voxels": 275,
+            "hits": 266
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 119,
+        "native_id": 4861391,
+        "seed_zyx": [
+          74,
+          45,
+          206
+        ],
+        "voxels": 397,
+        "core_sizes": [
+          338
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 150,
+            "reference_voxels": 379,
+            "hits": 374
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 120,
+        "native_id": 4885930,
+        "seed_zyx": [
+          74,
+          141,
+          169
+        ],
+        "voxels": 162,
+        "core_sizes": [
+          117
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 151,
+            "reference_voxels": 149,
+            "hits": 147
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 121,
+        "native_id": 4900595,
+        "seed_zyx": [
+          74,
+          198,
+          242
+        ],
+        "voxels": 1160,
+        "core_sizes": [
+          1008
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 153,
+            "reference_voxels": 1150,
+            "hits": 1110
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 124,
+        "native_id": 4973304,
+        "seed_zyx": [
+          75,
+          226,
+          247
+        ],
+        "voxels": 878,
+        "core_sizes": [
+          759
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 157,
+            "reference_voxels": 847,
+            "hits": 832
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 130,
+        "native_id": 5102138,
+        "seed_zyx": [
+          77,
+          218,
+          57
+        ],
+        "voxels": 206,
+        "core_sizes": [
+          170
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 160,
+            "reference_voxels": 206,
+            "hits": 194
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 131,
+        "native_id": 5127099,
+        "seed_zyx": [
+          78,
+          59,
+          186
+        ],
+        "voxels": 3791,
+        "core_sizes": [
+          3414
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 163,
+            "reference_voxels": 3732,
+            "hits": 3620
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 134,
+        "native_id": 5200347,
+        "seed_zyx": [
+          79,
+          89,
+          218
+        ],
+        "voxels": 627,
+        "core_sizes": [
+          550
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 167,
+            "reference_voxels": 628,
+            "hits": 602
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 143,
+        "native_id": 5452176,
+        "seed_zyx": [
+          83,
+          49,
+          143
+        ],
+        "voxels": 297,
+        "core_sizes": [
+          209
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 182,
+            "reference_voxels": 270,
+            "hits": 262
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 149,
+        "native_id": 5606925,
+        "seed_zyx": [
+          85,
+          142,
+          12
+        ],
+        "voxels": 116,
+        "core_sizes": [
+          81
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 186,
+            "reference_voxels": 121,
+            "hits": 109
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 159,
+        "native_id": 5850412,
+        "seed_zyx": [
+          89,
+          69,
+          43
+        ],
+        "voxels": 215,
+        "core_sizes": [
+          152
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 195,
+            "reference_voxels": 240,
+            "hits": 202
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 160,
+        "native_id": 5852098,
+        "seed_zyx": [
+          89,
+          75,
+          193
+        ],
+        "voxels": 97,
+        "core_sizes": [
+          36
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 196,
+            "reference_voxels": 83,
+            "hits": 78
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 161,
+        "native_id": 5923252,
+        "seed_zyx": [
+          90,
+          97,
+          179
+        ],
+        "voxels": 77,
+        "core_sizes": [
+          45
+        ],
+        "flagged": false,
+        "covered_references": [],
+        "event": false,
+        "category": "tn"
+      }
+    ]
+  },
+  "5": {
+    "counts": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 0,
+      "tn": 8
+    },
+    "eligible": 9,
+    "rows": [
+      {
+        "pred": 19,
+        "native_id": 284302,
+        "seed_zyx": [
+          4,
+          86,
+          141
+        ],
+        "voxels": 747,
+        "core_sizes": [
+          601
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 19,
+            "reference_voxels": 681,
+            "hits": 666
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 20,
+        "native_id": 390423,
+        "seed_zyx": [
+          5,
+          245,
+          22
+        ],
+        "voxels": 230,
+        "core_sizes": [
+          191
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 20,
+            "reference_voxels": 232,
+            "hits": 224
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 22,
+        "native_id": 417186,
+        "seed_zyx": [
+          6,
+          93,
+          161
+        ],
+        "voxels": 90,
+        "core_sizes": [
+          67
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 22,
+            "reference_voxels": 83,
+            "hits": 81
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 24,
+        "native_id": 887709,
+        "seed_zyx": [
+          13,
+          139,
+          156
+        ],
+        "voxels": 1548,
+        "core_sizes": [
+          1158,
+          221
+        ],
+        "flagged": true,
+        "covered_references": [
+          {
+            "reference": 26,
+            "reference_voxels": 309,
+            "hits": 282
+          },
+          {
+            "reference": 42,
+            "reference_voxels": 1153,
+            "hits": 1147
+          }
+        ],
+        "event": true,
+        "category": "tp"
+      },
+      {
+        "pred": 26,
+        "native_id": 1062207,
+        "seed_zyx": [
+          16,
+          53,
+          62
+        ],
+        "voxels": 248,
+        "core_sizes": [
+          185
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 27,
+            "reference_voxels": 222,
+            "hits": 215
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 36,
+        "native_id": 1673672,
+        "seed_zyx": [
+          25,
+          137,
+          199
+        ],
+        "voxels": 343,
+        "core_sizes": [
+          264
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 45,
+            "reference_voxels": 341,
+            "hits": 323
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 52,
+        "native_id": 3060639,
+        "seed_zyx": [
+          46,
+          179,
+          158
+        ],
+        "voxels": 341,
+        "core_sizes": [
+          293
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 60,
+            "reference_voxels": 374,
+            "hits": 328
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 53,
+        "native_id": 3126142,
+        "seed_zyx": [
+          47,
+          179,
+          125
+        ],
+        "voxels": 120,
+        "core_sizes": [
+          71
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 62,
+            "reference_voxels": 100,
+            "hits": 93
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      },
+      {
+        "pred": 55,
+        "native_id": 3684473,
+        "seed_zyx": [
+          56,
+          56,
+          120
+        ],
+        "voxels": 440,
+        "core_sizes": [
+          366
+        ],
+        "flagged": false,
+        "covered_references": [
+          {
+            "reference": 69,
+            "reference_voxels": 425,
+            "hits": 410
+          }
+        ],
+        "event": false,
+        "category": "tn"
+      }
+    ]
+  }
+}
