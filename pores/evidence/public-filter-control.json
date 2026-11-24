@@ -1,0 +1,84 @@
+{
+  "source": "ImageDev 2026-1 Denoising Figure 1",
+  "panels": [
+    {
+      "panel": 1,
+      "mode": "RGB",
+      "size": [
+        256,
+        263
+      ],
+      "gray_opaque": true,
+      "sha256": "916bae80c73c8eaf57e8baaccca466a2444639f9ae13c90d21422408fdfafa17"
+    },
+    {
+      "panel": 2,
+      "mode": "RGB",
+      "size": [
+        256,
+        263
+      ],
+      "gray_opaque": true,
+      "sha256": "4a1c8223625a5121fe7b6cd3ef556d1505db1110831fd7dc1b98e201230b055a"
+    },
+    {
+      "panel": 3,
+      "mode": "RGB",
+      "size": [
+        256,
+        263
+      ],
+      "gray_opaque": true,
+      "sha256": "f38cd0a060600daafa10840337aaa51e7e3fb5a47d4e3d357bbd0e0e611f3ede"
+    },
+    {
+      "panel": 4,
+      "mode": "RGB",
+      "size": [
+        256,
+        263
+      ],
+      "gray_opaque": true,
+      "sha256": "55bf311134c3f028ce2f306cb307eee1dfc9dc51c183e33f125112dec2940eaa"
+    }
+  ],
+  "controls": {
+    "median_radius_1": {
+      "n": 55448,
+      "mae": 1.9476085701918915,
+      "exact": 0.3486149184821815,
+      "within_one": 0.7367443370365027
+    },
+    "median_radius_3": {
+      "n": 55448,
+      "mae": 5.3604097532823545,
+      "exact": 0.26347208195065647,
+      "within_one": 0.595476843168374
+    },
+    "box_radius_3_nearest": {
+      "n": 55448,
+      "mae": 7.2499458952532105,
+      "exact": 0.2141465877939691,
+      "within_one": 0.44858245563410765
+    },
+    "box_radius_3_truncate": {
+      "n": 55448,
+      "mae": 7.298117154811716,
+      "exact": 0.21580580002885585,
+      "within_one": 0.44383927283220315
+    },
+    "box_radius_7_nearest": {
+      "n": 55448,
+      "mae": 18.427571778964076,
+      "exact": 0.08674794401962199,
+      "within_one": 0.20943947482325784
+    },
+    "box_radius_7_truncate": {
+      "n": 55448,
+      "mae": 18.58543139518107,
+      "exact": 0.07818135911123936,
+      "within_one": 0.19748232578271532
+    }
+  },
+  "qualified": false
+}
