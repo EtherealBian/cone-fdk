@@ -155,3 +155,48 @@ def test_census_archive_and_full_coverage():
             a["unique_grid_tiles"] < b["unique_grid_tiles"] == N
             and a["unique_voxels"] < b["unique_voxels"] == 1572864
         )
+
+
+def test_signed_connectivity_archive_gain_and_loss():
+    check_archive("local-connectivity", ("census", "critical"))
+
+    def get(p):
+        return json.loads((E / p).read_bytes())
+
+    d = get("local-connectivity/predictions.json")
+    census = get("local-connectivity/census.json")
+    old = get("census-train/predictions.json")
+    expected = {
+        "2": ([12, 56, 63, 87, 111], [26, 27]),
+        "3": ([71], [125, 153, 186]),
+        "5": ([], []),
+    }
+    for i, row in d["specimens"].items():
+        assert row["masks"]["census"]["mask"] == old["specimens"][i]["masks"]["census"]["mask"]
+        assert d["coverage"][i] == old["coverage"]["census"][i]
+        res = get(f"local-connectivity/sample{i}.json")
+        a, b = res["arms"].values()
+        ids = [
+            {int(j) for j, v in r["references"].items() if v["voxels"] is not None}
+            for r in (a, b)
+        ]
+        assert (sorted(ids[1] - ids[0]), sorted(ids[0] - ids[1])) == expected[i]
+        for key, exp in zip(("gap", "connector"), d["exposures_gap_connector"][i], strict=True):
+            sign = census["specimens"][i]["signs"][key]
+            assert (
+                exp >= sign["count"] == sum(sign["per_z"]) >= 32
+                and sign["planes"] == np.count_nonzero(sign["per_z"]) >= 4
+            )
+        sc = res["screen"]
+        p, q = sc["shared_p95"]
+        assert sc["criteria"]["p95_gain"] == (p - q >= 2)
+        for k in ("matched_fraction_reference", "matched_fraction_prediction"):
+            assert sc["criteria"][k] == (b["objects"][k] >= a["objects"][k])
+        assert not sc["advance"] and not all(sc["criteria"].values())
+    trace = get("local-connectivity/trace-5-15.json")
+    assert trace["reference_voxels"] == 452
+    for k, n, hit in [("census", 1902, 406), ("critical", 2001, 411)]:
+        (r,) = trace["arms"][k]
+        assert (r["voxels"], r["intersection"], r["unclipped"]) == (n, hit, False) and r[
+            "iou"
+        ] == hit / (452 + n - hit)

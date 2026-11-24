@@ -1,0 +1,76 @@
+{
+  "specimen": 5,
+  "study": "local-connectivity",
+  "reference_id": 15,
+  "reference_voxels": 452,
+  "reference_bbox_local_zyx": [
+    [
+      2,
+      13
+    ],
+    [
+      208,
+      219
+    ],
+    [
+      126,
+      139
+    ]
+  ],
+  "origin_xyz": [
+    360,
+    376,
+    256
+  ],
+  "segmented": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b",
+  "arms": {
+    "census": [
+      {
+        "scipy_label": 9,
+        "voxels": 1902,
+        "intersection": 406,
+        "union": 1948,
+        "iou": 0.20841889117043122,
+        "unclipped": false,
+        "bbox_zyx": [
+          [
+            0,
+            22
+          ],
+          [
+            207,
+            227
+          ],
+          [
+            126,
+            155
+          ]
+        ]
+      }
+    ],
+    "critical": [
+      {
+        "scipy_label": 10,
+        "voxels": 2001,
+        "intersection": 411,
+        "union": 2042,
+        "iou": 0.20127326150832517,
+        "unclipped": false,
+        "bbox_zyx": [
+          [
+            0,
+            23
+          ],
+          [
+            207,
+            228
+          ],
+          [
+            125,
+            155
+          ]
+        ]
+      }
+    ]
+  }
+}

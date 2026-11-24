@@ -2,6 +2,8 @@
 
 This branch adds native Windows x64 CUDA connectivity and component metrology for an **in-material rectangular ROI**. A separate research pipeline evaluates segmentation of NIST CoCr XCT TIFF stacks. They are already reconstructed scans, not ConeFDK projection inputs. The production tag remains the walnut reconstruction release until the [strict per-specimen gates](FINAL-GATE.md) pass.
 
+[局部连通监督：5 号九个孔量得更准，为何还不能晋级？](RESULTS-LOCAL-CONNECTIVITY.md) · [两步滤波的原图对照与三个试件的误差](RESULTS-FILTER-PROFILE.md)
+
 [论文中间图定位：第 447 层的灰度实测与重放](RESULTS-FIGURE-GRAY.md) · [遍历校准体素：2 号同孔 P95 降至 14.89%，3、5 号未改善](RESULTS-CENSUS-TRAIN.md)
 
 [相邻原始切片：找回一个被连到裁边的孔](RESULTS-AXIAL-RAW.md) · [窗口参数单位的配对检验](RESULTS-WINDOW-UNITS.md)

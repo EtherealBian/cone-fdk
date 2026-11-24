@@ -36,7 +36,7 @@ def overlaps(labels, region, mask, n):
 
 
 def trace(cache, study, i, ref):
-    if study not in ("axial-raw", "census-train") or i not in DEV or ref <= 0:
+    if study not in ("axial-raw", "census-train", "local-connectivity") or i not in DEV or ref <= 0:
         raise ValueError("Development trace only")
     d = ROOT / "pores/evidence" / study
     locked = json.loads((d / "predictions.json").read_text())
@@ -84,7 +84,7 @@ def trace(cache, study, i, ref):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--cache", type=Path, required=True)
-    ap.add_argument("--study", required=True, choices=("axial-raw", "census-train"))
+    ap.add_argument("--study", required=True, choices=("axial-raw", "census-train", "local-connectivity"))
     ap.add_argument("--specimen", type=int, required=True, choices=DEV)
     ap.add_argument("--ref", type=int, required=True)
     ap.add_argument("--out", type=Path, required=True)
