@@ -60,7 +60,7 @@ def build(archive, compiler, work):
         [
             str(compiler.resolve()),
             "-O3",
-            "-std=c++14",
+            "-std=gnu++14",
             "-include",
             "cmath",
             "-ffp-contract=off",
