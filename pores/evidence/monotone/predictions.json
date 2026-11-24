@@ -1,0 +1,2478 @@
+{
+  "identity": {
+    "parent": {
+      "forward": {
+        "files": {
+          "pores/FORWARD-PILOT.md": "102059bfa72e7c9b0d93ec239c338d13e950815374c992ae05be3d6ae88b263a",
+          "scripts/pore_forward.py": "855c8a48bfa4faf3eaf7797420de3983db3144ea463f537440d29fc161e6beb0",
+          "scripts/pore_forward_gpu.py": "c62ba81d076482320390ad558f9d632923cf76fecb69f4a6a4a90b97e5cfc031",
+          "scripts/pore_forward.cu": "95001e5936f49806dd3ea1f8995f63722085b60f7943ac574b53b55c428eb66c",
+          "scripts/pore_mass.py": "e14a5276c3b13821d4f68d1d25773b6f6e43f6be38921173bcf1b83fd21754c6",
+          "pores/validate.py": "2c81e4f6731d3fe852edcbb693af30e401d3cdcaddb179c2744443c211afa3c9"
+        },
+        "ptx": "9bc0da8da7202302f89e728a0879452ea11138706c9f2267c4eacab92bb50256"
+      },
+      "fit": "9d84a1e90b220dda92d61c1644cb902dc700055728e1c68fa731f6f6ffaefb97",
+      "check": "29e60c14929d73b696eb080c4dfbfb51dd51a2d67d1b4c9c04dd4bb0cb0d44a1",
+      "parent": "d7467efcb92ffe1737983e8aa37544bfa72f88a1924f5a9c25617a2a18ee5e96",
+      "native": {
+        "cone-pores.exe": "afb2edcdc1e969df968f722192aa2af3c9959abf1dbd338af5e27479f1196b06",
+        "pores.ptx": "0d900a9bcdbaff294f4853cb3991b47b6db6f3795e70be8c14ea849cd5bd63b3"
+      },
+      "files": {
+        "scripts/pore_forward_inverse.py": "7a5e97a8ae87abdacd24a8ea21665cd6097a0dc5e23f5f9ab043b7a93f3d3a65",
+        "scripts/pore_forward_score.py": "3324593a36b179cab86e702a74d5da3cd87f31adfbf2133fac84930663a5d2b5",
+        "scripts/pore_transfer.py": "f4092f168839be8b363dd48db5eaf62acf16ed9920f8e5e2c2e1d35f678b73ca",
+        "pores/pore_check.py": "7046a18f709484d5074b3338bcf7f8449db42c4d3f39a8fdb1a39a1d59b6932b"
+      }
+    },
+    "predictions": "e02e8f0c2553c2b87cfdffba8d5b60af3107f0367a0e0406b0f4e3f8f46123a6",
+    "ptx": "0fc0a463d989de8dc497ae8a4b1d7cb9f27ecaea24e09d35ca4628256986be7c",
+    "files": {
+      "pores/MONOTONE-PILOT.md": "7d18e346f36f2ccd49bff439ef317d390ea07f424635b1bf45172c7434748512",
+      "scripts/pore_monotone.py": "c27b7670f21cebbb854163ddeb4a2e8fe538fe507a7780a44d0d4d907a4720e7",
+      "scripts/pore_monotone.cu": "1de4ee30af33ed939996b80c2eac0ce52753889aabc670477ba91351dbbfbd4f",
+      "scripts/pore_monotone_gpu.py": "005e4ba5658dbf718a32f8fc48cf4813cc478dc92ca0ba70cc1711149883444d",
+      "scripts/pore_monotone_score.py": "2d54df3b70783c4b8200bbc46c74b257fae34f62996689f5a36c064ee769f071",
+      "scripts/pore_forward_energy.py": "6398ae424d2e193fb5e269c07d3b62bb3157a238c0b1766b9836cb5902b004be",
+      "scripts/pore_section_score.py": "03ae9566275642b5266f57f6840b3d75593f937a183ef8539a285547d6421918"
+    }
+  },
+  "pipeline_id": "48af8abdd4f9cc0c22031c460f91c85329d17861bdbeb234307b9b2061ee7399",
+  "origin_xyz": [
+    360,
+    376,
+    256
+  ],
+  "shape_zyx": [
+    96,
+    256,
+    256
+  ],
+  "specimens": {
+    "2": {
+      "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+      "segmented": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+      "source_crop": "180eb783cada0ca51dd8ec0fcc204bc40f7b004f23123ad032e7263d33c5262b",
+      "census": "e8929221eb9a199e126b897a9c1d1fac9201898e12e507b0018e12fcbdca33d5",
+      "phase_x2": [
+        69392,
+        105222
+      ],
+      "support": 57330,
+      "masks": {
+        "band-sync": {
+          "file": "0368af7ef6a71ba3f61e86a0db84fb964e0a49fd1f40f8457fd857be9f02e0a4",
+          "mask": "69747ef73d922cdf8d57b3cb2fc8b2a4af6ec5845bfd36937ccd7d2ebacb4436",
+          "additions": 15235,
+          "deletions": 12424,
+          "off_support": 0,
+          "cpu_gpu_differences": 0,
+          "energy": {
+            "raw_mse": 0.008453539812854844,
+            "cut_edges": 72263,
+            "edge_penalty": 4.435924215417941e-05,
+            "changed": 27659,
+            "prior_penalty": 0.00010187223990776317,
+            "total": 0.008599771294916786
+          }
+        },
+        "band-color": {
+          "file": "07b85e6569262ca1ab13baf83337fee2b7817474fd0aa7cf0122dc889174f5b4",
+          "mask": "be14f1cd2b77a26ec369d95aeaccd8fdb8b8073869821c0838b966fc34d8a431",
+          "additions": 13189,
+          "deletions": 10709,
+          "off_support": 0,
+          "cpu_gpu_differences": 0,
+          "energy": {
+            "raw_mse": 0.008319698891865042,
+            "cut_edges": 83781,
+            "edge_penalty": 5.142966202509314e-05,
+            "changed": 23898,
+            "prior_penalty": 8.801991356577332e-05,
+            "total": 0.008459148467455909
+          }
+        }
+      },
+      "initial_energy": {
+        "raw_mse": 0.00879551734436377,
+        "cut_edges": 58601,
+        "edge_penalty": 3.597271009336822e-05,
+        "changed": 0,
+        "prior_penalty": 0.0,
+        "total": 0.008831490054457138
+      },
+      "exact_gain_denominator": 2077497155911680,
+      "per_voxel_gain": 0.0003723415870012298,
+      "gain_field_sha256": "728f5c008189f000454f93badd2b4608aad344af1dec70d1460b962b5863c338",
+      "colors": [
+        {
+          "color": 0,
+          "available": 464,
+          "changed": 213,
+          "gain_numerator": 77617080887717088
+        },
+        {
+          "color": 1,
+          "available": 489,
+          "changed": 233,
+          "gain_numerator": 84225628535335872
+        },
+        {
+          "color": 2,
+          "available": 469,
+          "changed": 253,
+          "gain_numerator": 90085376897844840
+        },
+        {
+          "color": 3,
+          "available": 461,
+          "changed": 238,
+          "gain_numerator": 82850658223821144
+        },
+        {
+          "color": 4,
+          "available": 464,
+          "changed": 206,
+          "gain_numerator": 67144428175185672
+        },
+        {
+          "color": 5,
+          "available": 477,
+          "changed": 228,
+          "gain_numerator": 71631506507313360
+        },
+        {
+          "color": 6,
+          "available": 496,
+          "changed": 251,
+          "gain_numerator": 80138269142575800
+        },
+        {
+          "color": 7,
+          "available": 447,
+          "changed": 224,
+          "gain_numerator": 69257511278628960
+        },
+        {
+          "color": 8,
+          "available": 458,
+          "changed": 227,
+          "gain_numerator": 70249604562521232
+        },
+        {
+          "color": 9,
+          "available": 457,
+          "changed": 218,
+          "gain_numerator": 66992852094364584
+        },
+        {
+          "color": 10,
+          "available": 467,
+          "changed": 214,
+          "gain_numerator": 62170854869285088
+        },
+        {
+          "color": 11,
+          "available": 474,
+          "changed": 226,
+          "gain_numerator": 64814042187850992
+        },
+        {
+          "color": 12,
+          "available": 450,
+          "changed": 227,
+          "gain_numerator": 68817402612113544
+        },
+        {
+          "color": 13,
+          "available": 448,
+          "changed": 195,
+          "gain_numerator": 56377386515963448
+        },
+        {
+          "color": 14,
+          "available": 444,
+          "changed": 212,
+          "gain_numerator": 57648979271841888
+        },
+        {
+          "color": 15,
+          "available": 454,
+          "changed": 221,
+          "gain_numerator": 58458623363282568
+        },
+        {
+          "color": 16,
+          "available": 473,
+          "changed": 236,
+          "gain_numerator": 66119204027731176
+        },
+        {
+          "color": 17,
+          "available": 458,
+          "changed": 223,
+          "gain_numerator": 61675087859849040
+        },
+        {
+          "color": 18,
+          "available": 452,
+          "changed": 207,
+          "gain_numerator": 53899173524564112
+        },
+        {
+          "color": 19,
+          "available": 446,
+          "changed": 211,
+          "gain_numerator": 50761821010651944
+        },
+        {
+          "color": 20,
+          "available": 480,
+          "changed": 214,
+          "gain_numerator": 60401467195012680
+        },
+        {
+          "color": 21,
+          "available": 494,
+          "changed": 217,
+          "gain_numerator": 56853573998042160
+        },
+        {
+          "color": 22,
+          "available": 481,
+          "changed": 226,
+          "gain_numerator": 54680761598656800
+        },
+        {
+          "color": 23,
+          "available": 460,
+          "changed": 188,
+          "gain_numerator": 48782346238912536
+        },
+        {
+          "color": 24,
+          "available": 466,
+          "changed": 229,
+          "gain_numerator": 56316819344187360
+        },
+        {
+          "color": 25,
+          "available": 471,
+          "changed": 236,
+          "gain_numerator": 60107213546992608
+        },
+        {
+          "color": 26,
+          "available": 504,
+          "changed": 243,
+          "gain_numerator": 62082250403607744
+        },
+        {
+          "color": 27,
+          "available": 470,
+          "changed": 214,
+          "gain_numerator": 55843060336141776
+        },
+        {
+          "color": 28,
+          "available": 449,
+          "changed": 218,
+          "gain_numerator": 58007404238037360
+        },
+        {
+          "color": 29,
+          "available": 486,
+          "changed": 226,
+          "gain_numerator": 55739699693941848
+        },
+        {
+          "color": 30,
+          "available": 479,
+          "changed": 199,
+          "gain_numerator": 46504536284282352
+        },
+        {
+          "color": 31,
+          "available": 456,
+          "changed": 210,
+          "gain_numerator": 47718508994144856
+        },
+        {
+          "color": 32,
+          "available": 449,
+          "changed": 193,
+          "gain_numerator": 42240373719323088
+        },
+        {
+          "color": 33,
+          "available": 477,
+          "changed": 189,
+          "gain_numerator": 45604452511910112
+        },
+        {
+          "color": 34,
+          "available": 492,
+          "changed": 224,
+          "gain_numerator": 47498903529876840
+        },
+        {
+          "color": 35,
+          "available": 459,
+          "changed": 205,
+          "gain_numerator": 43580856909355416
+        },
+        {
+          "color": 36,
+          "available": 451,
+          "changed": 210,
+          "gain_numerator": 45417850967949720
+        },
+        {
+          "color": 37,
+          "available": 451,
+          "changed": 201,
+          "gain_numerator": 42929209685982096
+        },
+        {
+          "color": 38,
+          "available": 462,
+          "changed": 191,
+          "gain_numerator": 37613959781663616
+        },
+        {
+          "color": 39,
+          "available": 470,
+          "changed": 187,
+          "gain_numerator": 37710775330446432
+        },
+        {
+          "color": 40,
+          "available": 459,
+          "changed": 204,
+          "gain_numerator": 43543012894592736
+        },
+        {
+          "color": 41,
+          "available": 458,
+          "changed": 209,
+          "gain_numerator": 42066286999977504
+        },
+        {
+          "color": 42,
+          "available": 443,
+          "changed": 195,
+          "gain_numerator": 37657858867170024
+        },
+        {
+          "color": 43,
+          "available": 454,
+          "changed": 214,
+          "gain_numerator": 37489206703626264
+        },
+        {
+          "color": 44,
+          "available": 449,
+          "changed": 203,
+          "gain_numerator": 36993791365250952
+        },
+        {
+          "color": 45,
+          "available": 478,
+          "changed": 238,
+          "gain_numerator": 47708065099910928
+        },
+        {
+          "color": 46,
+          "available": 471,
+          "changed": 213,
+          "gain_numerator": 41965245668529048
+        },
+        {
+          "color": 47,
+          "available": 483,
+          "changed": 231,
+          "gain_numerator": 38972450260445688
+        },
+        {
+          "color": 48,
+          "available": 479,
+          "changed": 194,
+          "gain_numerator": 31609720899174840
+        },
+        {
+          "color": 49,
+          "available": 478,
+          "changed": 217,
+          "gain_numerator": 35832756113552400
+        },
+        {
+          "color": 50,
+          "available": 455,
+          "changed": 198,
+          "gain_numerator": 44340659988980328
+        },
+        {
+          "color": 51,
+          "available": 434,
+          "changed": 205,
+          "gain_numerator": 50268163549983912
+        },
+        {
+          "color": 52,
+          "available": 438,
+          "changed": 185,
+          "gain_numerator": 48855341219694384
+        },
+        {
+          "color": 53,
+          "available": 454,
+          "changed": 223,
+          "gain_numerator": 48649685326711128
+        },
+        {
+          "color": 54,
+          "available": 450,
+          "changed": 194,
+          "gain_numerator": 43503088372754856
+        },
+        {
+          "color": 55,
+          "available": 443,
+          "changed": 190,
+          "gain_numerator": 42530809360454136
+        },
+        {
+          "color": 56,
+          "available": 421,
+          "changed": 168,
+          "gain_numerator": 43559794401097056
+        },
+        {
+          "color": 57,
+          "available": 416,
+          "changed": 183,
+          "gain_numerator": 36480049778553984
+        },
+        {
+          "color": 58,
+          "available": 449,
+          "changed": 189,
+          "gain_numerator": 35283835289203392
+        },
+        {
+          "color": 59,
+          "available": 455,
+          "changed": 185,
+          "gain_numerator": 30261667099054104
+        },
+        {
+          "color": 60,
+          "available": 427,
+          "changed": 182,
+          "gain_numerator": 37078313457513648
+        },
+        {
+          "color": 61,
+          "available": 401,
+          "changed": 172,
+          "gain_numerator": 35999213944495224
+        },
+        {
+          "color": 62,
+          "available": 425,
+          "changed": 169,
+          "gain_numerator": 33813558724483536
+        },
+        {
+          "color": 63,
+          "available": 426,
+          "changed": 182,
+          "gain_numerator": 33478744774737120
+        },
+        {
+          "color": 64,
+          "available": 450,
+          "changed": 206,
+          "gain_numerator": 36848356714548024
+        },
+        {
+          "color": 65,
+          "available": 438,
+          "changed": 185,
+          "gain_numerator": 33931196228559744
+        },
+        {
+          "color": 66,
+          "available": 412,
+          "changed": 184,
+          "gain_numerator": 37765949288991096
+        },
+        {
+          "color": 67,
+          "available": 400,
+          "changed": 176,
+          "gain_numerator": 32762436488896368
+        },
+        {
+          "color": 68,
+          "available": 419,
+          "changed": 172,
+          "gain_numerator": 30920939046875112
+        },
+        {
+          "color": 69,
+          "available": 446,
+          "changed": 176,
+          "gain_numerator": 28809892465591680
+        },
+        {
+          "color": 70,
+          "available": 463,
+          "changed": 202,
+          "gain_numerator": 35939357238346440
+        },
+        {
+          "color": 71,
+          "available": 434,
+          "changed": 191,
+          "gain_numerator": 30221928837245256
+        },
+        {
+          "color": 72,
+          "available": 442,
+          "changed": 187,
+          "gain_numerator": 29499198241579368
+        },
+        {
+          "color": 73,
+          "available": 449,
+          "changed": 172,
+          "gain_numerator": 27026511352938456
+        },
+        {
+          "color": 74,
+          "available": 475,
+          "changed": 196,
+          "gain_numerator": 32232300698236152
+        },
+        {
+          "color": 75,
+          "available": 459,
+          "changed": 188,
+          "gain_numerator": 37587769884908184
+        },
+        {
+          "color": 76,
+          "available": 445,
+          "changed": 186,
+          "gain_numerator": 33414959195370456
+        },
+        {
+          "color": 77,
+          "available": 434,
+          "changed": 180,
+          "gain_numerator": 32623980181359768
+        },
+        {
+          "color": 78,
+          "available": 461,
+          "changed": 191,
+          "gain_numerator": 32670628197207672
+        },
+        {
+          "color": 79,
+          "available": 466,
+          "changed": 172,
+          "gain_numerator": 27675382521240792
+        },
+        {
+          "color": 80,
+          "available": 451,
+          "changed": 172,
+          "gain_numerator": 31488630914972712
+        },
+        {
+          "color": 81,
+          "available": 445,
+          "changed": 189,
+          "gain_numerator": 37045762319825688
+        },
+        {
+          "color": 82,
+          "available": 438,
+          "changed": 160,
+          "gain_numerator": 28900177857001488
+        },
+        {
+          "color": 83,
+          "available": 449,
+          "changed": 165,
+          "gain_numerator": 25152966988673688
+        },
+        {
+          "color": 84,
+          "available": 454,
+          "changed": 169,
+          "gain_numerator": 27813352374738048
+        },
+        {
+          "color": 85,
+          "available": 454,
+          "changed": 169,
+          "gain_numerator": 25587559167782280
+        },
+        {
+          "color": 86,
+          "available": 445,
+          "changed": 172,
+          "gain_numerator": 25546475440017360
+        },
+        {
+          "color": 87,
+          "available": 416,
+          "changed": 173,
+          "gain_numerator": 26717395669597080
+        },
+        {
+          "color": 88,
+          "available": 415,
+          "changed": 172,
+          "gain_numerator": 26289443944402320
+        },
+        {
+          "color": 89,
+          "available": 446,
+          "changed": 153,
+          "gain_numerator": 20296159936975320
+        },
+        {
+          "color": 90,
+          "available": 481,
+          "changed": 178,
+          "gain_numerator": 24642005828581464
+        },
+        {
+          "color": 91,
+          "available": 434,
+          "changed": 164,
+          "gain_numerator": 23021544136174704
+        },
+        {
+          "color": 92,
+          "available": 410,
+          "changed": 159,
+          "gain_numerator": 23525804469209496
+        },
+        {
+          "color": 93,
+          "available": 441,
+          "changed": 155,
+          "gain_numerator": 21845203402664472
+        },
+        {
+          "color": 94,
+          "available": 474,
+          "changed": 181,
+          "gain_numerator": 26406778772869032
+        },
+        {
+          "color": 95,
+          "available": 470,
+          "changed": 172,
+          "gain_numerator": 24337104872735808
+        },
+        {
+          "color": 96,
+          "available": 449,
+          "changed": 165,
+          "gain_numerator": 19919864679874536
+        },
+        {
+          "color": 97,
+          "available": 454,
+          "changed": 168,
+          "gain_numerator": 22754413662361944
+        },
+        {
+          "color": 98,
+          "available": 471,
+          "changed": 153,
+          "gain_numerator": 22291706825709864
+        },
+        {
+          "color": 99,
+          "available": 486,
+          "changed": 172,
+          "gain_numerator": 21093912690588696
+        },
+        {
+          "color": 100,
+          "available": 481,
+          "changed": 201,
+          "gain_numerator": 33259441645510536
+        },
+        {
+          "color": 101,
+          "available": 471,
+          "changed": 192,
+          "gain_numerator": 29874500074643976
+        },
+        {
+          "color": 102,
+          "available": 478,
+          "changed": 191,
+          "gain_numerator": 26612566150720200
+        },
+        {
+          "color": 103,
+          "available": 474,
+          "changed": 186,
+          "gain_numerator": 27633062695402920
+        },
+        {
+          "color": 104,
+          "available": 468,
+          "changed": 176,
+          "gain_numerator": 26363092173722472
+        },
+        {
+          "color": 105,
+          "available": 479,
+          "changed": 181,
+          "gain_numerator": 29006132956070424
+        },
+        {
+          "color": 106,
+          "available": 501,
+          "changed": 195,
+          "gain_numerator": 28155567276048168
+        },
+        {
+          "color": 107,
+          "available": 475,
+          "changed": 175,
+          "gain_numerator": 21538477444385136
+        },
+        {
+          "color": 108,
+          "available": 437,
+          "changed": 139,
+          "gain_numerator": 18036006997250352
+        },
+        {
+          "color": 109,
+          "available": 443,
+          "changed": 145,
+          "gain_numerator": 18354294789957144
+        },
+        {
+          "color": 110,
+          "available": 487,
+          "changed": 182,
+          "gain_numerator": 25538716362524544
+        },
+        {
+          "color": 111,
+          "available": 485,
+          "changed": 165,
+          "gain_numerator": 19461917732447136
+        },
+        {
+          "color": 112,
+          "available": 442,
+          "changed": 159,
+          "gain_numerator": 15738614094872520
+        },
+        {
+          "color": 113,
+          "available": 440,
+          "changed": 164,
+          "gain_numerator": 17707388356647720
+        },
+        {
+          "color": 114,
+          "available": 447,
+          "changed": 140,
+          "gain_numerator": 15824557308281112
+        },
+        {
+          "color": 115,
+          "available": 485,
+          "changed": 167,
+          "gain_numerator": 19458409384796952
+        },
+        {
+          "color": 116,
+          "available": 486,
+          "changed": 164,
+          "gain_numerator": 16970310744538776
+        },
+        {
+          "color": 117,
+          "available": 469,
+          "changed": 132,
+          "gain_numerator": 13392546748013808
+        },
+        {
+          "color": 118,
+          "available": 475,
+          "changed": 153,
+          "gain_numerator": 13797239944767888
+        },
+        {
+          "color": 119,
+          "available": 475,
+          "changed": 163,
+          "gain_numerator": 16976371889394792
+        },
+        {
+          "color": 120,
+          "available": 504,
+          "changed": 166,
+          "gain_numerator": 17450442962308920
+        },
+        {
+          "color": 121,
+          "available": 497,
+          "changed": 168,
+          "gain_numerator": 19484941381494024
+        },
+        {
+          "color": 122,
+          "available": 469,
+          "changed": 135,
+          "gain_numerator": 15160955347236240
+        },
+        {
+          "color": 123,
+          "available": 483,
+          "changed": 148,
+          "gain_numerator": 15624563060642976
+        },
+        {
+          "color": 124,
+          "available": 502,
+          "changed": 160,
+          "gain_numerator": 16145986771733904
+        }
+      ]
+    },
+    "3": {
+      "raw": "460ea68425d9ac387485b65a3aa2b3f25da31cfe9de8181d4c1a5b0a982d26c8",
+      "segmented": "f94c64a99f5f0e7971a3e0e2f7c932183009938aa5d284bcd23f4657674e6009",
+      "source_crop": "a9a567f3fdc7dd6a04d5e9306091fd005828bea00f6c97a2f22a97d62798179d",
+      "census": "df02f68d9d5f09858fb12b8131160b76897e4df3c8c03dda06fccdf935170068",
+      "phase_x2": [
+        42190,
+        88590
+      ],
+      "support": 697051,
+      "masks": {
+        "band-sync": {
+          "file": "89bbbe72b76c4f5e70449e1f0ffb8b52df4d952a20fa0d96bd2d7cebc7098025",
+          "mask": "6e72a5b7be0ba96ce6774162e89772a113f9d866ff5b577f1721eaf4a20bc291",
+          "additions": 140077,
+          "deletions": 201778,
+          "off_support": 0,
+          "cpu_gpu_differences": 0,
+          "energy": {
+            "raw_mse": 0.0105137581088199,
+            "cut_edges": 885852,
+            "edge_penalty": 0.0005437876005807141,
+            "changed": 341855,
+            "prior_penalty": 0.0012591031698061528,
+            "total": 0.012316648879206768
+          }
+        },
+        "band-color": {
+          "file": "474d1dfb5e0aff0e22831844bb5a7bd4162cda3d1c3c5e3ffbe1b535c71856d4",
+          "mask": "f090381f8702a575922713c5d7fc657a0b9eb9d4948582fa8a1e83f7f75a84c6",
+          "additions": 124853,
+          "deletions": 162408,
+          "off_support": 0,
+          "cpu_gpu_differences": 0,
+          "energy": {
+            "raw_mse": 0.008890209645597082,
+            "cut_edges": 1007654,
+            "edge_penalty": 0.0006185567689360738,
+            "changed": 287261,
+            "prior_penalty": 0.0010580252904350829,
+            "total": 0.010566791704968237
+          }
+        }
+      },
+      "initial_energy": {
+        "raw_mse": 0.015033214184272309,
+        "cut_edges": 720932,
+        "edge_penalty": 0.0004425500901525936,
+        "changed": 0,
+        "prior_penalty": 0.0,
+        "total": 0.015475764274424902
+      },
+      "exact_gain_denominator": 2690367514214400,
+      "per_voxel_gain": 0.004908972569456665,
+      "gain_field_sha256": "7c4fb5bd113b12969eea2a27298c0559333b78939d46d0c66af46b4e5fca2db1",
+      "colors": [
+        {
+          "color": 0,
+          "available": 5781,
+          "changed": 2798,
+          "gain_numerator": 1360629832137217536
+        },
+        {
+          "color": 1,
+          "available": 5857,
+          "changed": 2868,
+          "gain_numerator": 1362001192949134848
+        },
+        {
+          "color": 2,
+          "available": 5704,
+          "changed": 2757,
+          "gain_numerator": 1290821105742636288
+        },
+        {
+          "color": 3,
+          "available": 5670,
+          "changed": 2768,
+          "gain_numerator": 1307003837041695744
+        },
+        {
+          "color": 4,
+          "available": 5728,
+          "changed": 2775,
+          "gain_numerator": 1258701185622977280
+        },
+        {
+          "color": 5,
+          "available": 5758,
+          "changed": 2738,
+          "gain_numerator": 1220868318361435392
+        },
+        {
+          "color": 6,
+          "available": 5849,
+          "changed": 2844,
+          "gain_numerator": 1287756089953698816
+        },
+        {
+          "color": 7,
+          "available": 5745,
+          "changed": 2758,
+          "gain_numerator": 1229318644324599552
+        },
+        {
+          "color": 8,
+          "available": 5719,
+          "changed": 2724,
+          "gain_numerator": 1195220613382594560
+        },
+        {
+          "color": 9,
+          "available": 5747,
+          "changed": 2730,
+          "gain_numerator": 1172096755840888320
+        },
+        {
+          "color": 10,
+          "available": 5713,
+          "changed": 2695,
+          "gain_numerator": 1139524234404331776
+        },
+        {
+          "color": 11,
+          "available": 5746,
+          "changed": 2744,
+          "gain_numerator": 1137412514309961216
+        },
+        {
+          "color": 12,
+          "available": 5564,
+          "changed": 2617,
+          "gain_numerator": 1102879450403541504
+        },
+        {
+          "color": 13,
+          "available": 5604,
+          "changed": 2619,
+          "gain_numerator": 1054898046334801920
+        },
+        {
+          "color": 14,
+          "available": 5607,
+          "changed": 2573,
+          "gain_numerator": 1026087882339148800
+        },
+        {
+          "color": 15,
+          "available": 5651,
+          "changed": 2687,
+          "gain_numerator": 1081262436044034816
+        },
+        {
+          "color": 16,
+          "available": 5735,
+          "changed": 2739,
+          "gain_numerator": 1082760048492164352
+        },
+        {
+          "color": 17,
+          "available": 5574,
+          "changed": 2604,
+          "gain_numerator": 995167902910224384
+        },
+        {
+          "color": 18,
+          "available": 5507,
+          "changed": 2533,
+          "gain_numerator": 984593068345652736
+        },
+        {
+          "color": 19,
+          "available": 5668,
+          "changed": 2589,
+          "gain_numerator": 975585901923457536
+        },
+        {
+          "color": 20,
+          "available": 5774,
+          "changed": 2666,
+          "gain_numerator": 987725568924945408
+        },
+        {
+          "color": 21,
+          "available": 5852,
+          "changed": 2716,
+          "gain_numerator": 988925158266419712
+        },
+        {
+          "color": 22,
+          "available": 5716,
+          "changed": 2640,
+          "gain_numerator": 960338370765242880
+        },
+        {
+          "color": 23,
+          "available": 5630,
+          "changed": 2522,
+          "gain_numerator": 932977598887482624
+        },
+        {
+          "color": 24,
+          "available": 5699,
+          "changed": 2599,
+          "gain_numerator": 898522726474453248
+        },
+        {
+          "color": 25,
+          "available": 5756,
+          "changed": 2769,
+          "gain_numerator": 1011057233020591104
+        },
+        {
+          "color": 26,
+          "available": 5827,
+          "changed": 2741,
+          "gain_numerator": 1010261586192910080
+        },
+        {
+          "color": 27,
+          "available": 5721,
+          "changed": 2682,
+          "gain_numerator": 928530899992607232
+        },
+        {
+          "color": 28,
+          "available": 5685,
+          "changed": 2587,
+          "gain_numerator": 914028093858141696
+        },
+        {
+          "color": 29,
+          "available": 5716,
+          "changed": 2572,
+          "gain_numerator": 840910275198870528
+        },
+        {
+          "color": 30,
+          "available": 5760,
+          "changed": 2679,
+          "gain_numerator": 915155651346583296
+        },
+        {
+          "color": 31,
+          "available": 5890,
+          "changed": 2726,
+          "gain_numerator": 932789201920771584
+        },
+        {
+          "color": 32,
+          "available": 5804,
+          "changed": 2616,
+          "gain_numerator": 870915296487174912
+        },
+        {
+          "color": 33,
+          "available": 5749,
+          "changed": 2571,
+          "gain_numerator": 842020171755056640
+        },
+        {
+          "color": 34,
+          "available": 5770,
+          "changed": 2577,
+          "gain_numerator": 824445000681591552
+        },
+        {
+          "color": 35,
+          "available": 5703,
+          "changed": 2578,
+          "gain_numerator": 813181555699778304
+        },
+        {
+          "color": 36,
+          "available": 5745,
+          "changed": 2603,
+          "gain_numerator": 811824583576915968
+        },
+        {
+          "color": 37,
+          "available": 5638,
+          "changed": 2494,
+          "gain_numerator": 761178617808027648
+        },
+        {
+          "color": 38,
+          "available": 5553,
+          "changed": 2391,
+          "gain_numerator": 714078186724790784
+        },
+        {
+          "color": 39,
+          "available": 5638,
+          "changed": 2493,
+          "gain_numerator": 727467349328352000
+        },
+        {
+          "color": 40,
+          "available": 5610,
+          "changed": 2462,
+          "gain_numerator": 739541198775556608
+        },
+        {
+          "color": 41,
+          "available": 5674,
+          "changed": 2462,
+          "gain_numerator": 717652305406123008
+        },
+        {
+          "color": 42,
+          "available": 5607,
+          "changed": 2453,
+          "gain_numerator": 687125656104881664
+        },
+        {
+          "color": 43,
+          "available": 5601,
+          "changed": 2353,
+          "gain_numerator": 661179862307520768
+        },
+        {
+          "color": 44,
+          "available": 5650,
+          "changed": 2338,
+          "gain_numerator": 647744553225864960
+        },
+        {
+          "color": 45,
+          "available": 5715,
+          "changed": 2428,
+          "gain_numerator": 668414865489171456
+        },
+        {
+          "color": 46,
+          "available": 5758,
+          "changed": 2408,
+          "gain_numerator": 660589837273936896
+        },
+        {
+          "color": 47,
+          "available": 5726,
+          "changed": 2460,
+          "gain_numerator": 656257834732754688
+        },
+        {
+          "color": 48,
+          "available": 5663,
+          "changed": 2289,
+          "gain_numerator": 612782571570253824
+        },
+        {
+          "color": 49,
+          "available": 5686,
+          "changed": 2305,
+          "gain_numerator": 593861311951898880
+        },
+        {
+          "color": 50,
+          "available": 5340,
+          "changed": 2368,
+          "gain_numerator": 779043201149428224
+        },
+        {
+          "color": 51,
+          "available": 5460,
+          "changed": 2470,
+          "gain_numerator": 780219510685704960
+        },
+        {
+          "color": 52,
+          "available": 5401,
+          "changed": 2422,
+          "gain_numerator": 751733681429491968
+        },
+        {
+          "color": 53,
+          "available": 5381,
+          "changed": 2395,
+          "gain_numerator": 718762257552003072
+        },
+        {
+          "color": 54,
+          "available": 5420,
+          "changed": 2343,
+          "gain_numerator": 691303204982382336
+        },
+        {
+          "color": 55,
+          "available": 5491,
+          "changed": 2418,
+          "gain_numerator": 731777502158765568
+        },
+        {
+          "color": 56,
+          "available": 5550,
+          "changed": 2441,
+          "gain_numerator": 726783296935683840
+        },
+        {
+          "color": 57,
+          "available": 5465,
+          "changed": 2422,
+          "gain_numerator": 687919227024764928
+        },
+        {
+          "color": 58,
+          "available": 5449,
+          "changed": 2344,
+          "gain_numerator": 659241827867579904
+        },
+        {
+          "color": 59,
+          "available": 5453,
+          "changed": 2369,
+          "gain_numerator": 637796616107000832
+        },
+        {
+          "color": 60,
+          "available": 5377,
+          "changed": 2326,
+          "gain_numerator": 618484084342656768
+        },
+        {
+          "color": 61,
+          "available": 5387,
+          "changed": 2294,
+          "gain_numerator": 610248683233405440
+        },
+        {
+          "color": 62,
+          "available": 5378,
+          "changed": 2273,
+          "gain_numerator": 586028756067656448
+        },
+        {
+          "color": 63,
+          "available": 5283,
+          "changed": 2219,
+          "gain_numerator": 570594380753329920
+        },
+        {
+          "color": 64,
+          "available": 5327,
+          "changed": 2152,
+          "gain_numerator": 529492986310268160
+        },
+        {
+          "color": 65,
+          "available": 5326,
+          "changed": 2185,
+          "gain_numerator": 547130853801828096
+        },
+        {
+          "color": 66,
+          "available": 5343,
+          "changed": 2148,
+          "gain_numerator": 528890381926897152
+        },
+        {
+          "color": 67,
+          "available": 5357,
+          "changed": 2184,
+          "gain_numerator": 538001306432547840
+        },
+        {
+          "color": 68,
+          "available": 5245,
+          "changed": 2081,
+          "gain_numerator": 510387719702431488
+        },
+        {
+          "color": 69,
+          "available": 5327,
+          "changed": 2085,
+          "gain_numerator": 496308475655738880
+        },
+        {
+          "color": 70,
+          "available": 5422,
+          "changed": 2203,
+          "gain_numerator": 537103628645275392
+        },
+        {
+          "color": 71,
+          "available": 5505,
+          "changed": 2185,
+          "gain_numerator": 526078646742076416
+        },
+        {
+          "color": 72,
+          "available": 5392,
+          "changed": 2104,
+          "gain_numerator": 481536003253377024
+        },
+        {
+          "color": 73,
+          "available": 5390,
+          "changed": 2067,
+          "gain_numerator": 471627864909365760
+        },
+        {
+          "color": 74,
+          "available": 5464,
+          "changed": 2114,
+          "gain_numerator": 478595656456636416
+        },
+        {
+          "color": 75,
+          "available": 5488,
+          "changed": 2293,
+          "gain_numerator": 631392195267653376
+        },
+        {
+          "color": 76,
+          "available": 5521,
+          "changed": 2287,
+          "gain_numerator": 610221818649694464
+        },
+        {
+          "color": 77,
+          "available": 5414,
+          "changed": 2238,
+          "gain_numerator": 566818126185235200
+        },
+        {
+          "color": 78,
+          "available": 5329,
+          "changed": 2132,
+          "gain_numerator": 551077139780354304
+        },
+        {
+          "color": 79,
+          "available": 5439,
+          "changed": 2216,
+          "gain_numerator": 549926158043675904
+        },
+        {
+          "color": 80,
+          "available": 5442,
+          "changed": 2210,
+          "gain_numerator": 556046141437904640
+        },
+        {
+          "color": 81,
+          "available": 5500,
+          "changed": 2174,
+          "gain_numerator": 527124353312429568
+        },
+        {
+          "color": 82,
+          "available": 5432,
+          "changed": 2149,
+          "gain_numerator": 512937541242529536
+        },
+        {
+          "color": 83,
+          "available": 5292,
+          "changed": 2052,
+          "gain_numerator": 481887810272705280
+        },
+        {
+          "color": 84,
+          "available": 5449,
+          "changed": 2163,
+          "gain_numerator": 497880302506201344
+        },
+        {
+          "color": 85,
+          "available": 5337,
+          "changed": 2087,
+          "gain_numerator": 466933043222711040
+        },
+        {
+          "color": 86,
+          "available": 5443,
+          "changed": 2130,
+          "gain_numerator": 482459669683164672
+        },
+        {
+          "color": 87,
+          "available": 5234,
+          "changed": 1983,
+          "gain_numerator": 451910350042096128
+        },
+        {
+          "color": 88,
+          "available": 5236,
+          "changed": 1986,
+          "gain_numerator": 421398845932288512
+        },
+        {
+          "color": 89,
+          "available": 5309,
+          "changed": 2006,
+          "gain_numerator": 424000676829517056
+        },
+        {
+          "color": 90,
+          "available": 5366,
+          "changed": 1998,
+          "gain_numerator": 441131018277445632
+        },
+        {
+          "color": 91,
+          "available": 5399,
+          "changed": 2044,
+          "gain_numerator": 438340934679124992
+        },
+        {
+          "color": 92,
+          "available": 5219,
+          "changed": 1843,
+          "gain_numerator": 389016492533046528
+        },
+        {
+          "color": 93,
+          "available": 5187,
+          "changed": 1838,
+          "gain_numerator": 363277022536227840
+        },
+        {
+          "color": 94,
+          "available": 5297,
+          "changed": 1828,
+          "gain_numerator": 363662455448229120
+        },
+        {
+          "color": 95,
+          "available": 5457,
+          "changed": 2020,
+          "gain_numerator": 440658076244663808
+        },
+        {
+          "color": 96,
+          "available": 5510,
+          "changed": 2034,
+          "gain_numerator": 399173936130885888
+        },
+        {
+          "color": 97,
+          "available": 5396,
+          "changed": 1861,
+          "gain_numerator": 375459096565431552
+        },
+        {
+          "color": 98,
+          "available": 5343,
+          "changed": 1867,
+          "gain_numerator": 344969273778615552
+        },
+        {
+          "color": 99,
+          "available": 5429,
+          "changed": 1868,
+          "gain_numerator": 358251660892433664
+        },
+        {
+          "color": 100,
+          "available": 5796,
+          "changed": 2308,
+          "gain_numerator": 501554451885806592
+        },
+        {
+          "color": 101,
+          "available": 5823,
+          "changed": 2308,
+          "gain_numerator": 481723075964285184
+        },
+        {
+          "color": 102,
+          "available": 5710,
+          "changed": 2184,
+          "gain_numerator": 438062581290585600
+        },
+        {
+          "color": 103,
+          "available": 5635,
+          "changed": 2107,
+          "gain_numerator": 426011342085559296
+        },
+        {
+          "color": 104,
+          "available": 5720,
+          "changed": 2087,
+          "gain_numerator": 420995731906112256
+        },
+        {
+          "color": 105,
+          "available": 5759,
+          "changed": 2206,
+          "gain_numerator": 429185193277416192
+        },
+        {
+          "color": 106,
+          "available": 5841,
+          "changed": 2193,
+          "gain_numerator": 422592889776466176
+        },
+        {
+          "color": 107,
+          "available": 5716,
+          "changed": 2069,
+          "gain_numerator": 379699238112922368
+        },
+        {
+          "color": 108,
+          "available": 5708,
+          "changed": 2033,
+          "gain_numerator": 372873567762930432
+        },
+        {
+          "color": 109,
+          "available": 5783,
+          "changed": 2056,
+          "gain_numerator": 366027713798055936
+        },
+        {
+          "color": 110,
+          "available": 5750,
+          "changed": 2065,
+          "gain_numerator": 383143630516273920
+        },
+        {
+          "color": 111,
+          "available": 5741,
+          "changed": 1955,
+          "gain_numerator": 348738575718676224
+        },
+        {
+          "color": 112,
+          "available": 5543,
+          "changed": 1952,
+          "gain_numerator": 324485239155339264
+        },
+        {
+          "color": 113,
+          "available": 5557,
+          "changed": 1837,
+          "gain_numerator": 304177693370167296
+        },
+        {
+          "color": 114,
+          "available": 5641,
+          "changed": 1783,
+          "gain_numerator": 293291772931468800
+        },
+        {
+          "color": 115,
+          "available": 5706,
+          "changed": 1920,
+          "gain_numerator": 327278624940251904
+        },
+        {
+          "color": 116,
+          "available": 5731,
+          "changed": 1894,
+          "gain_numerator": 313763441273810688
+        },
+        {
+          "color": 117,
+          "available": 5487,
+          "changed": 1733,
+          "gain_numerator": 259597202546821632
+        },
+        {
+          "color": 118,
+          "available": 5447,
+          "changed": 1645,
+          "gain_numerator": 249880265113295616
+        },
+        {
+          "color": 119,
+          "available": 5613,
+          "changed": 1713,
+          "gain_numerator": 263223146383603968
+        },
+        {
+          "color": 120,
+          "available": 5800,
+          "changed": 1918,
+          "gain_numerator": 301193492064220416
+        },
+        {
+          "color": 121,
+          "available": 5838,
+          "changed": 1901,
+          "gain_numerator": 304214875969592832
+        },
+        {
+          "color": 122,
+          "available": 5656,
+          "changed": 1731,
+          "gain_numerator": 260322331589415936
+        },
+        {
+          "color": 123,
+          "available": 5656,
+          "changed": 1710,
+          "gain_numerator": 237060342828118272
+        },
+        {
+          "color": 124,
+          "available": 5750,
+          "changed": 1694,
+          "gain_numerator": 244671476259656448
+        }
+      ]
+    },
+    "5": {
+      "raw": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37",
+      "segmented": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b",
+      "source_crop": "ce0f800b891448271be9fb7fb9a164b2c6f91c9d84cc86fb2e7c81bd05afd9e0",
+      "census": "7bc87d965c8d032f06f39ced69003cf34c1828242082f8c2a678cf7ce45b3d3b",
+      "phase_x2": [
+        62728,
+        105394
+      ],
+      "support": 304127,
+      "masks": {
+        "band-sync": {
+          "file": "07409d7694c95ecae648eea45da024743f098184af0cbf3e5e64db8e55dc87c3",
+          "mask": "d7f792fccf7871ab5e6bf07fcf9b56fb6fd15448ec5cc479f9ed9531effa1c0c",
+          "additions": 64600,
+          "deletions": 83183,
+          "off_support": 0,
+          "cpu_gpu_differences": 0,
+          "energy": {
+            "raw_mse": 0.007030242264109008,
+            "cut_edges": 398807,
+            "edge_penalty": 0.000244810986061772,
+            "changed": 147783,
+            "prior_penalty": 0.0005443069247004217,
+            "total": 0.007819360174871202
+          }
+        },
+        "band-color": {
+          "file": "ed5259cd98951ab8d24b1505ebfd6b3b91a7094bbb981a2fbde6dd54ca7c915b",
+          "mask": "fc23b4b5a8089871eff87266f51520927bf91499b40d5635c23711af21ebdb8a",
+          "additions": 55310,
+          "deletions": 66220,
+          "off_support": 0,
+          "cpu_gpu_differences": 0,
+          "energy": {
+            "raw_mse": 0.006243902382309069,
+            "cut_edges": 451889,
+            "edge_penalty": 0.0002773958122110898,
+            "changed": 121530,
+            "prior_penalty": 0.0004476131933905947,
+            "total": 0.006968911387910753
+          }
+        }
+      },
+      "initial_energy": {
+        "raw_mse": 0.00870074554252243,
+        "cut_edges": 319115,
+        "edge_penalty": 0.00019589139061526595,
+        "changed": 0,
+        "prior_penalty": 0.0,
+        "total": 0.008896636933137697
+      },
+      "exact_gain_denominator": 2473862507790336,
+      "per_voxel_gain": 0.001927725545226942,
+      "gain_field_sha256": "f0b96a0ad56b9eda3d85499968738b3a031529ddbdfd4ef731126778b2e009f4",
+      "colors": [
+        {
+          "color": 0,
+          "available": 2563,
+          "changed": 1178,
+          "gain_numerator": 506845860674524056
+        },
+        {
+          "color": 1,
+          "available": 2535,
+          "changed": 1223,
+          "gain_numerator": 505192095359210160
+        },
+        {
+          "color": 2,
+          "available": 2462,
+          "changed": 1175,
+          "gain_numerator": 480609113964704424
+        },
+        {
+          "color": 3,
+          "available": 2470,
+          "changed": 1219,
+          "gain_numerator": 472332767477916744
+        },
+        {
+          "color": 4,
+          "available": 2476,
+          "changed": 1178,
+          "gain_numerator": 472718242415655792
+        },
+        {
+          "color": 5,
+          "available": 2532,
+          "changed": 1202,
+          "gain_numerator": 465286347179818272
+        },
+        {
+          "color": 6,
+          "available": 2518,
+          "changed": 1222,
+          "gain_numerator": 505615792494977496
+        },
+        {
+          "color": 7,
+          "available": 2417,
+          "changed": 1149,
+          "gain_numerator": 454360028449165488
+        },
+        {
+          "color": 8,
+          "available": 2432,
+          "changed": 1162,
+          "gain_numerator": 434632859167122000
+        },
+        {
+          "color": 9,
+          "available": 2537,
+          "changed": 1215,
+          "gain_numerator": 427615808686620192
+        },
+        {
+          "color": 10,
+          "available": 2378,
+          "changed": 1143,
+          "gain_numerator": 423569672285778432
+        },
+        {
+          "color": 11,
+          "available": 2382,
+          "changed": 1146,
+          "gain_numerator": 421395170542166232
+        },
+        {
+          "color": 12,
+          "available": 2344,
+          "changed": 1101,
+          "gain_numerator": 404532083429664552
+        },
+        {
+          "color": 13,
+          "available": 2408,
+          "changed": 1147,
+          "gain_numerator": 413078634836491176
+        },
+        {
+          "color": 14,
+          "available": 2446,
+          "changed": 1184,
+          "gain_numerator": 409497255767707848
+        },
+        {
+          "color": 15,
+          "available": 2350,
+          "changed": 1063,
+          "gain_numerator": 348279933820283712
+        },
+        {
+          "color": 16,
+          "available": 2447,
+          "changed": 1110,
+          "gain_numerator": 377842991299226640
+        },
+        {
+          "color": 17,
+          "available": 2441,
+          "changed": 1120,
+          "gain_numerator": 359658836995296888
+        },
+        {
+          "color": 18,
+          "available": 2396,
+          "changed": 1088,
+          "gain_numerator": 352760639610731112
+        },
+        {
+          "color": 19,
+          "available": 2438,
+          "changed": 1120,
+          "gain_numerator": 378238713103243872
+        },
+        {
+          "color": 20,
+          "available": 2515,
+          "changed": 1133,
+          "gain_numerator": 374382628503396696
+        },
+        {
+          "color": 21,
+          "available": 2618,
+          "changed": 1168,
+          "gain_numerator": 386756649542129040
+        },
+        {
+          "color": 22,
+          "available": 2512,
+          "changed": 1111,
+          "gain_numerator": 354342611590390584
+        },
+        {
+          "color": 23,
+          "available": 2479,
+          "changed": 1105,
+          "gain_numerator": 336770184761317440
+        },
+        {
+          "color": 24,
+          "available": 2456,
+          "changed": 1052,
+          "gain_numerator": 318461631179651064
+        },
+        {
+          "color": 25,
+          "available": 2499,
+          "changed": 1138,
+          "gain_numerator": 352805430146211936
+        },
+        {
+          "color": 26,
+          "available": 2530,
+          "changed": 1148,
+          "gain_numerator": 344936652636681000
+        },
+        {
+          "color": 27,
+          "available": 2433,
+          "changed": 1094,
+          "gain_numerator": 313567838320762368
+        },
+        {
+          "color": 28,
+          "available": 2454,
+          "changed": 1093,
+          "gain_numerator": 322344191409806160
+        },
+        {
+          "color": 29,
+          "available": 2482,
+          "changed": 1080,
+          "gain_numerator": 308241050397099408
+        },
+        {
+          "color": 30,
+          "available": 2502,
+          "changed": 1095,
+          "gain_numerator": 327453478484032656
+        },
+        {
+          "color": 31,
+          "available": 2480,
+          "changed": 1157,
+          "gain_numerator": 333704739355351560
+        },
+        {
+          "color": 32,
+          "available": 2464,
+          "changed": 1080,
+          "gain_numerator": 313308802245382056
+        },
+        {
+          "color": 33,
+          "available": 2470,
+          "changed": 1047,
+          "gain_numerator": 299773158537883032
+        },
+        {
+          "color": 34,
+          "available": 2486,
+          "changed": 1098,
+          "gain_numerator": 291663622150158960
+        },
+        {
+          "color": 35,
+          "available": 2440,
+          "changed": 1070,
+          "gain_numerator": 291950179231606488
+        },
+        {
+          "color": 36,
+          "available": 2425,
+          "changed": 1055,
+          "gain_numerator": 283956773786106768
+        },
+        {
+          "color": 37,
+          "available": 2411,
+          "changed": 1060,
+          "gain_numerator": 298002602354110632
+        },
+        {
+          "color": 38,
+          "available": 2410,
+          "changed": 1033,
+          "gain_numerator": 274411997112420720
+        },
+        {
+          "color": 39,
+          "available": 2422,
+          "changed": 1052,
+          "gain_numerator": 261429852264564312
+        },
+        {
+          "color": 40,
+          "available": 2402,
+          "changed": 1012,
+          "gain_numerator": 250071616144138104
+        },
+        {
+          "color": 41,
+          "available": 2459,
+          "changed": 1054,
+          "gain_numerator": 267816362088327336
+        },
+        {
+          "color": 42,
+          "available": 2427,
+          "changed": 1085,
+          "gain_numerator": 258060320994548232
+        },
+        {
+          "color": 43,
+          "available": 2457,
+          "changed": 1039,
+          "gain_numerator": 249115128300654120
+        },
+        {
+          "color": 44,
+          "available": 2420,
+          "changed": 992,
+          "gain_numerator": 225837910355427000
+        },
+        {
+          "color": 45,
+          "available": 2496,
+          "changed": 1050,
+          "gain_numerator": 246630310564623408
+        },
+        {
+          "color": 46,
+          "available": 2548,
+          "changed": 1045,
+          "gain_numerator": 259989679672626456
+        },
+        {
+          "color": 47,
+          "available": 2483,
+          "changed": 1059,
+          "gain_numerator": 237162996641705616
+        },
+        {
+          "color": 48,
+          "available": 2518,
+          "changed": 1038,
+          "gain_numerator": 231973761054980520
+        },
+        {
+          "color": 49,
+          "available": 2474,
+          "changed": 1000,
+          "gain_numerator": 225089269437613248
+        },
+        {
+          "color": 50,
+          "available": 2397,
+          "changed": 1074,
+          "gain_numerator": 298454631001029432
+        },
+        {
+          "color": 51,
+          "available": 2414,
+          "changed": 1038,
+          "gain_numerator": 269220032956827504
+        },
+        {
+          "color": 52,
+          "available": 2306,
+          "changed": 999,
+          "gain_numerator": 247580771642374248
+        },
+        {
+          "color": 53,
+          "available": 2305,
+          "changed": 944,
+          "gain_numerator": 238128324707550240
+        },
+        {
+          "color": 54,
+          "available": 2388,
+          "changed": 1001,
+          "gain_numerator": 230537735280474480
+        },
+        {
+          "color": 55,
+          "available": 2417,
+          "changed": 1036,
+          "gain_numerator": 257774640593611392
+        },
+        {
+          "color": 56,
+          "available": 2393,
+          "changed": 1017,
+          "gain_numerator": 243130612459191552
+        },
+        {
+          "color": 57,
+          "available": 2324,
+          "changed": 988,
+          "gain_numerator": 234144361957269312
+        },
+        {
+          "color": 58,
+          "available": 2371,
+          "changed": 976,
+          "gain_numerator": 224923936852458288
+        },
+        {
+          "color": 59,
+          "available": 2381,
+          "changed": 1002,
+          "gain_numerator": 233196557756851584
+        },
+        {
+          "color": 60,
+          "available": 2370,
+          "changed": 979,
+          "gain_numerator": 218539393549106328
+        },
+        {
+          "color": 61,
+          "available": 2368,
+          "changed": 964,
+          "gain_numerator": 222387930080445672
+        },
+        {
+          "color": 62,
+          "available": 2324,
+          "changed": 933,
+          "gain_numerator": 206473807334288160
+        },
+        {
+          "color": 63,
+          "available": 2316,
+          "changed": 902,
+          "gain_numerator": 200345559925801464
+        },
+        {
+          "color": 64,
+          "available": 2330,
+          "changed": 887,
+          "gain_numerator": 189004582361488608
+        },
+        {
+          "color": 65,
+          "available": 2358,
+          "changed": 899,
+          "gain_numerator": 183547524347095392
+        },
+        {
+          "color": 66,
+          "available": 2385,
+          "changed": 967,
+          "gain_numerator": 194269896171452952
+        },
+        {
+          "color": 67,
+          "available": 2363,
+          "changed": 966,
+          "gain_numerator": 211212335403075744
+        },
+        {
+          "color": 68,
+          "available": 2313,
+          "changed": 846,
+          "gain_numerator": 184143643524623664
+        },
+        {
+          "color": 69,
+          "available": 2284,
+          "changed": 842,
+          "gain_numerator": 167086225212601752
+        },
+        {
+          "color": 70,
+          "available": 2393,
+          "changed": 928,
+          "gain_numerator": 198688682706294528
+        },
+        {
+          "color": 71,
+          "available": 2437,
+          "changed": 897,
+          "gain_numerator": 182277344607268320
+        },
+        {
+          "color": 72,
+          "available": 2376,
+          "changed": 924,
+          "gain_numerator": 179667824239200600
+        },
+        {
+          "color": 73,
+          "available": 2388,
+          "changed": 880,
+          "gain_numerator": 156283566732942624
+        },
+        {
+          "color": 74,
+          "available": 2361,
+          "changed": 870,
+          "gain_numerator": 160940792982069360
+        },
+        {
+          "color": 75,
+          "available": 2374,
+          "changed": 989,
+          "gain_numerator": 227312974511298720
+        },
+        {
+          "color": 76,
+          "available": 2446,
+          "changed": 1014,
+          "gain_numerator": 222375174571559736
+        },
+        {
+          "color": 77,
+          "available": 2376,
+          "changed": 910,
+          "gain_numerator": 200537538954739344
+        },
+        {
+          "color": 78,
+          "available": 2346,
+          "changed": 902,
+          "gain_numerator": 183563027307651672
+        },
+        {
+          "color": 79,
+          "available": 2384,
+          "changed": 942,
+          "gain_numerator": 186920335258794648
+        },
+        {
+          "color": 80,
+          "available": 2395,
+          "changed": 946,
+          "gain_numerator": 193045147681617432
+        },
+        {
+          "color": 81,
+          "available": 2492,
+          "changed": 1008,
+          "gain_numerator": 212844581688811968
+        },
+        {
+          "color": 82,
+          "available": 2408,
+          "changed": 925,
+          "gain_numerator": 174918972708074160
+        },
+        {
+          "color": 83,
+          "available": 2358,
+          "changed": 875,
+          "gain_numerator": 164003267310745320
+        },
+        {
+          "color": 84,
+          "available": 2408,
+          "changed": 873,
+          "gain_numerator": 157729038818688648
+        },
+        {
+          "color": 85,
+          "available": 2407,
+          "changed": 910,
+          "gain_numerator": 164329591499655624
+        },
+        {
+          "color": 86,
+          "available": 2378,
+          "changed": 904,
+          "gain_numerator": 171932333125672440
+        },
+        {
+          "color": 87,
+          "available": 2323,
+          "changed": 863,
+          "gain_numerator": 150252156995049648
+        },
+        {
+          "color": 88,
+          "available": 2318,
+          "changed": 821,
+          "gain_numerator": 145796407286980320
+        },
+        {
+          "color": 89,
+          "available": 2361,
+          "changed": 846,
+          "gain_numerator": 142777375747338168
+        },
+        {
+          "color": 90,
+          "available": 2375,
+          "changed": 826,
+          "gain_numerator": 142312412464007976
+        },
+        {
+          "color": 91,
+          "available": 2401,
+          "changed": 801,
+          "gain_numerator": 136740056456098728
+        },
+        {
+          "color": 92,
+          "available": 2339,
+          "changed": 812,
+          "gain_numerator": 145203512246193816
+        },
+        {
+          "color": 93,
+          "available": 2351,
+          "changed": 796,
+          "gain_numerator": 141327871485495408
+        },
+        {
+          "color": 94,
+          "available": 2360,
+          "changed": 782,
+          "gain_numerator": 115129615155329016
+        },
+        {
+          "color": 95,
+          "available": 2414,
+          "changed": 853,
+          "gain_numerator": 147698867217061368
+        },
+        {
+          "color": 96,
+          "available": 2454,
+          "changed": 879,
+          "gain_numerator": 159705337416392664
+        },
+        {
+          "color": 97,
+          "available": 2392,
+          "changed": 787,
+          "gain_numerator": 125440586123568048
+        },
+        {
+          "color": 98,
+          "available": 2413,
+          "changed": 812,
+          "gain_numerator": 125901415763030880
+        },
+        {
+          "color": 99,
+          "available": 2429,
+          "changed": 770,
+          "gain_numerator": 117151728042824280
+        },
+        {
+          "color": 100,
+          "available": 2555,
+          "changed": 979,
+          "gain_numerator": 193198229247675816
+        },
+        {
+          "color": 101,
+          "available": 2577,
+          "changed": 980,
+          "gain_numerator": 191971971316995552
+        },
+        {
+          "color": 102,
+          "available": 2511,
+          "changed": 918,
+          "gain_numerator": 157445664838237800
+        },
+        {
+          "color": 103,
+          "available": 2459,
+          "changed": 860,
+          "gain_numerator": 144665439920133408
+        },
+        {
+          "color": 104,
+          "available": 2482,
+          "changed": 845,
+          "gain_numerator": 136898933583744576
+        },
+        {
+          "color": 105,
+          "available": 2481,
+          "changed": 902,
+          "gain_numerator": 156454976911737744
+        },
+        {
+          "color": 106,
+          "available": 2539,
+          "changed": 905,
+          "gain_numerator": 155030858335363176
+        },
+        {
+          "color": 107,
+          "available": 2429,
+          "changed": 858,
+          "gain_numerator": 134374924688376528
+        },
+        {
+          "color": 108,
+          "available": 2457,
+          "changed": 786,
+          "gain_numerator": 121884415987486968
+        },
+        {
+          "color": 109,
+          "available": 2499,
+          "changed": 855,
+          "gain_numerator": 132614727022063152
+        },
+        {
+          "color": 110,
+          "available": 2440,
+          "changed": 828,
+          "gain_numerator": 131933849625018936
+        },
+        {
+          "color": 111,
+          "available": 2456,
+          "changed": 855,
+          "gain_numerator": 139435756387101936
+        },
+        {
+          "color": 112,
+          "available": 2398,
+          "changed": 774,
+          "gain_numerator": 120194077275297936
+        },
+        {
+          "color": 113,
+          "available": 2382,
+          "changed": 754,
+          "gain_numerator": 108625108134326184
+        },
+        {
+          "color": 114,
+          "available": 2489,
+          "changed": 806,
+          "gain_numerator": 111332010142024920
+        },
+        {
+          "color": 115,
+          "available": 2471,
+          "changed": 790,
+          "gain_numerator": 113567565288312216
+        },
+        {
+          "color": 116,
+          "available": 2492,
+          "changed": 798,
+          "gain_numerator": 116495203696735248
+        },
+        {
+          "color": 117,
+          "available": 2441,
+          "changed": 751,
+          "gain_numerator": 98473556068267104
+        },
+        {
+          "color": 118,
+          "available": 2450,
+          "changed": 750,
+          "gain_numerator": 92263092775669368
+        },
+        {
+          "color": 119,
+          "available": 2479,
+          "changed": 728,
+          "gain_numerator": 96291927165945456
+        },
+        {
+          "color": 120,
+          "available": 2540,
+          "changed": 812,
+          "gain_numerator": 104737122420860736
+        },
+        {
+          "color": 121,
+          "available": 2598,
+          "changed": 822,
+          "gain_numerator": 116557046160347880
+        },
+        {
+          "color": 122,
+          "available": 2552,
+          "changed": 765,
+          "gain_numerator": 100964786487956568
+        },
+        {
+          "color": 123,
+          "available": 2488,
+          "changed": 691,
+          "gain_numerator": 90336847583890296
+        },
+        {
+          "color": 124,
+          "available": 2554,
+          "changed": 725,
+          "gain_numerator": 96767966845155240
+        }
+      ]
+    }
+  }
+}
