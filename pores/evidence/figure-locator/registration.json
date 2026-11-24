@@ -1,0 +1,35 @@
+{
+  "specimen": 2,
+  "z": 447,
+  "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+  "locator_sha256": "a54c2cc898c3849bf37cf4aa7326c383bd1554bce71e033396e37f1b9445ab2d",
+  "panels": {
+    "raw": "04152c66b85068bcc000bd62ce350536c6bf8baad782dee05e0023dcf338d1fa",
+    "median": "47a6e0c6b94bd1dd12da454a047afc3b771debd6a75752566f6a3a75b942eb68"
+  },
+  "coarse_left_ncc": 0.8657692243840847,
+  "fit_left_ncc": 0.8897687821811614,
+  "source_xy0_scale": [
+    605.3012785198721,
+    373.8604818759794,
+    0.44646485032460614
+  ],
+  "intensity_slope": 0.004134446924309755,
+  "intensity_intercept": 7.688316914771982,
+  "test_right_raw": {
+    "ncc": 0.9872435542954792,
+    "rmse_display": 3.606931846693014,
+    "p95_p5_display": 81.0,
+    "nrmse": 0.04453002279867918,
+    "pixels": 67424
+  },
+  "test_right_median": {
+    "ncc": 0.9871405194402476,
+    "rmse_display": 3.498115611228382,
+    "p95_p5_display": 76.0,
+    "nrmse": 0.04602783698984713,
+    "pixels": 67424,
+    "nrmse_using_raw_panel_span": 0.043186612484301015
+  },
+  "advance": true
+}
