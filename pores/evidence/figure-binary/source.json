@@ -1,0 +1,42 @@
+{
+  "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+  "segmented": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+  "registration": "5b8d91500baf45a1ae5742940f580a1319645aeb1419919bc84668998c3bcc92",
+  "gray_prediction": "49dfae58d8015a8551d274c469c81e7dc4a895006c5ac0d92eda44a877ff2a6c",
+  "field_sha256": "127e9efb3036c5963c64ebf3ec95f6702305ed6f0cfcbd54a77c95826c5a2c9a",
+  "raw_support": [
+    631,
+    385,
+    821,
+    588
+  ],
+  "bounds": {
+    "fit": [
+      656,
+      410,
+      702,
+      563
+    ],
+    "check": [
+      709,
+      410,
+      797,
+      563
+    ]
+  },
+  "z": 447,
+  "xy0_scale": [
+    605.3012785198721,
+    373.8604818759794,
+    0.44646485032460614
+  ],
+  "file": "1506bd41bfb162efe45a5ea12f8e12812a6d7a99cd58c226d4482265ba4b4c97",
+  "arrays": {
+    "fit_xyuv": "3783b7d8642cb4e8f6824a2cd931f26d74becaa6fea5f7635e156fb7fe14c7a9",
+    "fit_fixed": "a7368ad62c6d015b429b5530fecc10291066b089b480669e27d107732868daff",
+    "fit_archive": "da3ab9b2b6ca103c2419b5a7f0ca492d634f70204df5e9811d3692da6d655007",
+    "check_xyuv": "c000eb18d671b0047cc5085cf2904ea38abb880ba5d036491416ffb5cc229908",
+    "check_fixed": "07324e7d7d102b23006778a5e2df14d7ee2793f7caffb4b807331d5ba270106b",
+    "check_archive": "9abd95023580eadd73afdc524f6b9b1c4458f4a246a4a02d9292c6dc2fa00e11"
+  }
+}
