@@ -1,0 +1,36 @@
+{
+  "specimen": 5,
+  "reference_id": 15,
+  "reference_voxels": 452,
+  "segmented": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b",
+  "arms": {
+    "control": [
+      {
+        "scipy_label": 15,
+        "voxels": 416,
+        "unclipped": true,
+        "intersection": 405,
+        "union": 463,
+        "iou": 0.8747300215982722
+      },
+      {
+        "scipy_label": 9,
+        "voxels": 1444,
+        "unclipped": false,
+        "intersection": 2,
+        "union": 1894,
+        "iou": 0.0010559662090813093
+      }
+    ],
+    "area": [
+      {
+        "scipy_label": 9,
+        "voxels": 1928,
+        "unclipped": false,
+        "intersection": 415,
+        "union": 1965,
+        "iou": 0.21119592875318066
+      }
+    ]
+  }
+}
