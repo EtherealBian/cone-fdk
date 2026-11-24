@@ -1,0 +1,40 @@
+{
+  "pipeline_id": "f8cb8b39c4cad655c122f224bcacee75ed20b0bd1076a8e40e6b6a5395a1c219",
+  "arms": [
+    "profile",
+    "curvature"
+  ],
+  "byte_identical_tables": {
+    "sample2-curvature-matches.csv": "d8b924016b548e03c53d0428eab957061a23b51f4b8fa4eeb563f7785159ca4c",
+    "sample2-curvature-pores.csv": "bef49ee49bb55328561be9b4d94408055f23e84252b6a4cc4369e26dd042171d",
+    "sample2-profile-matches.csv": "3aafae0f236f8e1ac9a6e0674ae9840f62c8bdb7d7327b549d897cec5022ca90",
+    "sample2-profile-pores.csv": "29fbedfeb3ac0d3b8da8f4855e24a0cd9a694b4e2315094574baae333245b582",
+    "sample3-curvature-matches.csv": "bb1842df56476d9dfb5381e1c5b6d193f18d19a698910669afc7ca17a147bf3a",
+    "sample3-curvature-pores.csv": "0287760b95f1dfd0de6ff8f8da2bd915a9fbd8089dfe9b38c985bd749c3cdcc5",
+    "sample3-profile-matches.csv": "a998f88ac730684fd29c4f59703b3de4fa1f69c986907e141a16c76d3381a6fb",
+    "sample3-profile-pores.csv": "2e3fa4c772b091115769da02ab49bb725424e237bd9a52a7b1eb64c6892e0cf2",
+    "sample5-curvature-matches.csv": "740025d50bd7864b1956b44f097dfe5cb246f00bc90749df4fcd88d5ddd5e8a6",
+    "sample5-curvature-pores.csv": "59d19c470256e97be627f408f1b247306b21ac0a81b9d6d729cd4306a4a55a8f",
+    "sample5-profile-matches.csv": "3d4665a50bc52ece7dc91d1437b235e3cfe1e339bbb60eccf7613c5f16c03327",
+    "sample5-profile-pores.csv": "3cd2c31be3ebe84b3c5f5b4fd2dc9d833a0e694f9e16bf1ef95d18b226dbc3f8"
+  },
+  "semantic_json_sha256": {
+    "sample2.json": "fc15b540bf62ff0498a0915457ef062f401d1b372aeaa416e7dfd253fe38d58f",
+    "sample3.json": "b2d203130ea5a5c1ae04bc4701255a0329fdd580b2508a2db2fdbf41fb73fb2b",
+    "sample5.json": "7c67718417d830f1921474340bb2a30ae11760dedb3039d6a2c90fd15d9b17fa",
+    "summary.json": "1b6263bc307ece2fff0913cc2f00f4cabf5a1c370064e148e76a8e66c18bb991"
+  },
+  "excluded_only": "arms.*.native.elapsed_s",
+  "raw_retrain_repredict_identical": {
+    "curvature.npz": "710c2136251a17b5b11025df0341f1ed6833deccb21e3fe014bed9ebe7818860",
+    "fit.json": "b77b90693d0818bf89a99d8a147d1e7f65189ecd276180652b5aae02c21875df",
+    "predictions.json": "5636131d62f4d0d1d44bdc1d6b49646e087bb7b8d1f1ca520d0bfb93b2b45517",
+    "profile.npz": "2a72a2f1d9f713764797325928e7fb223cdc8abc0776199f35ef984e671c30dd",
+    "sample2-curvature.npz": "6708975d2906fd5fd359810fd837c8c911c23a402048366b0269792bdb88f56d",
+    "sample2-profile.npz": "567f518db05caac52a0c85ee0fcc66709e817a13ff022398272f0e147bd2cfb9",
+    "sample3-curvature.npz": "d388865ab0609328d506c7b50c39cc40bf0f9eab9d5b24900b9171dcd8e2dd57",
+    "sample3-profile.npz": "6e9da08354d4ad529d1055dd9a9abd4178696c80411cc32d44aac49d82755bde",
+    "sample5-curvature.npz": "2daa2ac6eaa941725f418775ffa76f33786d3ed8119bd852c40128ac5a063320",
+    "sample5-profile.npz": "9a215289d82ca3eb51ee05444a8791b4c5c981ee025da848fd02bf70ef8ef75f"
+  }
+}

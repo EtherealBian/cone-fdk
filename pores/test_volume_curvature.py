@@ -37,3 +37,36 @@ def test_curvature_chords_invariance_and_registered_order(kind):
 def test_curvature_rejects_unregistered_before_source_reads(i, a, b):
     with pytest.raises(ValueError, match="Unregistered"):
         field(None, i, a, b)
+
+
+@pytest.mark.parametrize("i,gain", [(2, 87), (3, 139), (5, 15)])
+def test_curvature_sealed_masks_and_paired_native_evidence(i, gain):
+    from pore_axial_raw import digest, sha
+    from pore_axial_score import read_mask
+    from pore_region import read
+    from pore_volume_curvature import BASE, E
+    from test_region_evidence import native_rows
+
+    replay = read(E / "replay.json")
+    for k, n in (("raw_retrain_repredict_identical", 10), ("byte_identical_tables", 12)):
+        assert len(replay[k]) == n and all(sha(E / f) == h for f, h in replay[k].items())
+    src = read(E / "predictions.json")["specimens"][str(i)]
+    parent = read(BASE / "predictions.json")["specimens"][str(i)]
+    assert all(src[k] == parent[k] for k in ("raw", "segmented", "features_f32"))
+    assert src["integer_features_checked"] == 94371840
+    d = read(E / f"sample{i}.json")
+    hits = {}
+    for k, a in d["arms"].items():
+        m = src["masks"][k]
+        assert m["cpu_gpu_differences"] == m["max_score_difference"] == 0
+        assert digest(read_mask(E, i, k, m)) == a["mask_u8_sha256"]
+        hits[k] = set(native_rows(E, i, k, a))
+    assert hits["curvature"] == hits["profile"] | {gain} and gain not in hits["profile"]
+    o = d["arms"]["curvature"]["objects"]
+    assert min(o["matched_fraction_prediction"], o["matched_fraction_reference"]) >= 0.9
+    assert (
+        o["p95_abs_volume_error_pct"]
+        > d["arms"]["profile"]["objects"]["p95_abs_volume_error_pct"]
+    )
+    c = d["comparisons"]["profile"]
+    assert c["shared_p95"][1] > c["shared_p95"][0] and not c["advance"]

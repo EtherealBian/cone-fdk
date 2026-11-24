@@ -37,4 +37,8 @@ try {
     if($LASTEXITCODE){throw 'Inverse patch weight compilation failed'}
     & $Python scripts/ptx.py pores/byte_window.cu build/pores/byte-window.ptx
     if($LASTEXITCODE){throw 'Byte-window lookup compilation failed'}
+    & $Python scripts/ptx.py pores/local_profile.cu build/pores/local-profile.ptx
+    if($LASTEXITCODE){throw 'Local profile tree compilation failed'}
+    & $Python scripts/ptx.py pores/volume_curvature.cu build/pores/volume-curvature.ptx
+    if($LASTEXITCODE){throw 'Volume curvature compilation failed'}
 } finally {$env:Path=$old;Pop-Location}
