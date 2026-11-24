@@ -41,4 +41,6 @@ try {
     if($LASTEXITCODE){throw 'Local profile tree compilation failed'}
     & $Python scripts/ptx.py pores/volume_curvature.cu build/pores/volume-curvature.ptx
     if($LASTEXITCODE){throw 'Volume curvature compilation failed'}
+    & $Python scripts/ptx.py pores/shell_volume.cu build/pores/shell-volume.ptx
+    if($LASTEXITCODE){throw 'Shell volume compilation failed'}
 } finally {$env:Path=$old;Pop-Location}

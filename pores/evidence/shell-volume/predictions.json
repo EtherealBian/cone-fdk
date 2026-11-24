@@ -1,0 +1,119 @@
+{
+  "identity": {
+    "files": {
+      "pores/SHELL-VOLUME-PILOT.md": "133873a9fdb400bc027712a5aadbdf30bebe53ad705cf76b74f805f943f738c2",
+      "pores/shell_volume.cu": "1f2c9309046c31940b1cbb2bde49a211b3d8602512382ec1d244a5cae3672ac6",
+      "scripts/pore_shell_gpu.py": "52f5a5252e9c2c78fe366da59abc01a24870235877b2832a6831247f8a59f703",
+      "scripts/pore_shell_volume.py": "8120067213c5909a6d74d648a936330eb08dcb3fecfd47bd22883dcf4a96070c",
+      "scripts/pore_shell_volume_score.py": "b5312d659f0ef4f5ea4f1eb996b78faee1c26dc138c3062cea70481fa4d2ed80",
+      "scripts/pore_transfer.py": "f4092f168839be8b363dd48db5eaf62acf16ed9920f8e5e2c2e1d35f678b73ca",
+      "scripts/pore_axial_score.py": "cf22dc9c4da0ca48bc0468c5fce7f93f21f587aeb83151c9f0c43da9df3c3e16",
+      "scripts/pore_monotone_score.py": "2d54df3b70783c4b8200bbc46c74b257fae34f62996689f5a36c064ee769f071",
+      "scripts/pore_object_catalog.py": "a12b04a36870d43f8755c4bc3425a79ae3c1b2e43faba6b071b7c63a9f862652",
+      "scripts/pore_section_score.py": "03ae9566275642b5266f57f6840b3d75593f937a183ef8539a285547d6421918",
+      "scripts/pore_compare_score_runs.py": "7e0c0f925b40812e11287fa6bdba6bdb6bf1dae49be739b20ae0ce462e14ee9c",
+      "pores/validate.py": "2c81e4f6731d3fe852edcbb693af30e401d3cdcaddb179c2744443c211afa3c9",
+      "pores/pore_check.py": "7046a18f709484d5074b3338bcf7f8449db42c4d3f39a8fdb1a39a1d59b6932b"
+    },
+    "panel": [
+      [
+        "volume-curvature",
+        "curvature"
+      ],
+      [
+        "volume-curvature",
+        "profile"
+      ],
+      [
+        "census-train",
+        "census"
+      ],
+      [
+        "byte-window",
+        "source"
+      ],
+      [
+        "axial-raw",
+        "axial"
+      ]
+    ],
+    "parents": {
+      "volume-curvature": "5636131d62f4d0d1d44bdc1d6b49646e087bb7b8d1f1ca520d0bfb93b2b45517",
+      "census-train": "d7467efcb92ffe1737983e8aa37544bfa72f88a1924f5a9c25617a2a18ee5e96",
+      "byte-window": "1733f488b356bd62686a9b2583316f58eb7d16ecb925fe4088bb2d64e7398a32",
+      "axial-raw": "52e69b38e67424a1d405ec6a536f3727a866ad51a246bd0c21828531c115cf37"
+    },
+    "compiled": {
+      "shell-volume.ptx": "024ce0f416607649e4698e4151a68eec81d2769c440dda619ec3f02a8cfde048",
+      "pores.ptx": "0d900a9bcdbaff294f4853cb3991b47b6db6f3795e70be8c14ea849cd5bd63b3",
+      "cone-pores.exe": "afb2edcdc1e969df968f722192aa2af3c9959abf1dbd338af5e27479f1196b06"
+    }
+  },
+  "pipeline_id": "49dd5525b6d7201cb068b9410a327b40333ba8fe36f67d100907365332f88b1c",
+  "origin_xyz": [
+    360,
+    376,
+    256
+  ],
+  "shape_zyx": [
+    96,
+    256,
+    256
+  ],
+  "specimens": {
+    "2": {
+      "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+      "segmented": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+      "parents": [
+        "c460d338d85b194af895f9e6b7ea509bce40b1c822157c6216bf72cee9e1fe0c",
+        "eb25e283983f4499ace1fcc5f06035bb7278d8d48f7019847875677339721cc9",
+        "e8929221eb9a199e126b897a9c1d1fac9201898e12e507b0018e12fcbdca33d5",
+        "9dde9e60ec69253b5f78d673b52caeaed1ada9477a6c6c288f087c190af7e9f6",
+        "14501d3bbee9cfc7dbe489af0f9b2aaa78c7898a3f28ede8eeb3236d26ebae86"
+      ],
+      "ledger": "ecc525ddd06967b5b6f8d342ca14e6356d9add79cd3ce6e536b2c793d09c06bb",
+      "masks": {
+        "shell": {
+          "file": "13fd9a3dba3adb3a657fdc2fb0608bce0d7ab1ae398e235620f78cc5bd34dad8",
+          "mask": "cc1e848426879f268783739f9ecc664e9bd3a261c824ac2d608b83d4d2efbee8"
+        }
+      }
+    },
+    "3": {
+      "raw": "460ea68425d9ac387485b65a3aa2b3f25da31cfe9de8181d4c1a5b0a982d26c8",
+      "segmented": "f94c64a99f5f0e7971a3e0e2f7c932183009938aa5d284bcd23f4657674e6009",
+      "parents": [
+        "03e002c4b6819e64e7aceb44053ddd396080cdb31dc2bf84dbb58f7e9d03f0a5",
+        "c0624736f61a81070ea2c0270945a0011657ee7ff0365a541da551cc730ce336",
+        "df02f68d9d5f09858fb12b8131160b76897e4df3c8c03dda06fccdf935170068",
+        "42b71941dceb7ab06183d3249bb2186d5b4f9d28586d58c1d4d728bb1f6dc0d0",
+        "107705d59bcdc994c411581b675ea835235ee6754f9be83fa9dbc07005f22143"
+      ],
+      "ledger": "fce197479548f482cc37d883969fcb1068ff5876e175a6e6afce2ffd836e8709",
+      "masks": {
+        "shell": {
+          "file": "8e9b2c489bc15856cd1a39379f606ea7b331792e7a59743c130a3045eab4688d",
+          "mask": "dfc07f4c41698463eb5ce953469ac1abcd43547d9a85087d2fd2c9b416890d3c"
+        }
+      }
+    },
+    "5": {
+      "raw": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37",
+      "segmented": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b",
+      "parents": [
+        "dc05a527dc18b64daf4ac32ef7b0d7a3e7cdc7f9516a68f46c150f0fd4c9ae3d",
+        "e49b6326d12b4bc8c2cf4b2af778ae845fd9de902d011ec1393d734d048596e6",
+        "7bc87d965c8d032f06f39ced69003cf34c1828242082f8c2a678cf7ce45b3d3b",
+        "64b531512e03b6c6e53c36291a9c5caeed0cd62f21ba26e6db05242e42b0b243",
+        "7fb4b3f30b910cdadd7241fb0f1b69ab8d4fa3754ee3dc5422e7f5e61f8a6462"
+      ],
+      "ledger": "ad0a7480859fb5fbd1aa0e9a703daa0990e76eb14147c60d11046e239c172ee1",
+      "masks": {
+        "shell": {
+          "file": "bd045e921b86e410a8dc8338a74c86e8400fef0a995b0f72815a76f69e70ece1",
+          "mask": "89948a33531b97266e424caf0f74c704e82856efb06bc137d1995ac8deaaacaf"
+        }
+      }
+    }
+  }
+}

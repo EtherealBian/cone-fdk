@@ -1,0 +1,449 @@
+{
+  "objects": {
+    "19": {
+      "detector": 426,
+      "donors": [
+        {
+          "arm": "axial",
+          "label": 14,
+          "size": 400,
+          "intersection": 395,
+          "union": 431
+        }
+      ],
+      "target": 426,
+      "delta": 0,
+      "candidates": 0,
+      "reason": "few donors",
+      "actual": 426,
+      "changed": 0,
+      "edit_indices_i64le": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "27": {
+      "detector": 698,
+      "donors": [
+        {
+          "arm": "profile",
+          "label": 24,
+          "size": 697,
+          "intersection": 688,
+          "union": 707
+        },
+        {
+          "arm": "census",
+          "label": 20,
+          "size": 718,
+          "intersection": 676,
+          "union": 740
+        },
+        {
+          "arm": "source",
+          "label": 25,
+          "size": 659,
+          "intersection": 635,
+          "union": 722
+        },
+        {
+          "arm": "axial",
+          "label": 19,
+          "size": 700,
+          "intersection": 655,
+          "union": 743
+        }
+      ],
+      "target": 698,
+      "delta": 0,
+      "candidates": 76,
+      "reason": "equal",
+      "actual": 698,
+      "changed": 0,
+      "edit_indices_i64le": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "28": {
+      "detector": 223,
+      "donors": [
+        {
+          "arm": "profile",
+          "label": 25,
+          "size": 230,
+          "intersection": 223,
+          "union": 230
+        },
+        {
+          "arm": "census",
+          "label": 21,
+          "size": 237,
+          "intersection": 220,
+          "union": 240
+        },
+        {
+          "arm": "source",
+          "label": 27,
+          "size": 241,
+          "intersection": 210,
+          "union": 254
+        },
+        {
+          "arm": "axial",
+          "label": 20,
+          "size": 235,
+          "intersection": 222,
+          "union": 236
+        }
+      ],
+      "target": 235,
+      "delta": 12,
+      "candidates": 39,
+      "reason": "edited",
+      "actual": 235,
+      "changed": 12,
+      "edit_indices_i64le": "7883324f6751bb61ac572cce750e81fae703afb924b2daf18f85e686f241a6f9"
+    },
+    "30": {
+      "detector": 84,
+      "donors": [
+        {
+          "arm": "profile",
+          "label": 26,
+          "size": 87,
+          "intersection": 84,
+          "union": 87
+        },
+        {
+          "arm": "census",
+          "label": 24,
+          "size": 88,
+          "intersection": 77,
+          "union": 95
+        },
+        {
+          "arm": "source",
+          "label": 29,
+          "size": 70,
+          "intersection": 62,
+          "union": 92
+        },
+        {
+          "arm": "axial",
+          "label": 22,
+          "size": 74,
+          "intersection": 72,
+          "union": 86
+        }
+      ],
+      "target": 84,
+      "delta": 0,
+      "candidates": 25,
+      "reason": "equal",
+      "actual": 84,
+      "changed": 0,
+      "edit_indices_i64le": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "32": {
+      "detector": 126,
+      "donors": [
+        {
+          "arm": "profile",
+          "label": 27,
+          "size": 127,
+          "intersection": 122,
+          "union": 131
+        },
+        {
+          "arm": "census",
+          "label": 26,
+          "size": 126,
+          "intersection": 117,
+          "union": 135
+        },
+        {
+          "arm": "source",
+          "label": 37,
+          "size": 87,
+          "intersection": 82,
+          "union": 131
+        }
+      ],
+      "target": 126,
+      "delta": 0,
+      "candidates": 39,
+      "reason": "equal",
+      "actual": 126,
+      "changed": 0,
+      "edit_indices_i64le": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "36": {
+      "detector": 234,
+      "donors": [
+        {
+          "arm": "profile",
+          "label": 30,
+          "size": 235,
+          "intersection": 228,
+          "union": 241
+        },
+        {
+          "arm": "census",
+          "label": 28,
+          "size": 244,
+          "intersection": 227,
+          "union": 251
+        },
+        {
+          "arm": "source",
+          "label": 41,
+          "size": 225,
+          "intersection": 209,
+          "union": 250
+        },
+        {
+          "arm": "axial",
+          "label": 26,
+          "size": 237,
+          "intersection": 222,
+          "union": 249
+        }
+      ],
+      "target": 235,
+      "delta": 1,
+      "candidates": 21,
+      "reason": "edited",
+      "actual": 235,
+      "changed": 1,
+      "edit_indices_i64le": "7481d276c6e387c33ca5267edc496747f882b4d3ea558e81f8cc21da4e4d7efe"
+    },
+    "38": {
+      "detector": 214,
+      "donors": [
+        {
+          "arm": "profile",
+          "label": 31,
+          "size": 227,
+          "intersection": 210,
+          "union": 231
+        },
+        {
+          "arm": "census",
+          "label": 30,
+          "size": 217,
+          "intersection": 198,
+          "union": 233
+        },
+        {
+          "arm": "source",
+          "label": 42,
+          "size": 152,
+          "intersection": 140,
+          "union": 226
+        },
+        {
+          "arm": "axial",
+          "label": 27,
+          "size": 175,
+          "intersection": 173,
+          "union": 216
+        }
+      ],
+      "target": 214,
+      "delta": 0,
+      "candidates": 82,
+      "reason": "equal",
+      "actual": 214,
+      "changed": 0,
+      "edit_indices_i64le": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "55": {
+      "detector": 1224,
+      "donors": [
+        {
+          "arm": "profile",
+          "label": 46,
+          "size": 1223,
+          "intersection": 1212,
+          "union": 1235
+        },
+        {
+          "arm": "census",
+          "label": 43,
+          "size": 1202,
+          "intersection": 1179,
+          "union": 1247
+        },
+        {
+          "arm": "source",
+          "label": 58,
+          "size": 1239,
+          "intersection": 1184,
+          "union": 1279
+        },
+        {
+          "arm": "axial",
+          "label": 36,
+          "size": 1211,
+          "intersection": 1185,
+          "union": 1250
+        }
+      ],
+      "target": 1223,
+      "delta": -1,
+      "candidates": 74,
+      "reason": "edited",
+      "actual": 1223,
+      "changed": 1,
+      "edit_indices_i64le": "7cc17f037ee96109fb0eb231444ab008fe3642099a99c153be2528a2ef33f6a1"
+    },
+    "56": {
+      "detector": 336,
+      "donors": [
+        {
+          "arm": "profile",
+          "label": 47,
+          "size": 335,
+          "intersection": 328,
+          "union": 343
+        },
+        {
+          "arm": "census",
+          "label": 44,
+          "size": 345,
+          "intersection": 326,
+          "union": 355
+        },
+        {
+          "arm": "source",
+          "label": 69,
+          "size": 271,
+          "intersection": 255,
+          "union": 352
+        },
+        {
+          "arm": "axial",
+          "label": 37,
+          "size": 354,
+          "intersection": 321,
+          "union": 369
+        }
+      ],
+      "target": 336,
+      "delta": 0,
+      "candidates": 73,
+      "reason": "equal",
+      "actual": 336,
+      "changed": 0,
+      "edit_indices_i64le": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "76": {
+      "detector": 320,
+      "donors": [
+        {
+          "arm": "profile",
+          "label": 66,
+          "size": 323,
+          "intersection": 317,
+          "union": 326
+        },
+        {
+          "arm": "census",
+          "label": 59,
+          "size": 333,
+          "intersection": 312,
+          "union": 341
+        },
+        {
+          "arm": "source",
+          "label": 81,
+          "size": 319,
+          "intersection": 311,
+          "union": 328
+        },
+        {
+          "arm": "axial",
+          "label": 51,
+          "size": 313,
+          "intersection": 308,
+          "union": 325
+        }
+      ],
+      "target": 320,
+      "delta": 0,
+      "candidates": 14,
+      "reason": "equal",
+      "actual": 320,
+      "changed": 0,
+      "edit_indices_i64le": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "77": {
+      "detector": 115,
+      "donors": [
+        {
+          "arm": "profile",
+          "label": 65,
+          "size": 112,
+          "intersection": 107,
+          "union": 120
+        },
+        {
+          "arm": "census",
+          "label": 60,
+          "size": 78,
+          "intersection": 67,
+          "union": 126
+        }
+      ],
+      "target": 112,
+      "delta": -3,
+      "candidates": 48,
+      "reason": "edited",
+      "actual": 112,
+      "changed": 3,
+      "edit_indices_i64le": "0fc01bbf2ef521a861539ceff5ff94353d152ac9a4336db19096a0bfe59a5ae6"
+    },
+    "85": {
+      "detector": 417,
+      "donors": [
+        {
+          "arm": "profile",
+          "label": 72,
+          "size": 416,
+          "intersection": 406,
+          "union": 427
+        },
+        {
+          "arm": "census",
+          "label": 65,
+          "size": 426,
+          "intersection": 401,
+          "union": 442
+        },
+        {
+          "arm": "source",
+          "label": 89,
+          "size": 408,
+          "intersection": 392,
+          "union": 433
+        },
+        {
+          "arm": "axial",
+          "label": 57,
+          "size": 406,
+          "intersection": 393,
+          "union": 430
+        }
+      ],
+      "target": 416,
+      "delta": -1,
+      "candidates": 35,
+      "reason": "edited",
+      "actual": 416,
+      "changed": 1,
+      "edit_indices_i64le": "42310df07f4dcf7cd9eae0f90f226429833be140ab94de91d73e759184728dd1"
+    }
+  },
+  "all_components": 130,
+  "fields_checked": 61348,
+  "reasons": {
+    "few donors": 1,
+    "equal": 6,
+    "edited": 5
+  }
+}

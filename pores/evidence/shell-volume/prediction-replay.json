@@ -1,0 +1,9 @@
+{
+  "predictions.json": "09d81b416a1a1d0747da641c3a3db37a1c18bd53ebfe75b4a761e8c0c9209bdd",
+  "sample2-choices.json": "ecc525ddd06967b5b6f8d342ca14e6356d9add79cd3ce6e536b2c793d09c06bb",
+  "sample2-shell.npz": "13fd9a3dba3adb3a657fdc2fb0608bce0d7ab1ae398e235620f78cc5bd34dad8",
+  "sample3-choices.json": "fce197479548f482cc37d883969fcb1068ff5876e175a6e6afce2ffd836e8709",
+  "sample3-shell.npz": "8e9b2c489bc15856cd1a39379f606ea7b331792e7a59743c130a3045eab4688d",
+  "sample5-choices.json": "ad0a7480859fb5fbd1aa0e9a703daa0990e76eb14147c60d11046e239c172ee1",
+  "sample5-shell.npz": "bd045e921b86e410a8dc8338a74c86e8400fef0a995b0f72815a76f69e70ece1"
+}
