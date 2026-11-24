@@ -7,8 +7,8 @@ import numpy as np
 
 
 class Denoise:
-    def __init__(self, ptx, patch=False, multi=False, adaptive=False):
-        self.channels = 6 if multi or adaptive else 25 if patch else 1
+    def __init__(self, ptx, patch=False, multi=False, adaptive=False, ranked=False):
+        self.channels = 6 if multi or adaptive or ranked else 25 if patch else 1
         self.d = c.WinDLL("nvcuda")
         self.ctx = c.c_void_p()
         self.module = c.c_void_p()
@@ -24,7 +24,9 @@ class Denoise:
                 "cuModuleGetFunction",
                 c.byref(self.kernel),
                 self.module,
-                b"adaptive"
+                b"rankpatch"
+                if ranked
+                else b"adaptive"
                 if adaptive
                 else b"multiscale"
                 if multi

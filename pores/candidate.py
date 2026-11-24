@@ -2,6 +2,7 @@
 
 import argparse
 import json
+from contextlib import ExitStack
 from pathlib import Path
 from tempfile import TemporaryDirectory
 
@@ -20,13 +21,15 @@ def run(i, cache, out, fetch, variant="A", *, permit=None):
         raise ValueError("Reserved specimens require a frozen, replayed development pass")
     pipeline_id = token(identity(variant))
     import neck_model
+    import rank_model
     from block_model import HALO, train_threshold
     from block_model import features as patch_features
     from boundary_model import ensemble
     from boundary_model import features as wide_features
     from boundary_model import train_threshold as wide_train
 
-    is_d = variant == "D"
+    is_d = variant in ("D", "E")
+    is_e = variant == "E"
     is_b = variant == "B"
     is_c = variant == "C"
     extract = wide_features if is_c else patch_features if is_b else features
@@ -54,7 +57,11 @@ def run(i, cache, out, fetch, variant="A", *, permit=None):
                     fresh = np.concatenate([pending[0], fresh])
                     current = np.concatenate([pending[1], current])
                 pending = (fresh[-4:].copy(), current[-4:].copy())
-                yield start, stop, neck_model.features(current, fresh, i)
+                yield (
+                    start,
+                    stop,
+                    (rank_model if is_e else neck_model).features(current, fresh, i),
+                )
             return
         for start in range(a, b, 4):
             stop = min(start + 4, b)
@@ -64,27 +71,37 @@ def run(i, cache, out, fetch, variant="A", *, permit=None):
                 extract(median_stack(raw, i, start, stop, HALO if is_b or is_c else 18), i, gpu),
             )
 
-    with Denoise(
-        ROOT
-        / "build/pores"
-        / (
-            "adaptive.ptx"
-            if is_d
-            else "multiscale.ptx"
-            if is_c
-            else "patches.ptx"
-            if is_b
-            else "nlm.ptx"
-        ),
-        patch=is_b,
-        multi=is_c,
-        adaptive=is_d,
-    ) as gpu:
+    with ExitStack() as ctx:
+        single = ctx.enter_context(
+            Denoise(
+                ROOT
+                / "build/pores"
+                / (
+                    "adaptive.ptx"
+                    if is_d
+                    else "multiscale.ptx"
+                    if is_c
+                    else "patches.ptx"
+                    if is_b
+                    else "nlm.ptx"
+                ),
+                patch=is_b,
+                multi=is_c,
+                adaptive=is_d,
+            )
+        )
+        if is_e:
+            ranked = ctx.enter_context(Denoise(ROOT / "build/pores/rankpatch.ptx", ranked=True))
+
+            def gpu(a, h):
+                return np.concatenate((single(a, h), ranked(a, h)), axis=1)
+        else:
+            gpu = single
         train = [
             (x, m, stack(seg, i, "segmented", a, b)) for a, b, (x, m) in blocks(160, 184, gpu)
         ]
         if is_d:
-            model, t = neck_model.train(train)
+            model, t = (rank_model if is_e else neck_model).train(train)
         elif is_c:
             model, t = wide_train(train)
         elif is_b:

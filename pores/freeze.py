@@ -18,6 +18,7 @@ NAMES = {
     "B": "blockwise NLM classifier B",
     "C": "multiscale boundary ensemble C",
     "D": "axial neck and boundary estimator D",
+    "E": "rank-adaptive patch and component-balanced estimator E",
 }
 
 
@@ -32,9 +33,17 @@ def identity(model):
     for name in (
         "cone-pores.exe",
         "pores.ptx",
-        {"A": "nlm.ptx", "B": "patches.ptx", "C": "multiscale.ptx", "D": "adaptive.ptx"}[model],
+        {
+            "A": "nlm.ptx",
+            "B": "patches.ptx",
+            "C": "multiscale.ptx",
+            "D": "adaptive.ptx",
+            "E": "adaptive.ptx",
+        }[model],
     ):
         hashes[name] = sha(ROOT / "build" / "pores" / name)
+    if model == "E":
+        hashes["rankpatch.ptx"] = sha(ROOT / "build/pores/rankpatch.ptx")
     packages = {
         n: version(n) for n in ("numpy", "scipy", "scikit-learn", "pillow", "threadpoolctl")
     }

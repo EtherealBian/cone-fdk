@@ -9,9 +9,9 @@ import numpy as np
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "pores"))
-from denoise import Denoise
-from local_model import SETTINGS, XY_HALO, local_fields, median_stack, segment
-from validate import ORIGIN, score, stack, verified
+from denoise import Denoise  # noqa: E402
+from local_model import SETTINGS, XY_HALO, local_fields, median_stack, segment  # noqa: E402
+from validate import ORIGIN, score, stack, verified  # noqa: E402
 
 
 def grid(patches, stride, py, px, origin_yx):
@@ -40,8 +40,9 @@ def grid(patches, stride, py, px, origin_yx):
 def run(i, cache, gpu):
     raw, _ = verified(cache, i, "raw", False)
     seg, _ = verified(cache, i, "segmented", False)
+    halo = 24
     spans = [(160, 164), (180, 184)]
-    med = np.concatenate([median_stack(raw, i, a, b) for a, b in spans])
+    med = np.concatenate([median_stack(raw, i, a, b, halo) for a, b in spans])
     truth = np.concatenate([stack(seg, i, "segmented", a, b) for a, b in spans])
     out = []
     for band in (20, 30, 40):
@@ -49,8 +50,11 @@ def run(i, cache, gpu):
         for stride in (1, 2, 3, 4, 5):
             for py in range(stride):
                 for px in range(stride):
-                    den = grid(p, stride, py, px, (ORIGIN[1] - XY_HALO, ORIGIN[0] - XY_HALO))
-                    pred = segment(local_fields(den, i), SETTINGS[i][2])
+                    den = grid(p, stride, py, px, (ORIGIN[1] - halo, ORIGIN[0] - halo))
+                    extra = halo - XY_HALO
+                    pred = segment(local_fields(den, i), SETTINGS[i][2])[
+                        :, extra:-extra, extra:-extra
+                    ]
                     out.append(
                         dict(
                             band=band,
