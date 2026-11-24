@@ -1,0 +1,1133 @@
+{
+  "specimen": 2,
+  "role": "development diagnostic only",
+  "source": {
+    "raw": {
+      "filepath": "raw/set1sample2raw.zip",
+      "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/raw/set1sample2raw.zip",
+      "sha256": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+      "size": 1248685767
+    },
+    "segmented": {
+      "filepath": "segmented/set1sample2segmented.zip",
+      "url": "https://data.nist.gov/od/ds/ark:/88434/mds2-2162/segmented/set1sample2segmented.zip",
+      "sha256": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+      "size": 6373937
+    }
+  },
+  "origin_xyz": [
+    360,
+    376,
+    400
+  ],
+  "shape_zyx": [
+    128,
+    256,
+    256
+  ],
+  "inputs": {
+    "E": {
+      "pipeline_id": "0ae471662ffc9fe1f62d5b56697e9f1c43c48e4d311efe2558b6b68196ab7994",
+      "viewer_sha256": "5576ed67ccac66a16b16191cce4ec37f248a2b903633297cbe0f27fe3d7917c7",
+      "mask_sha256": "a693d0bec1b387fe85d1e7d5f2605a0898e5bbb1108b9c2ed341edd5f3cb62b4"
+    },
+    "F": {
+      "pipeline_id": "171d18a5b245d8909e57191b1de8d6760a0c3883b53af2ee3489cb9faab59523",
+      "viewer_sha256": "ec3f2d0f2d07f1a38f07007daea6b841ae9d8dd9de17aeb87bed4a36b4b50315",
+      "mask_sha256": "a3faa82dbebc12a6a1564a19b849648b5a4dfa03039c5c166f10d6c24efc3864"
+    },
+    "G": {
+      "pipeline_id": "7cd89789b46a040cfc72bbdbf7fb8557da9495c97fd1c381ba652b72e73f9858",
+      "viewer_sha256": "da82a91c02bc5d823165179dd4305a21c6b0f852e47fb9f7d894b9d9611f5867",
+      "mask_sha256": "d59e472c5c5279fa55788e5fbc80b52a94bd71d78559262cb232d9be638fdb01"
+    }
+  },
+  "mask_reference_sha256": "67c089f05ee64651281ef0a0810f9d68978048ff3981a4ed115ea4b51bcfd67a",
+  "vote_order": "EFG binary; columns reference background, foreground",
+  "votes": [
+    [
+      8308002,
+      1997
+    ],
+    [
+      664,
+      362
+    ],
+    [
+      1136,
+      369
+    ],
+    [
+      910,
+      680
+    ],
+    [
+      805,
+      816
+    ],
+    [
+      261,
+      776
+    ],
+    [
+      521,
+      681
+    ],
+    [
+      1733,
+      68895
+    ]
+  ],
+  "fixed_fp": 1733,
+  "fixed_fn": 1997,
+  "disputed": 7981,
+  "majority": {
+    "objects": {
+      "criterion": "both interior and >=64 voxels; descending IoU >=0.5, unique matches",
+      "eligible_prediction": 72,
+      "eligible_reference": 73,
+      "matches": 68,
+      "matched_fraction_prediction": 0.9444444444444444,
+      "matched_fraction_reference": 0.9315068493150684,
+      "median_abs_volume_error_pct": 3.869391143352141,
+      "p95_abs_volume_error_pct": 19.460038658710808,
+      "median_abs_diameter_error_pct": 1.2734591744072654,
+      "p95_centroid_displacement_vox": 0.6454548178105273
+    },
+    "metrics": {
+      "tp": 71032,
+      "fp": 3425,
+      "fn": 3544,
+      "tn": 8310607,
+      "dice": 0.9532385444834366,
+      "precision": 0.9540002954725546,
+      "recall": 0.9524780090109418,
+      "predicted_porosity_pct": 0.887596607208252,
+      "reference_porosity_pct": 0.8890151977539062,
+      "porosity_error_pp": -0.0014185905456542969
+    },
+    "table_sha256": "679ebf10c963c46ff28858b331f46742347a8a5c273c9b1eced8c9f9957f3a2c",
+    "mask_u8_sha256": "60622df740a795c0982d62bf2f2f94cc8f3fc548faa8e5cbbade22196f207b6b",
+    "exact_components": 160,
+    "native": {
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "shape_zyx": [
+        128,
+        256,
+        256
+      ],
+      "spacing_xyz_um": [
+        2.45,
+        2.45,
+        2.45
+      ],
+      "threshold_f32": 0,
+      "filter": "none",
+      "connectivity": 6,
+      "slab_depth": 8,
+      "device_buffer_bytes": 4194304,
+      "roi_voxels": 8388608,
+      "pore_voxels": 74457,
+      "porosity": 0.00887596607208252,
+      "components": 160,
+      "interior_components": 116,
+      "interior_pore_voxels": 47549,
+      "spanning_xyz": [
+        0,
+        0,
+        0
+      ],
+      "elapsed_s": 0.221679
+    },
+    "slab_depths": [
+      8,
+      37
+    ],
+    "references": {
+      "8": {
+        "reference_voxels": 227,
+        "pred": 8,
+        "voxels": 207,
+        "iou": 0.8787878787878788
+      },
+      "10": {
+        "reference_voxels": 959,
+        "pred": 10,
+        "voxels": 969,
+        "iou": 0.92992992992993
+      },
+      "14": {
+        "reference_voxels": 232,
+        "pred": 12,
+        "voxels": 248,
+        "iou": 0.8320610687022901
+      },
+      "15": {
+        "reference_voxels": 1769,
+        "pred": 13,
+        "voxels": 1652,
+        "iou": 0.8683779355543418
+      },
+      "17": {
+        "reference_voxels": 423,
+        "pred": 14,
+        "voxels": 424,
+        "iou": 0.9337899543378996
+      },
+      "19": {
+        "reference_voxels": 1090,
+        "pred": 19,
+        "voxels": 1117,
+        "iou": 0.9157986111111112
+      },
+      "20": {
+        "reference_voxels": 813,
+        "pred": 26,
+        "voxels": 679,
+        "iou": 0.7532314923619271
+      },
+      "22": {
+        "reference_voxels": 513,
+        "pred": 22,
+        "voxels": 530,
+        "iou": 0.8998178506375227
+      },
+      "23": {
+        "reference_voxels": 110,
+        "pred": 24,
+        "voxels": 127,
+        "iou": 0.8091603053435115
+      },
+      "24": {
+        "reference_voxels": 232,
+        "pred": 25,
+        "voxels": 246,
+        "iou": 0.9196787148594378
+      },
+      "28": {
+        "reference_voxels": 420,
+        "pred": 32,
+        "voxels": 422,
+        "iou": 0.9356321839080459
+      },
+      "29": {
+        "reference_voxels": 85,
+        "pred": null,
+        "voxels": null,
+        "iou": null
+      },
+      "31": {
+        "reference_voxels": 146,
+        "pred": 36,
+        "voxels": 175,
+        "iou": 0.7833333333333333
+      },
+      "32": {
+        "reference_voxels": 82,
+        "pred": 37,
+        "voxels": 81,
+        "iou": 0.7157894736842105
+      },
+      "35": {
+        "reference_voxels": 244,
+        "pred": 38,
+        "voxels": 230,
+        "iou": 0.9112903225806451
+      },
+      "38": {
+        "reference_voxels": 87,
+        "pred": null,
+        "voxels": null,
+        "iou": null
+      },
+      "42": {
+        "reference_voxels": 662,
+        "pred": 44,
+        "voxels": 685,
+        "iou": 0.8971830985915493
+      },
+      "44": {
+        "reference_voxels": 326,
+        "pred": 46,
+        "voxels": 265,
+        "iou": 0.6103542234332425
+      },
+      "45": {
+        "reference_voxels": 886,
+        "pred": 47,
+        "voxels": 865,
+        "iou": 0.9348066298342541
+      },
+      "49": {
+        "reference_voxels": 185,
+        "pred": 49,
+        "voxels": 197,
+        "iou": 0.8910891089108911
+      },
+      "50": {
+        "reference_voxels": 71,
+        "pred": null,
+        "voxels": null,
+        "iou": null
+      },
+      "53": {
+        "reference_voxels": 310,
+        "pred": 53,
+        "voxels": 279,
+        "iou": 0.8817891373801917
+      },
+      "54": {
+        "reference_voxels": 155,
+        "pred": 55,
+        "voxels": 160,
+        "iou": 0.863905325443787
+      },
+      "55": {
+        "reference_voxels": 3083,
+        "pred": 56,
+        "voxels": 3133,
+        "iou": 0.9516483516483516
+      },
+      "56": {
+        "reference_voxels": 310,
+        "pred": 59,
+        "voxels": 286,
+        "iou": 0.8860759493670886
+      },
+      "57": {
+        "reference_voxels": 158,
+        "pred": 58,
+        "voxels": 154,
+        "iou": 0.7931034482758621
+      },
+      "58": {
+        "reference_voxels": 71,
+        "pred": 57,
+        "voxels": 65,
+        "iou": 0.7894736842105263
+      },
+      "59": {
+        "reference_voxels": 125,
+        "pred": 60,
+        "voxels": 123,
+        "iou": 0.9375
+      },
+      "61": {
+        "reference_voxels": 144,
+        "pred": 62,
+        "voxels": 145,
+        "iou": 0.864516129032258
+      },
+      "67": {
+        "reference_voxels": 407,
+        "pred": 66,
+        "voxels": 397,
+        "iou": 0.9234449760765551
+      },
+      "70": {
+        "reference_voxels": 164,
+        "pred": null,
+        "voxels": null,
+        "iou": null
+      },
+      "73": {
+        "reference_voxels": 329,
+        "pred": 69,
+        "voxels": 344,
+        "iou": 0.9339080459770115
+      },
+      "74": {
+        "reference_voxels": 110,
+        "pred": 72,
+        "voxels": 118,
+        "iou": 0.6888888888888889
+      },
+      "76": {
+        "reference_voxels": 96,
+        "pred": 73,
+        "voxels": 87,
+        "iou": 0.8673469387755102
+      },
+      "78": {
+        "reference_voxels": 186,
+        "pred": 75,
+        "voxels": 173,
+        "iou": 0.8795811518324608
+      },
+      "79": {
+        "reference_voxels": 2001,
+        "pred": 76,
+        "voxels": 2009,
+        "iou": 0.9288119288119289
+      },
+      "80": {
+        "reference_voxels": 914,
+        "pred": 78,
+        "voxels": 894,
+        "iou": 0.9091869060190074
+      },
+      "81": {
+        "reference_voxels": 454,
+        "pred": 77,
+        "voxels": 442,
+        "iou": 0.9186295503211992
+      },
+      "82": {
+        "reference_voxels": 4744,
+        "pred": 80,
+        "voxels": 4840,
+        "iou": 0.9551203590371277
+      },
+      "85": {
+        "reference_voxels": 96,
+        "pred": 79,
+        "voxels": 125,
+        "iou": 0.7265625
+      },
+      "86": {
+        "reference_voxels": 1296,
+        "pred": 82,
+        "voxels": 1325,
+        "iou": 0.9472511144130757
+      },
+      "88": {
+        "reference_voxels": 189,
+        "pred": 83,
+        "voxels": 199,
+        "iou": 0.8926829268292683
+      },
+      "91": {
+        "reference_voxels": 4387,
+        "pred": 86,
+        "voxels": 4479,
+        "iou": 0.9545855379188712
+      },
+      "93": {
+        "reference_voxels": 91,
+        "pred": null,
+        "voxels": null,
+        "iou": null
+      },
+      "96": {
+        "reference_voxels": 395,
+        "pred": 91,
+        "voxels": 370,
+        "iou": 0.8
+      },
+      "97": {
+        "reference_voxels": 276,
+        "pred": 92,
+        "voxels": 271,
+        "iou": 0.9192982456140351
+      },
+      "98": {
+        "reference_voxels": 978,
+        "pred": 95,
+        "voxels": 1018,
+        "iou": 0.9137104506232023
+      },
+      "99": {
+        "reference_voxels": 88,
+        "pred": 96,
+        "voxels": 90,
+        "iou": 0.8541666666666666
+      },
+      "100": {
+        "reference_voxels": 150,
+        "pred": 97,
+        "voxels": 139,
+        "iou": 0.8888888888888888
+      },
+      "102": {
+        "reference_voxels": 900,
+        "pred": 100,
+        "voxels": 853,
+        "iou": 0.8279457768508863
+      },
+      "103": {
+        "reference_voxels": 820,
+        "pred": 103,
+        "voxels": 865,
+        "iou": 0.8932584269662921
+      },
+      "105": {
+        "reference_voxels": 3753,
+        "pred": 101,
+        "voxels": 3848,
+        "iou": 0.948974358974359
+      },
+      "108": {
+        "reference_voxels": 703,
+        "pred": 106,
+        "voxels": 695,
+        "iou": 0.9389736477115118
+      },
+      "109": {
+        "reference_voxels": 1754,
+        "pred": 107,
+        "voxels": 1818,
+        "iou": 0.917337627482555
+      },
+      "111": {
+        "reference_voxels": 1181,
+        "pred": 108,
+        "voxels": 1224,
+        "iou": 0.9148089171974523
+      },
+      "112": {
+        "reference_voxels": 100,
+        "pred": 110,
+        "voxels": 103,
+        "iou": 0.8288288288288288
+      },
+      "113": {
+        "reference_voxels": 612,
+        "pred": 111,
+        "voxels": 630,
+        "iou": 0.9345794392523364
+      },
+      "114": {
+        "reference_voxels": 68,
+        "pred": 112,
+        "voxels": 68,
+        "iou": 0.8888888888888888
+      },
+      "116": {
+        "reference_voxels": 125,
+        "pred": 113,
+        "voxels": 134,
+        "iou": 0.8905109489051095
+      },
+      "119": {
+        "reference_voxels": 221,
+        "pred": 119,
+        "voxels": 229,
+        "iou": 0.9230769230769231
+      },
+      "136": {
+        "reference_voxels": 1369,
+        "pred": 126,
+        "voxels": 1452,
+        "iou": 0.883177570093458
+      },
+      "138": {
+        "reference_voxels": 346,
+        "pred": 127,
+        "voxels": 395,
+        "iou": 0.8073170731707318
+      },
+      "143": {
+        "reference_voxels": 970,
+        "pred": 128,
+        "voxels": 956,
+        "iou": 0.9279279279279279
+      },
+      "146": {
+        "reference_voxels": 478,
+        "pred": 129,
+        "voxels": 433,
+        "iou": 0.8861283643892339
+      },
+      "149": {
+        "reference_voxels": 176,
+        "pred": 133,
+        "voxels": 168,
+        "iou": 0.8494623655913979
+      },
+      "150": {
+        "reference_voxels": 133,
+        "pred": 134,
+        "voxels": 129,
+        "iou": 0.8450704225352113
+      },
+      "154": {
+        "reference_voxels": 1350,
+        "pred": 137,
+        "voxels": 1332,
+        "iou": 0.9239598278335724
+      },
+      "156": {
+        "reference_voxels": 259,
+        "pred": 139,
+        "voxels": 236,
+        "iou": 0.8609022556390977
+      },
+      "157": {
+        "reference_voxels": 84,
+        "pred": 141,
+        "voxels": 106,
+        "iou": 0.7924528301886793
+      },
+      "158": {
+        "reference_voxels": 87,
+        "pred": 143,
+        "voxels": 67,
+        "iou": 0.6923076923076923
+      },
+      "159": {
+        "reference_voxels": 81,
+        "pred": 144,
+        "voxels": 68,
+        "iou": 0.7325581395348837
+      },
+      "163": {
+        "reference_voxels": 101,
+        "pred": 146,
+        "voxels": 100,
+        "iou": 0.9705882352941176
+      },
+      "167": {
+        "reference_voxels": 94,
+        "pred": 150,
+        "voxels": 89,
+        "iou": 0.8484848484848485
+      }
+    },
+    "diagnostic_gates": {
+      "dice": true,
+      "precision": true,
+      "recall": true,
+      "porosity_absolute": true,
+      "porosity_relative": true,
+      "object_prediction": true,
+      "object_reference": true,
+      "median_abs_volume_error_pct": true,
+      "p95_abs_volume_error_pct": false,
+      "median_abs_diameter_error_pct": true,
+      "p95_centroid_displacement_vox": true
+    },
+    "matches_over_15pct": [
+      20,
+      23,
+      31,
+      44,
+      85,
+      157,
+      158,
+      159
+    ]
+  },
+  "reference_assisted": {
+    "objects": {
+      "criterion": "both interior and >=64 voxels; descending IoU >=0.5, unique matches",
+      "eligible_prediction": 73,
+      "eligible_reference": 73,
+      "matches": 70,
+      "matched_fraction_prediction": 0.958904109589041,
+      "matched_fraction_reference": 0.958904109589041,
+      "median_abs_volume_error_pct": 2.470110076206611,
+      "p95_abs_volume_error_pct": 15.890452013257176,
+      "median_abs_diameter_error_pct": 0.8166769270497642,
+      "p95_centroid_displacement_vox": 0.37670733025202224
+    },
+    "metrics": {
+      "tp": 72579,
+      "fp": 1733,
+      "fn": 1997,
+      "tn": 8312299,
+      "dice": 0.9749476116275321,
+      "precision": 0.976679405748735,
+      "recall": 0.9732219480798112,
+      "predicted_porosity_pct": 0.8858680725097656,
+      "reference_porosity_pct": 0.8890151977539062,
+      "porosity_error_pp": -0.003147125244140625
+    },
+    "table_sha256": "f9c90dab6dd7044f4bae3899d0654a0e5734ec4df0394ba1ff4289ba31f0ad1c",
+    "mask_u8_sha256": "aaf291d47d7c26a1e11c85b15cc1dab69213182645be29c73c75b0336eb057dc",
+    "exact_components": 160,
+    "native": {
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "shape_zyx": [
+        128,
+        256,
+        256
+      ],
+      "spacing_xyz_um": [
+        2.45,
+        2.45,
+        2.45
+      ],
+      "threshold_f32": 0,
+      "filter": "none",
+      "connectivity": 6,
+      "slab_depth": 8,
+      "device_buffer_bytes": 4194304,
+      "roi_voxels": 8388608,
+      "pore_voxels": 74312,
+      "porosity": 0.008858680725097656,
+      "components": 160,
+      "interior_components": 118,
+      "interior_pore_voxels": 47415,
+      "spanning_xyz": [
+        0,
+        0,
+        0
+      ],
+      "elapsed_s": 0.184274
+    },
+    "slab_depths": [
+      8,
+      37
+    ],
+    "references": {
+      "8": {
+        "reference_voxels": 227,
+        "pred": 8,
+        "voxels": 211,
+        "iou": 0.9295154185022027
+      },
+      "10": {
+        "reference_voxels": 959,
+        "pred": 10,
+        "voxels": 964,
+        "iou": 0.9602446483180428
+      },
+      "14": {
+        "reference_voxels": 232,
+        "pred": 12,
+        "voxels": 248,
+        "iou": 0.8972332015810277
+      },
+      "15": {
+        "reference_voxels": 1769,
+        "pred": 13,
+        "voxels": 1694,
+        "iou": 0.924958310172318
+      },
+      "17": {
+        "reference_voxels": 423,
+        "pred": 14,
+        "voxels": 421,
+        "iou": 0.9627906976744186
+      },
+      "19": {
+        "reference_voxels": 1090,
+        "pred": 18,
+        "voxels": 1103,
+        "iou": 0.9476021314387212
+      },
+      "20": {
+        "reference_voxels": 813,
+        "pred": 19,
+        "voxels": 766,
+        "iou": 0.909310761789601
+      },
+      "22": {
+        "reference_voxels": 513,
+        "pred": 21,
+        "voxels": 517,
+        "iou": 0.9397363465160076
+      },
+      "23": {
+        "reference_voxels": 110,
+        "pred": 24,
+        "voxels": 125,
+        "iou": 0.8217054263565892
+      },
+      "24": {
+        "reference_voxels": 232,
+        "pred": 25,
+        "voxels": 241,
+        "iou": 0.9545454545454546
+      },
+      "28": {
+        "reference_voxels": 420,
+        "pred": 27,
+        "voxels": 415,
+        "iou": 0.9739952718676123
+      },
+      "29": {
+        "reference_voxels": 85,
+        "pred": null,
+        "voxels": null,
+        "iou": null
+      },
+      "31": {
+        "reference_voxels": 146,
+        "pred": 30,
+        "voxels": 163,
+        "iou": 0.8727272727272727
+      },
+      "32": {
+        "reference_voxels": 82,
+        "pred": 31,
+        "voxels": 86,
+        "iou": 0.7684210526315789
+      },
+      "35": {
+        "reference_voxels": 244,
+        "pred": 34,
+        "voxels": 237,
+        "iou": 0.963265306122449
+      },
+      "38": {
+        "reference_voxels": 87,
+        "pred": null,
+        "voxels": null,
+        "iou": null
+      },
+      "42": {
+        "reference_voxels": 662,
+        "pred": 45,
+        "voxels": 677,
+        "iou": 0.9547445255474453
+      },
+      "44": {
+        "reference_voxels": 326,
+        "pred": 46,
+        "voxels": 275,
+        "iou": 0.7319884726224783
+      },
+      "45": {
+        "reference_voxels": 886,
+        "pred": 47,
+        "voxels": 877,
+        "iou": 0.9676339285714286
+      },
+      "49": {
+        "reference_voxels": 185,
+        "pred": 48,
+        "voxels": 194,
+        "iou": 0.9536082474226805
+      },
+      "50": {
+        "reference_voxels": 71,
+        "pred": 49,
+        "voxels": 69,
+        "iou": 0.971830985915493
+      },
+      "53": {
+        "reference_voxels": 310,
+        "pred": 52,
+        "voxels": 297,
+        "iou": 0.9455128205128205
+      },
+      "54": {
+        "reference_voxels": 155,
+        "pred": 53,
+        "voxels": 162,
+        "iou": 0.9096385542168675
+      },
+      "55": {
+        "reference_voxels": 3083,
+        "pred": 54,
+        "voxels": 3099,
+        "iou": 0.9769747361688519
+      },
+      "56": {
+        "reference_voxels": 310,
+        "pred": 55,
+        "voxels": 289,
+        "iou": 0.9260450160771704
+      },
+      "57": {
+        "reference_voxels": 158,
+        "pred": 56,
+        "voxels": 152,
+        "iou": 0.8674698795180723
+      },
+      "58": {
+        "reference_voxels": 71,
+        "pred": 57,
+        "voxels": 69,
+        "iou": 0.971830985915493
+      },
+      "59": {
+        "reference_voxels": 125,
+        "pred": 58,
+        "voxels": 125,
+        "iou": 0.968503937007874
+      },
+      "61": {
+        "reference_voxels": 144,
+        "pred": 60,
+        "voxels": 143,
+        "iou": 0.9133333333333333
+      },
+      "67": {
+        "reference_voxels": 407,
+        "pred": 64,
+        "voxels": 405,
+        "iou": 0.9566265060240964
+      },
+      "70": {
+        "reference_voxels": 164,
+        "pred": null,
+        "voxels": null,
+        "iou": null
+      },
+      "73": {
+        "reference_voxels": 329,
+        "pred": 69,
+        "voxels": 334,
+        "iou": 0.9732142857142857
+      },
+      "74": {
+        "reference_voxels": 110,
+        "pred": 71,
+        "voxels": 112,
+        "iou": 0.865546218487395
+      },
+      "76": {
+        "reference_voxels": 96,
+        "pred": 72,
+        "voxels": 92,
+        "iou": 0.9381443298969072
+      },
+      "78": {
+        "reference_voxels": 186,
+        "pred": 74,
+        "voxels": 178,
+        "iou": 0.9361702127659575
+      },
+      "79": {
+        "reference_voxels": 2001,
+        "pred": 75,
+        "voxels": 1988,
+        "iou": 0.9621249385145105
+      },
+      "80": {
+        "reference_voxels": 914,
+        "pred": 76,
+        "voxels": 904,
+        "iou": 0.9506437768240343
+      },
+      "81": {
+        "reference_voxels": 454,
+        "pred": 77,
+        "voxels": 442,
+        "iou": 0.9606126914660832
+      },
+      "82": {
+        "reference_voxels": 4744,
+        "pred": 79,
+        "voxels": 4799,
+        "iou": 0.9749586092715232
+      },
+      "85": {
+        "reference_voxels": 96,
+        "pred": 78,
+        "voxels": 115,
+        "iou": 0.788135593220339
+      },
+      "86": {
+        "reference_voxels": 1296,
+        "pred": 80,
+        "voxels": 1310,
+        "iou": 0.9772382397572079
+      },
+      "88": {
+        "reference_voxels": 189,
+        "pred": 81,
+        "voxels": 195,
+        "iou": 0.9393939393939394
+      },
+      "91": {
+        "reference_voxels": 4387,
+        "pred": 84,
+        "voxels": 4423,
+        "iou": 0.9802202742189255
+      },
+      "93": {
+        "reference_voxels": 91,
+        "pred": 91,
+        "voxels": 66,
+        "iou": 0.6354166666666666
+      },
+      "96": {
+        "reference_voxels": 395,
+        "pred": 90,
+        "voxels": 378,
+        "iou": 0.8671497584541062
+      },
+      "97": {
+        "reference_voxels": 276,
+        "pred": 92,
+        "voxels": 273,
+        "iou": 0.9468085106382979
+      },
+      "98": {
+        "reference_voxels": 978,
+        "pred": 93,
+        "voxels": 1009,
+        "iou": 0.9537856440511308
+      },
+      "99": {
+        "reference_voxels": 88,
+        "pred": 94,
+        "voxels": 88,
+        "iou": 0.9130434782608695
+      },
+      "100": {
+        "reference_voxels": 150,
+        "pred": 95,
+        "voxels": 143,
+        "iou": 0.9276315789473685
+      },
+      "102": {
+        "reference_voxels": 900,
+        "pred": 97,
+        "voxels": 873,
+        "iou": 0.9146868250539957
+      },
+      "103": {
+        "reference_voxels": 820,
+        "pred": 98,
+        "voxels": 842,
+        "iou": 0.9303135888501742
+      },
+      "105": {
+        "reference_voxels": 3753,
+        "pred": 100,
+        "voxels": 3811,
+        "iou": 0.9723598435462842
+      },
+      "108": {
+        "reference_voxels": 703,
+        "pred": 103,
+        "voxels": 699,
+        "iou": 0.9635854341736695
+      },
+      "109": {
+        "reference_voxels": 1754,
+        "pred": 104,
+        "voxels": 1792,
+        "iou": 0.9601990049751243
+      },
+      "111": {
+        "reference_voxels": 1181,
+        "pred": 105,
+        "voxels": 1211,
+        "iou": 0.955846279640229
+      },
+      "112": {
+        "reference_voxels": 100,
+        "pred": 107,
+        "voxels": 102,
+        "iou": 0.8878504672897196
+      },
+      "113": {
+        "reference_voxels": 612,
+        "pred": 108,
+        "voxels": 624,
+        "iou": 0.9650238473767886
+      },
+      "114": {
+        "reference_voxels": 68,
+        "pred": 109,
+        "voxels": 67,
+        "iou": 0.9285714285714286
+      },
+      "116": {
+        "reference_voxels": 125,
+        "pred": 110,
+        "voxels": 128,
+        "iou": 0.9765625
+      },
+      "119": {
+        "reference_voxels": 221,
+        "pred": 113,
+        "voxels": 225,
+        "iou": 0.9647577092511013
+      },
+      "136": {
+        "reference_voxels": 1369,
+        "pred": 122,
+        "voxels": 1411,
+        "iou": 0.935933147632312
+      },
+      "138": {
+        "reference_voxels": 346,
+        "pred": 123,
+        "voxels": 353,
+        "iou": 0.947075208913649
+      },
+      "143": {
+        "reference_voxels": 970,
+        "pred": 126,
+        "voxels": 956,
+        "iou": 0.9533468559837728
+      },
+      "146": {
+        "reference_voxels": 478,
+        "pred": 128,
+        "voxels": 453,
+        "iou": 0.9395833333333333
+      },
+      "149": {
+        "reference_voxels": 176,
+        "pred": 132,
+        "voxels": 174,
+        "iou": 0.912568306010929
+      },
+      "150": {
+        "reference_voxels": 133,
+        "pred": 133,
+        "voxels": 134,
+        "iou": 0.920863309352518
+      },
+      "154": {
+        "reference_voxels": 1350,
+        "pred": 137,
+        "voxels": 1338,
+        "iou": 0.9634769905040176
+      },
+      "156": {
+        "reference_voxels": 259,
+        "pred": 139,
+        "voxels": 239,
+        "iou": 0.8935361216730038
+      },
+      "157": {
+        "reference_voxels": 84,
+        "pred": 140,
+        "voxels": 101,
+        "iou": 0.8316831683168316
+      },
+      "158": {
+        "reference_voxels": 87,
+        "pred": 141,
+        "voxels": 73,
+        "iou": 0.8390804597701149
+      },
+      "159": {
+        "reference_voxels": 81,
+        "pred": 142,
+        "voxels": 71,
+        "iou": 0.788235294117647
+      },
+      "163": {
+        "reference_voxels": 101,
+        "pred": 145,
+        "voxels": 100,
+        "iou": 0.9705882352941176
+      },
+      "167": {
+        "reference_voxels": 94,
+        "pred": 149,
+        "voxels": 93,
+        "iou": 0.9479166666666666
+      }
+    },
+    "diagnostic_gates": {
+      "dice": true,
+      "precision": true,
+      "recall": true,
+      "porosity_absolute": true,
+      "porosity_relative": true,
+      "object_prediction": true,
+      "object_reference": true,
+      "median_abs_volume_error_pct": true,
+      "p95_abs_volume_error_pct": false,
+      "median_abs_diameter_error_pct": true,
+      "p95_centroid_displacement_vox": true
+    },
+    "matches_over_15pct": [
+      44,
+      85,
+      93,
+      157,
+      158
+    ]
+  }
+}

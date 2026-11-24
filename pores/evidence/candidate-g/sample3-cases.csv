@@ -1,0 +1,37 @@
+status,pred_id,reference_label,signed_volume_error_pct,source_x,source_y,source_z,source_tiff
+missed reference,,23,,373,619,406,set1sample3raw_0406.tif
+missed reference,,146,,459,460,463,set1sample3raw_0463.tif
+missed reference,,147,,595,498,462,set1sample3raw_0462.tif
+missed reference,,169,,418,446,472,set1sample3raw_0472.tif
+missed reference,,177,,374,405,474,set1sample3raw_0474.tif
+missed reference,,197,,531,584,487,set1sample3raw_0487.tif
+missed reference,,199,,463,485,489,set1sample3raw_0489.tif
+missed reference,,220,,526,576,498,set1sample3raw_0498.tif
+unmatched detection,954911,,,391,523,416,set1sample3raw_0416.tif
+unmatched detection,1294898,,,410,570,422,set1sample3raw_0422.tif
+unmatched detection,2657066,,,400,515,443,set1sample3raw_0443.tif
+unmatched detection,3254858,,,434,549,450,set1sample3raw_0450.tif
+unmatched detection,4715407,,,499,619,476,set1sample3raw_0476.tif
+unmatched detection,6547398,,,559,609,501,set1sample3raw_0501.tif
+unmatched detection,6712745,,,530,478,506,set1sample3raw_0506.tif
+unmatched detection,7276484,,,555,385,512,set1sample3raw_0512.tif
+unmatched detection,8111410,,,406,578,524,set1sample3raw_0524.tif
+matched,6020347,206,-46.82539682539682,609,598,490,set1sample3raw_0490.tif
+matched,2120375,89,42.85714285714286,546,470,432,set1sample3raw_0432.tif
+matched,1478018,71,27.27272727272727,488,520,423,set1sample3raw_0423.tif
+matched,5252089,188,20.253164556962023,609,412,484,set1sample3raw_0484.tif
+matched,1141632,57,19.84126984126984,488,489,421,set1sample3raw_0421.tif
+matched,3597858,127,-19.53125,393,610,457,set1sample3raw_0457.tif
+matched,4578207,175,18.77133105802047,516,596,473,set1sample3raw_0473.tif
+matched,5188062,185,-14.000000000000002,585,415,486,set1sample3raw_0486.tif
+matched,2037739,86,13.450292397660824,592,404,435,set1sample3raw_0435.tif
+matched,6140797,217,-11.494252873563216,484,562,501,set1sample3raw_0501.tif
+matched,5053595,181,-10.61452513966481,511,406,477,set1sample3raw_0477.tif
+matched,581660,36,-9.999999999999998,389,602,408,set1sample3raw_0408.tif
+matched,957262,52,-9.375,435,534,418,set1sample3raw_0418.tif
+matched,3468830,121,-8.108108108108103,394,616,458,set1sample3raw_0458.tif
+matched,3852692,140,6.349206349206349,510,583,458,set1sample3raw_0458.tif
+matched,2133581,90,5.294117647058827,436,521,433,set1sample3raw_0433.tif
+matched,111096,18,4.882154882154888,607,558,401,set1sample3raw_0401.tif
+matched,198681,21,2.5125628140703515,390,396,411,set1sample3raw_0411.tif
+matched,2474889,100,2.0547945205479534,496,572,437,set1sample3raw_0437.tif

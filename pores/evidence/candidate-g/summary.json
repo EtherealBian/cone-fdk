@@ -1,0 +1,48 @@
+{
+  "2": {
+    "gates": 10,
+    "p95": 17.036252091466807,
+    "median": 3.3333333333333326,
+    "matched": 69,
+    "prediction": 72,
+    "reference": 73,
+    "failed": [
+      "p95_abs_volume_error_pct"
+    ],
+    "cpu_gpu_flips": 0
+  },
+  "3": {
+    "gates": 5,
+    "p95": 43.253968253968246,
+    "median": 11.494252873563216,
+    "matched": 19,
+    "prediction": 28,
+    "reference": 27,
+    "failed": [
+      "object_prediction",
+      "object_reference",
+      "median_abs_volume_error_pct",
+      "p95_abs_volume_error_pct",
+      "median_abs_diameter_error_pct",
+      "p95_centroid_displacement_vox"
+    ],
+    "cpu_gpu_flips": 0
+  },
+  "5": {
+    "gates": 5,
+    "p95": 23.856533360748422,
+    "median": 6.506826506826508,
+    "matched": 10,
+    "prediction": 16,
+    "reference": 12,
+    "failed": [
+      "porosity_absolute",
+      "object_prediction",
+      "object_reference",
+      "median_abs_volume_error_pct",
+      "p95_abs_volume_error_pct",
+      "median_abs_diameter_error_pct"
+    ],
+    "cpu_gpu_flips": 0
+  }
+}

@@ -7,7 +7,6 @@ from pathlib import Path
 from pore_latent_predict import NAME, SEAL, model_id
 from pore_spatial_score import run
 
-
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__)
     for k in ("baseline", "cache", "out"):

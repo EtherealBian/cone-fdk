@@ -1,0 +1,27 @@
+{
+  "pipeline_id": "171d18a5b245d8909e57191b1de8d6760a0c3883b53af2ee3489cb9faab59523",
+  "model": "F",
+  "specimens": {
+    "2": {
+      "voxels": 8388608,
+      "mask": "a3faa82dbebc12a6a1564a19b849648b5a4dfa03039c5c166f10d6c24efc3864",
+      "decision_disagreements": 0,
+      "max_field_difference": 1.1444091796875e-05,
+      "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030"
+    },
+    "3": {
+      "voxels": 8388608,
+      "mask": "108ee78c10f87105ab18468f094cfb38b149cd70740506758f7822d11a711ea6",
+      "decision_disagreements": 0,
+      "max_field_difference": 1.1444091796875e-05,
+      "raw": "460ea68425d9ac387485b65a3aa2b3f25da31cfe9de8181d4c1a5b0a982d26c8"
+    },
+    "5": {
+      "voxels": 8388608,
+      "mask": "ae7d597e952dd382cfa87cf2f504880f391e8d606aa2f807a61cf7d7737d655b",
+      "decision_disagreements": 0,
+      "max_field_difference": 2.288818359375e-05,
+      "raw": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37"
+    }
+  }
+}
