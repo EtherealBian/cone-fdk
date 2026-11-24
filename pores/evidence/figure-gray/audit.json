@@ -1,0 +1,10 @@
+{
+  "measurements_checked": 420,
+  "maximum_absolute_difference": 2.0317081350640365e-14,
+  "selected": "r10h40",
+  "ratios": {
+    "median": 0.7980583193493352,
+    "r10h30": 0.9892460007615453
+  },
+  "paper_pixels_exported": false
+}

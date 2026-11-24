@@ -140,3 +140,18 @@ def test_census_geometry_and_paired_augmentations():
             counts["census"][i]["unique_voxels"] == 24 * 256 * 256
             and counts["replacement"][i]["unique_voxels"] < 24 * 256 * 256
         )
+
+
+def test_census_archive_and_full_coverage():
+    check_archive("census-train", ("replacement", "census"))
+    d = json.loads((E / "census-train/predictions.json").read_text())
+    for i in ("2", "3", "5"):
+        a, b = [d["coverage"][k][i] for k in ("replacement", "census")]
+        assert (
+            a["common_sha256"] == b["common_sha256"]
+            and a["augment_sha256"] == b["augment_sha256"]
+        )
+        assert (
+            a["unique_grid_tiles"] < b["unique_grid_tiles"] == N
+            and a["unique_voxels"] < b["unique_voxels"] == 1572864
+        )

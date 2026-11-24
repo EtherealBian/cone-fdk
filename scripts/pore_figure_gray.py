@@ -119,8 +119,8 @@ def evaluate(pred, panels, out):
     ox, oy = doc["field_origin_xy"]
     result = {}
     arms = [f"r{r}h{h}" for r in (10, 21) for h in BANDS]
-    for part, (l, u) in RANGES.items():
-        yy, xx = np.mgrid[80:424, l:u]
+    for part, (left, right) in RANGES.items():
+        yy, xx = np.mgrid[80:424, left:right]
         xy = (x - ox, y - oy, s)
         if any(
             q.min() < 0 or q.max() >= n - 1
