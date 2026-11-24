@@ -1,0 +1,622 @@
+[
+  {
+    "seed": 88426,
+    "original": 57,
+    "prior_gray": 128,
+    "label": 12,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": true,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 744214,
+    "original": 18,
+    "prior_gray": 74,
+    "label": 14,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1096,
+      "sum_annulus": 56609556,
+      "n_integrated": 368,
+      "sum_integrated": 18167754,
+      "numerator": 1840916448,
+      "denominator": 38180376
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 1269105,
+    "original": 161,
+    "prior_gray": 161,
+    "label": 17,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1850,
+      "sum_annulus": 97778628,
+      "n_integrated": 1055,
+      "sum_integrated": 52479711,
+      "numerator": 12137974380,
+      "denominator": 68895156
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 15,
+    "applied_delta": 15
+  },
+  {
+    "seed": 1478078,
+    "original": 42,
+    "prior_gray": 95,
+    "label": 22,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 134
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 1483067,
+    "original": 86,
+    "prior_gray": 86,
+    "label": 23,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1530,
+      "sum_annulus": 80478354,
+      "n_integrated": 736,
+      "sum_integrated": 36765429,
+      "numerator": 5961924348,
+      "denominator": 56203728
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 20,
+    "applied_delta": 20
+  },
+  {
+    "seed": 1617420,
+    "original": 129,
+    "prior_gray": 129,
+    "label": 25,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 7
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 1662747,
+    "original": 243,
+    "prior_gray": 243,
+    "label": 27,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 19
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 1749014,
+    "original": 105,
+    "prior_gray": 105,
+    "label": 29,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 3
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 1815769,
+    "original": 151,
+    "prior_gray": 151,
+    "label": 30,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1796,
+      "sum_annulus": 93850904,
+      "n_integrated": 1006,
+      "sum_integrated": 50238933,
+      "numerator": 8369771512,
+      "denominator": 64736872
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": -22,
+    "applied_delta": -22
+  },
+  {
+    "seed": 1980363,
+    "original": 134,
+    "prior_gray": 134,
+    "label": 34,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1817,
+      "sum_annulus": 95898555,
+      "n_integrated": 1007,
+      "sum_integrated": 50518378,
+      "numerator": 9555904118,
+      "denominator": 67394388
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 8,
+    "applied_delta": 8
+  },
+  {
+    "seed": 2033676,
+    "original": 397,
+    "prior_gray": 397,
+    "label": 35,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 30
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 2087467,
+    "original": 234,
+    "prior_gray": 234,
+    "label": 36,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 2087,
+      "sum_annulus": 108389390,
+      "n_integrated": 1327,
+      "sum_integrated": 64059789,
+      "numerator": 20279881774,
+      "denominator": 73890238
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 40,
+    "applied_delta": 40
+  },
+  {
+    "seed": 2294595,
+    "original": 15,
+    "prior_gray": 67,
+    "label": 40,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 2326505,
+    "original": 254,
+    "prior_gray": 254,
+    "label": 41,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 2327,
+      "sum_annulus": 121592108,
+      "n_integrated": 1484,
+      "sum_integrated": 72467664,
+      "numerator": 23620868288,
+      "denominator": 83863834
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 28,
+    "applied_delta": 28
+  },
+  {
+    "seed": 2520430,
+    "original": 48,
+    "prior_gray": 151,
+    "label": 43,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1404,
+      "sum_annulus": 74775720,
+      "n_integrated": 600,
+      "sum_integrated": 30343511,
+      "numerator": 4526285112,
+      "denominator": 53425176
+    },
+    "mass": true,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 2535228,
+    "original": 239,
+    "prior_gray": 239,
+    "label": 44,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 2233,
+      "sum_annulus": 117689501,
+      "n_integrated": 1418,
+      "sum_integrated": 69911767,
+      "numerator": 21541473414,
+      "denominator": 82494424
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 22,
+    "applied_delta": 22
+  },
+  {
+    "seed": 2548657,
+    "original": 266,
+    "prior_gray": 266,
+    "label": 45,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 2236,
+      "sum_annulus": 116363260,
+      "n_integrated": 1458,
+      "sum_integrated": 70848709,
+      "numerator": 22479839512,
+      "denominator": 79636544
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 16,
+    "applied_delta": 16
+  },
+  {
+    "seed": 2570246,
+    "original": 165,
+    "prior_gray": 165,
+    "label": 46,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 2685241,
+    "original": 19,
+    "prior_gray": 80,
+    "label": 47,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 2724533,
+    "original": 145,
+    "prior_gray": 145,
+    "label": 48,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 60
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 2962976,
+    "original": 59,
+    "prior_gray": 136,
+    "label": 51,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 1
+    },
+    "mass": false,
+    "size": true,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 3283606,
+    "original": 10,
+    "prior_gray": 65,
+    "label": 60,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 998,
+      "sum_annulus": 52445931,
+      "n_integrated": 296,
+      "sum_integrated": 14714786,
+      "numerator": 1677278296,
+      "denominator": 36562794
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 3311338,
+    "original": 123,
+    "prior_gray": 123,
+    "label": 61,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 23
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 3470499,
+    "original": 14,
+    "prior_gray": 72,
+    "label": 64,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1004,
+      "sum_annulus": 52117559,
+      "n_integrated": 314,
+      "sum_integrated": 15535228,
+      "numerator": 1535089228,
+      "denominator": 35495254
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 3509988,
+    "original": 35,
+    "prior_gray": 48,
+    "label": 66,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 48
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 3579679,
+    "original": 87,
+    "prior_gray": 87,
+    "label": 70,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1512,
+      "sum_annulus": 79523462,
+      "n_integrated": 733,
+      "sum_integrated": 36418632,
+      "numerator": 6451452124,
+      "denominator": 55526332
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 21,
+    "applied_delta": 21
+  },
+  {
+    "seed": 3897132,
+    "original": 85,
+    "prior_gray": 85,
+    "label": 75,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1525,
+      "sum_annulus": 80301386,
+      "n_integrated": 730,
+      "sum_integrated": 36456765,
+      "numerator": 6046890310,
+      "denominator": 56192122
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 21,
+    "applied_delta": 21
+  },
+  {
+    "seed": 4033459,
+    "original": 202,
+    "prior_gray": 202,
+    "label": 77,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 2093,
+      "sum_annulus": 109858326,
+      "n_integrated": 1282,
+      "sum_integrated": 63293919,
+      "numerator": 16728402930,
+      "denominator": 76417314
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 17,
+    "applied_delta": 17
+  },
+  {
+    "seed": 4114231,
+    "original": 49,
+    "prior_gray": 103,
+    "label": 78,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1321,
+      "sum_annulus": 69013714,
+      "n_integrated": 553,
+      "sum_integrated": 27523100,
+      "numerator": 3613137484,
+      "denominator": 47583842
+    },
+    "mass": true,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 4231654,
+    "original": 63,
+    "prior_gray": 140,
+    "label": 81,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1371,
+      "sum_annulus": 71746462,
+      "n_integrated": 609,
+      "sum_integrated": 30406507,
+      "numerator": 4012548522,
+      "denominator": 49626038
+    },
+    "mass": true,
+    "size": true,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 4342008,
+    "original": 13,
+    "prior_gray": 58,
+    "label": 83,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 11
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 4375284,
+    "original": 359,
+    "prior_gray": 359,
+    "label": 84,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 4436688,
+    "original": 25,
+    "prior_gray": 80,
+    "label": 87,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1207,
+      "sum_annulus": 63135640,
+      "n_integrated": 442,
+      "sum_integrated": 22055038,
+      "numerator": 2571044028,
+      "denominator": 43632818
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 4807763,
+    "original": 8,
+    "prior_gray": 53,
+    "label": 89,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 27
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 5275736,
+    "original": 328,
+    "prior_gray": 328,
+    "label": 97,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 5346238,
+    "original": 131,
+    "prior_gray": 131,
+    "label": 98,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 2
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 5465980,
+    "original": 55,
+    "prior_gray": 148,
+    "label": 100,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1369,
+      "sum_annulus": 72798800,
+      "n_integrated": 594,
+      "sum_integrated": 30094380,
+      "numerator": 4086561960,
+      "denominator": 51867646
+    },
+    "mass": true,
+    "size": true,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 5846216,
+    "original": 54,
+    "prior_gray": 104,
+    "label": 111,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  }
+]

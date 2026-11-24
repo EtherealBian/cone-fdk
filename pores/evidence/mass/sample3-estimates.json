@@ -1,0 +1,660 @@
+[
+  {
+    "seed": 290277,
+    "original": 383,
+    "prior_gray": 383,
+    "label": 25,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 332934,
+    "original": 22,
+    "prior_gray": 83,
+    "label": 26,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 492223,
+    "original": 155,
+    "prior_gray": 155,
+    "label": 28,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 93
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 550634,
+    "original": 12,
+    "prior_gray": 71,
+    "label": 29,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 36
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 665244,
+    "original": 25,
+    "prior_gray": 60,
+    "label": 31,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 63
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 961436,
+    "original": 73,
+    "prior_gray": 73,
+    "label": 39,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 12
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 1049967,
+    "original": 20,
+    "prior_gray": 59,
+    "label": 42,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 1321935,
+    "original": 10,
+    "prior_gray": 57,
+    "label": 47,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 944,
+      "sum_annulus": 42380431,
+      "n_integrated": 274,
+      "sum_integrated": 11084332,
+      "numerator": 2297257372,
+      "denominator": 45426270
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 1358126,
+    "original": 47,
+    "prior_gray": 86,
+    "label": 48,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 223
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 1577829,
+    "original": 12,
+    "prior_gray": 27,
+    "label": 52,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 141
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 1808407,
+    "original": 56,
+    "prior_gray": 135,
+    "label": 56,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1372,
+      "sum_annulus": 62623551,
+      "n_integrated": 598,
+      "sum_integrated": 25430984,
+      "numerator": 5115146900,
+      "denominator": 68078606
+    },
+    "mass": true,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 1898840,
+    "original": 26,
+    "prior_gray": 87,
+    "label": 60,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 1938146,
+    "original": 14,
+    "prior_gray": 70,
+    "label": 62,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 10
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 2044678,
+    "original": 86,
+    "prior_gray": 86,
+    "label": 65,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 2407749,
+    "original": 9,
+    "prior_gray": 29,
+    "label": 70,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 137
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 2459404,
+    "original": 11,
+    "prior_gray": 41,
+    "label": 73,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 113
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 2630533,
+    "original": 8,
+    "prior_gray": 22,
+    "label": 77,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 136
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 2788504,
+    "original": 93,
+    "prior_gray": 93,
+    "label": 81,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 81
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 2867954,
+    "original": 27,
+    "prior_gray": 63,
+    "label": 83,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 184
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 3114145,
+    "original": 93,
+    "prior_gray": 93,
+    "label": 85,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1501,
+      "sum_annulus": 67440503,
+      "n_integrated": 734,
+      "sum_integrated": 30964356,
+      "numerator": 6047661692,
+      "denominator": 72337338
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": -9,
+    "applied_delta": -9
+  },
+  {
+    "seed": 3223771,
+    "original": 127,
+    "prior_gray": 127,
+    "label": 90,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 6
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 3624327,
+    "original": 18,
+    "prior_gray": 83,
+    "label": 99,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1137,
+      "sum_annulus": 49341100,
+      "n_integrated": 392,
+      "sum_integrated": 15987470,
+      "numerator": 2327915620,
+      "denominator": 51305684
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 3654993,
+    "original": 41,
+    "prior_gray": 112,
+    "label": 101,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 1
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 3891405,
+    "original": 283,
+    "prior_gray": 283,
+    "label": 109,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 78
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 4020704,
+    "original": 11,
+    "prior_gray": 24,
+    "label": 110,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 223
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 4134236,
+    "original": 35,
+    "prior_gray": 76,
+    "label": 112,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 194
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 4184673,
+    "original": 15,
+    "prior_gray": 69,
+    "label": 113,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 125
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 4361514,
+    "original": 160,
+    "prior_gray": 160,
+    "label": 116,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 2131,
+      "sum_annulus": 94211798,
+      "n_integrated": 1223,
+      "sum_integrated": 50257468,
+      "numerator": 16244729292,
+      "denominator": 99629088
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 3,
+    "applied_delta": 3
+  },
+  {
+    "seed": 4727699,
+    "original": 252,
+    "prior_gray": 252,
+    "label": 121,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 2171,
+      "sum_annulus": 95228850,
+      "n_integrated": 1408,
+      "sum_integrated": 55936236,
+      "numerator": 25289304888,
+      "denominator": 99996472
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 1,
+    "applied_delta": 1
+  },
+  {
+    "seed": 4861903,
+    "original": 370,
+    "prior_gray": 370,
+    "label": 125,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 23
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 4885929,
+    "original": 160,
+    "prior_gray": 160,
+    "label": 126,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1858,
+      "sum_annulus": 81912803,
+      "n_integrated": 1063,
+      "sum_integrated": 42933933,
+      "numerator": 14604124150,
+      "denominator": 86406462
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 9,
+    "applied_delta": 9
+  },
+  {
+    "seed": 5015773,
+    "original": 43,
+    "prior_gray": 68,
+    "label": 134,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 188
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 5052410,
+    "original": 16,
+    "prior_gray": 68,
+    "label": 135,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 5101883,
+    "original": 211,
+    "prior_gray": 211,
+    "label": 138,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 8
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 5275874,
+    "original": 16,
+    "prior_gray": 58,
+    "label": 149,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 48
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 5402867,
+    "original": 30,
+    "prior_gray": 104,
+    "label": 153,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1167,
+      "sum_annulus": 49638576,
+      "n_integrated": 432,
+      "sum_integrated": 17559477,
+      "numerator": 1903910346,
+      "denominator": 50650596
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 5452432,
+    "original": 272,
+    "prior_gray": 272,
+    "label": 156,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 5602778,
+    "original": 36,
+    "prior_gray": 154,
+    "label": 158,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 18
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 5606925,
+    "original": 109,
+    "prior_gray": 109,
+    "label": 159,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 22
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 5618672,
+    "original": 46,
+    "prior_gray": 106,
+    "label": 160,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 13
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 5819677,
+    "original": 43,
+    "prior_gray": 142,
+    "label": 165,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 5850157,
+    "original": 224,
+    "prior_gray": 224,
+    "label": 168,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 5852354,
+    "original": 68,
+    "prior_gray": 68,
+    "label": 169,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 5909726,
+    "original": 65,
+    "prior_gray": 65,
+    "label": 171,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 5923252,
+    "original": 57,
+    "prior_gray": 156,
+    "label": 174,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": true,
+    "requested_delta": 0,
+    "applied_delta": 0
+  }
+]

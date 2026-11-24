@@ -1,0 +1,305 @@
+[
+  {
+    "seed": 190872,
+    "original": 14,
+    "prior_gray": 49,
+    "label": 17,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 390423,
+    "original": 237,
+    "prior_gray": 237,
+    "label": 21,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 417185,
+    "original": 88,
+    "prior_gray": 88,
+    "label": 24,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1572,
+      "sum_annulus": 83301543,
+      "n_integrated": 773,
+      "sum_integrated": 38709115,
+      "numerator": 7082727918,
+      "denominator": 68287062
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 16,
+    "applied_delta": 16
+  },
+  {
+    "seed": 491981,
+    "original": 126,
+    "prior_gray": 126,
+    "label": 26,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 24
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 887710,
+    "original": 244,
+    "prior_gray": 244,
+    "label": 28,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 2
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 1062208,
+    "original": 217,
+    "prior_gray": 217,
+    "label": 30,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 2086,
+      "sum_annulus": 109426235,
+      "n_integrated": 1295,
+      "sum_integrated": 63844141,
+      "numerator": 17056192398,
+      "denominator": 88389858
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": -24,
+    "applied_delta": -24
+  },
+  {
+    "seed": 1094136,
+    "original": 13,
+    "prior_gray": 69,
+    "label": 31,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1032,
+      "sum_annulus": 53454227,
+      "n_integrated": 326,
+      "sum_integrated": 15998294,
+      "numerator": 1831677188,
+      "denominator": 42365110
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 1411135,
+    "original": 29,
+    "prior_gray": 75,
+    "label": 38,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1134,
+      "sum_annulus": 58503893,
+      "n_integrated": 412,
+      "sum_integrated": 20212848,
+      "numerator": 2364468568,
+      "denominator": 46085158
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 1673927,
+    "original": 345,
+    "prior_gray": 345,
+    "label": 44,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 3075,
+      "sum_annulus": 162986981,
+      "n_integrated": 2079,
+      "sum_integrated": 101475422,
+      "numerator": 53626021698,
+      "denominator": 133657312
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 56,
+    "applied_delta": 56
+  },
+  {
+    "seed": 1694968,
+    "original": 17,
+    "prior_gray": 63,
+    "label": 45,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 84
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 1712504,
+    "original": 36,
+    "prior_gray": 62,
+    "label": 46,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 4
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 2618935,
+    "original": 12,
+    "prior_gray": 41,
+    "label": 56,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 84
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 2740307,
+    "original": 21,
+    "prior_gray": 48,
+    "label": 58,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 280
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 3060894,
+    "original": 333,
+    "prior_gray": 333,
+    "label": 59,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 2500,
+      "sum_annulus": 131457938,
+      "n_integrated": 1724,
+      "sum_integrated": 83162840,
+      "numerator": 37452770224,
+      "denominator": 106560876
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 18,
+    "applied_delta": 18
+  },
+  {
+    "seed": 3125888,
+    "original": 78,
+    "prior_gray": 78,
+    "label": 60,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 2
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 3340691,
+    "original": 8,
+    "prior_gray": 66,
+    "label": 63,
+    "estimate": {
+      "reason": "edge"
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 3684984,
+    "original": 426,
+    "prior_gray": 426,
+    "label": 65,
+    "estimate": {
+      "reason": "neighbor",
+      "foreign_sites": 1
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 4926297,
+    "original": 17,
+    "prior_gray": 97,
+    "label": 78,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1105,
+      "sum_annulus": 58014403,
+      "n_integrated": 371,
+      "sum_integrated": 18391638,
+      "numerator": 2401167046,
+      "denominator": 46919896
+    },
+    "mass": false,
+    "size": false,
+    "requested_delta": 0,
+    "applied_delta": 0
+  },
+  {
+    "seed": 5214389,
+    "original": 52,
+    "prior_gray": 104,
+    "label": 81,
+    "estimate": {
+      "reason": "ok",
+      "n_annulus": 1308,
+      "sum_annulus": 68927792,
+      "n_integrated": 554,
+      "sum_integrated": 27370386,
+      "numerator": 4771063760,
+      "denominator": 56050648
+    },
+    "mass": true,
+    "size": true,
+    "requested_delta": 0,
+    "applied_delta": 0
+  }
+]
