@@ -23,4 +23,6 @@ try {
     if($LASTEXITCODE){throw 'Adaptive NLM compilation failed'}
     & $Python scripts/ptx.py pores/rankpatch.cu build/pores/rankpatch.ptx
     if($LASTEXITCODE){throw 'Rank patch compilation failed'}
+    & $Python scripts/ptx.py pores/transfer_faces.cu build/pores/transfer_faces.ptx
+    if($LASTEXITCODE){throw 'Transfer boundary compilation failed'}
 } finally {$env:Path=$old;Pop-Location}
