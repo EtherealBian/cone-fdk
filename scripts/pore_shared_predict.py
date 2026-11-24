@@ -10,7 +10,7 @@ import numpy as np
 from pore_shared_model import DEV, train
 from pore_spatial_gpu import forward
 from pore_spatial_model import ROOT, fields, parameters
-from pore_spatial_predict import Denoise, SHAPE, Z, digest, sha, stack, token, verified
+from pore_spatial_predict import SHAPE, Denoise, Z, digest, sha, stack, token, verified
 from pore_spatial_predict import model_id as f_id
 
 SEAL = ROOT / "pores/evidence/candidate-h/predictions.json"
