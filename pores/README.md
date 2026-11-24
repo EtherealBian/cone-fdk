@@ -66,3 +66,5 @@ The experimental snapshot predates the executable freeze lock and is development
 ### Reproduce the D diagnostics
 
 After running `python pores/candidate.py --model D --specimens 2 3 5 --cache <archive-directory> --out build/candidate-D`, run `pores/cases.py`, `pores/stratify.py` and `scripts/pore_overlap.py` with arguments `build/candidate-D 2 3 5`. For the mechanism check, extract the three published C review ZIPs into `build/candidate-C` and run `python scripts/pore_cut.py build/candidate-C build/articulation-C --cache <archive-directory>`. `python scripts/pore_example.py build/candidate-C build/candidate-D sample3.png` renders the same four-panel raw-slice comparison. `python scripts/pore_report_d.py --check` checks the published comparison against the committed per-specimen records.
+
+[校准片预处理对照](SUPPORT-PILOT.md)：用同一 CUDA 去噪算法检查 27、19 和 7 体素中值邻域。此对照不使用正式评估片段，不能代替逐孔验收。

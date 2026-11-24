@@ -1,0 +1,291 @@
+{
+  "scope": "calibration-only pilot of direct 2-D NLM/Bernsen; not the C/D classifier or an acceptance run",
+  "fit_z": [
+    160,
+    168
+  ],
+  "check_z": [
+    176,
+    184
+  ],
+  "required_per_scan_dice_gain": 0.005,
+  "scans": {
+    "2": {
+      "cube27": {
+        "voxels_in_support": 27,
+        "band": 30,
+        "contrast_offset": -2,
+        "threshold_bias": 0,
+        "training": {
+          "tp": 6703,
+          "fp": 715,
+          "fn": 327,
+          "tn": 516543,
+          "dice": 0.9278792912513842,
+          "precision": 0.9036128336478835,
+          "recall": 0.9534850640113798,
+          "predicted_porosity_pct": 1.4148712158203125,
+          "reference_porosity_pct": 1.3408660888671875,
+          "porosity_error_pp": 0.074005126953125
+        },
+        "calibration_check": {
+          "tp": 5241,
+          "fp": 509,
+          "fn": 106,
+          "tn": 518432,
+          "dice": 0.9445796161124629,
+          "precision": 0.9114782608695652,
+          "recall": 0.980175799513746,
+          "predicted_porosity_pct": 1.0967254638671875,
+          "reference_porosity_pct": 1.0198593139648438,
+          "porosity_error_pp": 0.07686614990234375
+        }
+      },
+      "edges19": {
+        "voxels_in_support": 19,
+        "band": 30,
+        "contrast_offset": -2,
+        "threshold_bias": -1,
+        "training": {
+          "tp": 6540,
+          "fp": 609,
+          "fn": 490,
+          "tn": 516649,
+          "dice": 0.9224910078284787,
+          "precision": 0.9148132605958875,
+          "recall": 0.930298719772404,
+          "predicted_porosity_pct": 1.3635635375976562,
+          "reference_porosity_pct": 1.3408660888671875,
+          "porosity_error_pp": 0.02269744873046875
+        },
+        "calibration_check": {
+          "tp": 5159,
+          "fp": 446,
+          "fn": 188,
+          "tn": 518495,
+          "dice": 0.9421110299488678,
+          "precision": 0.92042818911686,
+          "recall": 0.9648400972507949,
+          "predicted_porosity_pct": 1.0690689086914062,
+          "reference_porosity_pct": 1.0198593139648438,
+          "porosity_error_pp": 0.0492095947265625
+        }
+      },
+      "faces7": {
+        "voxels_in_support": 7,
+        "band": 30,
+        "contrast_offset": 0,
+        "threshold_bias": -1,
+        "training": {
+          "tp": 6441,
+          "fp": 731,
+          "fn": 589,
+          "tn": 516527,
+          "dice": 0.9070553443177017,
+          "precision": 0.8980758505298383,
+          "recall": 0.9162162162162162,
+          "predicted_porosity_pct": 1.367950439453125,
+          "reference_porosity_pct": 1.3408660888671875,
+          "porosity_error_pp": 0.0270843505859375
+        },
+        "calibration_check": {
+          "tp": 5109,
+          "fp": 580,
+          "fn": 238,
+          "tn": 518361,
+          "dice": 0.9258789416455238,
+          "precision": 0.8980488662330813,
+          "recall": 0.9554890592855807,
+          "predicted_porosity_pct": 1.0850906372070312,
+          "reference_porosity_pct": 1.0198593139648438,
+          "porosity_error_pp": 0.0652313232421875
+        }
+      }
+    },
+    "3": {
+      "cube27": {
+        "voxels_in_support": 27,
+        "band": 30,
+        "contrast_offset": -2,
+        "threshold_bias": 1,
+        "training": {
+          "tp": 92998,
+          "fp": 3962,
+          "fn": 3159,
+          "tn": 424169,
+          "dice": 0.9631259806231456,
+          "precision": 0.9591377887788779,
+          "recall": 0.9671474775627359,
+          "predicted_porosity_pct": 18.49365234375,
+          "reference_porosity_pct": 18.340492248535156,
+          "porosity_error_pp": 0.15316009521484375
+        },
+        "calibration_check": {
+          "tp": 83109,
+          "fp": 4048,
+          "fn": 3050,
+          "tn": 434081,
+          "dice": 0.959045904590459,
+          "precision": 0.9535550787659052,
+          "recall": 0.9646003319444283,
+          "predicted_porosity_pct": 16.623878479003906,
+          "reference_porosity_pct": 16.43352508544922,
+          "porosity_error_pp": 0.1903533935546875
+        }
+      },
+      "edges19": {
+        "voxels_in_support": 19,
+        "band": 30,
+        "contrast_offset": -2,
+        "threshold_bias": 1,
+        "training": {
+          "tp": 92509,
+          "fp": 4435,
+          "fn": 3648,
+          "tn": 423696,
+          "dice": 0.9581410764315047,
+          "precision": 0.954251939263905,
+          "recall": 0.9620620443649448,
+          "predicted_porosity_pct": 18.4906005859375,
+          "reference_porosity_pct": 18.340492248535156,
+          "porosity_error_pp": 0.15010833740234375
+        },
+        "calibration_check": {
+          "tp": 82729,
+          "fp": 4489,
+          "fn": 3430,
+          "tn": 433640,
+          "dice": 0.954324968133028,
+          "precision": 0.9485312664816895,
+          "recall": 0.9601898814981604,
+          "predicted_porosity_pct": 16.635513305664062,
+          "reference_porosity_pct": 16.43352508544922,
+          "porosity_error_pp": 0.20198822021484375
+        }
+      },
+      "faces7": {
+        "voxels_in_support": 7,
+        "band": 30,
+        "contrast_offset": -2,
+        "threshold_bias": 1,
+        "training": {
+          "tp": 91448,
+          "fp": 5309,
+          "fn": 4709,
+          "tn": 422822,
+          "dice": 0.9480701245114403,
+          "precision": 0.9451305848672448,
+          "recall": 0.951028006281394,
+          "predicted_porosity_pct": 18.454933166503906,
+          "reference_porosity_pct": 18.340492248535156,
+          "porosity_error_pp": 0.11444091796875
+        },
+        "calibration_check": {
+          "tp": 81961,
+          "fp": 5360,
+          "fn": 4198,
+          "tn": 432769,
+          "dice": 0.9449043117362232,
+          "precision": 0.9386172856472097,
+          "recall": 0.951276129017282,
+          "predicted_porosity_pct": 16.65515899658203,
+          "reference_porosity_pct": 16.43352508544922,
+          "porosity_error_pp": 0.2216339111328125
+        }
+      }
+    },
+    "5": {
+      "cube27": {
+        "voxels_in_support": 27,
+        "band": 30,
+        "contrast_offset": 0,
+        "threshold_bias": 1,
+        "training": {
+          "tp": 92990,
+          "fp": 2398,
+          "fn": 1625,
+          "tn": 427275,
+          "dice": 0.9788266501055246,
+          "precision": 0.9748605694636642,
+          "recall": 0.9828251334355018,
+          "predicted_porosity_pct": 18.193817138671875,
+          "reference_porosity_pct": 18.04637908935547,
+          "porosity_error_pp": 0.14743804931640625
+        },
+        "calibration_check": {
+          "tp": 72074,
+          "fp": 1954,
+          "fn": 1210,
+          "tn": 449050,
+          "dice": 0.9785217769088737,
+          "precision": 0.9736045820500351,
+          "recall": 0.9834888925277004,
+          "predicted_porosity_pct": 14.119720458984375,
+          "reference_porosity_pct": 13.977813720703125,
+          "porosity_error_pp": 0.14190673828125
+        }
+      },
+      "edges19": {
+        "voxels_in_support": 19,
+        "band": 42,
+        "contrast_offset": 0,
+        "threshold_bias": 1,
+        "training": {
+          "tp": 92562,
+          "fp": 2333,
+          "fn": 2053,
+          "tn": 427340,
+          "dice": 0.9768561025803387,
+          "precision": 0.9754149322935877,
+          "recall": 0.9783015378111293,
+          "predicted_porosity_pct": 18.09978485107422,
+          "reference_porosity_pct": 18.04637908935547,
+          "porosity_error_pp": 0.05340576171875
+        },
+        "calibration_check": {
+          "tp": 71716,
+          "fp": 1770,
+          "fn": 1568,
+          "tn": 449234,
+          "dice": 0.9772569326156572,
+          "precision": 0.9759137794954141,
+          "recall": 0.9786037880028383,
+          "predicted_porosity_pct": 14.016342163085938,
+          "reference_porosity_pct": 13.977813720703125,
+          "porosity_error_pp": 0.0385284423828125
+        }
+      },
+      "faces7": {
+        "voxels_in_support": 7,
+        "band": 42,
+        "contrast_offset": 0,
+        "threshold_bias": 1,
+        "training": {
+          "tp": 91994,
+          "fp": 2661,
+          "fn": 2621,
+          "tn": 427012,
+          "dice": 0.9720927775136049,
+          "precision": 0.9718873804870318,
+          "recall": 0.9722982613750463,
+          "predicted_porosity_pct": 18.05400848388672,
+          "reference_porosity_pct": 18.04637908935547,
+          "porosity_error_pp": 0.00762939453125
+        },
+        "calibration_check": {
+          "tp": 71418,
+          "fp": 2141,
+          "fn": 1866,
+          "tn": 448863,
+          "dice": 0.9727123526487473,
+          "precision": 0.970894112209247,
+          "recall": 0.9745374160799083,
+          "predicted_porosity_pct": 14.030265808105469,
+          "reference_porosity_pct": 13.977813720703125,
+          "porosity_error_pp": 0.05245208740234375
+        }
+      }
+    }
+  },
+  "promote": []
+}

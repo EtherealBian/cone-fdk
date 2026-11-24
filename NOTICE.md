@@ -7,3 +7,5 @@
 - NVIDIA driver, NVRTC and cuFFT are external NVIDIA software subject to NVIDIA terms. No NVIDIA DLL is redistributed here. The core uses the CUDA Driver API (https://docs.nvidia.com/cuda/cuda-driver-api/) and cuFFT (https://docs.nvidia.com/cuda/cufft/).
 
 - Measurement branch: Felix H. Kim et al., National Institute of Standards and Technology, [CoCr XCT data and author segmentation](https://doi.org/10.18434/M32162), [NIST data terms](https://www.nist.gov/open/license). On 2026-11-23 the images were cropped, filtered, segmented, measured and annotated for evaluation. No affiliation or endorsement is implied. No full scan archives are bundled. The published binary reference is a digital comparator, not traceable physical ground truth.
+
+- On 2026-11-24 the NIST development scans were newly filtered and segmented (candidate D). The specimen-3 comparison shows a windowed, enlarged raw crop with digital-reference and C/D prediction overlays. Source: Felix H. Kim et al., National Institute of Standards and Technology, DOI 10.18434/M32162. No endorsement.
