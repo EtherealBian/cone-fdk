@@ -1,10 +1,8 @@
-# ConeFDK · Single-GPU cone-beam CT reconstruction
+# ConeFDK · Single-GPU cone-beam CT
 
-**Pore measurement (experimental):** [review real CoCr specimens and the release gates](https://github.com/EtherealBian/cone-fdk/tree/measurement-lab/pores). This is separate from the validated reconstruction below; automatic per-pore precision has not passed confirmation.
+ConeFDK turns 720 measured X-ray projections of a walnut into a **512³ volume** on a Windows laptop. The C++/CUDA engine weights each projection, filters detector rows with cuFFT, and backprojects into slabs that fit the GPU memory budget. Python prepares the input and checks the output; the native executable runs without it.
 
-Reconstruct a 3D attenuation volume from a full rotation of X-ray projections on a Windows PC. ConeFDK uses native C++ and CUDA for cone weighting, filtering and backprojection; cuFFT provides the batched 1D transforms. Python prepares input and checks the result against independent implementations. It is not needed in the reconstruction executable.
-
-[中文文档](README.zh-CN.md) · [Windows release](https://github.com/EtherealBian/cone-fdk/releases/tag/v0.1.0) · [Download the offline slice viewer](https://github.com/EtherealBian/cone-fdk/releases/download/v0.1.0/walnut-512-viewer.html)
+[中文](README.zh-CN.md) · [Project walkthrough](https://etherealbian.github.io/work/cone-fdk.html) · [Windows release v0.1.0](https://github.com/EtherealBian/cone-fdk/releases/tag/v0.1.0) · [Download the offline slice viewer](https://github.com/EtherealBian/cone-fdk/releases/download/v0.1.0/walnut-512-viewer.html)
 
 ![Axial sweep through a walnut reconstructed from 720 measured views](reports/walnut-sweep.gif)
 
@@ -17,6 +15,12 @@ Reconstruct a 3D attenuation volume from a full rotation of X-ray projections on
 | Does the reconstruction agree with an independent implementation? | 720 measured views, 8×8 detector binning, 512³ FP32 output. Full-volume relative L2 difference from ASTRA FDK: **0.02899%**. No registration or fitted intensity scale. | [Numerical checks](reports/RESULTS.md) |
 | Did the optimization help the whole application? | Median process time **2.392 → 2.009 s**, including startup and output flush (−16.0%); 6/6 paired runs faster, identical output bytes. Compared with the previous native engine, **not** ASTRA. | [All A/B trials](reports/native-ab.json) |
 | Can it reconstruct a volume larger than VRAM? | Wrote and hashed a **1,296³ FP32** volume (8,707,129,344 bytes) with a **512 MiB engine-owned device-buffer budget**. Five slices checked against ASTRA; not a full-volume cross-check at this size. | [Stress record](reports/oversize.json) |
+
+## A second use: measuring pores in metal
+
+The [measurement lab](https://github.com/EtherealBian/cone-fdk/tree/measurement-lab/pores) starts from **already reconstructed** cobalt-chromium scans. Its CUDA counter measures connected pores in a supplied binary mask. Finding the pore boundary from grayscale is a separate experiment: on development specimens 2, 3 and 5, the retained model E passed **10/11, 6/11 and 7/11** criteria. Its worst matched-pore volume error (P95) was **28.16%**, above the **15%** limit. The two reserved specimens remain unopened. This work is not part of the stable reconstruction release.
+
+[Compare the three specimens and replay E](https://github.com/EtherealBian/cone-fdk/blob/7b9d4bfc9c1ea8fe2750baa1a2b8154bfd09b418/pores/RETAINED-BASELINE.md) · [Inspect a pore in the source slices](https://etherealbian.github.io/work/cone-fdk.html#pore-pair) · [Compare digital boundaries from four external specimens](https://github.com/EtherealBian/cone-fdk/blob/7b9d4bfc9c1ea8fe2750baa1a2b8154bfd09b418/pores/EXTERNAL-REFERENCE-AGREEMENT.md)
 
 ## Try it
 
