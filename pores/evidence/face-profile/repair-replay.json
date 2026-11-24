@@ -1,0 +1,14 @@
+{
+  "original_commit": "7bc8c69e39a82f74dc61fbf5c36136eee116c309",
+  "original_manifest": "1e470f0205f6efdac2c361701f2a8bc128dc45fbc79a39942c7613c29d5c2d1c",
+  "repaired_manifest": "6ebfae044a3308d892c6b2a014efdcdba25ec9b57cf4df5db9849e95c439cf74",
+  "identical_fit_choices_and_masks": {
+    "fit.json": "58cdfe2c00fd6879fde48f326af5729f7eb5063df41d71b7a48d9929265e36a4",
+    "sample2-choices.json": "5969026a634f4215f0b103b5f1d1c4793c54cac8f4777f31d2e4d1eada079990",
+    "sample2-face.npz": "5c012e5fbdd7692eb758642ee9ee9ef99be2054a2cc9212eb4d61fd8aee3199b",
+    "sample3-choices.json": "5cc35d78fea0d97ab9c4d22e035b328fc36d736e02764045bed7cb30356680d9",
+    "sample3-face.npz": "427d1cf78e0d44360477e308d78d1f8b12c8e33f69ac1e1823aa386bcb334d2d",
+    "sample5-choices.json": "23b367e3d81eb1f3a8b53e24158eceba934e1d6b8e9131ac74ee579e40a3d5bb",
+    "sample5-face.npz": "28cd09d8802810eff2124ba4d15bc34cda1d2b17b948d3d1d33615ed50497c4a"
+  }
+}
