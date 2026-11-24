@@ -1,0 +1,231 @@
+{
+  "schema": 1,
+  "pipeline_id": "62edae3bddde9dcc3592cb5a3ba45f8b9a1ae9e37b8a9233ab8b7d6c8f9aa84a",
+  "identity": {
+    "parent": {
+      "base": {
+        "model": "E",
+        "files": {
+          "audit.py": "9f09a86bb2d6ad079f4e01569ee70e1a9f829e094ce97e982f120ac508f8e693",
+          "block_model.py": "0297c4ef4165aa1fad3f4a4f38248b07c3172208c6c115ce952a537f68d750ba",
+          "boundary_model.py": "f0ea0d3fe5ae9cc80f44def2f31042c7e48e75eece30417a3cb520965de090f0",
+          "bundle_review.py": "9101713e122335175a4331d088feddefbfd0c48b17af45df7c90bf2d3944bfe5",
+          "candidate.py": "6816b00b86851eb55656d3dd4f74a689b1afb3b12eb6f4cbd35068417d38cfd5",
+          "cases.py": "95953b487318e046231fae4811aedff046dc9d1992b512f282539802e3dc75a4",
+          "denoise.py": "0f41622de8d2b022dc956d592f297c142e31f5d1963eb49a0e7e88a241659493",
+          "freeze.py": "b22da12deaf2dc608087cd6ace828a598ac28406925d69d6d8baea4bf6c1a347",
+          "import_stack.py": "f2c8782f1a47f63c398d49719e4e21afd2fefef1266218c91d0f230e4cb797d3",
+          "local_model.py": "5824b9d1e1865bc57acb6f0fa8afaa5600f47c49af2c099c0a330d8faea9bba2",
+          "mask_check.py": "5c5ad8c9a76485ddfb39aef1e8feb31e10b58aa4c30cb257b8420bce352cb52f",
+          "neck_model.py": "1e313d0a010534d25491a6d39a525fee3730a8c4b30705f30f5f4a3b3c0233ed",
+          "package_native.py": "ba0ebc381c788a4e84982e15c820bb263a41ef1e1cbe0725371605d5ac827867",
+          "pore_check.py": "7046a18f709484d5074b3338bcf7f8449db42c4d3f39a8fdb1a39a1d59b6932b",
+          "rank_model.py": "6ff0048f1ea156acf82185d74732ad98c6aa651aecb5d00e2a4d10ed612fe5a1",
+          "residual_model.py": "29839a2ea7648d5b7950d34ffb8c71eb75a3959ada5b1af32b98ea7a03068f70",
+          "review.py": "248840defc10e7ad6f714ecb757f375fb717cfefa51ade06864618be14b3e14f",
+          "stratify.py": "d55c5b280d0ea93a1b5991fb871fee3e923caafab5457a1e2950a9dc2aabc630",
+          "summarize.py": "fa260b4498a64f3a4f4d4569bfa3e505271119f10bf525913585cd739ef41d78",
+          "validate.py": "2c81e4f6731d3fe852edcbb693af30e401d3cdcaddb179c2744443c211afa3c9",
+          "sources.json": "cd4372746809a99d04862a8cc0939456ed86c51cc44281d5ada8ff54852e1dc4",
+          "FINAL-GATE.md": "afca9a4473166851419cc1fcf213bbef9d5a0ef5eeffed748180cb1345e66094",
+          "PROTOCOL.md": "bd6327dce68c9d470c22810b56896c84810c0bde1bb513af6949f66a2c1d6e3e",
+          "review.html": "de63e07cb60056a586d90d4d62b1610142e19de277ca950ddfb9d2341ed5b4a0",
+          "cone-pores.exe": "afb2edcdc1e969df968f722192aa2af3c9959abf1dbd338af5e27479f1196b06",
+          "pores.ptx": "0d900a9bcdbaff294f4853cb3991b47b6db6f3795e70be8c14ea849cd5bd63b3",
+          "adaptive.ptx": "cc13f5d6542da7589a609cf5a20606e76a12b7fb479488fbf9affb143b7211ef",
+          "rankpatch.ptx": "3e6643a96c14eab1e966aae2afab78d482bf18aa6dd2fc78a7f7ad497ab0e95f"
+        },
+        "python": "3.12.16",
+        "packages": {
+          "numpy": "2.5.5",
+          "scipy": "1.18.1",
+          "scikit-learn": "1.9.1",
+          "pillow": "13.0.0",
+          "threadpoolctl": "3.8.0"
+        }
+      },
+      "files": {
+        "pores/EXPERIMENT-F.md": "1d03b9520af2b09a84a80bbaa8c9f16a788244a7324cd697f58c54f039081460",
+        "pores/spatial.cu": "04b4c13b5f38fb89a8dfe60d85a06dea6c0b0a1be26ce64102614b063766a1f9",
+        "build/pores/spatial.ptx": "82741408da39f040c74a8354cce00a34f78e07aecdf1c37a5548d61d133e0b40",
+        "scripts/pore_spatial_gpu.py": "c9c5bc78bee982f6bafaca6a1153abd74b3902983d18eeb332f8c0ccc254c060",
+        "scripts/pore_spatial_model.py": "78745e9d0a09f94a38cfb71ce064d3eba538a1383b294dfda4cde8459319638c",
+        "scripts/pore_spatial_predict.py": "b9cc33a678b7a7f451134383808fa17a9966e67ba8505cc32ac5ec21d8b083f9"
+      },
+      "torch": "2.15.0+cpu"
+    },
+    "files": {
+      "pores/EXPERIMENT-H.md": "81802e62ae1c182587f0bbbf4aa02f581382a7798ae86120e269223db68f10d9",
+      "scripts/pore_shared_model.py": "f7fc15730d01718d5c09edf8ce16c535749735cd34dcc4717d1fc067ebe54d97",
+      "scripts/pore_shared_predict.py": "434a4b3c310570cdcde6233b508aba6f00a938fc0582dae7b61e6dde06dd0c90",
+      "scripts/pore_transfer.py": "f4092f168839be8b363dd48db5eaf62acf16ed9920f8e5e2c2e1d35f678b73ca",
+      "pores/adaptive.cu": "5302f18c2c2d34da50603733d21988b77314bed4e5aeab40473e606fa579658b"
+    }
+  },
+  "origin_xyz": [
+    360,
+    376,
+    400
+  ],
+  "shape_zyx": [
+    128,
+    256,
+    256
+  ],
+  "shared_calibration": {
+    "object_census": {
+      "2": {
+        "16-63": 1,
+        "64-127": 6,
+        "128-255": 3,
+        "256-511": 4
+      },
+      "3": {
+        "16-63": 2,
+        "64-127": 1,
+        "128-255": 0,
+        "256-511": 0
+      },
+      "5": {
+        "16-63": 1,
+        "64-127": 0,
+        "128-255": 0,
+        "256-511": 0
+      }
+    },
+    "object_draws": {
+      "2": 150,
+      "3": 150,
+      "5": 150
+    },
+    "trace": [
+      {
+        "step": 0,
+        "loss": 0.16717511415481567,
+        "object": {
+          "specimen": 2,
+          "calibration_id": 50,
+          "size": 401,
+          "relative_soft_error": 0.16582916676998138
+        }
+      },
+      {
+        "step": 200,
+        "loss": 0.2007676661014557,
+        "object": {
+          "specimen": 5,
+          "calibration_id": 20,
+          "size": 46,
+          "relative_soft_error": 0.19983109831809998
+        }
+      },
+      {
+        "step": 400,
+        "loss": 0.33069780468940735,
+        "object": {
+          "specimen": 3,
+          "calibration_id": 50,
+          "size": 112,
+          "relative_soft_error": 0.596007764339447
+        }
+      },
+      {
+        "step": 600,
+        "loss": 0.2126367837190628,
+        "object": {
+          "specimen": 2,
+          "calibration_id": 25,
+          "size": 95,
+          "relative_soft_error": 0.29384347796440125
+        }
+      },
+      {
+        "step": 800,
+        "loss": 0.11015526950359344,
+        "object": {
+          "specimen": 5,
+          "calibration_id": 20,
+          "size": 46,
+          "relative_soft_error": 0.08229595422744751
+        }
+      },
+      {
+        "step": 1000,
+        "loss": 0.18071752786636353,
+        "object": {
+          "specimen": 3,
+          "calibration_id": 34,
+          "size": 18,
+          "relative_soft_error": 0.23336845636367798
+        }
+      },
+      {
+        "step": 1200,
+        "loss": 0.08046168833971024,
+        "object": {
+          "specimen": 2,
+          "calibration_id": 42,
+          "size": 171,
+          "relative_soft_error": 0.10187999159097672
+        }
+      },
+      {
+        "step": 1400,
+        "loss": 0.09248563647270203,
+        "object": {
+          "specimen": 5,
+          "calibration_id": 20,
+          "size": 46,
+          "relative_soft_error": 0.045155979692935944
+        }
+      },
+      {
+        "step": 1600,
+        "loss": 0.09427884221076965,
+        "object": {
+          "specimen": 3,
+          "calibration_id": 50,
+          "size": 112,
+          "relative_soft_error": 0.08120699971914291
+        }
+      },
+      {
+        "step": 1799,
+        "loss": 0.037824686616659164,
+        "object": null
+      }
+    ]
+  },
+  "specimens": {
+    "2": {
+      "raw": "e1501bb6ffa81444b06256c0d994cb9ad39f1fc623b32ec7fa48807fbf8ff030",
+      "segmented": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310",
+      "weights": "117c26db523cbe7d7335a0f5cdf9f60c0872bc3f7e1adbd01202e586619026ac",
+      "logits": "eaf2c428ebac43dae2e6a971985a33455272a9f544c0b0d6e8ab6afea08b0efc",
+      "mask": "01add73c1783ac6ea01740e6fc530a7ad51abb0123e466bb45a104755137ae82",
+      "max_abs_cpu_gpu_logit": 2.288818359375e-05,
+      "cpu_gpu_decision_disagreements": 0,
+      "first_disagreement": null
+    },
+    "3": {
+      "raw": "460ea68425d9ac387485b65a3aa2b3f25da31cfe9de8181d4c1a5b0a982d26c8",
+      "segmented": "f94c64a99f5f0e7971a3e0e2f7c932183009938aa5d284bcd23f4657674e6009",
+      "weights": "117c26db523cbe7d7335a0f5cdf9f60c0872bc3f7e1adbd01202e586619026ac",
+      "logits": "531d6274162921e6e6acac5376913c38e27f8526b28fd4f1f60ed974a3e70555",
+      "mask": "07cb61dc484fd941cbfe203f1f60ca093718b771b344ff782b6c0d154a99c00b",
+      "max_abs_cpu_gpu_logit": 1.52587890625e-05,
+      "cpu_gpu_decision_disagreements": 0,
+      "first_disagreement": null
+    },
+    "5": {
+      "raw": "ddca7082fe81d08c183fa13319d33a691669676adcb80a60d46202a034432d37",
+      "segmented": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b",
+      "weights": "117c26db523cbe7d7335a0f5cdf9f60c0872bc3f7e1adbd01202e586619026ac",
+      "logits": "8cc5cf561c6ef3ea0b3918dc81761769f575a67eed793fd056ed3522fed18d94",
+      "mask": "8e8503abf43160d9c7726b428b7b804a7c2f5354b23df9ec54e60cfc8cb34dd5",
+      "max_abs_cpu_gpu_logit": 1.9073486328125e-05,
+      "cpu_gpu_decision_disagreements": 0,
+      "first_disagreement": null
+    }
+  }
+}
