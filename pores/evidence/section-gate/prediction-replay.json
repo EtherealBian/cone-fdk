@@ -1,0 +1,10 @@
+{
+  "fit.json": "5e4f20e9c2873bb6e7e11d4ff40a575b91b802fab3b020495515c1780a496e4e",
+  "predictions.json": "8a96c37a0ee48962d5dd44824b2a346b908626fcb14fe8b1c7006e3f4476b052",
+  "sample2-choices.json": "58df646a00857ffe73cacc3d11a8cf2b452acf63c359a06d3866b985971790d7",
+  "sample2-gate.npz": "7bd8a1b77d7cb2ca1c831a80e2b2d89a6461a85304c8c53d4f7add57e331a33d",
+  "sample3-choices.json": "46efc4c3155a5b9bcb1aa463acf4cfeec7a67dde448c10b8daf1d4b59861e82c",
+  "sample3-gate.npz": "bf7421ba5157e51f7b248772b9e022f1468b0b548cc71f1d7dae0df451124cec",
+  "sample5-choices.json": "45bca66792c1ac706ea27a0840015cb4b9542b47b028e28a4edebd2ab0aafc08",
+  "sample5-gate.npz": "1c7d13eb6d7880b256ddfb3c5874ca526919263c77a7efda0674091a76fbdadc"
+}
