@@ -1,0 +1,29 @@
+{
+  "method": "enumerate the 256 nonzero integer offsets in a radius-four ball; ordered squared distances, half-center shift",
+  "specimens": {
+    "2": {
+      "cal_mask": "e6160ae3db5edc35c134c1fc55df5b0ca5afad911209c6962ac5eadd8c6455ce",
+      "distance_f32": "e613eb411bd4259f567b12f94f330741c5de9331bca34bc9f2f627ec505603d8",
+      "sign_f32": "40704e0dcfd7e235aa9109b60033c52d3649c239d4f3359a16c819540ae8969e",
+      "compared": 1572864,
+      "inside_ball": 62731,
+      "offsets": 256
+    },
+    "3": {
+      "cal_mask": "3ea426d8b82fdf00a7710700d4c15df0592df587e6b2e45274f4ef59be567c57",
+      "distance_f32": "4a03e728ef1b39c14fe4d8c94bc23b103ff3a268136f4be8f032e2a03fa46ef4",
+      "sign_f32": "f76364ccf7847dc7d20fc172a4c787ac6543b7373de5a13e9a43caae8c73f836",
+      "compared": 1572864,
+      "inside_ball": 430578,
+      "offsets": 256
+    },
+    "5": {
+      "cal_mask": "9cd3e4d1a6dba9d1eed3510487c7a86c0c55c2bd99602f52255b51f6e2547a9e",
+      "distance_f32": "e8dcce915b74849e6decdf373dde0a34663e4e851e1d822424d6f6266d2dac78",
+      "sign_f32": "db0670ebedc120203461bf2b77326d28eca7d259d04bf5bc81d6f7995909d55f",
+      "compared": 1572864,
+      "inside_ball": 261559,
+      "offsets": 256
+    }
+  }
+}
