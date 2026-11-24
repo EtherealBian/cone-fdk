@@ -35,4 +35,6 @@ try {
     if($LASTEXITCODE){throw 'Search support compilation failed'}
     & $Python scripts/ptx.py pores/inverse_weight.cu build/pores/inverse-weight.ptx
     if($LASTEXITCODE){throw 'Inverse patch weight compilation failed'}
+    & $Python scripts/ptx.py pores/byte_window.cu build/pores/byte-window.ptx
+    if($LASTEXITCODE){throw 'Byte-window lookup compilation failed'}
 } finally {$env:Path=$old;Pop-Location}

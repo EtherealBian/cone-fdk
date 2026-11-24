@@ -55,3 +55,52 @@ def test_gpu_integer_key_edges_ties_unknown_and_flips():
 def test_graykeys_rejects_unregistered_source_before_access(i, z):
     with pytest.raises(ValueError, match="registered"):
         graykeys(None, i, z, None)
+
+
+@pytest.mark.parametrize("i", (2, 3, 5))
+def test_published_dictionary_ceiling_via_unsorted_fractional_iteration(i):
+    from pore_axial_raw import sha
+    from pore_axial_score import read_mask
+    from pore_byte_window import ARMS, E
+    from pore_region import read
+    from test_region_evidence import native_rows
+
+    run = read(E / f"sample{i}.json")
+    rep = read(E / "replay.json")
+    lock = read(E / "predictions.json")
+    b = run["bound"]
+    data = E / f"sample{i}-target-groups.npz"
+    assert (
+        sha(data)
+        == run["target_groups_sha256"]
+        == rep["byte_identical_target_histograms"][data.name]
+    )
+    with np.load(data, allow_pickle=False) as table:
+        n = table["n"].astype("i8")
+        p = table["positive"].astype("i8")
+        assert np.all(np.diff(table["key"]) > 0)
+    ref = int(p.sum())
+    f = Fraction(0)
+    for _ in range(100):
+        take = 2 * p * f.denominator > n * f.numerator
+        new = Fraction(2 * int(p[take].sum()), ref + int(n[take].sum()))
+        if f == new:
+            break
+        assert new > f
+        f = new
+    else:
+        pytest.fail("fractional upper bound did not converge")
+    assert (
+        str(f) == b["maximum_dice"]
+        and float(f) == b["maximum_dice_decimal"]
+        and b["unavoidable_voxel_errors"] == int(np.minimum(p, n - p).sum())
+    )
+    assert not run["advance"] and lock["pipeline_id"] == rep["pipeline_id"] == run["pipeline_id"]
+    for k in ARMS:
+        v = run["arms"][k]
+        m = read_mask(E, i, k, lock["specimens"][str(i)]["masks"][k])
+        native_rows(E, i, k, v)
+        assert int(m.sum()) == v["metrics"]["tp"] + v["metrics"]["fp"]
+        for t in ("pores", "matches"):
+            s = f"sample{i}-{k}-{t}.csv"
+            assert sha(E / s) == rep["byte_identical_tables"][s]
