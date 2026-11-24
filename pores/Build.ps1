@@ -29,4 +29,6 @@ try {
     if($LASTEXITCODE){throw 'Spatial convolution compilation failed'}
     & $Python scripts/ptx.py pores/patch_stats.cu build/pores/patch-stats.ptx
     if($LASTEXITCODE){throw 'Patch statistic compilation failed'}
+    & $Python scripts/ptx.py pores/latent.cu build/pores/latent.ptx
+    if($LASTEXITCODE){throw 'Latent decision compilation failed'}
 } finally {$env:Path=$old;Pop-Location}
