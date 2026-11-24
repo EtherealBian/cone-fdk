@@ -23,7 +23,7 @@ def diagnostic(det, ledger, prev):
         j = str(r["pred"])
         g = ledger["objects"][j]
         n = r["reference_voxels"]
-        old = prev["bound"]["rows"][rid]
+        old = prev["bound"]["rows"][str(rid)]
         assert (
             g["detector"] == r["voxels"]
             and old["detector_label"] == r["pred"]
