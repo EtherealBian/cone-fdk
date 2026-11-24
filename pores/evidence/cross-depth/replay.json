@@ -1,0 +1,28 @@
+{
+  "pipeline_id": "3fe986d4d378649796851a247dac2cbe36fe4f75c943f228d9b82165349323bd",
+  "arms": [
+    "center",
+    "profile"
+  ],
+  "byte_identical_tables": {
+    "sample2-center-matches.csv": "cc82cfcf90218cd0e9e44bf05cf3796afdcafb54192d586d495ba2f5f945f2d9",
+    "sample2-center-pores.csv": "bf85730c429933d5e08998e19af95f1381ed144481fa3afffed1f61374db3b80",
+    "sample2-profile-matches.csv": "a9f5ab6962d4cd0e3afab7ccd427c94727c035bc731678ac370e9ac9c4850fd6",
+    "sample2-profile-pores.csv": "1f1bcd0a10b57627d7355a889caf83525dce3d760ac87c0fed4f6f9e0e3fc67b",
+    "sample3-center-matches.csv": "07c790b39646b6562329888549013dbf9e828f1e8ce381f4b5811bb2fb5d5ad0",
+    "sample3-center-pores.csv": "31b90fe5eb66eeb72f1fbf4739cbe5f3b835bfd017f59a6f0ea39272bf329cd4",
+    "sample3-profile-matches.csv": "fbd538ed5f3499e2be1706c689dfa86f0d1e6cef1629ec670c22d31ac4e33679",
+    "sample3-profile-pores.csv": "9cfe28dbc09b0aef5b367dfd2f3e41f12744dd2c86005c8825b0dd0e176c5f4c",
+    "sample5-center-matches.csv": "ddf0f8963da09892b780553be04c181bbd23320c1d3c5314112fb7f51275b7be",
+    "sample5-center-pores.csv": "c15590ce52ed80e12743f6c677e43ad12a3b08e3e8ead0c2a1b8c1c8cbb32bf9",
+    "sample5-profile-matches.csv": "b85b196555086bf26a79e64d7ff472abcc5f243a9de38b13377afa7d014a54e3",
+    "sample5-profile-pores.csv": "6763196e03fc9205b14d477a0741a50373fd08a05647a31c67d3caa9caf69800"
+  },
+  "semantic_json_sha256": {
+    "sample2.json": "df54da725476306e84062b76807570b084939102eebf5df2cd3ca036a85f0026",
+    "sample3.json": "9881d1ad46c1914a4b69e0f1f67c39d31416629039a1bac9cc653b08a0ad5c8b",
+    "sample5.json": "99b47e0c5b82b6b191ca5f951c34c45854b7ce9d529e55d40e5838de18f30aca",
+    "summary.json": "3a1a8f026ebab98c373ca896d0e306db97dd16de295902d976d0db1cc643eea1"
+  },
+  "excluded_only": "arms.*.native.elapsed_s"
+}
