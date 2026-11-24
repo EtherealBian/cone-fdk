@@ -8,3 +8,8 @@ line-length = 98
 
 [tool.ruff.lint]
 select = ["E4", "E7", "E9", "F", "I", "B023"]
+
+[tool.ruff.lint.per-file-ignores]
+# Standalone CLI: pore_axial_raw installs the repository's pores/ import path
+# before local_model can be imported. Preserve the audited runtime ordering.
+"scripts/pore_two_scale.py" = ["I001"]
