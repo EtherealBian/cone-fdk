@@ -1,0 +1,104 @@
+{
+  "2": {
+    "fixed": {
+      "tp": 2860,
+      "fp": 250,
+      "fn": 89,
+      "tn": 209793,
+      "dice": 0.9440501732959234,
+      "precision": 0.9196141479099679,
+      "recall": 0.9698202780603594,
+      "predicted_porosity_pct": 1.4601487379807692,
+      "reference_porosity_pct": 1.3845590444711537,
+      "porosity_error_pp": 0.07558969350961539
+    },
+    "ipol": {
+      "tp": 2819,
+      "fp": 266,
+      "fn": 130,
+      "tn": 209777,
+      "dice": 0.9343718926085516,
+      "precision": 0.9137763371150729,
+      "recall": 0.9559172600881655,
+      "predicted_porosity_pct": 1.4484112079326923,
+      "reference_porosity_pct": 1.3845590444711537,
+      "porosity_error_pp": 0.06385216346153846
+    },
+    "delta": {
+      "dice": -0.009678280687371865,
+      "precision": -0.005837810794894982,
+      "recall": -0.013903017972193954
+    },
+    "unchanged_fp": 206,
+    "unchanged_fn": 79,
+    "advance": false
+  },
+  "3": {
+    "fixed": {
+      "tp": 29032,
+      "fp": 886,
+      "fn": 1641,
+      "tn": 181433,
+      "dice": 0.9582941360928191,
+      "precision": 0.9703857209706531,
+      "recall": 0.9465001793107946,
+      "predicted_porosity_pct": 14.046536959134615,
+      "reference_porosity_pct": 14.401010366586538,
+      "porosity_error_pp": -0.3544734074519231
+    },
+    "ipol": {
+      "tp": 28360,
+      "fp": 858,
+      "fn": 2313,
+      "tn": 181461,
+      "dice": 0.9470538144295471,
+      "precision": 0.9706345403518379,
+      "recall": 0.9245916604179572,
+      "predicted_porosity_pct": 13.717886117788462,
+      "reference_porosity_pct": 14.401010366586538,
+      "porosity_error_pp": -0.6831242487980769
+    },
+    "delta": {
+      "dice": -0.011240321663272046,
+      "precision": 0.00024881938118481717,
+      "recall": -0.021908518892837403
+    },
+    "unchanged_fp": 525,
+    "unchanged_fn": 1310,
+    "advance": false
+  },
+  "5": {
+    "fixed": {
+      "tp": 29385,
+      "fp": 531,
+      "fn": 648,
+      "tn": 182428,
+      "dice": 0.9803332832907972,
+      "precision": 0.9822503008423586,
+      "recall": 0.978423733892718,
+      "predicted_porosity_pct": 14.04559795673077,
+      "reference_porosity_pct": 14.10052959735577,
+      "porosity_error_pp": -0.054931640625
+    },
+    "ipol": {
+      "tp": 29250,
+      "fp": 498,
+      "fn": 783,
+      "tn": 182461,
+      "dice": 0.9785717870226326,
+      "precision": 0.9832593787817668,
+      "recall": 0.9739286784537009,
+      "predicted_porosity_pct": 13.966721754807692,
+      "reference_porosity_pct": 14.10052959735577,
+      "porosity_error_pp": -0.13380784254807693
+    },
+    "delta": {
+      "dice": -0.0017614962681645752,
+      "precision": 0.0010090779394081872,
+      "recall": -0.0044950554390170705
+    },
+    "unchanged_fp": 363,
+    "unchanged_fn": 552,
+    "advance": false
+  }
+}
