@@ -1,5 +1,7 @@
 # ConeFDK · Single-GPU cone-beam CT reconstruction
 
+**Pore metrology baseline (development only):** [Why keep E, what reproduced from raw scans, and what still fails](pores/RETAINED-BASELINE.md). Worst-specimen matched-volume P95: 28.16%; required: ≤15%.
+
 **Experimental branch:** [CoCr pore measurement, accuracy gates and evidence](pores/README.md). [D → E: same-pore errors, misses and three offline review packs](pores/RESULTS-E.md). [Cross-specimen boundary transfer: three new slabs, per-pore counts and a documented merge](pores/RESULTS-TRANSFER.md). The stable walnut reconstruction release is unchanged.
 
 Reconstruct a 3D attenuation volume from a full rotation of X-ray projections on a Windows PC. ConeFDK uses native C++ and CUDA for cone weighting, filtering and backprojection; cuFFT provides the batched 1D transforms. Python prepares input and checks the result against independent implementations. It is not needed in the reconstruction executable.

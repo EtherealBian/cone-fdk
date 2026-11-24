@@ -1,0 +1,431 @@
+{
+  "selection": "post_hoc_minimize_worst_specimen_matched_volume_p95",
+  "minimizers": [
+    "E"
+  ],
+  "candidates": {
+    "A": {
+      "worst_exact_pct": "1120/33",
+      "specimens": {
+        "2": {
+          "p95_exact_pct": "495/28",
+          "matches": 64,
+          "eligible_prediction": 69,
+          "eligible_reference": 73,
+          "failed": [
+            "dice",
+            "object_reference",
+            "p95_abs_volume_error_pct"
+          ],
+          "summary_sha256": "7fc63553a2743bc829148ca617717edf5f7d2c8da1ebb6aa34d1b7d3c95b7188",
+          "matches_sha256": "d734e345e47700cf49aa3989a5dc3952f76a8fe666f40239447a70f37d76a42b"
+        },
+        "3": {
+          "p95_exact_pct": "1120/33",
+          "matches": 25,
+          "eligible_prediction": 30,
+          "eligible_reference": 27,
+          "failed": [
+            "porosity_absolute",
+            "object_prediction",
+            "median_abs_volume_error_pct",
+            "p95_abs_volume_error_pct",
+            "median_abs_diameter_error_pct"
+          ],
+          "summary_sha256": "6c2fd4f59146e3579701b58c76924ad7b92f5292353ee7329309c1d5a75a19bf",
+          "matches_sha256": "fb01ebf6be4bb5be508f1bc20d5c53e94289d37316f58422d4af6832464a94ef"
+        },
+        "5": {
+          "p95_exact_pct": "233400/9179",
+          "matches": 11,
+          "eligible_prediction": 15,
+          "eligible_reference": 12,
+          "failed": [
+            "object_prediction",
+            "p95_abs_volume_error_pct"
+          ],
+          "summary_sha256": "2e020bb5570930b6113cdaf122973f9fff01c1fe6b860d89d4e1fcbcd4671d15",
+          "matches_sha256": "f5678ce1187a0d2fd477b1fc7ae603a00ac438c51b6a3462bbb1f6dd959e3421"
+        }
+      }
+    },
+    "B": {
+      "worst_exact_pct": "59035/1428",
+      "specimens": {
+        "2": {
+          "p95_exact_pct": "137825/7317",
+          "matches": 66,
+          "eligible_prediction": 67,
+          "eligible_reference": 73,
+          "failed": [
+            "dice",
+            "p95_abs_volume_error_pct"
+          ],
+          "summary_sha256": "10a591c99bf42c0bbab4f44fd802abb57e46fe25b89262b7504c1a82efe2fbf0",
+          "matches_sha256": "b9be63586e6fc86263812a528987d72bfbba4c3b40aef99f8f5543a48a85416b"
+        },
+        "3": {
+          "p95_exact_pct": "59035/1428",
+          "matches": 24,
+          "eligible_prediction": 30,
+          "eligible_reference": 27,
+          "failed": [
+            "object_prediction",
+            "object_reference",
+            "median_abs_volume_error_pct",
+            "p95_abs_volume_error_pct",
+            "median_abs_diameter_error_pct"
+          ],
+          "summary_sha256": "a1f2464d27a3bcac3e1e41ec1652e2cdd44999c3406333153b5163183fdf2964",
+          "matches_sha256": "98fd384d84ba6de71010fc694d5339cf51147523230f913699a1dd3269af11c2"
+        },
+        "5": {
+          "p95_exact_pct": "503515/19454",
+          "matches": 10,
+          "eligible_prediction": 16,
+          "eligible_reference": 12,
+          "failed": [
+            "object_prediction",
+            "object_reference",
+            "p95_abs_volume_error_pct"
+          ],
+          "summary_sha256": "88d517aa98fc1e0112dbbac1c1aa2addc3e4ed962efa096b26d8201355ab6c0d",
+          "matches_sha256": "56e9db15525662a1132ab2d533fe09f4df9dfb6424b4364ac30a4f1f17c8fb68"
+        }
+      }
+    },
+    "C": {
+      "worst_exact_pct": "28525/748",
+      "specimens": {
+        "2": {
+          "p95_exact_pct": "331825/15051",
+          "matches": 71,
+          "eligible_prediction": 73,
+          "eligible_reference": 73,
+          "failed": [
+            "p95_abs_volume_error_pct"
+          ],
+          "summary_sha256": "f60992a170a7f6ccd75392c42d51d14a7e0f259ef1e5f1855930bf29c3048e66",
+          "matches_sha256": "1a0802c4af1d64c21f5e38a7b8b46b16b1fbcac6479371fc62dcbee5193fb6d1"
+        },
+        "3": {
+          "p95_exact_pct": "28525/748",
+          "matches": 24,
+          "eligible_prediction": 28,
+          "eligible_reference": 27,
+          "failed": [
+            "object_prediction",
+            "object_reference",
+            "median_abs_volume_error_pct",
+            "p95_abs_volume_error_pct",
+            "median_abs_diameter_error_pct"
+          ],
+          "summary_sha256": "3650fe090274d9e9750daf7a875a163d66409539537116878a7a787d12cae2a4",
+          "matches_sha256": "f3c80eb7abb65bc528f896e18915cbaabbe7d2934c242b61163a45cda6bbcbaa"
+        },
+        "5": {
+          "p95_exact_pct": "223200/9179",
+          "matches": 11,
+          "eligible_prediction": 13,
+          "eligible_reference": 12,
+          "failed": [
+            "object_prediction",
+            "p95_abs_volume_error_pct"
+          ],
+          "summary_sha256": "d411156353cf0807181bcb959c82d741f673678a506fef6170eaefa681f1ab07",
+          "matches_sha256": "514a96e8b5764200230250847610b11aea44a61af97f420dd1dbbfe4cde8e62d"
+        }
+      }
+    },
+    "D": {
+      "worst_exact_pct": "35510/1071",
+      "specimens": {
+        "2": {
+          "p95_exact_pct": "455/22",
+          "matches": 66,
+          "eligible_prediction": 68,
+          "eligible_reference": 73,
+          "failed": [
+            "dice",
+            "p95_abs_volume_error_pct"
+          ],
+          "summary_sha256": "acb8b37bf3ed70c131b0d76c0261514da2b39dc50f9f2e64dfded1fb3097eac3",
+          "matches_sha256": "ae506b9ef1ce0f7580c838044198b3b66f815b6ac1e356338808ec32c4d5895e"
+        },
+        "3": {
+          "p95_exact_pct": "35510/1071",
+          "matches": 25,
+          "eligible_prediction": 29,
+          "eligible_reference": 27,
+          "failed": [
+            "object_prediction",
+            "median_abs_volume_error_pct",
+            "p95_abs_volume_error_pct",
+            "median_abs_diameter_error_pct"
+          ],
+          "summary_sha256": "cfd8137ad4b299a8225f2b24104c6d6af329c68e89adb1ed289ceb06e77381fa",
+          "matches_sha256": "b4b388cbd58bc2417e1b75931efaf740b392f378b8296495f77a8bed467090a6"
+        },
+        "5": {
+          "p95_exact_pct": "164195/8768",
+          "matches": 10,
+          "eligible_prediction": 15,
+          "eligible_reference": 12,
+          "failed": [
+            "object_prediction",
+            "object_reference",
+            "median_abs_volume_error_pct",
+            "p95_abs_volume_error_pct",
+            "median_abs_diameter_error_pct"
+          ],
+          "summary_sha256": "ee8d73ea51d72478418beb2baad07457334c153557296d05df09fff9304379c5",
+          "matches_sha256": "cc911f1def806d9e97950749c83273af1e627c96c10a125619012ccd8a0236d3"
+        }
+      }
+    },
+    "E": {
+      "worst_exact_pct": "3605/128",
+      "specimens": {
+        "2": {
+          "p95_exact_pct": "297365/14181",
+          "matches": 67,
+          "eligible_prediction": 71,
+          "eligible_reference": 73,
+          "failed": [
+            "p95_abs_volume_error_pct"
+          ],
+          "summary_sha256": "9a504f9b2d0b8d742173b9ba60870e8cda069f277f178b16344a2b09c912650c",
+          "matches_sha256": "969825ba362bcd4e647d84ba57443bc70462d190a4eb48f48f3c42f03fbf57bf"
+        },
+        "3": {
+          "p95_exact_pct": "3605/128",
+          "matches": 24,
+          "eligible_prediction": 30,
+          "eligible_reference": 27,
+          "failed": [
+            "object_prediction",
+            "object_reference",
+            "median_abs_volume_error_pct",
+            "p95_abs_volume_error_pct",
+            "median_abs_diameter_error_pct"
+          ],
+          "summary_sha256": "5e259aa357cb8d5ed45965ed2be8779113759b784e01717794a5a5f253b0c938",
+          "matches_sha256": "9e4b7c09f59bc15d2203f4cebf76bbf97a8d559f2ae32f423eb67860c467b1dd"
+        },
+        "5": {
+          "p95_exact_pct": "227300/9179",
+          "matches": 11,
+          "eligible_prediction": 15,
+          "eligible_reference": 12,
+          "failed": [
+            "object_prediction",
+            "median_abs_volume_error_pct",
+            "p95_abs_volume_error_pct",
+            "median_abs_diameter_error_pct"
+          ],
+          "summary_sha256": "9babc3903bb22d80477432c4dc507321032c9c499cfc25b8c5abe7eb79198dd2",
+          "matches_sha256": "772f18521449379c6886cdf54a4bfaa3ff095e7759c9c17601a3e9b81c4ec6ad"
+        }
+      }
+    },
+    "F": {
+      "worst_exact_pct": "283525/8768",
+      "specimens": {
+        "2": {
+          "p95_exact_pct": "3017200/129137",
+          "matches": 69,
+          "eligible_prediction": 72,
+          "eligible_reference": 73,
+          "failed": [
+            "dice",
+            "p95_abs_volume_error_pct"
+          ],
+          "summary_sha256": "351c3eacbf7034c6aea9ccc991484a3fe5d749734f6609acf5ab8a7e4a5a748d",
+          "matches_sha256": "fca616899db1475405e16f06a944c9138d8f32da27320502be9783c2399f2f95"
+        },
+        "3": {
+          "p95_exact_pct": "260000/9401",
+          "matches": 25,
+          "eligible_prediction": 33,
+          "eligible_reference": 27,
+          "failed": [
+            "porosity_absolute",
+            "object_prediction",
+            "median_abs_volume_error_pct",
+            "p95_abs_volume_error_pct",
+            "median_abs_diameter_error_pct",
+            "p95_centroid_displacement_vox"
+          ],
+          "summary_sha256": "e5b23f9e3d92fa154992614901d38389b4a2b2a7d829464e0db89da3b4d51f7e",
+          "matches_sha256": "2878e54d66f9a9ec0edc8dc4c6250e4b53f413ce300e22b48f9c46a0ff90b45c"
+        },
+        "5": {
+          "p95_exact_pct": "283525/8768",
+          "matches": 11,
+          "eligible_prediction": 13,
+          "eligible_reference": 12,
+          "failed": [
+            "porosity_absolute",
+            "object_prediction",
+            "median_abs_volume_error_pct",
+            "p95_abs_volume_error_pct",
+            "median_abs_diameter_error_pct"
+          ],
+          "summary_sha256": "d0d97394e9c2798f84b7c7d1c87c976088a31d460575f978394739406e8fa5bd",
+          "matches_sha256": "908e7279c494a72678f6b32dccd3f87924e9386b924b797d43bbdd25046286b8"
+        }
+      }
+    },
+    "G": {
+      "worst_exact_pct": "2725/63",
+      "specimens": {
+        "2": {
+          "p95_exact_pct": "30546/1793",
+          "matches": 69,
+          "eligible_prediction": 72,
+          "eligible_reference": 73,
+          "failed": [
+            "p95_abs_volume_error_pct"
+          ],
+          "summary_sha256": "f7ba4be379a5994f1b34236df70c0d7a0f60e7e557232ef9db40ff94ad7b0eea",
+          "matches_sha256": "f62554695a2e9e495ab5dd9253f12ce6611cd46589be39d64155328d65f07d27"
+        },
+        "3": {
+          "p95_exact_pct": "2725/63",
+          "matches": 19,
+          "eligible_prediction": 28,
+          "eligible_reference": 27,
+          "failed": [
+            "object_prediction",
+            "object_reference",
+            "median_abs_volume_error_pct",
+            "p95_abs_volume_error_pct",
+            "median_abs_diameter_error_pct",
+            "p95_centroid_displacement_vox"
+          ],
+          "summary_sha256": "32f431d8ed58baacdc3535d213c269f2d09bb4c08fb84486d69466616a664f32",
+          "matches_sha256": "25c0b753122007ff7e1736ef45007dee4fb8daedfb536341d52fe67c2c9bf9d6"
+        },
+        "5": {
+          "p95_exact_pct": "464105/19454",
+          "matches": 10,
+          "eligible_prediction": 16,
+          "eligible_reference": 12,
+          "failed": [
+            "porosity_absolute",
+            "object_prediction",
+            "object_reference",
+            "median_abs_volume_error_pct",
+            "p95_abs_volume_error_pct",
+            "median_abs_diameter_error_pct"
+          ],
+          "summary_sha256": "755c8b542b4dcadc54073de8ada3d3ba5204ee944202babb9ca2d4522e48a993",
+          "matches_sha256": "e08a36b38a6516beb3d393a2041406e6f18fd33ba48f80c91de975e880e5f9d9"
+        }
+      }
+    },
+    "H": {
+      "worst_exact_pct": "31719/800",
+      "specimens": {
+        "2": {
+          "p95_exact_pct": "20395/902",
+          "matches": 64,
+          "eligible_prediction": 71,
+          "eligible_reference": 73,
+          "failed": [
+            "dice",
+            "precision",
+            "object_reference",
+            "p95_abs_volume_error_pct"
+          ],
+          "summary_sha256": "6496a3323f539e60d0f1339f97a9e0d6d3fa900da1ef9b421037e1ae426bc268",
+          "matches_sha256": "5ce2dd7fd2b750ed60be50c256b76adfebebc346c8195a133602b3de743b6082"
+        },
+        "3": {
+          "p95_exact_pct": "31719/800",
+          "matches": 17,
+          "eligible_prediction": 26,
+          "eligible_reference": 27,
+          "failed": [
+            "porosity_absolute",
+            "object_prediction",
+            "object_reference",
+            "median_abs_volume_error_pct",
+            "p95_abs_volume_error_pct",
+            "median_abs_diameter_error_pct",
+            "p95_centroid_displacement_vox"
+          ],
+          "summary_sha256": "c8b21c1eaf748d043641152d94a8a299826a19371e3882ed76bc00b916a86849",
+          "matches_sha256": "545c7781d36ffbed1403354583ef47a9eeaeb62dbda78779d27c210274ee3f2e"
+        },
+        "5": {
+          "p95_exact_pct": "18140/957",
+          "matches": 7,
+          "eligible_prediction": 10,
+          "eligible_reference": 12,
+          "failed": [
+            "porosity_absolute",
+            "object_prediction",
+            "object_reference",
+            "median_abs_volume_error_pct",
+            "p95_abs_volume_error_pct",
+            "median_abs_diameter_error_pct"
+          ],
+          "summary_sha256": "b1d9fd4d56363748c04ef38875023e1e8fa3d9bc3697f20ab02fb366ff049607",
+          "matches_sha256": "706818c4603c84a73e576feaf3b03c33d0956212f28d42c50c6c8d18fc89b7fb"
+        }
+      }
+    }
+  },
+  "source_replay_e": {
+    "pipeline_id": "0ae471662ffc9fe1f62d5b56697e9f1c43c48e4d311efe2558b6b68196ab7994",
+    "ignored_report_fields": [
+      "native.elapsed_s"
+    ],
+    "specimens": {
+      "2": {
+        "table_hashes": {
+          "-matches.csv": "969825ba362bcd4e647d84ba57443bc70462d190a4eb48f48f3c42f03fbf57bf",
+          "-pores.csv": "c3547dccab4a0860b732a8f702846dbb0cbb7214547c0f0f2017d11e1ee00f6f"
+        },
+        "review_sha256": "5576ed67ccac66a16b16191cce4ec37f248a2b903633297cbe0f27fe3d7917c7",
+        "scipy_rows": 175,
+        "matches": 67,
+        "failed": [
+          "p95_abs_volume_error_pct"
+        ]
+      },
+      "3": {
+        "table_hashes": {
+          "-matches.csv": "9e4b7c09f59bc15d2203f4cebf76bbf97a8d559f2ae32f423eb67860c467b1dd",
+          "-pores.csv": "873108c1fdf81b8dee2f751ac03c281a960c156ff488d814197e72a93b27d031"
+        },
+        "review_sha256": "37ff8666e13f7bfb2a8b063f34bf4cd6ffa3e1151967d068344589f88d6a432d",
+        "scipy_rows": 237,
+        "matches": 24,
+        "failed": [
+          "object_prediction",
+          "object_reference",
+          "median_abs_volume_error_pct",
+          "p95_abs_volume_error_pct",
+          "median_abs_diameter_error_pct"
+        ]
+      },
+      "5": {
+        "table_hashes": {
+          "-matches.csv": "772f18521449379c6886cdf54a4bfaa3ff095e7759c9c17601a3e9b81c4ec6ad",
+          "-pores.csv": "9492a3044c6ec982520c1169e233282ba63bc4848bf5884fa147fda66dd8024e"
+        },
+        "review_sha256": "6ad487d7f1744b0b14cffe1cbb16208e5ecc8aae5685df29d9366f6ddc8f4ebc",
+        "scipy_rows": 79,
+        "matches": 11,
+        "failed": [
+          "object_prediction",
+          "median_abs_volume_error_pct",
+          "p95_abs_volume_error_pct",
+          "median_abs_diameter_error_pct"
+        ]
+      }
+    }
+  }
+}
