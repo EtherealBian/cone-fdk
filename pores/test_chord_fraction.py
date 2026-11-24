@@ -76,3 +76,45 @@ def test_fraction_geometry_reproduces_endpoints_and_clipped_components():
 def test_no_reserved_source_paths(i):
     with pytest.raises(ValueError):
         sources(i)
+
+
+@pytest.mark.parametrize("i,n", [(2, 46), (3, 23), (5, 11)])
+def test_sealed_fraction_matched_population(i, n):
+    from pore_axial_raw import sha
+    from pore_chord_fraction import E
+    from pore_region import read
+    from test_region_evidence import native_rows
+
+    d = read(E / f"sample{i}.json")
+    a, b = [native_rows(E, i, k, v) for k, v in d["arms"].items()]
+    triples = d["fixed_reference_triples"]
+    rows = read(E / f"sample{i}-choices.json")
+    assert a.keys() == b.keys() == set(map(int, triples)) and len(b) == n
+    for j, (_, v, r) in a.items():
+        u = triples[str(j)][1]
+        assert triples[str(j)] == [v, u, r] and b[j][1] == rounded(v, u, F(9, 11))
+    assert all(row["target"] == row["actual"] for row in rows.values())
+    assert not d["advance"] and not d["comparison"]["gained"] and not d["comparison"]["lost"]
+    hashes = read(E / "score-replay.json")["byte_identical_tables"]
+    assert len(hashes) == 12 and all(sha(E / k) == v for k, v in hashes.items())
+
+
+def test_complete_finite_bound_and_raw_calibration():
+    from pore_chord_fraction import E
+    from pore_region import read
+
+    pop = {
+        k: list(read(E / f"sample{k}.json")["fixed_reference_triples"].values()) for k in "235"
+    }
+    b = audit(pop)
+    assert b == read(E / "summary.json")["optimistic_bound"]
+    assert b["joint_passing_sites"] == 0 and F(b["minimax"]) > 15
+    assert all(F(v["per_pore_endpoint"]) < 15 for v in b["specimens"].values())
+    f = read(E / "fit.json")
+    samples = [
+        [(v["detector"], v["full"], v["reference"]) for v in q["rows"].values()]
+        for q in f["specimens"].values()
+    ]
+    assert list(map(len, samples)) == [13, 1, 0] and fraction(samples) == F(f["fraction"]) == F(
+        9, 11
+    )

@@ -1,0 +1,49 @@
+{
+  "pipeline_id": "2cc1dfcbf1fd58dd9733dfa95d9f44ba0768cb1ff7b22a5dc6ce6d9cbc4786f2",
+  "specimens": {
+    "2": false,
+    "3": false,
+    "5": false
+  },
+  "advance": false,
+  "fraction": "9/11",
+  "optimistic_bound": {
+    "breakpoints": 1513,
+    "evaluation_sites": 3025,
+    "joint_passing_sites": 0,
+    "minimax": "12353/618",
+    "witness": "5/58",
+    "at_witness": {
+      "2": "49750/2573",
+      "3": "29987/1848",
+      "5": "12353/618"
+    },
+    "specimens": {
+      "2": {
+        "n": 46,
+        "common_best": "296825/20777",
+        "witness": "23/32",
+        "per_pore_endpoint": "43375/3808",
+        "per_pore_interval": "331075/59059",
+        "passing_evaluation_sites": 400
+      },
+      "3": {
+        "n": 23,
+        "common_best": "2451/154",
+        "witness": "5/46",
+        "per_pore_endpoint": "8435/666",
+        "per_pore_interval": "8435/666",
+        "passing_evaluation_sites": 0
+      },
+      "5": {
+        "n": 11,
+        "common_best": "12035/618",
+        "witness": "1/84",
+        "per_pore_endpoint": "2645/206",
+        "per_pore_interval": "2645/206",
+        "passing_evaluation_sites": 0
+      }
+    },
+    "table_sha256": "c441f65f08fb76a778b7b304e9a0fde165343727684fad8f78e83ac4225eeadc"
+  }
+}

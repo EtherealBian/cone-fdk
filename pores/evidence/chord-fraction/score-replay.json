@@ -1,0 +1,28 @@
+{
+  "pipeline_id": "2cc1dfcbf1fd58dd9733dfa95d9f44ba0768cb1ff7b22a5dc6ce6d9cbc4786f2",
+  "arms": [
+    "curvature",
+    "fraction"
+  ],
+  "byte_identical_tables": {
+    "sample2-curvature-matches.csv": "d8b924016b548e03c53d0428eab957061a23b51f4b8fa4eeb563f7785159ca4c",
+    "sample2-curvature-pores.csv": "bef49ee49bb55328561be9b4d94408055f23e84252b6a4cc4369e26dd042171d",
+    "sample2-fraction-matches.csv": "2830fddad067a45dfd1b536d9199fa7d8650b92cc3f7f7abe8e72ae490bced69",
+    "sample2-fraction-pores.csv": "6e12c2f71db48c7c4c796b3de8aaadc766f3dcd7c0cab71e5d27af128babf3dc",
+    "sample3-curvature-matches.csv": "bb1842df56476d9dfb5381e1c5b6d193f18d19a698910669afc7ca17a147bf3a",
+    "sample3-curvature-pores.csv": "0287760b95f1dfd0de6ff8f8da2bd915a9fbd8089dfe9b38c985bd749c3cdcc5",
+    "sample3-fraction-matches.csv": "43f7951c0a3e9ea277fa8faf76f6d422e06cea2404279b3844ba4a0c968c2c7b",
+    "sample3-fraction-pores.csv": "a5eba861a36047438523032ae1a0d1c855efca938f56072ef591d6d05fce7ff1",
+    "sample5-curvature-matches.csv": "740025d50bd7864b1956b44f097dfe5cb246f00bc90749df4fcd88d5ddd5e8a6",
+    "sample5-curvature-pores.csv": "59d19c470256e97be627f408f1b247306b21ac0a81b9d6d729cd4306a4a55a8f",
+    "sample5-fraction-matches.csv": "b914e7da560915a036d101b34d97925801b5fcdccb52122597c285ca0d3793b0",
+    "sample5-fraction-pores.csv": "450cac0f2f2c0b33e6779c3b75831c79b6c7e049ae86acf1ed5a308e2f8bce95"
+  },
+  "semantic_json_sha256": {
+    "sample2.json": "fc22ac458d0e44be2db609a05a1ef2218383e7c135454e29ab6e3cb81c216747",
+    "sample3.json": "490e555065979efd2574720ef3c72ca8a36cfc8cf67515965d03a9efbed324a6",
+    "sample5.json": "e646f71166bf3838d7ab4108176b323d1ab9089e74701f9fd889238d4c2865ae",
+    "summary.json": "d24fe8f6283c7f9cc52f2f0800b07daf0ef6be734130238d19437ef218e69ed2"
+  },
+  "excluded_only": "arms.*.native.elapsed_s"
+}
