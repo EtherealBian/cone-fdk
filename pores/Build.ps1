@@ -33,4 +33,6 @@ try {
     if($LASTEXITCODE){throw 'Latent decision compilation failed'}
     & $Python scripts/ptx.py pores/search_support.cu build/pores/search-support.ptx
     if($LASTEXITCODE){throw 'Search support compilation failed'}
+    & $Python scripts/ptx.py pores/inverse_weight.cu build/pores/inverse-weight.ptx
+    if($LASTEXITCODE){throw 'Inverse patch weight compilation failed'}
 } finally {$env:Path=$old;Pop-Location}
