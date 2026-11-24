@@ -1,0 +1,649 @@
+{
+  "identity": {
+    "source": {
+      "pores/OBSERVED-VOLUME-SUPPORT.md": "664cd268a7d8405b635ea5a29a7ea20bc239dbedada2eb9a90d8aa17d1284588",
+      "scripts/pore_observed_volume.py": "322d504c1ffae4535b54c3979fc7ca81a14f8bf372853ae62ed306b086a7d3ce",
+      "scripts/pore_transfer.py": "f4092f168839be8b363dd48db5eaf62acf16ed9920f8e5e2c2e1d35f678b73ca",
+      "pores/pore_check.py": "7046a18f709484d5074b3338bcf7f8449db42c4d3f39a8fdb1a39a1d59b6932b",
+      "pores/validate.py": "2c81e4f6731d3fe852edcbb693af30e401d3cdcaddb179c2744443c211afa3c9",
+      "scripts/pore_section_gate.py": "b6be94fd0952eda8c17425b1e3590ab9d7effc7916a1e4bf76911ebbce6d5ec6"
+    },
+    "binaries": {
+      "cone-pores.exe": "afb2edcdc1e969df968f722192aa2af3c9959abf1dbd338af5e27479f1196b06",
+      "pores.ptx": "0d900a9bcdbaff294f4853cb3991b47b6db6f3795e70be8c14ea849cd5bd63b3"
+    },
+    "prediction_seal": "092f1de18cff3f233a70617fd0219bcd0a7154827b95be4eb58eb3a802e578f0",
+    "fit": "ae94aa02bf694ec773e1311ca81a10740b01b83214e56594c5dcdab97dfdbe74"
+  },
+  "pipeline_id": "005f1d1c073ec9af4ccfdfb441eb9903bd85ba7624aa72f84e8a7d816b44699c",
+  "calibration_z": [
+    160,
+    184
+  ],
+  "specimens": {
+    "2": {
+      "predicted": 29,
+      "reference": 27,
+      "unmatched_pred": {
+        "7": [
+          184,
+          1
+        ],
+        "43": [
+          94,
+          0
+        ],
+        "58": [
+          78,
+          0
+        ]
+      },
+      "unmatched_ref": {
+        "17": [
+          159,
+          0
+        ]
+      },
+      "rows": [
+        {
+          "pred": 1,
+          "ref": 1,
+          "pred_voxels": 104,
+          "ref_voxels": 103,
+          "z_faces": 1,
+          "intersection": 95,
+          "union": 112,
+          "residual": -1
+        },
+        {
+          "pred": 4,
+          "ref": 4,
+          "pred_voxels": 989,
+          "ref_voxels": 938,
+          "z_faces": 1,
+          "intersection": 930,
+          "union": 997,
+          "residual": -51
+        },
+        {
+          "pred": 6,
+          "ref": 5,
+          "pred_voxels": 3820,
+          "ref_voxels": 3676,
+          "z_faces": 3,
+          "intersection": 3656,
+          "union": 3840,
+          "residual": -144
+        },
+        {
+          "pred": 8,
+          "ref": 6,
+          "pred_voxels": 176,
+          "ref_voxels": 180,
+          "z_faces": 1,
+          "intersection": 168,
+          "union": 188,
+          "residual": 4
+        },
+        {
+          "pred": 11,
+          "ref": 9,
+          "pred_voxels": 717,
+          "ref_voxels": 725,
+          "z_faces": 1,
+          "intersection": 635,
+          "union": 807,
+          "residual": 8
+        },
+        {
+          "pred": 13,
+          "ref": 11,
+          "pred_voxels": 253,
+          "ref_voxels": 249,
+          "z_faces": 1,
+          "intersection": 236,
+          "union": 266,
+          "residual": -4
+        },
+        {
+          "pred": 14,
+          "ref": 12,
+          "pred_voxels": 968,
+          "ref_voxels": 908,
+          "z_faces": 1,
+          "intersection": 896,
+          "union": 980,
+          "residual": -60
+        },
+        {
+          "pred": 15,
+          "ref": 13,
+          "pred_voxels": 229,
+          "ref_voxels": 223,
+          "z_faces": 1,
+          "intersection": 206,
+          "union": 246,
+          "residual": -6
+        },
+        {
+          "pred": 16,
+          "ref": 14,
+          "pred_voxels": 153,
+          "ref_voxels": 127,
+          "z_faces": 1,
+          "intersection": 121,
+          "union": 159,
+          "residual": -26
+        },
+        {
+          "pred": 24,
+          "ref": 22,
+          "pred_voxels": 78,
+          "ref_voxels": 71,
+          "z_faces": 0,
+          "intersection": 56,
+          "union": 93,
+          "residual": -7
+        },
+        {
+          "pred": 29,
+          "ref": 23,
+          "pred_voxels": 212,
+          "ref_voxels": 221,
+          "z_faces": 0,
+          "intersection": 199,
+          "union": 234,
+          "residual": 9
+        },
+        {
+          "pred": 30,
+          "ref": 25,
+          "pred_voxels": 87,
+          "ref_voxels": 95,
+          "z_faces": 0,
+          "intersection": 81,
+          "union": 101,
+          "residual": 8
+        },
+        {
+          "pred": 31,
+          "ref": 26,
+          "pred_voxels": 412,
+          "ref_voxels": 407,
+          "z_faces": 0,
+          "intersection": 360,
+          "union": 459,
+          "residual": -5
+        },
+        {
+          "pred": 33,
+          "ref": 27,
+          "pred_voxels": 120,
+          "ref_voxels": 123,
+          "z_faces": 0,
+          "intersection": 111,
+          "union": 132,
+          "residual": 3
+        },
+        {
+          "pred": 36,
+          "ref": 35,
+          "pred_voxels": 544,
+          "ref_voxels": 535,
+          "z_faces": 2,
+          "intersection": 517,
+          "union": 562,
+          "residual": -9
+        },
+        {
+          "pred": 38,
+          "ref": 36,
+          "pred_voxels": 355,
+          "ref_voxels": 312,
+          "z_faces": 0,
+          "intersection": 276,
+          "union": 391,
+          "residual": -43
+        },
+        {
+          "pred": 42,
+          "ref": 37,
+          "pred_voxels": 221,
+          "ref_voxels": 261,
+          "z_faces": 0,
+          "intersection": 216,
+          "union": 266,
+          "residual": 40
+        },
+        {
+          "pred": 45,
+          "ref": 39,
+          "pred_voxels": 80,
+          "ref_voxels": 72,
+          "z_faces": 0,
+          "intersection": 57,
+          "union": 95,
+          "residual": -8
+        },
+        {
+          "pred": 46,
+          "ref": 40,
+          "pred_voxels": 1575,
+          "ref_voxels": 1515,
+          "z_faces": 2,
+          "intersection": 1490,
+          "union": 1600,
+          "residual": -60
+        },
+        {
+          "pred": 47,
+          "ref": 42,
+          "pred_voxels": 173,
+          "ref_voxels": 171,
+          "z_faces": 0,
+          "intersection": 165,
+          "union": 179,
+          "residual": -2
+        },
+        {
+          "pred": 51,
+          "ref": 43,
+          "pred_voxels": 273,
+          "ref_voxels": 171,
+          "z_faces": 0,
+          "intersection": 161,
+          "union": 283,
+          "residual": -102
+        },
+        {
+          "pred": 54,
+          "ref": 48,
+          "pred_voxels": 99,
+          "ref_voxels": 84,
+          "z_faces": 0,
+          "intersection": 78,
+          "union": 105,
+          "residual": -15
+        },
+        {
+          "pred": 55,
+          "ref": 49,
+          "pred_voxels": 116,
+          "ref_voxels": 115,
+          "z_faces": 0,
+          "intersection": 103,
+          "union": 128,
+          "residual": -1
+        },
+        {
+          "pred": 57,
+          "ref": 50,
+          "pred_voxels": 385,
+          "ref_voxels": 401,
+          "z_faces": 0,
+          "intersection": 360,
+          "union": 426,
+          "residual": 16
+        },
+        {
+          "pred": 62,
+          "ref": 53,
+          "pred_voxels": 348,
+          "ref_voxels": 335,
+          "z_faces": 2,
+          "intersection": 314,
+          "union": 369,
+          "residual": -13
+        },
+        {
+          "pred": 67,
+          "ref": 66,
+          "pred_voxels": 305,
+          "ref_voxels": 322,
+          "z_faces": 2,
+          "intersection": 298,
+          "union": 329,
+          "residual": 17
+        }
+      ],
+      "complete": {
+        "pairs": 13,
+        "under": 5,
+        "over": 8,
+        "tie": 0,
+        "outside": 3
+      },
+      "z_cut": {
+        "pairs": 13,
+        "under": 3,
+        "over": 10,
+        "tie": 0,
+        "outside": 1
+      },
+      "all": {
+        "pairs": 26,
+        "under": 8,
+        "over": 18,
+        "tie": 0,
+        "outside": 4
+      },
+      "support": true,
+      "native": {
+        "oof": {
+          "components": 74,
+          "table": "711d454911d918cbe1bfa0af8aecbcfde299b1e73c25e5f34c3f4e48b05cfbd2",
+          "mask": "b11fa6d79d091a15ad181fcc5863a051ed894a4356cfb95b097d956022793590",
+          "slabs": [
+            8,
+            17
+          ]
+        },
+        "reference": {
+          "components": 69,
+          "table": "e1e58f750f9d6ad801fdb53a23015f6e1d7fd1c066a3a86b2cb18089e3c33740",
+          "mask": "e6160ae3db5edc35c134c1fc55df5b0ca5afad911209c6962ac5eadd8c6455ce",
+          "slabs": [
+            8,
+            17
+          ]
+        }
+      },
+      "archive": "c1a7958e30de60421ea9a27ac429a66dce569f1f1daf26af1423f1b720d71310"
+    },
+    "3": {
+      "predicted": 16,
+      "reference": 13,
+      "unmatched_pred": {
+        "10": [
+          11621,
+          3
+        ],
+        "16": [
+          77,
+          1
+        ],
+        "32": [
+          1214,
+          1
+        ],
+        "107": [
+          68,
+          2
+        ]
+      },
+      "unmatched_ref": {
+        "50": [
+          112,
+          0
+        ]
+      },
+      "rows": [
+        {
+          "pred": 4,
+          "ref": 5,
+          "pred_voxels": 4930,
+          "ref_voxels": 4787,
+          "z_faces": 3,
+          "intersection": 4450,
+          "union": 5267,
+          "residual": -143
+        },
+        {
+          "pred": 5,
+          "ref": 4,
+          "pred_voxels": 1771,
+          "ref_voxels": 1932,
+          "z_faces": 1,
+          "intersection": 1739,
+          "union": 1964,
+          "residual": 161
+        },
+        {
+          "pred": 9,
+          "ref": 9,
+          "pred_voxels": 445,
+          "ref_voxels": 573,
+          "z_faces": 1,
+          "intersection": 409,
+          "union": 609,
+          "residual": 128
+        },
+        {
+          "pred": 11,
+          "ref": 12,
+          "pred_voxels": 1210,
+          "ref_voxels": 1219,
+          "z_faces": 1,
+          "intersection": 1155,
+          "union": 1274,
+          "residual": 9
+        },
+        {
+          "pred": 13,
+          "ref": 14,
+          "pred_voxels": 74,
+          "ref_voxels": 77,
+          "z_faces": 1,
+          "intersection": 63,
+          "union": 88,
+          "residual": 3
+        },
+        {
+          "pred": 17,
+          "ref": 17,
+          "pred_voxels": 78,
+          "ref_voxels": 116,
+          "z_faces": 1,
+          "intersection": 77,
+          "union": 117,
+          "residual": 38
+        },
+        {
+          "pred": 27,
+          "ref": 24,
+          "pred_voxels": 153,
+          "ref_voxels": 170,
+          "z_faces": 1,
+          "intersection": 145,
+          "union": 178,
+          "residual": 17
+        },
+        {
+          "pred": 86,
+          "ref": 67,
+          "pred_voxels": 335,
+          "ref_voxels": 377,
+          "z_faces": 2,
+          "intersection": 328,
+          "union": 384,
+          "residual": 42
+        },
+        {
+          "pred": 109,
+          "ref": 84,
+          "pred_voxels": 135,
+          "ref_voxels": 152,
+          "z_faces": 2,
+          "intersection": 113,
+          "union": 174,
+          "residual": 17
+        },
+        {
+          "pred": 111,
+          "ref": 80,
+          "pred_voxels": 80,
+          "ref_voxels": 110,
+          "z_faces": 2,
+          "intersection": 66,
+          "union": 124,
+          "residual": 30
+        },
+        {
+          "pred": 117,
+          "ref": 82,
+          "pred_voxels": 120,
+          "ref_voxels": 140,
+          "z_faces": 2,
+          "intersection": 94,
+          "union": 166,
+          "residual": 20
+        },
+        {
+          "pred": 120,
+          "ref": 88,
+          "pred_voxels": 82,
+          "ref_voxels": 70,
+          "z_faces": 2,
+          "intersection": 67,
+          "union": 85,
+          "residual": -12
+        }
+      ],
+      "complete": {
+        "pairs": 0,
+        "under": 0,
+        "over": 0,
+        "tie": 0,
+        "outside": 0
+      },
+      "z_cut": {
+        "pairs": 12,
+        "under": 10,
+        "over": 2,
+        "tie": 0,
+        "outside": 4
+      },
+      "all": {
+        "pairs": 12,
+        "under": 10,
+        "over": 2,
+        "tie": 0,
+        "outside": 4
+      },
+      "support": true,
+      "native": {
+        "oof": {
+          "components": 131,
+          "table": "7f09b56c3ee0f1b2a88b943f7339538dde1f4e63f20bbae00ef7b20f0bc0f20f",
+          "mask": "5a44fb543f6dd6929b7d392124d56d9c6cdc12a2cc9df1f563320fd6fc9642a9",
+          "slabs": [
+            8,
+            17
+          ]
+        },
+        "reference": {
+          "components": 93,
+          "table": "d1f6cd65d87c01370def4e5976738c3a10981be0ea5a08efdabe5ea9f216aec7",
+          "mask": "3ea426d8b82fdf00a7710700d4c15df0592df587e6b2e45274f4ef59be567c57",
+          "slabs": [
+            8,
+            17
+          ]
+        }
+      },
+      "archive": "f94c64a99f5f0e7971a3e0e2f7c932183009938aa5d284bcd23f4657674e6009"
+    },
+    "5": {
+      "predicted": 5,
+      "reference": 5,
+      "unmatched_pred": {},
+      "unmatched_ref": {},
+      "rows": [
+        {
+          "pred": 4,
+          "ref": 3,
+          "pred_voxels": 143,
+          "ref_voxels": 224,
+          "z_faces": 1,
+          "intersection": 139,
+          "union": 228,
+          "residual": 81
+        },
+        {
+          "pred": 5,
+          "ref": 4,
+          "pred_voxels": 8522,
+          "ref_voxels": 8471,
+          "z_faces": 3,
+          "intersection": 8295,
+          "union": 8698,
+          "residual": -51
+        },
+        {
+          "pred": 10,
+          "ref": 9,
+          "pred_voxels": 4696,
+          "ref_voxels": 4808,
+          "z_faces": 3,
+          "intersection": 4582,
+          "union": 4922,
+          "residual": 112
+        },
+        {
+          "pred": 13,
+          "ref": 12,
+          "pred_voxels": 266,
+          "ref_voxels": 296,
+          "z_faces": 1,
+          "intersection": 251,
+          "union": 311,
+          "residual": 30
+        },
+        {
+          "pred": 14,
+          "ref": 13,
+          "pred_voxels": 236,
+          "ref_voxels": 265,
+          "z_faces": 1,
+          "intersection": 228,
+          "union": 273,
+          "residual": 29
+        }
+      ],
+      "complete": {
+        "pairs": 0,
+        "under": 0,
+        "over": 0,
+        "tie": 0,
+        "outside": 0
+      },
+      "z_cut": {
+        "pairs": 5,
+        "under": 4,
+        "over": 1,
+        "tie": 0,
+        "outside": 1
+      },
+      "all": {
+        "pairs": 5,
+        "under": 4,
+        "over": 1,
+        "tie": 0,
+        "outside": 1
+      },
+      "support": false,
+      "native": {
+        "oof": {
+          "components": 29,
+          "table": "df8849dc8aa58ee7a7c890cb23f985d0194161368c9859326f54c4d2f7a20d9a",
+          "mask": "e9cd3f1d15a1a5a41c86f7e68b3b8f1c72b541c7017594eefc00a1dd0ee883f2",
+          "slabs": [
+            8,
+            17
+          ]
+        },
+        "reference": {
+          "components": 38,
+          "table": "9398c9a733d466ff2f14102042251ffc7fb59d95b9a234a865564801bc11fd67",
+          "mask": "9cd3e4d1a6dba9d1eed3510487c7a86c0c55c2bd99602f52255b51f6e2547a9e",
+          "slabs": [
+            8,
+            17
+          ]
+        }
+      },
+      "archive": "397db8ff45e681a6104e96646b2951a7d74434f4ffc421e3a6740c245965fb2b"
+    }
+  },
+  "supported": false
+}

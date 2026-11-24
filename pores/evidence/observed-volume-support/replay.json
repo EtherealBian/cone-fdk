@@ -1,0 +1,9 @@
+{
+  "sample2-oof.csv": "711d454911d918cbe1bfa0af8aecbcfde299b1e73c25e5f34c3f4e48b05cfbd2",
+  "sample2-reference.csv": "e1e58f750f9d6ad801fdb53a23015f6e1d7fd1c066a3a86b2cb18089e3c33740",
+  "sample3-oof.csv": "7f09b56c3ee0f1b2a88b943f7339538dde1f4e63f20bbae00ef7b20f0bc0f20f",
+  "sample3-reference.csv": "d1f6cd65d87c01370def4e5976738c3a10981be0ea5a08efdabe5ea9f216aec7",
+  "sample5-oof.csv": "df8849dc8aa58ee7a7c890cb23f985d0194161368c9859326f54c4d2f7a20d9a",
+  "sample5-reference.csv": "9398c9a733d466ff2f14102042251ffc7fb59d95b9a234a865564801bc11fd67",
+  "support.json": "a0fba13121c7dfdf8fe77a8fee224ee86415591000ddfab84724336986f17dd6"
+}
