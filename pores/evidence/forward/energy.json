@@ -1,0 +1,139 @@
+{
+  "predictions_sha256": "e02e8f0c2553c2b87cfdffba8d5b60af3107f0367a0e0406b0f4e3f8f46123a6",
+  "posthoc": true,
+  "normalization": "per ROI voxel; nearest extension; unordered in-volume face edges; only interior lattice changed",
+  "specimens": {
+    "2": {
+      "center": {
+        "before": {
+          "raw_mse": 0.011103653033261425,
+          "cut_edges": 58601,
+          "edge_penalty": 0.0007761981752183703,
+          "changed": 0,
+          "prior_penalty": 0.0,
+          "total": 0.011879851208479794
+        },
+        "after": {
+          "raw_mse": 0.010976154167712431,
+          "cut_edges": 56651,
+          "edge_penalty": 0.000750369495815701,
+          "changed": 1372,
+          "prior_penalty": 0.00010903676350911458,
+          "total": 0.011835560427037248
+        },
+        "delta": -4.429078144254674e-05,
+        "added_far": 0,
+        "deleted_far": 0
+      },
+      "blur": {
+        "before": {
+          "raw_mse": 0.00879551734436377,
+          "cut_edges": 58601,
+          "edge_penalty": 3.597271009336822e-05,
+          "changed": 0,
+          "prior_penalty": 0.0,
+          "total": 0.008831490054457138
+        },
+        "after": {
+          "raw_mse": 0.0575403613765916,
+          "cut_edges": 1471327,
+          "edge_penalty": 0.0009031862873252194,
+          "changed": 938064,
+          "prior_penalty": 0.0034550302200671013,
+          "total": 0.061898577883983924
+        },
+        "delta": 0.053067087829526786,
+        "added_far": 789134,
+        "deleted_far": 284
+      }
+    },
+    "3": {
+      "center": {
+        "before": {
+          "raw_mse": 0.042896526184391916,
+          "cut_edges": 720932,
+          "edge_penalty": 0.009549087948269315,
+          "changed": 0,
+          "prior_penalty": 0.0,
+          "total": 0.05244561413266124
+        },
+        "after": {
+          "raw_mse": 0.04197372963629394,
+          "cut_edges": 710510,
+          "edge_penalty": 0.00941104359096951,
+          "changed": 9819,
+          "prior_penalty": 0.0007803440093994141,
+          "total": 0.05216511723666287
+        },
+        "delta": -0.00028049689599837085,
+        "added_far": 0,
+        "deleted_far": 0
+      },
+      "blur": {
+        "before": {
+          "raw_mse": 0.015033214184272309,
+          "cut_edges": 720932,
+          "edge_penalty": 0.0004425500901525936,
+          "changed": 0,
+          "prior_penalty": 0.0,
+          "total": 0.015475764274424902
+        },
+        "after": {
+          "raw_mse": 0.1198239467441758,
+          "cut_edges": 1646688,
+          "edge_penalty": 0.0010108330922378173,
+          "changed": 1868393,
+          "prior_penalty": 0.0068815712765459836,
+          "total": 0.12771635111295962
+        },
+        "delta": 0.11224058683853472,
+        "added_far": 392362,
+        "deleted_far": 8146
+      }
+    },
+    "5": {
+      "center": {
+        "before": {
+          "raw_mse": 0.020807790283111142,
+          "cut_edges": 319115,
+          "edge_penalty": 0.004226830270555284,
+          "changed": 0,
+          "prior_penalty": 0.0,
+          "total": 0.025034620553666426
+        },
+        "after": {
+          "raw_mse": 0.0205084183489621,
+          "cut_edges": 314871,
+          "edge_penalty": 0.004170616467793782,
+          "changed": 3123,
+          "prior_penalty": 0.00024819374084472656,
+          "total": 0.02492722855760061
+        },
+        "delta": -0.00010739199606581498,
+        "added_far": 0,
+        "deleted_far": 0
+      },
+      "blur": {
+        "before": {
+          "raw_mse": 0.00870074554252243,
+          "cut_edges": 319115,
+          "edge_penalty": 0.00019589139061526595,
+          "changed": 0,
+          "prior_penalty": 0.0,
+          "total": 0.008896636933137697
+        },
+        "after": {
+          "raw_mse": 0.07566855871376095,
+          "cut_edges": 1232789,
+          "edge_penalty": 0.0007567577567497707,
+          "changed": 1150161,
+          "prior_penalty": 0.004236215240050356,
+          "total": 0.08066153171056108
+        },
+        "delta": 0.07176489477742339,
+        "added_far": 437849,
+        "deleted_far": 21535
+      }
+    }
+  }
+}

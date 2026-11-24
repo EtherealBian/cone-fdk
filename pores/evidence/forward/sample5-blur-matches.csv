@@ -1,0 +1,1 @@
+pred_id,ref_scipy_label,iou,pred_voxels,ref_voxels,signed_volume_error_pct,signed_equiv_diameter_error_pct,centroid_displacement_vox

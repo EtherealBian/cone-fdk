@@ -1,0 +1,18 @@
+{
+  "pipeline_id": "08abf9cf90b16eeb916e320040599c108911ecf8a1c9765bf85c6777d88bf248",
+  "advance": false,
+  "specimens": {
+    "2": {
+      "census": false,
+      "center": false
+    },
+    "3": {
+      "census": false,
+      "center": false
+    },
+    "5": {
+      "census": false,
+      "center": false
+    }
+  }
+}
