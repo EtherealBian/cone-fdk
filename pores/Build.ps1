@@ -19,4 +19,6 @@ try {
     if($LASTEXITCODE){throw 'Patch NLM compilation failed'}
     & $Python scripts/ptx.py pores/multiscale.cu build/pores/multiscale.ptx
     if($LASTEXITCODE){throw 'Multiscale NLM compilation failed'}
+    & $Python scripts/ptx.py pores/adaptive.cu build/pores/adaptive.ptx
+    if($LASTEXITCODE){throw 'Adaptive NLM compilation failed'}
 } finally {$env:Path=$old;Pop-Location}

@@ -17,6 +17,7 @@ NAMES = {
     "A": "calibrated NLM residual classifier A",
     "B": "blockwise NLM classifier B",
     "C": "multiscale boundary ensemble C",
+    "D": "axial neck and boundary estimator D",
 }
 
 
@@ -31,7 +32,7 @@ def identity(model):
     for name in (
         "cone-pores.exe",
         "pores.ptx",
-        {"A": "nlm.ptx", "B": "patches.ptx", "C": "multiscale.ptx"}[model],
+        {"A": "nlm.ptx", "B": "patches.ptx", "C": "multiscale.ptx", "D": "adaptive.ptx"}[model],
     ):
         hashes[name] = sha(ROOT / "build" / "pores" / name)
     packages = {

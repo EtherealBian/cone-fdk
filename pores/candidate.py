@@ -19,12 +19,14 @@ def run(i, cache, out, fetch, variant="A", *, permit=None):
     if i in HOLDOUT and not permit:
         raise ValueError("Reserved specimens require a frozen, replayed development pass")
     pipeline_id = token(identity(variant))
+    import neck_model
     from block_model import HALO, train_threshold
     from block_model import features as patch_features
     from boundary_model import ensemble
     from boundary_model import features as wide_features
     from boundary_model import train_threshold as wide_train
 
+    is_d = variant == "D"
     is_b = variant == "B"
     is_c = variant == "C"
     extract = wide_features if is_c else patch_features if is_b else features
@@ -40,6 +42,20 @@ def run(i, cache, out, fetch, variant="A", *, permit=None):
 
     def blocks(a, b, gpu):
         # Preserve actual source halos across both ends of every processing batch.
+        if is_d:
+            # Evaluate each expensive CUDA plane once, retain only a short halo.
+            pending = None
+            for start in range(a, b, 4):
+                stop = min(b, start + 4)
+                left = start - 2 if pending is None else start + 2
+                fresh = median_stack(raw, i, left, stop + 2, neck_model.HALO)
+                current = gpu(fresh, 30 / neck_model.SETTINGS[i][0])
+                if pending is not None:
+                    fresh = np.concatenate([pending[0], fresh])
+                    current = np.concatenate([pending[1], current])
+                pending = (fresh[-4:].copy(), current[-4:].copy())
+                yield start, stop, neck_model.features(current, fresh, i)
+            return
         for start in range(a, b, 4):
             stop = min(start + 4, b)
             yield (
@@ -51,14 +67,25 @@ def run(i, cache, out, fetch, variant="A", *, permit=None):
     with Denoise(
         ROOT
         / "build/pores"
-        / ("multiscale.ptx" if is_c else "patches.ptx" if is_b else "nlm.ptx"),
+        / (
+            "adaptive.ptx"
+            if is_d
+            else "multiscale.ptx"
+            if is_c
+            else "patches.ptx"
+            if is_b
+            else "nlm.ptx"
+        ),
         patch=is_b,
         multi=is_c,
+        adaptive=is_d,
     ) as gpu:
         train = [
             (x, m, stack(seg, i, "segmented", a, b)) for a, b, (x, m) in blocks(160, 184, gpu)
         ]
-        if is_c:
+        if is_d:
+            model, t = neck_model.train(train)
+        elif is_c:
             model, t = wide_train(train)
         elif is_b:
             model, t = train_threshold(train)
@@ -128,7 +155,7 @@ def run(i, cache, out, fetch, variant="A", *, permit=None):
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("--cache", type=Path, default=ROOT / "data/pores")
-    ap.add_argument("--model", choices=["A", "B", "C"], default="A")
+    ap.add_argument("--model", choices=list(NAMES), default="A")
     ap.add_argument("--out", type=Path)
     ap.add_argument("--fetch", action="store_true")
     group = ap.add_mutually_exclusive_group(required=True)
