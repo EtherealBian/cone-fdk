@@ -1,0 +1,22 @@
+{
+  "protocol": "Fresh simulated detector-to-mixed-batch replay, including dense and streaming comparisons and actual process interruption. No retained scan directories required; independent external reference hashes remain necessary.",
+  "verifier_sha256": "31fcaf59c5d033183cd2db8be6abdd0c9394af6c4512f802a409a31ff3791019",
+  "recipe_sha256": "bac705fccaafac5eb40e760657096b620237e8290779330be0b8011bd5d6c334",
+  "matched_sha256": {
+    "body-witness.json": "e3e614d2a64d7b69981f606677052ff91c646c5663772a74810c96845a00deab",
+    "edge-qualification.json": "ec5f0f423045080cf6129beedee9c3cfbbab729ecb73343be94939e2d273cbed",
+    "region-qualification.json": "f6c6c5d129b63ee1573eac34dcfb6429dd5305086580c1c1ebac5d0ace5f4b2d",
+    "packed-edge-qualification.json": "7f4e16fd0e057af4d83dd551f4348317ef6f78977951c1d5344f105c3a214f23",
+    "specimen-qualification.json": "9e3f69b2900a0c61339047ba3eb0bf8aa32c7e40133d16f8866203d94b04d722",
+    "specimen-console.html": "058d064f1b9d37b4c7c2022ed9247881fceb91fe4514bb9b0754e72f04170237",
+    "bridge-result.json": "d94b1e1a91e4c650a10e4907fa368556186ac0e740611d7c1b7aa6bee82d6962",
+    "bridge-bundle.json": "92d6457535d62c349285b321accb919946e6a1bf7e4f43c7beeaaa9df0d87740",
+    "bridge-console.html": "b60f228f73fa90131a54281002ed2a00c81032ed9ed7a81dea0857deadf44941",
+    "anchor-qualification.json": "3b7a2b953131c498107661ab80005e5a7dd7d1d7b55da00266605f30424307b5",
+    "stripe-qualification.json": "767789f1367de62ef24e74f831b61ec1a585e623c13efbfce072000a7856a856",
+    "stripe-batch-qualification.json": "4109fac13ccd788fbf6770074254c495e7117cc8911cd826e6926405dac00554"
+  },
+  "maps": 67,
+  "pair_cells": 988920,
+  "final_manifest_sha256": "e10745fd79f29976faff859bd2aa3f827fc0d61bc49a29fb6c0a1e97be3e0702"
+}

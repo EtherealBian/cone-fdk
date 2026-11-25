@@ -30,3 +30,5 @@ python scripts/stripe_review.py build/stripe-edge-example build/stripe-inspectio
 - **纯算法大网格：** 直接生成壁记录，包含棋盘孤岛、跨缝、窄桥和盲点。大网格每对有 84,847 或 84,848 片，任何一个前沿最多保留 239 个活动区域。与整幅独立标签器逐项对照；这不是大尺寸实物 CT，也没有生成对应的射线。压力专用格式不能作为生产作业送入上面入口。复现：`python scripts/qualify_stripe_scale.py qualify build/my-fresh-stripe-stress`。
 
 [隔离全回归及第二次压力实测](stripe-regression.json)：两次原生构建一致；未启用 `CoreOnly` 的全验收通过，包括真实核桃、1,296³ 压力、既有三组活动。初验 492 项；增加退化径向网格和发布检查反例后，同一索引检出整套 **503 项通过（无跳过）**。第二组压力进程独立运行，固定带高时网格增高四倍仍通过工作集门槛。
+
+需要在多件之间保留进度时，使用[分带批检与中断恢复](STRIPED-BATCH.md)。

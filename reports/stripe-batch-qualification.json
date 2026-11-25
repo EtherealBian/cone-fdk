@@ -1,0 +1,167 @@
+{
+  "scope": "Ten jobs are not ten independent specimens. Simulated projection-derived comparisons and two upstream refusals. Real OS process exit after four committed jobs; full and interrupted redo return the same index bytes.",
+  "recipe_sha256": "bac705fccaafac5eb40e760657096b620237e8290779330be0b8011bd5d6c334",
+  "engine_sha256": "5f8ac7cbef19675ae42b89d802779f8616cb8ced48b5edc4558756679444e365",
+  "validator_sha256": "284efcf7653fa2b0a94506ce062bf2d8ce85d83755c0320d9bbba1c5752689c0",
+  "source_records_sha256": {
+    "stripe-qualification.json": "767789f1367de62ef24e74f831b61ec1a585e623c13efbfce072000a7856a856",
+    "specimen-qualification.json": "9e3f69b2900a0c61339047ba3eb0bf8aa32c7e40133d16f8866203d94b04d722",
+    "body-witness.json": "e3e614d2a64d7b69981f606677052ff91c646c5663772a74810c96845a00deab"
+  },
+  "maps": 67,
+  "pair_cells": 988920,
+  "counts": {
+    "complete_coverage": 7,
+    "incomplete_coverage": 1,
+    "upstream_refused": 2,
+    "input_error": 0
+  },
+  "cold": {
+    "computed": 10,
+    "reused": 0,
+    "revalidated_payload_bytes": 0,
+    "input_errors": 0
+  },
+  "resume": {
+    "computed": 0,
+    "reused": 10,
+    "revalidated_payload_bytes": 23734080,
+    "input_errors": 0
+  },
+  "after_four_commits": {
+    "computed": 6,
+    "reused": 4,
+    "revalidated_payload_bytes": 12339360,
+    "input_errors": 0
+  },
+  "manifest_sha256": "e10745fd79f29976faff859bd2aa3f827fc0d61bc49a29fb6c0a1e97be3e0702",
+  "entries": {
+    "seam-flat-change": {
+      "id": "seam-flat-change",
+      "kind": "edge",
+      "source_manifest_sha256": "808b67f6a16b8c543df9a509249aa8ed2ef5d4af8a053c238cbb61fd2c099c41",
+      "result_sha256": "c5cf51de720073db2c60e2701561a6795a1893e493028388c0305b109ea2d701",
+      "result_file": "results/c5cf51de720073db2c60e2701561a6795a1893e493028388c0305b109ea2d701.json",
+      "status": "complete_coverage",
+      "anchor_states": {
+        "observed_link": 9
+      },
+      "incomplete_pairs": 0,
+      "pairs": 9
+    },
+    "seam-flat-repeat": {
+      "id": "seam-flat-repeat",
+      "kind": "edge",
+      "source_manifest_sha256": "5fa33ea0ab7473328a379fbe1333d874202f35947fe01be4c3dc14f4c763b041",
+      "result_sha256": "202dfb57f2291c684f56f648f2b3f926a2e9301473c8dbb52c7e765b80543f11",
+      "result_file": "results/202dfb57f2291c684f56f648f2b3f926a2e9301473c8dbb52c7e765b80543f11.json",
+      "status": "complete_coverage",
+      "anchor_states": {
+        "anchor_below_gate": 9
+      },
+      "incomplete_pairs": 0,
+      "pairs": 9
+    },
+    "dual-band-change": {
+      "id": "dual-band-change",
+      "kind": "edge",
+      "source_manifest_sha256": "b2096ffed950c015b1985065abd0e2ba2d48cbd7ab14fc4589a463e7cde0c3c7",
+      "result_sha256": "6c5ead11c73aa3edb581470a2edfe4d02397f5ded885717b7d982fc2a818247c",
+      "result_file": "results/6c5ead11c73aa3edb581470a2edfe4d02397f5ded885717b7d982fc2a818247c.json",
+      "status": "complete_coverage",
+      "anchor_states": {
+        "separated_on_grid": 9
+      },
+      "incomplete_pairs": 0,
+      "pairs": 9
+    },
+    "open-control": {
+      "id": "open-control",
+      "kind": "edge",
+      "source_manifest_sha256": "ec5b527b5c8f9633eef83c2af1df7c35a33ebff1cca673a099847f271349dd7f",
+      "result_sha256": "1ea40b0e78b6dd2ed5891faaf2147577973c8cd9e5befc54925599294468934d",
+      "result_file": "results/1ea40b0e78b6dd2ed5891faaf2147577973c8cd9e5befc54925599294468934d.json",
+      "status": "complete_coverage",
+      "anchor_states": {
+        "separated_on_grid": 9
+      },
+      "incomplete_pairs": 0,
+      "pairs": 9
+    },
+    "critical-a": {
+      "id": "critical-a",
+      "kind": "edge",
+      "source_manifest_sha256": "becaba2b1a7a67a2313bc71aa08079f081700b22c85d0fcff7ee452650356812",
+      "result_sha256": "9f616bdc201c19a9399d6d278347d1a0bde060d2feb96c8acacf0c377b921078",
+      "result_file": "results/9f616bdc201c19a9399d6d278347d1a0bde060d2feb96c8acacf0c377b921078.json",
+      "status": "complete_coverage",
+      "anchor_states": {
+        "observed_link": 3,
+        "separated_on_grid": 6
+      },
+      "incomplete_pairs": 0,
+      "pairs": 9
+    },
+    "critical-b": {
+      "id": "critical-b",
+      "kind": "edge",
+      "source_manifest_sha256": "dbb69a505c9955ad86830fe1557ba44d7c1b98fd36ca4d886a3b52525b7c0e9e",
+      "result_sha256": "02b21abf0a939f5058d027cdf1c83d65495bb60b46d2c90136ba2db80b6be627",
+      "result_file": "results/02b21abf0a939f5058d027cdf1c83d65495bb60b46d2c90136ba2db80b6be627.json",
+      "status": "complete_coverage",
+      "anchor_states": {
+        "observed_link": 3,
+        "separated_on_grid": 6
+      },
+      "incomplete_pairs": 0,
+      "pairs": 9
+    },
+    "joined-control": {
+      "id": "joined-control",
+      "kind": "edge",
+      "source_manifest_sha256": "6378cc2574da3e679538b14c9acd193307af22972d1511bd5af1cabcdad74e38",
+      "result_sha256": "73b03b22488fca5207d110cf7250b94dc84563d3d5695139f1a52513c359616f",
+      "result_file": "results/73b03b22488fca5207d110cf7250b94dc84563d3d5695139f1a52513c359616f.json",
+      "status": "complete_coverage",
+      "anchor_states": {
+        "observed_link": 9
+      },
+      "incomplete_pairs": 0,
+      "pairs": 9
+    },
+    "invalid-edge-control": {
+      "id": "invalid-edge-control",
+      "kind": "edge",
+      "source_manifest_sha256": "fc0ababbef42fecbb40e33bd3c5e2bb5002c5574730f53a62bfd122eb77c097f",
+      "result_sha256": "8270e9e94fe782e4c503347894a15a865eead8b6f7115bae83cb417a3eea8823",
+      "result_file": "results/8270e9e94fe782e4c503347894a15a865eead8b6f7115bae83cb417a3eea8823.json",
+      "status": "incomplete_coverage",
+      "anchor_states": {
+        "anchor_below_gate": 1,
+        "unresolved_blind_path": 3
+      },
+      "incomplete_pairs": 3,
+      "pairs": 4
+    },
+    "slide": {
+      "id": "slide",
+      "kind": "witness-refusal",
+      "source_manifest_sha256": "1eed21b8f8bd2b125088740c151533ef2adb9777f0ef70544b612579bbd02ef6",
+      "result_sha256": "be815d751bcffabec80144f93b4a4f952a8c165ea2347fd078e68c99f3a7068b",
+      "result_file": "results/be815d751bcffabec80144f93b4a4f952a8c165ea2347fd078e68c99f3a7068b.json",
+      "status": "upstream_refused",
+      "reason": "body_witness_failed",
+      "rejected_scan": "inspected"
+    },
+    "missing-reference": {
+      "id": "missing-reference",
+      "kind": "witness-refusal",
+      "source_manifest_sha256": "8b74eb042f4044931457a1c4fa5e232c19e8b52763482576df5e3e1609cc574c",
+      "result_sha256": "8d9559167194625f885dd77ab6f9cc0c5d0085ee4582466b1fb06fee23639400",
+      "result_file": "results/8d9559167194625f885dd77ab6f9cc0c5d0085ee4582466b1fb06fee23639400.json",
+      "status": "upstream_refused",
+      "reason": "body_witness_failed",
+      "rejected_scan": "reference"
+    }
+  }
+}

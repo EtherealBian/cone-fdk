@@ -72,7 +72,7 @@ Two additional **simulated tube geometries** were inspected from five separately
 
 The [preregistered narrow-bridge study](reports/BRIDGE-STUDY.md) shows why a high footprint IoU does not guarantee a stable component count: each critical acquisition linked the two lobes under only three of nine global edge settings. [Offline maps](reports/bridge-console.html).
 
-[Long-grid review](reports/STRIPED-REVIEW.md) summarizes connected defects and the relationship between two material locations without a full label map. On a 1,536 × 960 synthetic wall grid, nine global settings covered 13.27 million pair-cells in about 61 MiB of process working set with eight-row bands. The [offline path audit](reports/ANCHOR-AUDIT.md) can also show exactly where a smaller map needs evidence.
+[Long-grid review](reports/STRIPED-REVIEW.md) summarizes connected defects and the relationship between two material locations without a full label map. On a 1,536 × 960 synthetic wall grid, nine global settings covered 13.27 million pair-cells in about 61 MiB of process working set with eight-row bands. The [offline path audit](reports/ANCHOR-AUDIT.md) can also show exactly where a smaller map needs evidence. The [resumable batch workflow](reports/STRIPED-BATCH.md) revalidates source bytes before it reuses a completed specimen.
 
 The optional [witness-guarded CUDA path](reports/PACKED-EDGE.md) now publishes a complete edge-review job from retained shells. On the same accepted parent, three edge levels took **690 → 445 ms** and nine took **2,564 → 644 ms**, including source checks, CUDA processes and output publication; every map matched the original producer. These are edge-review times, not reconstruction times.
 

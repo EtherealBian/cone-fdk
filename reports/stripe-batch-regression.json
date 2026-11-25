@@ -1,0 +1,18 @@
+{
+  "scope": "Two identical native builds, full non-CoreOnly regression with packed, specimen and bridge campaigns. Independent clean simulation-to-batch replay. Verified the ten committed result payloads in both uninterrupted and OS-interrupted journals.",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "pytest": {
+    "tests": 538,
+    "errors": 0,
+    "skipped": 0,
+    "failures": 0
+  },
+  "retained_historical_bridge_sha256": "7dc0fadc621b978421dc98e06c92f185a6e487111b475382f98e8dcc37986569",
+  "prior_region_regression_sha256": "9ee6886d16d0804c3c668ec6e92ef2eb0eefaa619dd8834f0f08395835b8195e",
+  "batch_validation_sha256": "4109fac13ccd788fbf6770074254c495e7117cc8911cd826e6926405dac00554",
+  "full_mixed_replay_sha256": "45992b005aa39730d43941a17fe19be81f928178b14f8654eeacd53dad49ed36",
+  "detector_to_batch_matched_files": 12,
+  "restored_index_sha256": "e10745fd79f29976faff859bd2aa3f827fc0d61bc49a29fb6c0a1e97be3e0702",
+  "source_maps": 67,
+  "pair_cells": 988920
+}

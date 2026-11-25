@@ -1,0 +1,22 @@
+{
+  "format": "CFDK-striped-batch-plan-v1",
+  "entries": [
+    {
+      "id": "noisy-change",
+      "kind": "edge",
+      "job": "../build/stripe-edge-example",
+      "manifest_sha256": "91a3d0652ef6031cd72443e72c66971b0e5ef41abbb3a2cbb0d35edb055e968f",
+      "anchors_row_col": [
+        [
+          29,
+          133
+        ],
+        [
+          31,
+          134
+        ]
+      ],
+      "band_rows": 8
+    }
+  ]
+}
