@@ -305,6 +305,16 @@ if __name__ == "__main__":
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--keep", type=Path)
     p.add_argument("--reports", type=Path, default=REPORT)
+    p.add_argument(
+        "--edge-review",
+        action="store_true",
+        help="also qualify independent wall edge levels before discarding parent jobs",
+    )
     args = p.parse_args()
     with TemporaryDirectory() as tmp:
-        qualify(args.keep or Path(tmp), args.reports)
+        base = args.keep or Path(tmp)
+        qualify(base, args.reports)
+        if args.edge_review:
+            from validate_edges import qualify as qualify_edges
+
+            qualify_edges(base, base / "edge-reviews", args.reports)

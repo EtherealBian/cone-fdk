@@ -1,0 +1,39 @@
+{
+  "protocol": "All acceptance stages on a clean repeat native build. Revised pytest and integrated witness/edge stage rerun on that build; edge outputs compared byte-for-byte with a replay using archived witness jobs.",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "pytest": {
+    "tests": 304,
+    "errors": 0,
+    "skipped": 0,
+    "failures": 0
+  },
+  "build": {
+    "compiler": "g++.exe (Rev6, Built by MSYS2 project) 16.2.0",
+    "nvrtc": "12.9.86",
+    "rebuilds": 2,
+    "executable_sha256": "fb33b5c2f5d60c8b475baa2e79b8e1988a8dddcaea9f1a0c3d5f9e0a55a35983",
+    "ptx_sha256": "8a07a8441eb1a4d8dc035366e38a43524d114852b394599bf0932ba51dd82d9f",
+    "identical": true
+  },
+  "frozen_volumes_sha256": {
+    "analytic256": "5a9f929265a1c2c4720682b2af3e1029910fb5016d1ff09792f565931441c3b3",
+    "analytic512": "2388a8d02ce4b0016439298b367b6a964b073c726812b014bdd2a0496dce844d",
+    "walnut512": "868249894840a28eb9db08dd75b36c56e23aab83155fad38f8a971ed734be25f",
+    "stress1296": "9efb4e96bced3a183a4516a48520bc5ec9a5f42890e40a83792acebc2712dd89"
+  },
+  "prior_remount_and_witness_sha256": {
+    "remount-loss.json": "25985a9a91a71e8b907c83a51a4a92215b46f130918dc486844198648d844da8",
+    "remount-deepened.zip": "4cd976b0f1049af8177fb5cd87d341784dd7a9dc58d73f3e7893b6a365e8445a",
+    "remount-example-job.json": "2efe804092574a96e2dcbb8f89e8f666e5e13d4c23c0603eb3b14f9b37b04c71",
+    "remount-loss.png": "b45407a5afe9da8c7d5462b963e26ad3e1f11226fc5c3504fef931eba01c964e",
+    "body-witness.json": "e3e614d2a64d7b69981f606677052ff91c646c5663772a74810c96845a00deab",
+    "witness-margin.json": "f4d3051d50e41cc5c70bf3671be67545f01d1293cba32d2500008bfad577144f",
+    "witness-pivot.zip": "a753d30139984ac721b7d76c94799e98849629327d7785d1f1e002200e5cd869"
+  },
+  "edge_replay_sha256": {
+    "edge-cell.json": "5474f9e4be731832419ce707750c5e49b770f30c4c195f07b3d8cc8f8539379c",
+    "edge-review-example.zip": "f2658bb5b08d55f7276dfedb883cc1466ba03fc9f8201ee24039dfe185a16933",
+    "edge-review.png": "d23dbd69019b7555d3957fc9720a517cda7c699978c89d2567539ae386258b72",
+    "edge-qualification.json": "ec5f0f423045080cf6129beedee9c3cfbbab729ecb73343be94939e2d273cbed"
+  }
+}

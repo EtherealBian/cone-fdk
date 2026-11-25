@@ -1,0 +1,159 @@
+{
+  "protocol": "Finite level scenarios on independently projected simulated remounts. CPU reconstructs crossings from the FP32 shells and enumerates all pairs; no physical uncertainty or accuracy bound.",
+  "cases": {
+    "repeat": {
+      "parent_manifest_sha256": "214bd3461b970ad2d057df394ceeb7f5e76e795287cef4bcaa89fd6152a1de70",
+      "review_manifest_sha256": "9cb099d4ddcc76b5b9a9701990bdbdd6543346592a9f5638e026d6b6280d2e2f",
+      "levels_per_mm": [
+        0.018,
+        0.02,
+        0.022
+      ],
+      "loss_gate_mm": 0.3,
+      "counts": {
+        "always_below": 14760,
+        "sensitive": 0,
+        "always_flagged": 0,
+        "unknown": 0
+      },
+      "nominal_by_class": {
+        "below": {
+          "always_below": 14760,
+          "sensitive": 0,
+          "always_flagged": 0,
+          "unknown": 0
+        },
+        "flagged": {
+          "always_below": 0,
+          "sensitive": 0,
+          "always_flagged": 0,
+          "unknown": 0
+        },
+        "unknown": {
+          "always_below": 0,
+          "sensitive": 0,
+          "always_flagged": 0,
+          "unknown": 0
+        }
+      },
+      "sensitive_missed_by_same_level": 0,
+      "native_wall_calls": 4,
+      "additional_projection_passes": 0,
+      "raw_wall_records_checked": 88560,
+      "explicit_pair_cells": 132840,
+      "max_abs_cpu_cuda_thickness_mm": 3.1086244689504383e-15
+    },
+    "noisy-change": {
+      "parent_manifest_sha256": "20ce077eb45c583d3620d40b814cddd0317c0107d0b17bfff1eb3d6877e9f2e3",
+      "review_manifest_sha256": "91a3d0652ef6031cd72443e72c66971b0e5ef41abbb3a2cbb0d35edb055e968f",
+      "levels_per_mm": [
+        0.018,
+        0.02,
+        0.022
+      ],
+      "loss_gate_mm": 0.3,
+      "counts": {
+        "always_below": 14485,
+        "sensitive": 22,
+        "always_flagged": 253,
+        "unknown": 0
+      },
+      "nominal_by_class": {
+        "below": {
+          "always_below": 14485,
+          "sensitive": 12,
+          "always_flagged": 0,
+          "unknown": 0
+        },
+        "flagged": {
+          "always_below": 0,
+          "sensitive": 10,
+          "always_flagged": 253,
+          "unknown": 0
+        },
+        "unknown": {
+          "always_below": 0,
+          "sensitive": 0,
+          "always_flagged": 0,
+          "unknown": 0
+        }
+      },
+      "sensitive_missed_by_same_level": 21,
+      "native_wall_calls": 4,
+      "additional_projection_passes": 0,
+      "raw_wall_records_checked": 88560,
+      "explicit_pair_cells": 132840,
+      "max_abs_cpu_cuda_thickness_mm": 3.1086244689504383e-15,
+      "design_cross_tab": {
+        "below": {
+          "always_below": 14485,
+          "sensitive": 0,
+          "always_flagged": 0,
+          "unknown": 0
+        },
+        "flagged": {
+          "always_below": 0,
+          "sensitive": 22,
+          "always_flagged": 253,
+          "unknown": 0
+        }
+      },
+      "always_flagged_iou_vs_design": 0.92,
+      "example_cell": [
+        23,
+        122
+      ]
+    },
+    "invalid-edge-control": {
+      "parent_manifest_sha256": "214bd3461b970ad2d057df394ceeb7f5e76e795287cef4bcaa89fd6152a1de70",
+      "review_manifest_sha256": "28b3cd044f8b4a174dfbde30096c429af3180c8c4d332b4b0983d6dc63c655cc",
+      "levels_per_mm": [
+        0.02,
+        0.04
+      ],
+      "loss_gate_mm": 0.3,
+      "counts": {
+        "always_below": 0,
+        "sensitive": 0,
+        "always_flagged": 0,
+        "unknown": 14760
+      },
+      "nominal_by_class": {
+        "below": {
+          "always_below": 0,
+          "sensitive": 0,
+          "always_flagged": 0,
+          "unknown": 14760
+        },
+        "flagged": {
+          "always_below": 0,
+          "sensitive": 0,
+          "always_flagged": 0,
+          "unknown": 0
+        },
+        "unknown": {
+          "always_below": 0,
+          "sensitive": 0,
+          "always_flagged": 0,
+          "unknown": 0
+        }
+      },
+      "sensitive_missed_by_same_level": 0,
+      "native_wall_calls": 2,
+      "additional_projection_passes": 0,
+      "raw_wall_records_checked": 59040,
+      "explicit_pair_cells": 59040,
+      "max_abs_cpu_cuda_thickness_mm": 3.1086244689504383e-15
+    }
+  },
+  "rejected_parents": [
+    "slide",
+    "missing-reference",
+    "noisy-change-fixture-only"
+  ],
+  "evidence_sha256": {
+    "edge-cell.json": "5474f9e4be731832419ce707750c5e49b770f30c4c195f07b3d8cc8f8539379c",
+    "edge-review-example.zip": "f2658bb5b08d55f7276dfedb883cc1466ba03fc9f8201ee24039dfe185a16933",
+    "edge-review.png": "d23dbd69019b7555d3957fc9720a517cda7c699978c89d2567539ae386258b72"
+  }
+}
