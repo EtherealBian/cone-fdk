@@ -21,7 +21,9 @@ def compile_ptx():
         if n:
             raise RuntimeError(f"NVRTC status {n}")
 
-    ck(dll.nvrtcCreateProgram(C.byref(prog), source, b"kernels.cu", 0, None, None))
+    headers = (C.c_char_p * 1)((root / "src/geometry.hpp").read_bytes())
+    names = (C.c_char_p * 1)(b"geometry.hpp")
+    ck(dll.nvrtcCreateProgram(C.byref(prog), source, b"kernels.cu", 1, headers, names))
     opts = (C.c_char_p * 2)(b"--gpu-architecture=compute_80", b"--std=c++14")
     rc = dll.nvrtcCompileProgram(prog, 2, opts)
     s = C.c_size_t()

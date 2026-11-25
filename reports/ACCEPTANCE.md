@@ -16,3 +16,7 @@ Before recording the release benchmark, freeze both EXE/PTX pairs. On this same 
 ## Multi-region source-build gate
 
 On the pinned 720-view walnut, six fixed regions, parent 512³ / 40 mm, batch 16 and 128 MiB: reconstruct and hash the published full reference, then compare every packed payload and every serial `--roi` output with its parent crop. After warming each method, alternate six AB/BA pairs. Require a single projection pass at 128 MiB, identical pack hashes, more than 10% lower median total process time, and at least five paired wins. Force multiple passes at 48 MiB and require the same whole-pack hash. Check byte counts, memory cap and CUDA allocation borders. Report startup and output costs, not kernel-only speedup. See [six-region results](MULTI-ROI.md).
+
+## Direct plane source-build gate
+
+Compare all pixels on three standard walnut cuts with the frozen parent bytes. On a translated and tilted cut, check 365 sites across the image against the independent FP64 spatial implementation: relative L2 < 1e-5 and maximum absolute difference / reference peak < 5e-5. Fully cross-check small clipped-detector cases, and require identical pixels across strip boundaries and reversed column ordering. On a second, analytic scan, measure three known sphere cross-sections without fitting: every center error < 0.06 mm and every area-equivalent diameter error < 0.10 mm. [Protocol, scope and observations](DIRECT-PLANES.md).

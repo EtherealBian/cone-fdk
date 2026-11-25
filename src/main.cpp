@@ -1,6 +1,7 @@
 #include "files.hpp"
 #include "finite.hpp"
 #include "gpu.hpp"
+#include "plane.hpp"
 #include "regions.hpp"
 #include <chrono>
 #include <cmath>
@@ -12,12 +13,7 @@
 #include <sstream>
 #include <utility>
 using Clock = std::chrono::steady_clock;
-struct Geom {
-    int a, v, u, n;
-    float du, dv, R, D, vox, start, sign;
-};
 static_assert(sizeof(void *) == 8 && sizeof(float) == 4, "Requires Windows x64 and FP32");
-static_assert(sizeof(Geom) == 44, "kernel ABI");
 int up(int x, int y) {
     return (x + y - 1) / y;
 }
@@ -36,7 +32,8 @@ int main() {
             std::cout << "cone-fdk --geom scan.geom --input projections.f32 --output volume.f32 "
                          "--n 256 --fov 40 --budget 768 --batch 16 --ptx kernels.ptx "
                          "[--host-memory auto|pageable] [--roi x,y,z,nx,ny,nz | --roi-list "
-                         "boxes.txt] [--planner batch-first|min-passes]\nmin-passes requires "
+                         "boxes.txt | --plane plane.txt] [--planner "
+                         "batch-first|min-passes]\nmin-passes requires "
                          "--roi-list. Budget in "
                          "MiB; fov in mm. Metrics to stdout as JSON.\n";
             return 0;
@@ -48,7 +45,7 @@ int main() {
         for (int i = 1; i < argc; i += 2) {
             if (i + 1 >= argc ||
                 (!keys.count(argv[i]) && argv[i] != "--host-memory" && argv[i] != "--roi" &&
-                 argv[i] != "--roi-list" && argv[i] != "--planner") ||
+                 argv[i] != "--roi-list" && argv[i] != "--planner" && argv[i] != "--plane") ||
                 options.count(argv[i]))
                 throw std::runtime_error("unknown/duplicate/incomplete argument");
             options[argv[i]] = argv[i + 1];
@@ -62,8 +59,9 @@ int main() {
             throw std::runtime_error("--planner expects batch-first or min-passes");
         if (policy == "min-passes" && !packed)
             throw std::runtime_error("--planner min-passes requires --roi-list");
-        if (packed && options.count("--roi"))
-            throw std::runtime_error("use only one of --roi and --roi-list");
+        bool sliced = options.count("--plane") != 0;
+        if (int(packed) + int(sliced) + int(options.count("--roi")) > 1)
+            throw std::runtime_error("use only one of --roi, --roi-list and --plane");
         for (const auto &key : keys)
             if (!options.count(key))
                 throw std::runtime_error("missing argument: " + key);
@@ -74,6 +72,8 @@ int main() {
                 throw std::runtime_error("output aliases an input");
         if (packed && same_file(dest, absolute(val("--roi-list"))))
             throw std::runtime_error("output aliases the ROI list");
+        if (sliced && same_file(dest, absolute(val("--plane"))))
+            throw std::runtime_error("output aliases the plane specification");
         Geom g{};
         std::istringstream meta(small_file(val("--geom"), 4096));
         std::string magic, junk;
@@ -84,10 +84,6 @@ int main() {
         g.n = integer(val("--n"), 2, 4096);
         bool cropped = packed || options.count("--roi");
         std::vector<Box> boxes;
-        if (packed)
-            boxes = read_boxes(val("--roi-list"), g.n);
-        else
-            boxes.push_back(cropped ? parse_box(val("--roi"), g.n) : Box{0, 0, 0, g.n, g.n, g.n});
         size_t pos;
         float fov = std::stof(val("--fov"), &pos);
         if (pos != val("--fov").size())
@@ -97,6 +93,15 @@ int main() {
               g.du > 0 && g.dv > 0 && g.D > g.R && g.R > fov * .708f && g.vox > 0 &&
               std::isfinite(g.D + g.R + g.du + g.dv + g.start + fov) && std::abs(g.sign) == 1))
             throw std::runtime_error("unsupported field of view or geometry");
+        Plane plane{};
+        if (sliced) {
+            plane = read_plane(val("--plane"), fov);
+            // The planner splits along its last dimension: here one slab is one image row.
+            boxes.push_back({0, 0, 0, plane.w, 1, plane.h});
+        } else if (packed)
+            boxes = read_boxes(val("--roi-list"), g.n);
+        else
+            boxes.push_back(cropped ? parse_box(val("--roi"), g.n) : Box{0, 0, 0, g.n, g.n, g.n});
         size_t budget = size_t(integer(val("--budget"), 1, 65536)) << 20;
         const int requestedBatch = integer(val("--batch"), 1, 256);
         int k = 1;
@@ -117,8 +122,11 @@ int main() {
             throw std::runtime_error("GPU is busy: insufficient free device memory");
         size_t cap = std::min(budget, free0 - guard);
         auto pre = gpu.kernel("pre"), sp = gpu.kernel("spectrum"),
-             back = gpu.kernel(cropped ? "back_roi" : "back"), un = gpu.kernel("unpack"),
-             ang = gpu.kernel("angles"), ramp = gpu.kernel("ramp"), pairs = gpu.kernel("pairs");
+             back = gpu.kernel(sliced    ? "back_plane"
+                               : cropped ? "back_roi"
+                                         : "back"),
+             un = gpu.kernel("unpack"), ang = gpu.kernel("angles"), ramp = gpu.kernel("ramp"),
+             pairs = gpu.kernel("pairs");
         std::unique_ptr<Plan> plan;
         // Score only feasible plans, with their actual cuFFT workspace. Sizing and
         // execution share the same ordered tiler, including whole-plane splits.
@@ -159,7 +167,7 @@ int main() {
         }
         if (!plan)
             throw std::runtime_error(
-                "budget cannot fit one view, FFT work area and one volume plane");
+                "budget cannot fit one view, FFT work area and one output row/volume plane");
         Buf block(gpu, elems * 4), views(gpu, row * batch * 4),
             freq(gpu, size_t(batch) * g.v * k * 8), cs(gpu, g.a * 8), h(gpu, k * 4),
             work(gpu, plan->work);
@@ -209,7 +217,10 @@ int main() {
                 ++filterBatches;
                 Ptr dst = block.p;
                 for (const auto &b : tiles) {
-                    if (cropped) {
+                    if (sliced) {
+                        gpu.launch(back, up(plane.w, 16), up(b.nz, 8), 1, 16, 8, dst, freq.p, cs.p,
+                                   g, first, actual, plane, b.z, b.nz);
+                    } else if (cropped) {
                         gpu.launch(back, up(b.nx, 16), up(b.ny, 8), up(b.nz + (b.z & 3), 16), 16, 8,
                                    dst, freq.p, cs.p, g, first, actual, b.z, b.nz, b.x, b.y, b.nx,
                                    b.ny);
@@ -241,8 +252,9 @@ int main() {
         std::cout << std::fixed << std::setprecision(4) << "{\"gpu\":\"" << gpu.name
                   << "\",\"driver_api\":" << gpu.driver << ",\"cufft_version\":" << gpu.fftver
                   << ",\"views\":" << g.a << ",\"n\":" << g.n << ",\"batch\":" << batch
-                  << ",\"voxel_spacing_mm\":" << std::defaultfloat << std::setprecision(9) << g.vox
-                  << std::fixed << std::setprecision(4);
+                  << (sliced ? ",\"parent_voxel_spacing_mm\":" : ",\"voxel_spacing_mm\":")
+                  << std::defaultfloat << std::setprecision(9) << g.vox << std::fixed
+                  << std::setprecision(4);
         std::cout << ",\"planner\":\"" << policy << "\",\"requested_batch\":" << requestedBatch
                   << ",\"effective_budget_bytes\":" << cap << ",\"feasible_plans_scored\":[";
         for (size_t i = 0; i < candidates.size(); ++i) {
@@ -253,7 +265,11 @@ int main() {
         }
         std::cout << "]";
         size_t written = 0;
-        if (packed) {
+        if (sliced) {
+            written = 4 * boxes.front().voxels();
+            print_plane(plane);
+            std::cout << ",\"rows_per_pass\":" << elems / plane.w;
+        } else if (packed) {
             written = pack_header_bytes(boxes.size());
             std::cout << ",\"format\":\"CFDKROI1\",\"regions\":[";
             for (size_t i = 0; i < boxes.size(); ++i) {

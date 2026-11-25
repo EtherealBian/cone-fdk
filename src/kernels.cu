@@ -1,9 +1,6 @@
 // Circular, equiangular flat-panel cone-beam FDK. Input views are [v,u].
 // Native CUDA C++ (compiled to PTX at build time; no Python on the hot path).
-struct Geom {
-    int a, v, u, n;
-    float du, dv, R, D, vox, start, sign;
-};
+#include "geometry.hpp"
 extern "C" __global__ void angles(float2 *cs, Geom g) {
     int i = blockIdx.x * blockDim.x + threadIdx.x;
     if (i < g.a) {
@@ -130,4 +127,36 @@ extern "C" __global__ void back_roi(float *out, const float2 *__restrict__ views
                                     const float2 *__restrict__ cs, Geom g, int first, int cnt,
                                     int z0, int depth, int x0, int y0, int nx, int ny) {
     back_tile<true>(out, views, cs, g, first, cnt, z0, depth, x0, y0, nx, ny);
+}
+
+// An arbitrary plane cannot reuse a Z column. One thread accumulates one pixel;
+// only the world-space pixel address is computed in FP64, once per view batch.
+extern "C" __global__ void back_plane(float *out, const float2 *__restrict__ views,
+                                      const float2 *__restrict__ cs, Geom g, int first, int cnt,
+                                      Plane plane, int row0, int rows) {
+    int i = blockIdx.x * blockDim.x + threadIdx.x, j = blockIdx.y * blockDim.y + threadIdx.y;
+    if (i >= plane.w || j >= rows)
+        return;
+    double di = i - .5 * (plane.w - 1), dj = j + row0 - .5 * (plane.h - 1);
+    float xyz[3];
+#pragma unroll
+    for (int k = 0; k < 3; ++k)
+        xyz[k] = (float)(plane.center[k] + di * plane.col[k] + dj * plane.row[k]);
+    float x = xyz[0], y = xyz[1], z = xyz[2], sum = out[j * plane.w + i];
+    int stride = g.u + 1, pixels = g.v * stride;
+    for (int a = 0; a < cnt; ++a) {
+        float2 b = cs[first + a];
+        float r = 1.f / (g.R - x * b.y + y * b.x), m = g.D * r;
+        float u = fmaf(x * b.x + y * b.y, m / g.du, (g.u - 1) * .5f);
+        float v = fmaf(z, m / g.dv, (g.v - 1) * .5f);
+        if (!(u > -1.f && u < g.u && v > -1.f && v < g.v))
+            continue;
+        int ui = __float2int_rd(u), vi = __float2int_rd(v), index = vi * stride + ui + 1;
+        const float2 *p = views + (unsigned long long)a * (pixels + 2) + 1;
+        float2 lo = p[max(-1, index)], hi = p[min(pixels, index + stride)];
+        float fu = u - ui, fv = v - vi, w = g.R * r;
+        float s = fmaf(fu, lo.y, lo.x), t = fmaf(fu, hi.y, hi.x);
+        sum = fmaf(fmaf(fv, t - s, s), w * w, sum);
+    }
+    out[j * plane.w + i] = sum;
 }

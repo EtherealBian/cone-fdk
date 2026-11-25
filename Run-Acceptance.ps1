@@ -9,6 +9,7 @@ try {
   New-Item -ItemType Directory -Force reports,data | Out-Null
   Run-Python -m pytest tests -q --junitxml=reports/native-tests.xml
   Run-Python scripts/accept.py all
+  Run-Python scripts/validate_plane_phantom.py
   Run-Python scripts/export_volume.py data/walnut-corrected-256.f32 --n 256 --fov 40 --out reports
   Run-Python scripts/benchmark.py
   if (!$CoreOnly) {
@@ -18,6 +19,7 @@ try {
     Run-Python scripts/validate_roi.py
     Run-Python scripts/validate_roi_pack.py
     Run-Python scripts/validate_planner.py
+    Run-Python scripts/validate_planes.py
     Run-Python scripts/report.py
     Write-Host "Complete: $PSScriptRoot\reports\RESULTS.md"
   } else {Write-Host 'Core gates passed. Oversize and 720-view scans were not rerun.'}

@@ -59,6 +59,7 @@ def reconstruct(
     roi=None,
     roi_list=None,
     planner=None,
+    plane=None,
 ):
     env = os.environ.copy()
     env["PATH"] = os.pathsep.join(map(str, dll_dirs())) + os.pathsep + env.get("PATH", "")
@@ -85,6 +86,8 @@ def reconstruct(
         cmd.extend(["--roi", roi])
     if roi_list is not None:
         cmd.extend(["--roi-list", roi_list])
+    if plane is not None:
+        cmd.extend(["--plane", plane])
     if planner is not None:
         cmd.extend(["--planner", planner])
     if host_memory is not None:

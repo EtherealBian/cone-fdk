@@ -24,11 +24,16 @@ group.add_argument(
     type=pathlib.Path,
     help="boxes.txt in parent-grid coordinates; write a CFDKROI1 pack",
 )
+group.add_argument(
+    "--plane", type=pathlib.Path, help="CFDKPLANE1 physical slice; write raw [height,width] FP32"
+)
 a = p.parse_args()
 if a.astra and a.planner is not None:
     p.error("--planner applies only to the native engine")
-if a.astra and (a.roi is not None or a.roi_list is not None):
-    p.error("region selection applies to the native engine, not the ASTRA full-volume runner")
+if a.astra and (a.roi is not None or a.roi_list is not None or a.plane is not None):
+    p.error(
+        "region/plane selection applies to the native engine, not the ASTRA full-volume runner"
+    )
 print(
     json.dumps(
         astra_run(a.scan, a.output, a.n, a.fov)
@@ -43,6 +48,7 @@ print(
             roi=a.roi,
             roi_list=a.roi_list,
             planner=a.planner,
+            plane=a.plane,
         ),
         indent=2,
     )

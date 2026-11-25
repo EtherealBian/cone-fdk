@@ -1,0 +1,87 @@
+{
+  "protocol": "Build.ps1 -VerifyRepeat, then the full Run-Acceptance.ps1 -SkipBuild in a fresh directory. Eight cached source ZIPs verified before preprocessing; outputs below from this run. This is a source qualification, not a new binary release.",
+  "repeated_build": {
+    "compiler": "g++.exe (Rev6, Built by MSYS2 project) 16.2.0",
+    "nvrtc": "12.9.86",
+    "rebuilds": 2,
+    "executable_sha256": "0c1a711a3e2a3e127236098db0a55e2d3b0023fadf3faa6e1f6d8f0a84cb4fbe",
+    "ptx_sha256": "485679abd66350367abdcc0413aebf68da93d2269a7b3ea537860778eafcfaf3",
+    "identical": true
+  },
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "pytest": {
+    "timestamp": "2026-11-25T13:33:22.915925+08:00",
+    "tests": "95",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  "full_outputs_sha256_equal_to_frozen_release": {
+    "analytic256": "5a9f929265a1c2c4720682b2af3e1029910fb5016d1ff09792f565931441c3b3",
+    "analytic512": "2388a8d02ce4b0016439298b367b6a964b073c726812b014bdd2a0496dce844d",
+    "walnut512": "868249894840a28eb9db08dd75b36c56e23aab83155fad38f8a971ed734be25f",
+    "stress1296": "9efb4e96bced3a183a4516a48520bc5ec9a5f42890e40a83792acebc2712dd89"
+  },
+  "walnut_720_view_volume": {
+    "views": 720,
+    "n": 512,
+    "offline_subset_bitwise_equal": true,
+    "corrected_vs_astra": {
+      "rel_l2": 0.0002899303474924963,
+      "max_abs": 4.7322362661361694e-05,
+      "ref_peak": 0.10855789482593536
+    }
+  },
+  "oversize": {
+    "output_bytes": 8707129344,
+    "slabs": 17,
+    "budget_bytes": 536870912,
+    "peak_owned_bytes": 533745568,
+    "astra_checked_planes": [
+      {
+        "z": 432,
+        "relative_l2": 0.00027744420977368145
+      },
+      {
+        "z": 623,
+        "relative_l2": 0.0002828172363311958
+      },
+      {
+        "z": 624,
+        "relative_l2": 0.00028312019664349775
+      },
+      {
+        "z": 648,
+        "relative_l2": 0.0002855945199622352
+      },
+      {
+        "z": 864,
+        "relative_l2": 0.0002760611745227993
+      }
+    ]
+  },
+  "fine_grid_2048_roi": {
+    "relative_l2": 0.00024467365154306266,
+    "relative_l2_limit": 0.001,
+    "roi_sha256": "417963027ba7f51774280b23a28851578ecdc5bf78f70573eb88efe78f7e196a"
+  },
+  "six_region_pack": {
+    "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+    "paired_wins": 6
+  },
+  "planner_48_mib": {
+    "batch_first_median_seconds": 0.5941573000009157,
+    "min_passes_median_seconds": 0.30450980000023264,
+    "paired_wins": 6,
+    "median_reduction_fraction": 0.4874929585149197,
+    "speed_gate_passed": true
+  },
+  "cross_sections": {
+    "direct_standard_pixels_checked": 786432,
+    "oblique_sampled_pixels": 365,
+    "oblique_sampled_relative_l2": 1.6442269916806503e-06,
+    "analytic_sphere_cuts": 3,
+    "worst_center_error_mm": 0.0052934154904401825,
+    "worst_diameter_error_mm": 0.028665001933655176
+  }
+}
