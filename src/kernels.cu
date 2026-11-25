@@ -330,3 +330,47 @@ extern "C" __global__ void bore_circles(const WallSample *wall, BoreCircle *out,
     if (!t)
         out[idx] = fit;
 }
+
+// A nonnegative label is a live union-find node. Rejected pairs retain BOTH statuses.
+extern "C" __global__ void loss_classify(const WallSample *ref, const WallSample *part, int *parent,
+                                         int n, double threshold) {
+    int i = blockIdx.x * blockDim.x + threadIdx.x;
+    if (i >= n)
+        return;
+    unsigned a = ref[i].status, b = part[i].status;
+    parent[i] = (a || b) ? -2 - int(a * WallStatusCount + b)
+                         : (ref[i].thickness - part[i].thickness >= threshold ? i : -1);
+}
+// Every successful link strictly lowers a root. A lost CAS retries from the new roots;
+// a tile thus has a deterministic minimum-index representative, regardless of launch order.
+__device__ int loss_root(int *p, int i) {
+    while (i >= 0) {
+        int j = atomicAdd(p + i, 0);
+        if (j < 0 || j == i)
+            return j;
+        int grand = atomicAdd(p + j, 0);
+        if (grand != j)
+            atomicCAS(p + i, j, grand); // path halving, never overwrite a newer link
+        i = grand;
+    }
+    return i;
+}
+__device__ void loss_join(int *p, int a, int b) {
+    for (;;) {
+        a = loss_root(p, a);
+        b = loss_root(p, b);
+        if (a < 0 || b < 0 || a == b)
+            return;
+        int hi = max(a, b), lo = min(a, b);
+        if (atomicCAS(p + hi, hi, lo) == hi)
+            return;
+    }
+}
+extern "C" __global__ void loss_connect(int *parent, int w, int n) {
+    int i = blockIdx.x * blockDim.x + threadIdx.x;
+    if (i >= n || atomicAdd(parent + i, 0) < 0)
+        return;
+    loss_join(parent, i, i % w ? i - 1 : i + w - 1);
+    if (i >= w)
+        loss_join(parent, i, i - w);
+}

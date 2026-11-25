@@ -1,5 +1,5 @@
 #pragma once
-#include "cylinder.hpp"
+#include "wall_record.hpp"
 #include "gpu.hpp"
 #include <map>
 
@@ -7,19 +7,6 @@ constexpr const char *bore_usage =
     "cone-fdk bore --cylinder grid.txt --input radial.wall --output sections.json "
     "--max-residual-mm MM --budget MiB --ptx kernels.ptx\n";
 
-inline bool bore_valid_record(const WallSample &s, double lo, double hi) {
-    if (s.reserved || s.status >= WallStatusCount)
-        return false;
-    if (s.status != Measured)
-        return std::isnan(s.inner) && std::isnan(s.outer) && std::isnan(s.thickness);
-    if (!std::isfinite(s.outer))
-        return false;
-    const double tol = 16 * std::numeric_limits<double>::epsilon();
-    return s.inner > 0 && s.inner >= lo - tol * lo && s.outer <= hi + tol * hi &&
-           s.outer > s.inner && s.thickness > 0 && std::isfinite(s.thickness) &&
-           std::abs((s.outer - s.inner) - s.thickness) <=
-               16 * std::numeric_limits<double>::epsilon() * s.outer;
-}
 inline bool bore_solved(const BoreCircle &f) {
     return f.solved == 1 && std::isfinite(f.x) && std::isfinite(f.y) && std::isfinite(f.radius) &&
            f.radius > 0 && std::isfinite(f.rms) && std::isfinite(f.peak);
@@ -102,7 +89,7 @@ inline int measure_bore(const std::vector<std::string> &args) {
         int n = std::min(tile, h - start);
         in.transfer(data.data(), n * rowBytes, false);
         for (int i = 0; i < n * w; ++i)
-            if (!bore_valid_record(data[i], c.firstRadius,
+            if (!valid_wall_record(data[i], c.firstRadius,
                                    c.firstRadius + (g.shells - 1) * c.radialStep))
                 throw std::runtime_error("malformed wall record at index " +
                                          std::to_string(start * w + i));

@@ -1,0 +1,392 @@
+{
+  "protocol": "Analytic reference and machined tubes, ideal plus independent seeded detector counting noise; registered scanner grid; errors against the sampled design, not physical accuracy.",
+  "binary_sha256": {
+    "cone-fdk.exe": "6a85f9d839779b6a2d6983c1022f40139c507b232c28bb9e086fa90fbdb5f14c",
+    "kernels.ptx": "4a9fe197ab3f6e252203fdfa62e4be6710dafad58f3c63a3af2f3f5361abd52e"
+  },
+  "grid": [
+    "CFDKCYL1 360 41 121",
+    "0 0 0",
+    "0 0 1",
+    "1 0 0",
+    "4.5 0.05 0.2"
+  ],
+  "threshold_mm": 0.3,
+  "limits": {
+    "min_iou": 0.9,
+    "max_area_rel": 0.12,
+    "peak_abs_mm": 0.07,
+    "max_angle_error_deg": 4.0
+  },
+  "noisy_limits": {
+    "min_iou": 0.88,
+    "max_area_rel": 0.14,
+    "peak_abs_mm": 0.085,
+    "max_angle_error_deg": 6.0
+  },
+  "photons_per_air_bin": 250000,
+  "noise_inputs_and_seeds": {
+    "noisy-reference": [
+      "reference",
+      3671
+    ],
+    "noisy-clean": [
+      "reference",
+      15731
+    ],
+    "noisy-dual": [
+      "dual-surface",
+      85411
+    ]
+  },
+  "quarter_turn_loss_bitwise_equal": true,
+  "cases": {
+    "outer-flat-0": {
+      "reference": {
+        "projections_sha256": "732b6d67f9cf0cf0c3af830332d071498a65accfbeaac2b5ee31153637af02ea",
+        "atlas_sha256": "b83f26f04e17b96b4032bf8f552601f798ffb8e87f83d8ec1be1ce03dbb7f371",
+        "wall_sha256": "16dd4929b4ac81417f5cf202063f8c0024474ecfd6b0e8f69f63de9460aa87d5"
+      },
+      "inspected": {
+        "projections_sha256": "33a4ff9e82c37180f897a4e358ac154cdd2b587440f2132e95aa9c61d93ee31b",
+        "atlas_sha256": "ab291181048b331856998f42670f86e4266148782c381fcc34ccd25f661c1364",
+        "wall_sha256": "3e762086029ee5a831a971fbef9b019b31f1c66d6c7080f872a7c4aa8b6bf9b0"
+      },
+      "report_sha256": "0c2478c60bada26f1d16b587e58a075c8b987460cf34a2ee3385a116df3ed860",
+      "native": {
+        "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "regions": 1,
+        "tiles": 1,
+        "input_bytes_read": 1889280,
+        "output_bytes": 1201,
+        "budget_bytes": 1048576,
+        "peak_owned_bytes": 1005216,
+        "redzones_verified": true
+      },
+      "second_budget": {
+        "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "regions": 1,
+        "tiles": 1,
+        "input_bytes_read": 1889280,
+        "output_bytes": 1201,
+        "budget_bytes": 16777216,
+        "peak_owned_bytes": 1005216,
+        "redzones_verified": true
+      },
+      "coverage": {
+        "paired_valid": 14760,
+        "unknown": 0,
+        "below_threshold": 14395,
+        "flagged": 365
+      },
+      "regions": [
+        {
+          "surface": "outer",
+          "id": 2521,
+          "iou": 0.989159891598916,
+          "area_relative_error": 0.010840108401083959,
+          "design_cell_area_mm2": 12.107698086935065,
+          "reported_area_mm2": 11.976449327185092,
+          "design_peak_mm": 0.8499999999999996,
+          "reported_peak_mm": 0.8568690405891579,
+          "peak_abs_error_mm": 0.006869040589158271,
+          "peak_angle_error_deg": 0,
+          "crosses_seam": true
+        }
+      ],
+      "whole_map_max_abs_error_mm": 0.012095658647604424,
+      "max_observed_loss_mm": 0.8568690405891579
+    },
+    "dual-surface-0": {
+      "reference": {
+        "projections_sha256": "732b6d67f9cf0cf0c3af830332d071498a65accfbeaac2b5ee31153637af02ea",
+        "atlas_sha256": "b83f26f04e17b96b4032bf8f552601f798ffb8e87f83d8ec1be1ce03dbb7f371",
+        "wall_sha256": "16dd4929b4ac81417f5cf202063f8c0024474ecfd6b0e8f69f63de9460aa87d5"
+      },
+      "inspected": {
+        "projections_sha256": "854c8d6d8414ca7525efa732a9fd5b94c3858eabf12c8c4b5f0c9927943146d5",
+        "atlas_sha256": "ee517fd5f73be027ffb2fd6acbf1bb0ea24ec0defcf8d2e98d7b0b0caa6aee61",
+        "wall_sha256": "7aee5e1d9987b595cc7aa5ece6ec874ac9b710d17333c1ec47173eaac28b06d7"
+      },
+      "report_sha256": "90b6c1f959fc2dc4f257c3f60b2ffc790a38f458015ebf8ae8dfb7bda25ed6a4",
+      "native": {
+        "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "regions": 2,
+        "tiles": 1,
+        "input_bytes_read": 1889280,
+        "output_bytes": 1944,
+        "budget_bytes": 1048576,
+        "peak_owned_bytes": 1005216,
+        "redzones_verified": true
+      },
+      "second_budget": {
+        "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "regions": 2,
+        "tiles": 1,
+        "input_bytes_read": 1889280,
+        "output_bytes": 1944,
+        "budget_bytes": 16777216,
+        "peak_owned_bytes": 1005216,
+        "redzones_verified": true
+      },
+      "coverage": {
+        "paired_valid": 14760,
+        "unknown": 0,
+        "below_threshold": 14122,
+        "flagged": 638
+      },
+      "regions": [
+        {
+          "surface": "outer",
+          "id": 2521,
+          "iou": 0.989159891598916,
+          "area_relative_error": 0.010840108401083959,
+          "design_cell_area_mm2": 12.107698086935065,
+          "reported_area_mm2": 11.976449327185092,
+          "design_peak_mm": 0.8499999999999996,
+          "reported_peak_mm": 0.8568690405891579,
+          "peak_abs_error_mm": 0.006869040589158271,
+          "peak_angle_error_deg": 0,
+          "crosses_seam": true
+        },
+        {
+          "surface": "inner",
+          "id": 8404,
+          "iou": 0.9927272727272727,
+          "area_relative_error": 0.0072727272727273196,
+          "design_cell_area_mm2": 9.023352232810685,
+          "reported_area_mm2": 8.9577278529357,
+          "design_peak_mm": 0.75,
+          "reported_peak_mm": 0.7560602722004082,
+          "peak_abs_error_mm": 0.006060272200408168,
+          "peak_angle_error_deg": 0,
+          "crosses_seam": false
+        }
+      ],
+      "whole_map_max_abs_error_mm": 0.021495481041193365,
+      "max_observed_loss_mm": 0.8568690405891579
+    },
+    "subthreshold-0": {
+      "reference": {
+        "projections_sha256": "732b6d67f9cf0cf0c3af830332d071498a65accfbeaac2b5ee31153637af02ea",
+        "atlas_sha256": "b83f26f04e17b96b4032bf8f552601f798ffb8e87f83d8ec1be1ce03dbb7f371",
+        "wall_sha256": "16dd4929b4ac81417f5cf202063f8c0024474ecfd6b0e8f69f63de9460aa87d5"
+      },
+      "inspected": {
+        "projections_sha256": "be62495f270dd8ee36f67fd7d6a935ce99ff72170cca557b1dd0a8ab8a8a0c84",
+        "atlas_sha256": "f9f28ed01b3470e94886d08c2ca45b88926634c96e6350f100d7b0d908f2838d",
+        "wall_sha256": "e7d53def32439ed3c063e9732392a24f9db53505e044a79c61de571f9c346e6e"
+      },
+      "report_sha256": "955ecde04e483510dd34204da97a3ba4e29e1a4ebf7e20b7ecfd70942e5d1fd6",
+      "native": {
+        "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "regions": 0,
+        "tiles": 1,
+        "input_bytes_read": 1889280,
+        "output_bytes": 403,
+        "budget_bytes": 1048576,
+        "peak_owned_bytes": 1005216,
+        "redzones_verified": true
+      },
+      "second_budget": {
+        "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "regions": 0,
+        "tiles": 1,
+        "input_bytes_read": 1889280,
+        "output_bytes": 403,
+        "budget_bytes": 16777216,
+        "peak_owned_bytes": 1005216,
+        "redzones_verified": true
+      },
+      "coverage": {
+        "paired_valid": 14760,
+        "unknown": 0,
+        "below_threshold": 14760,
+        "flagged": 0
+      },
+      "regions": [],
+      "whole_map_max_abs_error_mm": 0.008003521468813002,
+      "max_observed_loss_mm": 0.12199786528973977
+    },
+    "dual-surface-90": {
+      "reference": {
+        "projections_sha256": "732b6d67f9cf0cf0c3af830332d071498a65accfbeaac2b5ee31153637af02ea",
+        "atlas_sha256": "6cca503df017eb7bfaa890fefc6cb3adaf5a3ea0051e5568ce67084e9ed3d9ca",
+        "wall_sha256": "1ce1b84adbb272cd56032749603b0232966ca0c8e7a19b69a0b37d569bcbc7f8"
+      },
+      "inspected": {
+        "projections_sha256": "854c8d6d8414ca7525efa732a9fd5b94c3858eabf12c8c4b5f0c9927943146d5",
+        "atlas_sha256": "38ba49c6f25674b3309ae38584509f4b9a557d1524cda5d7e788773668a23ebc",
+        "wall_sha256": "aa110e04f43fa005fd6b6cf92b31770211218e53b3a4e88d41c2b162210d5bb5"
+      },
+      "report_sha256": "e8d2b6c7b16366ac5d2c94162e4b4a6f5e857954b2e626b17560d2e1df8d2987",
+      "native": {
+        "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "regions": 2,
+        "tiles": 1,
+        "input_bytes_read": 1889280,
+        "output_bytes": 1826,
+        "budget_bytes": 1048576,
+        "peak_owned_bytes": 1005216,
+        "redzones_verified": true
+      },
+      "second_budget": {
+        "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "regions": 2,
+        "tiles": 1,
+        "input_bytes_read": 1889280,
+        "output_bytes": 1826,
+        "budget_bytes": 16777216,
+        "peak_owned_bytes": 1005216,
+        "redzones_verified": true
+      },
+      "coverage": {
+        "paired_valid": 14760,
+        "unknown": 0,
+        "below_threshold": 14122,
+        "flagged": 638
+      },
+      "regions": [
+        {
+          "surface": "outer",
+          "id": 2772,
+          "iou": 0.989159891598916,
+          "area_relative_error": 0.010840108401083959,
+          "design_cell_area_mm2": 12.107698086935065,
+          "reported_area_mm2": 11.976449327185092,
+          "design_peak_mm": 0.8499999999999996,
+          "reported_peak_mm": 0.8568690405891579,
+          "peak_abs_error_mm": 0.006869040589158271,
+          "peak_angle_error_deg": 0,
+          "crosses_seam": false
+        },
+        {
+          "surface": "inner",
+          "id": 8314,
+          "iou": 0.9927272727272727,
+          "area_relative_error": 0.0072727272727273196,
+          "design_cell_area_mm2": 9.023352232810685,
+          "reported_area_mm2": 8.9577278529357,
+          "design_peak_mm": 0.75,
+          "reported_peak_mm": 0.7560602722004082,
+          "peak_abs_error_mm": 0.006060272200408168,
+          "peak_angle_error_deg": 0,
+          "crosses_seam": false
+        }
+      ],
+      "whole_map_max_abs_error_mm": 0.021495481041193365,
+      "max_observed_loss_mm": 0.8568690405891579
+    },
+    "noisy-clean-0": {
+      "reference": {
+        "projections_sha256": "24ddf55d054e2e56cb5b5ca2f6248d88627aded6e191b89728ba451352350a83",
+        "atlas_sha256": "d40f2f775922efdd1325346c822a7581b0da344ce65665099a61f9e7c655e0bd",
+        "wall_sha256": "90c0f3cac7704d1efd430a33868c824a018b7bcc55118c0dc6f2b6ac499101f9"
+      },
+      "inspected": {
+        "projections_sha256": "c60baa8791c87a6c256f63589921915d57bb218d06b4107b4a430d52bbb9e9fd",
+        "atlas_sha256": "fa2666e0f13cf7202e81aad98e532f5f45644ddec29cc25e06bf8784db0913c6",
+        "wall_sha256": "3521a0c2892059fc3c3c64414e4c98a99eaef9dd24286a1105cf7c4a058f2c21"
+      },
+      "report_sha256": "955ecde04e483510dd34204da97a3ba4e29e1a4ebf7e20b7ecfd70942e5d1fd6",
+      "native": {
+        "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "regions": 0,
+        "tiles": 1,
+        "input_bytes_read": 1889280,
+        "output_bytes": 403,
+        "budget_bytes": 1048576,
+        "peak_owned_bytes": 1005216,
+        "redzones_verified": true
+      },
+      "second_budget": {
+        "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "regions": 0,
+        "tiles": 1,
+        "input_bytes_read": 1889280,
+        "output_bytes": 403,
+        "budget_bytes": 16777216,
+        "peak_owned_bytes": 1005216,
+        "redzones_verified": true
+      },
+      "coverage": {
+        "paired_valid": 14760,
+        "unknown": 0,
+        "below_threshold": 14760,
+        "flagged": 0
+      },
+      "regions": [],
+      "whole_map_max_abs_error_mm": 0.018115906798167547,
+      "max_observed_loss_mm": 0.016071440762435607
+    },
+    "noisy-dual-0": {
+      "reference": {
+        "projections_sha256": "24ddf55d054e2e56cb5b5ca2f6248d88627aded6e191b89728ba451352350a83",
+        "atlas_sha256": "d40f2f775922efdd1325346c822a7581b0da344ce65665099a61f9e7c655e0bd",
+        "wall_sha256": "90c0f3cac7704d1efd430a33868c824a018b7bcc55118c0dc6f2b6ac499101f9"
+      },
+      "inspected": {
+        "projections_sha256": "23022e4f163400266c21c8769c1b9c90fae1c1603d5f70485f423e96783437bc",
+        "atlas_sha256": "18dba259da5e499e703823c1ef09801e5e3a9546c83fec9372b99d5fca133981",
+        "wall_sha256": "5153621c996ed741505a77933ed1414a7d7e67f80b62f3234afa186e3520abb1"
+      },
+      "report_sha256": "5fde1df2714afb4d969233917647a707f18142051f5d9bcab3dff30324bfbab8",
+      "native": {
+        "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "regions": 2,
+        "tiles": 1,
+        "input_bytes_read": 1889280,
+        "output_bytes": 1910,
+        "budget_bytes": 1048576,
+        "peak_owned_bytes": 1005216,
+        "redzones_verified": true
+      },
+      "second_budget": {
+        "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "regions": 2,
+        "tiles": 1,
+        "input_bytes_read": 1889280,
+        "output_bytes": 1910,
+        "budget_bytes": 16777216,
+        "peak_owned_bytes": 1005216,
+        "redzones_verified": true
+      },
+      "coverage": {
+        "paired_valid": 14760,
+        "unknown": 0,
+        "below_threshold": 14128,
+        "flagged": 632
+      },
+      "regions": [
+        {
+          "surface": "outer",
+          "id": 2521,
+          "iou": 0.978319783197832,
+          "area_relative_error": 0.02168021680216803,
+          "design_cell_area_mm2": 12.107698086935065,
+          "reported_area_mm2": 11.845200567435118,
+          "design_peak_mm": 0.8499999999999996,
+          "reported_peak_mm": 0.8590436456205346,
+          "peak_abs_error_mm": 0.009043645620534946,
+          "peak_angle_error_deg": 0,
+          "crosses_seam": true
+        },
+        {
+          "surface": "inner",
+          "id": 8404,
+          "iou": 0.9854545454545455,
+          "area_relative_error": 0.014545454545454528,
+          "design_cell_area_mm2": 9.023352232810685,
+          "reported_area_mm2": 8.892103473060711,
+          "design_peak_mm": 0.75,
+          "reported_peak_mm": 0.7621165522624671,
+          "peak_abs_error_mm": 0.012116552262467106,
+          "peak_angle_error_deg": 0,
+          "crosses_seam": false
+        }
+      ],
+      "whole_map_max_abs_error_mm": 0.02733957598177783,
+      "max_observed_loss_mm": 0.8590436456205346
+    }
+  }
+}

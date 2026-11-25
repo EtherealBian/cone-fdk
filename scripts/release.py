@@ -75,6 +75,7 @@ def build():
     ]:
         for pat in patterns:
             files.extend((ROOT / name).rglob(pat))
+    files.append(evidence / "wall-loss-demo.zip")
     for required in (
         "reports/RESULTS.md",
         "reports/OPTIMIZATION.md",
