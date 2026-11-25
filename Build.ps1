@@ -27,11 +27,19 @@ try {
             & $compiler -O3 -std=c++14 -static '-Wl,--no-insert-timestamp' src/main.cpp -lshell32 -o build/cone-fdk.exe
         }
         if ($LASTEXITCODE) { throw 'Native C++ build failed' }
+        if ($msvc) {
+            & $compiler /nologo /EHsc /O2 /std:c++14 /Fobuild/wall-pack.obj /Febuild/wall-pack.exe src/wall_pack.cpp shell32.lib /link /Brepro
+        } else {
+            & $compiler -O3 -std=c++14 -static '-Wl,--no-insert-timestamp' src/wall_pack.cpp -lshell32 -o build/wall-pack.exe
+        }
+        if ($LASTEXITCODE) { throw 'Native wall-pack companion build failed' }
         & $Python scripts/ptx.py
         if ($LASTEXITCODE) { throw 'CUDA C++ compilation failed' }
         if ($VerifyRepeat) {
             $exe = (Get-FileHash -Algorithm SHA256 build/cone-fdk.exe).Hash.ToLowerInvariant()
             $ptx = (Get-FileHash -Algorithm SHA256 build/kernels.ptx).Hash.ToLowerInvariant()
+            $pack = (Get-FileHash -Algorithm SHA256 build/wall-pack.exe).Hash.ToLowerInvariant()
+            if ($i -eq 0) { $firstPack = $pack } elseif ($pack -ne $firstPack) { throw 'Companion rebuild is not byte-identical' }
             if ($i -eq 0) { $firstExe = $exe; $firstPtx = $ptx }
             elseif ($exe -ne $firstExe -or $ptx -ne $firstPtx) { throw 'Rebuilds are not byte-identical' }
         }
@@ -42,6 +50,8 @@ try {
         if ($LASTEXITCODE) { throw 'Could not read the NVRTC version' }
         $report = [ordered]@{compiler=$tool; nvrtc=$nvrtc; rebuilds=2; executable_sha256=$exe; ptx_sha256=$ptx; identical=$true}
         New-Item -ItemType Directory -Force reports | Out-Null
+        $companion = [ordered]@{compiler=$tool; rebuilds=2; executable_sha256=$pack; ptx_sha256=$ptx; identical=$true}
+        [IO.File]::WriteAllText("$PSScriptRoot\reports\wall-pack-build.json", ($companion | ConvertTo-Json) + "`n", [Text.UTF8Encoding]::new($false))
         [IO.File]::WriteAllText("$PSScriptRoot\reports\build-repro.json", ($report | ConvertTo-Json) + "`n", [Text.UTF8Encoding]::new($false))
     }
 } finally {

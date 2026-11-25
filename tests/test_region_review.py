@@ -15,7 +15,7 @@ from remount_loss import write_doc
 from wall import WALL_DTYPE
 
 
-def make_edge(job):
+def make_edge(job, *, exclusive_hits=False):
     job.mkdir()
     h, w = 5, 10
     shape = (h, w)
@@ -33,6 +33,11 @@ def make_edge(job):
                 t -= change
                 if i == 2:
                     t[1, 1] = np.nan
+            if exclusive_hits:
+                # A global setting may flag the left site OR the right one, never both.
+                t = np.full(shape, 3.0)
+                if role == "reference" and i in (0, 2):
+                    t[2, 1 if i == 0 else 7] = 4.0
             x = np.zeros(shape, WALL_DTYPE)
             x["inner"], x["outer"], x["thickness"] = 2, 2 + t, t
             x["inner"][np.isnan(t)] = np.nan
@@ -215,3 +220,12 @@ def test_offline_public_example(tmp_path):
         hashlib.sha256((tmp_path / "out/manifest.json").read_bytes()).digest()
         == hashlib.sha256((base / "region-noisy-change.json").read_bytes()).digest()
     )
+
+
+def test_pointwise_union_exceeds_every_attainable_global_map(tmp_path):
+    job = make_edge(tmp_path / "edge", exclusive_hits=True)
+    r = rr.analyze(job, 4, sha(job / "manifest.json"))
+    assert r["observed_union_cells"] == 2 and r["always_flagged_cells"] == 0
+    bound = r["complete_grid_flagged_extrema"]["max"]
+    assert bound == {"value": 1, "pairs": [[i, j] for i in (0, 2) for j in range(3)]}
+    assert max(s["observed_flagged_cells"] for s in r["scenarios"]) == 1

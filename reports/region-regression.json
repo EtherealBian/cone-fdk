@@ -2,7 +2,7 @@
   "protocol": "Full clean rebuild and non-CoreOnly acceptance. Global region outputs agree byte-for-byte with a separate qualification from archived edge jobs. Prior volumes and witness/edge campaign digests checked by the edge regression gate.",
   "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
   "pytest": {
-    "tests": 327,
+    "tests": 360,
     "errors": 0,
     "skipped": 0,
     "failures": 0

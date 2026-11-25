@@ -64,6 +64,8 @@ An unchanged simulated tube produced 325 falsely flagged cells when compared in 
 
 **Does the entire footprint survive the same setting?** On that remount, all nine global level pairs produced one connected region. Its projected area ranged from **8.301 to 9.023 mm²** at a 9.4 mm datum radius (nominal: 8.630 mm²). Periodic labels, split/merge overlaps and missing coverage can be [replayed offline](reports/REGION-REVIEW.md). A [resumable batch inspector](reports/REGION-BATCH.md) keeps measured, incomplete and refused jobs separate.
 
+When extracting several wall levels from an existing shell atlas, the [CUDA wall pack](reports/WALL-PACK.md) uploads each tile once. Eight levels took **180 ms instead of 1,219 ms**, with byte-identical per-level records (six paired runs; wall stage only).
+
 ## A second use: measuring pores in metal
 
 The [measurement lab](https://github.com/EtherealBian/cone-fdk/tree/measurement-lab/pores) starts from **already reconstructed** cobalt-chromium scans. Its CUDA counter measures connected pores in a supplied binary mask. Finding the pore boundary from grayscale is a separate experiment: on development specimens 2, 3 and 5, the retained model E passed **10/11, 6/11 and 7/11** criteria. Its worst matched-pore volume error (P95) was **28.16%**, above the **15%** limit. The two reserved specimens remain unopened. This work is not part of the stable reconstruction release.
