@@ -1,0 +1,47 @@
+{
+  "format": "CFDK-bridge-design-v1",
+  "scope": "Analytic geometry only, no simulated detector acquisitions or physical measurements.",
+  "study_sha256": "27d7fb4aa8683def6089ca0e4548e6b68d582de6ec9b55cb28f3857e39f4a322",
+  "cases": {
+    "baseline": {
+      "flagged_cells": 0,
+      "central_row_flagged_cols": 0,
+      "both_anchors_flagged": false,
+      "anchors_connected": false,
+      "peak_mm": 0.0,
+      "mask_u8_sha256": "ec7dd12fff2b8b2fda972dbe361988d2876318a0d954b41c0145f3927f081057"
+    },
+    "open-control": {
+      "flagged_cells": 770,
+      "central_row_flagged_cols": 0,
+      "both_anchors_flagged": true,
+      "anchors_connected": false,
+      "peak_mm": 0.72,
+      "mask_u8_sha256": "f176205e3d4063b0cae17e73dc5a99c7c8082739d70bbd5d901fdd1052638899"
+    },
+    "critical-a": {
+      "flagged_cells": 777,
+      "central_row_flagged_cols": 1,
+      "both_anchors_flagged": true,
+      "anchors_connected": true,
+      "peak_mm": 0.72,
+      "mask_u8_sha256": "df521f1ba4d86ff40b36bf7664a2683187ad2e3a8b9d1d488ce7a0152e7086f6"
+    },
+    "critical-b": {
+      "flagged_cells": 777,
+      "central_row_flagged_cols": 1,
+      "both_anchors_flagged": true,
+      "anchors_connected": true,
+      "peak_mm": 0.72,
+      "mask_u8_sha256": "df521f1ba4d86ff40b36bf7664a2683187ad2e3a8b9d1d488ce7a0152e7086f6"
+    },
+    "joined-control": {
+      "flagged_cells": 903,
+      "central_row_flagged_cols": 19,
+      "both_anchors_flagged": true,
+      "anchors_connected": true,
+      "peak_mm": 0.72,
+      "mask_u8_sha256": "96d4cb2892302f8aa0f13d5b0f31825bf107ad84a35264aca3d581e78e5ca7fe"
+    }
+  }
+}
