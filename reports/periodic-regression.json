@@ -1,0 +1,29 @@
+{
+  "scope": "Clean Windows repeat build and non-CoreOnly regression, including the original CUDA volumes and the packed/witness, bridge and specimen campaigns. Exact preclassified label backend and source-bound parcel verification are separate gates.",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "pytest": {
+    "tests": 610,
+    "errors": 0,
+    "skipped": 0,
+    "failures": 0
+  },
+  "bridge_replay_sha256": "7dc0fadc621b978421dc98e06c92f185a6e487111b475382f98e8dcc37986569",
+  "prior_region_regression_sha256": "04e8df4fad4f67238d4dbfa816766f6201ce04b456162d3703907529af02fee1",
+  "qualified_products": {
+    "periodic-labels.exe": "f1cd60fe224b3cb230c0874a51328bb97e48559ffe6575417be1b663b45d46b2",
+    "periodic-labels.ptx": "c624c4b27a1981175fb2905ca1efc6606468581161a9d08705330d9b6ac2396c"
+  },
+  "protocol_sha256": "da12c4ed04dc6b05ba5b8904bb43fa6cfb6d29a61dab5972dbf323ba95a9b984",
+  "qualification_sha256": "494033edb46586219f85f3f80835629429a7fb32f8df86b7616c7322f00628cb",
+  "parcel_campaign_sha256": "1d0e7ec3923b388e48232e8c460cf1ce7c9f24f6d637a0cffe8d87d757047980",
+  "verified_pair_cells": 988920,
+  "timing": {
+    "paired_wins": 6,
+    "median_gpu_process_ms": 207.63330000045244,
+    "median_cpu_process_ms": 1092.849100001331,
+    "median_ratio": 0.189992653148728,
+    "median_cpu_label_ms": 279.5501000000513,
+    "median_gpu_label_event_ms": 1.4515850000000001,
+    "faster_on_this_case": true
+  }
+}
