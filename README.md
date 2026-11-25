@@ -32,19 +32,15 @@
 
 ## 不生成整件，直接重建选区
 
-用当前源码构建后，`--roi x,y,z,nx,ny,nz` 可以直接从投影重建一个长方体，例如只复查核桃壳与隔膜的交界。选区沿用原扫描的坐标和体素间距，可以与整件叠加。同一批 720 角投影实测：在 512³ 网格中重建 128 × 128 × 96 的选区，整进程中位数 **0.317 秒**，完整重建为 **1.561 秒**；六轮选区均与完整体裁剪逐字节一致。输出从 512 MiB 减至 **6 MiB**。旧版 v0.1.0 可执行文件不含此选项。
+`--roi` 从原投影直接重建一个长方体，保留整件的坐标和体素间距。核桃的 128 × 128 × 96 选区只占 **6 MiB**，六次都与 512 MiB 整卷的对应裁剪逐字节一致。[选区示例与命令](reports/ROI.md)
 
-[选区位置、2048³ 网格上的独立校验、复现命令](reports/ROI.md) · [逐次耗时及文件哈希](reports/roi-walnut.json)
-
-同一试件有多个位置要复核时，`--roi-list` 可以共用滤波后的投影。六个位置逐个重建耗时 **1.805 秒**，一次批量重建为 **0.351 秒**（六组整批中位数），投影只读一遍。每个选区与单独重建、完整体同位置裁剪逐字节一致；收紧预算后会自动分遍。[查看六个位置、显存代价和复现命令](reports/MULTI-ROI.md)。
-
-预算紧时，可在 `--roi-list` 后加 `--planner min-passes`。同样六个位置、**48 MiB** 缓冲预算，每批从 16 个角度减至 8 个，整套投影从 **读三遍降到一遍**，整进程中位耗时 **0.590 → 0.304 秒**；六组输出均与原参考逐字节一致。默认策略不变。[不同预算的结果和复现步骤](reports/ROI-PLANNER.md)。
+多个选区可用 [`--roi-list`](reports/MULTI-ROI.md) 共用滤波后的投影。在历史 Windows 基准中，六个选区共用 48 MiB 预算时，[`--planner min-passes`](reports/ROI-PLANNER.md) 把投影读取从三遍减为一遍，进程耗时中位数从 0.590 秒降到 0.304 秒。以上选项需从源码构建。
 
 ## 沿指定方向看截面
 
-如果想沿着倾斜的结构往里看，用 `--plane` 指定切面中心、行列方向和像素间距即可。引擎从原始投影直接计算这一层，不需要先重建 512 MiB 的整件。核桃的一张 **320 × 288** 斜切面只输出 **360 KiB**；三个标准切面与完整体对应层逐字节一致。斜切面上分布取样的 365 点，与独立 CPU 双精度计算的相对 L2 差异为 **0.000164%**。另用已知尺寸的解析球体验证了三个截面的圆心和直径。[四张实测切片、误差口径与复现命令](reports/DIRECT-PLANES.md)。此功能需从当前源码构建。
+`--plane` 直接从投影计算一个指定方向的切面。核桃的 320 × 288 斜切面仅占 **360 KiB**，无须生成整卷。[切面示例与 FP64 对照](reports/DIRECT-PLANES.md)
 
-要沿着结构连续往里看，可以用 `--stack` 重建一叠平行的斜切片，导出为带毫米坐标和方向的单个 NRRD 文件。在同一份核桃数据上，**21 层**斜切片与逐张运行的结果逐字节相同，整套投影从**读 21 遍减到 1 遍**。另用已知直径的模拟球检验了三维体积和球心。[查看斜向扫查动图、复现命令和误差](reports/OBLIQUE-STACK.md)。
+要沿同一方向连续查看结构，可用 `--stack` 输出带空间坐标的 NRRD。核桃的 21 层斜切片只读一遍投影，每层都与单独运行的结果逐字节一致。[斜切动图与命令](reports/OBLIQUE-STACK.md)
 
 ## 把圆周摊开看
 
@@ -70,28 +66,13 @@
 
 ## 换了装夹，能不能量出同一处缺陷加深了多少？
 
-同一根模拟管件换个角度再扫，按扫描仪网格硬比会报出 325 个超限单元。用四颗随件球标恢复材料坐标，再从原投影重建，原样复扫的 14,760 个单元里 **0 个超限**。把原有外壁平面再加工深 0.550 mm，同一法向的壁厚实测减少 **0.54796 mm**；少一颗标记则拒绝比较。[看固定网格与材料网格的对照、误差门槛及运行方法](reports/REMOUNT-LOSS.md) · [下载壁图逐点复核](reports/remount-deepened.zip)。这些数字来自模拟复扫，不是实物精度标定。
+同一根**模拟管件**重新装夹后，按扫描仪坐标比较有 325 个单元超限；用四颗随件球标对齐后，14,760 个单元均未超限。把同一处外壁再切深 0.550 mm，测得壁厚减少 **0.54796 mm**。[复扫对照与复现命令](reports/REMOUNT-LOSS.md)
 
-**如果四颗球一起滑了呢？** 模拟管件没有减薄，只把工装轴向滑动 0.80 mm，四球拟合残差仍只有 0.00681 mm，原流程却报出 159 个超限单元。现在可以用 `--witness` 启用管件本体上的三个独立见证点：两次扫描分别核对，任一点不通过就不生成壁图。它复用同一份 CUDA 侦察体，不额外读取投影，也不用这三个点修正位姿。[看滑移、绕点旋转和门槛附近的模拟结果](reports/BODY-WITNESS.md) · [下载三个小窗，在 CPU 上复核](reports/witness-pivot.zip)。
+- **工装滑动：** 四颗球一起移动，拟合残差仍可能很小。`--witness` 用管件上的三个独立标记检查位姿；未通过就不生成壁图。[滑移对照](reports/BODY-WITNESS.md)
+- **阈值变化：** 两次扫描各取三档边缘阈值，253 个单元在九种配对下始终超限，22 个随设置翻转。[逐格复核](reports/EDGE-REVIEW.md) · [连通区域与面积](reports/REGION-REVIEW.md) · [离线查看器](reports/region-console.html)
+- **换试件：** 两种模拟管件的三处缺陷，标称设置下峰值与设计最大相差 0.0190 mm；临界窄桥则只在 3/9 种配对下连通。这些结果不能作为实物公差。[多试件对照](reports/MULTI-SPECIMEN.md) · [窄桥实验](reports/BRIDGE-STUDY.md)
 
-**换个边缘阈值，还会报减薄吗？** 带噪模拟复扫在标称设置下有 263 个单元超出 0.30 mm。让两次扫描各自选择三档边缘阈值，**253 个单元在九种组合下始终超限，22 个随设置翻转**；只试同档配对只能看到其中 1 个。直接从已配准的壳层追加 4 次 CUDA 壁厚测量，不再读投影。[看材料网格、九格读数和复现步骤](reports/EDGE-REVIEW.md) · [下载整张图，无需 GPU 逐点复核](reports/edge-review-example.zip)。这是离散设置的敏感性检查，不是实物精度或置信区间。
-
-**整片内凹是否仍然连通？** 同一件带噪声模拟管的九组全局阈值都得到一片连通区域；在 9.4 mm 参考半径上，投影面积为 **8.301–9.023 mm²**，标称值 8.630 mm²。可以[离线复算每组面积、峰值和区域拆合](reports/REGION-REVIEW.md)，或把多件放进[支持中断续算的批检](reports/REGION-BATCH.md)，分别保留完整覆盖、不可测与拒测。
-
-从已有壳层提取多档壁厚时，[CUDA 多档提取器](reports/WALL-PACK.md)每块只上传一次。八档中位数由 **1,219 ms 降至 180 ms**，六组配对的逐档记录完全相同；计时仅覆盖壁厚工序。
-
-[下载离线复核台](reports/region-console.html)，可对照每组阈值与标称设置的区域交集、移动展开接缝、查看局部不可测或整件拒测。[操作说明与断网逐像素验收](reports/REGION-CONSOLE.md)。
-
-新增两种不同壁厚的**模拟管件**，从五次分别加噪的探测器采集开始。所有九组阈值都把跨缝削平判为一处、把另一件的内外壁缺陷分成两处；无改变对照均为零处。三处峰值与设计的标称最大差为 **0.0190 mm**，所有设置的最大差为 **0.0432 mm**。[逐缺陷结果、门槛和复跑方法](reports/MULTI-SPECIMEN.md) · [下载试件离线图](reports/specimen-console.html)。这些是仿真结果，不是实物公差。
-
-[临界窄桥挑战](reports/BRIDGE-STUDY.md)：两次独立带噪复检中，缺陷两瓣各有 3/9 种配对连通、6/9 种断开。标称足迹 IoU 均高于 0.98，但不能据此声称连通关系稳定。[下载 36 张离线图](reports/bridge-console.html)。
-
-[长轴分带复核](reports/STRIPED-REVIEW.md)无需保留整张标签图，即可统计连通片并判断两处缺陷是否相连。1,536 × 960 的合成壁图、九组阈值共 1,327 万个配对单元，按 8 行分带时进程峰值约 61 MiB。对较小地图还可以[导出两点间的盲区路径证书](reports/ANCHOR-AUDIT.md)。 多件作业可用[可恢复批检](reports/STRIPED-BATCH.md)；重启时重新核对源文件，已提交的件不再重复标记。
-
-要追查具体哪几格构成一片缺陷，可下载[CUDA 标签包，用 CPU 离线逐格复核](reports/PERIODIC-LABELS.md)。示例保留了跨缝连接，以及因盲区而无法判断的情形。
-如果争议只在一处，可直接移交[选区证据](reports/PERIODIC-ROI.md)：跨 359/0 列的 36 格保留同一全图编号，接收方只需标准 Python。
-
-[带见证检查的 CUDA 合包路径](reports/PACKED-EDGE.md)现在可直接从已验收的壳层生成一份完整边缘作业。计入来源校验、CUDA 进程、写盘和报告发布后，三档耗时 **690 → 445 ms**，九档 **2,564 → 644 ms**；逐档输出与原路径一致。此处不含投影重建时间。
+批量复核可[中断续算](reports/STRIPED-BATCH.md)，有争议的位置可单独导出[跨接缝选区](reports/PERIODIC-ROI.md)。
 
 ## 扩展实验：在金属 CT 中逐孔测量
 
@@ -106,7 +87,7 @@
 ```powershell
 git clone https://github.com/EtherealBian/cone-fdk.git
 cd cone-fdk
-# 按下节安装锁定依赖；在 x64 编译器环境中先从源码构建
+# 按下节链接安装锁定依赖，然后在 x64 编译器环境中构建
 .\Build.ps1
 .\Demo.ps1                 # 离线：90 个实测角，原生 / ASTRA 对照，输出阅片器和 MetaImage
 .\Run-Acceptance.ps1       # 重编译 + 回归 + 精度 + 性能 + 超显存 + 全部 720 个实测角
@@ -116,19 +97,7 @@ cd cone-fdk
 
 ## 从发布包到新环境
 
-Windows x64、支持 compute_80 PTX 和 CUDA 12.9 PTX JIT 的 NVIDIA GPU/驱动。发布包附已编译的 EXE/PTX，**不附第三方 DLL、Python、自称可用的模拟 GPU 或扫描仪**。使用 Python 3.12 x64，并允许从 Python 包源安装锁定的依赖。若需重编译，准备 x64 MSVC Developer PowerShell 或 MinGW-w64；本次测试使用 MinGW。本机还验证了两次从源重编所得 EXE/PTX 的 SHA-256 一致，见 [构建记录](reports/build-repro.json)；不同编译器或驱动未作这种承诺。验证已解压文件：`Get-FileHash` 可对照随包的 `SHA256SUMS`，或运行 `py -3.12 scripts/release.py verify .`。
-
-```powershell
-py -3.12 -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r requirements-win.lock
-.\Demo.ps1
-.\Run-Acceptance.ps1 -SkipBuild            # 验证交付的二进制
-.\Run-Acceptance.ps1 -CoreOnly -SkipBuild  # 较短；跳过超显存与全角测试
-```
-
-默认完整验收需要按 Zenodo 记录下载约 4.24 GB 原始归档，已有归档会核验 MD5 并复用；建议预留 **25 GiB** 可用磁盘。`1296³` 压力测试的临时原始体核验后删除。该固定尺寸用例特意断言输出大于本机物理显存，换到显存更大的 GPU 不能原样证明“超显存”，应调整压力体和取样几何。WDDM 遥测基于本地 Windows 显示驱动栈，其他系统、卡型与工具链不在这次验收范围。
-
-如需自行打包：完成全量验收，并按 [A/B 复现步骤](reports/OPTIMIZATION.md) 生成本次二进制的性能与跨版本输出记录；用 `.\Build.ps1 -VerifyRepeat` 自动双编并记录二进制指纹（只有指纹一致才通过）。运行 `python scripts/release.py build`，再用同一验收环境运行 `python scripts/check_release.py dist/ConeFDK-win-x64.zip`。后者在临时中文路径内校验全部成员，删掉已有演示图，重新从随包投影生成体数据并逐张校验 81 张 PNG。结果写到包旁的 `verification.json`。
+Windows x64 用户可下载 v0.1.0 发布包，用 Python 3.12 安装锁定依赖，再运行 `Demo.ps1`。发布包包含 EXE、PTX 和 90 角演示数据，不含 NVIDIA DLL。完整验收还会下载约 4.24 GB 的原始扫描，建议预留 **25 GiB** 磁盘。[安装命令、驱动要求与发布包校验](README.zh-CN.md#从发布包到新环境)
 
 ## 自有扫描如何接入
 
@@ -201,19 +170,15 @@ In a **simulated** changed specimen, all nine reference/inspection threshold pai
 
 ### Reconstruct just the region you need
 
-From a **source build**, `--roi x,y,z,nx,ny,nz` backprojects a box directly from the original projections. Its coordinates and voxel pitch belong to the full scan. On the same 720 walnut views, a 128 × 128 × 96 box took **0.317 s** versus **1.561 s** for the 512³ parent (six warm pairs; every box matched the corresponding parent bytes). The output was **6 MiB** instead of 512 MiB. The original v0.1.0 executable does not implement this option.
+`--roi` reconstructs a box directly from the projections, preserving the parent scan’s coordinates and voxel pitch. A 128 × 128 × 96 walnut region used **6 MiB** instead of 512 MiB; all six runs matched the corresponding full-volume crop byte-for-byte. [ROI example and commands](reports/ROI.md)
 
-[See the selected region, the 2048-grid ASTRA check and runnable commands](reports/ROI.md) · [All timings and hashes](reports/roi-walnut.json)
-
-For several locations in one scan, `--roi-list` shares each filtered projection batch across the resident boxes. In the archived Windows benchmark, six independently launched regions took **1.805 s** in total versus **0.351 s** as one job (six paired trials, 6/6 faster). All six regions matched both the individual jobs and crops of the published 512³ reference byte-for-byte. [Six locations, timing, memory trade-off and commands](reports/MULTI-ROI.md).
-
-If the boxes no longer fit together, add `--planner min-passes`. With the same six regions and a **48 MiB** buffer budget, using 8 views per batch instead of 16 reduced full projection reads **3 → 1** and median process time **0.590 → 0.304 s**, with identical output bytes in all six pairs. The default policy is unchanged. [Budget sweep and reproduction](reports/ROI-PLANNER.md).
+Use [`--roi-list`](reports/MULTI-ROI.md) to share filtered projections across regions. In the archived Windows benchmark, [`--planner min-passes`](reports/ROI-PLANNER.md) cut projection reads from three passes to one for six regions at a 48 MiB budget. Median process time fell from 0.590 to 0.304 s. These options require a source build.
 
 ### Inspect an oblique cross-section
 
-Use `--plane` to reconstruct a single image at a specified position, orientation and pixel spacing, directly from the projections. A tilted **320 × 288** cut through the walnut writes **360 KiB** without materializing the 512 MiB parent. Three standard cuts matched their parent slices byte-for-byte; on the tilted cut, 365 sampled intensities agreed with an independent FP64 calculation to **1.64 × 10⁻⁶ relative L2**. [See the four cuts, the separate analytic sphere measurements and a runnable example](reports/DIRECT-PLANES.md). Available from a source build.
+`--plane` reconstructs a slice at the position, orientation and pixel spacing you specify. A tilted 320 × 288 walnut slice occupies **360 KiB**, without writing the full volume. [Slice examples and FP64 comparison](reports/DIRECT-PLANES.md)
 
-To follow that structure in depth, `--stack` reconstructs **parallel, evenly spaced cuts** in one job and writes a raw array or a single NRRD with its scanner-space orientation in millimetres. On the walnut, all **21 tilted slices** matched separate plane jobs byte-for-byte while reading the projections **once instead of 21 times**. [Watch the tilted sweep, reproduce the stack, and see the known-sphere volume check](reports/OBLIQUE-STACK.md).
+Use `--stack` to export parallel slices as one NRRD with scanner-space coordinates. All 21 tilted walnut slices matched the individual plane jobs byte-for-byte, with one projection pass instead of 21. [Animated stack and commands](reports/OBLIQUE-STACK.md)
 
 ### Unwrap a cylinder through the scan
 
@@ -239,28 +204,13 @@ Given a registered baseline and inspected tube, `cone-fdk loss` reports **where 
 
 ### Reinspect the same defect after a remount
 
-An unchanged simulated tube produced 325 falsely flagged cells when compared in scanner coordinates. Registering four fixture beads and reconstructing each scan in **material coordinates** brought that count to **0 of 14,760**. When an existing outside flat was cut another 0.550 mm deeper, the wall thickness along its normal decreased by **0.54796 mm**. A missing bead suppressed the comparison. [See the maps, pose errors, noise controls and commands](reports/REMOUNT-LOSS.md) · [Replay an individual cell without CUDA](reports/remount-deepened.zip). The fixture must be calibrated and rigidly attached; this is not markerless registration or physical metrology validation.
+Comparing an unchanged **simulated tube** in scanner coordinates flagged 325 cells after remounting. Aligning the scans with four fixture beads reduced that to zero out of 14,760. When the same flat was cut another 0.550 mm deeper, measured wall thickness fell by **0.54796 mm**. [Remount comparison and commands](reports/REMOUNT-LOSS.md)
 
-**What if the four beads slip together?** With an unchanged simulated tube, a 0.80 mm carrier slide still fit the four beads to 0.00681 mm and produced 159 false loss cells. With `--witness`, three independent inserts in the workpiece vetoed that comparison **before either wall map was written**. They use the existing CUDA scout, not another projection pass or a correction to the fitted pose. [Slip and pivot controls, decision limits and commands](reports/BODY-WITNESS.md) · [Inspect the three raw windows without CUDA](reports/witness-pivot.zip).
+- **Fixture slip:** Four beads can move together and still give a small fit residual. `--witness` checks three independent landmarks on the tube and withholds the wall maps if the pose fails. [Slip controls](reports/BODY-WITNESS.md)
+- **Edge thresholds:** Across nine threshold pairs, 253 cells always exceeded the loss threshold and 22 changed classification. [Cell-level replay](reports/EDGE-REVIEW.md) · [Connected regions and areas](reports/REGION-REVIEW.md) · [Offline viewer](reports/region-console.html)
+- **Other geometries:** Across three defects on two simulated tubes, the largest peak deviation from design at nominal settings was 0.0190 mm. A narrow bridge stayed connected in only three of nine threshold pairs. These are simulation results, not physical tolerances. [Multi-specimen comparison](reports/MULTI-SPECIMEN.md) · [Narrow-bridge study](reports/BRIDGE-STUDY.md)
 
-**Does a loss decision survive a change in edge level?** On the noisy simulated remount, 263 material cells exceeded the 0.30 mm loss gate at the nominal edge level. Across three edge levels selected independently in each scan, **253 always exceeded it and 22 changed decision** (10 originally flagged, 12 originally below). Testing only matched levels exposed just one of those 22. The review reuses both registered shells: four additional CUDA wall measurements, no new projection pass. [Decision map, nine-pair example and commands](reports/EDGE-REVIEW.md) · [Full grid for CPU-only replay](reports/edge-review-example.zip). This is a finite scenario check, not a confidence interval.
-
-**Does the entire footprint survive the same setting?** On that remount, all nine global level pairs produced one connected region. Its projected area ranged from **8.301 to 9.023 mm²** at a 9.4 mm datum radius (nominal: 8.630 mm²). Periodic labels, split/merge overlaps and missing coverage can be [replayed offline](reports/REGION-REVIEW.md). A [resumable batch inspector](reports/REGION-BATCH.md) keeps measured, incomplete and refused jobs separate.
-
-When extracting several wall levels from an existing shell atlas, the [CUDA wall pack](reports/WALL-PACK.md) uploads each tile once. Eight levels took **180 ms instead of 1,219 ms**, with byte-identical per-level records (six paired runs; wall stage only).
-
-[Download the offline inspection console](reports/region-console.html) to select a threshold pair, move the cylindrical seam and see how regions overlap the nominal setting. The [browser check](reports/REGION-CONSOLE.md) compares the actual displayed pixels with native CUDA output, including missing coverage and withheld results.
-
-Two additional **simulated tube geometries** were inspected from five separately noise-sampled acquisitions. All nine threshold pairs kept the seam-spanning flat connected, separated the two defects on the other tube, and returned zero regions on the unchanged control. The largest peak deviation from design was **0.0190 mm at nominal settings**, or **0.0432 mm over all settings**. [Per-defect footprints, gates and replay](reports/MULTI-SPECIMEN.md) · [Offline inspection](reports/specimen-console.html). These are not tolerances measured on physical tubes.
-
-The [preregistered narrow-bridge study](reports/BRIDGE-STUDY.md) shows why a high footprint IoU does not guarantee a stable component count: each critical acquisition linked the two lobes under only three of nine global edge settings. [Offline maps](reports/bridge-console.html).
-
-[Long-grid review](reports/STRIPED-REVIEW.md) summarizes connected defects and the relationship between two material locations without a full label map. On a 1,536 × 960 synthetic wall grid, nine global settings covered 13.27 million pair-cells in about 61 MiB of process working set with eight-row bands. The [offline path audit](reports/ANCHOR-AUDIT.md) can also show exactly where a smaller map needs evidence. The [resumable batch workflow](reports/STRIPED-BATCH.md) revalidates source bytes before it reuses a completed specimen.
-
-Need to see which cells form a defect? The [CUDA label exporter and CPU-only parcel verifier](reports/PERIODIC-LABELS.md) preserve the component ID of each measured cell, including across the seam. Download a linked example and a genuinely unresolved one.
-For a handoff limited to one disputed location, use a [detached ROI receipt](reports/PERIODIC-ROI.md). The seam example preserves the same global ID across column 359/0; the recipient needs only standard Python.
-
-The optional [witness-guarded CUDA path](reports/PACKED-EDGE.md) now publishes a complete edge-review job from retained shells. On the same accepted parent, three edge levels took **690 → 445 ms** and nine took **2,564 → 644 ms**, including source checks, CUDA processes and output publication; every map matched the original producer. These are edge-review times, not reconstruction times.
+For larger reviews, [resume an interrupted batch](reports/STRIPED-BATCH.md) or [export the cells around a disputed location](reports/PERIODIC-ROI.md), including across the cylindrical seam.
 
 ### A second use: measuring pores in metal
 
