@@ -1,0 +1,1831 @@
+{
+  "protocol": "Noiseless analytic finite-tube projections. In-plane rigid simulated remount, not a physical repeat scan. All four sampling settings retained.",
+  "binary_sha256": {
+    "cone-fdk.exe": "930ba05bfac0af8e158d90bc4be66e394cbbcb78811564f2e934ea4ae0b228ee",
+    "kernels.ptx": "0371f29929a501a811780385061848f62ed322507bb93a9681baf06b522c0918"
+  },
+  "limits": {
+    "diameter_mm": 0.025,
+    "world_center_mm": 0.012,
+    "eccentricity_mm": 0.012,
+    "model_min_gap_mm": 0.016,
+    "cpu_fit_mm": 1e-08,
+    "paired_delta_mm": 0.012
+  },
+  "max_residual_mm": 0.025,
+  "threshold": 0.02,
+  "settings": {
+    "detector-1x_radial-1x": {
+      "detector_pitch_mm": 0.14,
+      "radial_pitch_mm": 0.05,
+      "cases": {
+        "nominal": {
+          "projections_sha256": "437fd7ab09d9ac72e0415a9c496eee591c35e4a3d3148417b01cc911ba6ef258",
+          "grid": [
+            "CFDKCYL1 360 17 161",
+            "0 0 0",
+            "0 0 1",
+            "1.0 0.0 0",
+            "3.6 0.05 0.25"
+          ],
+          "wall_sha256": "f20333bd370bdf9c6068178c7ac55939397afb76482a06079d52397151f518fb",
+          "sections_sha256": "930fd5d9f9a19ac9d135973ed257cb9f8ef49b852e9b817aa38d75e734d9828c",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 17,
+            "rejected": 0,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 9258,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.008059716493699381,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "measured",
+            "residual_mm": {
+              "inner_rms": 0.0019930537328292017,
+              "inner_peak": 0.008059714777938997,
+              "outer_rms": 0.0006681487975087796,
+              "outer_peak": 0.0024152962053674556
+            },
+            "measurement": {
+              "inner": {
+                "diameter_mm": 12.399776462546837,
+                "center_xyz_mm": [
+                  1.399617366691131,
+                  -0.048875602425851976,
+                  0
+                ]
+              },
+              "outer": {
+                "diameter_mm": 19.18358264233039,
+                "center_xyz_mm": [
+                  -8.232081246938394e-05,
+                  2.8574331654268757e-06,
+                  0
+                ]
+              },
+              "eccentricity_mm": 1.4005528619212722,
+              "model_min_gap_mm": 1.9913502279705038
+            }
+          },
+          "design": {
+            "inner_diameter_mm": 12.4,
+            "outer_diameter_mm": 19.2,
+            "outer_xy_mm": [
+              0,
+              0
+            ],
+            "inner_xy_mm": [
+              1.399147157826734,
+              -0.04885929538350115
+            ],
+            "eccentricity_mm": 1.4,
+            "model_min_gap_mm": 1.9999999999999996
+          },
+          "max_errors": {
+            "diameter_mm": 0.0164173616832457,
+            "world_center_mm": 0.00047049154698848274,
+            "eccentricity_mm": 0.0005528619212722408,
+            "model_min_gap_mm": 0.008649772029495795,
+            "cpu_fit_mm": 3.796442327175242e-15
+          }
+        },
+        "reframed": {
+          "projections_sha256": "437fd7ab09d9ac72e0415a9c496eee591c35e4a3d3148417b01cc911ba6ef258",
+          "grid": [
+            "CFDKCYL1 360 17 161",
+            "0.4 -0.35 0",
+            "0 0 1",
+            "0.7986355100472928 0.6018150231520483 0",
+            "3.6 0.05 0.25"
+          ],
+          "wall_sha256": "432d2bea246380de571f702de78f4d7a9d6f3d49e2a103b6fd97cb6e5f9719f7",
+          "sections_sha256": "d82451ccc8e166fabe2aa07205da0c69a88c7a32dacb7f247fc029242848b2a0",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 17,
+            "rejected": 0,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 9277,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.008036921104146139,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "measured",
+            "residual_mm": {
+              "inner_rms": 0.0019367200144351216,
+              "inner_peak": 0.008036868823446144,
+              "outer_rms": 0.0018311958330819735,
+              "outer_peak": 0.004312153472070355
+            },
+            "measurement": {
+              "inner": {
+                "diameter_mm": 12.399813938838511,
+                "center_xyz_mm": [
+                  1.3992238356563125,
+                  -0.048964474921972534,
+                  0
+                ]
+              },
+              "outer": {
+                "diameter_mm": 19.188636793345427,
+                "center_xyz_mm": [
+                  3.8123714854843005e-05,
+                  -9.65511267487229e-05,
+                  0
+                ]
+              },
+              "eccentricity_mm": 1.4000388317747403,
+              "model_min_gap_mm": 1.994372595478718
+            }
+          },
+          "design": {
+            "inner_diameter_mm": 12.4,
+            "outer_diameter_mm": 19.2,
+            "outer_xy_mm": [
+              0,
+              0
+            ],
+            "inner_xy_mm": [
+              1.399147157826734,
+              -0.04885929538350115
+            ],
+            "eccentricity_mm": 1.4,
+            "model_min_gap_mm": 1.9999999999999996
+          },
+          "max_errors": {
+            "diameter_mm": 0.011363212931865263,
+            "world_center_mm": 0.0001301623019998952,
+            "eccentricity_mm": 3.8831774740399894e-05,
+            "model_min_gap_mm": 0.005627405478604741,
+            "cpu_fit_mm": 7.105427357601002e-15
+          }
+        },
+        "remounted": {
+          "projections_sha256": "abe9f04fec70113f624efd96e2a8e12ef0b759f20e977cec17772ebfe7f44d88",
+          "grid": [
+            "CFDKCYL1 360 17 161",
+            "0.3 -0.15 0",
+            "0 0 1",
+            "0.9205048534524404 -0.39073112848927377 0",
+            "3.6 0.05 0.25"
+          ],
+          "wall_sha256": "a7c4aa38d440e0cb69ad76cb95fddb1eb8a29a622d7aac50dc3e86b5df925ab8",
+          "sections_sha256": "7d12a018ebe615e9961bd4f49c7432d049c917d43cc4ab23ea8201c5e8408e17",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 17,
+            "rejected": 0,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 9115,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.010817979520168653,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "measured",
+            "residual_mm": {
+              "inner_rms": 0.002224039619441259,
+              "inner_peak": 0.01081796244784159,
+              "outer_rms": 0.0031302076734066324,
+              "outer_peak": 0.0074757637135814126
+            },
+            "measurement": {
+              "inner": {
+                "diameter_mm": 12.399760111339226,
+                "center_xyz_mm": [
+                  1.3280596133064761,
+                  0.7738820881197392,
+                  0
+                ]
+              },
+              "outer": {
+                "diameter_mm": 19.20053826955778,
+                "center_xyz_mm": [
+                  0.6501276327042942,
+                  -0.45019545309776104,
+                  0
+                ]
+              },
+              "eccentricity_mm": 1.3992703803183566,
+              "model_min_gap_mm": 2.0011186987909193
+            }
+          },
+          "design": {
+            "inner_diameter_mm": 12.4,
+            "outer_diameter_mm": 19.2,
+            "outer_xy_mm": [
+              0.65,
+              -0.45
+            ],
+            "inner_xy_mm": [
+              1.328733468344872,
+              0.7744675899951541
+            ],
+            "eccentricity_mm": 1.4,
+            "model_min_gap_mm": 1.9999999999999996
+          },
+          "max_errors": {
+            "diameter_mm": 0.0005382764293599962,
+            "world_center_mm": 0.0008926974492576371,
+            "eccentricity_mm": 0.0007296221124837299,
+            "model_min_gap_mm": 0.0011187067990934274,
+            "cpu_fit_mm": 6.642994210153217e-14
+          }
+        },
+        "second-part": {
+          "projections_sha256": "ff8e4e479cc727ac7c36a66f5e4ef75d2542c7989e8c9a7c82e6819e402fcfa1",
+          "grid": [
+            "CFDKCYL1 360 17 161",
+            "0 0 0",
+            "0 0 1",
+            "1.0 0.0 0",
+            "3.6 0.05 0.25"
+          ],
+          "wall_sha256": "7c09b11411014b2873179f4412f1466a01956cf04d060df2d7aaa7add91a4207",
+          "sections_sha256": "7669e7d49e18b7f966260955329053cd21239155761fd5f5013128fc1e16f46a",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 17,
+            "rejected": 0,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 9268,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.007300208718219259,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "measured",
+            "residual_mm": {
+              "inner_rms": 0.002787568580856445,
+              "inner_peak": 0.007300178998791523,
+              "outer_rms": 0.0007704889132696818,
+              "outer_peak": 0.0027045302039794667
+            },
+            "measurement": {
+              "inner": {
+                "diameter_mm": 11.600401132507573,
+                "center_xyz_mm": [
+                  -0.5215394132803642,
+                  0.5400698053024731,
+                  0
+                ]
+              },
+              "outer": {
+                "diameter_mm": 17.590785558475545,
+                "center_xyz_mm": [
+                  0.0001928305743970665,
+                  -0.00019964669563682074,
+                  0
+                ]
+              },
+              "eccentricity_mm": 0.7510629900614608,
+              "model_min_gap_mm": 2.2441292229225254
+            }
+          },
+          "design": {
+            "inner_diameter_mm": 11.6,
+            "outer_diameter_mm": 17.6,
+            "outer_xy_mm": [
+              0,
+              0
+            ],
+            "inner_xy_mm": [
+              -0.520993777844248,
+              0.5395048502539883
+            ],
+            "eccentricity_mm": 0.75,
+            "model_min_gap_mm": 2.250000000000001
+          },
+          "max_errors": {
+            "diameter_mm": 0.009214442801244616,
+            "world_center_mm": 0.0007854506212163097,
+            "eccentricity_mm": 0.0010630122823710453,
+            "model_min_gap_mm": 0.005870796393204536,
+            "cpu_fit_mm": 6.585964412719747e-14
+          }
+        },
+        "concentric": {
+          "projections_sha256": "294444de8b5bca7bef6e8b7688b503c238c8ccd7af00c9e754b1bc87a6460fc7",
+          "grid": [
+            "CFDKCYL1 360 17 161",
+            "-0.1 0.15 0",
+            "0 0 1",
+            "0.9455185755993168 0.3255681544571567 0",
+            "3.6 0.05 0.25"
+          ],
+          "wall_sha256": "7a3bcc75982529cc29e96c80a80823742f6bfafd0c4396538792785f9f1accd1",
+          "sections_sha256": "4819131908f92e00b44150be95c4a03e3724859e76c0f680fd67bd3314324596",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 17,
+            "rejected": 0,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 9250,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.007321112527866479,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "measured",
+            "residual_mm": {
+              "inner_rms": 0.002648254832804513,
+              "inner_peak": 0.007321066664651245,
+              "outer_rms": 0.002810575938926162,
+              "outer_peak": 0.006820445223446727
+            },
+            "measurement": {
+              "inner": {
+                "diameter_mm": 12.899302865313745,
+                "center_xyz_mm": [
+                  -0.450042918774634,
+                  0.5500214690559289,
+                  0
+                ]
+              },
+              "outer": {
+                "diameter_mm": 18.29933132380773,
+                "center_xyz_mm": [
+                  -0.45005586615954263,
+                  0.5500751411634892,
+                  0
+                ]
+              },
+              "eccentricity_mm": 5.521168269425828e-05,
+              "model_min_gap_mm": 2.699959017564299
+            }
+          },
+          "design": {
+            "inner_diameter_mm": 12.9,
+            "outer_diameter_mm": 18.3,
+            "outer_xy_mm": [
+              -0.45,
+              0.55
+            ],
+            "inner_xy_mm": [
+              -0.45,
+              0.55
+            ],
+            "eccentricity_mm": 0.0,
+            "model_min_gap_mm": 2.7
+          },
+          "max_errors": {
+            "diameter_mm": 0.00069714973968793,
+            "world_center_mm": 9.363344612128143e-05,
+            "eccentricity_mm": 5.5226297612832886e-05,
+            "model_min_gap_mm": 4.0989178600625564e-05,
+            "cpu_fit_mm": 2.4683380339673988e-14
+          }
+        },
+        "ellipse": {
+          "projections_sha256": "d9a3e2eab165b5f6de059e4b3fdee261a1d9318efa384b87b63a6ab904b0cb3f",
+          "grid": [
+            "CFDKCYL1 360 17 161",
+            "0 0 0",
+            "0 0 1",
+            "1.0 0.0 0",
+            "3.6 0.05 0.25"
+          ],
+          "wall_sha256": "4c6ff75269e399479c816ad88dbcc540e5a9260e5a118fee815c0bc3c24555bd",
+          "sections_sha256": "99ea86c25d75a8ec32a8f4537a1d791a1ddc0193b859aef2a1e622001aaae527",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 0,
+            "rejected": 17,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 4316,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.2768628762846408,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "noncircular",
+            "residual_mm": {
+              "inner_rms": 0.17655364655219533,
+              "inner_peak": 0.2768628391391827,
+              "outer_rms": 0.0006837389109169942,
+              "outer_peak": 0.002426024711656219
+            },
+            "measurement": null
+          },
+          "inner_semiaxes_mm": [
+            6.1,
+            5.6
+          ]
+        }
+      },
+      "max_paired_changes_mm": {
+        "reframed": {
+          "inner_diameter": 3.748041730311513e-05,
+          "outer_diameter": 0.005054156006565336,
+          "eccentricity": 0.0005140330247905833,
+          "model_min_gap": 0.0030223675082141632
+        },
+        "remounted": {
+          "inner_diameter": 1.6387327534062024e-05,
+          "outer_diameter": 0.01695563572769032,
+          "eccentricity": 0.0012824816029155528,
+          "model_min_gap": 0.009768476862784148
+        }
+      },
+      "paired_gate_passed": false
+    },
+    "detector-1x_radial-2x": {
+      "detector_pitch_mm": 0.14,
+      "radial_pitch_mm": 0.025,
+      "cases": {
+        "nominal": {
+          "projections_sha256": "437fd7ab09d9ac72e0415a9c496eee591c35e4a3d3148417b01cc911ba6ef258",
+          "grid": [
+            "CFDKCYL1 360 17 321",
+            "0 0 0",
+            "0 0 1",
+            "1.0 0.0 0",
+            "3.6 0.025 0.25"
+          ],
+          "wall_sha256": "da73f461e44b9c5db369f3192b70dfb462e397970819e3a70638c6eb5cc571d6",
+          "sections_sha256": "3d3cac2e76fe9ee262258ec3e49f766dda867c02dcec114e0d0115ce59d2a72f",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 17,
+            "rejected": 0,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 9266,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.008004807869973908,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "measured",
+            "residual_mm": {
+              "inner_rms": 0.0021877984795002905,
+              "inner_peak": 0.008004797837921948,
+              "outer_rms": 0.0006540562172562758,
+              "outer_peak": 0.0022883149606322795
+            },
+            "measurement": {
+              "inner": {
+                "diameter_mm": 12.399769317674275,
+                "center_xyz_mm": [
+                  1.399429117810601,
+                  -0.04886903321253846,
+                  0
+                ]
+              },
+              "outer": {
+                "diameter_mm": 19.185168452366945,
+                "center_xyz_mm": [
+                  -9.448408690329359e-05,
+                  3.283808418684412e-06,
+                  0
+                ]
+              },
+              "eccentricity_mm": 1.4003766691998125,
+              "model_min_gap_mm": 1.9923228981465222
+            }
+          },
+          "design": {
+            "inner_diameter_mm": 12.4,
+            "outer_diameter_mm": 19.2,
+            "outer_xy_mm": [
+              0,
+              0
+            ],
+            "inner_xy_mm": [
+              1.399147157826734,
+              -0.04885929538350115
+            ],
+            "eccentricity_mm": 1.4,
+            "model_min_gap_mm": 1.9999999999999996
+          },
+          "max_errors": {
+            "diameter_mm": 0.014831553061210201,
+            "world_center_mm": 0.00028212808760678585,
+            "eccentricity_mm": 0.00037666919981260705,
+            "model_min_gap_mm": 0.00767710217620321,
+            "cpu_fit_mm": 7.105427357601002e-15
+          }
+        },
+        "reframed": {
+          "projections_sha256": "437fd7ab09d9ac72e0415a9c496eee591c35e4a3d3148417b01cc911ba6ef258",
+          "grid": [
+            "CFDKCYL1 360 17 321",
+            "0.4 -0.35 0",
+            "0 0 1",
+            "0.7986355100472928 0.6018150231520483 0",
+            "3.6 0.025 0.25"
+          ],
+          "wall_sha256": "443b632ec5adc64c369e9ed762da5bf262949f55e8a462d35824b60e6fa43419",
+          "sections_sha256": "918e861a75f4ef130ab0a2554aaefa9abc6581b9e6789c1e38ff24d4147f6ee0",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 17,
+            "rejected": 0,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 9293,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.008596000528908727,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "measured",
+            "residual_mm": {
+              "inner_rms": 0.002160471725193729,
+              "inner_peak": 0.008596000528908727,
+              "outer_rms": 0.0008249777893253045,
+              "outer_peak": 0.00308099287526977
+            },
+            "measurement": {
+              "inner": {
+                "diameter_mm": 12.39979522236584,
+                "center_xyz_mm": [
+                  1.399395082628801,
+                  -0.0488542573326704,
+                  0
+                ]
+              },
+              "outer": {
+                "diameter_mm": 19.18589995265589,
+                "center_xyz_mm": [
+                  3.177624754868713e-05,
+                  -7.6312436355086e-05,
+                  0
+                ]
+              },
+              "eccentricity_mm": 1.4002131806102165,
+              "model_min_gap_mm": 1.9928391845348088
+            }
+          },
+          "design": {
+            "inner_diameter_mm": 12.4,
+            "outer_diameter_mm": 19.2,
+            "outer_xy_mm": [
+              0,
+              0
+            ],
+            "inner_xy_mm": [
+              1.399147157826734,
+              -0.04885929538350115
+            ],
+            "eccentricity_mm": 1.4,
+            "model_min_gap_mm": 1.9999999999999996
+          },
+          "max_errors": {
+            "diameter_mm": 0.014100052739181024,
+            "world_center_mm": 0.0002479759856037503,
+            "eccentricity_mm": 0.00021318061021657897,
+            "model_min_gap_mm": 0.007160815465190762,
+            "cpu_fit_mm": 5.262457868674025e-13
+          }
+        },
+        "remounted": {
+          "projections_sha256": "abe9f04fec70113f624efd96e2a8e12ef0b759f20e977cec17772ebfe7f44d88",
+          "grid": [
+            "CFDKCYL1 360 17 321",
+            "0.3 -0.15 0",
+            "0 0 1",
+            "0.9205048534524404 -0.39073112848927377 0",
+            "3.6 0.025 0.25"
+          ],
+          "wall_sha256": "9c224d6832af822b247057ff12a411cf7995bd2a917e376ae526ea6b4a031c5d",
+          "sections_sha256": "f06f07ff864d94c9669729001782161330ea8a61cb379e3e49724d7a05b798c0",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 17,
+            "rejected": 0,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 9129,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.01157608727832815,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "measured",
+            "residual_mm": {
+              "inner_rms": 0.0024945566546366836,
+              "inner_peak": 0.011576033970823919,
+              "outer_rms": 0.0033114267552881954,
+              "outer_peak": 0.007095224743145066
+            },
+            "measurement": {
+              "inner": {
+                "diameter_mm": 12.399846640339257,
+                "center_xyz_mm": [
+                  1.3278802039638384,
+                  0.7737811980026417,
+                  0
+                ]
+              },
+              "outer": {
+                "diameter_mm": 19.200798881668067,
+                "center_xyz_mm": [
+                  0.6500200547752365,
+                  -0.4502625773019672,
+                  0
+                ]
+              },
+              "eccentricity_mm": 1.3992060411962042,
+              "model_min_gap_mm": 2.001270079468201
+            }
+          },
+          "design": {
+            "inner_diameter_mm": 12.4,
+            "outer_diameter_mm": 19.2,
+            "outer_xy_mm": [
+              0.65,
+              -0.45
+            ],
+            "inner_xy_mm": [
+              1.328733468344872,
+              0.7744675899951541
+            ],
+            "eccentricity_mm": 1.4,
+            "model_min_gap_mm": 1.9999999999999996
+          },
+          "max_errors": {
+            "diameter_mm": 0.0007988895285073738,
+            "world_center_mm": 0.0010950872326836957,
+            "eccentricity_mm": 0.000793965377508421,
+            "model_min_gap_mm": 0.001270091113104499,
+            "cpu_fit_mm": 5.321895497636452e-14
+          }
+        },
+        "second-part": {
+          "projections_sha256": "ff8e4e479cc727ac7c36a66f5e4ef75d2542c7989e8c9a7c82e6819e402fcfa1",
+          "grid": [
+            "CFDKCYL1 360 17 321",
+            "0 0 0",
+            "0 0 1",
+            "1.0 0.0 0",
+            "3.6 0.025 0.25"
+          ],
+          "wall_sha256": "b4ac81f7088fe615016abf48b369e7defdb1f25517fde0b3ccc3fa7d11ad3bc5",
+          "sections_sha256": "025e565866faf4096f0c568990f1ad14451e9b6fc1c86eb793233002356af3f5",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 17,
+            "rejected": 0,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 9278,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.006951187049699511,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "measured",
+            "residual_mm": {
+              "inner_rms": 0.003031527760776741,
+              "inner_peak": 0.0069511500560032885,
+              "outer_rms": 0.0007712472808680557,
+              "outer_peak": 0.0026434015265766417
+            },
+            "measurement": {
+              "inner": {
+                "diameter_mm": 11.600546198746398,
+                "center_xyz_mm": [
+                  -0.5214450164765151,
+                  0.5399720533935676,
+                  0
+                ]
+              },
+              "outer": {
+                "diameter_mm": 17.591006226416905,
+                "center_xyz_mm": [
+                  0.00019091507166760108,
+                  -0.00019766868742219398,
+                  0
+                ]
+              },
+              "eccentricity_mm": 0.7509243462128485,
+              "model_min_gap_mm": 2.2443056676224047
+            }
+          },
+          "design": {
+            "inner_diameter_mm": 11.6,
+            "outer_diameter_mm": 17.6,
+            "outer_xy_mm": [
+              0,
+              0
+            ],
+            "inner_xy_mm": [
+              -0.520993777844248,
+              0.5395048502539883
+            ],
+            "eccentricity_mm": 0.75,
+            "model_min_gap_mm": 2.250000000000001
+          },
+          "max_errors": {
+            "diameter_mm": 0.008993773839630848,
+            "world_center_mm": 0.0006495602012825404,
+            "eccentricity_mm": 0.0009243671827825484,
+            "model_min_gap_mm": 0.005694352732235508,
+            "cpu_fit_mm": 1.501810828474781e-13
+          }
+        },
+        "concentric": {
+          "projections_sha256": "294444de8b5bca7bef6e8b7688b503c238c8ccd7af00c9e754b1bc87a6460fc7",
+          "grid": [
+            "CFDKCYL1 360 17 321",
+            "-0.1 0.15 0",
+            "0 0 1",
+            "0.9455185755993168 0.3255681544571567 0",
+            "3.6 0.025 0.25"
+          ],
+          "wall_sha256": "c4b137b4e8c96a2925d229d7de1948692fcfcc3060d18b4dbe213c23060495b6",
+          "sections_sha256": "d4682dd42964ec729c3b5416dc42f33bff92132c7e6d52634195f1387be49390",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 17,
+            "rejected": 0,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 9244,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.0073254186719503706,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "measured",
+            "residual_mm": {
+              "inner_rms": 0.003130537218590587,
+              "inner_peak": 0.007325398679589333,
+              "outer_rms": 0.0033565343465148576,
+              "outer_peak": 0.008620308812045624
+            },
+            "measurement": {
+              "inner": {
+                "diameter_mm": 12.899338228163128,
+                "center_xyz_mm": [
+                  -0.4495270446209486,
+                  0.5494567656403572,
+                  0
+                ]
+              },
+              "outer": {
+                "diameter_mm": 18.299054159520747,
+                "center_xyz_mm": [
+                  -0.4497837858055399,
+                  0.5497465442322178,
+                  0
+                ]
+              },
+              "eccentricity_mm": 0.00038715328768595166,
+              "model_min_gap_mm": 2.6994708123911235
+            }
+          },
+          "design": {
+            "inner_diameter_mm": 12.9,
+            "outer_diameter_mm": 18.3,
+            "outer_xy_mm": [
+              -0.45,
+              0.55
+            ],
+            "inner_xy_mm": [
+              -0.45,
+              0.55
+            ],
+            "eccentricity_mm": 0.0,
+            "model_min_gap_mm": 2.7
+          },
+          "max_errors": {
+            "diameter_mm": 0.0009458467504437351,
+            "world_center_mm": 0.0007202879019405222,
+            "eccentricity_mm": 0.0003871715115923007,
+            "model_min_gap_mm": 0.0005291989977354028,
+            "cpu_fit_mm": 7.562576922115828e-14
+          }
+        },
+        "ellipse": {
+          "projections_sha256": "d9a3e2eab165b5f6de059e4b3fdee261a1d9318efa384b87b63a6ab904b0cb3f",
+          "grid": [
+            "CFDKCYL1 360 17 321",
+            "0 0 0",
+            "0 0 1",
+            "1.0 0.0 0",
+            "3.6 0.025 0.25"
+          ],
+          "wall_sha256": "c13a3464391ae82b36b70f4d661b489de6866b2698a44479da962e2ab527427e",
+          "sections_sha256": "eed85fa56c3683911fae7bc42b6e4300622f678bd524870fb5868e0791cf2abd",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 0,
+            "rejected": 17,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 4323,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.27741675666084403,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "noncircular",
+            "residual_mm": {
+              "inner_rms": 0.1767322235191784,
+              "inner_peak": 0.2774166646213348,
+              "outer_rms": 0.0006732515790456529,
+              "outer_peak": 0.0023161513892238734
+            },
+            "measurement": null
+          },
+          "inner_semiaxes_mm": [
+            6.1,
+            5.6
+          ]
+        }
+      },
+      "max_paired_changes_mm": {
+        "reframed": {
+          "inner_diameter": 2.591169121224368e-05,
+          "outer_diameter": 0.0007315073555709262,
+          "eccentricity": 0.00016349310009111662,
+          "model_min_gap": 0.0005162892749539516
+        },
+        "remounted": {
+          "inner_diameter": 7.732266498194917e-05,
+          "outer_diameter": 0.015630440668275014,
+          "eccentricity": 0.0011706295361544328,
+          "model_min_gap": 0.008947193289307709
+        }
+      },
+      "paired_gate_passed": false
+    },
+    "detector-2x_radial-1x": {
+      "detector_pitch_mm": 0.07,
+      "radial_pitch_mm": 0.05,
+      "cases": {
+        "nominal": {
+          "projections_sha256": "4f8d33edb5dad4efd861c4ba734a60eb109801cdd8653d466eb6b15c42458977",
+          "grid": [
+            "CFDKCYL1 360 17 161",
+            "0 0 0",
+            "0 0 1",
+            "1.0 0.0 0",
+            "3.6 0.05 0.25"
+          ],
+          "wall_sha256": "bc5d2cb33b724613ba940192079ba06a2ed048abde0c90796b51b5ba85a592a0",
+          "sections_sha256": "2ba8d93fe1d831c223b0dc56e7fc4d193b8ce84ce449123cc40b3e36eee1e060",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 17,
+            "rejected": 0,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 9237,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.005303268520359491,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "measured",
+            "residual_mm": {
+              "inner_rms": 0.002564520425548307,
+              "inner_peak": 0.005303214507998637,
+              "outer_rms": 0.0012607448281313758,
+              "outer_peak": 0.003353561812708365
+            },
+            "measurement": {
+              "inner": {
+                "diameter_mm": 12.399713508245885,
+                "center_xyz_mm": [
+                  1.3988838751129407,
+                  -0.04884998900767629,
+                  0
+                ]
+              },
+              "outer": {
+                "diameter_mm": 19.21256570983086,
+                "center_xyz_mm": [
+                  -4.180420339529158e-06,
+                  1.291027440972001e-07,
+                  0
+                ]
+              },
+              "eccentricity_mm": 1.399740735262457,
+              "model_min_gap_mm": 2.0066853655300303
+            }
+          },
+          "design": {
+            "inner_diameter_mm": 12.4,
+            "outer_diameter_mm": 19.2,
+            "outer_xy_mm": [
+              0,
+              0
+            ],
+            "inner_xy_mm": [
+              1.399147157826734,
+              -0.04885929538350115
+            ],
+            "eccentricity_mm": 1.4,
+            "model_min_gap_mm": 1.9999999999999996
+          },
+          "max_errors": {
+            "diameter_mm": 0.01256581430045145,
+            "world_center_mm": 0.0002634579225305164,
+            "eccentricity_mm": 0.000259272042880454,
+            "model_min_gap_mm": 0.00668541142257606,
+            "cpu_fit_mm": 5.870855017409138e-13
+          }
+        },
+        "reframed": {
+          "projections_sha256": "4f8d33edb5dad4efd861c4ba734a60eb109801cdd8653d466eb6b15c42458977",
+          "grid": [
+            "CFDKCYL1 360 17 161",
+            "0.4 -0.35 0",
+            "0 0 1",
+            "0.7986355100472928 0.6018150231520483 0",
+            "3.6 0.05 0.25"
+          ],
+          "wall_sha256": "f1b79d338517236f7d4a6552bba5a03acbee9ab7dcf0dfe29e0e319693d10b31",
+          "sections_sha256": "f8f45f26e20943994e4f23cce0cb0ecafdba52fc99a235bb356d9d1cdd0d7c75",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 17,
+            "rejected": 0,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 9298,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.007982650783867569,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "measured",
+            "residual_mm": {
+              "inner_rms": 0.002589642763771079,
+              "inner_peak": 0.007982650783867569,
+              "outer_rms": 0.0037664099140985283,
+              "outer_peak": 0.007774723705451703
+            },
+            "measurement": {
+              "inner": {
+                "diameter_mm": 12.399841391976187,
+                "center_xyz_mm": [
+                  1.3984538489197422,
+                  -0.04900033261890907,
+                  0
+                ]
+              },
+              "outer": {
+                "diameter_mm": 19.203012431177115,
+                "center_xyz_mm": [
+                  -2.4945791246844262e-05,
+                  -0.00016360547724603158,
+                  0
+                ]
+              },
+              "eccentricity_mm": 1.3993312564129372,
+              "model_min_gap_mm": 2.0022542631875266
+            }
+          },
+          "design": {
+            "inner_diameter_mm": 12.4,
+            "outer_diameter_mm": 19.2,
+            "outer_xy_mm": [
+              0,
+              0
+            ],
+            "inner_xy_mm": [
+              1.399147157826734,
+              -0.04885929538350115
+            ],
+            "eccentricity_mm": 1.4,
+            "model_min_gap_mm": 1.9999999999999996
+          },
+          "max_errors": {
+            "diameter_mm": 0.0030124540237217445,
+            "world_center_mm": 0.0007075205859977246,
+            "eccentricity_mm": 0.0006687539430261236,
+            "model_min_gap_mm": 0.002254291062893099,
+            "cpu_fit_mm": 3.5062928856632994e-14
+          }
+        },
+        "remounted": {
+          "projections_sha256": "250077e87244bcd78909f6099b38bb8ddaad95911b483b37d5863acbea21fd40",
+          "grid": [
+            "CFDKCYL1 360 17 161",
+            "0.3 -0.15 0",
+            "0 0 1",
+            "0.9205048534524404 -0.39073112848927377 0",
+            "3.6 0.05 0.25"
+          ],
+          "wall_sha256": "b05e81b9cee59f042ad67d300a8831a829091fffba149b30b3ea1f9131fdbc79",
+          "sections_sha256": "081ec98ef000d4ba050f50bad8a53d26e53f3a1cdf0c00c7f71b298e57bfa1df",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 17,
+            "rejected": 0,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 9149,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.006619944758200268,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "measured",
+            "residual_mm": {
+              "inner_rms": 0.0026018907242789597,
+              "inner_peak": 0.006619944758200268,
+              "outer_rms": 0.002997258406095456,
+              "outer_peak": 0.006753828883321576
+            },
+            "measurement": {
+              "inner": {
+                "diameter_mm": 12.400184113952369,
+                "center_xyz_mm": [
+                  1.3285195814001365,
+                  0.7744050981842334,
+                  0
+                ]
+              },
+              "outer": {
+                "diameter_mm": 19.199867926846572,
+                "center_xyz_mm": [
+                  0.6502628453431605,
+                  -0.4500183211833197,
+                  0
+                ]
+              },
+              "eccentricity_mm": 1.399730298987056,
+              "model_min_gap_mm": 2.000111607460046
+            }
+          },
+          "design": {
+            "inner_diameter_mm": 12.4,
+            "outer_diameter_mm": 19.2,
+            "outer_xy_mm": [
+              0.65,
+              -0.45
+            ],
+            "inner_xy_mm": [
+              1.328733468344872,
+              0.7744675899951541
+            ],
+            "eccentricity_mm": 1.4,
+            "model_min_gap_mm": 1.9999999999999996
+          },
+          "max_errors": {
+            "diameter_mm": 0.00018411668326834274,
+            "world_center_mm": 0.000263489567462203,
+            "eccentricity_mm": 0.0002697115446930187,
+            "model_min_gap_mm": 0.00011162086230642743,
+            "cpu_fit_mm": 6.591949208711867e-15
+          }
+        },
+        "second-part": {
+          "projections_sha256": "ddbee01702453851864c538ea91dc3e3b60df19610434a394ee363e84346ee3a",
+          "grid": [
+            "CFDKCYL1 360 17 161",
+            "0 0 0",
+            "0 0 1",
+            "1.0 0.0 0",
+            "3.6 0.05 0.25"
+          ],
+          "wall_sha256": "f7f1b33e0c18841106b23bec9d67fdbcfd18cf705e407d6385e63e4908488be8",
+          "sections_sha256": "fc06aa6f4ac4f405a374a7687d341561a95dd34b42a06da732fa9463103fc3f1",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 17,
+            "rejected": 0,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 9270,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.005261498824175673,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "measured",
+            "residual_mm": {
+              "inner_rms": 0.002622093526737391,
+              "inner_peak": 0.005261447084545095,
+              "outer_rms": 0.0016602415890009635,
+              "outer_peak": 0.003996462783132031
+            },
+            "measurement": {
+              "inner": {
+                "diameter_mm": 11.600323689582721,
+                "center_xyz_mm": [
+                  -0.5216882187088324,
+                  0.5402239018562002,
+                  0
+                ]
+              },
+              "outer": {
+                "diameter_mm": 17.596690260028215,
+                "center_xyz_mm": [
+                  -4.2371935149182135e-05,
+                  4.3878892802012606e-05,
+                  0
+                ]
+              },
+              "eccentricity_mm": 0.7509386437419308,
+              "model_min_gap_mm": 2.2472446414808163
+            }
+          },
+          "design": {
+            "inner_diameter_mm": 11.6,
+            "outer_diameter_mm": 17.6,
+            "outer_xy_mm": [
+              0,
+              0
+            ],
+            "inner_xy_mm": [
+              -0.520993777844248,
+              0.5395048502539883
+            ],
+            "eccentricity_mm": 0.75,
+            "model_min_gap_mm": 2.250000000000001
+          },
+          "max_errors": {
+            "diameter_mm": 0.0033099783486463252,
+            "world_center_mm": 0.000999659826878381,
+            "eccentricity_mm": 0.0009386437419307558,
+            "model_min_gap_mm": 0.002755447100962982,
+            "cpu_fit_mm": 8.112434335405538e-15
+          }
+        },
+        "concentric": {
+          "projections_sha256": "75090f72e285f24a46bd792381e9f2448f3d0664f43b8cd210a828ef39422436",
+          "grid": [
+            "CFDKCYL1 360 17 161",
+            "-0.1 0.15 0",
+            "0 0 1",
+            "0.9455185755993168 0.3255681544571567 0",
+            "3.6 0.05 0.25"
+          ],
+          "wall_sha256": "c13d6f4c801b68601491fad84e800042021ea9e10eff8805b189d45966a3183c",
+          "sections_sha256": "18769c33aba344e382b59740dccfb8181752a7a8404eb9e5cd142ecb105e034e",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 17,
+            "rejected": 0,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 9245,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.00717004100828082,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "measured",
+            "residual_mm": {
+              "inner_rms": 0.002696211243514851,
+              "inner_peak": 0.00717002552392288,
+              "outer_rms": 0.0028257218157319783,
+              "outer_peak": 0.007301350541508405
+            },
+            "measurement": {
+              "inner": {
+                "diameter_mm": 12.900078084554414,
+                "center_xyz_mm": [
+                  -0.4498650485824981,
+                  0.5497660157522979,
+                  0
+                ]
+              },
+              "outer": {
+                "diameter_mm": 18.299974039694845,
+                "center_xyz_mm": [
+                  -0.4499959075606456,
+                  0.5499059537922816,
+                  0
+                ]
+              },
+              "eccentricity_mm": 0.00019158999764165574,
+              "model_min_gap_mm": 2.6997563875725743
+            }
+          },
+          "design": {
+            "inner_diameter_mm": 12.9,
+            "outer_diameter_mm": 18.3,
+            "outer_xy_mm": [
+              -0.45,
+              0.55
+            ],
+            "inner_xy_mm": [
+              -0.45,
+              0.55
+            ],
+            "eccentricity_mm": 0.0,
+            "model_min_gap_mm": 2.7
+          },
+          "max_errors": {
+            "diameter_mm": 7.809795748237036e-05,
+            "world_center_mm": 0.0002701227640890512,
+            "eccentricity_mm": 0.00019159879061637978,
+            "model_min_gap_mm": 0.00024362673063915707,
+            "cpu_fit_mm": 3.552713678800501e-15
+          }
+        },
+        "ellipse": {
+          "projections_sha256": "3fb2abc37ed50a6109a1da88ef912808c8b65495fe6b94c731ea0767349b1044",
+          "grid": [
+            "CFDKCYL1 360 17 161",
+            "0 0 0",
+            "0 0 1",
+            "1.0 0.0 0",
+            "3.6 0.05 0.25"
+          ],
+          "wall_sha256": "4e9159ae6e51a9e5639c6e5898dbd26a4be9cbb92ae01b48de6e18e7eb4bdb52",
+          "sections_sha256": "97211efc2f8adbd2f9c323cb2f2724982a3c4ea8f81908c21a5501be2731d6f4",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 0,
+            "rejected": 17,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 4296,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.2748338964054932,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "noncircular",
+            "residual_mm": {
+              "inner_rms": 0.17611307341553137,
+              "inner_peak": 0.27483383502811076,
+              "outer_rms": 0.0013015542950419053,
+              "outer_peak": 0.003340840470029127
+            },
+            "measurement": null
+          },
+          "inner_semiaxes_mm": [
+            6.1,
+            5.6
+          ]
+        }
+      },
+      "max_paired_changes_mm": {
+        "reframed": {
+          "inner_diameter": 0.00012788373030225841,
+          "outer_diameter": 0.009553366442411004,
+          "eccentricity": 0.00040949147323465773,
+          "model_min_gap": 0.004431127754188857
+        },
+        "remounted": {
+          "inner_diameter": 0.00047061765149081225,
+          "outer_diameter": 0.012697884386884795,
+          "eccentricity": 1.0454116595504104e-05,
+          "model_min_gap": 0.006573799611291342
+        }
+      },
+      "paired_gate_passed": false
+    },
+    "detector-2x_radial-2x": {
+      "detector_pitch_mm": 0.07,
+      "radial_pitch_mm": 0.025,
+      "cases": {
+        "nominal": {
+          "projections_sha256": "4f8d33edb5dad4efd861c4ba734a60eb109801cdd8653d466eb6b15c42458977",
+          "grid": [
+            "CFDKCYL1 360 17 321",
+            "0 0 0",
+            "0 0 1",
+            "1.0 0.0 0",
+            "3.6 0.025 0.25"
+          ],
+          "wall_sha256": "2bd0932962ee62f7befb1f74cc6dd6b730729a253ea2cde8052f6d676f311b95",
+          "sections_sha256": "e1c6e337c7e6a55e1d924bdfa481c35c29b9ada45cf65c9968f53372e9e8f32b",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 17,
+            "rejected": 0,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 9259,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.0024863028139602236,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "measured",
+            "residual_mm": {
+              "inner_rms": 0.0006202257946722485,
+              "inner_peak": 0.002486285601476487,
+              "outer_rms": 0.000817727925826875,
+              "outer_peak": 0.0021207052223637156
+            },
+            "measurement": {
+              "inner": {
+                "diameter_mm": 12.3998294527123,
+                "center_xyz_mm": [
+                  1.3990052167705842,
+                  -0.04885423254329129,
+                  0
+                ]
+              },
+              "outer": {
+                "diameter_mm": 19.207583264691813,
+                "center_xyz_mm": [
+                  -6.366027963992474e-06,
+                  2.14073832158904e-07,
+                  0
+                ]
+              },
+              "eccentricity_mm": 1.3998643383409566,
+              "model_min_gap_mm": 2.0040125676488
+            }
+          },
+          "design": {
+            "inner_diameter_mm": 12.4,
+            "outer_diameter_mm": 19.2,
+            "outer_xy_mm": [
+              0,
+              0
+            ],
+            "inner_xy_mm": [
+              1.399147157826734,
+              -0.04885929538350115
+            ],
+            "eccentricity_mm": 1.4,
+            "model_min_gap_mm": 1.9999999999999996
+          },
+          "max_errors": {
+            "diameter_mm": 0.007583338723900823,
+            "world_center_mm": 0.00014203854585254235,
+            "eccentricity_mm": 0.00013566857075897332,
+            "model_min_gap_mm": 0.004012604915895945,
+            "cpu_fit_mm": 2.273407156971885e-13
+          }
+        },
+        "reframed": {
+          "projections_sha256": "4f8d33edb5dad4efd861c4ba734a60eb109801cdd8653d466eb6b15c42458977",
+          "grid": [
+            "CFDKCYL1 360 17 321",
+            "0.4 -0.35 0",
+            "0 0 1",
+            "0.7986355100472928 0.6018150231520483 0",
+            "3.6 0.025 0.25"
+          ],
+          "wall_sha256": "957d908cbf0a2f15d3fa4b90d9a5be23660f318aecf05b23914f794ea1099060",
+          "sections_sha256": "8a673e094a83d8bd1e54a922cfc5e9e8a84eb1d408138840a16a7f92bb149457",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 17,
+            "rejected": 0,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 9296,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.0032911827861513486,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "measured",
+            "residual_mm": {
+              "inner_rms": 0.000729820651268755,
+              "inner_peak": 0.0032911827861513486,
+              "outer_rms": 0.001034938461947881,
+              "outer_peak": 0.002867842984292995
+            },
+            "measurement": {
+              "inner": {
+                "diameter_mm": 12.39975742449821,
+                "center_xyz_mm": [
+                  1.3990176256272524,
+                  -0.04887628989031012,
+                  0
+                ]
+              },
+              "outer": {
+                "diameter_mm": 19.206290792394174,
+                "center_xyz_mm": [
+                  2.665059979367612e-06,
+                  -0.0001531265860407749,
+                  0
+                ]
+              },
+              "eccentricity_mm": 1.3998631385008402,
+              "model_min_gap_mm": 2.003403545447142
+            }
+          },
+          "design": {
+            "inner_diameter_mm": 12.4,
+            "outer_diameter_mm": 19.2,
+            "outer_xy_mm": [
+              0,
+              0
+            ],
+            "inner_xy_mm": [
+              1.399147157826734,
+              -0.04885929538350115
+            ],
+            "eccentricity_mm": 1.4,
+            "model_min_gap_mm": 1.9999999999999996
+          },
+          "max_errors": {
+            "diameter_mm": 0.006290808772195788,
+            "world_center_mm": 0.00015315438930210018,
+            "eccentricity_mm": 0.00013687316641330938,
+            "model_min_gap_mm": 0.0034035704270056755,
+            "cpu_fit_mm": 4.469948716723238e-15
+          }
+        },
+        "remounted": {
+          "projections_sha256": "250077e87244bcd78909f6099b38bb8ddaad95911b483b37d5863acbea21fd40",
+          "grid": [
+            "CFDKCYL1 360 17 321",
+            "0.3 -0.15 0",
+            "0 0 1",
+            "0.9205048534524404 -0.39073112848927377 0",
+            "3.6 0.025 0.25"
+          ],
+          "wall_sha256": "ea23ce7b195311c710af4f9f86efaf1eaec613c7466112c5b8858ec5a06f44e8",
+          "sections_sha256": "e551cc0b67cf74b009dbe8776b4609c7f562cd67a33b26190b41da20319d0f32",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 17,
+            "rejected": 0,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 9158,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.005609805720695535,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "measured",
+            "residual_mm": {
+              "inner_rms": 0.0009757240164881664,
+              "inner_peak": 0.005609753235162108,
+              "outer_rms": 0.0014776540626744816,
+              "outer_peak": 0.0038996963419990712
+            },
+            "measurement": {
+              "inner": {
+                "diameter_mm": 12.400285883081336,
+                "center_xyz_mm": [
+                  1.3286544477772406,
+                  0.7744877807623465,
+                  0
+                ]
+              },
+              "outer": {
+                "diameter_mm": 19.199703621537594,
+                "center_xyz_mm": [
+                  0.6501002298199178,
+                  -0.4498035010432626,
+                  0
+                ]
+              },
+              "eccentricity_mm": 1.3997588968864942,
+              "model_min_gap_mm": 1.9999499723416347
+            }
+          },
+          "design": {
+            "inner_diameter_mm": 12.4,
+            "outer_diameter_mm": 19.2,
+            "outer_xy_mm": [
+              0.65,
+              -0.45
+            ],
+            "inner_xy_mm": [
+              1.328733468344872,
+              0.7744675899951541
+            ],
+            "eccentricity_mm": 1.4,
+            "model_min_gap_mm": 1.9999999999999996
+          },
+          "max_errors": {
+            "diameter_mm": 0.00029637846240504473,
+            "world_center_mm": 0.00022059057519743076,
+            "eccentricity_mm": 0.00024111007439975296,
+            "model_min_gap_mm": 5.002765836481515e-05,
+            "cpu_fit_mm": 1.551136925266137e-14
+          }
+        },
+        "second-part": {
+          "projections_sha256": "ddbee01702453851864c538ea91dc3e3b60df19610434a394ee363e84346ee3a",
+          "grid": [
+            "CFDKCYL1 360 17 321",
+            "0 0 0",
+            "0 0 1",
+            "1.0 0.0 0",
+            "3.6 0.025 0.25"
+          ],
+          "wall_sha256": "ee9a86d171b47dfaa314b7ef100424157a5bce5a0bd607237aae2d3f315760ba",
+          "sections_sha256": "5ca7f1cfb7f1809917c3482275a67db8dabe36c07b3c24f56ab09fbef7875f21",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 17,
+            "rejected": 0,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 9268,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.003739941439970231,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "measured",
+            "residual_mm": {
+              "inner_rms": 0.0012518661303177474,
+              "inner_peak": 0.003739930402403048,
+              "outer_rms": 0.0009993128240945537,
+              "outer_peak": 0.0024668008364253985
+            },
+            "measurement": {
+              "inner": {
+                "diameter_mm": 11.600064784953375,
+                "center_xyz_mm": [
+                  -0.5212743735676162,
+                  0.5397953471399396,
+                  0
+                ]
+              },
+              "outer": {
+                "diameter_mm": 17.598077504158024,
+                "center_xyz_mm": [
+                  -2.76752499082008e-05,
+                  2.8661030546896998e-05,
+                  0
+                ]
+              },
+              "eccentricity_mm": 0.7503640422758991,
+              "model_min_gap_mm": 2.2486423173264254
+            }
+          },
+          "design": {
+            "inner_diameter_mm": 11.6,
+            "outer_diameter_mm": 17.6,
+            "outer_xy_mm": [
+              0,
+              0
+            ],
+            "inner_xy_mm": [
+              -0.520993777844248,
+              0.5395048502539883
+            ],
+            "eccentricity_mm": 0.75,
+            "model_min_gap_mm": 2.250000000000001
+          },
+          "max_errors": {
+            "diameter_mm": 0.0019226407169021797,
+            "world_center_mm": 0.0004039012376623918,
+            "eccentricity_mm": 0.00036404227589914573,
+            "model_min_gap_mm": 0.001357744235504832,
+            "cpu_fit_mm": 7.105427357601002e-15
+          }
+        },
+        "concentric": {
+          "projections_sha256": "75090f72e285f24a46bd792381e9f2448f3d0664f43b8cd210a828ef39422436",
+          "grid": [
+            "CFDKCYL1 360 17 321",
+            "-0.1 0.15 0",
+            "0 0 1",
+            "0.9455185755993168 0.3255681544571567 0",
+            "3.6 0.025 0.25"
+          ],
+          "wall_sha256": "2bc1257851f9553530db467999e78bafcdc81123e7ca6c4b4d805986c893a149",
+          "sections_sha256": "a74502370a2de9befcf8ac1699cfeb6f6b8bbf4a9b7036cfafb68734bcaa8dbd",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 17,
+            "rejected": 0,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 9245,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.0038696932612939322,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "measured",
+            "residual_mm": {
+              "inner_rms": 0.0011846184592082026,
+              "inner_peak": 0.0038696787380072912,
+              "outer_rms": 0.0015445416089272374,
+              "outer_peak": 0.004420455760332846
+            },
+            "measurement": {
+              "inner": {
+                "diameter_mm": 12.900002368000223,
+                "center_xyz_mm": [
+                  -0.45031125032947483,
+                  0.5503337994665113,
+                  0
+                ]
+              },
+              "outer": {
+                "diameter_mm": 18.29974499810727,
+                "center_xyz_mm": [
+                  -0.45021709135068455,
+                  0.5502090214504827,
+                  0
+                ]
+              },
+              "eccentricity_mm": 0.0001563184780212019,
+              "model_min_gap_mm": 2.6997149965755014
+            }
+          },
+          "design": {
+            "inner_diameter_mm": 12.9,
+            "outer_diameter_mm": 18.3,
+            "outer_xy_mm": [
+              -0.45,
+              0.55
+            ],
+            "inner_xy_mm": [
+              -0.45,
+              0.55
+            ],
+            "eccentricity_mm": 0.0,
+            "model_min_gap_mm": 2.7
+          },
+          "max_errors": {
+            "diameter_mm": 0.00025500791928934063,
+            "world_center_mm": 0.00045639769000442446,
+            "eccentricity_mm": 0.00015632107319259232,
+            "model_min_gap_mm": 0.0002850116964054905,
+            "cpu_fit_mm": 5.865100072277585e-15
+          }
+        },
+        "ellipse": {
+          "projections_sha256": "3fb2abc37ed50a6109a1da88ef912808c8b65495fe6b94c731ea0767349b1044",
+          "grid": [
+            "CFDKCYL1 360 17 321",
+            "0 0 0",
+            "0 0 1",
+            "1.0 0.0 0",
+            "3.6 0.025 0.25"
+          ],
+          "wall_sha256": "c77fac4bfee2358545da1955422a2612d83d3e057102177714ea1521efffc88d",
+          "sections_sha256": "7229963f9be39e6beebdf4203f1a51b0fe64852cc3ec29373343b836ab8403c3",
+          "native": {
+            "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+            "rows": 17,
+            "measured": 0,
+            "rejected": 17,
+            "tiles": 1,
+            "input_bytes": 195840,
+            "output_bytes": 4314,
+            "budget_bytes": 16777216,
+            "peak_owned_bytes": 198496,
+            "redzones_verified": true
+          },
+          "peak_inner_residual_mm": 0.27344799165509115,
+          "middle_row": {
+            "row": 8,
+            "axial_offset_mm": 0,
+            "valid_columns": 360,
+            "status": "noncircular",
+            "residual_mm": {
+              "inner_rms": 0.17626374265187178,
+              "inner_peak": 0.2734479284661378,
+              "outer_rms": 0.0008351911731231474,
+              "outer_peak": 0.0020904757273445085
+            },
+            "measurement": null
+          },
+          "inner_semiaxes_mm": [
+            6.1,
+            5.6
+          ]
+        }
+      },
+      "max_paired_changes_mm": {
+        "reframed": {
+          "inner_diameter": 7.203994064752806e-05,
+          "outer_diameter": 0.001292534223626518,
+          "eccentricity": 1.210013580443814e-06,
+          "model_min_gap": 0.0006090424955620399
+        },
+        "remounted": {
+          "inner_diameter": 0.0004564436151515139,
+          "outer_diameter": 0.007879714558498563,
+          "eccentricity": 0.00010545168630260449,
+          "model_min_gap": 0.004062627314421086
+        }
+      },
+      "paired_gate_passed": true
+    }
+  }
+}

@@ -33,3 +33,10 @@ struct WallSample {
     unsigned status, reserved;
 };
 static_assert(sizeof(WallSample) == 32, "wall map ABI");
+
+// One CUDA block per (axial row, interface). Offsets are in the seam/tangent plane.
+struct BoreCircle {
+    double x, y, radius, rms, peak;
+    int valid, solved;
+};
+static_assert(sizeof(BoreCircle) == 48, "bore circle ABI");

@@ -229,3 +229,104 @@ extern "C" __global__ void radial_wall(const float *tile, WallSample *out, int c
                  ? WallSample{r0 + enter * dr, r0 + exit * dr, (exit - enter) * dr, status, 0}
                  : WallSample{na, na, na, status, 0};
 }
+
+// Deterministic block tree. Every lane reads the same normal equations before scratch reuse.
+template <int N> __device__ void bore_sum(double (&v)[N], double scratch[][128]) {
+    int t = threadIdx.x;
+    for (int k = 0; k < N; ++k)
+        scratch[k][t] = v[k];
+    __syncthreads();
+    for (int s = 64; s; s /= 2) {
+        if (t < s)
+            for (int k = 0; k < N; ++k)
+                scratch[k][t] += scratch[k][t + s];
+        __syncthreads();
+    }
+    for (int k = 0; k < N; ++k)
+        v[k] = scratch[k][0];
+    __syncthreads();
+}
+
+extern "C" __global__ void bore_circles(const WallSample *wall, BoreCircle *out, int w) {
+    const int idx = blockIdx.x, t = threadIdx.x;
+    const WallSample *row = wall + (idx / 2) * w;
+    __shared__ double scratch[9][128];
+    double init[4] = {};
+    for (int i = t; i < w; i += 128) {
+        if (row[i].status != Measured)
+            continue;
+        double r = (idx & 1) ? row[i].outer : row[i].inner, s, c;
+        sincospi(2. * i / w, &s, &c);
+        init[0]++;
+        init[1] += r;
+        init[2] += r * c;
+        init[3] += r * s;
+    }
+    bore_sum(init, scratch);
+    BoreCircle fit = {};
+    fit.valid = int(init[0]);
+    // No gap filling or extrapolation: a single unmeasured ray suppresses the row.
+    if (fit.valid == w) {
+        const double scale = init[1] / w;
+        // The first harmonic is the exact center for an even, uniform sampling of a circle.
+        double cx = (init[2] / init[1]) * 2, cy = (init[3] / init[1]) * 2;
+        for (int it = 0; it < 16; ++it) {
+            double m[9] = {};
+            for (int i = t; i < w; i += 128) {
+                double r = ((idx & 1) ? row[i].outer : row[i].inner) / scale, s, c;
+                sincospi(2. * i / w, &s, &c);
+                double x = cx - r * c, y = cy - r * s, d = hypot(x, y);
+                if (!(d > 1e-15)) {
+                    m[8]++;
+                    continue;
+                }
+                double u = x / d, v = y / d;
+                m[0] += u;
+                m[1] += v;
+                m[2] += d;
+                m[3] += u * u;
+                m[4] += u * v;
+                m[5] += v * v;
+                m[6] += x;
+                m[7] += y;
+            }
+            bore_sum(m, scratch);
+            // Eliminate the freely fitted radius (mean distance) from the 3x3 system.
+            double radius = m[2] / w, a = m[3] - m[0] * m[0] / w, b = m[4] - m[0] * m[1] / w,
+                   c = m[5] - m[1] * m[1] / w, det = a * c - b * b, q = radius * m[0] - m[6],
+                   p = radius * m[1] - m[7];
+            if (m[8] || !(det > 1e-12 * w * w))
+                break;
+            double dx = (c * q - b * p) / det, dy = (a * p - b * q) / det;
+            if (hypot(dx, dy) <= 1e-13) {
+                double ss[1] = {}, peak = 0;
+                for (int i = t; i < w; i += 128) {
+                    double r = ((idx & 1) ? row[i].outer : row[i].inner) / scale, sn, cs;
+                    sincospi(2. * i / w, &sn, &cs);
+                    double e = hypot(cx - r * cs, cy - r * sn) - radius;
+                    peak = fmax(peak, fabs(e));
+                    ss[0] += e * e;
+                }
+                bore_sum(ss, scratch);
+                scratch[0][t] = peak;
+                __syncthreads();
+                for (int n = 64; n; n /= 2) {
+                    if (t < n)
+                        scratch[0][t] = fmax(scratch[0][t], scratch[0][t + n]);
+                    __syncthreads();
+                }
+                fit.x = cx * scale;
+                fit.y = cy * scale;
+                fit.radius = radius * scale;
+                fit.rms = sqrt(ss[0] / w) * scale;
+                fit.peak = scratch[0][0] * scale;
+                fit.solved = 1;
+                break;
+            }
+            cx += dx;
+            cy += dy;
+        }
+    }
+    if (!t)
+        out[idx] = fit;
+}

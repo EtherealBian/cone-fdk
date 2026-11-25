@@ -29,8 +29,19 @@ LIMITS = {
 }
 
 
-def project(scan, outer, inner, ecc, phase, *, liner=False):
-    g = Geometry(360, 72, 320, 0.14, 0.24, 120.0, 205.0)
+def project(
+    scan,
+    outer,
+    inner,
+    ecc,
+    phase,
+    *,
+    liner=False,
+    mount_xy=(0, 0),
+    bore_y_radius=None,
+    detector_factor=1,
+):
+    g = Geometry(360, 72, 320 * detector_factor, 0.14 / detector_factor, 0.24, 120.0, 205.0)
     g.save(scan.with_suffix(".geom"))
     u = (np.arange(g.u) - (g.u - 1) / 2) * g.du
     v = (np.arange(g.v)[:, None] - (g.v - 1) / 2) * g.dv
@@ -50,7 +61,8 @@ def project(scan, outer, inner, ecc, phase, *, liner=False):
                 slope = v / n
                 zcap = 7 / abs(slope)  # finite tube z in [-7,7]; even detector height avoids 0/0
                 scale = np.hypot(1, slope)
-                solids = [(0, 0, outer, 1), (cx, cy, inner, -1)]
+                ox0, oy0 = mount_xy
+                solids = [(ox0, oy0, outer, 1), (ox0 + cx, oy0 + cy, inner, -1)]
                 if liner:
                     solids += [(0, 0, 4.4, 1), (0, 0, 3.9, -1)]
                 for ox, oy, r, sign in solids:
@@ -58,6 +70,13 @@ def project(scan, outer, inner, ecc, phase, *, liner=False):
                     along = ax * dx + ay * dy
                     across = ax * dy - ay * dx
                     half = np.sqrt(np.maximum(0, r * r - across * across))
+                    if sign == -1 and bore_y_radius is not None and r == inner:
+                        # Intersect the ray with an axis-aligned ellipse in scaled coordinates.
+                        vx, vy = dx / r, dy / bore_y_radius
+                        xx, yy = ax / r, ay / bore_y_radius
+                        vv = vx * vx + vy * vy
+                        along = (xx * vx + yy * vy) / vv
+                        half = np.sqrt(np.maximum(0, vv - (xx * vy - yy * vx) ** 2)) / vv
                     length = np.maximum(
                         0, np.minimum(along + half, zcap) - np.maximum(along - half, 0)
                     )

@@ -21,9 +21,23 @@ WALL_DTYPE = np.dtype(
 STATUS = ("measured", "empty", "clipped", "multiple", "ambiguous", "nonfinite", "undersampled")
 
 
-def measure(atlas, spec, out, level, *, budget=16, sector_cols=None, build=BUILD):
+def run_native_json(cmd):
     env = os.environ.copy()
     env["PATH"] = os.pathsep.join([*map(str, dll_dirs()), env.get("PATH", "")])
+    run = subprocess.run(
+        list(map(str, cmd)),
+        env=env,
+        capture_output=True,
+        text=True,
+        encoding="utf8",
+        errors="replace",
+    )
+    if run.returncode:
+        raise RuntimeError(run.stderr.strip())
+    return json.loads(run.stdout)
+
+
+def measure(atlas, spec, out, level, *, budget=16, sector_cols=None, build=BUILD):
     cmd = [
         build / "cone-fdk.exe",
         "wall",
@@ -42,17 +56,7 @@ def measure(atlas, spec, out, level, *, budget=16, sector_cols=None, build=BUILD
     ]
     if sector_cols is not None:
         cmd += ["--sector-cols", sector_cols]
-    run = subprocess.run(
-        list(map(str, cmd)),
-        env=env,
-        capture_output=True,
-        text=True,
-        encoding="utf8",
-        errors="replace",
-    )
-    if run.returncode:
-        raise RuntimeError(run.stderr.strip())
-    return json.loads(run.stdout)
+    return run_native_json(cmd)
 
 
 if __name__ == "__main__":

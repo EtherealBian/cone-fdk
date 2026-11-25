@@ -13,6 +13,7 @@ try {
   Run-Python scripts/validate_stack.py phantom
   Run-Python scripts/validate_cylinder.py phantom
   Run-Python scripts/validate_wall.py
+  Run-Python scripts/validate_bore.py
   Run-Python scripts/export_volume.py data/walnut-corrected-256.f32 --n 256 --fov 40 --out reports
   Run-Python scripts/benchmark.py
   if (!$CoreOnly) {

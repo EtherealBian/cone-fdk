@@ -1,3 +1,4 @@
+#include "bore.hpp"
 #include "cylinder.hpp"
 #include "files.hpp"
 #include "finite.hpp"
@@ -30,6 +31,8 @@ int main() {
     try {
         auto argv = arguments();
         int argc = int(argv.size());
+        if (argc >= 2 && argv[1] == "bore")
+            return measure_bore(argv);
         if (argc >= 2 && argv[1] == "wall")
             return measure_wall(argv);
         if (argc == 2 && std::string(argv[1]) == "--help") {
@@ -42,7 +45,7 @@ int main() {
                          "batch-first|min-passes]\nmin-passes requires "
                          "--roi-list, --stack or --cylinder. Budget in "
                          "MiB; fov in mm. Metrics to stdout as JSON.\n"
-                      << wall_usage;
+                      << wall_usage << bore_usage;
             return 0;
         }
         auto begin = Clock::now();
