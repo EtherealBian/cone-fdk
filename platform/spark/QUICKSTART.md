@@ -96,3 +96,19 @@ PYTHONPATH="$D/overlay:$PWD/scripts" python3 -B -m edge_review_packed \
 ```
 
 Original producer files are authenticated as data and are not executed. Only the locally pinned ELF/PTX products run; `--source-products` can be omitted for a matching local producer. For a published result, exit 0 means complete coverage and 2 means the result contains unknown cells. Rejected inputs produce no delivery. This interface is for trusted local filesystems and synchronous consumers, not a distributed lock or power-loss guarantee. The full three-case CUDA qualification needs the archived source objects; only the offline mask check is self-contained. [Matched historical regression](../../reports/gb10/directory-edge-regression.json): 697 of the same 707 tests passed; the ten remaining failures are listed by name.
+
+## Offline physical peak
+
+Where do native FDK and ASTRA differ most on the measured walnut? This snapshot of the physical queue lets you check the answer without either solver. Use Python 3.10+ from the repository root, with `platform/spark/residual_witness.py` next to the reviewer. No installation, network, NumPy or GPU is required.
+
+```sh
+python3 -I -S -B platform/spark/review_physical_snapshot.py examples/physical-peak-walnut 98311760b93bf8636479d87b2b429a881b667ba649f987d2047c19dfada60370
+```
+
+![Maximum absolute native-to-ASTRA difference in each of the 512 axial planes](../../examples/physical-peak-walnut/profile.svg)
+
+The reader reaggregates **512 reported plane rows**. It then reads **262,144 raw float32 pairs** from the plane with the highest peak. The first maximum in z, y, x traversal is at zero-based **(x=367, y=318, z=256)**: absolute intensity difference **0.000047359615564346313**. The chart uses every row, unsmoothed, with a linear intensity axis. To regenerate it, run `plot_physical_profile.py` with the same folder and pin, then `walnut720` and a **new** SVG filename. No raw voxels from the other 511 planes are in the pack. This measures agreement between implementations, not error against a calibrated specimen.
+
+**Trust and coverage.** Obtain the catalog pin above from a trusted release, not from the submitted files. It binds the pack, case commit hashes and (if supplied) the external pine parent. The reader checks the frozen plan and parent receipts, case → committed report → plane hashes, volume lineage and reported totals before remeasuring the two slices. It does not refetch a scan, rerun either solver, or query the live queue. At this snapshot the walnut accounts for **1 of 2 specimens and 1 of 3 scan conditions**. Omitted cases have no metrics. `--require-complete` exits 3 without emitting a result; malformed or misbound data exit 1. A later submission does not change this snapshot.
+
+**Export on the qualified Spark.** Pass the private queue and a fresh output directory to `platform/spark/pack_physical_snapshot.py`, with `--commit CASE COMMIT_SHA256` once for **every committed case**. Supply `--pine-parent SHA256` for committed pine cases. The producer invokes the original queue checks, authenticates the exact commit set under its lock, and rereads the detached result before publishing without replacement. Report hashes (including a correctly computed orphan) are not commit hashes. The fixed-order binary uses a magic header and bounded little-endian length-prefixed members, no executable code, extracted filenames or compression. [Measured export, refusals and comparison with the original walnut run](../../reports/gb10/physical-peak-snapshot.json) · [Acquisition and CC BY 4.0 attribution](../../NOTICE.md).

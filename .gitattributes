@@ -10,3 +10,6 @@ scripts/wall.py text eol=crlf
 
 # GB10 build attestations include the original working-tree bytes of this header.
 src/wall.hpp text eol=crlf
+
+# Little-endian framed physical review payload; never apply text conversion.
+*.cfdk binary

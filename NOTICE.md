@@ -7,3 +7,5 @@
 - NVIDIA driver, NVRTC and cuFFT are external NVIDIA software subject to NVIDIA terms. No NVIDIA DLL is redistributed here. The core uses the CUDA Driver API (https://docs.nvidia.com/cuda/cuda-driver-api/) and cuFFT (https://docs.nvidia.com/cuda/cufft/).
 
 The two `CFDKMG01` files in `examples/gb10-walnut/` are modified, reconstructed subvolumes of Meaney's measured walnut dataset cited above. One contains direct native FDK output; the other contains independent ASTRA reconstructions cropped at the same voxel centers. Both derived data files are distributed under CC BY 4.0. The original acquisition and its authors do not certify these reconstructions.
+
+The two float32 peak-plane slices in `examples/physical-peak-walnut/planes.cfdk` and the derived peak-difference profile are modified reconstructions/statistics of the same Alexander Meaney walnut acquisition (University of Helsinki, Zenodo 6986012, CC BY 4.0). They compare direct native FDK with same-grid ASTRA FDK. These derived data and their profile are distributed under CC BY 4.0. Neither the acquisition authors nor ASTRA endorse this comparison.

@@ -1,13 +1,13 @@
 {
   "scope": "Spark-specific suite in the qualified workspace; requires external run products. Selected fields from the private original, not a clean-clone test count.",
-  "source_sha256": "a26f64d12a108302bf88bf1f84af1d80e50fbad90528b3c2008a80b2a6df9c24",
+  "source_sha256": "ef9b648fd09d0c075533744b571922ab78e706dcacc9db7cacf643701e03536e",
   "preset": "spark",
   "counts": {
-    "passed": 853
+    "passed": 893
   },
   "process_exit": 0,
   "files_sha256": {
-    "pytest.log": "1bc34de82778373ca7d2e8dac0d8d3b0d8121f28e53d964008919801e364119a",
-    "result.xml": "0a27733c185ad8ef21c720c4f0ffc03b43e4fbbf733ca99a9722bea39f7dd21d"
+    "pytest.log": "270c00a9791c001d4138030d9b6c7af65133ee48f38dd3e8d0218da2dd88ef5a",
+    "result.xml": "c4094c558973b7c2821cd218598ff01946ec783e3e8f9b2488a37de12d7bb0ee"
   }
 }

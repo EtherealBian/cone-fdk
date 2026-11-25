@@ -16,6 +16,7 @@
 | 一次重建三个网格 | 整件概览加两个不同网格的局部，从读三遍投影减为一遍。六组配对中，原生进程中位耗时 **1.743 → 0.643 秒**，三个输出与分别重建逐字节相同。 | [逐次计时与口径](reports/gb10/multigrid-timing.json) |
 | 断点恢复 | 进程在第 2 块写入后被强制终止。沿用原有回调补算其余 3 块，512³ 输出与整卷基线逐字节一致。 | [中断与复核记录](reports/gb10/slab-recovery.json) |
 | 无 GPU 复核 | 随仓库提供另外两个实测选区的原生与 ASTRA 体素。仅用标准 Python 即可复算 **138,948 个体素**的逐层差异。 | [运行步骤](platform/spark/QUICKSTART.md) · [样例数据](examples/gb10-walnut) |
+| 整颗核桃哪里相差最大？ | 512 层中，差异最大的位置首次出现在 **(367, 318, 256)**。下载两种算法在该层的原始切片，即可逐一复算 262,144 对体素。 | [逐层曲线与运行步骤](platform/spark/QUICKSTART.md#offline-physical-peak) · [批检导出记录](reports/gb10/physical-peak-snapshot.json) |
 
 这里比较的是两种重建实现。实物批次目前仅核桃通过，第二种试件未计入；结果不能用作实物尺寸公差。[查看覆盖情况](reports/gb10/physical-coverage.json)。下文未注明 Spark 的旧基准，耗时均来自各自记录的历史平台。
 
