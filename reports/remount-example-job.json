@@ -1,0 +1,268 @@
+{
+  "format": "CFDK-remount-job-v1",
+  "inputs_sha256": {
+    "reference.f32": "c041495e1499661f21a138e575f01e398ab9432288545d24cbc679d941b6ca3b",
+    "reference.geom": "e5a22b9b27d931b180149fd6316170a6420ba725b0d265f44ebc741b3570c96f",
+    "inspected.f32": "e7df23f6e4314555240d8f3bd5db627da08a079597e60ea70d7fb4a4531fb242",
+    "inspected.geom": "e5a22b9b27d931b180149fd6316170a6420ba725b0d265f44ebc741b3570c96f",
+    "cone-fdk.exe": "fb33b5c2f5d60c8b475baa2e79b8e1988a8dddcaea9f1a0c3d5f9e0a55a35983",
+    "kernels.ptx": "8a07a8441eb1a4d8dc035366e38a43524d114852b394599bf0932ba51dd82d9f",
+    "fixture.json": "3dacc247796c2b619ceeeedf46be0163af812d52cd514b2405d0f76c7614f6e3",
+    "material.grid": "c5a94a190e4d7c6e18b3806be252e599234d35813691b906abf3ed473b719a67"
+  },
+  "parameters": {
+    "level_per_mm": 0.02,
+    "loss_mm": 0.3,
+    "area_radius_mm": 9.4,
+    "budget_mib": 96,
+    "batch": 16
+  },
+  "locator_software": {
+    "numpy": "2.5.5",
+    "scipy": "1.18.1",
+    "source_sha256": {
+      "remount_loss.py": "93acd36e9a2c596b8320cb7779337f06496ee444894776e77eef0f7bc4640ea3",
+      "remount_datum.py": "2843247dff273f53dcf8f1df2b5c85058a05679bea8444005a3c3f7fabb1f885"
+    }
+  },
+  "scans": {
+    "reference": {
+      "scout_roi_xyz_nxyz": [
+        0,
+        0,
+        21,
+        160,
+        160,
+        118
+      ],
+      "scout_projection_passes": 1,
+      "candidates": [
+        {
+          "scanner_xyz_mm": [
+            7.531564321188563,
+            8.067112440803184,
+            -4.576042690910903
+          ],
+          "voxel_count": 140,
+          "shape_variance_ratio": 1.1118488903926835
+        },
+        {
+          "scanner_xyz_mm": [
+            -12.149567260611086,
+            -4.524992269699386,
+            -2.656357888715744
+          ],
+          "voxel_count": 141,
+          "shape_variance_ratio": 1.0767563040333838
+        },
+        {
+          "scanner_xyz_mm": [
+            10.171839223565666,
+            -4.950123556989539,
+            1.2177988744882
+          ],
+          "voxel_count": 140,
+          "shape_variance_ratio": 1.083113244975493
+        },
+        {
+          "scanner_xyz_mm": [
+            -2.8158100707403824,
+            11.843254050466287,
+            1.7306761346336097
+          ],
+          "voxel_count": 142,
+          "shape_variance_ratio": 1.1262908613125044
+        }
+      ],
+      "material_to_scanner": {
+        "rotation": [
+          [
+            0.9911526884720825,
+            0.12188527276096858,
+            0.05253882772338384
+          ],
+          [
+            -0.12539943025609407,
+            0.9896490607519336,
+            0.06978337512805605
+          ],
+          [
+            -0.04348943579779037,
+            -0.07575431893166401,
+            0.9961776709689844
+          ]
+        ],
+        "translation_mm": [
+          -0.35043643797494717,
+          0.24618543073938737,
+          -0.5999341007064604
+        ],
+        "candidate_for_template": [
+          1,
+          2,
+          3,
+          0
+        ],
+        "residuals_mm": [
+          0.008264793094497895,
+          0.0030439122339546293,
+          0.0016695088104328102,
+          0.004934926021537402
+        ],
+        "max_residual_mm": 0.008264793094497895,
+        "next_permutation_max_residual_mm": 2.7890616377346458
+      },
+      "wall_status_counts": {
+        "measured": 14760,
+        "empty": 0,
+        "clipped": 0,
+        "multiple": 0,
+        "ambiguous": 0,
+        "nonfinite": 0,
+        "undersampled": 0
+      },
+      "shell_projection_passes": 1
+    },
+    "inspected": {
+      "scout_roi_xyz_nxyz": [
+        0,
+        0,
+        21,
+        160,
+        160,
+        118
+      ],
+      "scout_projection_passes": 1,
+      "candidates": [
+        {
+          "scanner_xyz_mm": [
+            1.1371897688877388,
+            -12.62242232388862,
+            -3.3808855483202658
+          ],
+          "voxel_count": 143,
+          "shape_variance_ratio": 1.0832024032468772
+        },
+        {
+          "scanner_xyz_mm": [
+            -3.202164649565232,
+            10.30459301621572,
+            -1.253813736377424
+          ],
+          "voxel_count": 136,
+          "shape_variance_ratio": 1.0736842105263151
+        },
+        {
+          "scanner_xyz_mm": [
+            -11.145484745470903,
+            1.1370183066378323,
+            2.4668814683130527
+          ],
+          "voxel_count": 142,
+          "shape_variance_ratio": 1.0558009422850418
+        },
+        {
+          "scanner_xyz_mm": [
+            9.164032625819164,
+            6.659908708055371,
+            5.368086244359379
+          ],
+          "voxel_count": 139,
+          "shape_variance_ratio": 1.1249663202812563
+        }
+      ],
+      "material_to_scanner": {
+        "rotation": [
+          [
+            0.47904076147865865,
+            -0.8637071493163267,
+            -0.15662027027754238
+          ],
+          [
+            0.8587050779791152,
+            0.4981106336451587,
+            -0.12046321306730788
+          ],
+          [
+            0.18205916042547282,
+            -0.0767838320838579,
+            0.9802850122467893
+          ]
+        ],
+        "translation_mm": [
+          0.7492254845301294,
+          -0.5496467691089839,
+          1.1005535699459228
+        ],
+        "candidate_for_template": [
+          0,
+          3,
+          2,
+          1
+        ],
+        "residuals_mm": [
+          0.0054872029663958115,
+          0.005496090492179195,
+          0.008871130490677628,
+          0.003511010078647647
+        ],
+        "max_residual_mm": 0.008871130490677628,
+        "next_permutation_max_residual_mm": 2.785164050431492
+      },
+      "wall_status_counts": {
+        "measured": 14760,
+        "empty": 0,
+        "clipped": 0,
+        "multiple": 0,
+        "ambiguous": 0,
+        "nonfinite": 0,
+        "undersampled": 0
+      },
+      "shell_projection_passes": 1
+    }
+  },
+  "status": "compared",
+  "loss": {
+    "file": "material-loss.json",
+    "xyz_frame": "material",
+    "coverage": {
+      "paired_valid": 14760,
+      "unknown": 0,
+      "below_threshold": 14247,
+      "flagged": 513
+    },
+    "peak_correspondences": [
+      {
+        "id": 2521,
+        "material_xyz_mm": [
+          7.999186778699266,
+          -3.5614674130176978,
+          -2.0
+        ],
+        "reference_scanner_xyz_mm": [
+          7.038810960811436,
+          -4.421077664269276,
+          -2.670373024220733
+        ],
+        "inspected_scanner_xyz_mm": [
+          7.970467417443837,
+          4.786217173793263,
+          0.8697718902821576
+        ]
+      }
+    ]
+  },
+  "outputs_sha256": {
+    "fixture.json": "3dacc247796c2b619ceeeedf46be0163af812d52cd514b2405d0f76c7614f6e3",
+    "inspected/material.wall": "660fcda932dc14e869d82e9fe4c121ba8ffd2c70f09e13f001aba1be8df5b9e6",
+    "inspected/scanner.grid": "fa36f1b54aa5cb203e6d7ba05ffdf8e77b9a039f07010cbc1dc8533d1c4fd158",
+    "inspected/scout.f32": "34a057b67952422013348350cac629f2de8bfbeaac3ca7adf231a78b0d88f6ab",
+    "inspected/shells.f32": "0f5e29f74b11d760fed5cdf4fdcaad845d833224bfa955eb9c3524eeedab6c9e",
+    "material-loss.json": "72f16855967710bc80d02a868100b61c8bfe922d4c67a8e484467db17ff13b0d",
+    "material.grid": "c5a94a190e4d7c6e18b3806be252e599234d35813691b906abf3ed473b719a67",
+    "reference/material.wall": "02adbfc25c20aaa04d0e18de106c0bb30e7e03851b98c2a4e2e7ddb4589b78fe",
+    "reference/scanner.grid": "869827a772a01348b5bf963ddcd380003a8830852a31dc3944fe7b4ba3793db0",
+    "reference/scout.f32": "3d3e5db93fdbd802db29d969b6c589d945b391460366533f31ca3ba067fa3393",
+    "reference/shells.f32": "184233c891f6615556f8d03e5fb97d63168d7b1b7eac74db5d05b33fca754cd1"
+  }
+}

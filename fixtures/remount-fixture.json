@@ -1,0 +1,9 @@
+{
+  "format": "CFDK-remount-fixture-v1",
+  "beads_material_xyz_mm": [[-11,-6,-3],[11,-4,2],[-4,11,3],[7,9,-3]],
+  "bead_radius_mm": 0.65,
+  "bead_level_per_mm": 0.12,
+  "fit_limit_mm": 0.035,
+  "locator_n": 160,
+  "locator_fov_mm": 32.0
+}

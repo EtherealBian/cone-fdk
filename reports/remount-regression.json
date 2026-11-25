@@ -1,0 +1,43 @@
+{
+  "protocol": "Full acceptance on a duplicate clean build; independent fresh detector-to-remount replay; selected frozen payloads compared to axis-regression.json.",
+  "pytest": {
+    "tests": 239,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "build": {
+    "compiler": "g++.exe (Rev6, Built by MSYS2 project) 16.2.0",
+    "nvrtc": "12.9.86",
+    "rebuilds": 2,
+    "executable_sha256": "fb33b5c2f5d60c8b475baa2e79b8e1988a8dddcaea9f1a0c3d5f9e0a55a35983",
+    "ptx_sha256": "8a07a8441eb1a4d8dc035366e38a43524d114852b394599bf0932ba51dd82d9f",
+    "identical": true
+  },
+  "previous_baseline_sha256": "73d5880f360e455a74be7a877e037d0f2e21e591900c0daa0b7f41ff5796e23d",
+  "frozen_volumes_sha256": {
+    "analytic256": "5a9f929265a1c2c4720682b2af3e1029910fb5016d1ff09792f565931441c3b3",
+    "analytic512": "2388a8d02ce4b0016439298b367b6a964b073c726812b014bdd2a0496dce844d",
+    "walnut512": "868249894840a28eb9db08dd75b36c56e23aab83155fad38f8a971ed734be25f",
+    "stress1296": "9efb4e96bced3a183a4516a48520bc5ec9a5f42890e40a83792acebc2712dd89"
+  },
+  "frozen_axis_and_loss_sha256": {
+    "axis-gauge.json": "fac8f349996eb3c654fecdcca95243ad4395b5c36e66a69ed98bd5232e410952",
+    "axis-review.zip": "0645fe17e0c620aa16010e65045c3ca15e3c6abaf29fd3786696f8c32562e2b5",
+    "axis-profiles.png": "67d0bf1fda71bcaacaa6454e626d8662c1d5a7d19e215c62e463b49bb437c959",
+    "wall-loss.json": "b305afa8029fb5e708df80e4feb5a18303158a4a88a4ec8067aaf491a476ed63",
+    "wall-loss-example.json": "90b6c1f959fc2dc4f257c3f60b2ffc790a38f458015ebf8ae8dfb7bda25ed6a4",
+    "wall-loss-demo.zip": "f8341cb2f0f0c78dddad430507fc047a96a31810518f33e94eaa010b873a5473",
+    "wall-loss-scale.json": "c36b821098a4d8d687ee77b9596a01d488b67fa60860cbd6083032273d50f2bc",
+    "wall-loss.png": "0766a0d46d369a5aeead2e026ca257a645b9bb4357cafef0904d474d874da829"
+  },
+  "frozen_wall_and_bore_payloads_equal": true,
+  "remount_replay_sha256": {
+    "remount-loss.json": "228f080f63fae250c8df98384e493cd9350d69b1f0acd63da64f8168f3a3fb2a",
+    "remount-deepened.zip": "4cd976b0f1049af8177fb5cd87d341784dd7a9dc58d73f3e7893b6a365e8445a",
+    "remount-example-job.json": "d7521541c47f6025c2f402f4432a8c40e44dc72e8e8441ee3904e7e09276fc3d",
+    "remount-loss.png": "b45407a5afe9da8c7d5462b963e26ad3e1f11226fc5c3504fef931eba01c964e"
+  },
+  "review_pack_bound_to_manifest": true
+}

@@ -1,0 +1,249 @@
+{
+  "protocol": "Simulated fixture-marked finite annulus, existing outer flat, independently ray-traced poses. No physical specimen.",
+  "binary_sha256": {
+    "cone-fdk.exe": "fb33b5c2f5d60c8b475baa2e79b8e1988a8dddcaea9f1a0c3d5f9e0a55a35983",
+    "kernels.ptx": "8a07a8441eb1a4d8dc035366e38a43524d114852b394599bf0932ba51dd82d9f"
+  },
+  "limits": {
+    "max_rotation_deg": 0.07,
+    "max_translation_mm": 0.015,
+    "max_off_marker_error_mm": 0.025,
+    "min_iou": 0.9,
+    "max_peak_error_mm": 0.05,
+    "max_unchanged_delta_mm": 0.06
+  },
+  "loss_threshold_mm": 0.3,
+  "fixture_sha256": "3dacc247796c2b619ceeeedf46be0163af812d52cd514b2405d0f76c7614f6e3",
+  "material_grid_sha256": "c5a94a190e4d7c6e18b3806be252e599234d35813691b906abf3ed473b719a67",
+  "generating_extrinsic_zyx_deg_and_translation_mm": {
+    "first": [
+      [
+        -7,
+        3,
+        -4
+      ],
+      [
+        -0.35,
+        0.25,
+        -0.6
+      ]
+    ],
+    "second": [
+      [
+        61,
+        -9,
+        7
+      ],
+      [
+        0.75,
+        -0.55,
+        1.1
+      ]
+    ]
+  },
+  "noise": {
+    "photons_per_air_bin": 250000,
+    "seeds": {
+      "reference": 3671,
+      "repeat": 15731,
+      "changed": 85411
+    }
+  },
+  "scout": {
+    "full_bytes": 16384000,
+    "roi_bytes": 12083200,
+    "full_slices": 160,
+    "roi_slices": 118,
+    "retained_voxels_bitwise_equal": true,
+    "bead_centers_identical": true
+  },
+  "unchanged_fixed_scanner_negative_control": {
+    "regions": 2,
+    "coverage": {
+      "paired_valid": 13425,
+      "unknown": 1335,
+      "below_threshold": 13100,
+      "flagged": 325
+    },
+    "peak_mm": 0.8104499868371189,
+    "report_sha256": "a1942bf67e3aa6986628a94cd59969e1b11b56c7fb1101ac90605d55275f4d66"
+  },
+  "cases": {
+    "repeat": {
+      "status": "compared",
+      "manifest_sha256": "13a8d4c8d3d1d380657d415510d4a8f8afa7ad43e46a3f3973f492b0a9f34424",
+      "reference_projection_sha256": "c041495e1499661f21a138e575f01e398ab9432288545d24cbc679d941b6ca3b",
+      "inspected_projection_sha256": "5a3087e2d5ca3064bed40d374291bc7f9b557974c661db0ba40eaf05ed0412b4",
+      "pose_errors": {
+        "reference": {
+          "rotation_deg": 0.017523704261605967,
+          "translation_mm": 0.003840020763859986,
+          "off_marker_72_point_max_mm": 0.00658017455968926,
+          "max_bead_fit_residual_mm": 0.008264793094497895
+        },
+        "inspected": {
+          "rotation_deg": 0.019407711109042096,
+          "translation_mm": 0.0010145631321313454,
+          "off_marker_72_point_max_mm": 0.003958320689188561,
+          "max_bead_fit_residual_mm": 0.00887093109459944
+        }
+      },
+      "coverage": {
+        "paired_valid": 14760,
+        "unknown": 0,
+        "below_threshold": 14760,
+        "flagged": 0
+      },
+      "region_count": 0,
+      "max_abs_thickness_change_mm": 0.03259028303819278,
+      "loss_sha256": "955ecde04e483510dd34204da97a3ba4e29e1a4ebf7e20b7ecfd70942e5d1fd6"
+    },
+    "changed": {
+      "status": "compared",
+      "manifest_sha256": "928700788f92ba913d745ff8aa7b578ec3c0a9a59cab35f6544f54d721d03b26",
+      "reference_projection_sha256": "c041495e1499661f21a138e575f01e398ab9432288545d24cbc679d941b6ca3b",
+      "inspected_projection_sha256": "7fb58d262a774f53eae50f29f41affa7506e7eff43a3fdc51da7bf54fea323e4",
+      "pose_errors": {
+        "reference": {
+          "rotation_deg": 0.017523704261605967,
+          "translation_mm": 0.003840020763859986,
+          "off_marker_72_point_max_mm": 0.00658017455968926,
+          "max_bead_fit_residual_mm": 0.008264793094497895
+        },
+        "inspected": {
+          "rotation_deg": 0.0194277081675105,
+          "translation_mm": 0.001001859458767774,
+          "off_marker_72_point_max_mm": 0.003949599934455721,
+          "max_bead_fit_residual_mm": 0.008833615307236444
+        }
+      },
+      "coverage": {
+        "paired_valid": 14760,
+        "unknown": 0,
+        "below_threshold": 14496,
+        "flagged": 264
+      },
+      "region_count": 1,
+      "max_abs_thickness_change_mm": 0.7707198329245375,
+      "loss_sha256": "619b7aed749729f75b4018c00f8899bf4f05d2071ba6a5178a738ded839ffa63",
+      "footprint_iou": 0.96,
+      "peak_mm": 0.7707198329245375,
+      "design_radial_peak_mm": 0.75,
+      "peak_error_mm": 0.020719832924537496,
+      "peak_azimuth_deg": 134,
+      "surface": "inner"
+    },
+    "deepened": {
+      "status": "compared",
+      "manifest_sha256": "d7521541c47f6025c2f402f4432a8c40e44dc72e8e8441ee3904e7e09276fc3d",
+      "reference_projection_sha256": "c041495e1499661f21a138e575f01e398ab9432288545d24cbc679d941b6ca3b",
+      "inspected_projection_sha256": "e7df23f6e4314555240d8f3bd5db627da08a079597e60ea70d7fb4a4531fb242",
+      "pose_errors": {
+        "reference": {
+          "rotation_deg": 0.017523704261605967,
+          "translation_mm": 0.003840020763859986,
+          "off_marker_72_point_max_mm": 0.00658017455968926,
+          "max_bead_fit_residual_mm": 0.008264793094497895
+        },
+        "inspected": {
+          "rotation_deg": 0.019398034650855128,
+          "translation_mm": 0.0010154240298839796,
+          "off_marker_72_point_max_mm": 0.003956521705024834,
+          "max_bead_fit_residual_mm": 0.008871130490677628
+        }
+      },
+      "coverage": {
+        "paired_valid": 14760,
+        "unknown": 0,
+        "below_threshold": 14247,
+        "flagged": 513
+      },
+      "region_count": 1,
+      "max_abs_thickness_change_mm": 0.6190298536345935,
+      "loss_sha256": "72f16855967710bc80d02a868100b61c8bfe922d4c67a8e484467db17ff13b0d",
+      "flat_normal_delta_mm": 0.5479607226956129,
+      "footprint_iou": 1.0,
+      "peak_mm": 0.6190298536345935,
+      "design_radial_peak_mm": 0.6020499531783265,
+      "peak_error_mm": 0.01697990045626696,
+      "peak_azimuth_deg": 336,
+      "surface": "outer"
+    },
+    "noisy-repeat": {
+      "status": "compared",
+      "manifest_sha256": "abbf4d229f25014315f3c40677ba8fc852e1f3602c05b193b9132b483dea48a6",
+      "reference_projection_sha256": "54bda3678414fe143b0c313ddfb5d6fb32d0764ad0f2454e9431a5848e15ffde",
+      "inspected_projection_sha256": "3439ffc620fbdc4b7c6cdf34fa2fde18b8b6ea4efcbcbeb9008593fd41268b1f",
+      "pose_errors": {
+        "reference": {
+          "rotation_deg": 0.017651309740409564,
+          "translation_mm": 0.004020333951727063,
+          "off_marker_72_point_max_mm": 0.006673914347151006,
+          "max_bead_fit_residual_mm": 0.008453129811153792
+        },
+        "inspected": {
+          "rotation_deg": 0.019289764853614413,
+          "translation_mm": 0.0010365851357622146,
+          "off_marker_72_point_max_mm": 0.003990534781422845,
+          "max_bead_fit_residual_mm": 0.008738504347611241
+        }
+      },
+      "coverage": {
+        "paired_valid": 14760,
+        "unknown": 0,
+        "below_threshold": 14760,
+        "flagged": 0
+      },
+      "region_count": 0,
+      "max_abs_thickness_change_mm": 0.03381918116436511,
+      "loss_sha256": "955ecde04e483510dd34204da97a3ba4e29e1a4ebf7e20b7ecfd70942e5d1fd6"
+    },
+    "noisy-changed": {
+      "status": "compared",
+      "manifest_sha256": "9b889dab20218fecd7ed52451092f456ceeb19bd57e30214429eb3544c34040c",
+      "reference_projection_sha256": "54bda3678414fe143b0c313ddfb5d6fb32d0764ad0f2454e9431a5848e15ffde",
+      "inspected_projection_sha256": "cdaa2070c90a6c490f4744fabcdcb988006ca8bcd4945201e2f1dbd08618619c",
+      "pose_errors": {
+        "reference": {
+          "rotation_deg": 0.017651309740409564,
+          "translation_mm": 0.004020333951727063,
+          "off_marker_72_point_max_mm": 0.006673914347151006,
+          "max_bead_fit_residual_mm": 0.008453129811153792
+        },
+        "inspected": {
+          "rotation_deg": 0.019901433979829793,
+          "translation_mm": 0.0009293207291152897,
+          "off_marker_72_point_max_mm": 0.0039661368547006266,
+          "max_bead_fit_residual_mm": 0.00881028656507276
+        }
+      },
+      "coverage": {
+        "paired_valid": 14760,
+        "unknown": 0,
+        "below_threshold": 14495,
+        "flagged": 265
+      },
+      "region_count": 1,
+      "max_abs_thickness_change_mm": 0.7706615923362929,
+      "loss_sha256": "bf42dc38b51e2941b82281db1480a6930e9953f2b8a09005dc1a1ed4c4662937",
+      "footprint_iou": 0.9636363636363636,
+      "peak_mm": 0.7706615923362929,
+      "design_radial_peak_mm": 0.75,
+      "peak_error_mm": 0.020661592336292944,
+      "peak_azimuth_deg": 134,
+      "surface": "inner"
+    },
+    "missing": {
+      "status": "datum_rejected",
+      "manifest_sha256": "237046e3025dba54d545093029053eec57530d11ad848d6b17563f6c63d64587",
+      "reference_projection_sha256": "c041495e1499661f21a138e575f01e398ab9432288545d24cbc679d941b6ca3b",
+      "inspected_projection_sha256": "8439e270047006feb10e443587b9a5172f794ab2720fc2be7677ca1a0ea04e0d",
+      "reason": "candidate_count:3"
+    }
+  },
+  "example_sha256": {
+    "remount-deepened.zip": "4cd976b0f1049af8177fb5cd87d341784dd7a9dc58d73f3e7893b6a365e8445a",
+    "remount-example-job.json": "d7521541c47f6025c2f402f4432a8c40e44dc72e8e8441ee3904e7e09276fc3d",
+    "remount-loss.png": "b45407a5afe9da8c7d5462b963e26ad3e1f11226fc5c3504fef931eba01c964e"
+  }
+}

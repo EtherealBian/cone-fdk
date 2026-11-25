@@ -54,6 +54,10 @@ A circular tube cut in the wrong plane looks elliptical. The source-build `axis`
 
 Given a registered baseline and inspected tube, `cone-fdk loss` reports **where material was lost**: the footprint, maximum loss, remaining radial wall, and the separate inner/outer changes at its peak. In a simulated tube with an outside flat and an inside relief, their peak losses measured **0.857 and 0.756 mm** against designs of 0.850 and 0.750 mm. The outside flat appears at both ends of the unwrapped image but counts only once. A separately noise-sampled pristine pair produced zero regions at the same 0.30 mm threshold. [See the footprints, noise cases, limits and commands](reports/WALL-LOSS.md) · [Download a compact sample for CPU-only review](reports/wall-loss-demo.zip).
 
+## Reinspect the same defect after a remount
+
+An unchanged simulated tube produced 325 falsely flagged cells when compared in scanner coordinates. Registering four fixture beads and reconstructing each scan in **material coordinates** brought that count to **0 of 14,760**. When an existing outside flat was cut another 0.550 mm deeper, the wall thickness along its normal decreased by **0.54796 mm**. A missing bead suppressed the comparison. [See the maps, pose errors, noise controls and commands](reports/REMOUNT-LOSS.md) · [Replay an individual cell without CUDA](reports/remount-deepened.zip). The fixture must be calibrated and rigidly attached; this is not markerless registration or physical metrology validation.
+
 ## A second use: measuring pores in metal
 
 The [measurement lab](https://github.com/EtherealBian/cone-fdk/tree/measurement-lab/pores) starts from **already reconstructed** cobalt-chromium scans. Its CUDA counter measures connected pores in a supplied binary mask. Finding the pore boundary from grayscale is a separate experiment: on development specimens 2, 3 and 5, the retained model E passed **10/11, 6/11 and 7/11** criteria. Its worst matched-pore volume error (P95) was **28.16%**, above the **15%** limit. The two reserved specimens remain unopened. This work is not part of the stable reconstruction release.
