@@ -1,12 +1,18 @@
 # ConeFDK · 单 GPU 锥束 CT 重建
 
-在 NVIDIA DGX Spark（GB10）上，用 720 幅核桃 X 射线实测投影重建 **512³ 体数据**。原生 C++/CUDA 引擎完成锥束加权、cuFFT 分批滤波和按显存预算分块的反投影。Python 用来准备输入和独立校验；重建程序本身不需要 Python。
+ConeFDK 是在 **NVIDIA DGX Spark（GB10）** 上完成的单 GPU 锥束 CT 重建项目。用 720 幅核桃 X 射线投影，可重建 **512³ 体数据**。重建由原生 C++/CUDA 程序完成；Python 只用于准备输入和复核结果。
 
 [English](README.md#english) · [个人主页项目详解](https://etherealbian.github.io/work/cone-fdk.html) · [Windows 稳定版 v0.1.0](https://github.com/EtherealBian/cone-fdk/releases/tag/v0.1.0) · [下载离线切片浏览器](https://github.com/EtherealBian/cone-fdk/releases/download/v0.1.0/walnut-512-viewer.html)
 
 ![720 角真实投影重建的核桃轴向切层](reports/walnut-sweep.gif)
 
 动图中的壳、隔膜和核仁均来自实测数据：[Alexander Meaney / 赫尔辛基大学](https://doi.org/10.5281/zenodo.6986012)，CC BY 4.0。离线浏览器可拖动查看 81 张预览切片，无需 CUDA。[数据署名与处理说明](NOTICE.md)
+
+## CUDA 怎样加速重建？
+
+1. **按探测器行滤波。** CUDA 线程先给投影像素加锥束几何权重，再沿探测器水平方向补零。cuFFT 成批变换各行，乘上离散 Ram-Lak 滤波器的频率响应，再做逆变换。[滤波调用顺序](src/main.cpp)
+2. **按体素反投影。** 对固定的 `(x, y)`，一个线程最多累加 16 个相邻 Z 层。同一角度下，这些体素投到探测器的同一列，可共用列坐标和几何权重。滤波结束后，程序把相邻像素的左值与差值存入原 FFT 缓冲区，供各体素做双线性插值。[`pairs` 和 `back_tile` 内核](src/kernels.cu)
+3. **让三个输出共用一遍投影。** 核桃的 720 幅投影每 16 幅一批；概览和两个局部各做各的反投影，只共用滤波结果。六组配对计时中，滤波批次从 **135 降到 45**，GPU 滤波阶段的中位耗时从 **175.8 降到 57.1 毫秒**；两种方式都启动了 135 次反投影内核。[多网格调度](platform/spark/build_multigrid.py) · [逐次计时](reports/gb10/multigrid-timing.json)
 
 ## DGX Spark 实测：一颗核桃，三种重建网格
 
@@ -20,7 +26,7 @@
 
 **两件实物、三种扫描条件已完成批检。** 在 256³ 网格上，松果的原生 CUDA 与 ASTRA 相对 L2 差异为：90 幅投影 **0.07314%**，720 幅投影 **0.02658%**。每组直接重建的两个局部都与整卷对应区域逐字节一致。两个角度密度来自同一颗松果；这些差异衡量求解器一致性，不是实物尺寸公差。[批检结果](reports/gb10/physical-batch-complete.json) · [离线复算三个峰值层](platform/spark/QUICKSTART.md#completed-physical-batch)。下文未注明 Spark 的旧基准，耗时均来自各自记录的历史平台。
 
-**Spark 迁移验收：** Spark 专用测试 929 项全部通过。原有 707 项中，702 项通过，剩余 5 项要求禁止其他进程改写或替换原文件名。[测量工具构建步骤、实测结果与兼容边界](platform/spark/QUICKSTART.md#spark-migration-acceptance)。
+**DGX Spark 测试：** Spark 专用测试 929 项全部通过。原有 707 项中，702 项通过，剩余 5 项要求禁止其他进程改写或替换原文件名。[测量工具构建步骤、实测结果与兼容边界](platform/spark/QUICKSTART.md#dgx-spark-validation)。
 
 ## 换一组阈值，缺陷区域会变多少？
 

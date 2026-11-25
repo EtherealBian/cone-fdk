@@ -4,13 +4,19 @@
 
 **简体中文** · [English](#english)
 
-在 NVIDIA DGX Spark（GB10）上，用 720 幅核桃 X 射线实测投影重建 **512³ 体数据**。原生 C++/CUDA 引擎完成锥束加权、cuFFT 分批滤波和按显存预算分块的反投影。Python 用来准备输入和独立校验；重建程序本身不需要 Python。
+ConeFDK 是在 **NVIDIA DGX Spark（GB10）** 上完成的单 GPU 锥束 CT 重建项目。用 720 幅核桃 X 射线投影，可重建 **512³ 体数据**。重建由原生 C++/CUDA 程序完成；Python 只用于准备输入和复核结果。
 
 [个人主页项目详解](https://etherealbian.github.io/work/cone-fdk.html) · [Windows 稳定版 v0.1.0](https://github.com/EtherealBian/cone-fdk/releases/tag/v0.1.0) · [下载离线切片浏览器](https://github.com/EtherealBian/cone-fdk/releases/download/v0.1.0/walnut-512-viewer.html)
 
 ![720 角真实投影重建的核桃轴向切层](reports/walnut-sweep.gif)
 
 动图中的壳、隔膜和核仁均来自实测数据：[Alexander Meaney / 赫尔辛基大学](https://doi.org/10.5281/zenodo.6986012)，CC BY 4.0。离线浏览器可拖动查看 81 张预览切片，无需 CUDA。[数据署名与处理说明](NOTICE.md)
+
+## CUDA 怎样加速重建？
+
+1. **按探测器行滤波。** CUDA 线程先给投影像素加锥束几何权重，再沿探测器水平方向补零。cuFFT 成批变换各行，乘上离散 Ram-Lak 滤波器的频率响应，再做逆变换。[滤波调用顺序](src/main.cpp)
+2. **按体素反投影。** 对固定的 `(x, y)`，一个线程最多累加 16 个相邻 Z 层。同一角度下，这些体素投到探测器的同一列，可共用列坐标和几何权重。滤波结束后，程序把相邻像素的左值与差值存入原 FFT 缓冲区，供各体素做双线性插值。[`pairs` 和 `back_tile` 内核](src/kernels.cu)
+3. **让三个输出共用一遍投影。** 核桃的 720 幅投影每 16 幅一批；概览和两个局部各做各的反投影，只共用滤波结果。六组配对计时中，滤波批次从 **135 降到 45**，GPU 滤波阶段的中位耗时从 **175.8 降到 57.1 毫秒**；两种方式都启动了 135 次反投影内核。[多网格调度](platform/spark/build_multigrid.py) · [逐次计时](reports/gb10/multigrid-timing.json)
 
 ## DGX Spark 实测：一颗核桃，三种重建网格
 
@@ -24,7 +30,7 @@
 
 **两件实物、三种扫描条件已完成批检。** 在 256³ 网格上，松果的原生 CUDA 与 ASTRA 相对 L2 差异为：90 幅投影 **0.07314%**，720 幅投影 **0.02658%**。每组直接重建的两个局部都与整卷对应区域逐字节一致。两个角度密度来自同一颗松果；这些差异衡量求解器一致性，不是实物尺寸公差。[批检结果](reports/gb10/physical-batch-complete.json) · [离线复算三个峰值层](platform/spark/QUICKSTART.md#completed-physical-batch)。下文未注明 Spark 的旧基准，耗时均来自各自记录的历史平台。
 
-**Spark 迁移验收：** Spark 专用测试 929 项全部通过。原有 707 项中，702 项通过，剩余 5 项要求禁止其他进程改写或替换原文件名。[测量工具构建步骤、实测结果与兼容边界](platform/spark/QUICKSTART.md#spark-migration-acceptance)。
+**DGX Spark 测试：** Spark 专用测试 929 项全部通过。原有 707 项中，702 项通过，剩余 5 项要求禁止其他进程改写或替换原文件名。[测量工具构建步骤、实测结果与兼容边界](platform/spark/QUICKSTART.md#dgx-spark-validation)。
 
 ## 换一组阈值，缺陷区域会变多少？
 
@@ -142,13 +148,19 @@ CLI 成功时 stdout 输出 JSON；失败返回非零并将错误写入 stderr�
 
 **ConeFDK · Single-GPU cone-beam CT**
 
-ConeFDK turns 720 measured X-ray projections of a walnut into a **512³ volume** on an NVIDIA DGX Spark (GB10). The C++/CUDA engine weights each projection, filters detector rows with cuFFT, and backprojects into slabs that fit the GPU memory budget. Python prepares the input and checks the output; the native executable runs without it.
+ConeFDK is a single-GPU cone-beam CT project completed on **NVIDIA DGX Spark (GB10)**. It reconstructs a **512³ walnut volume** from 720 measured X-ray projections. Native C++/CUDA runs the reconstruction; Python prepares the inputs and checks the results.
 
 [Project walkthrough](https://etherealbian.github.io/work/cone-fdk.html) · [Windows release v0.1.0](https://github.com/EtherealBian/cone-fdk/releases/tag/v0.1.0) · [Download the offline slice viewer](https://github.com/EtherealBian/cone-fdk/releases/download/v0.1.0/walnut-512-viewer.html)
 
 ![Axial sweep through a walnut reconstructed from 720 measured views](reports/walnut-sweep.gif)
 
 *The image is a sweep through measured data, not a rendering of a synthetic walnut. The downloadable HTML lets you scrub 81 preview slices without installing CUDA. Data: [Alexander Meaney / University of Helsinki](https://doi.org/10.5281/zenodo.6986012), CC BY 4.0; processing and attribution in [NOTICE](NOTICE.md).*
+
+### How CUDA accelerates reconstruction
+
+1. **Filter detector rows in batches.** CUDA threads apply the cone-beam weight to each projection pixel and zero-pad each row along the detector’s horizontal axis. Batched cuFFT transforms the rows; a kernel multiplies by the discrete Ram-Lak frequency response before the inverse transform. [Filter pipeline](src/main.cpp)
+2. **Backproject adjacent voxels together.** One thread accumulates up to 16 adjacent Z slices at fixed `(x, y)`. For a given view they share a detector column and geometry weight. After filtering, the engine reuses the FFT buffer to store each horizontal pair as a left value and a difference for bilinear interpolation. [`pairs` and `back_tile`](src/kernels.cu)
+3. **Share the filter, not the reconstruction.** The walnut overview and two finer regions use the same 720 views in batches of 16. Each grid still needs its own backprojection. Across six paired trials, sharing reduced filter batches from **135 to 45** and median GPU filter-stage time from **175.8 to 57.1 ms**. Both paths launched 135 backprojection kernels. [Multi-grid dispatch](platform/spark/build_multigrid.py) · [Trial data](reports/gb10/multigrid-timing.json)
 
 ### Measured on DGX Spark: one walnut, three reconstruction grids
 
@@ -162,7 +174,7 @@ ConeFDK turns 720 measured X-ray projections of a walnut into a **512³ volume**
 
 **Two physical specimens, three scan conditions.** The completed batch adds a pine cone reconstructed on a 256³ grid: native versus ASTRA relative L2 **0.07314% at 90 views** and **0.02658% at 720 views**. Two direct native crops per condition matched their dense counterparts byte-for-byte. The view counts describe one pine cone; neither solver supplies physical dimensional truth. [Final batch](reports/gb10/physical-batch-complete.json) · [Recheck all three peak planes without a GPU](platform/spark/QUICKSTART.md#completed-physical-batch). Unless explicitly labeled Spark, benchmarks below retain their historical platforms and timings.
 
-**Spark migration:** 929 Spark tests passed. Of the same 707 historical cases, 702 pass; five require original-path write or rename denial. [Build the measurement tools and review exactly what passed](platform/spark/QUICKSTART.md#spark-migration-acceptance).
+**DGX Spark validation:** 929 Spark tests passed. Of the same 707 historical cases, 702 pass; five require original-path write or rename denial. [Build the measurement tools and review exactly what passed](platform/spark/QUICKSTART.md#dgx-spark-validation).
 
 ### How sensitive is a wall-loss footprint to its edge threshold?
 

@@ -131,9 +131,11 @@ Expected: **3 committed cases / 2 specimens**. The 3,674,999-byte pack contains 
 
 **Source to result.** For the [pine acquisition](https://doi.org/10.5281/zenodo.6985407), the producer verified all eight archives and the metadata against the frozen publisher sizes/MD5, read frames 1–721 and excluded the duplicate 360° view. The 90 selected projections were independently preprocessed and matched the corresponding dense projections byte-for-byte. A second check reread the nine original files (4,225,994,738 bytes), both full native/ASTRA volume pairs, and all four direct native ROI crops. Both dense conditions passed the prespecified **relative L2 < 0.002** gate. No independently calibrated feature dimensions or defect labels are present. [Source manifest](../../fixtures/pine-cone-source-v1.json) · [Frame-to-archive hashes](../../examples/physical-peak-batch/pine-frames.json) · [Preprocessing receipt](../../examples/physical-peak-batch/pine-scan.json) · [Native/ASTRA parent](../../examples/physical-peak-batch/pine-parent.json) · [Independent recheck](../../reports/gb10/pine-independent.json) · [Final queue submissions](../../reports/gb10/physical-batch-complete.json).
 
-## Spark migration acceptance
+<a name="spark-migration-acceptance"></a>
 
-The main reconstruction and measurement jobs now run on DGX Spark (GB10). The seven native build products, the 90-view native demo above, the two-specimen physical batch, and the archived axis and remount jobs have separate checks. Historical Windows binaries and the `measurement-lab` pore research branch are not part of the Linux runtime acceptance. The physical batch compares reconstruction intensities, not calibrated dimensions.
+## DGX Spark validation
+
+The main reconstruction and measurement jobs run on DGX Spark (GB10). The seven native build products, the 90-view native demo above, the two-specimen physical batch, and the archived axis and remount jobs have separate checks. Historical Windows binaries and the `measurement-lab` pore research branch are not part of the Linux runtime acceptance. The physical batch compares reconstruction intensities, not calibrated dimensions.
 
 | Check on the qualified Spark | Result | Evidence |
 |---|---|---|
@@ -142,7 +144,7 @@ The main reconstruction and measurement jobs now run on DGX Spark (GB10). The se
 | Simulated tilted part, archived projections | All 25 sections measured; axis angle differed from design by 0.0017373°, origin by 0.0000292 mm. Independent check: 6,000 samples. | [Inputs and results](../../reports/gb10/measurement-jobs.json) |
 | Simulated remount with a deep cut | Independent CPU labels agreed with CUDA on all 14,760 cells: 513 flagged, one region, none unknown. | [Coverage and matching archived files](../../reports/gb10/measurement-jobs.json) |
 
-**Five historical failures remain.** One axis test and four slab cases require the *original pathname* to deny writes or replacement by another process. On the qualified Linux filesystem those names remain editable. Spark jobs consume sealed snapshots of the input bytes; another process cannot write through the snapshot, and changing the original name after sealing does not change the data being processed. These guarantees differ. The low-level axis `pinned_reader` refuses the old contract; code that depends on that contract must not use this port as a drop-in replacement. Use a trusted local job parent and a fresh destination. A duplicate remount exposure leaves only a refusal marker, never a success manifest.
+**Five historical failures remain.** One axis test and four slab cases require the *original pathname* to deny writes or replacement by another process. On the qualified Linux filesystem those names remain editable. Spark jobs consume sealed snapshots of the input bytes; another process cannot write through the snapshot, and changing the original name after sealing does not change the data being processed. These guarantees differ. The low-level axis `pinned_reader` refuses the old contract; code that depends on that contract must not rely on the Spark executable to deny writes to the original path. Use a trusted local job parent and a fresh destination. A duplicate remount exposure leaves only a refusal marker, never a success manifest.
 
 ### Run the measurement entry points
 
