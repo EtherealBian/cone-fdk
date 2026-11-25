@@ -18,7 +18,7 @@
 | 无 GPU 复核 | 随仓库提供另外两个实测选区的原生与 ASTRA 体素。仅用标准 Python 即可复算 **138,948 个体素**的逐层差异。 | [运行步骤](platform/spark/QUICKSTART.md) · [样例数据](examples/gb10-walnut) |
 | 整颗核桃哪里相差最大？ | 512 层中，差异最大的位置首次出现在 **(367, 318, 256)**。下载两种算法在该层的原始切片，即可逐一复算 262,144 对体素。 | [逐层曲线与运行步骤](platform/spark/QUICKSTART.md#offline-physical-peak) · [批检导出记录](reports/gb10/physical-peak-snapshot.json) |
 
-这里比较的是两种重建实现。实物批次目前仅核桃通过，第二种试件未计入；结果不能用作实物尺寸公差。[查看覆盖情况](reports/gb10/physical-coverage.json)。下文未注明 Spark 的旧基准，耗时均来自各自记录的历史平台。
+**两件实物、三种扫描条件已完成批检。** 在 256³ 网格上，松果的原生 CUDA 与 ASTRA 相对 L2 差异为：90 幅投影 **0.07314%**，720 幅投影 **0.02658%**。每组直接重建的两个局部都与整卷对应区域逐字节一致。两个角度密度来自同一颗松果；这些差异衡量求解器一致性，不是实物尺寸公差。[批检结果](reports/gb10/physical-batch-complete.json) · [离线复算三个峰值层](platform/spark/QUICKSTART.md#completed-physical-batch)。下文未注明 Spark 的旧基准，耗时均来自各自记录的历史平台。
 
 ## 换一组阈值，缺陷区域会变多少？
 

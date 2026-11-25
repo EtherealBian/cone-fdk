@@ -18,7 +18,7 @@ ConeFDK turns 720 measured X-ray projections of a walnut into a **512³ volume**
 | Review without a GPU | Two additional measured regions ship with both native and ASTRA voxels. Recompute the per-plane differences across **138,948 voxels** using standard Python. | [Quickstart](platform/spark/QUICKSTART.md) · [Sample data](examples/gb10-walnut) |
 | Where do the two solvers differ most? | Across 512 axial planes, the first maximum is at **(367, 318, 256)**. The offline snapshot includes both raw peak slices: remeasure all 262,144 pairs without a GPU. | [Peak profile and reproduction](platform/spark/QUICKSTART.md#offline-physical-peak) · [Queue export checks](reports/gb10/physical-peak-snapshot.json) |
 
-These checks measure solver agreement. Only the walnut has qualified in the planned physical batch; the second object is still outstanding. [Batch coverage](reports/gb10/physical-coverage.json). Unless explicitly labeled Spark, benchmarks below retain their historical platforms and timings.
+**Two physical specimens, three scan conditions.** The completed batch adds a pine cone reconstructed on a 256³ grid: native versus ASTRA relative L2 **0.07314% at 90 views** and **0.02658% at 720 views**. Two direct native crops per condition matched their dense counterparts byte-for-byte. The view counts describe one pine cone; neither solver supplies physical dimensional truth. [Final batch](reports/gb10/physical-batch-complete.json) · [Recheck all three peak planes without a GPU](platform/spark/QUICKSTART.md#completed-physical-batch). Unless explicitly labeled Spark, benchmarks below retain their historical platforms and timings.
 
 ## How sensitive is a wall-loss footprint to its edge threshold?
 
