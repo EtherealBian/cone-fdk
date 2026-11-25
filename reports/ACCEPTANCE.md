@@ -20,3 +20,7 @@ On the pinned 720-view walnut, six fixed regions, parent 512³ / 40 mm, batch 16
 ## Direct plane source-build gate
 
 Compare all pixels on three standard walnut cuts with the frozen parent bytes. On a translated and tilted cut, check 365 sites across the image against the independent FP64 spatial implementation: relative L2 < 1e-5 and maximum absolute difference / reference peak < 5e-5. Fully cross-check small clipped-detector cases, and require identical pixels across strip boundaries and reversed column ordering. On a second, analytic scan, measure three known sphere cross-sections without fitting: every center error < 0.06 mm and every area-equivalent diameter error < 0.10 mm. [Protocol, scope and observations](DIRECT-PLANES.md).
+
+## Oblique stack source-build gate
+
+On the pinned walnut scan, require a single projection pass for the 21-layer example at 128 MiB, bitwise identity to all serial planes and the frozen middle plane, and identical output across an interior seam at 48 MiB. `min-passes` must reduce the latter to one read. Check a permuted and reversed crop against the frozen parent and sample every tilted layer with the independent FP64 oracle (relative L2 < 1e-5, max absolute difference / peak < 5e-5). Verify the NRRD payload, affine, dimensions and units. On the analytic sphere, fixed half-contrast masks must give volume error < 3%, centroid error < 0.05 mm and equivalent diameter error < 0.05 mm. [Protocol and observations](OBLIQUE-STACK.md).

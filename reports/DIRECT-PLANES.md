@@ -46,7 +46,7 @@ CFDKPLANE1 320 288
 
 For zero-based `(row=j, col=i)` the pixel center is `center + (i - (width-1)/2) * col_step + (j - (height-1)/2) * row_step`. The nonzero steps must be orthogonal (absolute normalized dot product ≤ 1e−5); lengths may differ and signs set orientation. Every pixel center must lie inside the `--fov` cube; out-of-bounds requests are rejected, not clipped. `--n` identifies the nominal parent grid, not the plane pitch. Changing `--n` alone does not move the plane. A smaller pitch does not increase the resolution of the acquired data.
 
-`--plane`, `--roi` and `--roi-list` are mutually exclusive. If the pixel array does not fit the buffer budget, the engine writes horizontal strips in row order and rereads/refilters all views for each strip. It must fit the filter workspace, at least one view, and one output row. Metrics include actual read bytes, passes, and peak engine-owned device allocation (not total VRAM use). Multiple planes currently require separate jobs.
+`--plane`, `--stack`, `--roi` and `--roi-list` are mutually exclusive. If the pixel array does not fit the buffer budget, the engine writes horizontal strips in row order and rereads/refilters all views for each strip. It must fit the filter workspace, at least one view, and one output row. Metrics include actual read bytes, passes, and peak engine-owned device allocation (not total VRAM use). For parallel, evenly spaced planes, [use one `--stack` job](OBLIQUE-STACK.md); unrelated planes require separate jobs.
 
 ## Three different accuracy questions
 

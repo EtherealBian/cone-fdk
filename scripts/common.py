@@ -60,6 +60,8 @@ def reconstruct(
     roi_list=None,
     planner=None,
     plane=None,
+    stack=None,
+    stack_format=None,
 ):
     env = os.environ.copy()
     env["PATH"] = os.pathsep.join(map(str, dll_dirs())) + os.pathsep + env.get("PATH", "")
@@ -88,6 +90,10 @@ def reconstruct(
         cmd.extend(["--roi-list", roi_list])
     if plane is not None:
         cmd.extend(["--plane", plane])
+    if stack is not None:
+        cmd.extend(["--stack", stack])
+    if stack_format is not None:
+        cmd.extend(["--stack-format", stack_format])
     if planner is not None:
         cmd.extend(["--planner", planner])
     if host_memory is not None:

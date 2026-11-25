@@ -32,9 +32,10 @@ int main() {
             std::cout << "cone-fdk --geom scan.geom --input projections.f32 --output volume.f32 "
                          "--n 256 --fov 40 --budget 768 --batch 16 --ptx kernels.ptx "
                          "[--host-memory auto|pageable] [--roi x,y,z,nx,ny,nz | --roi-list "
-                         "boxes.txt | --plane plane.txt] [--planner "
+                         "boxes.txt | --plane plane.txt | --stack stack.txt] [--stack-format "
+                         "raw|nrrd] [--planner "
                          "batch-first|min-passes]\nmin-passes requires "
-                         "--roi-list. Budget in "
+                         "--roi-list or --stack. Budget in "
                          "MiB; fov in mm. Metrics to stdout as JSON.\n";
             return 0;
         }
@@ -45,7 +46,8 @@ int main() {
         for (int i = 1; i < argc; i += 2) {
             if (i + 1 >= argc ||
                 (!keys.count(argv[i]) && argv[i] != "--host-memory" && argv[i] != "--roi" &&
-                 argv[i] != "--roi-list" && argv[i] != "--planner" && argv[i] != "--plane") ||
+                 argv[i] != "--roi-list" && argv[i] != "--planner" && argv[i] != "--plane" &&
+                 argv[i] != "--stack" && argv[i] != "--stack-format") ||
                 options.count(argv[i]))
                 throw std::runtime_error("unknown/duplicate/incomplete argument");
             options[argv[i]] = argv[i + 1];
@@ -57,11 +59,19 @@ int main() {
         auto policy = options.count("--planner") ? options.at("--planner") : "batch-first";
         if (policy != "batch-first" && policy != "min-passes")
             throw std::runtime_error("--planner expects batch-first or min-passes");
-        if (policy == "min-passes" && !packed)
-            throw std::runtime_error("--planner min-passes requires --roi-list");
-        bool sliced = options.count("--plane") != 0;
-        if (int(packed) + int(sliced) + int(options.count("--roi")) > 1)
-            throw std::runtime_error("use only one of --roi, --roi-list and --plane");
+        bool stacked = options.count("--stack") != 0;
+        auto format = options.count("--stack-format") ? options.at("--stack-format") : "raw";
+        if ((options.count("--stack-format") && !stacked) || (format != "raw" && format != "nrrd"))
+            throw std::runtime_error("--stack-format raw|nrrd requires --stack");
+        bool nrrd = format == "nrrd";
+        if (policy == "min-passes" && !packed && !stacked)
+            throw std::runtime_error("--planner min-passes requires --roi-list or --stack");
+        bool sliced = stacked || options.count("--plane");
+        const char *spec = stacked ? "--stack" : "--plane";
+        if (int(packed) + int(stacked) + int(options.count("--plane")) +
+                int(options.count("--roi")) >
+            1)
+            throw std::runtime_error("use only one of --roi, --roi-list, --plane and --stack");
         for (const auto &key : keys)
             if (!options.count(key))
                 throw std::runtime_error("missing argument: " + key);
@@ -72,8 +82,8 @@ int main() {
                 throw std::runtime_error("output aliases an input");
         if (packed && same_file(dest, absolute(val("--roi-list"))))
             throw std::runtime_error("output aliases the ROI list");
-        if (sliced && same_file(dest, absolute(val("--plane"))))
-            throw std::runtime_error("output aliases the plane specification");
+        if (sliced && same_file(dest, absolute(val(spec))))
+            throw std::runtime_error("output aliases the plane or stack specification");
         Geom g{};
         std::istringstream meta(small_file(val("--geom"), 4096));
         std::string magic, junk;
@@ -93,11 +103,11 @@ int main() {
               g.du > 0 && g.dv > 0 && g.D > g.R && g.R > fov * .708f && g.vox > 0 &&
               std::isfinite(g.D + g.R + g.du + g.dv + g.start + fov) && std::abs(g.sign) == 1))
             throw std::runtime_error("unsupported field of view or geometry");
-        Plane plane{};
+        PlaneGrid grid;
         if (sliced) {
-            plane = read_plane(val("--plane"), fov);
-            // The planner splits along its last dimension: here one slab is one image row.
-            boxes.push_back({0, 0, 0, plane.w, 1, plane.h});
+            grid = read_grid(val(spec), fov, stacked);
+            // Flatten [layer,row] into one row stream: a pass can span a layer boundary.
+            boxes.push_back({0, 0, 0, grid.p.w, 1, grid.p.h * grid.depth});
         } else if (packed)
             boxes = read_boxes(val("--roi-list"), g.n);
         else
@@ -182,6 +192,9 @@ int main() {
         Output output(dest);
         if (packed)
             write_pack_header(*output.file, boxes, g.n, g.vox);
+        auto header = nrrd ? nrrd_header(grid) : std::string();
+        if (nrrd)
+            output.file->transfer(&header[0], header.size(), true);
         Timer timer(gpu);
         double filter = 0, bp = 0, h2d = 0, d2h = 0;
         uint64_t launches = 0, filterBatches = 0, passes = 0, inputBytes = 0;
@@ -218,8 +231,17 @@ int main() {
                 Ptr dst = block.p;
                 for (const auto &b : tiles) {
                     if (sliced) {
-                        gpu.launch(back, up(plane.w, 16), up(b.nz, 8), 1, 16, 8, dst, freq.p, cs.p,
-                                   g, first, actual, plane, b.z, b.nz);
+                        for (int r = b.z; r < b.z + b.nz;) {
+                            const int row0 = r % grid.p.h;
+                            const int rowsHere = std::min(grid.p.h - row0, b.z + b.nz - r);
+                            Plane plane = grid.at(r / grid.p.h);
+                            gpu.launch(back, up(plane.w, 16), up(rowsHere, 8), 1, 16, 8, dst,
+                                       freq.p, cs.p, g, first, actual, plane, row0, rowsHere);
+                            dst += size_t(rowsHere) * plane.w * 4;
+                            r += rowsHere;
+                            ++launches;
+                        }
+                        continue;
                     } else if (cropped) {
                         gpu.launch(back, up(b.nx, 16), up(b.ny, 8), up(b.nz + (b.z & 3), 16), 16, 8,
                                    dst, freq.p, cs.p, g, first, actual, b.z, b.nz, b.x, b.y, b.nx,
@@ -266,9 +288,9 @@ int main() {
         std::cout << "]";
         size_t written = 0;
         if (sliced) {
-            written = 4 * boxes.front().voxels();
-            print_plane(plane);
-            std::cout << ",\"rows_per_pass\":" << elems / plane.w;
+            written = header.size() + 4 * boxes.front().voxels();
+            print_grid(grid, stacked, nrrd, header.size());
+            std::cout << ",\"rows_per_pass\":" << elems / grid.p.w;
         } else if (packed) {
             written = pack_header_bytes(boxes.size());
             std::cout << ",\"format\":\"CFDKROI1\",\"regions\":[";

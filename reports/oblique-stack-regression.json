@@ -1,0 +1,70 @@
+{
+  "protocol": "Fresh directory, Build.ps1 -VerifyRepeat; full Run-Acceptance.ps1 -SkipBuild. Eight pinned archives checked before preprocessing. Historical reports retained. Source-build qualification, not a release.",
+  "repeated_build": {
+    "compiler": "g++.exe (Rev6, Built by MSYS2 project) 16.2.0",
+    "nvrtc": "12.9.86",
+    "rebuilds": 2,
+    "executable_sha256": "bb5a6e89219dd0a2e52326197a410ef0da6536231b8b7e9f8583cf2194c1e8a0",
+    "ptx_sha256": "485679abd66350367abdcc0413aebf68da93d2269a7b3ea537860778eafcfaf3",
+    "identical": true
+  },
+  "pytest": {
+    "timestamp": "2026-11-25T13:43:05.334923+08:00",
+    "tests": "112",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0"
+  },
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "full_outputs_sha256_equal_to_frozen_release": {
+    "analytic256": "5a9f929265a1c2c4720682b2af3e1029910fb5016d1ff09792f565931441c3b3",
+    "analytic512": "2388a8d02ce4b0016439298b367b6a964b073c726812b014bdd2a0496dce844d",
+    "walnut512": "868249894840a28eb9db08dd75b36c56e23aab83155fad38f8a971ed734be25f",
+    "stress1296": "9efb4e96bced3a183a4516a48520bc5ec9a5f42890e40a83792acebc2712dd89"
+  },
+  "walnut512": {
+    "views": 720,
+    "relative_l2_vs_astra": 0.0002899303474924963
+  },
+  "stress1296": {
+    "output_bytes": 8707129344,
+    "astra_checked_planes": [
+      {
+        "z": 432,
+        "relative_l2": 0.00027744420977368145
+      },
+      {
+        "z": 623,
+        "relative_l2": 0.0002828172363311958
+      },
+      {
+        "z": 624,
+        "relative_l2": 0.00028312019664349775
+      },
+      {
+        "z": 648,
+        "relative_l2": 0.0002855945199622352
+      },
+      {
+        "z": 864,
+        "relative_l2": 0.0002760611745227993
+      }
+    ],
+    "passes": 17
+  },
+  "roi2048_sha256": "417963027ba7f51774280b23a28851578ecdc5bf78f70573eb88efe78f7e196a",
+  "six_roi_pack_sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+  "roi_planner_speed_gate_passed": true,
+  "prior_direct_plane_sha256": {
+    "axial": "31f70b93973908e6aa4ab5d82fd73e027c4ebc5703b55bca75497cf0ba8da942",
+    "coronal": "b65cd18133388aa72e6218c3a97c06f6f47dd41eb791f590a196200dc8aee153",
+    "sagittal": "36fa39d4edec69d5bc8b6a6a0b430ffd35a48b4644a0547ce03989dba5cbb8ee",
+    "oblique": "1fd4b537d8716c58b1428368cdb012492896628395ceb7c0b185d23c3f0ef38f"
+  },
+  "oblique_stack": {
+    "walnut_payload_sha256": "0adb3167d85759386d5cab9fe9e0ac5aaca4c4cdf95d57f6d2ef3f3317465971",
+    "simulated_object_payload_sha256": "c610fcdad2cfcf82ab734b68e0431fdbb56f6a733095266bc3bf99dc100781e6",
+    "nrrd_file_sha256": "1a0e813c085e753e8b6e6041c000cd94fb978fc3dbc910b34a7e9babab18ce28",
+    "second_reader_checked": true
+  }
+}
