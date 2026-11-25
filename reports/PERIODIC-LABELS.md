@@ -57,3 +57,5 @@ python scripts/qualify_periodic_parcels.py build/my-sources/fixtures/stripe-camp
 ```
 
 实测核桃在完整回归中只验证重建；上述标签与连接结论来自模拟管件、已分类压力图和解析反例。没有新的实物尺寸真值。
+
+只想把其中某个争议位置发给别人？见[保留全图编号的离线选区证据](PERIODIC-ROI.md)，含跨接缝与含盲格的两个下载样例。

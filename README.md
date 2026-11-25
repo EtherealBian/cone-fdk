@@ -75,6 +75,7 @@ The [preregistered narrow-bridge study](reports/BRIDGE-STUDY.md) shows why a hig
 [Long-grid review](reports/STRIPED-REVIEW.md) summarizes connected defects and the relationship between two material locations without a full label map. On a 1,536 × 960 synthetic wall grid, nine global settings covered 13.27 million pair-cells in about 61 MiB of process working set with eight-row bands. The [offline path audit](reports/ANCHOR-AUDIT.md) can also show exactly where a smaller map needs evidence. The [resumable batch workflow](reports/STRIPED-BATCH.md) revalidates source bytes before it reuses a completed specimen.
 
 Need to see which cells form a defect? The [CUDA label exporter and CPU-only parcel verifier](reports/PERIODIC-LABELS.md) preserve the component ID of each measured cell, including across the seam. Download a linked example and a genuinely unresolved one.
+For a handoff limited to one disputed location, use a [detached ROI receipt](reports/PERIODIC-ROI.md). The seam example preserves the same global ID across column 359/0; the recipient needs only standard Python.
 
 The optional [witness-guarded CUDA path](reports/PACKED-EDGE.md) now publishes a complete edge-review job from retained shells. On the same accepted parent, three edge levels took **690 → 445 ms** and nine took **2,564 → 644 ms**, including source checks, CUDA processes and output publication; every map matched the original producer. These are edge-review times, not reconstruction times.
 
