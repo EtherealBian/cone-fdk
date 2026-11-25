@@ -38,3 +38,5 @@ python scripts/replay_bridge.py reports/bridge-result.json reports/bridge-bundle
 它从五次探测器采集重新开始，不从已存壁图起算；逐字节对照冻结测量记录与离线产品。判断挑战是否达标请看 `scientific_gates`，不要只看“可复现”的退出码。[离线包索引与整文件摘要](bridge-bundle.json)。全流程开关是 `Run-Acceptance.ps1 -PackedCampaign -SpecimenCampaign -BridgeCampaign`。
 
 [隔离全回归](bridge-regression.json)：444 项测试通过，无跳过。第二次从射线生成完整采集，测量 JSON 与单文件 HTML 均与首次的冻结字节相同；[重放证据](bridge-replay.json)。原先的 720 视图实测核桃以及 1296³ 超显存压力回归也保留，但不是窄桥尺寸的实物验证。
+
+要复核其它材料坐标的两点，见[离线锚点审查](ANCHOR-AUDIT.md)。该入口只读取已有作业，不会把缺少测量的格补成连接。

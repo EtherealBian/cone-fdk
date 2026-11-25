@@ -1,0 +1,134 @@
+{
+  "format": "CFDK-anchor-audit-v1",
+  "console_sha256": "da4dfb8f56634802c5d379c63258e08a73b76fbff2e38b3e0ccf628c3fb7d9ff",
+  "edge_sha256": "28b3cd044f8b4a174dfbde30096c429af3180c8c4d332b4b0983d6dc63c655cc",
+  "region_sha256": "8031022e605a6e7c6feb53274b8f17ef203eb860744aa914681ea9dfaa5dbc11",
+  "entry": "invalid-edge-control",
+  "shape_ha": [
+    41,
+    360
+  ],
+  "anchors_row_col": [
+    [
+      11,
+      223
+    ],
+    [
+      12,
+      218
+    ]
+  ],
+  "levels_per_mm": [
+    0.02,
+    0.04
+  ],
+  "loss_gate_mm": 0.3,
+  "nominal_pair": [
+    0,
+    0
+  ],
+  "counts": {
+    "anchor_below_gate": 1,
+    "unresolved_blind_path": 3
+  },
+  "scenarios": [
+    {
+      "pair": [
+        0,
+        0
+      ],
+      "labels_i32le_sha256": "81ea021db9a32256e8b7a51614f8d9a257b998e809632934862ab19511a24bcc",
+      "anchor_label_ids": [
+        0,
+        0
+      ],
+      "state": "anchor_below_gate",
+      "min_unknown_cells": null,
+      "path": null
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "labels_i32le_sha256": "4f33eff5f62febc31e9056c4687e29f8159feb29bf2664f504b9936a27a62f57",
+      "anchor_label_ids": [
+        4184,
+        4539
+      ],
+      "state": "unresolved_blind_path",
+      "min_unknown_cells": 5,
+      "path": {
+        "cells": 7,
+        "row_major_i32le_sha256": "0ec590fc105d44c50522072b40def917485cebbc6eb5ea859b08b6b689e44865",
+        "turn_runs": 2,
+        "direction_runs": [
+          [
+            "W",
+            5
+          ],
+          [
+            "S",
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "pair": [
+        1,
+        0
+      ],
+      "labels_i32le_sha256": "6aa8360e4788e0d7976fc905fd796663bb8015acc44dfa4a96134c5f11179a47",
+      "anchor_label_ids": [
+        -1,
+        -1
+      ],
+      "state": "unresolved_blind_path",
+      "min_unknown_cells": 7,
+      "path": {
+        "cells": 7,
+        "row_major_i32le_sha256": "0ec590fc105d44c50522072b40def917485cebbc6eb5ea859b08b6b689e44865",
+        "turn_runs": 2,
+        "direction_runs": [
+          [
+            "W",
+            5
+          ],
+          [
+            "S",
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "pair": [
+        1,
+        1
+      ],
+      "labels_i32le_sha256": "72523fced4046d142293776812f91d88b52455ccedd602eb3d1cb9277f88825b",
+      "anchor_label_ids": [
+        -1,
+        -1
+      ],
+      "state": "unresolved_blind_path",
+      "min_unknown_cells": 7,
+      "path": {
+        "cells": 7,
+        "row_major_i32le_sha256": "0ec590fc105d44c50522072b40def917485cebbc6eb5ea859b08b6b689e44865",
+        "turn_runs": 2,
+        "direction_runs": [
+          [
+            "W",
+            5
+          ],
+          [
+            "S",
+            1
+          ]
+        ]
+      }
+    }
+  ]
+}
