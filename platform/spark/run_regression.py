@@ -14,7 +14,7 @@ from pathlib import Path
 
 from build_publishers import ROOT, build
 
-PRESETS={'historical':['tests'], 'spark':['platform/spark/tests'],
+PRESETS={'historical':['tests'], 'historical-slab-v2':['tests'], 'spark':['platform/spark/tests'],
          'periodic':['tests/test_periodic_parcel.py','tests/test_periodic_interfaces.py','tests/test_periodic_roi.py']}
 
 
@@ -24,11 +24,16 @@ def run(job, preset):
     if job!=job.resolve(strict=False) or not parent.is_dir() or parent.stat().st_uid!=os.getuid() or parent.stat().st_mode&0o077:
         raise ValueError('new job below private real directory required')
     overlay=ROOT/'build/spark/python'; pin=build(overlay); job.mkdir(mode=0o700,exist_ok=False)
-    lib=m/'vendor/astra-install/lib'; env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1',PYTHONPATH=f'{overlay}:{ROOT}/scripts',
+    overlays=[overlay]; compat_pin=None
+    if preset=='historical-slab-v2':
+        from build_slab_compat import build as build_compat
+        compat=ROOT/'build/spark/python-slab-v2'; compat_pin=build_compat(compat); overlays.insert(0,compat)
+    imports=overlays+[ROOT/'scripts']
+    lib=m/'vendor/astra-install/lib'; env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1',PYTHONPATH=os.pathsep.join(map(str,imports)),
         LD_LIBRARY_PATH=str(lib)+(os.pathsep+os.environ['LD_LIBRARY_PATH'] if os.environ.get('LD_LIBRARY_PATH') else ''))
     if not (lib/'libastra.so.0').is_file(): raise ValueError('qualified private ASTRA library unavailable')
     xml=job/'result.xml';log=job/'pytest.log';args=[sys.executable,'-B','-m','pytest','-q','-p','no:cacheprovider',
-        '-o','pythonpath=build/spark/python scripts','-o','tmp_path_retention_policy=failed',*PRESETS[preset],
+        '-o','pythonpath='+' '.join(str(p.relative_to(ROOT)) for p in imports),'-o','tmp_path_retention_policy=failed',*PRESETS[preset],
         f'--basetemp={job}/tmp',f'--junitxml={xml}']
     with (m/'gpu.lock').open('rb') as lock,log.open('xb') as out:
         fcntl.flock(lock,fcntl.LOCK_EX); start=time.monotonic();result=subprocess.run(args,cwd=ROOT,env=env,stdout=out,stderr=subprocess.STDOUT)
@@ -42,6 +47,7 @@ def run(job, preset):
     receipt=dict(format='CFDK-Spark-test-run-v1',preset=preset,overlay_sha256=pin,command=args,seconds=elapsed,
         process_exit=result.returncode,counts=dict(counts),files_sha256=hashes,
         retention='Pytest retains failed per-test scratch. Explicit private basetemp; shared session fixtures may remain. Full logs/XML retained.')
+    if compat_pin: receipt['slab_overlay_sha256']=compat_pin
     (job/'run.json').write_text(json.dumps(receipt,indent=2)+'\n');print(json.dumps({'returncode':result.returncode,'counts':dict(counts)}))
     return result.returncode
 

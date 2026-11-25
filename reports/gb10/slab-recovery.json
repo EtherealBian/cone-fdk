@@ -1,0 +1,60 @@
+{
+  "format": "CFDK-GB10-slab-api-recovery-v2",
+  "overlay_sha256": "f53f88ed79fe450ea502387d6152665ecd453c09a0efbbb76f7940e30dd7769a",
+  "plan_sha256": "bb25b41dae5f7fdccdc58c6692313addafca96973a44c99cc1b97ceec15bd047",
+  "qualifier_sha256": "6fd513c3b9fcc0225ca0f1a27e8177f4512d4b2434d7374b5cc0d9192274ef4f",
+  "scope": "720 measured walnut views. Same-source process interruption and numerical replay, not a power-loss test or physical accuracy claim.",
+  "input_geometry_sha256": "3f172fa6e2755b3ce50d09b0a8e8a7ca8163b19128486c422f624c6b73d06af8",
+  "input_projection_sha256": "ecbc3166a420a31bd11cc0ba78f5469428de43726059c03a3af1ed6e5160b5a8",
+  "signal": "SIGKILL",
+  "exit_code": -9,
+  "output_present_after_kill": false,
+  "verified_checkpoint_z_bytes": [
+    [
+      0,
+      76546048
+    ],
+    [
+      73,
+      105906176
+    ]
+  ],
+  "callback_slab_z": [
+    174,
+    283,
+    401
+  ],
+  "worker_input": "four sealed snapshot paths per synchronous callback, launched in a real child process",
+  "byte_compared": 536870912,
+  "compared_voxels": 134217728,
+  "detached_stdlib_verified": true,
+  "reused": 2,
+  "computed": 3,
+  "reused_bytes": 182452224,
+  "native": [
+    {
+      "z": 174,
+      "depth": 109,
+      "gpu": "NVIDIA GB10",
+      "driver": 13000,
+      "peak_owned_bytes": 158408832
+    },
+    {
+      "z": 283,
+      "depth": 118,
+      "gpu": "NVIDIA GB10",
+      "driver": 13000,
+      "peak_owned_bytes": 167846016
+    },
+    {
+      "z": 401,
+      "depth": 111,
+      "gpu": "NVIDIA GB10",
+      "driver": 13000,
+      "peak_owned_bytes": 160505984
+    }
+  ],
+  "volume_sha256": "868249894840a28eb9db08dd75b36c56e23aab83155fad38f8a971ed734be25f",
+  "manifest_sha256": "b0b5a4b7c52f4d2d44e84ebbf3dfeb5e9294aefd4bc2db88d47aaf49da893531",
+  "native_projection_bytes_per_invocation": 238694400
+}

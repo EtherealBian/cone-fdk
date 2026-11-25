@@ -14,6 +14,7 @@ ConeFDK turns 720 measured X-ray projections of a walnut into a **512³ volume**
 |---|---|---|
 | 720 views, 512³ reconstruction | Two native runs produced identical bytes. Against a separate ASTRA FDK run on Spark, full-volume relative L2 was **0.02899%**, without registration or intensity fitting. | [Native repeats](reports/gb10/walnut-native.json) · [ASTRA comparison](reports/gb10/walnut-astra.json) |
 | One projection pass for three grids | A full overview and two finer regions took **1.743 → 0.643 s** median native process time over six pairs. Each output matched its standalone reconstruction byte-for-byte. | [Paired trials and timing boundary](reports/gb10/multigrid-timing.json) |
+| Resume after a process kill | On the 720-view walnut, two committed slabs were reused and three were computed after restart. All **512 MiB** matched the uninterrupted reconstruction byte-for-byte. | [Recovery receipt](reports/gb10/slab-recovery.json) |
 | Review without a GPU | Two additional measured regions ship with both native and ASTRA voxels. Recompute the per-plane differences across **138,948 voxels** using standard Python. | [Quickstart](platform/spark/QUICKSTART.md) · [Sample data](examples/gb10-walnut) |
 
 These checks measure solver agreement. Only the walnut has qualified in the planned physical batch; the second object is still outstanding. [Batch coverage](reports/gb10/physical-coverage.json). Unless explicitly labeled Spark, benchmarks below retain their historical platforms and timings.
