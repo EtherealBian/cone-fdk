@@ -374,3 +374,70 @@ extern "C" __global__ void loss_connect(int *parent, int w, int n) {
     if (i >= w)
         loss_join(parent, i, i - w);
 }
+
+// The two intersections on a line through the sampling origin determine the directional
+// quadratic and linear terms of a centered conic, even when the section is oblique.
+extern "C" __global__ void axis_sections(const WallSample *data, double *out, int w) {
+    int j = blockIdx.x, t = threadIdx.x, half = w / 2;
+    const WallSample *row = data + j * w;
+    __shared__ double scratch[6][128];
+    double m[6] = {}, scale = row[0].status ? 1.0 : row[0].outer;
+    for (int i = t; i < half; i += 128) {
+        bool a = !row[i].status, b = !row[i + half].status;
+        m[5] += int(a) + int(b);
+        if (!a || !b)
+            continue;
+        double s, c;
+        sincospi(2. * i / w, &s, &c);
+        double p = scale / row[i].outer, n = scale / row[i + half].outer;
+        double q = p * n, l = .5 * (n - p);
+        m[0] += q;
+        m[1] += 2 * q * (c * c - s * s);
+        m[2] += 4 * q * s * c;
+        m[3] += 2 * l * c;
+        m[4] += 2 * l * s;
+    }
+    bore_sum(m, scratch);
+    if (!t) {
+        double a = m[0] + m[1], b = m[2], d = m[0] - m[1], det = a * d - b * b;
+        bool ok = m[5] == w && a > 0 && d > 0 && det > 1e-12 * m[0] * m[0];
+        out[3 * j] = ok ? scale * ((d * m[3] - b * m[4]) / det) : 0;
+        out[3 * j + 1] = ok ? scale * ((a * m[4] - b * m[3]) / det) : 0;
+        out[3 * j + 2] = m[5] == w && !ok ? -1 : m[5];
+    }
+}
+
+// Exact orthogonal distance to the single fitted line, not a per-section circle residual.
+extern "C" __global__ void axis_distances(const WallSample *data, double *out, int w, int h,
+                                          int start, double pitch, double x, double y, double kx,
+                                          double ky) {
+    int j = blockIdx.x, t = threadIdx.x;
+    double z = (start + j - .5 * (h - 1)) * pitch, norm = sqrt(1 + kx * kx + ky * ky);
+    double v[1] = {}, lo = 1.7976931348623157e308, hi = 0;
+    __shared__ double scratch[2][128];
+    for (int i = t; i < w; i += 128) {
+        double s, c, r = data[j * w + i].outer;
+        sincospi(2. * i / w, &s, &c);
+        double dx = r * c - (x + kx * z), dy = r * s - (y + ky * z);
+        double d = hypot(hypot(dx, dy), dx * ky - dy * kx) / norm;
+        v[0] += d;
+        lo = fmin(lo, d);
+        hi = fmax(hi, d);
+    }
+    bore_sum(v, scratch);
+    scratch[0][t] = lo;
+    scratch[1][t] = hi;
+    __syncthreads();
+    for (int n = 64; n; n /= 2) {
+        if (t < n) {
+            scratch[0][t] = fmin(scratch[0][t], scratch[0][t + n]);
+            scratch[1][t] = fmax(scratch[1][t], scratch[1][t + n]);
+        }
+        __syncthreads();
+    }
+    if (!t) {
+        out[3 * j] = v[0];
+        out[3 * j + 1] = scratch[0][0];
+        out[3 * j + 2] = scratch[1][0];
+    }
+}

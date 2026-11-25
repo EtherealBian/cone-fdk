@@ -1,3 +1,4 @@
+#include "axis.hpp"
 #include "bore.hpp"
 #include "cylinder.hpp"
 #include "files.hpp"
@@ -32,6 +33,8 @@ int main() {
     try {
         auto argv = arguments();
         int argc = int(argv.size());
+        if (argc >= 2 && argv[1] == "axis")
+            return measure_axis(argv);
         if (argc >= 2 && argv[1] == "loss")
             return measure_loss(argv);
         if (argc >= 2 && argv[1] == "bore")
@@ -48,7 +51,7 @@ int main() {
                          "batch-first|min-passes]\nmin-passes requires "
                          "--roi-list, --stack or --cylinder. Budget in "
                          "MiB; fov in mm. Metrics to stdout as JSON.\n"
-                      << wall_usage << bore_usage << loss_usage;
+                      << wall_usage << bore_usage << axis_usage << loss_usage;
             return 0;
         }
         auto begin = Clock::now();

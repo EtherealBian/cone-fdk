@@ -1,0 +1,116 @@
+{
+  "protocol": "Full acceptance, independent simulation replay (axis, wall, bore, loss) and frozen legacy output comparison. No independent physical scan.",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "pytest": {
+    "tests": 215,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "build": {
+    "compiler": "g++.exe (Rev6, Built by MSYS2 project) 16.2.0",
+    "nvrtc": "12.9.86",
+    "rebuilds": 2,
+    "executable_sha256": "fb33b5c2f5d60c8b475baa2e79b8e1988a8dddcaea9f1a0c3d5f9e0a55a35983",
+    "ptx_sha256": "8a07a8441eb1a4d8dc035366e38a43524d114852b394599bf0932ba51dd82d9f",
+    "identical": true
+  },
+  "axis_replay_sha256": {
+    "axis-gauge.json": "fac8f349996eb3c654fecdcca95243ad4395b5c36e66a69ed98bd5232e410952",
+    "axis-review.zip": "0645fe17e0c620aa16010e65045c3ca15e3c6abaf29fd3786696f8c32562e2b5",
+    "axis-profiles.png": "67d0bf1fda71bcaacaa6454e626d8662c1d5a7d19e215c62e463b49bb437c959"
+  },
+  "frozen_loss_reproduced": true,
+  "legacy": {
+    "protocol": "Full GPU acceptance; latest tests and loss pack rerun on same binary; fresh wall/bore/loss replay; published legacy payloads pinned.",
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "pytest": {
+      "tests": 215,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "build": {
+      "compiler": "g++.exe (Rev6, Built by MSYS2 project) 16.2.0",
+      "nvrtc": "12.9.86",
+      "rebuilds": 2,
+      "executable_sha256": "fb33b5c2f5d60c8b475baa2e79b8e1988a8dddcaea9f1a0c3d5f9e0a55a35983",
+      "ptx_sha256": "8a07a8441eb1a4d8dc035366e38a43524d114852b394599bf0932ba51dd82d9f",
+      "identical": true
+    },
+    "loss_replay_sha256": {
+      "wall-loss.json": "b305afa8029fb5e708df80e4feb5a18303158a4a88a4ec8067aaf491a476ed63",
+      "wall-loss-example.json": "90b6c1f959fc2dc4f257c3f60b2ffc790a38f458015ebf8ae8dfb7bda25ed6a4",
+      "wall-loss-demo.zip": "f8341cb2f0f0c78dddad430507fc047a96a31810518f33e94eaa010b873a5473",
+      "wall-loss-scale.json": "c36b821098a4d8d687ee77b9596a01d488b67fa60860cbd6083032273d50f2bc",
+      "wall-loss.png": "0766a0d46d369a5aeead2e026ca257a645b9bb4357cafef0904d474d874da829"
+    },
+    "frozen_bore_sections": {
+      "detector-1x_radial-1x": {
+        "nominal": "930fd5d9f9a19ac9d135973ed257cb9f8ef49b852e9b817aa38d75e734d9828c",
+        "reframed": "d82451ccc8e166fabe2aa07205da0c69a88c7a32dacb7f247fc029242848b2a0",
+        "remounted": "7d12a018ebe615e9961bd4f49c7432d049c917d43cc4ab23ea8201c5e8408e17",
+        "second-part": "7669e7d49e18b7f966260955329053cd21239155761fd5f5013128fc1e16f46a",
+        "concentric": "4819131908f92e00b44150be95c4a03e3724859e76c0f680fd67bd3314324596",
+        "ellipse": "99ea86c25d75a8ec32a8f4537a1d791a1ddc0193b859aef2a1e622001aaae527"
+      },
+      "detector-1x_radial-2x": {
+        "nominal": "3d3cac2e76fe9ee262258ec3e49f766dda867c02dcec114e0d0115ce59d2a72f",
+        "reframed": "918e861a75f4ef130ab0a2554aaefa9abc6581b9e6789c1e38ff24d4147f6ee0",
+        "remounted": "f06f07ff864d94c9669729001782161330ea8a61cb379e3e49724d7a05b798c0",
+        "second-part": "025e565866faf4096f0c568990f1ad14451e9b6fc1c86eb793233002356af3f5",
+        "concentric": "d4682dd42964ec729c3b5416dc42f33bff92132c7e6d52634195f1387be49390",
+        "ellipse": "eed85fa56c3683911fae7bc42b6e4300622f678bd524870fb5868e0791cf2abd"
+      },
+      "detector-2x_radial-1x": {
+        "nominal": "2ba8d93fe1d831c223b0dc56e7fc4d193b8ce84ce449123cc40b3e36eee1e060",
+        "reframed": "f8f45f26e20943994e4f23cce0cb0ecafdba52fc99a235bb356d9d1cdd0d7c75",
+        "remounted": "081ec98ef000d4ba050f50bad8a53d26e53f3a1cdf0c00c7f71b298e57bfa1df",
+        "second-part": "fc06aa6f4ac4f405a374a7687d341561a95dd34b42a06da732fa9463103fc3f1",
+        "concentric": "18769c33aba344e382b59740dccfb8181752a7a8404eb9e5cd142ecb105e034e",
+        "ellipse": "97211efc2f8adbd2f9c323cb2f2724982a3c4ea8f81908c21a5501be2731d6f4"
+      },
+      "detector-2x_radial-2x": {
+        "nominal": "e1c6e337c7e6a55e1d924bdfa481c35c29b9ada45cf65c9968f53372e9e8f32b",
+        "reframed": "8a673e094a83d8bd1e54a922cfc5e9e8a84eb1d408138840a16a7f92bb149457",
+        "remounted": "e551cc0b67cf74b009dbe8776b4609c7f562cd67a33b26190b41da20319d0f32",
+        "second-part": "5ca7f1cfb7f1809917c3482275a67db8dabe36c07b3c24f56ab09fbef7875f21",
+        "concentric": "a74502370a2de9befcf8ac1699cfeb6f6b8bbf4a9b7036cfafb68734bcaa8dbd",
+        "ellipse": "7229963f9be39e6beebdf4203f1a51b0fe64852cc3ec29373343b836ab8403c3"
+      }
+    },
+    "legacy": {
+      "legacy_full": {
+        "analytic256": "5a9f929265a1c2c4720682b2af3e1029910fb5016d1ff09792f565931441c3b3",
+        "analytic512": "2388a8d02ce4b0016439298b367b6a964b073c726812b014bdd2a0496dce844d",
+        "walnut512": "868249894840a28eb9db08dd75b36c56e23aab83155fad38f8a971ed734be25f",
+        "stress1296": "9efb4e96bced3a183a4516a48520bc5ec9a5f42890e40a83792acebc2712dd89"
+      },
+      "legacy_planes": {
+        "axial": "31f70b93973908e6aa4ab5d82fd73e027c4ebc5703b55bca75497cf0ba8da942",
+        "coronal": "b65cd18133388aa72e6218c3a97c06f6f47dd41eb791f590a196200dc8aee153",
+        "sagittal": "36fa39d4edec69d5bc8b6a6a0b430ffd35a48b4644a0547ce03989dba5cbb8ee",
+        "oblique": "1fd4b537d8716c58b1428368cdb012492896628395ceb7c0b185d23c3f0ef38f"
+      },
+      "legacy_stacks": {
+        "walnut_payload_sha256": "0adb3167d85759386d5cab9fe9e0ac5aaca4c4cdf95d57f6d2ef3f3317465971",
+        "simulated_object_payload_sha256": "c610fcdad2cfcf82ab734b68e0431fdbb56f6a733095266bc3bf99dc100781e6",
+        "nrrd_file_sha256": "1a0e813c085e753e8b6e6041c000cd94fb978fc3dbc910b34a7e9babab18ce28"
+      },
+      "legacy_roi_2048": "417963027ba7f51774280b23a28851578ecdc5bf78f70573eb88efe78f7e196a",
+      "legacy_six_roi_pack": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+      "legacy_cylinder": {
+        "walnut": "ad7e0ca98d78eb3601bb91349c1420ee668e60923d805d4b72a4b51dca9781a4",
+        "analytic": "e7c690d1b85f38db6d2ed8a6190dfe351faf99c71f6a824881b9a05e8a5431db"
+      }
+    },
+    "legacy_wall": {
+      "near-seam": "f20333bd370bdf9c6068178c7ac55939397afb76482a06079d52397151f518fb",
+      "oblique-bore": "7c09b11411014b2873179f4412f1466a01956cf04d060df2d7aaa7add91a4207",
+      "lined-tube": "706c3709813ed3b1120fd1b08b0d43fbe6c788042ed04d239a391a332bf89b86"
+    },
+    "wall_replay_equal": true,
+    "bore_replay_equal": true,
+    "planner_gate": true
+  }
+}
