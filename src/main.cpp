@@ -4,6 +4,7 @@
 #include "gpu.hpp"
 #include "plane.hpp"
 #include "regions.hpp"
+#include "wall.hpp"
 #include <chrono>
 #include <cmath>
 #include <fstream>
@@ -29,6 +30,8 @@ int main() {
     try {
         auto argv = arguments();
         int argc = int(argv.size());
+        if (argc >= 2 && argv[1] == "wall")
+            return measure_wall(argv);
         if (argc == 2 && std::string(argv[1]) == "--help") {
             std::cout << "cone-fdk --geom scan.geom --input projections.f32 --output volume.f32 "
                          "--n 256 --fov 40 --budget 768 --batch 16 --ptx kernels.ptx "
@@ -38,7 +41,8 @@ int main() {
                          "raw|nrrd] [--planner "
                          "batch-first|min-passes]\nmin-passes requires "
                          "--roi-list, --stack or --cylinder. Budget in "
-                         "MiB; fov in mm. Metrics to stdout as JSON.\n";
+                         "MiB; fov in mm. Metrics to stdout as JSON.\n"
+                      << wall_usage;
             return 0;
         }
         auto begin = Clock::now();

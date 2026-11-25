@@ -100,10 +100,14 @@ struct File {
             throw std::runtime_error("input size unavailable");
         return (size_t)n.QuadPart;
     }
-    void rewind() {
-        LARGE_INTEGER z = {};
+    void seek(size_t offset) {
+        LARGE_INTEGER z;
+        z.QuadPart = static_cast<LONGLONG>(offset);
         if (!SetFilePointerEx(h, z, nullptr, FILE_BEGIN))
             throw std::runtime_error("input seek failed");
+    }
+    void rewind() {
+        seek(0);
     }
     void transfer(void *ptr, size_t n, bool write) {
         auto p = (unsigned char *)ptr;

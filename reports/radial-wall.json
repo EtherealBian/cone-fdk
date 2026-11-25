@@ -1,0 +1,373 @@
+{
+  "protocol": "Two simulated finite tubes, ideal calibrated attenuation; one global half-contrast threshold; not physical accuracy.",
+  "manifest": [
+    "CFDKCYL1 360 17 161",
+    "0 0 0",
+    "0 0 1",
+    "1 0 0",
+    "3.6 0.05 0.25"
+  ],
+  "binary_sha256": {
+    "cone-fdk.exe": "37c44db45ad3e0e1822f6a74a43b53a2b06b5fd2f6a4aaddb33fc234a5f3aa09",
+    "kernels.ptx": "43d3a9c03b7271987f3f1bf599ba8ca9f27eb63474667a56493809b917374bc9"
+  },
+  "limits": {
+    "max_thickness_abs_mm": 0.04,
+    "p95_thickness_abs_mm": 0.025,
+    "max_interface_abs_mm": 0.035,
+    "sector_direction_deg": 4.0,
+    "point_min_abs_mm": 0.035,
+    "cpu_abs_mm": 1e-11
+  },
+  "cases": {
+    "near-seam": {
+      "outer_mm": 9.6,
+      "bore_mm": 6.2,
+      "eccentricity_mm": 1.4,
+      "truth_thinnest_deg": 358.0,
+      "truth_min_mm": 1.9999999999999996,
+      "geometry": "CFDK1 360 72 320 0.14 0.24 120.0 205.0 0.0 1.0",
+      "views": 360,
+      "projections_sha256": "437fd7ab09d9ac72e0415a9c496eee591c35e4a3d3148417b01cc911ba6ef258",
+      "atlas_sha256": "a27338179a14bab46adcd9520da504168b9708e27eb61e4fbfd5f5d5fc8928cd",
+      "wall_sha256": "f20333bd370bdf9c6068178c7ac55939397afb76482a06079d52397151f518fb",
+      "native_wall": {
+        "format": "CFDK-wall-v1-le",
+        "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "shape_ha": [
+          17,
+          360
+        ],
+        "shells": 161,
+        "threshold": 0.02,
+        "first_radius_mm": 3.6,
+        "radial_step_mm": 0.05,
+        "axial_pitch_mm": 0.25,
+        "center_mm": [
+          0,
+          0,
+          0
+        ],
+        "axis_unit": [
+          0,
+          0,
+          1
+        ],
+        "seam_unit": [
+          1,
+          0,
+          0
+        ],
+        "status_counts": {
+          "measured": 6120,
+          "empty": 0,
+          "clipped": 0,
+          "multiple": 0,
+          "ambiguous": 0,
+          "nonfinite": 0,
+          "undersampled": 0
+        },
+        "min_valid_point": {
+          "row": 8,
+          "column": 358,
+          "mm": 1.9879288023540447
+        },
+        "sector_cols": 15,
+        "eligible_sectors": 360,
+        "thinnest_complete_sector": {
+          "column": 358,
+          "azimuth_deg": 358,
+          "mean_mm": 1.9931818995584343
+        },
+        "input_bytes": 3941280,
+        "output_bytes": 195840,
+        "tiles": 1,
+        "budget_bytes": 16777216,
+        "peak_owned_bytes": 4138144,
+        "redzones_verified": true
+      },
+      "one_mib_tiles": 4,
+      "one_mib_byte_identical": true,
+      "native_reconstruction": {
+        "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "driver_api": 13040,
+        "cufft_version": 11401,
+        "views": 360,
+        "n": 512,
+        "batch": 16,
+        "parent_voxel_spacing_mm": 0.05078125,
+        "planner": "batch-first",
+        "requested_batch": 16,
+        "effective_budget_bytes": 33554432,
+        "feasible_plans_scored": [
+          {
+            "batch": 16,
+            "passes": 1
+          }
+        ],
+        "format": "raw-f32-le-cylinder",
+        "shape_rha": [
+          161,
+          17,
+          360
+        ],
+        "data_offset_bytes": 0,
+        "azimuth_step_deg": 1,
+        "duplicate_endpoint": false,
+        "center_mm": [
+          0,
+          0,
+          0
+        ],
+        "axis_unit": [
+          0,
+          0,
+          1
+        ],
+        "seam_unit": [
+          1,
+          0,
+          0
+        ],
+        "tangent_unit": [
+          0,
+          1,
+          0
+        ],
+        "first_radius_mm": 3.6,
+        "radial_step_mm": 0.05,
+        "axial_pitch_mm": 0.25,
+        "rows_per_pass": 2737,
+        "output_bytes": 3941280,
+        "projection_passes": 1,
+        "projection_bytes_read": 33177600,
+        "filter_batches": 23,
+        "launches_bp": 3703,
+        "budget_bytes": 33554432,
+        "redzones_verified": true,
+        "peak_owned_bytes": 14862560,
+        "host_pinned_bytes": 5415840,
+        "fft_workspace_bytes": 0,
+        "free_before_bytes": 7383023616,
+        "free_at_allocation_bytes": 7357857792,
+        "filter_ms": 2.6971,
+        "bp_ms": 48.7651,
+        "h2d_ms": 3.7237,
+        "d2h_ms": 0.4583,
+        "wall_ms": 196.0551,
+        "process_seconds": 0.24261489999844343
+      },
+      "errors": {
+        "max_thickness_abs_mm": 0.013215372514736368,
+        "p95_thickness_abs_mm": 0.011654813183801904,
+        "max_interface_abs_mm": 0.010281386148539795,
+        "sector_direction_deg": 0.0,
+        "point_min_abs_mm": 0.012071197645954879,
+        "cpu_abs_mm": 2.6645352591003757e-15
+      },
+      "quarter_turn": {
+        "bitwise_equal": true,
+        "new_seam_deg": 90,
+        "new_weak_sector_deg": 268
+      }
+    },
+    "oblique-bore": {
+      "outer_mm": 8.8,
+      "bore_mm": 5.8,
+      "eccentricity_mm": 0.75,
+      "truth_thinnest_deg": 134.0,
+      "truth_min_mm": 2.250000000000001,
+      "geometry": "CFDK1 360 72 320 0.14 0.24 120.0 205.0 0.0 1.0",
+      "views": 360,
+      "projections_sha256": "ff8e4e479cc727ac7c36a66f5e4ef75d2542c7989e8c9a7c82e6819e402fcfa1",
+      "atlas_sha256": "fc2aa159b6b5d0c13d68a9f3cd9a227b6e26eb4ca844dc6ccf39ee09279e73e1",
+      "wall_sha256": "7c09b11411014b2873179f4412f1466a01956cf04d060df2d7aaa7add91a4207",
+      "native_wall": {
+        "format": "CFDK-wall-v1-le",
+        "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "shape_ha": [
+          17,
+          360
+        ],
+        "shells": 161,
+        "threshold": 0.02,
+        "first_radius_mm": 3.6,
+        "radial_step_mm": 0.05,
+        "axial_pitch_mm": 0.25,
+        "center_mm": [
+          0,
+          0,
+          0
+        ],
+        "axis_unit": [
+          0,
+          0,
+          1
+        ],
+        "seam_unit": [
+          1,
+          0,
+          0
+        ],
+        "status_counts": {
+          "measured": 6120,
+          "empty": 0,
+          "clipped": 0,
+          "multiple": 0,
+          "ambiguous": 0,
+          "nonfinite": 0,
+          "undersampled": 0
+        },
+        "min_valid_point": {
+          "row": 6,
+          "column": 135,
+          "mm": 2.239480452448257
+        },
+        "sector_cols": 15,
+        "eligible_sectors": 360,
+        "thinnest_complete_sector": {
+          "column": 134,
+          "azimuth_deg": 134,
+          "mean_mm": 2.2422493093901514
+        },
+        "input_bytes": 3941280,
+        "output_bytes": 195840,
+        "tiles": 1,
+        "budget_bytes": 16777216,
+        "peak_owned_bytes": 4138144,
+        "redzones_verified": true
+      },
+      "one_mib_tiles": 4,
+      "one_mib_byte_identical": true,
+      "native_reconstruction": {
+        "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+        "driver_api": 13040,
+        "cufft_version": 11401,
+        "views": 360,
+        "n": 512,
+        "batch": 16,
+        "parent_voxel_spacing_mm": 0.05078125,
+        "planner": "batch-first",
+        "requested_batch": 16,
+        "effective_budget_bytes": 33554432,
+        "feasible_plans_scored": [
+          {
+            "batch": 16,
+            "passes": 1
+          }
+        ],
+        "format": "raw-f32-le-cylinder",
+        "shape_rha": [
+          161,
+          17,
+          360
+        ],
+        "data_offset_bytes": 0,
+        "azimuth_step_deg": 1,
+        "duplicate_endpoint": false,
+        "center_mm": [
+          0,
+          0,
+          0
+        ],
+        "axis_unit": [
+          0,
+          0,
+          1
+        ],
+        "seam_unit": [
+          1,
+          0,
+          0
+        ],
+        "tangent_unit": [
+          0,
+          1,
+          0
+        ],
+        "first_radius_mm": 3.6,
+        "radial_step_mm": 0.05,
+        "axial_pitch_mm": 0.25,
+        "rows_per_pass": 2737,
+        "output_bytes": 3941280,
+        "projection_passes": 1,
+        "projection_bytes_read": 33177600,
+        "filter_batches": 23,
+        "launches_bp": 3703,
+        "budget_bytes": 33554432,
+        "redzones_verified": true,
+        "peak_owned_bytes": 14862560,
+        "host_pinned_bytes": 5415840,
+        "fft_workspace_bytes": 0,
+        "free_before_bytes": 7383023616,
+        "free_at_allocation_bytes": 7357857792,
+        "filter_ms": 3.8435,
+        "bp_ms": 47.9892,
+        "h2d_ms": 3.4021,
+        "d2h_ms": 0.3431,
+        "wall_ms": 193.505,
+        "process_seconds": 0.2407610999980534
+      },
+      "errors": {
+        "max_thickness_abs_mm": 0.010648546022297367,
+        "p95_thickness_abs_mm": 0.010055015424844682,
+        "max_interface_abs_mm": 0.007088232211449608,
+        "sector_direction_deg": 0.0,
+        "point_min_abs_mm": 0.01051954755174389,
+        "cpu_abs_mm": 2.6645352591003757e-15
+      }
+    }
+  },
+  "negative_control": {
+    "fixture": "near-seam tube with an air gap and a second concentric wall at radii 3.9 to 4.4 mm",
+    "projections_sha256": "12e17b527940523f8c60b184a46eb0f1f39ca45ab2579f83efe812f763dadb66",
+    "wall_sha256": "706c3709813ed3b1120fd1b08b0d43fbe6c788042ed04d239a391a332bf89b86",
+    "native_wall": {
+      "format": "CFDK-wall-v1-le",
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "shape_ha": [
+        17,
+        360
+      ],
+      "shells": 161,
+      "threshold": 0.02,
+      "first_radius_mm": 3.6,
+      "radial_step_mm": 0.05,
+      "axial_pitch_mm": 0.25,
+      "center_mm": [
+        0,
+        0,
+        0
+      ],
+      "axis_unit": [
+        0,
+        0,
+        1
+      ],
+      "seam_unit": [
+        1,
+        0,
+        0
+      ],
+      "status_counts": {
+        "measured": 0,
+        "empty": 0,
+        "clipped": 0,
+        "multiple": 6120,
+        "ambiguous": 0,
+        "nonfinite": 0,
+        "undersampled": 0
+      },
+      "min_valid_point": null,
+      "sector_cols": 15,
+      "eligible_sectors": 0,
+      "thinnest_complete_sector": null,
+      "input_bytes": 3941280,
+      "output_bytes": 195840,
+      "tiles": 1,
+      "budget_bytes": 16777216,
+      "peak_owned_bytes": 4138144,
+      "redzones_verified": true
+    }
+  }
+}

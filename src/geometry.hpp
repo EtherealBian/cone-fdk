@@ -16,3 +16,20 @@ struct Cylinder {
     double firstRadius, radialStep, pitch;
 };
 static_assert(sizeof(Cylinder) == 128, "cylinder kernel ABI");
+
+// Little-endian CFDK wall map v1: also the on-disk record. No implicit padding.
+enum WallStatus : unsigned {
+    Measured,
+    Empty,
+    Clipped,
+    Multiple,
+    Ambiguous,
+    Nonfinite,
+    Undersampled,
+    WallStatusCount
+};
+struct WallSample {
+    double inner, outer, thickness;
+    unsigned status, reserved;
+};
+static_assert(sizeof(WallSample) == 32, "wall map ABI");

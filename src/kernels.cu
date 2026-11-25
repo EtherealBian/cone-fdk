@@ -185,3 +185,47 @@ extern "C" __global__ void back_cylinder(float *out, const float2 *__restrict__ 
                          radius * (c * cyl.seam[k] + s * cyl.tangent[k]));
     accumulate_point(out + j * cyl.w + i, views, cs, g, first, cnt, xyz[0], xyz[1], xyz[2]);
 }
+
+// Each lane follows one outward ray. All lanes in a warp read adjacent azimuths.
+extern "C" __global__ void radial_wall(const float *tile, WallSample *out, int count, int shells,
+                                       double r0, double dr, double level) {
+    const int i = blockIdx.x * blockDim.x + threadIdx.x;
+    if (i >= count)
+        return;
+    bool bad = false, ambiguous = false;
+    double prior = tile[i], enter = 0, exit = 0;
+    bool clipped = prior >= level;
+    int runs = 0, foreground = 0;
+    for (int k = 0; k < shells; ++k) {
+        double v = tile[k * count + i];
+        bad |= !isfinite(v);
+        foreground += (v > level);
+        if (k && k + 1 < shells && v == level) {
+            double next = tile[(k + 1) * count + i];
+            // An exact knot is unique only when its two neighbors straddle it.
+            ambiguous |= !((prior < level && next > level) || (prior > level && next < level));
+        }
+        if (k && (v > level) != (prior > level)) {
+            double edge = (k - 1) + (level - prior) / (v - prior);
+            if (v > level) {
+                enter = edge;
+                ++runs;
+            } else {
+                exit = edge;
+            }
+        }
+        prior = v;
+    }
+    clipped |= prior >= level;
+    unsigned status = bad              ? Nonfinite
+                      : clipped        ? Clipped
+                      : ambiguous      ? Ambiguous
+                      : runs > 1       ? Multiple
+                      : runs == 0      ? Empty
+                      : foreground < 2 ? Undersampled
+                                       : Measured;
+    double na = __longlong_as_double(0x7ff8000000000000LL);
+    out[i] = status == Measured
+                 ? WallSample{r0 + enter * dr, r0 + exit * dr, (exit - enter) * dr, status, 0}
+                 : WallSample{na, na, na, status, 0};
+}

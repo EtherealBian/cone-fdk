@@ -1,0 +1,47 @@
+{
+  "protocol": "Two identical builds; full Run-Acceptance.ps1; independent second wall qualification. Hashes below compared to cylinder-regression.json.",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "pytest": {
+    "tests": 140,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "build": {
+    "compiler": "g++.exe (Rev6, Built by MSYS2 project) 16.2.0",
+    "nvrtc": "12.9.86",
+    "rebuilds": 2,
+    "executable_sha256": "37c44db45ad3e0e1822f6a74a43b53a2b06b5fd2f6a4aaddb33fc234a5f3aa09",
+    "ptx_sha256": "43d3a9c03b7271987f3f1bf599ba8ca9f27eb63474667a56493809b917374bc9",
+    "identical": true
+  },
+  "legacy_full": {
+    "analytic256": "5a9f929265a1c2c4720682b2af3e1029910fb5016d1ff09792f565931441c3b3",
+    "analytic512": "2388a8d02ce4b0016439298b367b6a964b073c726812b014bdd2a0496dce844d",
+    "walnut512": "868249894840a28eb9db08dd75b36c56e23aab83155fad38f8a971ed734be25f",
+    "stress1296": "9efb4e96bced3a183a4516a48520bc5ec9a5f42890e40a83792acebc2712dd89"
+  },
+  "legacy_planes": {
+    "axial": "31f70b93973908e6aa4ab5d82fd73e027c4ebc5703b55bca75497cf0ba8da942",
+    "coronal": "b65cd18133388aa72e6218c3a97c06f6f47dd41eb791f590a196200dc8aee153",
+    "sagittal": "36fa39d4edec69d5bc8b6a6a0b430ffd35a48b4644a0547ce03989dba5cbb8ee",
+    "oblique": "1fd4b537d8716c58b1428368cdb012492896628395ceb7c0b185d23c3f0ef38f"
+  },
+  "legacy_stacks": {
+    "walnut_payload_sha256": "0adb3167d85759386d5cab9fe9e0ac5aaca4c4cdf95d57f6d2ef3f3317465971",
+    "simulated_object_payload_sha256": "c610fcdad2cfcf82ab734b68e0431fdbb56f6a733095266bc3bf99dc100781e6",
+    "nrrd_file_sha256": "1a0e813c085e753e8b6e6041c000cd94fb978fc3dbc910b34a7e9babab18ce28"
+  },
+  "legacy_roi_2048": "417963027ba7f51774280b23a28851578ecdc5bf78f70573eb88efe78f7e196a",
+  "legacy_six_roi_pack": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+  "legacy_cylinder": {
+    "walnut": "ad7e0ca98d78eb3601bb91349c1420ee668e60923d805d4b72a4b51dca9781a4",
+    "analytic": "e7c690d1b85f38db6d2ed8a6190dfe351faf99c71f6a824881b9a05e8a5431db"
+  },
+  "roi_planner_speed_gate": true,
+  "wall_replays_equal": true,
+  "evidence_sha256": {
+    "radial-wall.png": "a708443ee310c9c106b4edec887246e76710f845917a7d249710f969985ee849",
+    "radial-wall-probes.json": "73d07eb9c21f15fc7d87939ef3cefe60f3fccd8249f62f3a00bce6c4d67fc1c3"
+  }
+}
