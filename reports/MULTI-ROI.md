@@ -8,7 +8,7 @@ Each yellow box is shown on the corresponding axial slice of the 512³ parent. T
 
 同一试件如果已有几个待复查的位置，逐个启动 `--roi` 会对相同投影重复做锥束加权、FFT 滤波和插值系数准备。`--roi-list` 让每批滤好的投影留在 GPU 上，依次反投影到当前能放下的所有选区。结果按清单顺序写到一个带坐标索引的文件；不必生成完整体或靠文件名记住位置。
 
-| RTX 5060 Laptop；720 角，512³ 父网格，40 mm 视野，batch 16，128 MiB 预算 | 顺序启动 6 个 `--roi` | 一次 `--roi-list` |
+| Windows GPU；720 角，512³ 父网格，40 mm 视野，batch 16，128 MiB 预算 | 顺序启动 6 个 `--roi` | 一次 `--roi-list` |
 |---|---:|---:|
 | 六组交替运行，整批进程耗时中位数 | 1.805 s | **0.351 s** |
 | 应用读取 / 处理整套投影的遍数 | 6 | **1** |

@@ -1,0 +1,32 @@
+{
+  "format": "cone-fdk-spark-astra-check-v1",
+  "sha256": "97a80ed750b8fa64ff00544c9b7a28122851a92ebcf0938cd228eaa8e8323712",
+  "input_sha256": {
+    "full-corrected.geom": "3f172fa6e2755b3ce50d09b0a8e8a7ca8163b19128486c422f624c6b73d06af8",
+    "full-corrected.f32": "ecbc3166a420a31bd11cc0ba78f5469428de43726059c03a3af1ed6e5160b5a8",
+    "full-corrected-512.f32": "868249894840a28eb9db08dd75b36c56e23aab83155fad38f8a971ed734be25f",
+    "full-astra-512.f32": "a4845bfc58a2da8239abf7e287c50ef1a5eb8271b010d79cf7cbbc81db402f76"
+  },
+  "device": "GPU #0: NVIDIA GB10, with 124609MB, CUDA compute capability 12.1",
+  "astra": {
+    "astra_version": "2.5.0",
+    "algorithm_seconds": 0.6082155667245388,
+    "io_algorithm_seconds": 1.7876707147806883
+  },
+  "astra_source_commit": "934920a46781142c2b8f0177007c395eae601783",
+  "native_vs_spark_astra": {
+    "rel_l2": 0.0002898929610212064,
+    "max_abs": 4.7359615564346313e-05,
+    "ref_peak": 0.10855788737535477
+  },
+  "spark_astra_vs_historical_astra": {
+    "rel_l2": 1.5041180764593376e-05,
+    "max_abs": 1.4902383554726839e-05,
+    "ref_peak": 0.10855789482593536
+  },
+  "criterion": {
+    "max_native_vs_spark_astra_rel_l2": 0.02
+  },
+  "passed": true,
+  "scope": "matched reconstruction of one measured walnut; no dimensional accuracy claim"
+}

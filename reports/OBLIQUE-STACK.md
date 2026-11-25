@@ -38,7 +38,7 @@ center + (i - (width-1)/2)*col + (j - (height-1)/2)*row + (k - (depth-1)/2)*laye
 
 JSON `shape_zyx` is storage order `[depth,height,width]`, **not scanner axis order**. `data_offset_bytes` is zero for raw or the header length for NRRD. `output_bytes` includes the header, if any. `--stack` cannot be combined with `--plane`, `--roi` or `--roi-list`. To inspect nonparallel or unevenly spaced sections, use separate `--plane` jobs.
 
-## What was verified on the RTX 5060 Laptop
+## What was verified on the Windows GPU
 
 | Check | Observed result |
 |---|---|

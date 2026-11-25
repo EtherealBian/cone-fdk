@@ -6,7 +6,7 @@
 
 The white line is the sampled design at the **0.30 mm** threshold. The 0° and 360° edges touch; the first and last axial rows do not. The colored field comes from independently reconstructed wall maps, not from drawing the two tools onto an image.
 
-## Results on one RTX 5060 Laptop GPU
+## Results on one Windows GPU
 
 The nominal tube has 9.4 mm outer radius and 6.1 mm bore radius. One removal tool cuts an outside flat around 0°; a second enlarges the bore locally around 134°, at a different height. Detector rays intersect the finite tube, flat half-space and cylindrical tool analytically. The reference and inspected projections go separately through FDK, cylindrical sampling (360 angles × 41 heights × 121 radii), and the existing `wall` command at half contrast. The design footprints use independent radial equations on the same grid. A CPU flood fill also checks every label from the two wall records.
 

@@ -22,7 +22,7 @@ python scripts/build_periodic_labels.py build/periodic --cxx C:/msys64/mingw64/b
 
 [在运行实验前冻结的规程](../fixtures/cuda-periodic-label-protocol-v1.json)区分两种时间：**新进程读入已分类掩码、生成并刷盘发布完整文件、直至退出**，以及两端各自的**标签计算阶段**。CPU 使用仓库已有的 SciPy/NumPy 实现，因此进程数值包含 Python 科学库启动成本；GPU 进程数值包含 CUDA 初始化与传输，CUDA 事件数值则不含传输。未锁时钟、未清文件缓存。既不是与最优原生 CPU 实现的对照，也不是从投影到检测的耗时。不据此推断实物精度。
 
-### RTX 5060 Laptop 实验记录
+### Windows GPU 实验记录
 
 | 口径 | CPU（SciPy/NumPy） | CUDA | 判据 |
 |---|---:|---:|---|

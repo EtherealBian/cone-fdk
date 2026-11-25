@@ -1,6 +1,6 @@
-# ConeFDK · Windows 单 GPU 锥束 CT 重建
+# ConeFDK · 单 GPU 锥束 CT 重建
 
-在一台 Windows 笔记本上，用 720 幅核桃 X 射线实测投影重建 **512³ 体数据**。原生 C++/CUDA 引擎完成锥束加权、cuFFT 分批滤波和按显存预算分块的反投影。Python 用来准备输入和独立校验；重建程序本身不需要 Python。
+在 NVIDIA DGX Spark（GB10）上，用 720 幅核桃 X 射线实测投影重建 **512³ 体数据**。原生 C++/CUDA 引擎完成锥束加权、cuFFT 分批滤波和按显存预算分块的反投影。Python 用来准备输入和独立校验；重建程序本身不需要 Python。
 
 [English](README.md) · [个人主页项目详解](https://etherealbian.github.io/work/cone-fdk.html) · [Windows 稳定版 v0.1.0](https://github.com/EtherealBian/cone-fdk/releases/tag/v0.1.0) · [下载离线切片浏览器](https://github.com/EtherealBian/cone-fdk/releases/download/v0.1.0/walnut-512-viewer.html)
 
@@ -8,13 +8,15 @@
 
 动图中的壳、隔膜和核仁均来自实测数据：[Alexander Meaney / 赫尔辛基大学](https://doi.org/10.5281/zenodo.6986012)，CC BY 4.0。离线浏览器可拖动查看 81 张预览切片，无需 CUDA。[数据署名与处理说明](NOTICE.md)
 
-## 重建实测
+## DGX Spark 实测：一颗核桃，三种重建网格
 
-| 问题 | RTX 5060 Laptop 上的结果 | 可复核记录 |
+| 检查 | 实测结果 | 记录 |
 |---|---|---|
-| 与独立实现相差多少？ | 720 角、512³ 输出，与 ASTRA FDK 的全体积相对 L2 差异 **0.02899%**，未拟合强度或配准。 | [数值对照](reports/RESULTS.md) |
-| 优化实际省了多少时间？ | 与上一版原生引擎同机对比，整进程中位数 **2.392 → 2.009 秒**，六组配对输出逐字节相同。 | [逐次计时](reports/native-ab.json) |
-| 超过显存还能重建吗？ | 以 **512 MiB 引擎设备缓冲预算**写出 1296³ FP32 体数据，落盘 8.71 GB；此规模用 ASTRA 抽查五层。 | [压力测试](reports/oversize.json) |
+| 720 角、512³ 重建 | 两次原生输出逐字节相同；与 Spark 上独立运行的 ASTRA FDK 相比，全体积相对 L2 差异为 **0.02899%**，未配准或拟合强度。 | [原生重复](reports/gb10/walnut-native.json) · [ASTRA 对照](reports/gb10/walnut-astra.json) |
+| 一次重建三个网格 | 整件概览加两个不同网格的局部，从读三遍投影减为一遍。六组配对中，原生进程中位耗时 **1.743 → 0.643 秒**，三个输出与分别重建逐字节相同。 | [逐次计时与口径](reports/gb10/multigrid-timing.json) |
+| 无 GPU 复核 | 随仓库提供另外两个实测选区的原生与 ASTRA 体素。仅用标准 Python 即可复算 **138,948 个体素**的逐层差异。 | [运行步骤](platform/spark/QUICKSTART.md) · [样例数据](examples/gb10-walnut) |
+
+这里比较的是两种重建实现。实物批次目前仅核桃通过，第二种试件未计入；结果不能用作实物尺寸公差。[查看覆盖情况](reports/gb10/physical-coverage.json)。下文未注明 Spark 的旧基准，耗时均来自各自记录的历史平台。
 
 ## 不生成整件，直接重建选区
 

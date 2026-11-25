@@ -1,0 +1,87 @@
+{
+  "format": "CFDK-physical-residual-batch-coverage-v1",
+  "plan_sha256": "e8e263d1c02ab7782bed459d1195c528b35ef3fa7f1cdb07d22fa8fc576b4ed5",
+  "required_cases": 3,
+  "verified_cases": 1,
+  "required_specimens": 2,
+  "specimens_with_evidence": 1,
+  "specimens_with_all_planned_cases": 1,
+  "all_cases_verified": false,
+  "cases": [
+    {
+      "case": "walnut720",
+      "specimen": "walnut",
+      "views": 720,
+      "status": "verified",
+      "evidence": {
+        "qualification_sha256": "12f2f81c0d88d75b05fd824876b94cc236d63b5613260341c2917998a5db3349",
+        "source_parents": {
+          "native": "c1320694248460d2de39f892f377b1b3a7473d186f32d9971d789d45d140f0ec",
+          "independent_astra": "fa5180be58a97e86e4be69c7515a6e8937b98c0a57ba2a3e6b402030a8aa4df4"
+        },
+        "volume_sha256": [
+          "868249894840a28eb9db08dd75b36c56e23aab83155fad38f8a971ed734be25f",
+          "97a80ed750b8fa64ff00544c9b7a28122851a92ebcf0938cd228eaa8e8323712"
+        ],
+        "shape_xyz": [
+          512,
+          512,
+          512
+        ],
+        "aggregate": {
+          "voxels": 134217728,
+          "numeric_equal": 5784,
+          "strict_exceedance": [
+            111318104,
+            54337416,
+            967400,
+            0
+          ],
+          "max_abs": 4.7359615564346313e-05,
+          "first_maximum_xyz": [
+            367,
+            318,
+            256
+          ],
+          "signed_mean": -8.299335235289579e-08,
+          "mean_abs": 3.843304392150438e-06,
+          "rms": 5.01060318430663e-06,
+          "rel_l2": 0.00028989296102120633
+        },
+        "remeasured_witness": {
+          "format": "CFDK-paired-local-witness-v1",
+          "qualification_sha256": "12f2f81c0d88d75b05fd824876b94cc236d63b5613260341c2917998a5db3349",
+          "z": 256,
+          "voxels": 262144,
+          "maximum_xyz": [
+            367,
+            318,
+            256
+          ],
+          "max_abs": 4.7359615564346313e-05,
+          "equal": 18,
+          "strict_exceedance": [
+            224588,
+            125134,
+            4241,
+            0
+          ],
+          "scope": "Only this authenticated slice was independently remeasured."
+        }
+      }
+    },
+    {
+      "case": "pine90",
+      "specimen": "pine-cone",
+      "views": 90,
+      "status": "not_submitted"
+    },
+    {
+      "case": "pine720",
+      "specimen": "pine-cone",
+      "views": 720,
+      "status": "not_submitted"
+    }
+  ],
+  "scope": "Same-grid numerical comparison on measured projections. Not-submitted cases have no metrics. View densities of one specimen are not independent specimens; no pooled accuracy, measurement repeatability or defect claim."
+}

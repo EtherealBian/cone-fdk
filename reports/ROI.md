@@ -10,7 +10,7 @@ The engine still reads and filters **all views and detector rows**. Only backpro
 
 `--n` and `--fov` always describe the **parent** cubic grid. `--roi` takes six comma-separated integers: zero-based `x,y,z` and positive `nx,ny,nz`; the end is exclusive. The native output is tightly packed little-endian float32, `[z,y,x]`, X fastest. On all axes the voxel center is `(origin_index + local_index - (n-1)/2) * voxel_spacing_mm`. Do not interpret a window as a new, centered scan. Increasing `n` samples the same projection data more finely; it does **not** improve the detector's physical resolution.
 
-## 两组实测 · RTX 5060 Laptop
+## 两组实测 · Windows GPU
 
 | 同场条件：720 角、40 mm 视野 | 512³ 完整体 | 同一网格内的 128 × 128 × 96 选区 |
 |---|---:|---:|

@@ -1,6 +1,6 @@
 # Fewer projection reads under a tight GPU budget · 低显存预算下的多选区调度
 
-On one RTX 5060 Laptop, reconstructing the same six boxes from 720 measured walnut projections took **0.590 → 0.304 s** at a **48 MiB** device-buffer budget. The new opt-in policy read the projections **once instead of three times**. Every measured run produced the same pack as the [published parent-crop comparison](MULTI-ROI.md).
+On one Windows GPU, reconstructing the same six boxes from 720 measured walnut projections took **0.590 → 0.304 s** at a **48 MiB** device-buffer budget. The new opt-in policy read the projections **once instead of three times**. Every measured run produced the same pack as the [published parent-crop comparison](MULTI-ROI.md).
 
 ## 为什么小一点的批次反而有用？
 

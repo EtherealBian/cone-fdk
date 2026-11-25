@@ -1,6 +1,6 @@
 # ConeFDK · Single-GPU cone-beam CT
 
-ConeFDK turns 720 measured X-ray projections of a walnut into a **512³ volume** on a Windows laptop. The C++/CUDA engine weights each projection, filters detector rows with cuFFT, and backprojects into slabs that fit the GPU memory budget. Python prepares the input and checks the output; the native executable runs without it.
+ConeFDK turns 720 measured X-ray projections of a walnut into a **512³ volume** on an NVIDIA DGX Spark (GB10). The C++/CUDA engine weights each projection, filters detector rows with cuFFT, and backprojects into slabs that fit the GPU memory budget. Python prepares the input and checks the output; the native executable runs without it.
 
 [中文](README.zh-CN.md) · [Project walkthrough](https://etherealbian.github.io/work/cone-fdk.html) · [Windows release v0.1.0](https://github.com/EtherealBian/cone-fdk/releases/tag/v0.1.0) · [Download the offline slice viewer](https://github.com/EtherealBian/cone-fdk/releases/download/v0.1.0/walnut-512-viewer.html)
 
@@ -8,13 +8,15 @@ ConeFDK turns 720 measured X-ray projections of a walnut into a **512³ volume**
 
 *The image is a sweep through measured data, not a rendering of a synthetic walnut. The downloadable HTML lets you scrub 81 preview slices without installing CUDA. Data: [Alexander Meaney / University of Helsinki](https://doi.org/10.5281/zenodo.6986012), CC BY 4.0; processing and attribution in [NOTICE](NOTICE.md).*
 
-## What was measured
+## Measured on DGX Spark: one walnut, three reconstruction grids
 
-| Question | Result on one RTX 5060 Laptop GPU | Evidence |
+| Check | Result | Evidence |
 |---|---|---|
-| Does the reconstruction agree with an independent implementation? | 720 measured views, 8×8 detector binning, 512³ FP32 output. Full-volume relative L2 difference from ASTRA FDK: **0.02899%**. No registration or fitted intensity scale. | [Numerical checks](reports/RESULTS.md) |
-| Did the optimization help the whole application? | Median process time **2.392 → 2.009 s**, including startup and output flush (−16.0%); 6/6 paired runs faster, identical output bytes. Compared with the previous native engine, **not** ASTRA. | [All A/B trials](reports/native-ab.json) |
-| Can it reconstruct a volume larger than VRAM? | Wrote and hashed a **1,296³ FP32** volume (8,707,129,344 bytes) with a **512 MiB engine-owned device-buffer budget**. Five slices checked against ASTRA; not a full-volume cross-check at this size. | [Stress record](reports/oversize.json) |
+| 720 views, 512³ reconstruction | Two native runs produced identical bytes. Against a separate ASTRA FDK run on Spark, full-volume relative L2 was **0.02899%**, without registration or intensity fitting. | [Native repeats](reports/gb10/walnut-native.json) · [ASTRA comparison](reports/gb10/walnut-astra.json) |
+| One projection pass for three grids | A full overview and two finer regions took **1.743 → 0.643 s** median native process time over six pairs. Each output matched its standalone reconstruction byte-for-byte. | [Paired trials and timing boundary](reports/gb10/multigrid-timing.json) |
+| Review without a GPU | Two additional measured regions ship with both native and ASTRA voxels. Recompute the per-plane differences across **138,948 voxels** using standard Python. | [Quickstart](platform/spark/QUICKSTART.md) · [Sample data](examples/gb10-walnut) |
+
+These checks measure solver agreement. Only the walnut has qualified in the planned physical batch; the second object is still outstanding. [Batch coverage](reports/gb10/physical-coverage.json). Unless explicitly labeled Spark, benchmarks below retain their historical platforms and timings.
 
 ## Reconstruct just the region you need
 
@@ -22,7 +24,7 @@ From a **source build**, `--roi x,y,z,nx,ny,nz` backprojects a box directly from
 
 [See the selected region, the 2048-grid ASTRA check and runnable commands](reports/ROI.md) · [All timings and hashes](reports/roi-walnut.json)
 
-For several locations in one scan, `--roi-list` shares each filtered projection batch across the resident boxes. On the same RTX 5060 Laptop, six independently launched regions took **1.805 s** in total versus **0.351 s** as one job (six paired trials, 6/6 faster). All six regions matched both the individual jobs and crops of the published 512³ reference byte-for-byte. [Six locations, timing, memory trade-off and commands](reports/MULTI-ROI.md).
+For several locations in one scan, `--roi-list` shares each filtered projection batch across the resident boxes. In the archived Windows benchmark, six independently launched regions took **1.805 s** in total versus **0.351 s** as one job (six paired trials, 6/6 faster). All six regions matched both the individual jobs and crops of the published 512³ reference byte-for-byte. [Six locations, timing, memory trade-off and commands](reports/MULTI-ROI.md).
 
 If the boxes no longer fit together, add `--planner min-passes`. With the same six regions and a **48 MiB** buffer budget, using 8 views per batch instead of 16 reduced full projection reads **3 → 1** and median process time **0.590 → 0.304 s**, with identical output bytes in all six pairs. The default policy is unchanged. [Budget sweep and reproduction](reports/ROI-PLANNER.md).
 

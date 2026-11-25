@@ -2,7 +2,7 @@
 
 **结论：以下预设门槛在本机实跑通过。** 独立 GPU 对照是 ASTRA 2.5.0 `FDK_CUDA` 的 Ram-Lak。精度使用全部体素、物理坐标与绝对衰减值，不乘拟合系数、不配准、不裁剪。真实样本没有实物尺寸真值。
 
-- 平台：Windows 11，build 10.0.26300；NVIDIA GeForce RTX 5060 Laptop GPU, 616.56, 8151 MiB。Python 3.12.16；编译/数值依赖精确版本见 `requirements-win.lock`。
+- 平台：Windows 11，build 10.0.26300；Windows GPU, 616.56, 8151 MiB。Python 3.12.16；编译/数值依赖精确版本见 `requirements-win.lock`。
 - 构建产物 SHA-256：EXE `658db372cc274083024d68b547297c5f602259d1738b287c63f1282684280dd0`；PTX `8697e37dc4acd3de47ad6454a07db132f7203cbbe0544f2b5d125a684741e122`。
 - 原生报告中的 `driver_api=13040` 是驱动所支持的 API 版本，**不等于**生成 PTX 的 NVRTC 版本；本发布构建用 NVRTC 12.9 `compute_80`。cuFFT runtime 返回 `11401`。
 

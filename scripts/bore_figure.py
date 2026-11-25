@@ -31,7 +31,7 @@ def draw(report, output):
     text(
         30,
         93,
-        "Three simulated tube designs   /   360 views per scan   /   fixed threshold   /   RTX 5060 Laptop",
+        "Three simulated tube designs   /   360 views per scan   /   fixed threshold   /   Windows GPU",
         17,
         muted,
     )

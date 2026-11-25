@@ -5,3 +5,5 @@
 - L. A. Feldkamp, L. C. Davis, J. W. Kress, “Practical cone-beam algorithm,” JOSA A 1, 612–619 (1984), doi:10.1364/JOSAA.1.000612.
 - External reference only: [ASTRA Toolbox FDK_CUDA](https://astra-toolbox.com/docs/algs/FDK_CUDA.html), GPL-3.0. The native executable does not link to ASTRA and uses no ASTRA kernel. Comparative Python scripts use a separately installed ASTRA distribution.
 - NVIDIA driver, NVRTC and cuFFT are external NVIDIA software subject to NVIDIA terms. No NVIDIA DLL is redistributed here. The core uses the CUDA Driver API (https://docs.nvidia.com/cuda/cuda-driver-api/) and cuFFT (https://docs.nvidia.com/cuda/cufft/).
+
+The two `CFDKMG01` files in `examples/gb10-walnut/` are modified, reconstructed subvolumes of Meaney's measured walnut dataset cited above. One contains direct native FDK output; the other contains independent ASTRA reconstructions cropped at the same voxel centers. Both derived data files are distributed under CC BY 4.0. The original acquisition and its authors do not certify these reconstructions.

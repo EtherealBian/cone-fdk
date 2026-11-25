@@ -36,7 +36,7 @@ Output is little-endian FP32 with azimuth contiguous: `np.fromfile("map.f32", "<
 
 ## What was verified
 
-| Check on RTX 5060 Laptop GPU | Result |
+| Check on Windows GPU | Result |
 |---|---|
 | Measured Helsinki walnut, 720 views; 11 radii × 224 rows × 512 azimuths | 1 projection read at 128 MiB; 5,046,272 output bytes. Independent native reconstruction with the seam rotated 90° matched a cyclic shift **byte-for-byte at all 1,261,568 samples**. |
 | Tight memory, same input and request | At 46 MiB, batch-first split a shell and read projections twice; min-passes used 8 views/batch and read once. Both payloads matched the 128 MiB output. |

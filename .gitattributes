@@ -6,3 +6,7 @@
 
 # Historical Windows edge manifests pin the exact working-tree bytes of this module.
 scripts/wall.py text eol=crlf
+*.mg binary
+
+# GB10 build attestations include the original working-tree bytes of this header.
+src/wall.hpp text eol=crlf

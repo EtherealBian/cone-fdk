@@ -50,7 +50,7 @@ For zero-based `(row=j, col=i)` the pixel center is `center + (i - (width-1)/2) 
 
 ## Three different accuracy questions
 
-| Check on RTX 5060 Laptop | What was compared | Result |
+| Check on Windows GPU | What was compared | Result |
 |---|---|---|
 | Are standard views oriented and indexed correctly? | Direct 512 × 512 cuts vs. raw bytes of the frozen 512³ walnut, at Z=271, Y=231, X=301 (zero-based). | **786,432 / 786,432 pixel bit patterns matched.** This is a compatibility check with the volume engine, not an independent physical measurement. |
 | Does the tilted plane evaluate FDK at the declared points? | On the measured walnut: independent FP64 spatial Ram-Lak convolution, explicit source/detector intersections, zero-extended interpolation at 365 points distributed across the 320 × 288 plane, using all 720 views. Small asymmetric synthetic scans also test entire planes, including partial detector edges. | Walnut relative L2 **1.6442 × 10⁻⁶** (limit 1 × 10⁻⁵); maximum absolute difference / reference peak **3.0769 × 10⁻⁶** (limit 5 × 10⁻⁵). These are intensity differences, not dimensional errors. |

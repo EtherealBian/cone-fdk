@@ -1,0 +1,2008 @@
+{
+  "format": "CFDK-GB10-multigrid-qualification-v1",
+  "parents": {
+    "plan": "bb25b41dae5f7fdccdc58c6692313addafca96973a44c99cc1b97ceec15bd047",
+    "build": "e83e4da1a93e74752eb671bac813c6042f5054ae21edcba46e06cbdc9553f381",
+    "original": "c1320694248460d2de39f892f377b1b3a7473d186f32d9971d789d45d140f0ec",
+    "astra": "fa5180be58a97e86e4be69c7515a6e8937b98c0a57ba2a3e6b402030a8aa4df4"
+  },
+  "source": {
+    "qualify_multigrid.py": "1a630d16d873a6c989215e59c5234dc0d32860e7cc84e2d2e81d6e930650f4c2",
+    "review_multigrid.py": "224e3d3ed4383f542b13d002f624ee99c0078d2489bdf600e2c4e44e000e856d"
+  },
+  "geometry": "3f172fa6e2755b3ce50d09b0a8e8a7ca8163b19128486c422f624c6b73d06af8",
+  "projection": "ecbc3166a420a31bd11cc0ba78f5469428de43726059c03a3af1ed6e5160b5a8",
+  "grid_spec_sha256": "c58b25c046121e7aea8ac77bbf7c42b3a4813fa719e75484a85e285d6a5fc8ed",
+  "grids": [
+    [
+      192,
+      40.0,
+      [
+        0,
+        0,
+        0,
+        192,
+        192,
+        192
+      ]
+    ],
+    [
+      512,
+      40.0,
+      [
+        181,
+        161,
+        173,
+        128,
+        120,
+        99
+      ]
+    ],
+    [
+      1024,
+      32.0,
+      [
+        377,
+        397,
+        425,
+        193,
+        159,
+        131
+      ]
+    ]
+  ],
+  "budget_mib": 256,
+  "batch": 16,
+  "overview_data": "direct, not resampled",
+  "reference_512_crop_sha256": "0297ab1e854dd9a6e1914fead9fda641991888bca570d76a5fd5f598d8c7a1b3",
+  "pack": {
+    "format": "CFDKMG01",
+    "pack_sha256": "806aaf2511308d5ebf105921452bfbc05827c6db261be2e1b0266e6d62b1f530",
+    "regions": [
+      {
+        "n": 192,
+        "fov_mm": 40.0,
+        "pitch_mm": 0.2083333283662796,
+        "origin_xyz": [
+          0,
+          0,
+          0
+        ],
+        "shape_xyz": [
+          192,
+          192,
+          192
+        ],
+        "first_voxel_center_mm": [
+          -19.895832858979702,
+          -19.895832858979702,
+          -19.895832858979702
+        ],
+        "offset_bytes": 120,
+        "size_bytes": 28311552,
+        "sha256": "22d2c3cc88a58c68dd9f6fff27631c525805053d6bb1628bec1f5bb9ef46885d"
+      },
+      {
+        "n": 512,
+        "fov_mm": 40.0,
+        "pitch_mm": 0.078125,
+        "origin_xyz": [
+          181,
+          161,
+          173
+        ],
+        "shape_xyz": [
+          128,
+          120,
+          99
+        ],
+        "first_voxel_center_mm": [
+          -5.8203125,
+          -7.3828125,
+          -6.4453125
+        ],
+        "offset_bytes": 28311672,
+        "size_bytes": 6082560,
+        "sha256": "0297ab1e854dd9a6e1914fead9fda641991888bca570d76a5fd5f598d8c7a1b3"
+      },
+      {
+        "n": 1024,
+        "fov_mm": 32.0,
+        "pitch_mm": 0.03125,
+        "origin_xyz": [
+          377,
+          397,
+          425
+        ],
+        "shape_xyz": [
+          193,
+          159,
+          131
+        ],
+        "first_voxel_center_mm": [
+          -4.203125,
+          -3.578125,
+          -2.703125
+        ],
+        "offset_bytes": 34394232,
+        "size_bytes": 16079988,
+        "sha256": "90eab0011e334f9a2f1622515e71b47a8965c39e91eb58903da8cf5a78b0432e"
+      }
+    ]
+  },
+  "warmups": [
+    {
+      "block": -1,
+      "arm": "serial",
+      "native": [
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "n": 192,
+          "batch": 16,
+          "voxel_spacing_mm": 0.208333328,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "roi_origin_xyz": [
+            0,
+            0,
+            0
+          ],
+          "output_shape_xyz": [
+            192,
+            192,
+            192
+          ],
+          "slab": 192,
+          "slabs": 1,
+          "output_bytes": 28311552,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 45,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 72425600,
+          "host_pinned_bytes": 13692928,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70990012416,
+          "free_at_allocation_bytes": 70903697408,
+          "filter_ms": 57.3202,
+          "bp_ms": 34.6295,
+          "h2d_ms": 4.6687,
+          "d2h_ms": 0.5059,
+          "wall_ms": 477.6152
+        },
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "n": 512,
+          "batch": 16,
+          "voxel_spacing_mm": 0.078125,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "roi_origin_xyz": [
+            181,
+            161,
+            173
+          ],
+          "output_shape_xyz": [
+            128,
+            120,
+            99
+          ],
+          "slab": 99,
+          "slabs": 1,
+          "output_bytes": 6082560,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 45,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 50196608,
+          "host_pinned_bytes": 11386880,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70942740480,
+          "free_at_allocation_bytes": 70878461952,
+          "filter_ms": 55.8262,
+          "bp_ms": 6.6043,
+          "h2d_ms": 4.6517,
+          "d2h_ms": 0.1082,
+          "wall_ms": 385.1816
+        },
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "n": 1024,
+          "batch": 16,
+          "voxel_spacing_mm": 0.03125,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "roi_origin_xyz": [
+            377,
+            397,
+            425
+          ],
+          "output_shape_xyz": [
+            193,
+            159,
+            131
+          ],
+          "slab": 131,
+          "slabs": 1,
+          "output_bytes": 16079988,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 45,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 60194036,
+          "host_pinned_bytes": 13692928,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70936662016,
+          "free_at_allocation_bytes": 70858104832,
+          "filter_ms": 57.6244,
+          "bp_ms": 13.1631,
+          "h2d_ms": 4.6858,
+          "d2h_ms": 0.2844,
+          "wall_ms": 405.1616
+        }
+      ],
+      "process_times_ms": [
+        645.584764,
+        555.109169,
+        580.713688
+      ],
+      "native_process_ms": 1781.4076209999998,
+      "per_grid_sha256": [
+        "22d2c3cc88a58c68dd9f6fff27631c525805053d6bb1628bec1f5bb9ef46885d",
+        "0297ab1e854dd9a6e1914fead9fda641991888bca570d76a5fd5f598d8c7a1b3",
+        "90eab0011e334f9a2f1622515e71b47a8965c39e91eb58903da8cf5a78b0432e"
+      ],
+      "scan_bytes": 716083200,
+      "peak_owned_bytes": 72425600
+    },
+    {
+      "block": -1,
+      "arm": "shared",
+      "native": [
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "first_grid_n": 192,
+          "batch": 16,
+          "first_voxel_spacing_mm": 0.208333328,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "format": "CFDKMG01",
+          "regions": [
+            {
+              "n": 192,
+              "fov_mm": 40,
+              "pitch_mm": 0.208333328,
+              "origin_xyz": [
+                0,
+                0,
+                0
+              ],
+              "shape_xyz": [
+                192,
+                192,
+                192
+              ],
+              "offset_bytes": 120,
+              "size_bytes": 28311552
+            },
+            {
+              "n": 512,
+              "fov_mm": 40,
+              "pitch_mm": 0.078125,
+              "origin_xyz": [
+                181,
+                161,
+                173
+              ],
+              "shape_xyz": [
+                128,
+                120,
+                99
+              ],
+              "offset_bytes": 28311672,
+              "size_bytes": 6082560
+            },
+            {
+              "n": 1024,
+              "fov_mm": 32,
+              "pitch_mm": 0.03125,
+              "origin_xyz": [
+                377,
+                397,
+                425
+              ],
+              "shape_xyz": [
+                193,
+                159,
+                131
+              ],
+              "offset_bytes": 34394232,
+              "size_bytes": 16079988
+            }
+          ],
+          "output_bytes": 50474220,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 135,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 94588148,
+          "host_pinned_bytes": 13692928,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70922342400,
+          "free_at_allocation_bytes": 70808576000,
+          "filter_ms": 58.9895,
+          "bp_ms": 56.8131,
+          "h2d_ms": 4.4599,
+          "d2h_ms": 0.9074,
+          "wall_ms": 464.6829
+        }
+      ],
+      "process_times_ms": [
+        639.845459
+      ],
+      "native_process_ms": 639.845459,
+      "per_grid_sha256": [
+        "22d2c3cc88a58c68dd9f6fff27631c525805053d6bb1628bec1f5bb9ef46885d",
+        "0297ab1e854dd9a6e1914fead9fda641991888bca570d76a5fd5f598d8c7a1b3",
+        "90eab0011e334f9a2f1622515e71b47a8965c39e91eb58903da8cf5a78b0432e"
+      ],
+      "scan_bytes": 238694400,
+      "peak_owned_bytes": 94588148
+    }
+  ],
+  "samples": [
+    {
+      "block": 0,
+      "arm": "serial",
+      "native": [
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "n": 192,
+          "batch": 16,
+          "voxel_spacing_mm": 0.208333328,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "roi_origin_xyz": [
+            0,
+            0,
+            0
+          ],
+          "output_shape_xyz": [
+            192,
+            192,
+            192
+          ],
+          "slab": 192,
+          "slabs": 1,
+          "output_bytes": 28311552,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 45,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 72425600,
+          "host_pinned_bytes": 13692928,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70934609920,
+          "free_at_allocation_bytes": 70847025152,
+          "filter_ms": 61.2044,
+          "bp_ms": 33.9303,
+          "h2d_ms": 4.7307,
+          "d2h_ms": 0.5168,
+          "wall_ms": 444.5511
+        },
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "n": 512,
+          "batch": 16,
+          "voxel_spacing_mm": 0.078125,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "roi_origin_xyz": [
+            181,
+            161,
+            173
+          ],
+          "output_shape_xyz": [
+            128,
+            120,
+            99
+          ],
+          "slab": 99,
+          "slabs": 1,
+          "output_bytes": 6082560,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 45,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 50196608,
+          "host_pinned_bytes": 11386880,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70863216640,
+          "free_at_allocation_bytes": 70798987264,
+          "filter_ms": 55.957,
+          "bp_ms": 6.763,
+          "h2d_ms": 4.4734,
+          "d2h_ms": 0.108,
+          "wall_ms": 387.1323
+        },
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "n": 1024,
+          "batch": 16,
+          "voxel_spacing_mm": 0.03125,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "roi_origin_xyz": [
+            377,
+            397,
+            425
+          ],
+          "output_shape_xyz": [
+            193,
+            159,
+            131
+          ],
+          "slab": 131,
+          "slabs": 1,
+          "output_bytes": 16079988,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 45,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 60194036,
+          "host_pinned_bytes": 13692928,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70833651712,
+          "free_at_allocation_bytes": 70759297024,
+          "filter_ms": 57.8643,
+          "bp_ms": 13.1619,
+          "h2d_ms": 4.638,
+          "d2h_ms": 0.2833,
+          "wall_ms": 400.1006
+        }
+      ],
+      "process_times_ms": [
+        616.830603,
+        560.915395,
+        573.69016
+      ],
+      "native_process_ms": 1751.436158,
+      "per_grid_sha256": [
+        "22d2c3cc88a58c68dd9f6fff27631c525805053d6bb1628bec1f5bb9ef46885d",
+        "0297ab1e854dd9a6e1914fead9fda641991888bca570d76a5fd5f598d8c7a1b3",
+        "90eab0011e334f9a2f1622515e71b47a8965c39e91eb58903da8cf5a78b0432e"
+      ],
+      "scan_bytes": 716083200,
+      "peak_owned_bytes": 72425600
+    },
+    {
+      "block": 0,
+      "arm": "shared",
+      "native": [
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "first_grid_n": 192,
+          "batch": 16,
+          "first_voxel_spacing_mm": 0.208333328,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "format": "CFDKMG01",
+          "regions": [
+            {
+              "n": 192,
+              "fov_mm": 40,
+              "pitch_mm": 0.208333328,
+              "origin_xyz": [
+                0,
+                0,
+                0
+              ],
+              "shape_xyz": [
+                192,
+                192,
+                192
+              ],
+              "offset_bytes": 120,
+              "size_bytes": 28311552
+            },
+            {
+              "n": 512,
+              "fov_mm": 40,
+              "pitch_mm": 0.078125,
+              "origin_xyz": [
+                181,
+                161,
+                173
+              ],
+              "shape_xyz": [
+                128,
+                120,
+                99
+              ],
+              "offset_bytes": 28311672,
+              "size_bytes": 6082560
+            },
+            {
+              "n": 1024,
+              "fov_mm": 32,
+              "pitch_mm": 0.03125,
+              "origin_xyz": [
+                377,
+                397,
+                425
+              ],
+              "shape_xyz": [
+                193,
+                159,
+                131
+              ],
+              "offset_bytes": 34394232,
+              "size_bytes": 16079988
+            }
+          ],
+          "output_bytes": 50474220,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 135,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 94588148,
+          "host_pinned_bytes": 13692928,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70848376832,
+          "free_at_allocation_bytes": 70737801216,
+          "filter_ms": 56.5824,
+          "bp_ms": 57.2828,
+          "h2d_ms": 4.5537,
+          "d2h_ms": 0.9803,
+          "wall_ms": 461.4432
+        }
+      ],
+      "process_times_ms": [
+        604.612164
+      ],
+      "native_process_ms": 604.612164,
+      "per_grid_sha256": [
+        "22d2c3cc88a58c68dd9f6fff27631c525805053d6bb1628bec1f5bb9ef46885d",
+        "0297ab1e854dd9a6e1914fead9fda641991888bca570d76a5fd5f598d8c7a1b3",
+        "90eab0011e334f9a2f1622515e71b47a8965c39e91eb58903da8cf5a78b0432e"
+      ],
+      "scan_bytes": 238694400,
+      "peak_owned_bytes": 94588148
+    },
+    {
+      "block": 1,
+      "arm": "shared",
+      "native": [
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "first_grid_n": 192,
+          "batch": 16,
+          "first_voxel_spacing_mm": 0.208333328,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "format": "CFDKMG01",
+          "regions": [
+            {
+              "n": 192,
+              "fov_mm": 40,
+              "pitch_mm": 0.208333328,
+              "origin_xyz": [
+                0,
+                0,
+                0
+              ],
+              "shape_xyz": [
+                192,
+                192,
+                192
+              ],
+              "offset_bytes": 120,
+              "size_bytes": 28311552
+            },
+            {
+              "n": 512,
+              "fov_mm": 40,
+              "pitch_mm": 0.078125,
+              "origin_xyz": [
+                181,
+                161,
+                173
+              ],
+              "shape_xyz": [
+                128,
+                120,
+                99
+              ],
+              "offset_bytes": 28311672,
+              "size_bytes": 6082560
+            },
+            {
+              "n": 1024,
+              "fov_mm": 32,
+              "pitch_mm": 0.03125,
+              "origin_xyz": [
+                377,
+                397,
+                425
+              ],
+              "shape_xyz": [
+                193,
+                159,
+                131
+              ],
+              "offset_bytes": 34394232,
+              "size_bytes": 16079988
+            }
+          ],
+          "output_bytes": 50474220,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 135,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 94588148,
+          "host_pinned_bytes": 13692928,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70858354688,
+          "free_at_allocation_bytes": 70745366528,
+          "filter_ms": 56.9318,
+          "bp_ms": 57.0842,
+          "h2d_ms": 4.3909,
+          "d2h_ms": 0.9042,
+          "wall_ms": 458.941
+        }
+      ],
+      "process_times_ms": [
+        631.203514
+      ],
+      "native_process_ms": 631.203514,
+      "per_grid_sha256": [
+        "22d2c3cc88a58c68dd9f6fff27631c525805053d6bb1628bec1f5bb9ef46885d",
+        "0297ab1e854dd9a6e1914fead9fda641991888bca570d76a5fd5f598d8c7a1b3",
+        "90eab0011e334f9a2f1622515e71b47a8965c39e91eb58903da8cf5a78b0432e"
+      ],
+      "scan_bytes": 238694400,
+      "peak_owned_bytes": 94588148
+    },
+    {
+      "block": 1,
+      "arm": "serial",
+      "native": [
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "n": 192,
+          "batch": 16,
+          "voxel_spacing_mm": 0.208333328,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "roi_origin_xyz": [
+            0,
+            0,
+            0
+          ],
+          "output_shape_xyz": [
+            192,
+            192,
+            192
+          ],
+          "slab": 192,
+          "slabs": 1,
+          "output_bytes": 28311552,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 45,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 72425600,
+          "host_pinned_bytes": 13692928,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70857973760,
+          "free_at_allocation_bytes": 70771658752,
+          "filter_ms": 57.0516,
+          "bp_ms": 33.8156,
+          "h2d_ms": 4.5105,
+          "d2h_ms": 0.5049,
+          "wall_ms": 431.1737
+        },
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "n": 512,
+          "batch": 16,
+          "voxel_spacing_mm": 0.078125,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "roi_origin_xyz": [
+            181,
+            161,
+            173
+          ],
+          "output_shape_xyz": [
+            128,
+            120,
+            99
+          ],
+          "slab": 99,
+          "slabs": 1,
+          "output_bytes": 6082560,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 45,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 50196608,
+          "host_pinned_bytes": 11386880,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70744334336,
+          "free_at_allocation_bytes": 70680563712,
+          "filter_ms": 60.0892,
+          "bp_ms": 6.7868,
+          "h2d_ms": 5.0195,
+          "d2h_ms": 0.1073,
+          "wall_ms": 406.164
+        },
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "n": 1024,
+          "batch": 16,
+          "voxel_spacing_mm": 0.03125,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "roi_origin_xyz": [
+            377,
+            397,
+            425
+          ],
+          "output_shape_xyz": [
+            193,
+            159,
+            131
+          ],
+          "slab": 131,
+          "slabs": 1,
+          "output_bytes": 16079988,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 45,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 60194036,
+          "host_pinned_bytes": 13692928,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70700630016,
+          "free_at_allocation_bytes": 70624727040,
+          "filter_ms": 60.9883,
+          "bp_ms": 12.8557,
+          "h2d_ms": 4.5081,
+          "d2h_ms": 0.2931,
+          "wall_ms": 405.9151
+        }
+      ],
+      "process_times_ms": [
+        606.924902,
+        580.7512,
+        574.146381
+      ],
+      "native_process_ms": 1761.822483,
+      "per_grid_sha256": [
+        "22d2c3cc88a58c68dd9f6fff27631c525805053d6bb1628bec1f5bb9ef46885d",
+        "0297ab1e854dd9a6e1914fead9fda641991888bca570d76a5fd5f598d8c7a1b3",
+        "90eab0011e334f9a2f1622515e71b47a8965c39e91eb58903da8cf5a78b0432e"
+      ],
+      "scan_bytes": 716083200,
+      "peak_owned_bytes": 72425600
+    },
+    {
+      "block": 2,
+      "arm": "serial",
+      "native": [
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "n": 192,
+          "batch": 16,
+          "voxel_spacing_mm": 0.208333328,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "roi_origin_xyz": [
+            0,
+            0,
+            0
+          ],
+          "output_shape_xyz": [
+            192,
+            192,
+            192
+          ],
+          "slab": 192,
+          "slabs": 1,
+          "output_bytes": 28311552,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 45,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 72425600,
+          "host_pinned_bytes": 13692928,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70706753536,
+          "free_at_allocation_bytes": 70616244224,
+          "filter_ms": 57.1451,
+          "bp_ms": 34.708,
+          "h2d_ms": 4.5724,
+          "d2h_ms": 0.5295,
+          "wall_ms": 430.3313
+        },
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "n": 512,
+          "batch": 16,
+          "voxel_spacing_mm": 0.078125,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "roi_origin_xyz": [
+            181,
+            161,
+            173
+          ],
+          "output_shape_xyz": [
+            128,
+            120,
+            99
+          ],
+          "slab": 99,
+          "slabs": 1,
+          "output_bytes": 6082560,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 45,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 50196608,
+          "host_pinned_bytes": 11386880,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70687100928,
+          "free_at_allocation_bytes": 70623330304,
+          "filter_ms": 58.8292,
+          "bp_ms": 6.6185,
+          "h2d_ms": 4.7914,
+          "d2h_ms": 0.1084,
+          "wall_ms": 405.561
+        },
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "n": 1024,
+          "batch": 16,
+          "voxel_spacing_mm": 0.03125,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "roi_origin_xyz": [
+            377,
+            397,
+            425
+          ],
+          "output_shape_xyz": [
+            193,
+            159,
+            131
+          ],
+          "slab": 131,
+          "slabs": 1,
+          "output_bytes": 16079988,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 45,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 60194036,
+          "host_pinned_bytes": 13692928,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70700716032,
+          "free_at_allocation_bytes": 70630072320,
+          "filter_ms": 56.7291,
+          "bp_ms": 12.8231,
+          "h2d_ms": 4.3698,
+          "d2h_ms": 0.2779,
+          "wall_ms": 399.5948
+        }
+      ],
+      "process_times_ms": [
+        603.417626,
+        546.251166,
+        567.865412
+      ],
+      "native_process_ms": 1717.534204,
+      "per_grid_sha256": [
+        "22d2c3cc88a58c68dd9f6fff27631c525805053d6bb1628bec1f5bb9ef46885d",
+        "0297ab1e854dd9a6e1914fead9fda641991888bca570d76a5fd5f598d8c7a1b3",
+        "90eab0011e334f9a2f1622515e71b47a8965c39e91eb58903da8cf5a78b0432e"
+      ],
+      "scan_bytes": 716083200,
+      "peak_owned_bytes": 72425600
+    },
+    {
+      "block": 2,
+      "arm": "shared",
+      "native": [
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "first_grid_n": 192,
+          "batch": 16,
+          "first_voxel_spacing_mm": 0.208333328,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "format": "CFDKMG01",
+          "regions": [
+            {
+              "n": 192,
+              "fov_mm": 40,
+              "pitch_mm": 0.208333328,
+              "origin_xyz": [
+                0,
+                0,
+                0
+              ],
+              "shape_xyz": [
+                192,
+                192,
+                192
+              ],
+              "offset_bytes": 120,
+              "size_bytes": 28311552
+            },
+            {
+              "n": 512,
+              "fov_mm": 40,
+              "pitch_mm": 0.078125,
+              "origin_xyz": [
+                181,
+                161,
+                173
+              ],
+              "shape_xyz": [
+                128,
+                120,
+                99
+              ],
+              "offset_bytes": 28311672,
+              "size_bytes": 6082560
+            },
+            {
+              "n": 1024,
+              "fov_mm": 32,
+              "pitch_mm": 0.03125,
+              "origin_xyz": [
+                377,
+                397,
+                425
+              ],
+              "shape_xyz": [
+                193,
+                159,
+                131
+              ],
+              "offset_bytes": 34394232,
+              "size_bytes": 16079988
+            }
+          ],
+          "output_bytes": 50474220,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 135,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 94588148,
+          "host_pinned_bytes": 13692928,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70753992704,
+          "free_at_allocation_bytes": 70641070080,
+          "filter_ms": 60.7768,
+          "bp_ms": 56.4799,
+          "h2d_ms": 4.4152,
+          "d2h_ms": 0.8958,
+          "wall_ms": 476.4207
+        }
+      ],
+      "process_times_ms": [
+        642.17378
+      ],
+      "native_process_ms": 642.17378,
+      "per_grid_sha256": [
+        "22d2c3cc88a58c68dd9f6fff27631c525805053d6bb1628bec1f5bb9ef46885d",
+        "0297ab1e854dd9a6e1914fead9fda641991888bca570d76a5fd5f598d8c7a1b3",
+        "90eab0011e334f9a2f1622515e71b47a8965c39e91eb58903da8cf5a78b0432e"
+      ],
+      "scan_bytes": 238694400,
+      "peak_owned_bytes": 94588148
+    },
+    {
+      "block": 3,
+      "arm": "shared",
+      "native": [
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "first_grid_n": 192,
+          "batch": 16,
+          "first_voxel_spacing_mm": 0.208333328,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "format": "CFDKMG01",
+          "regions": [
+            {
+              "n": 192,
+              "fov_mm": 40,
+              "pitch_mm": 0.208333328,
+              "origin_xyz": [
+                0,
+                0,
+                0
+              ],
+              "shape_xyz": [
+                192,
+                192,
+                192
+              ],
+              "offset_bytes": 120,
+              "size_bytes": 28311552
+            },
+            {
+              "n": 512,
+              "fov_mm": 40,
+              "pitch_mm": 0.078125,
+              "origin_xyz": [
+                181,
+                161,
+                173
+              ],
+              "shape_xyz": [
+                128,
+                120,
+                99
+              ],
+              "offset_bytes": 28311672,
+              "size_bytes": 6082560
+            },
+            {
+              "n": 1024,
+              "fov_mm": 32,
+              "pitch_mm": 0.03125,
+              "origin_xyz": [
+                377,
+                397,
+                425
+              ],
+              "shape_xyz": [
+                193,
+                159,
+                131
+              ],
+              "offset_bytes": 34394232,
+              "size_bytes": 16079988
+            }
+          ],
+          "output_bytes": 50474220,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 135,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 94588148,
+          "host_pinned_bytes": 13692928,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70787158016,
+          "free_at_allocation_bytes": 70673649664,
+          "filter_ms": 57.1874,
+          "bp_ms": 56.9285,
+          "h2d_ms": 4.4233,
+          "d2h_ms": 0.8811,
+          "wall_ms": 468.0025
+        }
+      ],
+      "process_times_ms": [
+        642.868913
+      ],
+      "native_process_ms": 642.868913,
+      "per_grid_sha256": [
+        "22d2c3cc88a58c68dd9f6fff27631c525805053d6bb1628bec1f5bb9ef46885d",
+        "0297ab1e854dd9a6e1914fead9fda641991888bca570d76a5fd5f598d8c7a1b3",
+        "90eab0011e334f9a2f1622515e71b47a8965c39e91eb58903da8cf5a78b0432e"
+      ],
+      "scan_bytes": 238694400,
+      "peak_owned_bytes": 94588148
+    },
+    {
+      "block": 3,
+      "arm": "serial",
+      "native": [
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "n": 192,
+          "batch": 16,
+          "voxel_spacing_mm": 0.208333328,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "roi_origin_xyz": [
+            0,
+            0,
+            0
+          ],
+          "output_shape_xyz": [
+            192,
+            192,
+            192
+          ],
+          "slab": 192,
+          "slabs": 1,
+          "output_bytes": 28311552,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 45,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 72425600,
+          "host_pinned_bytes": 13692928,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70759223296,
+          "free_at_allocation_bytes": 70676975616,
+          "filter_ms": 60.0486,
+          "bp_ms": 34.2851,
+          "h2d_ms": 4.4602,
+          "d2h_ms": 0.5072,
+          "wall_ms": 439.6787
+        },
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "n": 512,
+          "batch": 16,
+          "voxel_spacing_mm": 0.078125,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "roi_origin_xyz": [
+            181,
+            161,
+            173
+          ],
+          "output_shape_xyz": [
+            128,
+            120,
+            99
+          ],
+          "slab": 99,
+          "slabs": 1,
+          "output_bytes": 6082560,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 45,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 50196608,
+          "host_pinned_bytes": 11386880,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70807965696,
+          "free_at_allocation_bytes": 70740131840,
+          "filter_ms": 56.311,
+          "bp_ms": 6.6359,
+          "h2d_ms": 4.5263,
+          "d2h_ms": 0.1085,
+          "wall_ms": 387.1043
+        },
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "n": 1024,
+          "batch": 16,
+          "voxel_spacing_mm": 0.03125,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "roi_origin_xyz": [
+            377,
+            397,
+            425
+          ],
+          "output_shape_xyz": [
+            193,
+            159,
+            131
+          ],
+          "slab": 131,
+          "slabs": 1,
+          "output_bytes": 16079988,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 45,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 60194036,
+          "host_pinned_bytes": 13692928,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70774423552,
+          "free_at_allocation_bytes": 70700019712,
+          "filter_ms": 60.2314,
+          "bp_ms": 12.9545,
+          "h2d_ms": 4.5558,
+          "d2h_ms": 0.3136,
+          "wall_ms": 414.7187
+        }
+      ],
+      "process_times_ms": [
+        618.725667,
+        556.266735,
+        556.164947
+      ],
+      "native_process_ms": 1731.157349,
+      "per_grid_sha256": [
+        "22d2c3cc88a58c68dd9f6fff27631c525805053d6bb1628bec1f5bb9ef46885d",
+        "0297ab1e854dd9a6e1914fead9fda641991888bca570d76a5fd5f598d8c7a1b3",
+        "90eab0011e334f9a2f1622515e71b47a8965c39e91eb58903da8cf5a78b0432e"
+      ],
+      "scan_bytes": 716083200,
+      "peak_owned_bytes": 72425600
+    },
+    {
+      "block": 4,
+      "arm": "serial",
+      "native": [
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "n": 192,
+          "batch": 16,
+          "voxel_spacing_mm": 0.208333328,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "roi_origin_xyz": [
+            0,
+            0,
+            0
+          ],
+          "output_shape_xyz": [
+            192,
+            192,
+            192
+          ],
+          "slab": 192,
+          "slabs": 1,
+          "output_bytes": 28311552,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 45,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 72425600,
+          "host_pinned_bytes": 13692928,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70736080896,
+          "free_at_allocation_bytes": 70649159680,
+          "filter_ms": 59.5899,
+          "bp_ms": 35.1592,
+          "h2d_ms": 4.5886,
+          "d2h_ms": 0.5186,
+          "wall_ms": 444.5101
+        },
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "n": 512,
+          "batch": 16,
+          "voxel_spacing_mm": 0.078125,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "roi_origin_xyz": [
+            181,
+            161,
+            173
+          ],
+          "output_shape_xyz": [
+            128,
+            120,
+            99
+          ],
+          "slab": 99,
+          "slabs": 1,
+          "output_bytes": 6082560,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 45,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 50196608,
+          "host_pinned_bytes": 11386880,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70778228736,
+          "free_at_allocation_bytes": 70713982976,
+          "filter_ms": 60.0678,
+          "bp_ms": 6.7294,
+          "h2d_ms": 4.7147,
+          "d2h_ms": 0.108,
+          "wall_ms": 400.9191
+        },
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "n": 1024,
+          "batch": 16,
+          "voxel_spacing_mm": 0.03125,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "roi_origin_xyz": [
+            377,
+            397,
+            425
+          ],
+          "output_shape_xyz": [
+            193,
+            159,
+            131
+          ],
+          "slab": 131,
+          "slabs": 1,
+          "output_bytes": 16079988,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 45,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 60194036,
+          "host_pinned_bytes": 13692928,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70746824704,
+          "free_at_allocation_bytes": 70676635648,
+          "filter_ms": 57.0436,
+          "bp_ms": 12.8332,
+          "h2d_ms": 4.6198,
+          "d2h_ms": 0.3167,
+          "wall_ms": 396.8155
+        }
+      ],
+      "process_times_ms": [
+        622.132564,
+        572.651632,
+        539.684482
+      ],
+      "native_process_ms": 1734.468678,
+      "per_grid_sha256": [
+        "22d2c3cc88a58c68dd9f6fff27631c525805053d6bb1628bec1f5bb9ef46885d",
+        "0297ab1e854dd9a6e1914fead9fda641991888bca570d76a5fd5f598d8c7a1b3",
+        "90eab0011e334f9a2f1622515e71b47a8965c39e91eb58903da8cf5a78b0432e"
+      ],
+      "scan_bytes": 716083200,
+      "peak_owned_bytes": 72425600
+    },
+    {
+      "block": 4,
+      "arm": "shared",
+      "native": [
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "first_grid_n": 192,
+          "batch": 16,
+          "first_voxel_spacing_mm": 0.208333328,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "format": "CFDKMG01",
+          "regions": [
+            {
+              "n": 192,
+              "fov_mm": 40,
+              "pitch_mm": 0.208333328,
+              "origin_xyz": [
+                0,
+                0,
+                0
+              ],
+              "shape_xyz": [
+                192,
+                192,
+                192
+              ],
+              "offset_bytes": 120,
+              "size_bytes": 28311552
+            },
+            {
+              "n": 512,
+              "fov_mm": 40,
+              "pitch_mm": 0.078125,
+              "origin_xyz": [
+                181,
+                161,
+                173
+              ],
+              "shape_xyz": [
+                128,
+                120,
+                99
+              ],
+              "offset_bytes": 28311672,
+              "size_bytes": 6082560
+            },
+            {
+              "n": 1024,
+              "fov_mm": 32,
+              "pitch_mm": 0.03125,
+              "origin_xyz": [
+                377,
+                397,
+                425
+              ],
+              "shape_xyz": [
+                193,
+                159,
+                131
+              ],
+              "offset_bytes": 34394232,
+              "size_bytes": 16079988
+            }
+          ],
+          "output_bytes": 50474220,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 135,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 94588148,
+          "host_pinned_bytes": 13692928,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70810640384,
+          "free_at_allocation_bytes": 70704218112,
+          "filter_ms": 60.6872,
+          "bp_ms": 56.35,
+          "h2d_ms": 4.8344,
+          "d2h_ms": 0.9331,
+          "wall_ms": 473.417
+        }
+      ],
+      "process_times_ms": [
+        647.799436
+      ],
+      "native_process_ms": 647.799436,
+      "per_grid_sha256": [
+        "22d2c3cc88a58c68dd9f6fff27631c525805053d6bb1628bec1f5bb9ef46885d",
+        "0297ab1e854dd9a6e1914fead9fda641991888bca570d76a5fd5f598d8c7a1b3",
+        "90eab0011e334f9a2f1622515e71b47a8965c39e91eb58903da8cf5a78b0432e"
+      ],
+      "scan_bytes": 238694400,
+      "peak_owned_bytes": 94588148
+    },
+    {
+      "block": 5,
+      "arm": "shared",
+      "native": [
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "first_grid_n": 192,
+          "batch": 16,
+          "first_voxel_spacing_mm": 0.208333328,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "format": "CFDKMG01",
+          "regions": [
+            {
+              "n": 192,
+              "fov_mm": 40,
+              "pitch_mm": 0.208333328,
+              "origin_xyz": [
+                0,
+                0,
+                0
+              ],
+              "shape_xyz": [
+                192,
+                192,
+                192
+              ],
+              "offset_bytes": 120,
+              "size_bytes": 28311552
+            },
+            {
+              "n": 512,
+              "fov_mm": 40,
+              "pitch_mm": 0.078125,
+              "origin_xyz": [
+                181,
+                161,
+                173
+              ],
+              "shape_xyz": [
+                128,
+                120,
+                99
+              ],
+              "offset_bytes": 28311672,
+              "size_bytes": 6082560
+            },
+            {
+              "n": 1024,
+              "fov_mm": 32,
+              "pitch_mm": 0.03125,
+              "origin_xyz": [
+                377,
+                397,
+                425
+              ],
+              "shape_xyz": [
+                193,
+                159,
+                131
+              ],
+              "offset_bytes": 34394232,
+              "size_bytes": 16079988
+            }
+          ],
+          "output_bytes": 50474220,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 135,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 94588148,
+          "host_pinned_bytes": 13692928,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70878269440,
+          "free_at_allocation_bytes": 70768144384,
+          "filter_ms": 56.6095,
+          "bp_ms": 55.933,
+          "h2d_ms": 4.478,
+          "d2h_ms": 1.0899,
+          "wall_ms": 465.5473
+        }
+      ],
+      "process_times_ms": [
+        643.082469
+      ],
+      "native_process_ms": 643.082469,
+      "per_grid_sha256": [
+        "22d2c3cc88a58c68dd9f6fff27631c525805053d6bb1628bec1f5bb9ef46885d",
+        "0297ab1e854dd9a6e1914fead9fda641991888bca570d76a5fd5f598d8c7a1b3",
+        "90eab0011e334f9a2f1622515e71b47a8965c39e91eb58903da8cf5a78b0432e"
+      ],
+      "scan_bytes": 238694400,
+      "peak_owned_bytes": 94588148
+    },
+    {
+      "block": 5,
+      "arm": "serial",
+      "native": [
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "n": 192,
+          "batch": 16,
+          "voxel_spacing_mm": 0.208333328,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "roi_origin_xyz": [
+            0,
+            0,
+            0
+          ],
+          "output_shape_xyz": [
+            192,
+            192,
+            192
+          ],
+          "slab": 192,
+          "slabs": 1,
+          "output_bytes": 28311552,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 45,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 72425600,
+          "host_pinned_bytes": 13692928,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70835523584,
+          "free_at_allocation_bytes": 70748311552,
+          "filter_ms": 57.0182,
+          "bp_ms": 34.5478,
+          "h2d_ms": 4.2564,
+          "d2h_ms": 0.4907,
+          "wall_ms": 431.8026
+        },
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "n": 512,
+          "batch": 16,
+          "voxel_spacing_mm": 0.078125,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "roi_origin_xyz": [
+            181,
+            161,
+            173
+          ],
+          "output_shape_xyz": [
+            128,
+            120,
+            99
+          ],
+          "slab": 99,
+          "slabs": 1,
+          "output_bytes": 6082560,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 45,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 50196608,
+          "host_pinned_bytes": 11386880,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70743678976,
+          "free_at_allocation_bytes": 70679482368,
+          "filter_ms": 56.7406,
+          "bp_ms": 6.6422,
+          "h2d_ms": 4.5986,
+          "d2h_ms": 0.1076,
+          "wall_ms": 394.6039
+        },
+        {
+          "gpu": "NVIDIA GB10",
+          "driver_api": 13000,
+          "cufft_version": 12000,
+          "views": 720,
+          "n": 1024,
+          "batch": 16,
+          "voxel_spacing_mm": 0.03125,
+          "planner": "batch-first",
+          "requested_batch": 16,
+          "effective_budget_bytes": 268435456,
+          "feasible_plans_scored": [
+            {
+              "batch": 16,
+              "passes": 1
+            }
+          ],
+          "roi_origin_xyz": [
+            377,
+            397,
+            425
+          ],
+          "output_shape_xyz": [
+            193,
+            159,
+            131
+          ],
+          "slab": 131,
+          "slabs": 1,
+          "output_bytes": 16079988,
+          "projection_passes": 1,
+          "projection_bytes_read": 238694400,
+          "filter_batches": 45,
+          "launches_bp": 45,
+          "budget_bytes": 268435456,
+          "redzones_verified": true,
+          "peak_owned_bytes": 60194036,
+          "host_pinned_bytes": 13692928,
+          "fft_workspace_bytes": 0,
+          "free_before_bytes": 70780346368,
+          "free_at_allocation_bytes": 70703722496,
+          "filter_ms": 60.5777,
+          "bp_ms": 13.3085,
+          "h2d_ms": 4.5451,
+          "d2h_ms": 0.2876,
+          "wall_ms": 419.5492
+        }
+      ],
+      "process_times_ms": [
+        598.930857,
+        566.150058,
+        596.304469
+      ],
+      "native_process_ms": 1761.385384,
+      "per_grid_sha256": [
+        "22d2c3cc88a58c68dd9f6fff27631c525805053d6bb1628bec1f5bb9ef46885d",
+        "0297ab1e854dd9a6e1914fead9fda641991888bca570d76a5fd5f598d8c7a1b3",
+        "90eab0011e334f9a2f1622515e71b47a8965c39e91eb58903da8cf5a78b0432e"
+      ],
+      "scan_bytes": 716083200,
+      "peak_owned_bytes": 72425600
+    }
+  ],
+  "decision": {
+    "serial_ms": 1742.9524179999999,
+    "shared_ms": 642.5213464999999,
+    "reduction": 0.6313603631031539,
+    "wins": 6,
+    "pairs": 6,
+    "gate": true
+  },
+  "scope": "Three independent direct FDK requests of the same 720-view walnut, same batch, one whole 192 grid and two ROIs of 512/1024 parent grids with different FOVs. Native process times include spawn, GPU work and output fsync (3 files vs 1 pack), exclude hash checks, input sealing, and NRRD export. Warm page cache. No spatial resolution or physical dimension accuracy claim."
+}

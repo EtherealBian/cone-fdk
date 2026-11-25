@@ -1,0 +1,13 @@
+{
+  "format": "CFDK-paired-volume-residual-protocol-v1",
+  "layout": "native candidate minus independent reference; little-endian finite binary32 dense voxels, x fastest, then y and z, identical grid and units; no fitting, interpolation, cropping or rescaling",
+  "scope": "Same-grid floating point agreement; not physical accuracy, calibrated dimensions, defect detection, or an acceptance criterion for specimens.",
+  "cuts_pow2": [-20, -18, -16, -14],
+  "exceedance": "strict absolute difference greater than each exact power of two (equality excluded), not a physical defect threshold",
+  "registration": "none",
+  "tie_break": "first row-major x-fastest voxel among equal absolute maxima, including all-equal and signed-zero input",
+  "moments": "binary64 signed sum, absolute sum, squared difference sum, reference energy; ratio sqrt(SSE/Eref) undefined (null) when reference energy is zero",
+  "oracle": "every plane: exact integer counts, first index and binary64 maximum; signed sum error <= 2e-13 * oracle absolute sum, absolute sum/SSE/reference-energy error <= 2e-13 * magnitude; zero scale requires exact zero",
+  "bounds": "each dimension 1..2048, at most 134217728 voxels, band 1..64 planes, budget 1..1024 MiB; device data buffers and explicit guard zones only, not total driver memory",
+  "measured_acceptance": "Preserve previously accepted source and reconstruction hashes. For measured comparisons require agreement with the already frozen engine-to-engine global max and rel L2. No new physical accuracy claim."
+}
