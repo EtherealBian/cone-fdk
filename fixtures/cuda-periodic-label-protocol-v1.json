@@ -1,0 +1,8 @@
+{
+  "format": "CFDK-periodic-cuda-label-protocol-v1",
+  "scope": "Standalone exact full-label backend for material-cylinder masks, not a new reconstruction or physical measurement. No change to existing native executable, PTX, witness chain, or striped summary.",
+  "input": {"layout": "scenario, axial row, azimuth column", "u8_codes": {"below": 0, "observed_flagged": 1, "unknown": 2}, "max_height": 4096, "min_width": 3, "max_width": 4096},
+  "output": {"type": "little-endian int32", "below": 0, "unknown": -1, "component_id": "first row-major flagged cell plus one, independent in every scenario", "connectivity": "four neighbours; column wrap only; no diagonal or blind bridge"},
+  "correctness": {"tiny_shape_ha": [2, 3], "all_ternary_masks": 729, "native_pinned_maps": 40, "native_paired_cells": 590400, "large_shape_ha": [1536, 960], "large_maps": 9, "large_pair_cells": 13271040, "max_mismatched_cells": 0, "minimum_repeated_large_runs": 3, "device_budget_mib": 32, "requires_redzones": true, "requires_two_identical_builds": true, "requires_reject_unchanged_destination": ["invalid ternary byte in last map", "truncated input", "existing destination", "inadequate device budget"]},
+  "timing": {"comparand": "same preclassified masks and dense labels only; no end-to-end CT acceleration claim", "alternating_pairs": 6, "require_identical_output_bytes": true, "disclose_startup_and_io_boundary": true, "claim_faster_only_if_wins_at_least": 5, "claim_faster_only_if_median_ratio_at_most": 0.95, "failed_speed_gate_action": "report actual data and leave existing default unchanged"}
+}
