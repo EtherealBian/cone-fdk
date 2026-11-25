@@ -1,0 +1,54 @@
+{
+  "protocol": "Five simulated inspection jobs, not five independent specimens. Fresh batch plus fully revalidated resume; all three region documents match independently qualified single jobs.",
+  "recipe_sha256": "bf6d03b0be176beffbfa30f693d4a9f4316728047b1e3f3cb33815c2fe7978a2",
+  "engine_sha256": "c1249504dfc362370aef566cddb4f87487a18dadb9d88acf8f05e96305d2d25e",
+  "manifest_sha256": "e22a88e461a2318a046d3a9db8d3fa684e1c4c535813f6cc192aea94a9b20931",
+  "counts": {
+    "complete_coverage": 2,
+    "incomplete_coverage": 1,
+    "upstream_refused": 2,
+    "input_error": 0
+  },
+  "fresh": {
+    "computed": 5,
+    "reused": 0,
+    "input_errors": 0
+  },
+  "resume": {
+    "computed": 0,
+    "reused": 5,
+    "input_errors": 0
+  },
+  "entries": {
+    "repeat": {
+      "kind": "edge",
+      "status": "complete_coverage",
+      "source_manifest_sha256": "9cb099d4ddcc76b5b9a9701990bdbdd6543346592a9f5638e026d6b6280d2e2f",
+      "result_sha256": "29ca8277d740cfdb9b79a36f614aab02a15713780bd5def109257ee8256a5f6f"
+    },
+    "noisy-change": {
+      "kind": "edge",
+      "status": "complete_coverage",
+      "source_manifest_sha256": "91a3d0652ef6031cd72443e72c66971b0e5ef41abbb3a2cbb0d35edb055e968f",
+      "result_sha256": "122ecc1be0ec2e277c0deed66f0b4f288075b14a20025f798df84c1f02ab7615"
+    },
+    "invalid-edge-control": {
+      "kind": "edge",
+      "status": "incomplete_coverage",
+      "source_manifest_sha256": "28b3cd044f8b4a174dfbde30096c429af3180c8c4d332b4b0983d6dc63c655cc",
+      "result_sha256": "8031022e605a6e7c6feb53274b8f17ef203eb860744aa914681ea9dfaa5dbc11"
+    },
+    "slide": {
+      "kind": "witness-refusal",
+      "status": "upstream_refused",
+      "source_manifest_sha256": "1eed21b8f8bd2b125088740c151533ef2adb9777f0ef70544b612579bbd02ef6",
+      "result_sha256": "be815d751bcffabec80144f93b4a4f952a8c165ea2347fd078e68c99f3a7068b"
+    },
+    "missing-reference": {
+      "kind": "witness-refusal",
+      "status": "upstream_refused",
+      "source_manifest_sha256": "8b74eb042f4044931457a1c4fa5e232c19e8b52763482576df5e3e1609cc574c",
+      "result_sha256": "8d9559167194625f885dd77ab6f9cc0c5d0085ee4582466b1fb06fee23639400"
+    }
+  }
+}

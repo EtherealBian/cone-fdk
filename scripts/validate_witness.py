@@ -310,11 +310,25 @@ if __name__ == "__main__":
         action="store_true",
         help="also qualify independent wall edge levels before discarding parent jobs",
     )
+    p.add_argument(
+        "--region-review",
+        action="store_true",
+        help="also verify all global region pairs against native CUDA loss and independent CPU labels",
+    )
     args = p.parse_args()
     with TemporaryDirectory() as tmp:
         base = args.keep or Path(tmp)
         qualify(base, args.reports)
-        if args.edge_review:
+        if args.edge_review or args.region_review:
             from validate_edges import qualify as qualify_edges
 
             qualify_edges(base, base / "edge-reviews", args.reports)
+        if args.region_review:
+            from validate_regions import qualify as qualify_regions
+
+            qualify_regions(
+                base / "edge-reviews",
+                base / "region-reviews",
+                args.reports,
+                args.reports / "edge-qualification.json",
+            )

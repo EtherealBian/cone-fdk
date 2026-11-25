@@ -1,0 +1,470 @@
+{
+  "format": "CFDK-region-review-v1",
+  "edge_manifest_sha256": "91a3d0652ef6031cd72443e72c66971b0e5ef41abbb3a2cbb0d35edb055e968f",
+  "shape_ha": [
+    41,
+    360
+  ],
+  "levels_per_mm": [
+    0.018,
+    0.02,
+    0.022
+  ],
+  "nominal_pair": [
+    1,
+    1
+  ],
+  "loss_gate_mm": 0.3,
+  "area_radius_mm": 9.4,
+  "projected_cell_area_mm2": 0.0328121899374934,
+  "connectivity": 4,
+  "periodic_columns": true,
+  "observed_union_cells": 275,
+  "always_flagged_cells": 253,
+  "incomplete_pair_count": 0,
+  "observed_extrema": {
+    "observed_flagged_cells": {
+      "min": {
+        "value": 253,
+        "pairs": [
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "max": {
+        "value": 275,
+        "pairs": [
+          [
+            0,
+            2
+          ]
+        ]
+      }
+    },
+    "region_count": {
+      "min": {
+        "value": 1,
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      },
+      "max": {
+        "value": 1,
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ]
+      }
+    },
+    "largest_observed_cells": {
+      "min": {
+        "value": 253,
+        "pairs": [
+          [
+            2,
+            0
+          ]
+        ]
+      },
+      "max": {
+        "value": 275,
+        "pairs": [
+          [
+            0,
+            2
+          ]
+        ]
+      }
+    }
+  },
+  "complete_grid_flagged_extrema": {
+    "min": {
+      "value": 253,
+      "pairs": [
+        [
+          2,
+          0
+        ]
+      ]
+    },
+    "max": {
+      "value": 275,
+      "pairs": [
+        [
+          0,
+          2
+        ]
+      ]
+    }
+  },
+  "scenarios": [
+    {
+      "pair": [
+        0,
+        0
+      ],
+      "observed_flagged_cells": 262,
+      "unknown_cells": 0,
+      "region_count": 1,
+      "largest_observed_cells": 262,
+      "regions": [
+        {
+          "id": 8403,
+          "cells": 262,
+          "area_mm2": 8.596793763623271,
+          "peak_loss_mm": 0.7687971199364556,
+          "peak_cell": [
+            31,
+            134
+          ],
+          "crosses_seam": false,
+          "adjacent_unknown": false,
+          "touches_axial_end": false
+        }
+      ],
+      "nominal_overlap": [
+        [
+          8403,
+          8403,
+          262
+        ]
+      ],
+      "labels_i32le_sha256": "feffbad21622a1aaabfe1c3516c846008516c381817a73673d35787070aa2cdc"
+    },
+    {
+      "pair": [
+        0,
+        1
+      ],
+      "observed_flagged_cells": 271,
+      "unknown_cells": 0,
+      "region_count": 1,
+      "largest_observed_cells": 271,
+      "regions": [
+        {
+          "id": 8403,
+          "cells": 271,
+          "area_mm2": 8.892103473060711,
+          "peak_loss_mm": 0.7803215582800744,
+          "peak_cell": [
+            31,
+            134
+          ],
+          "crosses_seam": false,
+          "adjacent_unknown": false,
+          "touches_axial_end": false
+        }
+      ],
+      "nominal_overlap": [
+        [
+          8403,
+          8403,
+          263
+        ]
+      ],
+      "labels_i32le_sha256": "3c310677ddce8ab71a7c3c7c866ee45220062046a8c010165310ec7792aa2e44"
+    },
+    {
+      "pair": [
+        0,
+        2
+      ],
+      "observed_flagged_cells": 275,
+      "unknown_cells": 0,
+      "region_count": 1,
+      "largest_observed_cells": 275,
+      "regions": [
+        {
+          "id": 8403,
+          "cells": 275,
+          "area_mm2": 9.023352232810685,
+          "peak_loss_mm": 0.7919764747147564,
+          "peak_cell": [
+            31,
+            134
+          ],
+          "crosses_seam": false,
+          "adjacent_unknown": false,
+          "touches_axial_end": false
+        }
+      ],
+      "nominal_overlap": [
+        [
+          8403,
+          8403,
+          263
+        ]
+      ],
+      "labels_i32le_sha256": "aa439eabcadbd081fe1e5d5e8f95d07f8e90eef2ccca86989673468937e14a19"
+    },
+    {
+      "pair": [
+        1,
+        0
+      ],
+      "observed_flagged_cells": 254,
+      "unknown_cells": 0,
+      "region_count": 1,
+      "largest_observed_cells": 254,
+      "regions": [
+        {
+          "id": 8404,
+          "cells": 254,
+          "area_mm2": 8.334296244123324,
+          "peak_loss_mm": 0.7592405962011455,
+          "peak_cell": [
+            31,
+            134
+          ],
+          "crosses_seam": false,
+          "adjacent_unknown": false,
+          "touches_axial_end": false
+        }
+      ],
+      "nominal_overlap": [
+        [
+          8403,
+          8404,
+          254
+        ]
+      ],
+      "labels_i32le_sha256": "e54986a17daf61c7e158552a257e8db944bbc4c83ac9264b9a27d86096b00eb8"
+    },
+    {
+      "pair": [
+        1,
+        1
+      ],
+      "observed_flagged_cells": 263,
+      "unknown_cells": 0,
+      "region_count": 1,
+      "largest_observed_cells": 263,
+      "regions": [
+        {
+          "id": 8403,
+          "cells": 263,
+          "area_mm2": 8.629605953560764,
+          "peak_loss_mm": 0.7707650345447643,
+          "peak_cell": [
+            31,
+            134
+          ],
+          "crosses_seam": false,
+          "adjacent_unknown": false,
+          "touches_axial_end": false
+        }
+      ],
+      "nominal_overlap": [
+        [
+          8403,
+          8403,
+          263
+        ]
+      ],
+      "labels_i32le_sha256": "57f0de6dc7ca561847c0db4683e874bcf7a614a78a60ce1c968d2518b96b2087"
+    },
+    {
+      "pair": [
+        1,
+        2
+      ],
+      "observed_flagged_cells": 272,
+      "unknown_cells": 0,
+      "region_count": 1,
+      "largest_observed_cells": 272,
+      "regions": [
+        {
+          "id": 8403,
+          "cells": 272,
+          "area_mm2": 8.924915662998204,
+          "peak_loss_mm": 0.7824199509794463,
+          "peak_cell": [
+            31,
+            134
+          ],
+          "crosses_seam": false,
+          "adjacent_unknown": false,
+          "touches_axial_end": false
+        }
+      ],
+      "nominal_overlap": [
+        [
+          8403,
+          8403,
+          263
+        ]
+      ],
+      "labels_i32le_sha256": "229e6c78bf07118512fa7325f617ce465446220ec104a6c32f7aa1cf643991f2"
+    },
+    {
+      "pair": [
+        2,
+        0
+      ],
+      "observed_flagged_cells": 253,
+      "unknown_cells": 0,
+      "region_count": 1,
+      "largest_observed_cells": 253,
+      "regions": [
+        {
+          "id": 8404,
+          "cells": 253,
+          "area_mm2": 8.301484054185831,
+          "peak_loss_mm": 0.7496840724658353,
+          "peak_cell": [
+            31,
+            134
+          ],
+          "crosses_seam": false,
+          "adjacent_unknown": false,
+          "touches_axial_end": false
+        }
+      ],
+      "nominal_overlap": [
+        [
+          8403,
+          8404,
+          253
+        ]
+      ],
+      "labels_i32le_sha256": "44273724e8549f07314add0f88c5db291fc1ba3e99e91e00b1de0c3ed329ca89"
+    },
+    {
+      "pair": [
+        2,
+        1
+      ],
+      "observed_flagged_cells": 255,
+      "unknown_cells": 0,
+      "region_count": 1,
+      "largest_observed_cells": 255,
+      "regions": [
+        {
+          "id": 8404,
+          "cells": 255,
+          "area_mm2": 8.367108434060818,
+          "peak_loss_mm": 0.7612085108094542,
+          "peak_cell": [
+            31,
+            134
+          ],
+          "crosses_seam": false,
+          "adjacent_unknown": false,
+          "touches_axial_end": false
+        }
+      ],
+      "nominal_overlap": [
+        [
+          8403,
+          8404,
+          255
+        ]
+      ],
+      "labels_i32le_sha256": "849e9d7e2978a4f409407ef8ea9965bead9aab32e4a96438a9a34c5cb0777468"
+    },
+    {
+      "pair": [
+        2,
+        2
+      ],
+      "observed_flagged_cells": 263,
+      "unknown_cells": 0,
+      "region_count": 1,
+      "largest_observed_cells": 263,
+      "regions": [
+        {
+          "id": 8403,
+          "cells": 263,
+          "area_mm2": 8.629605953560764,
+          "peak_loss_mm": 0.7728634272441361,
+          "peak_cell": [
+            31,
+            134
+          ],
+          "crosses_seam": false,
+          "adjacent_unknown": false,
+          "touches_axial_end": false
+        }
+      ],
+      "nominal_overlap": [
+        [
+          8403,
+          8403,
+          263
+        ]
+      ],
+      "labels_i32le_sha256": "57f0de6dc7ca561847c0db4683e874bcf7a614a78a60ce1c968d2518b96b2087"
+    }
+  ]
+}

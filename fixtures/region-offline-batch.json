@@ -1,0 +1,12 @@
+{
+  "format": "CFDK-region-batch-plan-v1",
+  "entries": [
+    {
+      "id": "noisy-change",
+      "kind": "edge",
+      "job": "../build/region-edge-example",
+      "manifest_sha256": "91a3d0652ef6031cd72443e72c66971b0e5ef41abbb3a2cbb0d35edb055e968f",
+      "area_radius_mm": 9.4
+    }
+  ]
+}

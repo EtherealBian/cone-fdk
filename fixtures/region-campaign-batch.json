@@ -1,0 +1,38 @@
+{
+  "format": "CFDK-region-batch-plan-v1",
+  "entries": [
+    {
+      "id": "repeat",
+      "kind": "edge",
+      "job": "../build/edge-final-replay/repeat",
+      "manifest_sha256": "9cb099d4ddcc76b5b9a9701990bdbdd6543346592a9f5638e026d6b6280d2e2f",
+      "area_radius_mm": 9.4
+    },
+    {
+      "id": "noisy-change",
+      "kind": "edge",
+      "job": "../build/edge-final-replay/noisy-change",
+      "manifest_sha256": "91a3d0652ef6031cd72443e72c66971b0e5ef41abbb3a2cbb0d35edb055e968f",
+      "area_radius_mm": 9.4
+    },
+    {
+      "id": "invalid-edge-control",
+      "kind": "edge",
+      "job": "../build/edge-final-replay/invalid-edge-control",
+      "manifest_sha256": "28b3cd044f8b4a174dfbde30096c429af3180c8c4d332b4b0983d6dc63c655cc",
+      "area_radius_mm": 9.4
+    },
+    {
+      "id": "slide",
+      "kind": "witness-refusal",
+      "job": "../build/witness-final-replay/slide",
+      "manifest_sha256": "1eed21b8f8bd2b125088740c151533ef2adb9777f0ef70544b612579bbd02ef6"
+    },
+    {
+      "id": "missing-reference",
+      "kind": "witness-refusal",
+      "job": "../build/witness-final-replay/missing-reference",
+      "manifest_sha256": "8b74eb042f4044931457a1c4fa5e232c19e8b52763482576df5e3e1609cc574c"
+    }
+  ]
+}
