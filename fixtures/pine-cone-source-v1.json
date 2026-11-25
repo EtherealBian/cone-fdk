@@ -1,0 +1,47 @@
+{
+  "format": "CFDK-pine-cone-source-v1",
+  "doi": "10.5281/zenodo.6985407",
+  "record_id": 6985407,
+  "author": "Alexander Meaney",
+  "dataset_title": "Cone-Beam Computed Tomography Dataset of a Pine Cone",
+  "license": "CC BY 4.0",
+  "files": {
+    "20201118_pine_cone_.txt": {
+      "bytes": 729,
+      "md5": "99187a8f14322776414075decd6d2abb"
+    },
+    "20201118_pine_cone_projections_1.zip": {
+      "bytes": 585549946,
+      "md5": "dbb8fb04d02d168b938a78917d960b88"
+    },
+    "20201118_pine_cone_projections_2.zip": {
+      "bytes": 585551248,
+      "md5": "5952a896972380548970e099ccc8691c"
+    },
+    "20201118_pine_cone_projections_3.zip": {
+      "bytes": 585796906,
+      "md5": "8d897951fba0a213e4b9a16d8dc4ee12"
+    },
+    "20201118_pine_cone_projections_4.zip": {
+      "bytes": 586159867,
+      "md5": "b7f151585f09d8d41e01392315c1d8c4"
+    },
+    "20201118_pine_cone_projections_5.zip": {
+      "bytes": 586802582,
+      "md5": "42951c3dad2b08f8eb63704bbfbd36ab"
+    },
+    "20201118_pine_cone_projections_6.zip": {
+      "bytes": 587010363,
+      "md5": "3ac8f1aed302963c400a74844bc07259"
+    },
+    "20201118_pine_cone_projections_7.zip": {
+      "bytes": 586198774,
+      "md5": "403f398c8fb032daae374e48f0f89cc1"
+    },
+    "20201118_pine_cone_projections_8.zip": {
+      "bytes": 122924323,
+      "md5": "4771e13f20f1eaff60e4c6b929f3d383"
+    }
+  },
+  "acquisition_metadata_sha256": "6b4035dba8dd4400882ac294067e1cfde21e93424c6da09870fcb5cad7b21c4f"
+}
