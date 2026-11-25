@@ -1,0 +1,9 @@
+{
+  "format": "CFDK-slab-replay-protocol-v1",
+  "purpose": "Resume inside a single, already baselined CT reconstruction. Recoverable replay tool; not initial-scan metrology or a speed experiment. No modification of the frozen native FDK.",
+  "qualification_plan_sha256": "0c8da08152e13be98a418810f7832c6fc873ea7cc546de8ba8275a09715e50ca",
+  "baseline": "Externally published corrected Helsinki walnut: 720 measured views, 512 cubed float32. Five disjoint irregular z slabs cover every layer; slice hashes originate from the independent, historical dense baseline, not from the candidate. Attribution in NOTICE.md.",
+  "trust": "Require an external plan pin covering projection and geometry bytes, both native products, reconstruction settings, partition, per-slab digests and final volume. Hold inputs stable during native processing; check every reused slab and again check bytes actually assembled. Preserve unrelated files and an existing delivery.",
+  "recovery": "Single active writer; durable per-slab commits. Kill a real worker after its second accepted slab, with no delivery at that point. New process must reuse exactly 2 and reconstruct 3. Separate cold run must reconstruct all 5. Portable final manifest and all volume bytes must match, with no skipped plane. Incomplete uncommitted files are not accepted as checkpoints. Test refusal on wrong sources, binary, stale plan, short or changed checkpoint, pre-existing output and conflicting writer.",
+  "physical_and_performance_limits": "This compares reconstruction bytes on real projections, not physical dimensional truth. Slabs relaunch original CLI and repeat projection processing; track native invocation counts, projection size per invocation and extra on-disk cache. No inferred throughput, power-loss durability, network filesystem, alternate-GPU bit identity, or speed advantage."
+}

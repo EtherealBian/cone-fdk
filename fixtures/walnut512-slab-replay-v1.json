@@ -1,0 +1,42 @@
+{
+  "format": "CFDK-slab-replay-plan-v1",
+  "n": 512,
+  "fov_mm": 40.0,
+  "budget_mib": 768,
+  "batch": 16,
+  "geometry_sha256": "3f172fa6e2755b3ce50d09b0a8e8a7ca8163b19128486c422f624c6b73d06af8",
+  "projections_sha256": "ecbc3166a420a31bd11cc0ba78f5469428de43726059c03a3af1ed6e5160b5a8",
+  "projections_bytes": 238694400,
+  "products": {
+    "cone-fdk.exe": "fb33b5c2f5d60c8b475baa2e79b8e1988a8dddcaea9f1a0c3d5f9e0a55a35983",
+    "kernels.ptx": "8a07a8441eb1a4d8dc035366e38a43524d114852b394599bf0932ba51dd82d9f"
+  },
+  "volume_sha256": "868249894840a28eb9db08dd75b36c56e23aab83155fad38f8a971ed734be25f",
+  "slabs": [
+    {
+      "z": 0,
+      "depth": 73,
+      "sha256": "dfaa5aeb1586b3fc7811456afc2e22702e2c721fe1d567905139424fbdb6a779"
+    },
+    {
+      "z": 73,
+      "depth": 101,
+      "sha256": "54ad6ad8315f0b394063f0da90bedddef7ec89507aeb87cf8840d4d5012ef93c"
+    },
+    {
+      "z": 174,
+      "depth": 109,
+      "sha256": "af74cf882152ab2139918745592997bc7afc855f6477802637059d6249e3f5e9"
+    },
+    {
+      "z": 283,
+      "depth": 118,
+      "sha256": "8e949e230916320d2f3e65e2c5d13961bbef01131fcc59f284f331f53c611d82"
+    },
+    {
+      "z": 401,
+      "depth": 111,
+      "sha256": "53de78fd741a6eb2039098d65f0bf5ca61b671265e19cc97071eb78099c86de4"
+    }
+  ]
+}
