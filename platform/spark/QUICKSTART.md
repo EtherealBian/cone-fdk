@@ -130,3 +130,42 @@ python3 -I -S -B platform/spark/review_physical_snapshot.py examples/physical-pe
 Expected: **3 committed cases / 2 specimens**. The 3,674,999-byte pack contains 1,024 reported plane rows and three pairs of raw peak slices. On those slices the reader remeasures **393,216 voxel pairs**; it does not reread three full volumes. `plot_physical_profile.py` accepts `walnut720`, `pine90` or `pine720` from the same snapshot. Each plot scales its own vertical axis; use the table for cross-condition numbers.
 
 **Source to result.** For the [pine acquisition](https://doi.org/10.5281/zenodo.6985407), the producer verified all eight archives and the metadata against the frozen publisher sizes/MD5, read frames 1–721 and excluded the duplicate 360° view. The 90 selected projections were independently preprocessed and matched the corresponding dense projections byte-for-byte. A second check reread the nine original files (4,225,994,738 bytes), both full native/ASTRA volume pairs, and all four direct native ROI crops. Both dense conditions passed the prespecified **relative L2 < 0.002** gate. No independently calibrated feature dimensions or defect labels are present. [Source manifest](../../fixtures/pine-cone-source-v1.json) · [Frame-to-archive hashes](../../examples/physical-peak-batch/pine-frames.json) · [Preprocessing receipt](../../examples/physical-peak-batch/pine-scan.json) · [Native/ASTRA parent](../../examples/physical-peak-batch/pine-parent.json) · [Independent recheck](../../reports/gb10/pine-independent.json) · [Final queue submissions](../../reports/gb10/physical-batch-complete.json).
+
+## Spark migration acceptance
+
+The main reconstruction and measurement jobs now run on DGX Spark (GB10). The seven native build products, the 90-view native demo above, the two-specimen physical batch, and the archived axis and remount jobs have separate checks. Historical Windows binaries and the `measurement-lab` pore research branch are not part of the Linux runtime acceptance. The physical batch compares reconstruction intensities, not calibrated dimensions.
+
+| Check on the qualified Spark | Result | Evidence |
+|---|---|---|
+| Spark-specific regression, with retained acquisitions and job products | 929 passed; no failures or skips | [Workspace receipt](../../reports/gb10/spark-regression.json) |
+| Unmodified historical suite, same 707 test IDs | 702 passed, 5 failed; previously 697 passed. No skips or new failures. | [Resolved and remaining tests by name](../../reports/gb10/measurement-history.json) |
+| Simulated tilted part, archived projections | All 25 sections measured; axis angle differed from design by 0.0017373°, origin by 0.0000292 mm. Independent check: 6,000 samples. | [Inputs and results](../../reports/gb10/measurement-jobs.json) |
+| Simulated remount with a deep cut | Independent CPU labels agreed with CUDA on all 14,760 cells: 513 flagged, one region, none unknown. | [Coverage and matching archived files](../../reports/gb10/measurement-jobs.json) |
+
+**Five historical failures remain.** One axis test and four slab cases require the *original pathname* to deny writes or replacement by another process. On the qualified Linux filesystem those names remain editable. Spark jobs consume sealed snapshots of the input bytes; another process cannot write through the snapshot, and changing the original name after sealing does not change the data being processed. These guarantees differ. The low-level axis `pinned_reader` refuses the old contract; code that depends on that contract must not use this port as a drop-in replacement. Use a trusted local job parent and a fresh destination. A duplicate remount exposure leaves only a refusal marker, never a success manifest.
+
+### Run the measurement entry points
+
+On the qualified ARM64 toolchain, start by running `platform/spark/build.py` as above. With Python 3.12, NumPy and SciPy, build the four overlays. Keep their import order: the measurement entry points call the original algorithms through the Spark-specific input and publication paths.
+
+```sh
+D=$(mktemp -d)
+python3 -B platform/spark/build_publishers.py --out "$D/periodic"
+python3 -B platform/spark/build_slab_compat.py "$D/slab" --expect f53f88ed79fe450ea502387d6152665ecd453c09a0efbbb76f7940e30dd7769a
+python3 -B platform/spark/build_edge_compat.py "$D/edge" --expect 8ce35c3262a7d95de292616a5daa58655c41e60cd72710501a8ead7a78adeeb7
+python3 -B platform/spark/build_measurement_compat.py "$D/measurement" --expect f98db1a6cd2099e1ffc1ca7e8b7c5fc5c347d1083e4bbc6adbee6d5378be6910
+export PYTHONPATH="$D/measurement:$D/edge:$D/slab:$D/periodic:$PWD/scripts"
+python3 -B -m axis_gauge --help
+python3 -B -m remount_loss --help
+python3 -B -m wall_pack --help
+```
+
+The Python `run(..., input_sha256={...})` interface accepts externally obtained SHA-256 pins for **every data input**. Omitting the map (including CLI runs) checks local self-consistency, not external provenance. Executable and PTX pins are always enforced. The simulated jobs in the table used external pins. Exact archive equality held for 5 of 8 axis outputs and 9 of 11 remount outputs; the independent numerical checks are reported separately. Full qualified regressions require the retained work products; the following release checks do not.
+
+### Recompute the pine memory-budget comparison (no GPU)
+
+```sh
+python3 -I -S -B platform/spark/review_pine_budget.py reports/gb10/pine-budget-trials.zip examples/physical-peak-batch
+```
+
+This reads the 28 archived trials without executing the archived driver. Four warm-ups are excluded, leaving six paired trials at each view count. Raising the requested native buffer budget from 64 to 384 MiB changed the slab depth from 87 to 256 and reduced projection passes from three to one. At 720 views the median process times were **0.864 s and 0.659 s**, and the recorded peak owned allocations were **66,920,576 and 111,222,912 bytes**. Both budgets produced the same full volume. The budget is a cap, not measured memory use; process time includes startup and output and is not kernel time. [Trial-by-trial checks and summary](../../reports/gb10/pine-budget-review.json).

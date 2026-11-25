@@ -14,7 +14,7 @@ from pathlib import Path
 
 from build_publishers import ROOT, build
 
-PRESETS={'historical':['tests'], 'historical-slab-v2':['tests'], 'historical-edge-v1':['tests'], 'spark':['platform/spark/tests'],
+PRESETS={'historical':['tests'], 'historical-slab-v2':['tests'], 'historical-edge-v1':['tests'], 'historical-measurement-v1':['tests'], 'spark':['platform/spark/tests'],
          'periodic':['tests/test_periodic_parcel.py','tests/test_periodic_interfaces.py','tests/test_periodic_roi.py']}
 
 
@@ -25,13 +25,17 @@ def run(job, preset):
         raise ValueError('new job below private real directory required')
     overlay=ROOT/'build/spark/python'; pin=build(overlay); job.mkdir(mode=0o700,exist_ok=False)
     overlays=[overlay]; compat_pin=None
-    if preset in ('historical-slab-v2', 'historical-edge-v1'):
+    if preset in ('historical-slab-v2', 'historical-edge-v1','historical-measurement-v1'):
         from build_slab_compat import build as build_compat
         compat=ROOT/'build/spark/python-slab-v2'; compat_pin=build_compat(compat); overlays.insert(0,compat)
     edge_pin=None
-    if preset=='historical-edge-v1':
+    if preset in ('historical-edge-v1','historical-measurement-v1'):
         from build_edge_compat import build as build_edges
         edges=ROOT/'build/spark/python-edge-directory-v1'; edge_pin=build_edges(edges); overlays.insert(0,edges)
+    measurement_pin=None
+    if preset=='historical-measurement-v1':
+        from build_measurement_compat import build as build_measurement
+        jobs=ROOT/'build/spark/python-measurement-release-v1'; measurement_pin=build_measurement(jobs); overlays.insert(0,jobs)
     imports=overlays+[ROOT/'scripts']
     lib=m/'vendor/astra-install/lib'; env=dict(os.environ,PYTHONDONTWRITEBYTECODE='1',PYTHONPATH=os.pathsep.join(map(str,imports)),
         LD_LIBRARY_PATH=str(lib)+(os.pathsep+os.environ['LD_LIBRARY_PATH'] if os.environ.get('LD_LIBRARY_PATH') else ''))
@@ -52,6 +56,7 @@ def run(job, preset):
         process_exit=result.returncode,counts=dict(counts),files_sha256=hashes,
         retention='Pytest retains failed per-test scratch. Explicit private basetemp; shared session fixtures may remain. Full logs/XML retained.')
     if compat_pin: receipt['slab_overlay_sha256']=compat_pin
+    if measurement_pin: receipt['measurement_overlay_sha256']=measurement_pin
     if edge_pin: receipt['edge_overlay_sha256']=edge_pin
     (job/'run.json').write_text(json.dumps(receipt,indent=2)+'\n');print(json.dumps({'returncode':result.returncode,'counts':dict(counts)}))
     return result.returncode

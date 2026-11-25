@@ -20,6 +20,8 @@ ConeFDK turns 720 measured X-ray projections of a walnut into a **512³ volume**
 
 **Two physical specimens, three scan conditions.** The completed batch adds a pine cone reconstructed on a 256³ grid: native versus ASTRA relative L2 **0.07314% at 90 views** and **0.02658% at 720 views**. Two direct native crops per condition matched their dense counterparts byte-for-byte. The view counts describe one pine cone; neither solver supplies physical dimensional truth. [Final batch](reports/gb10/physical-batch-complete.json) · [Recheck all three peak planes without a GPU](platform/spark/QUICKSTART.md#completed-physical-batch). Unless explicitly labeled Spark, benchmarks below retain their historical platforms and timings.
 
+**Spark migration:** 929 Spark tests passed. Of the same 707 historical cases, 702 pass; five require original-path write or rename denial. [Build the measurement tools and review exactly what passed](platform/spark/QUICKSTART.md#spark-migration-acceptance).
+
 ## How sensitive is a wall-loss footprint to its edge threshold?
 
 In a **simulated** changed specimen, all nine reference/inspection threshold pairs found one connected region, but its footprint ranged from **253 to 275 cells**. The repeat control found none. A separate invalid-edge control retains its original four pairs and marks unknown cells explicitly. Two native CUDA backends on Spark reproduced the archived wall and classification files byte-for-byte. [Recompute the 22 cylindrical label grids without a GPU](platform/spark/QUICKSTART.md#offline-threshold-review) · [Pair-by-pair results](reports/gb10/directory-edge-qualification.json).

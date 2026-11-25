@@ -20,6 +20,8 @@
 
 **两件实物、三种扫描条件已完成批检。** 在 256³ 网格上，松果的原生 CUDA 与 ASTRA 相对 L2 差异为：90 幅投影 **0.07314%**，720 幅投影 **0.02658%**。每组直接重建的两个局部都与整卷对应区域逐字节一致。两个角度密度来自同一颗松果；这些差异衡量求解器一致性，不是实物尺寸公差。[批检结果](reports/gb10/physical-batch-complete.json) · [离线复算三个峰值层](platform/spark/QUICKSTART.md#completed-physical-batch)。下文未注明 Spark 的旧基准，耗时均来自各自记录的历史平台。
 
+**Spark 迁移验收：** Spark 专用测试 929 项全部通过。原有 707 项中，702 项通过，剩余 5 项要求禁止其他进程改写或替换原文件名。[测量工具构建步骤、实测结果与兼容边界](platform/spark/QUICKSTART.md#spark-migration-acceptance)。
+
 ## 换一组阈值，缺陷区域会变多少？
 
 在带局部壁厚变化的**仿真试件**上，参考图与待检图各取三个边缘阈值。九种组合都得到一个连通区域，但覆盖范围是 **253 至 275 个网格单元**；同一试件的重复对照在九种组合下均为零。另一个无效边缘对照保留原定的四种组合，无法判定的单元单独计数。Spark 上两条原生 CUDA 路径分别重算，与封存的壁厚及分类文件逐字节相同。[不用 GPU 复算 22 张连通区域图](platform/spark/QUICKSTART.md#offline-threshold-review) · [逐组结果](reports/gb10/directory-edge-qualification.json)。
