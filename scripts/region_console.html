@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="zh-CN">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  /><meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  /><title>ConeFDK · 圆柱缺陷复核台</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d3345;
+      --dim: #465e6c;
+      --line: #bfd0d9;
+      --paper: #f3f7fa;
+      --blue: #175b80;
+      --field: #314858;
+      --hit: #ffad43;
+      --blind: #c9a6df;
+      --lost: #75c2dc;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font:
+        16px/1.46 "Segoe UI",
+        "Microsoft YaHei",
+        sans-serif;
+    }
+    main {
+      max-width: 1220px;
+      margin: auto;
+      padding: 30px clamp(16px, 4vw, 62px) 50px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 20px;
+      border-bottom: 2px solid var(--ink);
+      padding-bottom: 20px;
+    }
+    h1 {
+      font-size: clamp(25px, 3.2vw, 43px);
+      letter-spacing: -0.04em;
+      line-height: 1.15;
+      margin: 6px 0 0;
+      font-weight: 670;
+    }
+    h2 {
+      font-size: 21px;
+      margin: 0 0 10px;
+    }
+    p {
+      margin: 6px 0;
+    }
+    .brand {
+      font-family: Consolas, monospace;
+      font-weight: 650;
+      letter-spacing: 0.035em;
+      color: var(--blue);
+    }
+    .job {
+      min-width: min(240px, 100%);
+    }
+    label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--dim);
+      font-size: 14px;
+    }
+    header label {
+      display: block;
+    }
+    select,
+    button {
+      font: inherit;
+      background: white;
+      color: var(--ink);
+      border: 1px solid #859fab;
+      border-radius: 4px;
+      padding: 6px 9px;
+    }
+    select {
+      max-width: 100%;
+    }
+    button {
+      cursor: pointer;
+    }
+    button:hover {
+      background: #dfedf6;
+    }
+    :focus-visible {
+      outline: 3px solid #097aa4;
+      outline-offset: 3px;
+    }
+    #state {
+      margin: 18px 0 12px;
+      font-weight: 620;
+      color: var(--blue);
+    }
+    #controls {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    #controls label {
+      flex-wrap: wrap;
+    }
+    small,
+    .quiet {
+      color: var(--dim);
+      font-size: 14px;
+    }
+    .rail {
+      margin: 10px 0 0;
+      background: var(--field);
+      padding: 12px 14px 6px;
+      border-radius: 6px;
+      color: white;
+    }
+    .rhead,
+    .axis,
+    .legend,
+    .adjust {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .rhead,
+    .axis {
+      justify-content: space-between;
+    }
+    .rhead {
+      font-size: 15px;
+      padding-bottom: 9px;
+    }
+    .axis {
+      font:
+        13px/1.5 Consolas,
+        monospace;
+      color: #d6e9f1;
+      padding: 4px 0;
+    }
+    .plot {
+      position: relative;
+      background: #314858;
+      border: 1px solid #8ca4b3;
+    }
+    canvas {
+      width: 100%;
+      height: clamp(120px, 17vw, 208px);
+      display: block;
+      image-rendering: pixelated;
+      cursor: crosshair;
+    }
+    #pin {
+      position: absolute;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      width: 13px;
+      height: 13px;
+      background: transparent;
+      border: 1px solid white;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px #142733;
+    }
+    #pin:after {
+      content: "";
+      position: absolute;
+      inset: 4px;
+      background: white;
+      border-radius: 50%;
+    }
+    .legend,
+    .adjust {
+      font-size: 14px;
+      padding-top: 10px;
+    }
+    .legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .sw {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 1px solid #526676;
+    }
+    .adjust {
+      justify-content: space-between;
+      margin: 5px 0 20px;
+    }
+    .adjust input {
+      max-width: 160px;
+      accent-color: var(--blue);
+    }
+    .report {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      border-top: 1px solid var(--line);
+      padding: 20px 0;
+    }
+    .report p {
+      line-height: 1.7;
+    }
+    .measure {
+      font:
+        600 17px/1.55 Consolas,
+        "Microsoft YaHei",
+        monospace;
+    }
+    .cell {
+      color: var(--blue);
+    }
+    details {
+      border-top: 1px solid var(--line);
+      padding: 12px 0;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+    }
+    code {
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+    #empty {
+      border-left: 5px solid var(--blind);
+      background: #eaf0f5;
+      padding: 18px 22px;
+      margin: 14px 0 26px;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      margin-top: 10px;
+      padding-top: 14px;
+      font-size: 14px;
+      color: var(--dim);
+    }
+    [hidden] {
+      display: none !important;
+    }
+    @media (max-width: 680px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .report {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      main {
+        padding-top: 18px;
+      }
+      .rail {
+        padding: 10px 8px 5px;
+      }
+      .adjust {
+        align-items: flex-start;
+      }
+      .adjust label {
+        flex-wrap: wrap;
+      }
+      #controls {
+        gap: 8px;
+      }
+      button,
+      select {
+        min-height: 36px;
+      }
+    }
+  </style>
+  <main>
+    <header>
+      <div>
+        <div class="brand">ConeFDK</div>
+        <h1>圆柱缺陷复核台</h1>
+      </div>
+      <div class="job">
+        <label for="job">批次作业</label
+        ><select id="job"></select>
+      </div>
+    </header>
+    <p id="state" role="status">正在验证标签图…</p>
+    <section id="empty" hidden>
+      <h2 id="why"></h2>
+      <p id="reason"></p>
+    </section>
+    <section id="work" hidden>
+      <div id="controls">
+        <label
+          >基准阈值
+          <select id="ref"></select></label
+        ><label
+          >复检阈值
+          <select id="part"></select></label
+        ><small>单位 /mm</small><button id="reset">回到标称组合</button>
+      </div>
+      <div class="rail">
+        <div class="rhead">
+          <strong>材料坐标展开图</strong><span id="size"></span>
+        </div>
+        <div class="plot">
+          <canvas
+            id="map"
+            tabindex="0"
+            aria-label="圆柱展开图。点击选择单元，方向键移动，左右跨接缝。"
+          ></canvas
+          ><i id="pin" hidden></i>
+        </div>
+        <div class="axis">
+          <span id="first"></span><span>方位列 →</span><span id="last"></span>
+        </div>
+      </div>
+      <div class="legend">
+        <span><i class="sw" style="background: var(--hit)"></i>超限</span
+        ><span><i class="sw" style="background: var(--field)"></i>低于判据</span
+        ><span><i class="sw" style="background: var(--blind)"></i>不可测</span
+        ><span id="extra" hidden
+          ><i class="sw" style="background: var(--lost)"></i>仅标称超限</span
+        >
+      </div>
+      <div class="adjust">
+        <label
+          >展开起始列 <input id="seam" type="range" min="0" value="0" /><output
+            id="offset"
+          ></output></label
+        ><label><input id="overlay" type="checkbox" /> 对照标称足迹</label>
+      </div>
+      <div class="report">
+        <section>
+          <h2>当前阈值对</h2>
+          <p class="measure" id="counts"></p>
+          <p id="coverage"></p>
+          <p id="scale" class="quiet"></p>
+        </section>
+        <section>
+          <h2>材料单元</h2>
+          <p class="measure cell" id="coord"></p>
+          <p id="region"></p>
+          <p id="overlap" class="quiet"></p>
+          <label id="jumpbox" hidden
+            >跳到区域峰值
+            <select id="jump"></select
+          ></label>
+        </section>
+      </div>
+    </section>
+    <details>
+      <summary>来源与复核摘要</summary>
+      <p>批次：<code id="batchhash"></code></p>
+      <p>输入：<code id="sourcehash"></code></p>
+      <p>结果：<code id="resulthash"></code></p>
+      <p>当前标签：<code id="labelhash"></code></p>
+    </details>
+    <footer>
+      每组阈值应用于整张图。面积是指定参考半径上的投影足迹；不可测不计作合格。本页只展示已记录的结果，不构成实物精度认证。
+    </footer>
+    <noscript>请启用浏览器本地 JavaScript 查看已导出的标签图。</noscript>
+  </main>
+  <script id="payload" type="application/json">
+    __REGION_PAYLOAD__
+  </script>
+  <script>
+    "use strict";
+    const $ = (id) => document.getElementById(id),
+      data = JSON.parse($("payload").textContent),
+      names = {
+        complete_coverage: "全部组合覆盖完整",
+        incomplete_coverage: "部分组合覆盖不全",
+        upstream_refused: "见证拒测",
+        input_error: "输入错误",
+      };
+    const cv = $("map"),
+      ctx = cv.getContext("2d", { alpha: false });
+    let item,
+      sc,
+      lab,
+      nom,
+      h,
+      w,
+      row = 0,
+      col = 0,
+      seq = 0;
+    function options(el, values, selected) {
+      el.replaceChildren(
+        ...values.map(([value, text]) => new Option(text, value)),
+      );
+      el.value = String(selected);
+    }
+    function text(id, s) {
+      $(id).textContent = s;
+    }
+    async function decode(s, n) {
+      const [kind, b64] = s.pixels,
+        bytes = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0)),
+        v = new DataView(bytes.buffer),
+        buf = new ArrayBuffer(n * 4),
+        out = new DataView(buf),
+        arr = new Int32Array(n);
+      let k = 0;
+      if (kind === "i32le" && bytes.length === n * 4) {
+        for (let i = 0; i < n; i++) arr[i] = v.getInt32(4 * i, true);
+      } else if (kind === "rle32le" && bytes.length % 8 === 0) {
+        for (let i = 0; i < bytes.length; i += 8) {
+          let count = v.getInt32(i, true),
+            id = v.getInt32(i + 4, true);
+          if (count < 1 || count > n - k) throw Error("标签游程越界");
+          arr.fill(id, k, k + count);
+          k += count;
+        }
+        if (k !== n) throw Error("标签长度不足");
+      } else throw Error("标签编码无效");
+      for (let i = 0; i < n; i++) out.setInt32(4 * i, arr[i], true);
+      let digest = Array.from(
+        new Uint8Array(await crypto.subtle.digest("SHA-256", buf)),
+        (b) => b.toString(16).padStart(2, "0"),
+      ).join("");
+      if (digest !== s.labels_i32le_sha256) throw Error("标签摘要不符");
+      return arr;
+    }
+    function move(r, c) {
+      row = Math.max(0, Math.min(h - 1, r));
+      col = (c + w) % w;
+      inspect();
+    }
+    function inspect() {
+      if (!lab) return;
+      const at = row * w + col,
+        id = lab[at],
+        base = nom[at],
+        off = +$("seam").value,
+        x = (col - off + w) % w,
+        r = sc.regions.find((a) => a.id === id);
+      $("pin").hidden = false;
+      $("pin").style.left = `${(100 * (x + 0.5)) / w}%`;
+      $("pin").style.top = `${(100 * (row + 0.5)) / h}%`;
+      text("coord", `行 ${row}，列 ${col}（${((360 * col) / w).toFixed(1)}°）`);
+      text(
+        "region",
+        r
+          ? `区域 #${id} · ${r.cells} 格，投影 ${r.area_mm2.toFixed(3)} mm²；峰值 ${r.peak_loss_mm.toFixed(4)} mm（行 ${r.peak_cell[0]}，列 ${r.peak_cell[1]}）。${[r.crosses_seam ? "跨材料接缝" : "", r.adjacent_unknown ? "邻接不可测区" : "", r.touches_axial_end ? "接触轴向端面" : ""].filter(Boolean).join("、")}`
+          : id < 0
+            ? "该单元不可测。"
+            : "该单元低于减薄判据。",
+      );
+      const edges = sc.nominal_overlap.filter((v) =>
+        r ? v[1] === id : base > 0 && v[0] === base,
+      );
+      text(
+        "overlap",
+        edges.length
+          ? "标称 → 当前交集：" +
+              edges.map(([a, b, n]) => `#${a} → #${b}（${n} 格）`).join("；")
+          : "该位置没有可列出的标称区域交集。",
+      );
+      $("jump").value = r ? String(id) : "";
+    }
+    function paint() {
+      if (!lab) return;
+      const off = +$("seam").value,
+        overlay = $("overlay").checked;
+      const pix = ctx.createImageData(w, h);
+      const colors = [
+        [49, 72, 88],
+        [255, 173, 67],
+        [201, 166, 223],
+        [117, 194, 220],
+      ];
+      for (let y = 0; y < h; y++)
+        for (let x = 0; x < w; x++) {
+          let p = y * w + ((x + off) % w),
+            u = lab[p],
+            c = colors[u < 0 ? 2 : u > 0 ? 1 : overlay && nom[p] > 0 ? 3 : 0],
+            i = 4 * (y * w + x);
+          pix.data[i] = c[0];
+          pix.data[i + 1] = c[1];
+          pix.data[i + 2] = c[2];
+          pix.data[i + 3] = 255;
+        }
+      ctx.putImageData(pix, 0, 0);
+      $("extra").hidden = !overlay;
+      text("first", `列 ${off}`);
+      text("last", `列 ${(off + w - 1) % w}`);
+      text("offset", off);
+      inspect();
+    }
+    function stop(heading, reason) {
+      $("work").hidden = true;
+      $("empty").hidden = false;
+      text("why", heading);
+      text("reason", reason);
+      text("labelhash", "—");
+      cv.width = cv.height = 1;
+      lab = nom = sc = null;
+      delete cv.dataset.ready;
+    }
+    async function scenario() {
+      const token = ++seq,
+        i = +$("ref").value,
+        j = +$("part").value;
+      const k = item.levels.length,
+        s = item.scenarios[i * k + j],
+        ns = item.scenarios[item.nominal[0] * k + item.nominal[1]];
+      delete cv.dataset.ready;
+      lab = null;
+      $("work").hidden = true;
+      text("state", "正在验证当前与标称标签…");
+      try {
+        const a = await decode(s, w * h),
+          b = s === ns ? a : await decode(ns, w * h);
+        if (token !== seq) return;
+        lab = a;
+        nom = b;
+        sc = s;
+        $("work").hidden = false;
+        $("empty").hidden = true;
+        cv.width = w;
+        cv.height = h;
+        text("state", `${item.id} · ${names[item.state]}`);
+        text("size", `${h} 行 × ${w} 列`);
+        text(
+          "counts",
+          `${s.region_count} 片区域 / ${s.observed_flagged_cells} 格超限`,
+        );
+        text(
+          "coverage",
+          s.unknown_cells
+            ? `本组合有 ${s.unknown_cells} 格不可测，已观测数量不能代表整件。`
+            : "本组合没有不可测单元。",
+        );
+        text(
+          "scale",
+          `减薄判据 ≥ ${item.gate} mm；面积参考半径 ${item.radius} mm；轴向行距 ${item.dz} mm。`,
+        );
+        text("labelhash", s.labels_i32le_sha256);
+        $("jumpbox").hidden = !s.region_count;
+        options(
+          $("jump"),
+          [["", "选择区域"], ...s.regions.map((r) => [r.id, "#" + r.id])],
+          "",
+        );
+        paint();
+        cv.dataset.ready = `${item.id}:${i},${j}`;
+      } catch (e) {
+        if (token === seq) {
+          stop("不能显示这张图", String(e.message));
+          text("state", "标签验证失败");
+        }
+      }
+    }
+    function select() {
+      ++seq;
+      item = data.entries[+$("job").value];
+      $("overlay").checked = false;
+      text("sourcehash", item.source_sha256);
+      text("resulthash", item.result_sha256 || "无结果");
+      text("state", `${item.id} · ${names[item.state]}`);
+      if (!item.scenarios) {
+        stop(
+          names[item.state],
+          item.state === "upstream_refused"
+            ? `${item.rejected_scan}：${item.reason}。该作业没有减薄图。`
+            : `${item.error_type}。此批次未生成该项测量结果。`,
+        );
+        return;
+      }
+      [h, w] = item.shape;
+      const lev = item.levels.map((v, i) => [i, String(v)]);
+      options($("ref"), lev, item.nominal[0]);
+      options($("part"), lev, item.nominal[1]);
+      $("seam").max = w - 1;
+      $("seam").value = 0;
+      const rec =
+        item.scenarios[item.nominal[0] * lev.length + item.nominal[1]]
+          .regions[0];
+      [row, col] = rec ? rec.peak_cell : [Math.floor(h / 2), 0];
+      $("empty").hidden = true;
+      scenario();
+    }
+    $("job").onchange = select;
+    $("ref").onchange = $("part").onchange = scenario;
+    $("seam").oninput = $("overlay").onchange = paint;
+    $("reset").onclick = () => {
+      $("ref").value = item.nominal[0];
+      $("part").value = item.nominal[1];
+      scenario();
+    };
+    $("jump").onchange = () => {
+      const r = sc.regions.find((r) => r.id === +$("jump").value);
+      if (r) move(...r.peak_cell);
+    };
+    cv.onclick = (e) => {
+      if (!lab) return;
+      const b = cv.getBoundingClientRect();
+      move(
+        Math.floor(((e.clientY - b.top) * h) / b.height),
+        Math.min(w - 1, Math.floor(((e.clientX - b.left) * w) / b.width)) +
+          +$("seam").value,
+      );
+    };
+    cv.onkeydown = (e) => {
+      if (!lab) return;
+      const d = {
+        ArrowLeft: [0, -1],
+        ArrowRight: [0, 1],
+        ArrowUp: [-1, 0],
+        ArrowDown: [1, 0],
+      }[e.key];
+      if (d) {
+        e.preventDefault();
+        move(row + d[0], col + d[1]);
+      }
+    };
+    text("batchhash", data.batch_sha256);
+    const start = data.entries.findIndex((x) =>
+      x.scenarios?.some((s) => s.region_count),
+    );
+    options(
+      $("job"),
+      data.entries.map((e, i) => [i, e.id + " · " + names[e.state]]),
+      Math.max(0, start),
+    );
+    select();
+  </script>
+</html>

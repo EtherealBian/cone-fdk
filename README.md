@@ -66,6 +66,10 @@ An unchanged simulated tube produced 325 falsely flagged cells when compared in 
 
 When extracting several wall levels from an existing shell atlas, the [CUDA wall pack](reports/WALL-PACK.md) uploads each tile once. Eight levels took **180 ms instead of 1,219 ms**, with byte-identical per-level records (six paired runs; wall stage only).
 
+[Download the offline inspection console](reports/region-console.html) to select a threshold pair, move the cylindrical seam and see how regions overlap the nominal setting. The [browser check](reports/REGION-CONSOLE.md) compares the actual displayed pixels with native CUDA output, including missing coverage and withheld results.
+
+Two additional **simulated tube geometries** were inspected from five separately noise-sampled acquisitions. All nine threshold pairs kept the seam-spanning flat connected, separated the two defects on the other tube, and returned zero regions on the unchanged control. The largest peak deviation from design was **0.0190 mm at nominal settings**, or **0.0432 mm over all settings**. [Per-defect footprints, gates and replay](reports/MULTI-SPECIMEN.md) · [Offline inspection](reports/specimen-console.html). These are not tolerances measured on physical tubes.
+
 ## A second use: measuring pores in metal
 
 The [measurement lab](https://github.com/EtherealBian/cone-fdk/tree/measurement-lab/pores) starts from **already reconstructed** cobalt-chromium scans. Its CUDA counter measures connected pores in a supplied binary mask. Finding the pore boundary from grayscale is a separate experiment: on development specimens 2, 3 and 5, the retained model E passed **10/11, 6/11 and 7/11** criteria. Its worst matched-pore volume error (P95) was **28.16%**, above the **15%** limit. The two reserved specimens remain unopened. This work is not part of the stable reconstruction release.

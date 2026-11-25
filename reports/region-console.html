@@ -1,0 +1,638 @@
+<!doctype html>
+<html lang="zh-CN">
+  <meta charset="utf-8" /><meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  /><meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; base-uri 'none'; form-action 'none'"
+  /><title>ConeFDK · 圆柱缺陷复核台</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #1d3345;
+      --dim: #465e6c;
+      --line: #bfd0d9;
+      --paper: #f3f7fa;
+      --blue: #175b80;
+      --field: #314858;
+      --hit: #ffad43;
+      --blind: #c9a6df;
+      --lost: #75c2dc;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--paper);
+      font:
+        16px/1.46 "Segoe UI",
+        "Microsoft YaHei",
+        sans-serif;
+    }
+    main {
+      max-width: 1220px;
+      margin: auto;
+      padding: 30px clamp(16px, 4vw, 62px) 50px;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: 20px;
+      border-bottom: 2px solid var(--ink);
+      padding-bottom: 20px;
+    }
+    h1 {
+      font-size: clamp(25px, 3.2vw, 43px);
+      letter-spacing: -0.04em;
+      line-height: 1.15;
+      margin: 6px 0 0;
+      font-weight: 670;
+    }
+    h2 {
+      font-size: 21px;
+      margin: 0 0 10px;
+    }
+    p {
+      margin: 6px 0;
+    }
+    .brand {
+      font-family: Consolas, monospace;
+      font-weight: 650;
+      letter-spacing: 0.035em;
+      color: var(--blue);
+    }
+    .job {
+      min-width: min(240px, 100%);
+    }
+    label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--dim);
+      font-size: 14px;
+    }
+    header label {
+      display: block;
+    }
+    select,
+    button {
+      font: inherit;
+      background: white;
+      color: var(--ink);
+      border: 1px solid #859fab;
+      border-radius: 4px;
+      padding: 6px 9px;
+    }
+    select {
+      max-width: 100%;
+    }
+    button {
+      cursor: pointer;
+    }
+    button:hover {
+      background: #dfedf6;
+    }
+    :focus-visible {
+      outline: 3px solid #097aa4;
+      outline-offset: 3px;
+    }
+    #state {
+      margin: 18px 0 12px;
+      font-weight: 620;
+      color: var(--blue);
+    }
+    #controls {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    #controls label {
+      flex-wrap: wrap;
+    }
+    small,
+    .quiet {
+      color: var(--dim);
+      font-size: 14px;
+    }
+    .rail {
+      margin: 10px 0 0;
+      background: var(--field);
+      padding: 12px 14px 6px;
+      border-radius: 6px;
+      color: white;
+    }
+    .rhead,
+    .axis,
+    .legend,
+    .adjust {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .rhead,
+    .axis {
+      justify-content: space-between;
+    }
+    .rhead {
+      font-size: 15px;
+      padding-bottom: 9px;
+    }
+    .axis {
+      font:
+        13px/1.5 Consolas,
+        monospace;
+      color: #d6e9f1;
+      padding: 4px 0;
+    }
+    .plot {
+      position: relative;
+      background: #314858;
+      border: 1px solid #8ca4b3;
+    }
+    canvas {
+      width: 100%;
+      height: clamp(120px, 17vw, 208px);
+      display: block;
+      image-rendering: pixelated;
+      cursor: crosshair;
+    }
+    #pin {
+      position: absolute;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      width: 13px;
+      height: 13px;
+      background: transparent;
+      border: 1px solid white;
+      border-radius: 50%;
+      box-shadow: 0 0 0 1px #142733;
+    }
+    #pin:after {
+      content: "";
+      position: absolute;
+      inset: 4px;
+      background: white;
+      border-radius: 50%;
+    }
+    .legend,
+    .adjust {
+      font-size: 14px;
+      padding-top: 10px;
+    }
+    .legend span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .sw {
+      display: inline-block;
+      width: 14px;
+      height: 14px;
+      border: 1px solid #526676;
+    }
+    .adjust {
+      justify-content: space-between;
+      margin: 5px 0 20px;
+    }
+    .adjust input {
+      max-width: 160px;
+      accent-color: var(--blue);
+    }
+    .report {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      border-top: 1px solid var(--line);
+      padding: 20px 0;
+    }
+    .report p {
+      line-height: 1.7;
+    }
+    .measure {
+      font:
+        600 17px/1.55 Consolas,
+        "Microsoft YaHei",
+        monospace;
+    }
+    .cell {
+      color: var(--blue);
+    }
+    details {
+      border-top: 1px solid var(--line);
+      padding: 12px 0;
+    }
+    summary {
+      cursor: pointer;
+      font-weight: 600;
+    }
+    code {
+      font-size: 13px;
+      overflow-wrap: anywhere;
+    }
+    #empty {
+      border-left: 5px solid var(--blind);
+      background: #eaf0f5;
+      padding: 18px 22px;
+      margin: 14px 0 26px;
+    }
+    footer {
+      border-top: 1px solid var(--line);
+      margin-top: 10px;
+      padding-top: 14px;
+      font-size: 14px;
+      color: var(--dim);
+    }
+    [hidden] {
+      display: none !important;
+    }
+    @media (max-width: 680px) {
+      header {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+      .report {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      main {
+        padding-top: 18px;
+      }
+      .rail {
+        padding: 10px 8px 5px;
+      }
+      .adjust {
+        align-items: flex-start;
+      }
+      .adjust label {
+        flex-wrap: wrap;
+      }
+      #controls {
+        gap: 8px;
+      }
+      button,
+      select {
+        min-height: 36px;
+      }
+    }
+  </style>
+  <main>
+    <header>
+      <div>
+        <div class="brand">ConeFDK</div>
+        <h1>圆柱缺陷复核台</h1>
+      </div>
+      <div class="job">
+        <label for="job">批次作业</label
+        ><select id="job"></select>
+      </div>
+    </header>
+    <p id="state" role="status">正在验证标签图…</p>
+    <section id="empty" hidden>
+      <h2 id="why"></h2>
+      <p id="reason"></p>
+    </section>
+    <section id="work" hidden>
+      <div id="controls">
+        <label
+          >基准阈值
+          <select id="ref"></select></label
+        ><label
+          >复检阈值
+          <select id="part"></select></label
+        ><small>单位 /mm</small><button id="reset">回到标称组合</button>
+      </div>
+      <div class="rail">
+        <div class="rhead">
+          <strong>材料坐标展开图</strong><span id="size"></span>
+        </div>
+        <div class="plot">
+          <canvas
+            id="map"
+            tabindex="0"
+            aria-label="圆柱展开图。点击选择单元，方向键移动，左右跨接缝。"
+          ></canvas
+          ><i id="pin" hidden></i>
+        </div>
+        <div class="axis">
+          <span id="first"></span><span>方位列 →</span><span id="last"></span>
+        </div>
+      </div>
+      <div class="legend">
+        <span><i class="sw" style="background: var(--hit)"></i>超限</span
+        ><span><i class="sw" style="background: var(--field)"></i>低于判据</span
+        ><span><i class="sw" style="background: var(--blind)"></i>不可测</span
+        ><span id="extra" hidden
+          ><i class="sw" style="background: var(--lost)"></i>仅标称超限</span
+        >
+      </div>
+      <div class="adjust">
+        <label
+          >展开起始列 <input id="seam" type="range" min="0" value="0" /><output
+            id="offset"
+          ></output></label
+        ><label><input id="overlay" type="checkbox" /> 对照标称足迹</label>
+      </div>
+      <div class="report">
+        <section>
+          <h2>当前阈值对</h2>
+          <p class="measure" id="counts"></p>
+          <p id="coverage"></p>
+          <p id="scale" class="quiet"></p>
+        </section>
+        <section>
+          <h2>材料单元</h2>
+          <p class="measure cell" id="coord"></p>
+          <p id="region"></p>
+          <p id="overlap" class="quiet"></p>
+          <label id="jumpbox" hidden
+            >跳到区域峰值
+            <select id="jump"></select
+          ></label>
+        </section>
+      </div>
+    </section>
+    <details>
+      <summary>来源与复核摘要</summary>
+      <p>批次：<code id="batchhash"></code></p>
+      <p>输入：<code id="sourcehash"></code></p>
+      <p>结果：<code id="resulthash"></code></p>
+      <p>当前标签：<code id="labelhash"></code></p>
+    </details>
+    <footer>
+      每组阈值应用于整张图。面积是指定参考半径上的投影足迹；不可测不计作合格。本页只展示已记录的结果，不构成实物精度认证。
+    </footer>
+    <noscript>请启用浏览器本地 JavaScript 查看已导出的标签图。</noscript>
+  </main>
+  <script id="payload" type="application/json">
+    {"format":"CFDK-region-console-v1","batch_sha256":"e22a88e461a2318a046d3a9db8d3fa684e1c4c535813f6cc192aea94a9b20931","recipe_sha256":"bf6d03b0be176beffbfa30f693d4a9f4316728047b1e3f3cb33815c2fe7978a2","entries":[{"id":"repeat","state":"complete_coverage","source_sha256":"9cb099d4ddcc76b5b9a9701990bdbdd6543346592a9f5638e026d6b6280d2e2f","result_sha256":"29ca8277d740cfdb9b79a36f614aab02a15713780bd5def109257ee8256a5f6f","shape":[41,360],"levels":[0.018,0.02,0.022],"nominal":[1,1],"gate":0.3,"radius":9.4,"dz":0.2,"scenarios":[{"pair":[0,0],"observed_flagged_cells":0,"unknown_cells":0,"region_count":0,"largest_observed_cells":0,"regions":[],"nominal_overlap":[],"labels_i32le_sha256":"81ea021db9a32256e8b7a51614f8d9a257b998e809632934862ab19511a24bcc","pixels":["rle32le","qDkAAAAAAAA="]},{"pair":[0,1],"observed_flagged_cells":0,"unknown_cells":0,"region_count":0,"largest_observed_cells":0,"regions":[],"nominal_overlap":[],"labels_i32le_sha256":"81ea021db9a32256e8b7a51614f8d9a257b998e809632934862ab19511a24bcc","pixels":["rle32le","qDkAAAAAAAA="]},{"pair":[0,2],"observed_flagged_cells":0,"unknown_cells":0,"region_count":0,"largest_observed_cells":0,"regions":[],"nominal_overlap":[],"labels_i32le_sha256":"81ea021db9a32256e8b7a51614f8d9a257b998e809632934862ab19511a24bcc","pixels":["rle32le","qDkAAAAAAAA="]},{"pair":[1,0],"observed_flagged_cells":0,"unknown_cells":0,"region_count":0,"largest_observed_cells":0,"regions":[],"nominal_overlap":[],"labels_i32le_sha256":"81ea021db9a32256e8b7a51614f8d9a257b998e809632934862ab19511a24bcc","pixels":["rle32le","qDkAAAAAAAA="]},{"pair":[1,1],"observed_flagged_cells":0,"unknown_cells":0,"region_count":0,"largest_observed_cells":0,"regions":[],"nominal_overlap":[],"labels_i32le_sha256":"81ea021db9a32256e8b7a51614f8d9a257b998e809632934862ab19511a24bcc","pixels":["rle32le","qDkAAAAAAAA="]},{"pair":[1,2],"observed_flagged_cells":0,"unknown_cells":0,"region_count":0,"largest_observed_cells":0,"regions":[],"nominal_overlap":[],"labels_i32le_sha256":"81ea021db9a32256e8b7a51614f8d9a257b998e809632934862ab19511a24bcc","pixels":["rle32le","qDkAAAAAAAA="]},{"pair":[2,0],"observed_flagged_cells":0,"unknown_cells":0,"region_count":0,"largest_observed_cells":0,"regions":[],"nominal_overlap":[],"labels_i32le_sha256":"81ea021db9a32256e8b7a51614f8d9a257b998e809632934862ab19511a24bcc","pixels":["rle32le","qDkAAAAAAAA="]},{"pair":[2,1],"observed_flagged_cells":0,"unknown_cells":0,"region_count":0,"largest_observed_cells":0,"regions":[],"nominal_overlap":[],"labels_i32le_sha256":"81ea021db9a32256e8b7a51614f8d9a257b998e809632934862ab19511a24bcc","pixels":["rle32le","qDkAAAAAAAA="]},{"pair":[2,2],"observed_flagged_cells":0,"unknown_cells":0,"region_count":0,"largest_observed_cells":0,"regions":[],"nominal_overlap":[],"labels_i32le_sha256":"81ea021db9a32256e8b7a51614f8d9a257b998e809632934862ab19511a24bcc","pixels":["rle32le","qDkAAAAAAAA="]}]},{"id":"noisy-change","state":"complete_coverage","source_sha256":"91a3d0652ef6031cd72443e72c66971b0e5ef41abbb3a2cbb0d35edb055e968f","result_sha256":"122ecc1be0ec2e277c0deed66f0b4f288075b14a20025f798df84c1f02ab7615","shape":[41,360],"levels":[0.018,0.02,0.022],"nominal":[1,1],"gate":0.3,"radius":9.4,"dz":0.2,"scenarios":[{"pair":[0,0],"observed_flagged_cells":262,"unknown_cells":0,"region_count":1,"largest_observed_cells":262,"regions":[{"id":8403,"cells":262,"area_mm2":8.596793763623271,"peak_loss_mm":0.7687971199364556,"peak_cell":[31,134],"crosses_seam":false,"adjacent_unknown":false,"touches_axial_end":false}],"nominal_overlap":[[8403,8403,262]],"labels_i32le_sha256":"feffbad21622a1aaabfe1c3516c846008516c381817a73673d35787070aa2cdc","pixels":["rle32le","0iAAAAAAAAAYAAAA0yAAAFEBAAAAAAAAFwAAANMgAABQAQAAAAAAABgAAADTIAAAUQEAAAAAAAAXAAAA0yAAAFEBAAAAAAAAFwAAANMgAABRAQAAAAAAABcAAADTIAAAUQEAAAAAAAAXAAAA0yAAAFABAAAAAAAAGQAAANMgAABPAQAAAAAAABkAAADTIAAATwEAAAAAAAAZAAAA0yAAAE8BAAAAAAAAGAAAANMgAACuCgAAAAAAAA=="]},{"pair":[0,1],"observed_flagged_cells":271,"unknown_cells":0,"region_count":1,"largest_observed_cells":271,"regions":[{"id":8403,"cells":271,"area_mm2":8.892103473060711,"peak_loss_mm":0.7803215582800744,"peak_cell":[31,134],"crosses_seam":false,"adjacent_unknown":false,"touches_axial_end":false}],"nominal_overlap":[[8403,8403,263]],"labels_i32le_sha256":"3c310677ddce8ab71a7c3c7c866ee45220062046a8c010165310ec7792aa2e44","pixels":["rle32le","0iAAAAAAAAAYAAAA0yAAAFABAAAAAAAAGAAAANMgAABQAQAAAAAAABkAAADTIAAATwEAAAAAAAAZAAAA0yAAAFABAAAAAAAAGAAAANMgAABPAQAAAAAAABkAAADTIAAAUAEAAAAAAAAYAAAA0yAAAE8BAAAAAAAAGQAAANMgAABPAQAAAAAAABkAAADTIAAATwEAAAAAAAAZAAAA0yAAAE8BAAAAAAAAGQAAANMgAACtCgAAAAAAAA=="]},{"pair":[0,2],"observed_flagged_cells":275,"unknown_cells":0,"region_count":1,"largest_observed_cells":275,"regions":[{"id":8403,"cells":275,"area_mm2":9.023352232810685,"peak_loss_mm":0.7919764747147564,"peak_cell":[31,134],"crosses_seam":false,"adjacent_unknown":false,"touches_axial_end":false}],"nominal_overlap":[[8403,8403,263]],"labels_i32le_sha256":"aa439eabcadbd081fe1e5d5e8f95d07f8e90eef2ccca86989673468937e14a19","pixels":["rle32le","0iAAAAAAAAAZAAAA0yAAAE8BAAAAAAAAGQAAANMgAABPAQAAAAAAABkAAADTIAAATwEAAAAAAAAZAAAA0yAAAE8BAAAAAAAAGQAAANMgAABPAQAAAAAAABkAAADTIAAATwEAAAAAAAAZAAAA0yAAAE8BAAAAAAAAGQAAANMgAABPAQAAAAAAABkAAADTIAAATwEAAAAAAAAZAAAA0yAAAE8BAAAAAAAAGQAAANMgAACtCgAAAAAAAA=="]},{"pair":[1,0],"observed_flagged_cells":254,"unknown_cells":0,"region_count":1,"largest_observed_cells":254,"regions":[{"id":8404,"cells":254,"area_mm2":8.334296244123324,"peak_loss_mm":0.7592405962011455,"peak_cell":[31,134],"crosses_seam":false,"adjacent_unknown":false,"touches_axial_end":false}],"nominal_overlap":[[8403,8404,254]],"labels_i32le_sha256":"e54986a17daf61c7e158552a257e8db944bbc4c83ac9264b9a27d86096b00eb8","pixels":["rle32le","0yAAAAAAAAAXAAAA1CAAAFEBAAAAAAAAFwAAANQgAABRAQAAAAAAABcAAADUIAAAUQEAAAAAAAAXAAAA1CAAAFEBAAAAAAAAFwAAANQgAABRAQAAAAAAABcAAADUIAAAUQEAAAAAAAAXAAAA1CAAAFEBAAAAAAAAFwAAANQgAABQAQAAAAAAABgAAADUIAAAUQEAAAAAAAAXAAAA1CAAAFEBAAAAAAAAFwAAANQgAACuCgAAAAAAAA=="]},{"pair":[1,1],"observed_flagged_cells":263,"unknown_cells":0,"region_count":1,"largest_observed_cells":263,"regions":[{"id":8403,"cells":263,"area_mm2":8.629605953560764,"peak_loss_mm":0.7707650345447643,"peak_cell":[31,134],"crosses_seam":false,"adjacent_unknown":false,"touches_axial_end":false}],"nominal_overlap":[[8403,8403,263]],"labels_i32le_sha256":"57f0de6dc7ca561847c0db4683e874bcf7a614a78a60ce1c968d2518b96b2087","pixels":["rle32le","0iAAAAAAAAAYAAAA0yAAAFEBAAAAAAAAFwAAANMgAABQAQAAAAAAABgAAADTIAAAUQEAAAAAAAAXAAAA0yAAAFEBAAAAAAAAGAAAANMgAABQAQAAAAAAABcAAADTIAAAUQEAAAAAAAAXAAAA0yAAAFABAAAAAAAAGQAAANMgAABPAQAAAAAAABkAAADTIAAATwEAAAAAAAAZAAAA0yAAAE8BAAAAAAAAGAAAANMgAACuCgAAAAAAAA=="]},{"pair":[1,2],"observed_flagged_cells":272,"unknown_cells":0,"region_count":1,"largest_observed_cells":272,"regions":[{"id":8403,"cells":272,"area_mm2":8.924915662998204,"peak_loss_mm":0.7824199509794463,"peak_cell":[31,134],"crosses_seam":false,"adjacent_unknown":false,"touches_axial_end":false}],"nominal_overlap":[[8403,8403,263]],"labels_i32le_sha256":"229e6c78bf07118512fa7325f617ce465446220ec104a6c32f7aa1cf643991f2","pixels":["rle32le","0iAAAAAAAAAYAAAA0yAAAFABAAAAAAAAGAAAANMgAABQAQAAAAAAABkAAADTIAAATwEAAAAAAAAZAAAA0yAAAFABAAAAAAAAGAAAANMgAABPAQAAAAAAABkAAADTIAAATwEAAAAAAAAZAAAA0yAAAE8BAAAAAAAAGQAAANMgAABPAQAAAAAAABkAAADTIAAATwEAAAAAAAAZAAAA0yAAAE8BAAAAAAAAGQAAANMgAACtCgAAAAAAAA=="]},{"pair":[2,0],"observed_flagged_cells":253,"unknown_cells":0,"region_count":1,"largest_observed_cells":253,"regions":[{"id":8404,"cells":253,"area_mm2":8.301484054185831,"peak_loss_mm":0.7496840724658353,"peak_cell":[31,134],"crosses_seam":false,"adjacent_unknown":false,"touches_axial_end":false}],"nominal_overlap":[[8403,8404,253]],"labels_i32le_sha256":"44273724e8549f07314add0f88c5db291fc1ba3e99e91e00b1de0c3ed329ca89","pixels":["rle32le","0yAAAAAAAAAXAAAA1CAAAFEBAAAAAAAAFwAAANQgAABRAQAAAAAAABcAAADUIAAAUQEAAAAAAAAXAAAA1CAAAFEBAAAAAAAAFwAAANQgAABRAQAAAAAAABcAAADUIAAAUQEAAAAAAAAXAAAA1CAAAFEBAAAAAAAAFwAAANQgAABRAQAAAAAAABcAAADUIAAAUQEAAAAAAAAXAAAA1CAAAFEBAAAAAAAAFwAAANQgAACuCgAAAAAAAA=="]},{"pair":[2,1],"observed_flagged_cells":255,"unknown_cells":0,"region_count":1,"largest_observed_cells":255,"regions":[{"id":8404,"cells":255,"area_mm2":8.367108434060818,"peak_loss_mm":0.7612085108094542,"peak_cell":[31,134],"crosses_seam":false,"adjacent_unknown":false,"touches_axial_end":false}],"nominal_overlap":[[8403,8404,255]],"labels_i32le_sha256":"849e9d7e2978a4f409407ef8ea9965bead9aab32e4a96438a9a34c5cb0777468","pixels":["rle32le","0yAAAAAAAAAXAAAA1CAAAFEBAAAAAAAAFwAAANQgAABRAQAAAAAAABcAAADUIAAAUQEAAAAAAAAXAAAA1CAAAFEBAAAAAAAAFwAAANQgAABRAQAAAAAAABcAAADUIAAAUQEAAAAAAAAXAAAA1CAAAFEBAAAAAAAAFwAAANQgAABQAQAAAAAAABgAAADUIAAAUAEAAAAAAAAYAAAA1CAAAFEBAAAAAAAAFwAAANQgAACuCgAAAAAAAA=="]},{"pair":[2,2],"observed_flagged_cells":263,"unknown_cells":0,"region_count":1,"largest_observed_cells":263,"regions":[{"id":8403,"cells":263,"area_mm2":8.629605953560764,"peak_loss_mm":0.7728634272441361,"peak_cell":[31,134],"crosses_seam":false,"adjacent_unknown":false,"touches_axial_end":false}],"nominal_overlap":[[8403,8403,263]],"labels_i32le_sha256":"57f0de6dc7ca561847c0db4683e874bcf7a614a78a60ce1c968d2518b96b2087","pixels":["rle32le","0iAAAAAAAAAYAAAA0yAAAFEBAAAAAAAAFwAAANMgAABQAQAAAAAAABgAAADTIAAAUQEAAAAAAAAXAAAA0yAAAFEBAAAAAAAAGAAAANMgAABQAQAAAAAAABcAAADTIAAAUQEAAAAAAAAXAAAA0yAAAFABAAAAAAAAGQAAANMgAABPAQAAAAAAABkAAADTIAAATwEAAAAAAAAZAAAA0yAAAE8BAAAAAAAAGAAAANMgAACuCgAAAAAAAA=="]}]},{"id":"invalid-edge-control","state":"incomplete_coverage","source_sha256":"28b3cd044f8b4a174dfbde30096c429af3180c8c4d332b4b0983d6dc63c655cc","result_sha256":"8031022e605a6e7c6feb53274b8f17ef203eb860744aa914681ea9dfaa5dbc11","shape":[41,360],"levels":[0.02,0.04],"nominal":[0,0],"gate":0.3,"radius":9.4,"dz":0.2,"scenarios":[{"pair":[0,0],"observed_flagged_cells":0,"unknown_cells":0,"region_count":0,"largest_observed_cells":0,"regions":[],"nominal_overlap":[],"labels_i32le_sha256":"81ea021db9a32256e8b7a51614f8d9a257b998e809632934862ab19511a24bcc","pixels":["rle32le","qDkAAAAAAAA="]},{"pair":[0,1],"observed_flagged_cells":8,"unknown_cells":14749,"region_count":8,"largest_observed_cells":1,"regions":[{"id":4184,"cells":1,"area_mm2":0.0328121899374934,"peak_loss_mm":1.9530055761591298,"peak_cell":[11,223],"crosses_seam":false,"adjacent_unknown":true,"touches_axial_end":false},{"id":4539,"cells":1,"area_mm2":0.0328121899374934,"peak_loss_mm":1.3241922686776442,"peak_cell":[12,218],"crosses_seam":false,"adjacent_unknown":true,"touches_axial_end":false},{"id":7488,"cells":1,"area_mm2":0.0328121899374934,"peak_loss_mm":1.1176830771544664,"peak_cell":[20,287],"crosses_seam":false,"adjacent_unknown":true,"touches_axial_end":false},{"id":7858,"cells":1,"area_mm2":0.0328121899374934,"peak_loss_mm":2.5968598007040593,"peak_cell":[21,297],"crosses_seam":false,"adjacent_unknown":true,"touches_axial_end":false},{"id":8210,"cells":1,"area_mm2":0.0328121899374934,"peak_loss_mm":2.552692431918066,"peak_cell":[22,289],"crosses_seam":false,"adjacent_unknown":true,"touches_axial_end":false},{"id":8212,"cells":1,"area_mm2":0.0328121899374934,"peak_loss_mm":0.8458045296839027,"peak_cell":[22,291],"crosses_seam":false,"adjacent_unknown":true,"touches_axial_end":false},{"id":8226,"cells":1,"area_mm2":0.0328121899374934,"peak_loss_mm":1.9064362533277015,"peak_cell":[22,305],"crosses_seam":false,"adjacent_unknown":true,"touches_axial_end":false},{"id":8568,"cells":1,"area_mm2":0.0328121899374934,"peak_loss_mm":3.1086977137427265,"peak_cell":[23,287],"crosses_seam":false,"adjacent_unknown":true,"touches_axial_end":false}],"nominal_overlap":[],"labels_i32le_sha256":"4f33eff5f62febc31e9056c4687e29f8159feb29bf2664f504b9936a27a62f57","pixels":["rle32le","VxAAAP////8BAAAAWBAAAAUAAAD/////AQAAAAAAAABcAQAA/////wEAAAC7EQAAtwgAAP////8BAAAAAAAAAMwCAAD/////AQAAAEAdAABxAQAA/////wEAAACyHgAAXwEAAP////8BAAAAEiAAAAEAAAD/////AQAAABQgAAANAAAA/////wEAAAAiIAAAVQEAAP////8BAAAAeCEAAAMAAAD/////AQAAAAAAAAAsGAAA/////w=="]},{"pair":[1,0],"observed_flagged_cells":0,"unknown_cells":14723,"region_count":0,"largest_observed_cells":0,"regions":[],"nominal_overlap":[],"labels_i32le_sha256":"6aa8360e4788e0d7976fc905fd796663bb8015acc44dfa4a96134c5f11179a47","pixels":["rle32le","4QAAAP////8BAAAAAAAAAAIAAAD/////AQAAAAAAAAAIAAAA/////wEAAAAAAAAAbwoAAP////8BAAAAAAAAAFgBAAD/////AQAAAAAAAAAHAAAA/////wEAAAAAAAAAAwAAAP////8BAAAAAAAAAFgBAAD/////AQAAAAAAAAACAAAA/////wEAAAAAAAAABwAAAP////8BAAAAAAAAAAYAAAD/////AQAAAAAAAAACAAAA/////wEAAAAAAAAACAAAAP////8BAAAAAAAAAEwBAAD/////AQAAAAAAAAAEAAAA/////wEAAAAAAAAABgAAAP////8BAAAAAAAAAAIAAAD/////AQAAAAAAAAACAAAA/////wEAAAAAAAAAZAEAAP////8BAAAAAAAAAAYAAAD/////AQAAAAAAAABUAQAA/////wIAAAAAAAAACwAAAP////8CAAAAAAAAAFcBAAD/////AQAAAAAAAAARAAAA/////wEAAAAAAAAAUwEAAP////8BAAAAAAAAAAoQAAD/////AQAAAAAAAADOAgAA/////wEAAAAAAAAAfAAAAP////8BAAAAAAAAAJsFAAD/////AQAAAAAAAAACAAAA/////wEAAAAAAAAAAgAAAP////8BAAAAAAAAAAkAAAD/////AQAAAAAAAABTAQAA/////wEAAAAAAAAAFQAAAP////8BAAAAAAAAAGMBAAD/////AQAAAAAAAACxCAAA/////w=="]},{"pair":[1,1],"observed_flagged_cells":0,"unknown_cells":14760,"region_count":0,"largest_observed_cells":0,"regions":[],"nominal_overlap":[],"labels_i32le_sha256":"72523fced4046d142293776812f91d88b52455ccedd602eb3d1cb9277f88825b","pixels":["rle32le","qDkAAP////8="]}]},{"id":"slide","state":"upstream_refused","source_sha256":"1eed21b8f8bd2b125088740c151533ef2adb9777f0ef70544b612579bbd02ef6","result_sha256":"be815d751bcffabec80144f93b4a4f952a8c165ea2347fd078e68c99f3a7068b","reason":"body_witness_failed","rejected_scan":"inspected"},{"id":"missing-reference","state":"upstream_refused","source_sha256":"8b74eb042f4044931457a1c4fa5e232c19e8b52763482576df5e3e1609cc574c","result_sha256":"8d9559167194625f885dd77ab6f9cc0c5d0085ee4582466b1fb06fee23639400","reason":"body_witness_failed","rejected_scan":"reference"}]}
+  </script>
+  <script>
+    "use strict";
+    const $ = (id) => document.getElementById(id),
+      data = JSON.parse($("payload").textContent),
+      names = {
+        complete_coverage: "全部组合覆盖完整",
+        incomplete_coverage: "部分组合覆盖不全",
+        upstream_refused: "见证拒测",
+        input_error: "输入错误",
+      };
+    const cv = $("map"),
+      ctx = cv.getContext("2d", { alpha: false });
+    let item,
+      sc,
+      lab,
+      nom,
+      h,
+      w,
+      row = 0,
+      col = 0,
+      seq = 0;
+    function options(el, values, selected) {
+      el.replaceChildren(
+        ...values.map(([value, text]) => new Option(text, value)),
+      );
+      el.value = String(selected);
+    }
+    function text(id, s) {
+      $(id).textContent = s;
+    }
+    async function decode(s, n) {
+      const [kind, b64] = s.pixels,
+        bytes = Uint8Array.from(atob(b64), (c) => c.charCodeAt(0)),
+        v = new DataView(bytes.buffer),
+        buf = new ArrayBuffer(n * 4),
+        out = new DataView(buf),
+        arr = new Int32Array(n);
+      let k = 0;
+      if (kind === "i32le" && bytes.length === n * 4) {
+        for (let i = 0; i < n; i++) arr[i] = v.getInt32(4 * i, true);
+      } else if (kind === "rle32le" && bytes.length % 8 === 0) {
+        for (let i = 0; i < bytes.length; i += 8) {
+          let count = v.getInt32(i, true),
+            id = v.getInt32(i + 4, true);
+          if (count < 1 || count > n - k) throw Error("标签游程越界");
+          arr.fill(id, k, k + count);
+          k += count;
+        }
+        if (k !== n) throw Error("标签长度不足");
+      } else throw Error("标签编码无效");
+      for (let i = 0; i < n; i++) out.setInt32(4 * i, arr[i], true);
+      let digest = Array.from(
+        new Uint8Array(await crypto.subtle.digest("SHA-256", buf)),
+        (b) => b.toString(16).padStart(2, "0"),
+      ).join("");
+      if (digest !== s.labels_i32le_sha256) throw Error("标签摘要不符");
+      return arr;
+    }
+    function move(r, c) {
+      row = Math.max(0, Math.min(h - 1, r));
+      col = (c + w) % w;
+      inspect();
+    }
+    function inspect() {
+      if (!lab) return;
+      const at = row * w + col,
+        id = lab[at],
+        base = nom[at],
+        off = +$("seam").value,
+        x = (col - off + w) % w,
+        r = sc.regions.find((a) => a.id === id);
+      $("pin").hidden = false;
+      $("pin").style.left = `${(100 * (x + 0.5)) / w}%`;
+      $("pin").style.top = `${(100 * (row + 0.5)) / h}%`;
+      text("coord", `行 ${row}，列 ${col}（${((360 * col) / w).toFixed(1)}°）`);
+      text(
+        "region",
+        r
+          ? `区域 #${id} · ${r.cells} 格，投影 ${r.area_mm2.toFixed(3)} mm²；峰值 ${r.peak_loss_mm.toFixed(4)} mm（行 ${r.peak_cell[0]}，列 ${r.peak_cell[1]}）。${[r.crosses_seam ? "跨材料接缝" : "", r.adjacent_unknown ? "邻接不可测区" : "", r.touches_axial_end ? "接触轴向端面" : ""].filter(Boolean).join("、")}`
+          : id < 0
+            ? "该单元不可测。"
+            : "该单元低于减薄判据。",
+      );
+      const edges = sc.nominal_overlap.filter((v) =>
+        r ? v[1] === id : base > 0 && v[0] === base,
+      );
+      text(
+        "overlap",
+        edges.length
+          ? "标称 → 当前交集：" +
+              edges.map(([a, b, n]) => `#${a} → #${b}（${n} 格）`).join("；")
+          : "该位置没有可列出的标称区域交集。",
+      );
+      $("jump").value = r ? String(id) : "";
+    }
+    function paint() {
+      if (!lab) return;
+      const off = +$("seam").value,
+        overlay = $("overlay").checked;
+      const pix = ctx.createImageData(w, h);
+      const colors = [
+        [49, 72, 88],
+        [255, 173, 67],
+        [201, 166, 223],
+        [117, 194, 220],
+      ];
+      for (let y = 0; y < h; y++)
+        for (let x = 0; x < w; x++) {
+          let p = y * w + ((x + off) % w),
+            u = lab[p],
+            c = colors[u < 0 ? 2 : u > 0 ? 1 : overlay && nom[p] > 0 ? 3 : 0],
+            i = 4 * (y * w + x);
+          pix.data[i] = c[0];
+          pix.data[i + 1] = c[1];
+          pix.data[i + 2] = c[2];
+          pix.data[i + 3] = 255;
+        }
+      ctx.putImageData(pix, 0, 0);
+      $("extra").hidden = !overlay;
+      text("first", `列 ${off}`);
+      text("last", `列 ${(off + w - 1) % w}`);
+      text("offset", off);
+      inspect();
+    }
+    function stop(heading, reason) {
+      $("work").hidden = true;
+      $("empty").hidden = false;
+      text("why", heading);
+      text("reason", reason);
+      text("labelhash", "—");
+      cv.width = cv.height = 1;
+      lab = nom = sc = null;
+      delete cv.dataset.ready;
+    }
+    async function scenario() {
+      const token = ++seq,
+        i = +$("ref").value,
+        j = +$("part").value;
+      const k = item.levels.length,
+        s = item.scenarios[i * k + j],
+        ns = item.scenarios[item.nominal[0] * k + item.nominal[1]];
+      delete cv.dataset.ready;
+      lab = null;
+      $("work").hidden = true;
+      text("state", "正在验证当前与标称标签…");
+      try {
+        const a = await decode(s, w * h),
+          b = s === ns ? a : await decode(ns, w * h);
+        if (token !== seq) return;
+        lab = a;
+        nom = b;
+        sc = s;
+        $("work").hidden = false;
+        $("empty").hidden = true;
+        cv.width = w;
+        cv.height = h;
+        text("state", `${item.id} · ${names[item.state]}`);
+        text("size", `${h} 行 × ${w} 列`);
+        text(
+          "counts",
+          `${s.region_count} 片区域 / ${s.observed_flagged_cells} 格超限`,
+        );
+        text(
+          "coverage",
+          s.unknown_cells
+            ? `本组合有 ${s.unknown_cells} 格不可测，已观测数量不能代表整件。`
+            : "本组合没有不可测单元。",
+        );
+        text(
+          "scale",
+          `减薄判据 ≥ ${item.gate} mm；面积参考半径 ${item.radius} mm；轴向行距 ${item.dz} mm。`,
+        );
+        text("labelhash", s.labels_i32le_sha256);
+        $("jumpbox").hidden = !s.region_count;
+        options(
+          $("jump"),
+          [["", "选择区域"], ...s.regions.map((r) => [r.id, "#" + r.id])],
+          "",
+        );
+        paint();
+        cv.dataset.ready = `${item.id}:${i},${j}`;
+      } catch (e) {
+        if (token === seq) {
+          stop("不能显示这张图", String(e.message));
+          text("state", "标签验证失败");
+        }
+      }
+    }
+    function select() {
+      ++seq;
+      item = data.entries[+$("job").value];
+      $("overlay").checked = false;
+      text("sourcehash", item.source_sha256);
+      text("resulthash", item.result_sha256 || "无结果");
+      text("state", `${item.id} · ${names[item.state]}`);
+      if (!item.scenarios) {
+        stop(
+          names[item.state],
+          item.state === "upstream_refused"
+            ? `${item.rejected_scan}：${item.reason}。该作业没有减薄图。`
+            : `${item.error_type}。此批次未生成该项测量结果。`,
+        );
+        return;
+      }
+      [h, w] = item.shape;
+      const lev = item.levels.map((v, i) => [i, String(v)]);
+      options($("ref"), lev, item.nominal[0]);
+      options($("part"), lev, item.nominal[1]);
+      $("seam").max = w - 1;
+      $("seam").value = 0;
+      const rec =
+        item.scenarios[item.nominal[0] * lev.length + item.nominal[1]]
+          .regions[0];
+      [row, col] = rec ? rec.peak_cell : [Math.floor(h / 2), 0];
+      $("empty").hidden = true;
+      scenario();
+    }
+    $("job").onchange = select;
+    $("ref").onchange = $("part").onchange = scenario;
+    $("seam").oninput = $("overlay").onchange = paint;
+    $("reset").onclick = () => {
+      $("ref").value = item.nominal[0];
+      $("part").value = item.nominal[1];
+      scenario();
+    };
+    $("jump").onchange = () => {
+      const r = sc.regions.find((r) => r.id === +$("jump").value);
+      if (r) move(...r.peak_cell);
+    };
+    cv.onclick = (e) => {
+      if (!lab) return;
+      const b = cv.getBoundingClientRect();
+      move(
+        Math.floor(((e.clientY - b.top) * h) / b.height),
+        Math.min(w - 1, Math.floor(((e.clientX - b.left) * w) / b.width)) +
+          +$("seam").value,
+      );
+    };
+    cv.onkeydown = (e) => {
+      if (!lab) return;
+      const d = {
+        ArrowLeft: [0, -1],
+        ArrowRight: [0, 1],
+        ArrowUp: [-1, 0],
+        ArrowDown: [1, 0],
+      }[e.key];
+      if (d) {
+        e.preventDefault();
+        move(row + d[0], col + d[1]);
+      }
+    };
+    text("batchhash", data.batch_sha256);
+    const start = data.entries.findIndex((x) =>
+      x.scenarios?.some((s) => s.region_count),
+    );
+    options(
+      $("job"),
+      data.entries.map((e, i) => [i, e.id + " · " + names[e.state]]),
+      Math.max(0, start),
+    );
+    select();
+  </script>
+</html>

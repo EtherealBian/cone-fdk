@@ -1,0 +1,16 @@
+{
+  "protocol": "Actual canvas RGBA digest compared to independently pinned native loss runs at two seam positions, with nominal overlay off/on; material-coordinate picks, unknown precedence, keyboard seam wrap, refusal, offline file URL and mobile width.",
+  "browser": "158.0.8127.38",
+  "html_sha256": "da4dfb8f56634802c5d379c63258e08a73b76fbff2e38b3e0ccf628c3fb7d9ff",
+  "native_qualification_sha256": "f6c6c5d129b63ee1573eac34dcfb6429dd5305086580c1c1ebac5d0ace5f4b2d",
+  "corrupt_maps_refused": 2,
+  "maps": 22,
+  "canvas_comparisons": 44,
+  "pixels_compared": 649440,
+  "picks": 12,
+  "unknown_picks": 3,
+  "refusals_without_map": 2,
+  "external_requests": 0,
+  "page_errors": 0,
+  "screenshot_sha256": "45298f44b377f0f37b43c80d1925c84c3a6763b63c2001879e1a437067696640"
+}

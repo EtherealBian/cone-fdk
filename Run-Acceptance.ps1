@@ -1,4 +1,4 @@
-param([switch]$CoreOnly, [switch]$SkipBuild, [string]$Python="$PSScriptRoot\.venv\Scripts\python.exe", [int]$DownloadJobs=6)
+param([switch]$SpecimenCampaign, [switch]$CoreOnly, [switch]$SkipBuild, [string]$Python="$PSScriptRoot\.venv\Scripts\python.exe", [int]$DownloadJobs=6)
 $ErrorActionPreference='Stop'
 function Run-Python { & $Python @args; if ($LASTEXITCODE -ne 0) {throw ('Stage failed: ' + ($args -join ' '))} }
 Push-Location $PSScriptRoot
@@ -20,6 +20,10 @@ try {
   Run-Python scripts/validate_witness.py --edge-review --region-review
   Run-Python scripts/export_volume.py data/walnut-corrected-256.f32 --n 256 --fov 40 --out reports
   Run-Python scripts/benchmark.py
+  if ($SpecimenCampaign) {
+    $stamp = [Guid]::NewGuid().ToString('N')
+    Run-Python scripts/replay_specimens.py --expected reports/specimen-qualification.json --evidence "reports/specimen-replay-$stamp.json"
+  }
   if (!$CoreOnly) {
     Run-Python scripts/stress.py
     Run-Python scripts/fetch.py --jobs $DownloadJobs

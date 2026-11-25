@@ -3,3 +3,6 @@
 *.gif binary
 *.png binary
 *.zip binary
+
+# Historical Windows edge manifests pin the exact working-tree bytes of this module.
+scripts/wall.py text eol=crlf
