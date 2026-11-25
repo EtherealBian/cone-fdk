@@ -1,0 +1,46 @@
+{
+  "protocol": "Two native builds and full non-CoreOnly regression. Historical packed, bridge and independent specimen campaigns retained. Separate isolated CPU replay of pinned native jobs and synthetic OS-memory gate. Final pytest repeated after hardening and release-verifier tests.",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "full_pytest": {
+    "tests": 492,
+    "errors": 0,
+    "skipped": 0,
+    "failures": 0
+  },
+  "final_pytest": {
+    "tests": 503,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "prior_bridge_replay_sha256": "7dc0fadc621b978421dc98e06c92f185a6e487111b475382f98e8dcc37986569",
+  "native_volume_regression_sha256": "bcc5bb724755ccaa905c4dba74d4a311e821b5cae90e0520fad9dc67b4e7fd90",
+  "qualifications_sha256": {
+    "stripe-qualification.json": "767789f1367de62ef24e74f831b61ec1a585e623c13efbfce072000a7856a856",
+    "anchor-qualification.json": "3b7a2b953131c498107661ab80005e5a7dd7d1d7b55da00266605f30424307b5"
+  },
+  "archived_scale_sha256": "7d3fb3ab3b1cfa30d5d20c04e981ce6abee2285dc0698f43ea5f9081e596a946",
+  "replay_scale_sha256": "c7e6c0fc6a8a69a054925594e38b7e746383b26c2d273f254d4e6d38189eeb2e",
+  "archived_peak_bytes_8_32": {
+    "384": [
+      64225280,
+      68550656
+    ],
+    "1536": [
+      63983616,
+      68476928
+    ]
+  },
+  "replay_peak_bytes_8_32": {
+    "384": [
+      64655360,
+      68059136
+    ],
+    "1536": [
+      64425984,
+      68276224
+    ]
+  },
+  "maps": 40,
+  "pair_cells": 590400
+}

@@ -1,0 +1,911 @@
+{
+  "scope": "Same pinned wall payloads in 1, 7 and 32-row bands; independent full native reports and material-space heap oracle. No physical accuracy claim.",
+  "source_sha256": {
+    "stripe_review.py": "b8f01cb6e367b82cdff32fd81d4138353d658cbd7d15b36550ee3fd7b69257c8",
+    "stripe_frontier.py": "4c2383f673653de788d19a09d014a1c6ce4677c6acdf8975c7492fcefb0f8000",
+    "qualify_striped_jobs.py": "04693e83c1c106e748ec42495bdcbc1a7600783c9af56f1c1c88c957cf9f2d78"
+  },
+  "maps": 40,
+  "pair_cells": 590400,
+  "cases": {
+    "open-control": {
+      "result": {
+        "shape_ha": [
+          41,
+          360
+        ],
+        "anchors_row_col": [
+          [
+            11,
+            46
+          ],
+          [
+            29,
+            46
+          ]
+        ],
+        "levels_per_mm": [
+          0.018,
+          0.02,
+          0.022
+        ],
+        "nominal_pair": [
+          1,
+          1
+        ],
+        "loss_gate_mm": 0.3,
+        "edge_manifest_sha256": "ec5b527b5c8f9633eef83c2af1df7c35a33ebff1cca673a099847f271349dd7f",
+        "scenarios": [
+          {
+            "pair": [
+              0,
+              0
+            ],
+            "observed_components": 2,
+            "largest_observed_cells": 385,
+            "observed_flagged_cells": 770,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "separated_on_grid"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "observed_components": 2,
+            "largest_observed_cells": 388,
+            "observed_flagged_cells": 773,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "separated_on_grid"
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "observed_components": 2,
+            "largest_observed_cells": 400,
+            "observed_flagged_cells": 794,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "separated_on_grid"
+          },
+          {
+            "pair": [
+              1,
+              0
+            ],
+            "observed_components": 2,
+            "largest_observed_cells": 385,
+            "observed_flagged_cells": 770,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "separated_on_grid"
+          },
+          {
+            "pair": [
+              1,
+              1
+            ],
+            "observed_components": 2,
+            "largest_observed_cells": 385,
+            "observed_flagged_cells": 770,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "separated_on_grid"
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "observed_components": 2,
+            "largest_observed_cells": 388,
+            "observed_flagged_cells": 774,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "separated_on_grid"
+          },
+          {
+            "pair": [
+              2,
+              0
+            ],
+            "observed_components": 2,
+            "largest_observed_cells": 384,
+            "observed_flagged_cells": 766,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "separated_on_grid"
+          },
+          {
+            "pair": [
+              2,
+              1
+            ],
+            "observed_components": 2,
+            "largest_observed_cells": 385,
+            "observed_flagged_cells": 770,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "separated_on_grid"
+          },
+          {
+            "pair": [
+              2,
+              2
+            ],
+            "observed_components": 2,
+            "largest_observed_cells": 385,
+            "observed_flagged_cells": 770,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "separated_on_grid"
+          }
+        ]
+      },
+      "trials": [
+        {
+          "bands": 41,
+          "band_rows": 1,
+          "peak_band_cells": 360,
+          "max_retained_components_per_frontier": 1,
+          "payload_bytes_read": 3084840,
+          "hashed_payloads": 9,
+          "pair_cells": 132840
+        },
+        {
+          "bands": 6,
+          "band_rows": 7,
+          "peak_band_cells": 2520,
+          "max_retained_components_per_frontier": 1,
+          "payload_bytes_read": 3084840,
+          "hashed_payloads": 9,
+          "pair_cells": 132840
+        },
+        {
+          "bands": 2,
+          "band_rows": 32,
+          "peak_band_cells": 11520,
+          "max_retained_components_per_frontier": 1,
+          "payload_bytes_read": 3084840,
+          "hashed_payloads": 9,
+          "pair_cells": 132840
+        }
+      ]
+    },
+    "critical-a": {
+      "result": {
+        "shape_ha": [
+          41,
+          360
+        ],
+        "anchors_row_col": [
+          [
+            11,
+            46
+          ],
+          [
+            29,
+            46
+          ]
+        ],
+        "levels_per_mm": [
+          0.018,
+          0.02,
+          0.022
+        ],
+        "nominal_pair": [
+          1,
+          1
+        ],
+        "loss_gate_mm": 0.3,
+        "edge_manifest_sha256": "becaba2b1a7a67a2313bc71aa08079f081700b22c85d0fcff7ee452650356812",
+        "scenarios": [
+          {
+            "pair": [
+              0,
+              0
+            ],
+            "observed_components": 5,
+            "largest_observed_cells": 389,
+            "observed_flagged_cells": 784,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "separated_on_grid"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "observed_components": 1,
+            "largest_observed_cells": 817,
+            "observed_flagged_cells": 817,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "observed_link"
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "observed_components": 2,
+            "largest_observed_cells": 851,
+            "observed_flagged_cells": 852,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "observed_link"
+          },
+          {
+            "pair": [
+              1,
+              0
+            ],
+            "observed_components": 2,
+            "largest_observed_cells": 386,
+            "observed_flagged_cells": 771,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "separated_on_grid"
+          },
+          {
+            "pair": [
+              1,
+              1
+            ],
+            "observed_components": 5,
+            "largest_observed_cells": 391,
+            "observed_flagged_cells": 780,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "separated_on_grid"
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "observed_components": 1,
+            "largest_observed_cells": 815,
+            "observed_flagged_cells": 815,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "observed_link"
+          },
+          {
+            "pair": [
+              2,
+              0
+            ],
+            "observed_components": 2,
+            "largest_observed_cells": 382,
+            "observed_flagged_cells": 763,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "separated_on_grid"
+          },
+          {
+            "pair": [
+              2,
+              1
+            ],
+            "observed_components": 2,
+            "largest_observed_cells": 386,
+            "observed_flagged_cells": 772,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "separated_on_grid"
+          },
+          {
+            "pair": [
+              2,
+              2
+            ],
+            "observed_components": 4,
+            "largest_observed_cells": 391,
+            "observed_flagged_cells": 780,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "separated_on_grid"
+          }
+        ]
+      },
+      "trials": [
+        {
+          "bands": 41,
+          "band_rows": 1,
+          "peak_band_cells": 360,
+          "max_retained_components_per_frontier": 2,
+          "payload_bytes_read": 3084840,
+          "hashed_payloads": 9,
+          "pair_cells": 132840
+        },
+        {
+          "bands": 6,
+          "band_rows": 7,
+          "peak_band_cells": 2520,
+          "max_retained_components_per_frontier": 2,
+          "payload_bytes_read": 3084840,
+          "hashed_payloads": 9,
+          "pair_cells": 132840
+        },
+        {
+          "bands": 2,
+          "band_rows": 32,
+          "peak_band_cells": 11520,
+          "max_retained_components_per_frontier": 1,
+          "payload_bytes_read": 3084840,
+          "hashed_payloads": 9,
+          "pair_cells": 132840
+        }
+      ]
+    },
+    "critical-b": {
+      "result": {
+        "shape_ha": [
+          41,
+          360
+        ],
+        "anchors_row_col": [
+          [
+            11,
+            46
+          ],
+          [
+            29,
+            46
+          ]
+        ],
+        "levels_per_mm": [
+          0.018,
+          0.02,
+          0.022
+        ],
+        "nominal_pair": [
+          1,
+          1
+        ],
+        "loss_gate_mm": 0.3,
+        "edge_manifest_sha256": "dbb69a505c9955ad86830fe1557ba44d7c1b98fd36ca4d886a3b52525b7c0e9e",
+        "scenarios": [
+          {
+            "pair": [
+              0,
+              0
+            ],
+            "observed_components": 2,
+            "largest_observed_cells": 396,
+            "observed_flagged_cells": 783,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "separated_on_grid"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "observed_components": 1,
+            "largest_observed_cells": 812,
+            "observed_flagged_cells": 812,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "observed_link"
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "observed_components": 1,
+            "largest_observed_cells": 855,
+            "observed_flagged_cells": 855,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "observed_link"
+          },
+          {
+            "pair": [
+              1,
+              0
+            ],
+            "observed_components": 2,
+            "largest_observed_cells": 386,
+            "observed_flagged_cells": 771,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "separated_on_grid"
+          },
+          {
+            "pair": [
+              1,
+              1
+            ],
+            "observed_components": 3,
+            "largest_observed_cells": 390,
+            "observed_flagged_cells": 779,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "separated_on_grid"
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "observed_components": 1,
+            "largest_observed_cells": 812,
+            "observed_flagged_cells": 812,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "observed_link"
+          },
+          {
+            "pair": [
+              2,
+              0
+            ],
+            "observed_components": 2,
+            "largest_observed_cells": 383,
+            "observed_flagged_cells": 765,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "separated_on_grid"
+          },
+          {
+            "pair": [
+              2,
+              1
+            ],
+            "observed_components": 2,
+            "largest_observed_cells": 385,
+            "observed_flagged_cells": 770,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "separated_on_grid"
+          },
+          {
+            "pair": [
+              2,
+              2
+            ],
+            "observed_components": 3,
+            "largest_observed_cells": 389,
+            "observed_flagged_cells": 778,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "separated_on_grid"
+          }
+        ]
+      },
+      "trials": [
+        {
+          "bands": 41,
+          "band_rows": 1,
+          "peak_band_cells": 360,
+          "max_retained_components_per_frontier": 2,
+          "payload_bytes_read": 3084840,
+          "hashed_payloads": 9,
+          "pair_cells": 132840
+        },
+        {
+          "bands": 6,
+          "band_rows": 7,
+          "peak_band_cells": 2520,
+          "max_retained_components_per_frontier": 1,
+          "payload_bytes_read": 3084840,
+          "hashed_payloads": 9,
+          "pair_cells": 132840
+        },
+        {
+          "bands": 2,
+          "band_rows": 32,
+          "peak_band_cells": 11520,
+          "max_retained_components_per_frontier": 1,
+          "payload_bytes_read": 3084840,
+          "hashed_payloads": 9,
+          "pair_cells": 132840
+        }
+      ]
+    },
+    "joined-control": {
+      "result": {
+        "shape_ha": [
+          41,
+          360
+        ],
+        "anchors_row_col": [
+          [
+            11,
+            46
+          ],
+          [
+            29,
+            46
+          ]
+        ],
+        "levels_per_mm": [
+          0.018,
+          0.02,
+          0.022
+        ],
+        "nominal_pair": [
+          1,
+          1
+        ],
+        "loss_gate_mm": 0.3,
+        "edge_manifest_sha256": "6378cc2574da3e679538b14c9acd193307af22972d1511bd5af1cabcdad74e38",
+        "scenarios": [
+          {
+            "pair": [
+              0,
+              0
+            ],
+            "observed_components": 1,
+            "largest_observed_cells": 902,
+            "observed_flagged_cells": 902,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "observed_link"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "observed_components": 1,
+            "largest_observed_cells": 908,
+            "observed_flagged_cells": 908,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "observed_link"
+          },
+          {
+            "pair": [
+              0,
+              2
+            ],
+            "observed_components": 1,
+            "largest_observed_cells": 942,
+            "observed_flagged_cells": 942,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "observed_link"
+          },
+          {
+            "pair": [
+              1,
+              0
+            ],
+            "observed_components": 1,
+            "largest_observed_cells": 892,
+            "observed_flagged_cells": 892,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "observed_link"
+          },
+          {
+            "pair": [
+              1,
+              1
+            ],
+            "observed_components": 1,
+            "largest_observed_cells": 903,
+            "observed_flagged_cells": 903,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "observed_link"
+          },
+          {
+            "pair": [
+              1,
+              2
+            ],
+            "observed_components": 1,
+            "largest_observed_cells": 908,
+            "observed_flagged_cells": 908,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "observed_link"
+          },
+          {
+            "pair": [
+              2,
+              0
+            ],
+            "observed_components": 1,
+            "largest_observed_cells": 883,
+            "observed_flagged_cells": 883,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "observed_link"
+          },
+          {
+            "pair": [
+              2,
+              1
+            ],
+            "observed_components": 1,
+            "largest_observed_cells": 892,
+            "observed_flagged_cells": 892,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "observed_link"
+          },
+          {
+            "pair": [
+              2,
+              2
+            ],
+            "observed_components": 1,
+            "largest_observed_cells": 903,
+            "observed_flagged_cells": 903,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "observed_link"
+          }
+        ]
+      },
+      "trials": [
+        {
+          "bands": 41,
+          "band_rows": 1,
+          "peak_band_cells": 360,
+          "max_retained_components_per_frontier": 1,
+          "payload_bytes_read": 3084840,
+          "hashed_payloads": 9,
+          "pair_cells": 132840
+        },
+        {
+          "bands": 6,
+          "band_rows": 7,
+          "peak_band_cells": 2520,
+          "max_retained_components_per_frontier": 1,
+          "payload_bytes_read": 3084840,
+          "hashed_payloads": 9,
+          "pair_cells": 132840
+        },
+        {
+          "bands": 2,
+          "band_rows": 32,
+          "peak_band_cells": 11520,
+          "max_retained_components_per_frontier": 1,
+          "payload_bytes_read": 3084840,
+          "hashed_payloads": 9,
+          "pair_cells": 132840
+        }
+      ]
+    },
+    "invalid-edge-control": {
+      "result": {
+        "shape_ha": [
+          41,
+          360
+        ],
+        "anchors_row_col": [
+          [
+            11,
+            223
+          ],
+          [
+            12,
+            218
+          ]
+        ],
+        "levels_per_mm": [
+          0.02,
+          0.04
+        ],
+        "nominal_pair": [
+          0,
+          0
+        ],
+        "loss_gate_mm": 0.3,
+        "edge_manifest_sha256": "fc0ababbef42fecbb40e33bd3c5e2bb5002c5574730f53a62bfd122eb77c097f",
+        "scenarios": [
+          {
+            "pair": [
+              0,
+              0
+            ],
+            "observed_components": 0,
+            "largest_observed_cells": 0,
+            "observed_flagged_cells": 0,
+            "unknown_cells": 0,
+            "anchor_cells": [
+              "below",
+              "below"
+            ],
+            "anchor_state": "anchor_below_gate"
+          },
+          {
+            "pair": [
+              0,
+              1
+            ],
+            "observed_components": 8,
+            "largest_observed_cells": 1,
+            "observed_flagged_cells": 8,
+            "unknown_cells": 14749,
+            "anchor_cells": [
+              "flagged",
+              "flagged"
+            ],
+            "anchor_state": "unresolved_blind_path"
+          },
+          {
+            "pair": [
+              1,
+              0
+            ],
+            "observed_components": 0,
+            "largest_observed_cells": 0,
+            "observed_flagged_cells": 0,
+            "unknown_cells": 14723,
+            "anchor_cells": [
+              "unknown",
+              "unknown"
+            ],
+            "anchor_state": "unresolved_blind_path"
+          },
+          {
+            "pair": [
+              1,
+              1
+            ],
+            "observed_components": 0,
+            "largest_observed_cells": 0,
+            "observed_flagged_cells": 0,
+            "unknown_cells": 14760,
+            "anchor_cells": [
+              "unknown",
+              "unknown"
+            ],
+            "anchor_state": "unresolved_blind_path"
+          }
+        ]
+      },
+      "trials": [
+        {
+          "bands": 41,
+          "band_rows": 1,
+          "peak_band_cells": 360,
+          "max_retained_components_per_frontier": 3,
+          "payload_bytes_read": 2140200,
+          "hashed_payloads": 7,
+          "pair_cells": 59040
+        },
+        {
+          "bands": 6,
+          "band_rows": 7,
+          "peak_band_cells": 2520,
+          "max_retained_components_per_frontier": 1,
+          "payload_bytes_read": 2140200,
+          "hashed_payloads": 7,
+          "pair_cells": 59040
+        },
+        {
+          "bands": 2,
+          "band_rows": 32,
+          "peak_band_cells": 11520,
+          "max_retained_components_per_frontier": 1,
+          "payload_bytes_read": 2140200,
+          "hashed_payloads": 7,
+          "pair_cells": 59040
+        }
+      ]
+    }
+  }
+}
