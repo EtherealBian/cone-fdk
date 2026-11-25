@@ -13,3 +13,28 @@
 python scripts/bridge_design.py build/bridge-design-check.json
 python -m pytest tests/test_bridge_design.py -q
 ```
+
+## 从投影得到的结果
+
+四次复检共享同一次基准扫描。两次临界复检的几何相同，计数噪声独立。[原始逐对证据](bridge-result.json)记录 36 份 CUDA 标签摘要、CPU 对照、两个锚点的区域 ID、总片数、足迹和峰值。[单文件离线控制台](bridge-console.html) 可以直接下载后双击，切换作业和阈值。
+
+| 复检（窄桥设计深度） | 九种配对：连通 / 断开 | 标称配对全图片数 | 标称足迹 IoU | 标称峰值相对设计误差 |
+|---|---:|---:|---:|---:|
+| 断开对照（0.18 mm） | 0 / 9 | 2 | 1.0000 | +0.01884 mm |
+| 临界 A（0.30 mm） | 3 / 6 | 5 | 0.9885 | +0.01413 mm |
+| 临界 B（0.30 mm） | 3 / 6 | 3 | 0.9949 | +0.01165 mm |
+| 连通对照（0.42 mm） | 9 / 0 | 1 | 1.0000 | +0.01458 mm |
+
+两个临界作业的标称图上锚点均断开；额外小岛使总数为 5 或 3，而非简单的“两瓣等于两片”。两者都在同样三种配对下连通（参考/复检档索引 `0/1`、`0/2`、`1/2`）。**3/9 不是 33% 的失效概率**：这里列举的是九种事先约定的全局设置，不是从总体抽取九次独立试验。所有 531,360 个配对单元都有覆盖；见证、标称父报告、合包输出、CPU 洪泛、原生 CUDA 标签、批处理与续算都已核对。
+
+### 复跑
+
+用相同工具链构建后，可单独运行（输出为新文件，`--keep` 可保留约 1 GB 的投影和中间作业）：
+
+```powershell
+python scripts/replay_bridge.py reports/bridge-result.json reports/bridge-bundle.json build/my-bridge-replay.json --keep build/my-new-bridge-run
+```
+
+它从五次探测器采集重新开始，不从已存壁图起算；逐字节对照冻结测量记录与离线产品。判断挑战是否达标请看 `scientific_gates`，不要只看“可复现”的退出码。[离线包索引与整文件摘要](bridge-bundle.json)。全流程开关是 `Run-Acceptance.ps1 -PackedCampaign -SpecimenCampaign -BridgeCampaign`。
+
+[隔离全回归](bridge-regression.json)：444 项测试通过，无跳过。第二次从射线生成完整采集，测量 JSON 与单文件 HTML 均与首次的冻结字节相同；[重放证据](bridge-replay.json)。原先的 720 视图实测核桃以及 1296³ 超显存压力回归也保留，但不是窄桥尺寸的实物验证。

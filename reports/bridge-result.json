@@ -1,0 +1,813 @@
+{
+  "format": "CFDK-bridge-result-v1",
+  "scope": "One simulated geometry, one reference + four noisy inspected acquisitions. Not physical accuracy or a probability estimate.",
+  "protocol_sha256": "27d7fb4aa8683def6089ca0e4548e6b68d582de6ec9b55cb28f3857e39f4a322",
+  "acquisitions": {
+    "baseline": {
+      "geom": "e5a22b9b27d931b180149fd6316170a6420ba725b0d265f44ebc741b3570c96f",
+      "f32": "4c9156ba5dc6b2d9503ae240d3dee938695cb67d52d9b1c904f3afd09cfc2242"
+    },
+    "open-control": {
+      "geom": "e5a22b9b27d931b180149fd6316170a6420ba725b0d265f44ebc741b3570c96f",
+      "f32": "b095587311232ea631e0a5a1331179dbee2ce076d39440cf017e0fd2b5b1487f"
+    },
+    "critical-a": {
+      "geom": "e5a22b9b27d931b180149fd6316170a6420ba725b0d265f44ebc741b3570c96f",
+      "f32": "71ded1ef74713dc61ddc903e722ccd7df180f0adbc4cc72d3e9adea1be746642"
+    },
+    "critical-b": {
+      "geom": "e5a22b9b27d931b180149fd6316170a6420ba725b0d265f44ebc741b3570c96f",
+      "f32": "715c0a2588a184614d618f5216521cedf7f19aa52ffeecbcf678cad4c1b4fce4"
+    },
+    "joined-control": {
+      "geom": "e5a22b9b27d931b180149fd6316170a6420ba725b0d265f44ebc741b3570c96f",
+      "f32": "e09f802f8355d95f0b2705ae137060354d1340d7ff20b53abbba105b5e7c67ee"
+    }
+  },
+  "sources_sha256": {
+    "bridge_phantom.py": "86ea797e84d8d38dca3628bd2e2f2c3b024d36fabdf251fae407cfa3c6eb4917",
+    "bridge_design.py": "4eacd70abeed4db6aa2ef1c8ce157d8f98e8962d9a7ba307cf033ee35913f596",
+    "validate_bridge.py": "020e62ac5e894ff1b66d0df40e2f0da91d8bd6f1d9cda7d09429b214f9c19c50"
+  },
+  "companion_sha256": "df5379e2994a63a47b1ef9df19c1514f8e53cfe269100717c35daf9ffd40f4ec",
+  "cases": {
+    "open-control": {
+      "witness_sha256": "48a8baf3948d3e1364a39d502a981cb843f3b55fd0c291b9d7d0f2d5ce0b3230",
+      "edge_sha256": "ec5b527b5c8f9633eef83c2af1df7c35a33ebff1cca673a099847f271349dd7f",
+      "region_sha256": "1a344b84d05186cc0d61adcbda84d7a03f70d4d2227ff9be7d2721ce31cf2954",
+      "nominal_pair": [
+        1,
+        1
+      ],
+      "rows": [
+        {
+          "pair": [
+            0,
+            0
+          ],
+          "anchor_ids": [
+            2190,
+            8670
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": false,
+          "footprint_iou": 1.0,
+          "observed_flagged_cells": 770,
+          "components": 2,
+          "peak_mm": 0.7364857430794913,
+          "peak_error_mm": 0.016485743079491355,
+          "labels_i32le_sha256": "57fde9eb580be7acd4891e091619df4560dd7ff5111eb53e157c085c8a534e68",
+          "native_sha256": "cb53fdba4b392879a24c2df9ba860f35ef15d8f3a3c6bf553e6b1ed38e1590ee"
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "anchor_ids": [
+            2190,
+            8670
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": false,
+          "footprint_iou": 0.9961190168175937,
+          "observed_flagged_cells": 773,
+          "components": 2,
+          "peak_mm": 0.7487594126413559,
+          "peak_error_mm": 0.028759412641355953,
+          "labels_i32le_sha256": "04ca4874cf98ce011ec6cf0f7bd282483a6657c993edcd9b1e84d2cdb235b522",
+          "native_sha256": "824ba4de01e303ed6340603b74799e0163e5e2d60696a975df94b383e2b9f4e0"
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "anchor_ids": [
+            2190,
+            8669
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": false,
+          "footprint_iou": 0.9697732997481109,
+          "observed_flagged_cells": 794,
+          "components": 2,
+          "peak_mm": 0.760087587973691,
+          "peak_error_mm": 0.04008758797369105,
+          "labels_i32le_sha256": "25aad1c623c0fdb9b1c96d7ae76f841607bc7af33726d64f7531f47f0cacb038",
+          "native_sha256": "544ed2397aafcf954b04da19469c4a75760d5b621765bd443a711ada654e88fe"
+        },
+        {
+          "pair": [
+            1,
+            0
+          ],
+          "anchor_ids": [
+            2190,
+            8670
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": false,
+          "footprint_iou": 1.0,
+          "observed_flagged_cells": 770,
+          "components": 2,
+          "peak_mm": 0.7265614838718264,
+          "peak_error_mm": 0.0065614838718264235,
+          "labels_i32le_sha256": "57fde9eb580be7acd4891e091619df4560dd7ff5111eb53e157c085c8a534e68",
+          "native_sha256": "729c7d5e1a3f979175b61ef5e824846983736f279cecb12027b41da845351151"
+        },
+        {
+          "pair": [
+            1,
+            1
+          ],
+          "anchor_ids": [
+            2190,
+            8670
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": false,
+          "footprint_iou": 1.0,
+          "observed_flagged_cells": 770,
+          "components": 2,
+          "peak_mm": 0.738835153433691,
+          "peak_error_mm": 0.01883515343369102,
+          "labels_i32le_sha256": "57fde9eb580be7acd4891e091619df4560dd7ff5111eb53e157c085c8a534e68",
+          "native_sha256": "aebc5b4dfac022e982e2a5f27da47dc51382d06a5064ca00c5caf719086d1c82"
+        },
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "anchor_ids": [
+            2190,
+            8670
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": false,
+          "footprint_iou": 0.9948320413436692,
+          "observed_flagged_cells": 774,
+          "components": 2,
+          "peak_mm": 0.7501633287660261,
+          "peak_error_mm": 0.03016332876602612,
+          "labels_i32le_sha256": "7338371f389b22b39a54e0c396fcb0c8e728c99c4fa103f928b5008b35a0263d",
+          "native_sha256": "a2fec9ec5e65ce8f5b5c326cc53f0b264c2d9d8c63be875ef73c404fe5f83d23"
+        },
+        {
+          "pair": [
+            2,
+            0
+          ],
+          "anchor_ids": [
+            2190,
+            8670
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": false,
+          "footprint_iou": 0.9948051948051948,
+          "observed_flagged_cells": 766,
+          "components": 2,
+          "peak_mm": 0.7166372246641615,
+          "peak_error_mm": -0.003362775335838508,
+          "labels_i32le_sha256": "b59dc3fd41f682242a9ea51595853c0ce6d6691bf850b651c848c94c1302c8de",
+          "native_sha256": "1977d095cd9b75a4f9391bced2c89caba214a172845dff979b4a7e2a2ee62006"
+        },
+        {
+          "pair": [
+            2,
+            1
+          ],
+          "anchor_ids": [
+            2190,
+            8670
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": false,
+          "footprint_iou": 1.0,
+          "observed_flagged_cells": 770,
+          "components": 2,
+          "peak_mm": 0.7289108942260261,
+          "peak_error_mm": 0.00891089422602609,
+          "labels_i32le_sha256": "57fde9eb580be7acd4891e091619df4560dd7ff5111eb53e157c085c8a534e68",
+          "native_sha256": "ff43f8b280b1c01839cadb66d3d71448861d6faba4cee5b9b2ae3404432f1ed3"
+        },
+        {
+          "pair": [
+            2,
+            2
+          ],
+          "anchor_ids": [
+            2190,
+            8670
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": false,
+          "footprint_iou": 1.0,
+          "observed_flagged_cells": 770,
+          "components": 2,
+          "peak_mm": 0.7402390695583612,
+          "peak_error_mm": 0.02023906955836119,
+          "labels_i32le_sha256": "57fde9eb580be7acd4891e091619df4560dd7ff5111eb53e157c085c8a534e68",
+          "native_sha256": "684c44dffc1c8520418fe9975faf9b7debb623aeb8e68fb1baf2fdda8b5c04d0"
+        }
+      ]
+    },
+    "critical-a": {
+      "witness_sha256": "0da6d52f9cbd16d4df237dc2a61f14c92eae3bd1c818e866dd965483942a1d34",
+      "edge_sha256": "becaba2b1a7a67a2313bc71aa08079f081700b22c85d0fcff7ee452650356812",
+      "region_sha256": "25c4b41ea760a48c33e41ecfc1f2b64de4d9c4e06b3c29f65ee41c91f77ece56",
+      "nominal_pair": [
+        1,
+        1
+      ],
+      "rows": [
+        {
+          "pair": [
+            0,
+            0
+          ],
+          "anchor_ids": [
+            2190,
+            8328
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": false,
+          "footprint_iou": 0.9834815756035579,
+          "observed_flagged_cells": 784,
+          "components": 5,
+          "peak_mm": 0.7335541301446353,
+          "peak_error_mm": 0.013554130144635357,
+          "labels_i32le_sha256": "18ba31e1ffceb25918e18cdba2b7d3072c836a733dc51420517b7545f12f3b93",
+          "native_sha256": "8e8055ec95e2b7f7cb76aaf2e351b4af298603f9f0779750432f6ae8e6b28289"
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "anchor_ids": [
+            2190,
+            2190
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": true,
+          "footprint_iou": 0.9510403916768666,
+          "observed_flagged_cells": 817,
+          "components": 1,
+          "peak_mm": 0.7451730286727347,
+          "peak_error_mm": 0.025173028672734743,
+          "labels_i32le_sha256": "3722652e1b2ad9f98aa85bfb416f1679e4e82417d461921c312eb452d7806002",
+          "native_sha256": "2942f5f9a2c75ef512d1f49ed5c76cfdd4dd979812023ec47c035d754ebbdd7b"
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "anchor_ids": [
+            2190,
+            2190
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": true,
+          "footprint_iou": 0.9119718309859155,
+          "observed_flagged_cells": 852,
+          "components": 2,
+          "peak_mm": 0.7564097022327365,
+          "peak_error_mm": 0.03640970223273654,
+          "labels_i32le_sha256": "27f098a27ac303de59eb23f04fa4b6538f962bc67156b13482a53696bd08a416",
+          "native_sha256": "d2fa75babf4986d5da1b7f46e61903a4137fe65122fa030c9d5b71433edc04e0"
+        },
+        {
+          "pair": [
+            1,
+            0
+          ],
+          "anchor_ids": [
+            2190,
+            8670
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": false,
+          "footprint_iou": 0.9922779922779923,
+          "observed_flagged_cells": 771,
+          "components": 2,
+          "peak_mm": 0.7210956553702252,
+          "peak_error_mm": 0.001095655370225268,
+          "labels_i32le_sha256": "52dd83aec0217591249f5777f95cf2d799f259bfcb0f37627586de80a3b7f5ba",
+          "native_sha256": "ec4872a06dc6967f4679cfe428b8067c5ecdb964f4c56ce6a24423c0391314e3"
+        },
+        {
+          "pair": [
+            1,
+            1
+          ],
+          "anchor_ids": [
+            2190,
+            8328
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": false,
+          "footprint_iou": 0.9885057471264368,
+          "observed_flagged_cells": 780,
+          "components": 5,
+          "peak_mm": 0.7341271576656014,
+          "peak_error_mm": 0.014127157665601464,
+          "labels_i32le_sha256": "b7d013fd56f31873bd1d84903a5f28c516c23df901473436e9c54d358ced0fa2",
+          "native_sha256": "d4754c1d0bc3b75b260b0db8ba5a7556914d05b1542405ae1341539519133c20"
+        },
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "anchor_ids": [
+            2190,
+            2190
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": true,
+          "footprint_iou": 0.9533742331288344,
+          "observed_flagged_cells": 815,
+          "components": 1,
+          "peak_mm": 0.7453638312256032,
+          "peak_error_mm": 0.02536383122560326,
+          "labels_i32le_sha256": "27ce86aab096c0cb857b2cc859c2cae59ae19c2bb72e3a141c42dfd472bab3cb",
+          "native_sha256": "0adc2e8e8fb79596950745a8d8bc678ac013f17abbb39ab0e6bf486c8acc093b"
+        },
+        {
+          "pair": [
+            2,
+            0
+          ],
+          "anchor_ids": [
+            2191,
+            8670
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": false,
+          "footprint_iou": 0.9819819819819819,
+          "observed_flagged_cells": 763,
+          "components": 2,
+          "peak_mm": 0.7099196818980409,
+          "peak_error_mm": -0.010080318101959085,
+          "labels_i32le_sha256": "6df8f5c23eb2c436040202e867f1b9b09807914cf3764e676dafc235a06d13ec",
+          "native_sha256": "6d2b20c69681837b2db393dadf4ed4df74a919512dae04b2384c2091ddd27ad0"
+        },
+        {
+          "pair": [
+            2,
+            1
+          ],
+          "anchor_ids": [
+            2190,
+            8328
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": false,
+          "footprint_iou": 0.9910025706940874,
+          "observed_flagged_cells": 772,
+          "components": 2,
+          "peak_mm": 0.7230812866584677,
+          "peak_error_mm": 0.003081286658467741,
+          "labels_i32le_sha256": "5cf4a06e699ac38624349eb1ce69441164f13be1d38ee7bbbc9508e8462a5968",
+          "native_sha256": "42288ffb11b77203f4b25873be7343c11dda518a8a7c4f7ce5b8bf1e0df5ef1a"
+        },
+        {
+          "pair": [
+            2,
+            2
+          ],
+          "anchor_ids": [
+            2190,
+            8328
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": false,
+          "footprint_iou": 0.9885057471264368,
+          "observed_flagged_cells": 780,
+          "components": 4,
+          "peak_mm": 0.7343179602184695,
+          "peak_error_mm": 0.014317960218469539,
+          "labels_i32le_sha256": "272b57861e6859e999c30b3974ee67aa469626f9d4846e1dcd62f7eecde5a570",
+          "native_sha256": "d15fa71ff8fb558e6945ea0ff50994f6554cc0c6a904e9e292f301f15d65e57a"
+        }
+      ]
+    },
+    "critical-b": {
+      "witness_sha256": "f01f99d62e96c31eb488a58946641ad56fcdfc6ffb4534e3e89f811d46447a82",
+      "edge_sha256": "dbb69a505c9955ad86830fe1557ba44d7c1b98fd36ca4d886a3b52525b7c0e9e",
+      "region_sha256": "b11abb7e22d3967da99d1b6c638ea665f7de2a1570dffee4fac2ea0e15c9bbfb",
+      "nominal_pair": [
+        1,
+        1
+      ],
+      "rows": [
+        {
+          "pair": [
+            0,
+            0
+          ],
+          "anchor_ids": [
+            2190,
+            8323
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": false,
+          "footprint_iou": 0.9897959183673469,
+          "observed_flagged_cells": 783,
+          "components": 2,
+          "peak_mm": 0.7333383460477072,
+          "peak_error_mm": 0.013338346047707228,
+          "labels_i32le_sha256": "2a6549d2510fc655636691832b5799e478d6ee87aac17d7cdf24c47e3c41871c",
+          "native_sha256": "bd515ebf27f084e33f171ac51a9c8765ef8f6a7a9fd5de9618fab245cb84f7e4"
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "anchor_ids": [
+            2190,
+            2190
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": true,
+          "footprint_iou": 0.9568965517241379,
+          "observed_flagged_cells": 812,
+          "components": 1,
+          "peak_mm": 0.7440440534980048,
+          "peak_error_mm": 0.02404405349800487,
+          "labels_i32le_sha256": "1ac129c8a60c52da5d4105452a845391b97ebfc4c12a4795e0e0c6d65cb96f3f",
+          "native_sha256": "b5e2ece3086ad0cbfbb50abd39b534c095798d390a71b18f2081c7c2a1a7f396"
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "anchor_ids": [
+            2190,
+            2190
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": true,
+          "footprint_iou": 0.9087719298245615,
+          "observed_flagged_cells": 855,
+          "components": 1,
+          "peak_mm": 0.7547497609483025,
+          "peak_error_mm": 0.03474976094830251,
+          "labels_i32le_sha256": "7753fa33d6d90b35d68985dc06a696e64e442afea28a96eebb8475f7f9c03b66",
+          "native_sha256": "208f8ecbdd7bbfaf5dafc00ae9aa890d27d7eb7749f0ed4c1b41d921e3659480"
+        },
+        {
+          "pair": [
+            1,
+            0
+          ],
+          "anchor_ids": [
+            2190,
+            8670
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": false,
+          "footprint_iou": 0.9922779922779923,
+          "observed_flagged_cells": 771,
+          "components": 2,
+          "peak_mm": 0.7208798712732971,
+          "peak_error_mm": 0.0008798712732971392,
+          "labels_i32le_sha256": "52dd83aec0217591249f5777f95cf2d799f259bfcb0f37627586de80a3b7f5ba",
+          "native_sha256": "cc9b2693c3447ae0f9d604f41f7c1a70123404d4260e8c63120f31a5c9585333"
+        },
+        {
+          "pair": [
+            1,
+            1
+          ],
+          "anchor_ids": [
+            2190,
+            7967
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": false,
+          "footprint_iou": 0.9948717948717949,
+          "observed_flagged_cells": 779,
+          "components": 3,
+          "peak_mm": 0.731646133136092,
+          "peak_error_mm": 0.011646133136091974,
+          "labels_i32le_sha256": "31923159433f107b49e68e3201afe41de43a6de5601c1ce80a3f9d4a91761c9c",
+          "native_sha256": "128d802d8277fa609636a321527f0c6d33bce60fffdb6d52c2f7863892d6253f"
+        },
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "anchor_ids": [
+            2190,
+            2190
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": true,
+          "footprint_iou": 0.9568965517241379,
+          "observed_flagged_cells": 812,
+          "components": 1,
+          "peak_mm": 0.74358386023893,
+          "peak_error_mm": 0.02358386023893,
+          "labels_i32le_sha256": "8157328411efa29ba93d574e980dbec615165f4421aaf67e5bbd09b0576fd1ee",
+          "native_sha256": "ec8d162eb88d633540e589d7d33756ce6d703716a8cb13a16d43e28ae5f9a936"
+        },
+        {
+          "pair": [
+            2,
+            0
+          ],
+          "anchor_ids": [
+            2190,
+            8670
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": false,
+          "footprint_iou": 0.9845559845559846,
+          "observed_flagged_cells": 765,
+          "components": 2,
+          "peak_mm": 0.7096880486304022,
+          "peak_error_mm": -0.010311951369597727,
+          "labels_i32le_sha256": "3b694bee688cdad24063fa6a810bdf6f8fa6273ed765cd1ed232871e8ead211b",
+          "native_sha256": "f65acacb0312d88f7802683c2a7fbfb1c7dad64bfc187953cf1884eaca50ddf7"
+        },
+        {
+          "pair": [
+            2,
+            1
+          ],
+          "anchor_ids": [
+            2190,
+            8670
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": false,
+          "footprint_iou": 0.990990990990991,
+          "observed_flagged_cells": 770,
+          "components": 2,
+          "peak_mm": 0.721721873928427,
+          "peak_error_mm": 0.0017218739284270423,
+          "labels_i32le_sha256": "57fde9eb580be7acd4891e091619df4560dd7ff5111eb53e157c085c8a534e68",
+          "native_sha256": "1190e921c34b07c030f2a2f35f7b39e87c3c2e853e5ec45ea8b33872d211c20a"
+        },
+        {
+          "pair": [
+            2,
+            2
+          ],
+          "anchor_ids": [
+            2190,
+            7967
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": false,
+          "footprint_iou": 0.9961489088575096,
+          "observed_flagged_cells": 778,
+          "components": 3,
+          "peak_mm": 0.7333910050900379,
+          "peak_error_mm": 0.013391005090037877,
+          "labels_i32le_sha256": "4817dffae4b015398016f842dc6cf0ab26247ae637c4281692af6982558a1d36",
+          "native_sha256": "853e166723a27106213aac277263e9587249a76ab125a71a89d37ebbc76c3932"
+        }
+      ]
+    },
+    "joined-control": {
+      "witness_sha256": "e8b78cd3fc90d2a782539de446e5f70c697bf8d7026de815abfc5f73ccc1ee86",
+      "edge_sha256": "6378cc2574da3e679538b14c9acd193307af22972d1511bd5af1cabcdad74e38",
+      "region_sha256": "82eed8cfb701719e0fb9e238dada0cd2f6fedd6832311234fb593741f5acfe7e",
+      "nominal_pair": [
+        1,
+        1
+      ],
+      "rows": [
+        {
+          "pair": [
+            0,
+            0
+          ],
+          "anchor_ids": [
+            2190,
+            2190
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": true,
+          "footprint_iou": 0.9988925802879292,
+          "observed_flagged_cells": 902,
+          "components": 1,
+          "peak_mm": 0.7356265843262713,
+          "peak_error_mm": 0.015626584326271287,
+          "labels_i32le_sha256": "4357271013bbf33fdaaac30859b0e02e23891ff8682ace6d0808a93d9d9236be",
+          "native_sha256": "b0695ca0265c943b3273bc61dea85af69a4689c6927c8845ed5376fe52f32ac1"
+        },
+        {
+          "pair": [
+            0,
+            1
+          ],
+          "anchor_ids": [
+            2190,
+            2190
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": true,
+          "footprint_iou": 0.9944933920704846,
+          "observed_flagged_cells": 908,
+          "components": 1,
+          "peak_mm": 0.7464652603093334,
+          "peak_error_mm": 0.026465260309333383,
+          "labels_i32le_sha256": "01c53222cee582c62f8a0fbb0353069b6d9fdcad1d9ad18776cbd5f98ea9c598",
+          "native_sha256": "1226b1725574e2018406396ee377618973816bb53fad9807a3bad4c88009b9d2"
+        },
+        {
+          "pair": [
+            0,
+            2
+          ],
+          "anchor_ids": [
+            2190,
+            2190
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": true,
+          "footprint_iou": 0.9585987261146497,
+          "observed_flagged_cells": 942,
+          "components": 1,
+          "peak_mm": 0.7573811147525262,
+          "peak_error_mm": 0.03738111475252626,
+          "labels_i32le_sha256": "5f6b30313697591670420de02bf335b40c8dfaf8e476f40542d48c2fca5940cb",
+          "native_sha256": "8a1874b36f884ba0a0d76782478e3178e3b9238dc1f64cc33ca7aaa2ed161d66"
+        },
+        {
+          "pair": [
+            1,
+            0
+          ],
+          "anchor_ids": [
+            2190,
+            2190
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": true,
+          "footprint_iou": 0.9878183831672204,
+          "observed_flagged_cells": 892,
+          "components": 1,
+          "peak_mm": 0.7231681095518612,
+          "peak_error_mm": 0.003168109551861198,
+          "labels_i32le_sha256": "f0e1e3a117dc7c5307dbf723d768722e962ba7c5b165d7de536b8c02b929f950",
+          "native_sha256": "66244c1459f0309e030845c9133dcc0bef0e4fa965aec8ea0bab49027e17d345"
+        },
+        {
+          "pair": [
+            1,
+            1
+          ],
+          "anchor_ids": [
+            2190,
+            2190
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": true,
+          "footprint_iou": 1.0,
+          "observed_flagged_cells": 903,
+          "components": 1,
+          "peak_mm": 0.7345753903973393,
+          "peak_error_mm": 0.01457539039733935,
+          "labels_i32le_sha256": "a1579490263d43c44affb01cab90c8052b7dfc6e0eb8c4c868766e3d62d18bbd",
+          "native_sha256": "5437f5b680336a1be1b1ff7e38572080faf608b6cb0bfac8f37598003f26ca61"
+        },
+        {
+          "pair": [
+            1,
+            2
+          ],
+          "anchor_ids": [
+            2190,
+            2190
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": true,
+          "footprint_iou": 0.9944933920704846,
+          "observed_flagged_cells": 908,
+          "components": 1,
+          "peak_mm": 0.7463926433673134,
+          "peak_error_mm": 0.026392643367313395,
+          "labels_i32le_sha256": "01c53222cee582c62f8a0fbb0353069b6d9fdcad1d9ad18776cbd5f98ea9c598",
+          "native_sha256": "a79f1287726d724f24e93b2e2e1cd960d644410206b41982a7ca58e9cd9670a8"
+        },
+        {
+          "pair": [
+            2,
+            0
+          ],
+          "anchor_ids": [
+            2190,
+            2190
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": true,
+          "footprint_iou": 0.9778516057585825,
+          "observed_flagged_cells": 883,
+          "components": 1,
+          "peak_mm": 0.7121541769056741,
+          "peak_error_mm": -0.00784582309432591,
+          "labels_i32le_sha256": "2a9bba3f638826350c4ca5e5a70436188692cf55470f46ddc893c2df1f83ca98",
+          "native_sha256": "a0c7073428b6cc353b94664dcdbe46613ab23c428e89d88fa8785cb1ee1d5873"
+        },
+        {
+          "pair": [
+            2,
+            1
+          ],
+          "anchor_ids": [
+            2190,
+            2190
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": true,
+          "footprint_iou": 0.9878183831672204,
+          "observed_flagged_cells": 892,
+          "components": 1,
+          "peak_mm": 0.7246511311896744,
+          "peak_error_mm": 0.004651131189674418,
+          "labels_i32le_sha256": "f0e1e3a117dc7c5307dbf723d768722e962ba7c5b165d7de536b8c02b929f950",
+          "native_sha256": "9cad598d04c9ac2b5e7619630122093fffe5cb8f253e1d43a485d7ac4150d16d"
+        },
+        {
+          "pair": [
+            2,
+            2
+          ],
+          "anchor_ids": [
+            2190,
+            2190
+          ],
+          "anchors_both_flagged": true,
+          "unknown_cells": 0,
+          "connected": true,
+          "footprint_iou": 1.0,
+          "observed_flagged_cells": 903,
+          "components": 1,
+          "peak_mm": 0.7364683841596484,
+          "peak_error_mm": 0.016468384159648464,
+          "labels_i32le_sha256": "a1579490263d43c44affb01cab90c8052b7dfc6e0eb8c4c868766e3d62d18bbd",
+          "native_sha256": "cb45f97229d484e59d20ae35acc912482dc4a8c1995114d5ac358c88ec97a24c"
+        }
+      ]
+    }
+  },
+  "acceptance": {
+    "passed": true,
+    "gates": {
+      "open-control/coverage-and-anchors": true,
+      "open-control/nine-states": true,
+      "open-control/nominal-shape-and-peak": true,
+      "critical-a/coverage-and-anchors": true,
+      "critical-b/coverage-and-anchors": true,
+      "joined-control/coverage-and-anchors": true,
+      "joined-control/nine-states": true,
+      "joined-control/nominal-shape-and-peak": true,
+      "critical-within-acquisition-switch": true
+    }
+  }
+}

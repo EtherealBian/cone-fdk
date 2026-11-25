@@ -1,4 +1,4 @@
-param([switch]$PackedCampaign, [switch]$SpecimenCampaign, [switch]$CoreOnly, [switch]$SkipBuild, [string]$Python="$PSScriptRoot\.venv\Scripts\python.exe", [int]$DownloadJobs=6)
+param([switch]$BridgeCampaign, [switch]$PackedCampaign, [switch]$SpecimenCampaign, [switch]$CoreOnly, [switch]$SkipBuild, [string]$Python="$PSScriptRoot\.venv\Scripts\python.exe", [int]$DownloadJobs=6)
 $ErrorActionPreference='Stop'
 function Run-Python { & $Python @args; if ($LASTEXITCODE -ne 0) {throw ('Stage failed: ' + ($args -join ' '))} }
 Push-Location $PSScriptRoot
@@ -28,6 +28,10 @@ try {
   if ($SpecimenCampaign) {
     $stamp = [Guid]::NewGuid().ToString('N')
     Run-Python scripts/replay_specimens.py --expected reports/specimen-qualification.json --evidence "reports/specimen-replay-$stamp.json"
+  }
+  if ($BridgeCampaign) {
+    $bridgeStamp = [Guid]::NewGuid().ToString('N')
+    Run-Python scripts/replay_bridge.py reports/bridge-result.json reports/bridge-bundle.json "reports/bridge-replay-$bridgeStamp.json"
   }
   if (!$CoreOnly) {
     Run-Python scripts/stress.py

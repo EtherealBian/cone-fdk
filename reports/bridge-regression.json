@@ -1,0 +1,44 @@
+{
+  "protocol": "Clean index checkout, two native builds and full non-CoreOnly acceptance with Packed, Specimen and Bridge campaigns enabled. Prior original and packed evidence and real walnut volume digests checked via historical regression gates. Frozen simulated bridge design, detector-to-console replay and returned scientific outcomes checked independently.",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "pytest": {
+    "tests": 444,
+    "errors": 0,
+    "skipped": 0,
+    "failures": 0
+  },
+  "prior_region_regression_sha256": "cf4c9041c91ba850d0a1f62e82d2119b043fe2d490687bcdfada1cf727912bb2",
+  "old_witness_bundle_sha256": "7f4e16fd0e057af4d83dd551f4348317ef6f78977951c1d5344f105c3a214f23",
+  "old_specimen_replay_sha256": "e862ccb1032915dae42cd6383606c4e64b8cd142f4db8c7d8504738d5d02c55e",
+  "bridge_replay_sha256": "7dc0fadc621b978421dc98e06c92f185a6e487111b475382f98e8dcc37986569",
+  "protocol_sha256": "27d7fb4aa8683def6089ca0e4548e6b68d582de6ec9b55cb28f3857e39f4a322",
+  "measured_result_sha256": "d94b1e1a91e4c650a10e4907fa368556186ac0e740611d7c1b7aa6bee82d6962",
+  "console": {
+    "batch_sha256": "198094944fb7488b16753c3f51894bdd35c40e5813df70fe4901ce940d098960",
+    "html_sha256": "b60f228f73fa90131a54281002ed2a00c81032ed9ed7a81dea0857deadf44941",
+    "entries": 4,
+    "maps": 36,
+    "pair_cells": 531360,
+    "html_bytes": 62625,
+    "counts": {
+      "complete_coverage": 4,
+      "incomplete_coverage": 0,
+      "upstream_refused": 0,
+      "input_error": 0
+    }
+  },
+  "scientific_gates": {
+    "passed": true,
+    "gates": {
+      "open-control/coverage-and-anchors": true,
+      "open-control/nine-states": true,
+      "open-control/nominal-shape-and-peak": true,
+      "critical-a/coverage-and-anchors": true,
+      "critical-b/coverage-and-anchors": true,
+      "joined-control/coverage-and-anchors": true,
+      "joined-control/nine-states": true,
+      "joined-control/nominal-shape-and-peak": true,
+      "critical-within-acquisition-switch": true
+    }
+  }
+}

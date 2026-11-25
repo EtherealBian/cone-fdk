@@ -70,6 +70,8 @@ When extracting several wall levels from an existing shell atlas, the [CUDA wall
 
 Two additional **simulated tube geometries** were inspected from five separately noise-sampled acquisitions. All nine threshold pairs kept the seam-spanning flat connected, separated the two defects on the other tube, and returned zero regions on the unchanged control. The largest peak deviation from design was **0.0190 mm at nominal settings**, or **0.0432 mm over all settings**. [Per-defect footprints, gates and replay](reports/MULTI-SPECIMEN.md) · [Offline inspection](reports/specimen-console.html). These are not tolerances measured on physical tubes.
 
+The [preregistered narrow-bridge study](reports/BRIDGE-STUDY.md) shows why a high footprint IoU does not guarantee a stable component count: each critical acquisition linked the two lobes under only three of nine global edge settings. [Offline maps](reports/bridge-console.html).
+
 The optional [witness-guarded CUDA path](reports/PACKED-EDGE.md) now publishes a complete edge-review job from retained shells. On the same accepted parent, three edge levels took **690 → 445 ms** and nine took **2,564 → 644 ms**, including source checks, CUDA processes and output publication; every map matched the original producer. These are edge-review times, not reconstruction times.
 
 ## A second use: measuring pores in metal
