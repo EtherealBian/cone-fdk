@@ -47,7 +47,17 @@ def dll_dirs():
 
 
 def reconstruct(
-    scan, out, n, fov, budget=768, batch=16, *, build=BUILD, host_memory=None, roi=None
+    scan,
+    out,
+    n,
+    fov,
+    budget=768,
+    batch=16,
+    *,
+    build=BUILD,
+    host_memory=None,
+    roi=None,
+    roi_list=None,
 ):
     env = os.environ.copy()
     env["PATH"] = os.pathsep.join(map(str, dll_dirs())) + os.pathsep + env.get("PATH", "")
@@ -72,6 +82,8 @@ def reconstruct(
     ]
     if roi is not None:
         cmd.extend(["--roi", roi])
+    if roi_list is not None:
+        cmd.extend(["--roi-list", roi_list])
     if host_memory is not None:
         cmd.extend(["--host-memory", host_memory])
     t = time.perf_counter()

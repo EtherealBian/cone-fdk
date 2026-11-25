@@ -1,6 +1,7 @@
 #include "files.hpp"
 #include "finite.hpp"
 #include "gpu.hpp"
+#include "regions.hpp"
 #include <chrono>
 #include <cmath>
 #include <fstream>
@@ -26,23 +27,6 @@ int integer(const std::string &s, int lo, int hi) {
         throw std::runtime_error("out of range integer: " + s);
     return n;
 }
-struct Box {
-    int x, y, z, nx, ny, nz;
-};
-Box parse_box(const std::string &text, int n) {
-    std::istringstream stream(text);
-    int v[6];
-    for (int i = 0; i < 6; ++i) {
-        std::string token;
-        if (!std::getline(stream, token, ',') || token.empty() ||
-            token.find_first_not_of("0123456789") != std::string::npos || token.size() > 4)
-            throw std::runtime_error("--roi expects x,y,z,nx,ny,nz (six unsigned grid integers)");
-        v[i] = integer(token, i < 3 ? 0 : 1, n);
-    }
-    if (!stream.eof() || v[0] + v[3] > n || v[1] + v[4] > n || v[2] + v[5] > n)
-        throw std::runtime_error("--roi is outside the reference grid or has extra fields");
-    return {v[0], v[1], v[2], v[3], v[4], v[5]};
-}
 int main() {
     try {
         auto argv = arguments();
@@ -50,7 +34,8 @@ int main() {
         if (argc == 2 && std::string(argv[1]) == "--help") {
             std::cout << "cone-fdk --geom scan.geom --input projections.f32 --output volume.f32 "
                          "--n 256 --fov 40 --budget 768 --batch 16 --ptx kernels.ptx "
-                         "[--host-memory auto|pageable] [--roi x,y,z,nx,ny,nz]\nBudget in "
+                         "[--host-memory auto|pageable] [--roi x,y,z,nx,ny,nz | --roi-list "
+                         "boxes.txt]\nBudget in "
                          "MiB; fov in mm. Metrics to stdout as JSON.\n";
             return 0;
         }
@@ -60,7 +45,8 @@ int main() {
                                       "--fov",  "--budget", "--batch",  "--ptx"};
         for (int i = 1; i < argc; i += 2) {
             if (i + 1 >= argc ||
-                (!keys.count(argv[i]) && argv[i] != "--host-memory" && argv[i] != "--roi") ||
+                (!keys.count(argv[i]) && argv[i] != "--host-memory" && argv[i] != "--roi" &&
+                 argv[i] != "--roi-list") ||
                 options.count(argv[i]))
                 throw std::runtime_error("unknown/duplicate/incomplete argument");
             options[argv[i]] = argv[i + 1];
@@ -68,13 +54,19 @@ int main() {
         auto mode = options.count("--host-memory") ? options.at("--host-memory") : "auto";
         if (mode != "auto" && mode != "pageable")
             throw std::runtime_error("--host-memory expects auto or pageable");
-        if (options.size() - options.count("--host-memory") - options.count("--roi") != keys.size())
+        bool packed = options.count("--roi-list") != 0;
+        if (packed && options.count("--roi"))
+            throw std::runtime_error("use only one of --roi and --roi-list");
+        if (options.size() - options.count("--host-memory") - options.count("--roi") - packed !=
+            keys.size())
             throw std::runtime_error("missing argument; see --help");
         auto val = [&](const char *k) { return options.at(k); };
         auto dest = absolute(val("--output"));
         for (auto k : {"--input", "--geom", "--ptx"})
             if (same_file(dest, absolute(val(k))))
                 throw std::runtime_error("output aliases an input");
+        if (packed && same_file(dest, absolute(val("--roi-list"))))
+            throw std::runtime_error("output aliases the ROI list");
         Geom g{};
         std::istringstream meta(small_file(val("--geom"), 4096));
         std::string magic, junk;
@@ -83,8 +75,12 @@ int main() {
             magic != "CFDK1" || (meta >> junk))
             throw std::runtime_error("invalid CFDK1 geometry");
         g.n = integer(val("--n"), 2, 4096);
-        bool cropped = options.count("--roi") != 0;
-        Box box = cropped ? parse_box(val("--roi"), g.n) : Box{0, 0, 0, g.n, g.n, g.n};
+        bool cropped = packed || options.count("--roi");
+        std::vector<Box> boxes;
+        if (packed)
+            boxes = read_boxes(val("--roi-list"), g.n);
+        else
+            boxes.push_back(cropped ? parse_box(val("--roi"), g.n) : Box{0, 0, 0, g.n, g.n, g.n});
         size_t pos;
         float fov = std::stof(val("--fov"), &pos);
         if (pos != val("--fov").size())
@@ -99,7 +95,9 @@ int main() {
         int k = 1;
         while (k < 2 * g.u)
             k *= 2;
-        size_t row = size_t(g.u) * g.v, plane = size_t(box.nx) * box.ny;
+        size_t row = size_t(g.u) * g.v, maxPlane = 0;
+        for (const auto &b : boxes)
+            maxPlane = std::max(maxPlane, b.plane());
         File in(absolute(val("--input")));
         if (in.size() != row * g.a * 4)
             throw std::runtime_error("projection file size mismatch");
@@ -115,25 +113,29 @@ int main() {
              back = gpu.kernel(cropped ? "back_roi" : "back"), un = gpu.kernel("unpack"),
              ang = gpu.kernel("angles"), ramp = gpu.kernel("ramp"), pairs = gpu.kernel("pairs");
         std::unique_ptr<Plan> plan;
-        int slab = 0;
+        size_t capacity = 0;
         size_t bytes = 0;
         for (; batch >= 1; batch /= 2) {
             size_t rows = size_t(batch) * g.v,
                    base = rows * k * 8 + row * batch * 4 + k * 4 + g.a * 8 + 6 * 2 * Buf::pad;
-            if (rows * k > 500000000 || base + plane * 4 > cap)
+            if (rows * k > 500000000 || base + maxPlane * 4 > cap)
                 continue;
             plan.reset(new Plan(gpu, k, (int)rows));
             bytes = base + plan->work;
-            if (bytes + plane * 4 <= cap) {
-                slab = (int)std::min<size_t>(box.nz, (cap - bytes) / (plane * 4));
+            if (bytes + maxPlane * 4 <= cap) {
+                capacity = (cap - bytes) / 4;
                 break;
             }
             plan.reset();
         }
-        if (!slab)
+        if (!capacity)
             throw std::runtime_error(
                 "budget cannot fit one view, FFT work area and one volume plane");
-        unsigned long long elems = plane * slab;
+        std::vector<Box> tiles;
+        size_t elems = 0;
+        PassPlanner sizing(boxes, capacity);
+        while (auto used = sizing.next(tiles))
+            elems = std::max(elems, used);
         Buf block(gpu, elems * 4), views(gpu, row * batch * 4),
             freq(gpu, size_t(batch) * g.v * k * 8), cs(gpu, g.a * 8), h(gpu, k * 4),
             work(gpu, plan->work);
@@ -146,18 +148,22 @@ int main() {
         HostBuffer host(gpu, row * batch, mode == "auto"),
             outChunk(gpu, std::min<size_t>(elems, 2u << 20), mode == "auto");
         Output output(dest);
+        if (packed)
+            write_pack_header(*output.file, boxes, g.n, g.vox);
         Timer timer(gpu);
         double filter = 0, bp = 0, h2d = 0, d2h = 0;
-        int launches = 0;
-        for (int z = 0; z < box.nz; z += slab) {
-            int depth = std::min(box.nz - z, slab);
-            CK(gpu.cuMemsetD32_v2(block.p, 0, plane * depth));
+        uint64_t launches = 0, filterBatches = 0, passes = 0, inputBytes = 0;
+        PassPlanner execution(boxes, capacity);
+        while (auto used = execution.next(tiles)) {
+            ++passes;
+            CK(gpu.cuMemsetD32_v2(block.p, 0, used));
             in.rewind();
             for (int first = 0; first < g.a; first += batch) {
                 int actual = std::min(batch, g.a - first), rows = batch * g.v, nt = rows * k,
                     nout = actual * g.v * g.u;
                 size_t size = row * actual * 4;
                 in.transfer(host.data(), size, false);
+                inputBytes += size;
                 if (!finite_block(host.data(), size / 4))
                     throw std::runtime_error("non-finite line integral");
                 timer.start();
@@ -176,20 +182,24 @@ int main() {
                            entries, totalPairs);
                 filter += timer.stop();
                 timer.start();
-                if (cropped) {
-                    int globalZ = box.z + z;
-                    gpu.launch(back, up(box.nx, 16), up(box.ny, 8), up(depth + (globalZ & 3), 16),
-                               16, 8, block.p, freq.p, cs.p, g, first, actual, globalZ, depth,
-                               box.x, box.y, box.nx, box.ny);
-                } else {
-                    gpu.launch(back, up(g.n, 16), up(g.n, 8), up(depth, 16), 16, 8, block.p, freq.p,
-                               cs.p, g, first, actual, z, depth);
+                ++filterBatches;
+                Ptr dst = block.p;
+                for (const auto &b : tiles) {
+                    if (cropped) {
+                        gpu.launch(back, up(b.nx, 16), up(b.ny, 8), up(b.nz + (b.z & 3), 16), 16, 8,
+                                   dst, freq.p, cs.p, g, first, actual, b.z, b.nz, b.x, b.y, b.nx,
+                                   b.ny);
+                    } else {
+                        gpu.launch(back, up(g.n, 16), up(g.n, 8), up(b.nz, 16), 16, 8, dst, freq.p,
+                                   cs.p, g, first, actual, b.z, b.nz);
+                    }
+                    dst += b.voxels() * 4;
+                    ++launches;
                 }
                 bp += timer.stop();
-                launches++;
             }
-            for (size_t off = 0; off < plane * depth; off += outChunk.count) {
-                size_t bytesOut = std::min(outChunk.count, plane * depth - off) * 4;
+            for (size_t off = 0; off < used; off += outChunk.count) {
+                size_t bytesOut = std::min(outChunk.count, used - off) * 4;
                 timer.start();
                 CK(gpu.cuMemcpyDtoH_v2(outChunk.data(), block.p + 4 * off, bytesOut));
                 d2h += timer.stop();
@@ -205,12 +215,33 @@ int main() {
         std::cout << std::fixed << std::setprecision(4) << "{\"gpu\":\"" << gpu.name
                   << "\",\"driver_api\":" << gpu.driver << ",\"cufft_version\":" << gpu.fftver
                   << ",\"views\":" << g.a << ",\"n\":" << g.n << ",\"batch\":" << batch
-                  << ",\"roi_origin_xyz\":[" << box.x << "," << box.y << "," << box.z << "]"
-                  << ",\"output_shape_xyz\":[" << box.nx << "," << box.ny << "," << box.nz << "]"
-                  << ",\"output_bytes\":" << plane * box.nz * 4
                   << ",\"voxel_spacing_mm\":" << std::defaultfloat << std::setprecision(9) << g.vox
-                  << std::fixed << std::setprecision(4) << ",\"slab\":" << slab
-                  << ",\"slabs\":" << up(box.nz, slab) << ",\"launches_bp\":" << launches
+                  << std::fixed << std::setprecision(4);
+        size_t written = 0;
+        if (packed) {
+            written = pack_header_bytes(boxes.size());
+            std::cout << ",\"format\":\"CFDKROI1\",\"regions\":[";
+            for (size_t i = 0; i < boxes.size(); ++i) {
+                const auto &b = boxes[i];
+                if (i)
+                    std::cout << ",";
+                std::cout << "{\"origin_xyz\":[" << b.x << "," << b.y << "," << b.z
+                          << "],\"shape_xyz\":[" << b.nx << "," << b.ny << "," << b.nz
+                          << "],\"offset_bytes\":" << written
+                          << ",\"size_bytes\":" << 4 * b.voxels() << "}";
+                written += 4 * b.voxels();
+            }
+            std::cout << "]";
+        } else {
+            const auto &b = boxes.front();
+            written = 4 * b.voxels();
+            std::cout << ",\"roi_origin_xyz\":[" << b.x << "," << b.y << "," << b.z
+                      << "],\"output_shape_xyz\":[" << b.nx << "," << b.ny << "," << b.nz
+                      << "],\"slab\":" << elems / b.plane() << ",\"slabs\":" << passes;
+        }
+        std::cout << ",\"output_bytes\":" << written << ",\"projection_passes\":" << passes
+                  << ",\"projection_bytes_read\":" << inputBytes
+                  << ",\"filter_batches\":" << filterBatches << ",\"launches_bp\":" << launches
                   << ",\"budget_bytes\":" << budget
                   << ",\"redzones_verified\":true,\"peak_owned_bytes\":" << gpu.peak
                   << ",\"host_pinned_bytes\":" << host.pinnedBytes() + outChunk.pinnedBytes()

@@ -12,3 +12,7 @@ All amplitudes are in mm^-1. No gain fitting, image alignment or masking when co
 ## Native optimization release gate (v1 baseline vs candidate)
 
 Before recording the release benchmark, freeze both EXE/PTX pairs. On this same PC run the 180-view phantom and 720-view corrected walnut at 512³, 768 MiB, batch 16. Warm each binary once per case; then run six paired trials, alternating AB and BA, including file flush and replacement. For **each** input, candidate median native wall time **and** outer process time must each fall by at least 5%, with wins in at least five of six pairs for each metric. Every output (including warmups) must have identical full SHA-256; no increase in engine-owned device bytes. Keep all trials. The existing full correctness, oversize and packaging gates still apply. This is a local performance qualification, not a cross-machine guarantee.
+
+## Multi-region source-build gate
+
+On the pinned 720-view walnut, six fixed regions, parent 512³ / 40 mm, batch 16 and 128 MiB: reconstruct and hash the published full reference, then compare every packed payload and every serial `--roi` output with its parent crop. After warming each method, alternate six AB/BA pairs. Require a single projection pass at 128 MiB, identical pack hashes, more than 10% lower median total process time, and at least five paired wins. Force multiple passes at 48 MiB and require the same whole-pack hash. Check byte counts, memory cap and CUDA allocation borders. Report startup and output costs, not kernel-only speedup. See [six-region results](MULTI-ROI.md).

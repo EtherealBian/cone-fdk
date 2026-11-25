@@ -12,15 +12,23 @@ p.add_argument("--fov", type=float, required=True, help="isotropic physical fiel
 p.add_argument("--budget", type=int, default=768)
 p.add_argument("--batch", type=int, default=16)
 p.add_argument("--astra", action="store_true")
-p.add_argument("--roi", help="zero-based x,y,z,nx,ny,nz on the full --n grid; native only")
+group = p.add_mutually_exclusive_group()
+group.add_argument("--roi", help="zero-based x,y,z,nx,ny,nz on the full --n grid; native only")
+group.add_argument(
+    "--roi-list",
+    type=pathlib.Path,
+    help="boxes.txt in parent-grid coordinates; write a CFDKROI1 pack",
+)
 a = p.parse_args()
-if a.astra and a.roi is not None:
-    p.error("--roi applies to the native engine, not the ASTRA full-volume runner")
+if a.astra and (a.roi is not None or a.roi_list is not None):
+    p.error("region selection applies to the native engine, not the ASTRA full-volume runner")
 print(
     json.dumps(
         astra_run(a.scan, a.output, a.n, a.fov)
         if a.astra
-        else reconstruct(a.scan, a.output, a.n, a.fov, a.budget, a.batch, roi=a.roi),
+        else reconstruct(
+            a.scan, a.output, a.n, a.fov, a.budget, a.batch, roi=a.roi, roi_list=a.roi_list
+        ),
         indent=2,
     )
 )
