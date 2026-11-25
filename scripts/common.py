@@ -58,6 +58,7 @@ def reconstruct(
     host_memory=None,
     roi=None,
     roi_list=None,
+    planner=None,
 ):
     env = os.environ.copy()
     env["PATH"] = os.pathsep.join(map(str, dll_dirs())) + os.pathsep + env.get("PATH", "")
@@ -84,6 +85,8 @@ def reconstruct(
         cmd.extend(["--roi", roi])
     if roi_list is not None:
         cmd.extend(["--roi-list", roi_list])
+    if planner is not None:
+        cmd.extend(["--planner", planner])
     if host_memory is not None:
         cmd.extend(["--host-memory", host_memory])
     t = time.perf_counter()

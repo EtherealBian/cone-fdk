@@ -1,0 +1,677 @@
+{
+  "dataset": "Alexander Meaney / University of Helsinki walnut, 720 views, 8x8 binning; CC BY 4.0; see NOTICE.md",
+  "inputs_sha256": {
+    ".f32": "ecbc3166a420a31bd11cc0ba78f5469428de43726059c03a3af1ed6e5160b5a8",
+    ".geom": "3f172fa6e2755b3ce50d09b0a8e8a7ca8163b19128486c422f624c6b73d06af8"
+  },
+  "list_sha256": "21fb3331baf346fd835cabbde6c1778a2b8ec399f0a135b131f560e23dc7f6dd",
+  "binaries_sha256": {
+    "cone-fdk.exe": "fb318a4e23d995eaef6fe577ce4c95b8881052f4ec357567e0080f62b1a3e515",
+    "kernels.ptx": "6c5abfa460d760e1b76fa86c68f231540d8c710c6d926f0db7a6e7b50302f64a"
+  },
+  "reference_pack_sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+  "n": 512,
+  "fov_mm": 40,
+  "requested_batch": 16,
+  "timed_budget_mib": 48,
+  "protocol": "Same build and output path, one warm-up per policy, six AB/BA pairs. Subprocess time includes startup, planning, reconstruction, flush and replace. Hashes outside timer. No cache eviction or clock lock. Read bytes are logical application reads.",
+  "speed_gate": "At least 5/6 faster pairs and at least 10% reduction in median process time at 48 MiB. Other budgets are single-run scheduling controls, not timing benchmarks.",
+  "runtime": {
+    "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+    "driver_api": 13040,
+    "cufft_version": 11401
+  },
+  "warmup": {
+    "batch-first": {
+      "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+      "batch": 16,
+      "feasible_plans_scored": [
+        {
+          "batch": 16,
+          "passes": 3
+        }
+      ],
+      "projection_passes": 3,
+      "projection_bytes_read": 716083200,
+      "filter_batches": 135,
+      "launches_bp": 315,
+      "effective_budget_bytes": 50331648,
+      "peak_owned_bytes": 50274432,
+      "fft_workspace_bytes": 0,
+      "redzones_verified": true,
+      "process_seconds": 0.7058211000003212,
+      "wall_ms": 555.8151,
+      "filter_ms": 135.6867,
+      "bp_ms": 28.5153
+    },
+    "min-passes": {
+      "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+      "batch": 8,
+      "feasible_plans_scored": [
+        {
+          "batch": 16,
+          "passes": 3
+        },
+        {
+          "batch": 8,
+          "passes": 1
+        }
+      ],
+      "projection_passes": 1,
+      "projection_bytes_read": 238694400,
+      "filter_batches": 90,
+      "launches_bp": 540,
+      "effective_budget_bytes": 50331648,
+      "peak_owned_bytes": 37103780,
+      "fft_workspace_bytes": 0,
+      "redzones_verified": true,
+      "process_seconds": 0.30071439999846916,
+      "wall_ms": 259.1445,
+      "filter_ms": 18.1837,
+      "bp_ms": 30.3599
+    }
+  },
+  "pairs": [
+    {
+      "batch-first": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 16,
+        "feasible_plans_scored": [
+          {
+            "batch": 16,
+            "passes": 3
+          }
+        ],
+        "projection_passes": 3,
+        "projection_bytes_read": 716083200,
+        "filter_batches": 135,
+        "launches_bp": 315,
+        "effective_budget_bytes": 50331648,
+        "peak_owned_bytes": 50274432,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.5834943999998359,
+        "wall_ms": 544.7732,
+        "filter_ms": 136.6206,
+        "bp_ms": 30.5452
+      },
+      "min-passes": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 8,
+        "feasible_plans_scored": [
+          {
+            "batch": 16,
+            "passes": 3
+          },
+          {
+            "batch": 8,
+            "passes": 1
+          }
+        ],
+        "projection_passes": 1,
+        "projection_bytes_read": 238694400,
+        "filter_batches": 90,
+        "launches_bp": 540,
+        "effective_budget_bytes": 50331648,
+        "peak_owned_bytes": 37103780,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.2966070000002219,
+        "wall_ms": 255.5163,
+        "filter_ms": 18.0645,
+        "bp_ms": 29.0923
+      }
+    },
+    {
+      "min-passes": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 8,
+        "feasible_plans_scored": [
+          {
+            "batch": 16,
+            "passes": 3
+          },
+          {
+            "batch": 8,
+            "passes": 1
+          }
+        ],
+        "projection_passes": 1,
+        "projection_bytes_read": 238694400,
+        "filter_batches": 90,
+        "launches_bp": 540,
+        "effective_budget_bytes": 50331648,
+        "peak_owned_bytes": 37103780,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.3166419000008318,
+        "wall_ms": 272.2886,
+        "filter_ms": 19.2939,
+        "bp_ms": 29.5808
+      },
+      "batch-first": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 16,
+        "feasible_plans_scored": [
+          {
+            "batch": 16,
+            "passes": 3
+          }
+        ],
+        "projection_passes": 3,
+        "projection_bytes_read": 716083200,
+        "filter_batches": 135,
+        "launches_bp": 315,
+        "effective_budget_bytes": 50331648,
+        "peak_owned_bytes": 50274432,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.5968382999999449,
+        "wall_ms": 550.9575,
+        "filter_ms": 129.468,
+        "bp_ms": 31.5917
+      }
+    },
+    {
+      "batch-first": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 16,
+        "feasible_plans_scored": [
+          {
+            "batch": 16,
+            "passes": 3
+          }
+        ],
+        "projection_passes": 3,
+        "projection_bytes_read": 716083200,
+        "filter_batches": 135,
+        "launches_bp": 315,
+        "effective_budget_bytes": 50331648,
+        "peak_owned_bytes": 50274432,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.5801944999984698,
+        "wall_ms": 536.7398,
+        "filter_ms": 124.1532,
+        "bp_ms": 29.4689
+      },
+      "min-passes": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 8,
+        "feasible_plans_scored": [
+          {
+            "batch": 16,
+            "passes": 3
+          },
+          {
+            "batch": 8,
+            "passes": 1
+          }
+        ],
+        "projection_passes": 1,
+        "projection_bytes_read": 238694400,
+        "filter_batches": 90,
+        "launches_bp": 540,
+        "effective_budget_bytes": 50331648,
+        "peak_owned_bytes": 37103780,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.3042799000013474,
+        "wall_ms": 259.6567,
+        "filter_ms": 17.5257,
+        "bp_ms": 29.2469
+      }
+    },
+    {
+      "min-passes": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 8,
+        "feasible_plans_scored": [
+          {
+            "batch": 16,
+            "passes": 3
+          },
+          {
+            "batch": 8,
+            "passes": 1
+          }
+        ],
+        "projection_passes": 1,
+        "projection_bytes_read": 238694400,
+        "filter_batches": 90,
+        "launches_bp": 540,
+        "effective_budget_bytes": 50331648,
+        "peak_owned_bytes": 37103780,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.2906313000003138,
+        "wall_ms": 249.8584,
+        "filter_ms": 18.9448,
+        "bp_ms": 28.4677
+      },
+      "batch-first": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 16,
+        "feasible_plans_scored": [
+          {
+            "batch": 16,
+            "passes": 3
+          }
+        ],
+        "projection_passes": 3,
+        "projection_bytes_read": 716083200,
+        "filter_batches": 135,
+        "launches_bp": 315,
+        "effective_budget_bytes": 50331648,
+        "peak_owned_bytes": 50274432,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.5810020999997505,
+        "wall_ms": 541.3256,
+        "filter_ms": 137.8316,
+        "bp_ms": 28.629
+      }
+    },
+    {
+      "batch-first": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 16,
+        "feasible_plans_scored": [
+          {
+            "batch": 16,
+            "passes": 3
+          }
+        ],
+        "projection_passes": 3,
+        "projection_bytes_read": 716083200,
+        "filter_batches": 135,
+        "launches_bp": 315,
+        "effective_budget_bytes": 50331648,
+        "peak_owned_bytes": 50274432,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.6060371000003215,
+        "wall_ms": 563.7513,
+        "filter_ms": 154.9567,
+        "bp_ms": 33.0547
+      },
+      "min-passes": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 8,
+        "feasible_plans_scored": [
+          {
+            "batch": 16,
+            "passes": 3
+          },
+          {
+            "batch": 8,
+            "passes": 1
+          }
+        ],
+        "projection_passes": 1,
+        "projection_bytes_read": 238694400,
+        "filter_batches": 90,
+        "launches_bp": 540,
+        "effective_budget_bytes": 50331648,
+        "peak_owned_bytes": 37103780,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.3151744000006147,
+        "wall_ms": 272.5768,
+        "filter_ms": 20.1322,
+        "bp_ms": 33.8356
+      }
+    },
+    {
+      "min-passes": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 8,
+        "feasible_plans_scored": [
+          {
+            "batch": 16,
+            "passes": 3
+          },
+          {
+            "batch": 8,
+            "passes": 1
+          }
+        ],
+        "projection_passes": 1,
+        "projection_bytes_read": 238694400,
+        "filter_batches": 90,
+        "launches_bp": 540,
+        "effective_budget_bytes": 50331648,
+        "peak_owned_bytes": 37103780,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.3032898000001296,
+        "wall_ms": 260.4705,
+        "filter_ms": 20.2736,
+        "bp_ms": 32.3921
+      },
+      "batch-first": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 16,
+        "feasible_plans_scored": [
+          {
+            "batch": 16,
+            "passes": 3
+          }
+        ],
+        "projection_passes": 3,
+        "projection_bytes_read": 716083200,
+        "filter_batches": 135,
+        "launches_bp": 315,
+        "effective_budget_bytes": 50331648,
+        "peak_owned_bytes": 50274432,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.6389067000000068,
+        "wall_ms": 597.0526,
+        "filter_ms": 149.4623,
+        "bp_ms": 30.9321
+      }
+    }
+  ],
+  "time_summary": {
+    "batch_first_median_seconds": 0.5901663499998904,
+    "min_passes_median_seconds": 0.3037848500007385,
+    "paired_wins": 6,
+    "median_reduction_fraction": 0.4852555554873724,
+    "speed_gate_passed": true
+  },
+  "budget_controls_mib": {
+    "24": {
+      "batch-first": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 8,
+        "feasible_plans_scored": [
+          {
+            "batch": 8,
+            "passes": 6
+          }
+        ],
+        "projection_passes": 6,
+        "projection_bytes_read": 1432166400,
+        "filter_batches": 540,
+        "launches_bp": 720,
+        "effective_budget_bytes": 25165824,
+        "peak_owned_bytes": 25143424,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.835750399999597,
+        "wall_ms": 787.989,
+        "filter_ms": 112.789,
+        "bp_ms": 37.3432
+      },
+      "min-passes": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 2,
+        "feasible_plans_scored": [
+          {
+            "batch": 8,
+            "passes": 6
+          },
+          {
+            "batch": 4,
+            "passes": 2
+          },
+          {
+            "batch": 2,
+            "passes": 1
+          }
+        ],
+        "projection_passes": 1,
+        "projection_bytes_read": 238694400,
+        "filter_batches": 360,
+        "launches_bp": 2160,
+        "effective_budget_bytes": 25165824,
+        "peak_owned_bytes": 20565668,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.36900599999898986,
+        "wall_ms": 316.6333,
+        "filter_ms": 34.5003,
+        "bp_ms": 47.1706
+      }
+    },
+    "32": {
+      "batch-first": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 8,
+        "feasible_plans_scored": [
+          {
+            "batch": 8,
+            "passes": 2
+          }
+        ],
+        "projection_passes": 2,
+        "projection_bytes_read": 477388800,
+        "filter_batches": 180,
+        "launches_bp": 540,
+        "effective_budget_bytes": 33554432,
+        "peak_owned_bytes": 33311460,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.41718310000032943,
+        "wall_ms": 375.2563,
+        "filter_ms": 37.7524,
+        "bp_ms": 32.5467
+      },
+      "min-passes": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 4,
+        "feasible_plans_scored": [
+          {
+            "batch": 8,
+            "passes": 2
+          },
+          {
+            "batch": 4,
+            "passes": 1
+          }
+        ],
+        "projection_passes": 1,
+        "projection_bytes_read": 238694400,
+        "filter_batches": 180,
+        "launches_bp": 1080,
+        "effective_budget_bytes": 33554432,
+        "peak_owned_bytes": 26078372,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.3178176000001258,
+        "wall_ms": 271.3783,
+        "filter_ms": 25.0535,
+        "bp_ms": 35.678
+      }
+    },
+    "40": {
+      "batch-first": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 8,
+        "feasible_plans_scored": [
+          {
+            "batch": 8,
+            "passes": 1
+          }
+        ],
+        "projection_passes": 1,
+        "projection_bytes_read": 238694400,
+        "filter_batches": 90,
+        "launches_bp": 540,
+        "effective_budget_bytes": 41943040,
+        "peak_owned_bytes": 37103780,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.31724539999959234,
+        "wall_ms": 272.3633,
+        "filter_ms": 21.6495,
+        "bp_ms": 34.3605
+      },
+      "min-passes": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 8,
+        "feasible_plans_scored": [
+          {
+            "batch": 8,
+            "passes": 1
+          }
+        ],
+        "projection_passes": 1,
+        "projection_bytes_read": 238694400,
+        "filter_batches": 90,
+        "launches_bp": 540,
+        "effective_budget_bytes": 41943040,
+        "peak_owned_bytes": 37103780,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.31450320000112697,
+        "wall_ms": 269.2853,
+        "filter_ms": 20.3121,
+        "bp_ms": 33.8401
+      }
+    },
+    "56": {
+      "batch-first": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 16,
+        "feasible_plans_scored": [
+          {
+            "batch": 16,
+            "passes": 2
+          }
+        ],
+        "projection_passes": 2,
+        "projection_bytes_read": 477388800,
+        "filter_batches": 90,
+        "launches_bp": 270,
+        "effective_budget_bytes": 58720256,
+        "peak_owned_bytes": 57023936,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.4903555000000779,
+        "wall_ms": 442.5253,
+        "filter_ms": 104.8036,
+        "bp_ms": 30.0058
+      },
+      "min-passes": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 8,
+        "feasible_plans_scored": [
+          {
+            "batch": 16,
+            "passes": 2
+          },
+          {
+            "batch": 8,
+            "passes": 1
+          }
+        ],
+        "projection_passes": 1,
+        "projection_bytes_read": 238694400,
+        "filter_batches": 90,
+        "launches_bp": 540,
+        "effective_budget_bytes": 58720256,
+        "peak_owned_bytes": 37103780,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.3181609000002936,
+        "wall_ms": 273.1106,
+        "filter_ms": 21.2487,
+        "bp_ms": 34.1809
+      }
+    },
+    "64": {
+      "batch-first": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 16,
+        "feasible_plans_scored": [
+          {
+            "batch": 16,
+            "passes": 1
+          }
+        ],
+        "projection_passes": 1,
+        "projection_bytes_read": 238694400,
+        "filter_batches": 45,
+        "launches_bp": 270,
+        "effective_budget_bytes": 67108864,
+        "peak_owned_bytes": 59154596,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.3412302999986423,
+        "wall_ms": 296.8063,
+        "filter_ms": 51.498,
+        "bp_ms": 31.5828
+      },
+      "min-passes": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 16,
+        "feasible_plans_scored": [
+          {
+            "batch": 16,
+            "passes": 1
+          }
+        ],
+        "projection_passes": 1,
+        "projection_bytes_read": 238694400,
+        "filter_batches": 45,
+        "launches_bp": 270,
+        "effective_budget_bytes": 67108864,
+        "peak_owned_bytes": 59154596,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.3423330999994505,
+        "wall_ms": 298.6672,
+        "filter_ms": 51.7562,
+        "bp_ms": 29.7292
+      }
+    },
+    "128": {
+      "batch-first": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 16,
+        "feasible_plans_scored": [
+          {
+            "batch": 16,
+            "passes": 1
+          }
+        ],
+        "projection_passes": 1,
+        "projection_bytes_read": 238694400,
+        "filter_batches": 45,
+        "launches_bp": 270,
+        "effective_budget_bytes": 134217728,
+        "peak_owned_bytes": 59154596,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.3297848000001977,
+        "wall_ms": 284.2366,
+        "filter_ms": 40.3815,
+        "bp_ms": 26.7252
+      },
+      "min-passes": {
+        "sha256": "bf555f872da15e51ddb9501dfd503e98873bbaa414f40e2ff11992a98545ef1f",
+        "batch": 16,
+        "feasible_plans_scored": [
+          {
+            "batch": 16,
+            "passes": 1
+          }
+        ],
+        "projection_passes": 1,
+        "projection_bytes_read": 238694400,
+        "filter_batches": 45,
+        "launches_bp": 270,
+        "effective_budget_bytes": 134217728,
+        "peak_owned_bytes": 59154596,
+        "fft_workspace_bytes": 0,
+        "redzones_verified": true,
+        "process_seconds": 0.34690970000156085,
+        "wall_ms": 301.8979,
+        "filter_ms": 54.9033,
+        "bp_ms": 31.051
+      }
+    }
+  }
+}

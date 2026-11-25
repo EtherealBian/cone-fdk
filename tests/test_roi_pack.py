@@ -156,3 +156,81 @@ def test_list_limits_and_batch_fallback(scan, tmp_path, count):
         meta = read_index(f)
         f.seek(meta["regions"][0]["offset_bytes"])
         assert f.read() == ref.read_bytes()[: 4 * count]
+
+
+@pytest.mark.parametrize(
+    ("copies", "box", "expected_passes", "best"),
+    [
+        # Repeated odd-origin boxes plus a corner voxel, 37 views with a tail batch.
+        (2, "7,9,13,48,48,44", [2, 1, 1], 3),
+        # Each candidate still needs three passes: prefer 7, not the last probed plan.
+        (3, "7,9,13,65,64,40", [3, 3, 3], 7),
+    ],
+)
+def test_planner_scores_match_actual_reconstructions(
+    scan, tmp_path, copies, box, expected_passes, best
+):
+    lst = tmp_path / "boxes.txt"
+    lst.write_text((box + "\n") * copies + "96,96,96,1,1,1\n")
+    pack = tmp_path / "out.croi"
+    policy = "batch-first"
+
+    def go(batch, policy):
+        m = reconstruct(scan, pack, 97, 7.37, 1, batch, roi_list=lst, planner=policy)
+        assert m["planner"] == (policy or "batch-first") and m["requested_batch"] == batch
+        assert (
+            m["redzones_verified"]
+            and m["peak_owned_bytes"] <= m["effective_budget_bytes"] == 2**20
+        )
+        assert (
+            m["projection_bytes_read"]
+            == scan.with_suffix(".f32").stat().st_size * m["projection_passes"]
+        )
+        assert (
+            m["filter_batches"] == ((37 + m["batch"] - 1) // m["batch"]) * m["projection_passes"]
+        )
+        return m
+
+    baseline = go(7, None)
+    expected = pack.read_bytes()
+    observed = []
+    for batch, passes in zip((7, 3, 1), expected_passes, strict=True):
+        m = go(batch, policy)
+        trial = {"batch": batch, "passes": passes}
+        assert m["batch"] == batch and m["projection_passes"] == passes
+        assert m["feasible_plans_scored"] == [trial] and pack.read_bytes() == expected
+        observed.append(trial)
+    assert baseline["feasible_plans_scored"] == observed[:1]
+    m = go(7, "min-passes")
+    assert m["batch"] == best and m["projection_passes"] == min(expected_passes)
+    limit = expected_passes.index(1) + 1 if 1 in expected_passes else len(observed)
+    assert m["feasible_plans_scored"] == observed[:limit] and pack.read_bytes() == expected
+
+
+@pytest.mark.parametrize(
+    ("policy", "selection", "error"),
+    [
+        ("invalid", "list", "--planner expects"),
+        ("min-passes", "full", "requires --roi-list"),
+        ("min-passes", "single", "requires --roi-list"),
+        ("min-passes", "oversize", "cannot fit"),
+    ],
+)
+def test_planner_rejection_leaves_original(scan, tmp_path, policy, selection, error):
+    out = tmp_path / "keep"
+    out.write_bytes(b"previous good result")
+    lst = tmp_path / "boxes.txt"
+    lst.write_text("0,0,0,800,800,1" if selection == "oversize" else "0,0,0,1,1,1")
+    with pytest.raises(RuntimeError, match=error):
+        reconstruct(
+            scan,
+            out,
+            800,
+            7.37,
+            1,
+            7,
+            planner=policy,
+            roi_list=lst if selection in ("list", "oversize") else None,
+            roi="0,0,0,1,1,1" if selection == "single" else None,
+        )
+    assert out.read_bytes() == b"previous good result" and not list(tmp_path.glob("*.partial.*"))

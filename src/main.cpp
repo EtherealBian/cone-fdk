@@ -10,6 +10,7 @@
 #include <memory>
 #include <set>
 #include <sstream>
+#include <utility>
 using Clock = std::chrono::steady_clock;
 struct Geom {
     int a, v, u, n;
@@ -35,7 +36,8 @@ int main() {
             std::cout << "cone-fdk --geom scan.geom --input projections.f32 --output volume.f32 "
                          "--n 256 --fov 40 --budget 768 --batch 16 --ptx kernels.ptx "
                          "[--host-memory auto|pageable] [--roi x,y,z,nx,ny,nz | --roi-list "
-                         "boxes.txt]\nBudget in "
+                         "boxes.txt] [--planner batch-first|min-passes]\nmin-passes requires "
+                         "--roi-list. Budget in "
                          "MiB; fov in mm. Metrics to stdout as JSON.\n";
             return 0;
         }
@@ -46,7 +48,7 @@ int main() {
         for (int i = 1; i < argc; i += 2) {
             if (i + 1 >= argc ||
                 (!keys.count(argv[i]) && argv[i] != "--host-memory" && argv[i] != "--roi" &&
-                 argv[i] != "--roi-list") ||
+                 argv[i] != "--roi-list" && argv[i] != "--planner") ||
                 options.count(argv[i]))
                 throw std::runtime_error("unknown/duplicate/incomplete argument");
             options[argv[i]] = argv[i + 1];
@@ -55,11 +57,16 @@ int main() {
         if (mode != "auto" && mode != "pageable")
             throw std::runtime_error("--host-memory expects auto or pageable");
         bool packed = options.count("--roi-list") != 0;
+        auto policy = options.count("--planner") ? options.at("--planner") : "batch-first";
+        if (policy != "batch-first" && policy != "min-passes")
+            throw std::runtime_error("--planner expects batch-first or min-passes");
+        if (policy == "min-passes" && !packed)
+            throw std::runtime_error("--planner min-passes requires --roi-list");
         if (packed && options.count("--roi"))
             throw std::runtime_error("use only one of --roi and --roi-list");
-        if (options.size() - options.count("--host-memory") - options.count("--roi") - packed !=
-            keys.size())
-            throw std::runtime_error("missing argument; see --help");
+        for (const auto &key : keys)
+            if (!options.count(key))
+                throw std::runtime_error("missing argument: " + key);
         auto val = [&](const char *k) { return options.at(k); };
         auto dest = absolute(val("--output"));
         for (auto k : {"--input", "--geom", "--ptx"})
@@ -91,7 +98,7 @@ int main() {
               std::isfinite(g.D + g.R + g.du + g.dv + g.start + fov) && std::abs(g.sign) == 1))
             throw std::runtime_error("unsupported field of view or geometry");
         size_t budget = size_t(integer(val("--budget"), 1, 65536)) << 20;
-        int batch = std::min(g.a, integer(val("--batch"), 1, 256));
+        const int requestedBatch = integer(val("--batch"), 1, 256);
         int k = 1;
         while (k < 2 * g.u)
             k *= 2;
@@ -113,29 +120,46 @@ int main() {
              back = gpu.kernel(cropped ? "back_roi" : "back"), un = gpu.kernel("unpack"),
              ang = gpu.kernel("angles"), ramp = gpu.kernel("ramp"), pairs = gpu.kernel("pairs");
         std::unique_ptr<Plan> plan;
-        size_t capacity = 0;
-        size_t bytes = 0;
-        for (; batch >= 1; batch /= 2) {
-            size_t rows = size_t(batch) * g.v,
-                   base = rows * k * 8 + row * batch * 4 + k * 4 + g.a * 8 + 6 * 2 * Buf::pad;
+        // Score only feasible plans, with their actual cuFFT workspace. Sizing and
+        // execution share the same ordered tiler, including whole-plane splits.
+        struct Candidate {
+            int batch;
+            size_t passes;
+        };
+        std::vector<Candidate> candidates;
+        std::vector<Box> tiles;
+        size_t capacity = 0, elems = 0, bestPasses = 0;
+        int batch = 0;
+        for (int trial = std::min(g.a, requestedBatch); trial >= 1; trial /= 2) {
+            size_t rows = size_t(trial) * g.v,
+                   base = rows * k * 8 + row * trial * 4 + k * 4 + g.a * 8 + 6 * 2 * Buf::pad;
             if (rows * k > 500000000 || base + maxPlane * 4 > cap)
                 continue;
-            plan.reset(new Plan(gpu, k, (int)rows));
-            bytes = base + plan->work;
-            if (bytes + maxPlane * 4 <= cap) {
-                capacity = (cap - bytes) / 4;
-                break;
+            auto probe = std::make_unique<Plan>(gpu, k, int(rows));
+            if (probe->work > cap - base - maxPlane * 4)
+                continue;
+            size_t room = (cap - base - probe->work) / 4;
+            PassPlanner sizing(boxes, room);
+            size_t peak = 0, count = 0;
+            while (auto used = sizing.next(tiles)) {
+                ++count;
+                peak = std::max(peak, used);
             }
-            plan.reset();
+            candidates.push_back({trial, count});
+            if (!plan || count < bestPasses) {
+                plan = std::move(probe);
+                batch = trial;
+                capacity = room;
+                elems = peak;
+                bestPasses = count;
+            }
+            // Descending batch order settles ties; no plan can beat one pass.
+            if (policy == "batch-first" || bestPasses == 1)
+                break;
         }
-        if (!capacity)
+        if (!plan)
             throw std::runtime_error(
                 "budget cannot fit one view, FFT work area and one volume plane");
-        std::vector<Box> tiles;
-        size_t elems = 0;
-        PassPlanner sizing(boxes, capacity);
-        while (auto used = sizing.next(tiles))
-            elems = std::max(elems, used);
         Buf block(gpu, elems * 4), views(gpu, row * batch * 4),
             freq(gpu, size_t(batch) * g.v * k * 8), cs(gpu, g.a * 8), h(gpu, k * 4),
             work(gpu, plan->work);
@@ -210,6 +234,8 @@ int main() {
         }
         for (Buf *b : {&block, &views, &freq, &cs, &h, &work})
             b->verify();
+        if (passes != bestPasses)
+            throw std::runtime_error("internal error: planned pass count differs from execution");
         output.publish();
         auto wall = std::chrono::duration<double, std::milli>(Clock::now() - begin).count();
         std::cout << std::fixed << std::setprecision(4) << "{\"gpu\":\"" << gpu.name
@@ -217,6 +243,15 @@ int main() {
                   << ",\"views\":" << g.a << ",\"n\":" << g.n << ",\"batch\":" << batch
                   << ",\"voxel_spacing_mm\":" << std::defaultfloat << std::setprecision(9) << g.vox
                   << std::fixed << std::setprecision(4);
+        std::cout << ",\"planner\":\"" << policy << "\",\"requested_batch\":" << requestedBatch
+                  << ",\"effective_budget_bytes\":" << cap << ",\"feasible_plans_scored\":[";
+        for (size_t i = 0; i < candidates.size(); ++i) {
+            if (i)
+                std::cout << ",";
+            std::cout << "{\"batch\":" << candidates[i].batch
+                      << ",\"passes\":" << candidates[i].passes << "}";
+        }
+        std::cout << "]";
         size_t written = 0;
         if (packed) {
             written = pack_header_bytes(boxes.size());

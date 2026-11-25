@@ -25,6 +25,8 @@ Each yellow box is shown on the corresponding axial slice of the 512³ parent. T
 - [1296³ 原有完整体路径复测](multi-roi-full-compatibility.json)：复用新调度器写出整件，比较全文件 SHA-256，并用 ASTRA 抽查五层。
 - [整套回归 74 项通过（JUnit）](multi-roi-tests.xml)；其中[多选区与文件格式测试](../tests/test_roi_pack.py)覆盖 1/256 个选区、自动缩减批次、重叠/重复/边界选区、奇数尺寸、尾批、强制切层、非法清单和损坏索引；失败不替换已有包。精度比较限于相同输入和已测配置，不承诺不同 GPU 或不同实际 FFT 批次下浮点字节完全一致。
 
+后续优化：上述 48 MiB 的三遍是默认策略的结果。可选的 `--planner min-passes` 在同一预算下做到了单遍；[新的同机对照与七档预算](ROI-PLANNER.md)。
+
 ## Run it from a source build
 
 Use a Windows source build and its locked Python environment. The v0.1.0 binary predates region selection. After `Demo.ps1`, `data/walnut-corrected` is the **90-view offline fixture**. The same boxes can be used for an immediate smoke test without the 720-view download:
