@@ -18,3 +18,5 @@ python scripts/benchmark_wall_pack.py $p build/wall-pack-trials build/wall-pack-
 ```
 
 独立工具最多接收 16 档严格升序、有限、正阈值。每档保持原始 NaN 与拒测状态。输出清单最后发布；只出现中间文件的目录不算完成。单独运行本工具不会审定夹具见证或生成减薄结论，受见证保护的历史 `edge_review.py` 不受影响。
+
+需要从受见证保护的父作业生成完整的新边缘作业时，请改用[带来源检查的合包入口](PACKED-EDGE.md)。

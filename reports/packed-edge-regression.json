@@ -1,0 +1,37 @@
+{
+  "protocol": "Fresh clean Git checkout of the qualification inputs, repeat native build and full non-CoreOnly acceptance with both optional campaign gates. Archived witness replay versus newly projected witness replay must agree byte-for-byte. Recalculate timing gates from individual recorded trials.",
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "full_pipeline_pytest": {
+    "tests": 400,
+    "errors": 0,
+    "skipped": 0,
+    "failures": 0
+  },
+  "final_pytest": {
+    "tests": 417,
+    "errors": 0,
+    "skipped": 0,
+    "failures": 0
+  },
+  "final_junit_sha256": "5a2b4d83c595ba7bc7bb32a3dd2970834bb50fcbc7c9d249a7c2a76c64d096e4",
+  "full_region_regression_sha256": "4a7574c75c434139a49f0b6beb1d55706d01158129a5f28b666f7b010f5edb6f",
+  "fresh_and_archived_packed_qualification_sha256": "7f4e16fd0e057af4d83dd551f4348317ef6f78977951c1d5344f105c3a214f23",
+  "fresh_and_archived_specimen_replay_sha256": "e862ccb1032915dae42cd6383606c4e64b8cd142f4db8c7d8504738d5d02c55e",
+  "benchmark_sha256": "9916af2ac8864a630950d4602a72941b5a508b1d55ed11e7168f2d0539cffa41",
+  "timing": {
+    "three-level-review": {
+      "median_ms": {
+        "single": 690.1124,
+        "packed": 445.13385
+      },
+      "paired_wins": 6
+    },
+    "nine-level-review-tiled": {
+      "median_ms": {
+        "single": 2563.98995,
+        "packed": 643.6499
+      },
+      "paired_wins": 6
+    }
+  }
+}
