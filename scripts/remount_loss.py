@@ -9,6 +9,8 @@ from pathlib import Path
 
 import numpy as np
 from axis_gauge import pinned_reader
+from body_witness import calibration as witness_calibration
+from body_witness import inspect as inspect_witness
 from common import BUILD, Geometry, reconstruct
 from compare_native import sha
 from loss import inspect_loss
@@ -30,7 +32,7 @@ def write_doc(path, doc):
     )
 
 
-def scanner_grid(material, out, fit, geom, *, bead_centers=(), clearance=0):
+def scanner_grid(material, out, fit, geom, *, bead_centers=(), clearance=0, body=None):
     vals = material.read_text(encoding="utf-8-sig").split()
     if len(vals) != 16 or vals[0] != "CFDKCYL1":
         raise ValueError("invalid material grid")
@@ -55,14 +57,20 @@ def scanner_grid(material, out, fit, geom, *, bead_centers=(), clearance=0):
 
     # No fiducial may be part of the shell being inspected. Distance to the finite
     # annular sampling envelope, not merely distance to its centerline.
-    for bead in bead_centers:
-        delta = np.asarray(bead) - center
+    exclusions = [(bead, clearance, "bead_intersects_inspection_grid") for bead in bead_centers]
+    if body is not None:
+        exclusions.extend(
+            (r @ p + t, body.radius + body.limit, "witness_intersects_inspection_grid")
+            for p in body.points
+        )
+    for point, separation, reason in exclusions:
+        delta = np.asarray(point) - center
         axial = delta @ axis
         radial = np.linalg.norm(delta - axial * axis)
         dr = max(0, steps[0] - radial, radial - steps[0] - (k - 1) * steps[1])
         dz = max(0, abs(axial) - (h - 1) * steps[2] / 2)
-        if np.hypot(dr, dz) <= clearance:
-            raise DatumRejected("bead_intersects_inspection_grid")
+        if np.hypot(dr, dz) <= separation:
+            raise DatumRejected(reason)
 
     def support(v):
         co = v @ axis
@@ -82,7 +90,18 @@ def scanner_grid(material, out, fit, geom, *, bead_centers=(), clearance=0):
 
 
 def run(
-    reference, inspected, fixture, material, job, *, level, threshold, radius, budget=96, batch=16
+    reference,
+    inspected,
+    fixture,
+    material,
+    job,
+    *,
+    level,
+    threshold,
+    radius,
+    budget=96,
+    batch=16,
+    witness=None,
 ):
     """A manifest commits a fresh job. A rejected registration has no loss report."""
     if not np.isfinite([level, threshold, radius]).all() or min(level, threshold, radius) <= 0:
@@ -93,17 +112,31 @@ def run(
         for ext in [".f32", ".geom"]
     }
     sources.update({n: BUILD / n for n in ["cone-fdk.exe", "kernels.ptx"]})
-    sources.update({"fixture.json": fixture, "material.grid": material})
+    configs = {"fixture.json": fixture, "material.grid": material}
+    if witness is not None:
+        configs["body-witness.json"] = witness
+    sources.update(configs)
     job.mkdir(parents=True, exist_ok=False)
     with ExitStack() as held:
         for path in sources.values():
             held.enter_context(pinned_reader(path))
-        for k in ("fixture.json", "material.grid"):
-            shutil.copyfile(sources[k], job / k)
+        for name, path in configs.items():
+            shutil.copyfile(path, job / name)
         cfg = json.loads((job / "fixture.json").read_bytes())
         points, bead_radius, bead_level, limit, n, fov = read_calibration(cfg)
+        body = None
+        locator_sources = ["remount_loss.py", "remount_datum.py"]
+        if witness is not None:
+            body = witness_calibration(
+                json.loads((job / "body-witness.json").read_bytes()),
+                points,
+                bead_radius,
+                bead_level,
+                fov / n,
+            )
+            locator_sources.append("body_witness.py")
         log = dict(
-            format="CFDK-remount-job-v1",
+            format="CFDK-remount-job-v1" if body is None else "CFDK-remount-witness-job-v1",
             inputs_sha256={k: sha(p) for k, p in sources.items()},
             parameters=dict(
                 level_per_mm=level,
@@ -115,10 +148,7 @@ def run(
             locator_software=dict(
                 numpy=version("numpy"),
                 scipy=version("scipy"),
-                source_sha256={
-                    n: sha(Path(__file__).with_name(n))
-                    for n in ("remount_loss.py", "remount_datum.py")
-                },
+                source_sha256={n: sha(Path(__file__).with_name(n)) for n in locator_sources},
             ),
             scans={},
             status="datum_rejected",
@@ -142,7 +172,6 @@ def run(
                 info["scout_projection_passes"] = m["projection_passes"]
                 volume = np.fromfile(scout, "<f4").reshape(depth, n, n)
                 observed = candidates(volume, fov, bead_level, bead_radius, z0=lo)
-                del volume
                 info["candidates"] = observed
                 if not all(
                     panel_encloses(geom, np.array(b["scanner_xyz_mm"]), lambda v: bead_radius)
@@ -158,7 +187,14 @@ def run(
                     geom,
                     bead_centers=[b["scanner_xyz_mm"] for b in observed],
                     clearance=bead_radius + limit,
+                    body=body,
                 )
+                if body is not None:
+                    checks = inspect_witness(volume, lo, fov, geom, fit, body)
+                    info["body_witnesses"] = checks
+                    if any(c["status"] != "pass" for c in checks):
+                        raise DatumRejected("body_witness_failed")
+                del volume
             # Fit both mounts before measuring either. No resampling, optimal defect shift or relabeling.
             for key, scan in [("reference", reference), ("inspected", inspected)]:
                 folder = job / key
@@ -234,6 +270,9 @@ if __name__ == "__main__":
         cli.add_argument(name, type=Path)
     for name in ["level", "threshold", "radius"]:
         cli.add_argument("--" + name, type=float, required=True)
+    cli.add_argument(
+        "--witness", type=Path, help="calibrated workpiece inserts; veto only, never fit"
+    )
     cli.add_argument("--budget", type=int, default=96)
     cli.add_argument("--batch", type=int, default=16)
     result = run(**vars(cli.parse_args()))

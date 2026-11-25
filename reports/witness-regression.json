@@ -1,0 +1,41 @@
+{
+  "protocol": "Clean repeat native build and full acceptance; second freshly generated witness projection set. Prior fixture-only campaign kept frozen.",
+  "pytest": {
+    "tests": 270,
+    "errors": 0,
+    "failures": 0,
+    "skipped": 0
+  },
+  "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+  "build": {
+    "compiler": "g++.exe (Rev6, Built by MSYS2 project) 16.2.0",
+    "nvrtc": "12.9.86",
+    "rebuilds": 2,
+    "executable_sha256": "fb33b5c2f5d60c8b475baa2e79b8e1988a8dddcaea9f1a0c3d5f9e0a55a35983",
+    "ptx_sha256": "8a07a8441eb1a4d8dc035366e38a43524d114852b394599bf0932ba51dd82d9f",
+    "identical": true
+  },
+  "witness_replay_sha256": {
+    "body-witness.json": "e3e614d2a64d7b69981f606677052ff91c646c5663772a74810c96845a00deab",
+    "witness-margin.json": "f4d3051d50e41cc5c70bf3671be67545f01d1293cba32d2500008bfad577144f",
+    "witness-pivot.zip": "a753d30139984ac721b7d76c94799e98849629327d7785d1f1e002200e5cd869",
+    "body-witness.png": "9493b68949508e63c64a02f50dfaee8b111270c8cdca84de410ea5517b96bed2"
+  },
+  "historical_fixture_only_results_equal_except_provenance": true,
+  "historical_locator_sha256": "93acd36e9a2c596b8320cb7779337f06496ee444894776e77eef0f7bc4640ea3",
+  "current_locator_sha256": "79e61e1e6584148b16a4d141d659a1bd70c0142736baa221ecf6f2ca8d27f3a0",
+  "historical_remount_regression_sha256": "cd5d5d56b700a349e15f6c278a6622b658898daf430bed1b066435cae68e9f7d",
+  "current_remount_replay_sha256": {
+    "remount-loss.json": "25985a9a91a71e8b907c83a51a4a92215b46f130918dc486844198648d844da8",
+    "remount-deepened.zip": "4cd976b0f1049af8177fb5cd87d341784dd7a9dc58d73f3e7893b6a365e8445a",
+    "remount-example-job.json": "2efe804092574a96e2dcbb8f89e8f666e5e13d4c23c0603eb3b14f9b37b04c71",
+    "remount-loss.png": "b45407a5afe9da8c7d5462b963e26ad3e1f11226fc5c3504fef931eba01c964e"
+  },
+  "legacy_wall_bore_axis_and_loss_verified": true,
+  "frozen_volumes_sha256": {
+    "analytic256": "5a9f929265a1c2c4720682b2af3e1029910fb5016d1ff09792f565931441c3b3",
+    "analytic512": "2388a8d02ce4b0016439298b367b6a964b073c726812b014bdd2a0496dce844d",
+    "walnut512": "868249894840a28eb9db08dd75b36c56e23aab83155fad38f8a971ed734be25f",
+    "stress1296": "9efb4e96bced3a183a4516a48520bc5ec9a5f42890e40a83792acebc2712dd89"
+  }
+}

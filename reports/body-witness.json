@@ -1,0 +1,368 @@
+{
+  "protocol": "Independent analytic finite-tube scans. Carrier-only slips; body inserts never used for fitting. No physical dimensions validated.",
+  "witness_config_sha256": "40635c019d3295c86637ce9510dc56990d65b7f6cf07a478e056973bcc218e70",
+  "witness_limit_mm": 0.05,
+  "loss_threshold_mm": 0.3,
+  "photons_per_air_bin": 250000,
+  "noise_seeds": {
+    "reference": 99581,
+    "changed": 39089
+  },
+  "same_accepted_payloads_and_pass_counts": true,
+  "example_pivot_zip_sha256": "a753d30139984ac721b7d76c94799e98849629327d7785d1f1e002200e5cd869",
+  "cases": {
+    "repeat": {
+      "status": "compared",
+      "manifest_sha256": "214bd3461b970ad2d057df394ceeb7f5e76e795287cef4bcaa89fd6152a1de70",
+      "scan_projection_sha256": {
+        "reference": "1aa557d64e059fca3c9165b690cbe4c66d06c46e94ed7976793e0d02b9f9ffdf",
+        "inspected": "6b6d07b050b9c740ae5dd0e3baebf27dcd5a8ebf3189c16ccf7d1d4f3a3d2066"
+      },
+      "scans": {
+        "reference": {
+          "fixture_residual_mm": 0.008263718574329221,
+          "scout_projection_passes": 1,
+          "witnesses": [
+            {
+              "id": 1,
+              "status": "pass",
+              "residual_mm": 0.014834844505165708,
+              "truth_center_error_mm": 0.015179335801977495
+            },
+            {
+              "id": 2,
+              "status": "pass",
+              "residual_mm": 0.0157039510024864,
+              "truth_center_error_mm": 0.012942625986353606
+            },
+            {
+              "id": 3,
+              "status": "pass",
+              "residual_mm": 0.01725758548060954,
+              "truth_center_error_mm": 0.013620396770491618
+            }
+          ]
+        },
+        "inspected": {
+          "fixture_residual_mm": 0.008870788401651945,
+          "scout_projection_passes": 1,
+          "witnesses": [
+            {
+              "id": 1,
+              "status": "pass",
+              "residual_mm": 0.00863597554970124,
+              "truth_center_error_mm": 0.006485174336257555
+            },
+            {
+              "id": 2,
+              "status": "pass",
+              "residual_mm": 0.006956169469818882,
+              "truth_center_error_mm": 0.004373583537879809
+            },
+            {
+              "id": 3,
+              "status": "pass",
+              "residual_mm": 0.009139084685104175,
+              "truth_center_error_mm": 0.010554823785529258
+            }
+          ]
+        }
+      },
+      "coverage": {
+        "paired_valid": 14760,
+        "unknown": 0,
+        "below_threshold": 14760,
+        "flagged": 0
+      },
+      "region_count": 0,
+      "loss_sha256": "955ecde04e483510dd34204da97a3ba4e29e1a4ebf7e20b7ecfd70942e5d1fd6",
+      "max_abs_delta_mm": 0.0325861100748992
+    },
+    "noisy-change": {
+      "status": "compared",
+      "manifest_sha256": "20ce077eb45c583d3620d40b814cddd0317c0107d0b17bfff1eb3d6877e9f2e3",
+      "scan_projection_sha256": {
+        "reference": "ed37a3f663064cc7c51bd3272fa7c7394d99acee858ac1a9bf0336cab0dbcd42",
+        "inspected": "d68feadfe195dec26c83a9d1ee14ec0773749b131be976edd069f2f18707dfe0"
+      },
+      "scans": {
+        "reference": {
+          "fixture_residual_mm": 0.008254082282438183,
+          "scout_projection_passes": 1,
+          "witnesses": [
+            {
+              "id": 1,
+              "status": "pass",
+              "residual_mm": 0.015579985725831372,
+              "truth_center_error_mm": 0.015781534328907304
+            },
+            {
+              "id": 2,
+              "status": "pass",
+              "residual_mm": 0.016355249161601217,
+              "truth_center_error_mm": 0.013650650503203883
+            },
+            {
+              "id": 3,
+              "status": "pass",
+              "residual_mm": 0.016181744965100615,
+              "truth_center_error_mm": 0.01256044858147535
+            }
+          ]
+        },
+        "inspected": {
+          "fixture_residual_mm": 0.008963007817303338,
+          "scout_projection_passes": 1,
+          "witnesses": [
+            {
+              "id": 1,
+              "status": "pass",
+              "residual_mm": 0.010463903366519822,
+              "truth_center_error_mm": 0.008601016761110972
+            },
+            {
+              "id": 2,
+              "status": "pass",
+              "residual_mm": 0.007552206203554082,
+              "truth_center_error_mm": 0.004523046426985663
+            },
+            {
+              "id": 3,
+              "status": "pass",
+              "residual_mm": 0.010554837456002268,
+              "truth_center_error_mm": 0.011975522256881062
+            }
+          ]
+        }
+      },
+      "coverage": {
+        "paired_valid": 14760,
+        "unknown": 0,
+        "below_threshold": 14497,
+        "flagged": 263
+      },
+      "region_count": 1,
+      "loss_sha256": "6d5e481edbbfbe8c1185d52c34875926d0cc8b195c6fcb45c42ff3c83783c44b",
+      "design_peak_mm": 0.75,
+      "peak_mm": 0.7707650345447643,
+      "footprint_iou": 0.9563636363636364,
+      "peak_azimuth_deg": 134
+    },
+    "slide": {
+      "status": "datum_rejected",
+      "manifest_sha256": "1eed21b8f8bd2b125088740c151533ef2adb9777f0ef70544b612579bbd02ef6",
+      "scan_projection_sha256": {
+        "reference": "1aa557d64e059fca3c9165b690cbe4c66d06c46e94ed7976793e0d02b9f9ffdf",
+        "inspected": "9e72f7540023795fba41c3b59dab338e7852fce1d61ca045ccdb2ab6d8d3ae3f"
+      },
+      "scans": {
+        "reference": {
+          "fixture_residual_mm": 0.008263718574329221,
+          "scout_projection_passes": 1,
+          "witnesses": [
+            {
+              "id": 1,
+              "status": "pass",
+              "residual_mm": 0.014834844505165708,
+              "truth_center_error_mm": 0.015179335801977495
+            },
+            {
+              "id": 2,
+              "status": "pass",
+              "residual_mm": 0.0157039510024864,
+              "truth_center_error_mm": 0.012942625986353606
+            },
+            {
+              "id": 3,
+              "status": "pass",
+              "residual_mm": 0.01725758548060954,
+              "truth_center_error_mm": 0.013620396770491618
+            }
+          ]
+        },
+        "inspected": {
+          "fixture_residual_mm": 0.00680886875120906,
+          "scout_projection_passes": 1,
+          "witnesses": [
+            {
+              "id": 1,
+              "status": "displaced",
+              "residual_mm": 0.803062896928614,
+              "truth_center_error_mm": 0.006984148291478184
+            },
+            {
+              "id": 2,
+              "status": "displaced",
+              "residual_mm": 0.8010475860391219,
+              "truth_center_error_mm": 0.005239732341663498
+            },
+            {
+              "id": 3,
+              "status": "displaced",
+              "residual_mm": 0.7885203985190162,
+              "truth_center_error_mm": 0.010150149814673834
+            }
+          ]
+        }
+      },
+      "rejected_scan": "inspected",
+      "reason": "body_witness_failed",
+      "produced_wall_or_loss": false
+    },
+    "pivot": {
+      "status": "datum_rejected",
+      "manifest_sha256": "cc70f02186c090a55c60c3f5c2a133f283a2ac6a3cf9bde5d07b99a75995a3c0",
+      "scan_projection_sha256": {
+        "reference": "1aa557d64e059fca3c9165b690cbe4c66d06c46e94ed7976793e0d02b9f9ffdf",
+        "inspected": "3330e0aff92b652ca56ae50c684704b98f8a9bb795c5998f9b5fed4b9d26d3fa"
+      },
+      "scans": {
+        "reference": {
+          "fixture_residual_mm": 0.008263718574329221,
+          "scout_projection_passes": 1,
+          "witnesses": [
+            {
+              "id": 1,
+              "status": "pass",
+              "residual_mm": 0.014834844505165708,
+              "truth_center_error_mm": 0.015179335801977495
+            },
+            {
+              "id": 2,
+              "status": "pass",
+              "residual_mm": 0.0157039510024864,
+              "truth_center_error_mm": 0.012942625986353606
+            },
+            {
+              "id": 3,
+              "status": "pass",
+              "residual_mm": 0.01725758548060954,
+              "truth_center_error_mm": 0.013620396770491618
+            }
+          ]
+        },
+        "inspected": {
+          "fixture_residual_mm": 0.006218628742899201,
+          "scout_projection_passes": 1,
+          "witnesses": [
+            {
+              "id": 1,
+              "status": "pass",
+              "residual_mm": 0.0077581530716433105,
+              "truth_center_error_mm": 0.006641329835887729
+            },
+            {
+              "id": 2,
+              "status": "displaced",
+              "residual_mm": 0.9390395318428133,
+              "truth_center_error_mm": 0.004681709840417769
+            },
+            {
+              "id": 3,
+              "status": "displaced",
+              "residual_mm": 0.8884537858166771,
+              "truth_center_error_mm": 0.010183677111506046
+            }
+          ]
+        }
+      },
+      "rejected_scan": "inspected",
+      "reason": "body_witness_failed",
+      "produced_wall_or_loss": false
+    },
+    "missing-reference": {
+      "status": "datum_rejected",
+      "manifest_sha256": "8b74eb042f4044931457a1c4fa5e232c19e8b52763482576df5e3e1609cc574c",
+      "scan_projection_sha256": {
+        "reference": "f7e82e2fa0bcf370e42b4a3e9bd44ca461fe9cdc847181d0e39c36cc4674a86d",
+        "inspected": "6b6d07b050b9c740ae5dd0e3baebf27dcd5a8ebf3189c16ccf7d1d4f3a3d2066"
+      },
+      "scans": {
+        "reference": {
+          "fixture_residual_mm": 0.008263718574329221,
+          "scout_projection_passes": 1,
+          "witnesses": [
+            {
+              "id": 1,
+              "status": "pass",
+              "residual_mm": 0.014834844505165708,
+              "truth_center_error_mm": 0.015179335801977495
+            },
+            {
+              "id": 2,
+              "status": "missing",
+              "residual_mm": null,
+              "truth_center_error_mm": null
+            },
+            {
+              "id": 3,
+              "status": "pass",
+              "residual_mm": 0.01725758548060954,
+              "truth_center_error_mm": 0.013620396770491618
+            }
+          ]
+        }
+      },
+      "rejected_scan": "reference",
+      "reason": "body_witness_failed",
+      "produced_wall_or_loss": false
+    },
+    "slide-fixture-only": {
+      "status": "compared",
+      "manifest_sha256": "beb3d30054fb74bef4a73003fd7599b73764ad71839ec8ea682844b7563210a6",
+      "scan_projection_sha256": {
+        "reference": "1aa557d64e059fca3c9165b690cbe4c66d06c46e94ed7976793e0d02b9f9ffdf",
+        "inspected": "9e72f7540023795fba41c3b59dab338e7852fce1d61ca045ccdb2ab6d8d3ae3f"
+      },
+      "scans": {
+        "reference": {
+          "fixture_residual_mm": 0.008263718574329221,
+          "scout_projection_passes": 1
+        },
+        "inspected": {
+          "fixture_residual_mm": 0.00680886875120906,
+          "scout_projection_passes": 1
+        }
+      },
+      "coverage": {
+        "paired_valid": 14760,
+        "unknown": 0,
+        "below_threshold": 14601,
+        "flagged": 159
+      },
+      "region_count": 1,
+      "loss_sha256": "518b61ae7f42bfeaa8278dc02a870b4fa09644b5ffd840d63858157aa8e70a15",
+      "spurious_peak_mm": 0.8671309689648021
+    },
+    "noisy-change-fixture-only": {
+      "status": "compared",
+      "manifest_sha256": "64c04c36caf78c8cd1f9f8f921d55f467f873fea9e8fe2b7be8595e63850356a",
+      "scan_projection_sha256": {
+        "reference": "ed37a3f663064cc7c51bd3272fa7c7394d99acee858ac1a9bf0336cab0dbcd42",
+        "inspected": "d68feadfe195dec26c83a9d1ee14ec0773749b131be976edd069f2f18707dfe0"
+      },
+      "scans": {
+        "reference": {
+          "fixture_residual_mm": 0.008254082282438183,
+          "scout_projection_passes": 1
+        },
+        "inspected": {
+          "fixture_residual_mm": 0.008963007817303338,
+          "scout_projection_passes": 1
+        }
+      },
+      "coverage": {
+        "paired_valid": 14760,
+        "unknown": 0,
+        "below_threshold": 14497,
+        "flagged": 263
+      },
+      "region_count": 1,
+      "loss_sha256": "6d5e481edbbfbe8c1185d52c34875926d0cc8b195c6fcb45c42ff3c83783c44b",
+      "design_peak_mm": 0.75,
+      "peak_mm": 0.7707650345447643,
+      "footprint_iou": 0.9563636363636364,
+      "peak_azimuth_deg": 134
+    }
+  }
+}

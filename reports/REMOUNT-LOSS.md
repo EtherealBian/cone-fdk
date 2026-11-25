@@ -50,3 +50,5 @@ python scripts/loss_probe.py bundle reports/remount-deepened.zip --row 10 --colu
 **完整回归。** 在独立源码目录用 `Build.ps1 -VerifyRepeat` 连建两次后运行 `Run-Acceptance.ps1 -SkipBuild`（显式传入本机 `-Python` 路径）。239 项测试通过，720 视角核桃的 512³ 体、1296³ 压力体以及旧版找轴、壁厚、孔径与减薄的核查产物保持不变。在另一个新目录从解析投影重跑 `validate_remount.py` 后，可用 `python scripts/check_remount_regression.py <完整验收报告目录> <独立重放报告目录> --out build/remount-check.json` 比对。清单、测量报告、离线壁图包和对照图均逐字节一致。
 
 **适用边界。** 这是受控的有标记复检，不是无标记通用配准。工装与被测件必须始终刚连，模板相对于材料轴线和接缝须事先标定；整套标记相对管件一致滑动，仍可能以很小的球标残差通过。计数噪声使用固定种子和一个光子水平，不包含散射、束硬化、标定漂移、真实装夹公差或工件变形。实测核桃数据只用于验证原重建链未回退，不能代替带外部尺寸真值的实物管件复扫。
+
+后续源码增加了可选的[工件本体见证点检查](BODY-WITNESS.md)，专门检查上述工装整体滑移。本页的四球报告保留原始软件指纹；新旧版本测量产物的比对单列在[回归记录](witness-regression.json)。

@@ -17,6 +17,7 @@ try {
   Run-Python scripts/validate_loss.py
   Run-Python scripts/validate_axis.py
   Run-Python scripts/validate_remount.py
+  Run-Python scripts/validate_witness.py
   Run-Python scripts/export_volume.py data/walnut-corrected-256.f32 --n 256 --fov 40 --out reports
   Run-Python scripts/benchmark.py
   if (!$CoreOnly) {

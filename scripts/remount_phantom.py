@@ -20,13 +20,15 @@ def pose(key):
 DEEP_FLAT = (0.0, 1.40, FLAT[2], FLAT[3])
 
 
-def project(scan, mount, *, relief, missing=False, deep=False):
+def project(scan, mount, *, relief, missing=False, deep=False, rack=None, witnesses=()):
     rot, t = pose(mount)
     g = Geometry(360, 144, 480, 0.13, 0.25, 120.0, 205.0)
     g.save(scan.with_suffix(".geom"))
     u = (np.arange(g.u) - (g.u - 1) / 2) * g.du / g.D
     v = (np.arange(g.v)[:, None] - (g.v - 1) / 2) * g.dv / g.D
-    balls = BALLS[:-1] if missing else BALLS
+    balls = BALLS if rack is None else np.asarray(rack)
+    if missing:
+        balls = balls[:-1]
     with scan.with_suffix(".f32").open("wb") as file:
         for theta in g.angles():
             s, c = np.sin(theta), np.cos(theta)
@@ -82,6 +84,12 @@ def project(scan, mount, *, relief, missing=False, deep=False):
                         (y * dz - z * dy) ** 2 + (z * dx - x * dz) ** 2 + (x * dy - y * dx) ** 2
                     )
                     signal += 0.24 * 2 * np.sqrt(np.maximum(0, 0.65**2 * norm2 - cross2)) / norm2
+                for point in witnesses:
+                    x, y, z = src - point
+                    cross2 = (
+                        (y * dz - z * dy) ** 2 + (z * dx - x * dz) ** 2 + (x * dy - y * dx) ** 2
+                    )
+                    signal += 0.06 * 2 * np.sqrt(np.maximum(0, 0.50**2 * norm2 - cross2)) / norm2
                 view += signal * np.sqrt(norm2) / 3
             view.astype("<f4").tofile(file)
 

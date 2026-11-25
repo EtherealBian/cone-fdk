@@ -1,0 +1,46 @@
+{
+  "protocol": "Three noiseless axial carrier shifts at one remount; not a detection probability or calibrated sensitivity.",
+  "reference_projection_sha256": "1aa557d64e059fca3c9165b690cbe4c66d06c46e94ed7976793e0d02b9f9ffdf",
+  "witness_limit_mm": 0.05,
+  "cases": [
+    {
+      "design_axial_shift_mm": 0.03,
+      "fixture_residual_mm": 0.009983791652006987,
+      "witness_residuals_mm": [
+        0.03452055875684442,
+        0.030067448909650605,
+        0.02166784963584189
+      ],
+      "status": "compared",
+      "flagged": 0,
+      "inspected_projection_sha256": "706e382ec16406dafe6f5f4c495f3b53431cb46aeb60cffa274b80c55d4c2d3e",
+      "manifest_sha256": "f673dade9737242a6f690d7bbf1f34956ac687658beaffa8a1c6f2fabfeefa22"
+    },
+    {
+      "design_axial_shift_mm": 0.05,
+      "fixture_residual_mm": 0.011298655699717362,
+      "witness_residuals_mm": [
+        0.05317080976960709,
+        0.05067855182124691,
+        0.04011624221508163
+      ],
+      "status": "datum_rejected",
+      "flagged": null,
+      "inspected_projection_sha256": "286e810ecbfcd96619ac204b27d991dc764ddd237d9750d6afeffd4d58ae4009",
+      "manifest_sha256": "27bc1535a91e786667eae8e404283d9941f90849764b92a4d487ced6ec647a14"
+    },
+    {
+      "design_axial_shift_mm": 0.07,
+      "fixture_residual_mm": 0.011846115360611392,
+      "witness_residuals_mm": [
+        0.07041744546221552,
+        0.07130144496029821,
+        0.05889992947022039
+      ],
+      "status": "datum_rejected",
+      "flagged": null,
+      "inspected_projection_sha256": "34a1446ad5426b1d614d60c8f4c8a1de39abf368995b3c65b7cf584963ecc12d",
+      "manifest_sha256": "1e28601041ad53634c3528b950efddb9675bdbd497100989829d49b01bd67e26"
+    }
+  ]
+}
