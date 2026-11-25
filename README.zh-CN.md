@@ -2,7 +2,7 @@
 
 在 NVIDIA DGX Spark（GB10）上，用 720 幅核桃 X 射线实测投影重建 **512³ 体数据**。原生 C++/CUDA 引擎完成锥束加权、cuFFT 分批滤波和按显存预算分块的反投影。Python 用来准备输入和独立校验；重建程序本身不需要 Python。
 
-[English](README.md) · [个人主页项目详解](https://etherealbian.github.io/work/cone-fdk.html) · [Windows 稳定版 v0.1.0](https://github.com/EtherealBian/cone-fdk/releases/tag/v0.1.0) · [下载离线切片浏览器](https://github.com/EtherealBian/cone-fdk/releases/download/v0.1.0/walnut-512-viewer.html)
+[English](README.md#english) · [个人主页项目详解](https://etherealbian.github.io/work/cone-fdk.html) · [Windows 稳定版 v0.1.0](https://github.com/EtherealBian/cone-fdk/releases/tag/v0.1.0) · [下载离线切片浏览器](https://github.com/EtherealBian/cone-fdk/releases/download/v0.1.0/walnut-512-viewer.html)
 
 ![720 角真实投影重建的核桃轴向切层](reports/walnut-sweep.gif)
 
@@ -96,6 +96,8 @@
 [三件结果与原始档重放](https://github.com/EtherealBian/cone-fdk/blob/7b9d4bfc9c1ea8fe2750baa1a2b8154bfd09b418/pores/RETAINED-BASELINE.md) · [看同一切片上两个孔如何被连成一个](https://etherealbian.github.io/work/cone-fdk.html#pore-pair) · [四件外部试件的不同数字边界](https://github.com/EtherealBian/cone-fdk/blob/7b9d4bfc9c1ea8fe2750baa1a2b8154bfd09b418/pores/EXTERNAL-REFERENCE-AGREEMENT.md)
 
 ## 从源码运行
+
+在 DGX Spark 上，按 [Spark 原生 CUDA 构建与运行步骤](platform/spark/QUICKSTART.md#run-native-cuda-from-a-fresh-source-checkout) 从源码运行。下面的 PowerShell 命令用于 Windows。
 
 ```powershell
 git clone https://github.com/EtherealBian/cone-fdk.git
