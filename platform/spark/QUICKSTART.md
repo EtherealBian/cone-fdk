@@ -36,7 +36,7 @@ The native demo reads the 90-view subset shipped with the repository. It reconst
 - [Full walnut comparison](../../reports/gb10/walnut-astra.json): 134,217,728 voxels; no registration or fitted intensity scale. [Two native repeats](../../reports/gb10/walnut-native.json) produced identical bytes.
 - [Three-grid timing](../../reports/gb10/multigrid-timing.json): 192³ overview, 512-grid ROI and 1024-grid detail. Six warm pairs, 3 → 1 projection reads and 135 → 45 filter batches. Median native process time includes startup and output sync, excludes sealing, verification and export.
 - [Independent ASTRA grid audit](../../reports/gb10/grid-agreement.json): 12,618,525 voxels on the three preset grids. [Host-buffer comparison](../../reports/gb10/astra-buffer-timing.json): six interleaved pairs, unchanged output, median pipeline 650.894 → 545.263 ms. These are not device-memory savings or native FDK timings.
-- [Spark workspace regression](../../reports/gb10/spark-regression.json): 809 passed in the qualified workspace. Some tests and production qualification drivers require external acquisitions, retained caches and pinned prior jobs; this is not a claim that the whole suite runs on a standalone clone. The [periodic-only overlay](../../reports/gb10/historical-regression.json) passed 648 of 707 historical tests; the [slab compatibility overlay](../../reports/gb10/slab-compat-regression.json) passed 667 of the same 707, with no new failures.
+- [Spark workspace regression](../../reports/gb10/spark-regression.json): 853 passed in the qualified workspace. Some tests and production qualification drivers require external acquisitions, retained caches and pinned prior jobs; this is not a claim that the whole suite runs on a standalone clone. The [periodic-only overlay](../../reports/gb10/historical-regression.json) passed 648 of 707 historical tests; the [slab compatibility overlay](../../reports/gb10/slab-compat-regression.json) passed 667, and the [directory edge overlay](../../reports/gb10/directory-edge-regression.json) passed 697 of the same 707, with no new failures.
 - [Physical batch](../../reports/gb10/physical-coverage.json): one of two planned specimens in this snapshot. A solver comparison does not establish a physical measurement tolerance. Raw scans, scratch products and private execution logs are not part of this release.
 
 ## Resume a five-slab job without changing a legacy callback
@@ -59,3 +59,40 @@ PYTHONPATH="$D/overlay:$PWD/scripts" python3 -B -c 'import slab_replay as s; pri
 ```
 
 Native jobs require the exact plan, acquisition, ELF and PTX pins. The default worker inherits sealed file descriptors. A custom callback gets temporary paths to the same sealed bytes and can run a synchronous child; it must not save these names for later. The original names may be renamed or modified on Linux. A new invocation rejects a changed source even with a completed checkpoint. This checks process recovery on trusted local storage, not recovery after power loss. The [historical comparison](../../reports/gb10/slab-compat-regression.json) lists every remaining failure, including four tests that require Windows-style denial of original-path writes.
+
+<a id="offline-threshold-review"></a>
+## Recount wall-loss footprints from the published masks (no GPU)
+
+These **simulated** reference/inspection pairs use a 41 × 360 cylindrical grid. At each threshold pair the same two edge levels apply across the entire grid. The wall-loss gate stays at 0.3 mm. The repeat and noisy-change cases use 3 × 3 pairs; the invalid-edge control was archived with 2 × 2. Do not replace its missing observations with zero loss.
+
+```sh
+D=reports/gb10
+python3 -I -S -B platform/spark/review_directory_masks.py \
+  "$D/directory-edge-qualification.json" \
+  39b156760dc467967d9372701843b392fd07c9347d35b5509d17d8da0723aa31 \
+  "$D/directory-edge-masks.zlib"
+```
+
+Expected: **9 + 9 + 4 label grids, 324,720 cell decisions**. The 590-byte compressed input holds classified cells, not raw projections or precomputed component labels. A standard-library flood fill wraps across the angular seam but not the axial ends, assigns each region its first row-major cell ID, and checks the entire little-endian label grid against the pinned receipt. It also checks the unknown-cell, flagged-cell and region counts. It does not re-estimate wall thickness. [Raw CPU-to-CUDA checks and frozen file comparisons](../../reports/gb10/directory-edge-qualification.json) come from a separate Spark run with the original archived materials.
+
+### Reopen a witnessed directory on the qualified Spark
+
+After the default native `build.py` above (which creates the historical `.exe` names as symlinks to local ARM64 ELF products), use Python 3.12 with NumPy and SciPy. Build an optional module overlay in its own fresh directory. The destination's real parent directory must already exist.
+
+```sh
+D=$(mktemp -d)
+python3 -B platform/spark/build_edge_compat.py "$D/overlay" \
+  --expect 8ce35c3262a7d95de292616a5daa58655c41e60cd72710501a8ead7a78adeeb7
+PYTHONPATH="$D/overlay:$PWD/scripts" python3 -B -m edge_review_packed --help
+```
+
+With your original witnessed job, its externally obtained manifest hash, and the original producer directory available, run:
+
+```sh
+PYTHONPATH="$D/overlay:$PWD/scripts" python3 -B -m edge_review_packed \
+  "$PARENT_JOB" "$D/new-review" --levels 0.018 0.020 0.022 --budget 1 \
+  --parent-sha256 "$PARENT_SHA256" --source-products "$ORIGINAL_PRODUCTS" \
+  --companion-sha256 6351b4db3aa52e1df6a9651ccc329dcb238c45c6cdbc498dbd0c6cef9a72e7dc
+```
+
+Original producer files are authenticated as data and are not executed. Only the locally pinned ELF/PTX products run; `--source-products` can be omitted for a matching local producer. For a published result, exit 0 means complete coverage and 2 means the result contains unknown cells. Rejected inputs produce no delivery. This interface is for trusted local filesystems and synchronous consumers, not a distributed lock or power-loss guarantee. The full three-case CUDA qualification needs the archived source objects; only the offline mask check is self-contained. [Matched historical regression](../../reports/gb10/directory-edge-regression.json): 697 of the same 707 tests passed; the ten remaining failures are listed by name.

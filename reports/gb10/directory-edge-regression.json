@@ -1,0 +1,69 @@
+{
+  "format": "CFDK-GB10-historical-directory-edge-comparison-v1",
+  "scope": "Matched all original historical test IDs between JUnit runs in the same qualified workspace. No skips, xfails, or filtered historical cases.",
+  "cases": 707,
+  "periodic_overlay_sha256": "0434f703e71e4218dd9ca403a5a73de423c2b8e07b4b47e0036b608ddb23faaf",
+  "slab_overlay_sha256": "f53f88ed79fe450ea502387d6152665ecd453c09a0efbbb76f7940e30dd7769a",
+  "edge_overlay_sha256": "8ce35c3262a7d95de292616a5daa58655c41e60cd72710501a8ead7a78adeeb7",
+  "previous": {
+    "xml_sha256": "2405bf4e2621a658d4f7a49f64e0a093b05d4daa6219ff2cef5ef831a922b365",
+    "counts": {
+      "passed": 667,
+      "failure": 40
+    },
+    "exit": 1
+  },
+  "current": {
+    "xml_sha256": "90ae24d1575f18a31449385d7e009ec430463f1e72e56bdce6eb72ccd248c3de",
+    "counts": {
+      "passed": 697,
+      "failure": 10
+    },
+    "exit": 1
+  },
+  "resolved": [
+    "tests.test_edge_review::test_incomplete_parent_and_offline_replay",
+    "tests.test_edge_review::test_reject_inconsistent_jobs[fixture_only]",
+    "tests.test_edge_review::test_reject_inconsistent_jobs[grid]",
+    "tests.test_edge_review::test_reject_inconsistent_jobs[inspected_witness]",
+    "tests.test_edge_review::test_reject_inconsistent_jobs[nominal_coverage]",
+    "tests.test_edge_review::test_reject_inconsistent_jobs[null_digest]",
+    "tests.test_edge_review::test_reject_inconsistent_jobs[parent_digest]",
+    "tests.test_edge_review::test_reject_inconsistent_jobs[reference_witness]",
+    "tests.test_edge_review::test_reject_inconsistent_jobs[rejected]",
+    "tests.test_edge_review::test_reject_inconsistent_jobs[residual]",
+    "tests.test_edge_review::test_reject_inconsistent_jobs[shell]",
+    "tests.test_edge_review::test_reject_inconsistent_jobs[shifted_run]",
+    "tests.test_edge_review::test_reject_inconsistent_jobs[tool]",
+    "tests.test_edge_review::test_reject_inconsistent_jobs[wall]",
+    "tests.test_edge_review_packed::test_bad_source_never_starts_device[companion pin]",
+    "tests.test_edge_review_packed::test_bad_source_never_starts_device[copied calibration]",
+    "tests.test_edge_review_packed::test_bad_source_never_starts_device[fixture only]",
+    "tests.test_edge_review_packed::test_bad_source_never_starts_device[nominal count]",
+    "tests.test_edge_review_packed::test_bad_source_never_starts_device[old tool]",
+    "tests.test_edge_review_packed::test_bad_source_never_starts_device[parent pin]",
+    "tests.test_edge_review_packed::test_bad_source_never_starts_device[ptx]",
+    "tests.test_edge_review_packed::test_bad_source_never_starts_device[same scans]",
+    "tests.test_edge_review_packed::test_bad_source_never_starts_device[source]",
+    "tests.test_edge_review_packed::test_bad_source_never_starts_device[status]",
+    "tests.test_edge_review_packed::test_bad_source_never_starts_device[witness]",
+    "tests.test_edge_review_packed::test_late_failure_is_not_a_published_measurement[nominal shifted]",
+    "tests.test_edge_review_packed::test_late_failure_is_not_a_published_measurement[redzone]",
+    "tests.test_edge_review_packed::test_late_failure_is_not_a_published_measurement[second role]",
+    "tests.test_edge_review_packed::test_late_failure_is_not_a_published_measurement[status histogram]",
+    "tests.test_edge_review_packed::test_native_pair_packs_match_legacy_and_regions"
+  ],
+  "new_failures": [],
+  "remaining": [
+    "tests.test_axis::test_job_never_reuses_stale_output",
+    "tests.test_axis::test_pinned_input_denies_writers_and_replacement",
+    "tests.test_remount::test_duplicate_exposure_and_stale_job",
+    "tests.test_slab_replay::test_native_cannot_race_pinned_files[0]",
+    "tests.test_slab_replay::test_native_cannot_race_pinned_files[1]",
+    "tests.test_slab_replay::test_native_cannot_race_pinned_files[2]",
+    "tests.test_slab_replay::test_native_cannot_race_pinned_files[3]",
+    "tests.test_wall_pack::test_exact_old_wall_records[13-1-levels0-1]",
+    "tests.test_wall_pack::test_exact_old_wall_records[32-2-levels2-16]",
+    "tests.test_wall_pack::test_exact_old_wall_records[360-51-levels1-1]"
+  ]
+}

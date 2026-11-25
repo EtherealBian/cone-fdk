@@ -1,0 +1,374 @@
+{
+  "format": "CFDK-GB10-directory-edge-qualification-v1",
+  "offline_masks": {
+    "format": "CFDK-mask-u8-zlib-v1",
+    "case_order": [
+      "repeat",
+      "noisy-change",
+      "invalid-edge-control"
+    ],
+    "sha256": "c0e84f4512c73abdb0f616425a67b0d0a16f2b019b4ded7b1a8a585ea267e01f",
+    "uncompressed_bytes": 324720,
+    "codes": [
+      "below",
+      "observed",
+      "unknown"
+    ]
+  },
+  "scope": "Archived simulated witnessed jobs. Real GB10 CUDA execution and numerical replay, not physical dimensional accuracy.",
+  "overlay_sha256": "8ce35c3262a7d95de292616a5daa58655c41e60cd72710501a8ead7a78adeeb7",
+  "baseline_sha256": "7f4e16fd0e057af4d83dd551f4348317ef6f78977951c1d5344f105c3a214f23",
+  "qualifier_sha256": "eb63c9eaa380e3f99252a2b6af509e8758a851fa5caa28bff573ff8b9123d464",
+  "native_sha256": {
+    "cone-fdk.exe": "144a9d873a6f3047637303dff2cdfe4dbe2cb1890b1d8945b1439b5d5da60883",
+    "wall-pack.exe": "6351b4db3aa52e1df6a9651ccc329dcb238c45c6cdbc498dbd0c6cef9a72e7dc",
+    "kernels.ptx": "2ff008d243a421c97c93f6c94031484d9ec165084855173386e6a491dce2d167"
+  },
+  "cases": {
+    "repeat": {
+      "parent_sha256": "214bd3461b970ad2d057df394ceeb7f5e76e795287cef4bcaa89fd6152a1de70",
+      "archived_packed_edge_sha256": "f78c85bc60e7354b2109cdae6d72f172a2701958ac32291fe6cd778d2db98c89",
+      "archived_region_sha256": "c2ae4a31351b654e906766d676705f27513bd92f55bc24a2c5085f9ba2f0a0df",
+      "levels_per_mm": [
+        0.018,
+        0.02,
+        0.022
+      ],
+      "shape_ha": [
+        41,
+        360
+      ],
+      "pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "loss_gate_mm": 0.3,
+      "observed_flagged_cells": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "periodic_label_sha256": [
+        "81ea021db9a32256e8b7a51614f8d9a257b998e809632934862ab19511a24bcc",
+        "81ea021db9a32256e8b7a51614f8d9a257b998e809632934862ab19511a24bcc",
+        "81ea021db9a32256e8b7a51614f8d9a257b998e809632934862ab19511a24bcc",
+        "81ea021db9a32256e8b7a51614f8d9a257b998e809632934862ab19511a24bcc",
+        "81ea021db9a32256e8b7a51614f8d9a257b998e809632934862ab19511a24bcc",
+        "81ea021db9a32256e8b7a51614f8d9a257b998e809632934862ab19511a24bcc",
+        "81ea021db9a32256e8b7a51614f8d9a257b998e809632934862ab19511a24bcc",
+        "81ea021db9a32256e8b7a51614f8d9a257b998e809632934862ab19511a24bcc",
+        "81ea021db9a32256e8b7a51614f8d9a257b998e809632934862ab19511a24bcc"
+      ],
+      "region_counts": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "unknown_cells": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "results": {
+        "single": {
+          "edge_manifest_sha256": "04fd183bdc63db4275c1a7595001673e4da06d1417eb684012fd902b5b5b1aa1",
+          "maps_compared": 10,
+          "byte_compared": 3084891,
+          "native_calls": 4,
+          "raw_cpu_oracle": {
+            "raw_wall_records_checked": 88560,
+            "explicit_pair_cells": 132840,
+            "max_abs_cpu_cuda_thickness_mm": 3.1086244689504383e-15
+          }
+        },
+        "packed": {
+          "edge_manifest_sha256": "98c0553916f73e6f9000cc36b16ae5cec77205df6c20f5c212f976beffbf7d45",
+          "maps_compared": 10,
+          "byte_compared": 3084891,
+          "native_calls": 2,
+          "raw_cpu_oracle": {
+            "raw_wall_records_checked": 88560,
+            "explicit_pair_cells": 132840,
+            "max_abs_cpu_cuda_thickness_mm": 3.1086244689504383e-15
+          }
+        }
+      }
+    },
+    "noisy-change": {
+      "parent_sha256": "20ce077eb45c583d3620d40b814cddd0317c0107d0b17bfff1eb3d6877e9f2e3",
+      "archived_packed_edge_sha256": "ec33745f9f0141d388e7e1452af9cd1a394e031a8ff8fddd5b54e3d081cce6d2",
+      "archived_region_sha256": "780d4f8406be00e7fb7a5202cb239a53ea67be08e1341171047e8106c36c6b26",
+      "levels_per_mm": [
+        0.018,
+        0.02,
+        0.022
+      ],
+      "shape_ha": [
+        41,
+        360
+      ],
+      "pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          2
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          2,
+          2
+        ]
+      ],
+      "loss_gate_mm": 0.3,
+      "observed_flagged_cells": [
+        262,
+        271,
+        275,
+        254,
+        263,
+        272,
+        253,
+        255,
+        263
+      ],
+      "periodic_label_sha256": [
+        "feffbad21622a1aaabfe1c3516c846008516c381817a73673d35787070aa2cdc",
+        "3c310677ddce8ab71a7c3c7c866ee45220062046a8c010165310ec7792aa2e44",
+        "aa439eabcadbd081fe1e5d5e8f95d07f8e90eef2ccca86989673468937e14a19",
+        "e54986a17daf61c7e158552a257e8db944bbc4c83ac9264b9a27d86096b00eb8",
+        "57f0de6dc7ca561847c0db4683e874bcf7a614a78a60ce1c968d2518b96b2087",
+        "229e6c78bf07118512fa7325f617ce465446220ec104a6c32f7aa1cf643991f2",
+        "44273724e8549f07314add0f88c5db291fc1ba3e99e91e00b1de0c3ed329ca89",
+        "849e9d7e2978a4f409407ef8ea9965bead9aab32e4a96438a9a34c5cb0777468",
+        "57f0de6dc7ca561847c0db4683e874bcf7a614a78a60ce1c968d2518b96b2087"
+      ],
+      "region_counts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "unknown_cells": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "results": {
+        "single": {
+          "edge_manifest_sha256": "c998b5ed47eaf612b3810dcf1c7686412f286d9dac39793fa064c0255c221228",
+          "maps_compared": 10,
+          "byte_compared": 3084891,
+          "native_calls": 4,
+          "raw_cpu_oracle": {
+            "raw_wall_records_checked": 88560,
+            "explicit_pair_cells": 132840,
+            "max_abs_cpu_cuda_thickness_mm": 3.1086244689504383e-15
+          }
+        },
+        "packed": {
+          "edge_manifest_sha256": "6e47ef1261c3e2d1918613a180e590b2e4e0e0f4c257857324b67a205fb71fcb",
+          "maps_compared": 10,
+          "byte_compared": 3084891,
+          "native_calls": 2,
+          "raw_cpu_oracle": {
+            "raw_wall_records_checked": 88560,
+            "explicit_pair_cells": 132840,
+            "max_abs_cpu_cuda_thickness_mm": 3.1086244689504383e-15
+          }
+        }
+      }
+    },
+    "invalid-edge-control": {
+      "parent_sha256": "214bd3461b970ad2d057df394ceeb7f5e76e795287cef4bcaa89fd6152a1de70",
+      "archived_packed_edge_sha256": "fc0ababbef42fecbb40e33bd3c5e2bb5002c5574730f53a62bfd122eb77c097f",
+      "archived_region_sha256": "a828f79520ae5e9e11f2d7571f69a5d4398930eb30e80ffd464787e9fa23837f",
+      "levels_per_mm": [
+        0.02,
+        0.04
+      ],
+      "shape_ha": [
+        41,
+        360
+      ],
+      "pairs": [
+        [
+          0,
+          0
+        ],
+        [
+          0,
+          1
+        ],
+        [
+          1,
+          0
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "loss_gate_mm": 0.3,
+      "observed_flagged_cells": [
+        0,
+        8,
+        0,
+        0
+      ],
+      "periodic_label_sha256": [
+        "81ea021db9a32256e8b7a51614f8d9a257b998e809632934862ab19511a24bcc",
+        "4f33eff5f62febc31e9056c4687e29f8159feb29bf2664f504b9936a27a62f57",
+        "6aa8360e4788e0d7976fc905fd796663bb8015acc44dfa4a96134c5f11179a47",
+        "72523fced4046d142293776812f91d88b52455ccedd602eb3d1cb9277f88825b"
+      ],
+      "region_counts": [
+        0,
+        8,
+        0,
+        0
+      ],
+      "unknown_cells": [
+        0,
+        14749,
+        14723,
+        14760
+      ],
+      "results": {
+        "single": {
+          "edge_manifest_sha256": "af66a0ae487ca74bc5c4c0c167ba42f4d9c048d1cee7c3c8869f64462936ff33",
+          "maps_compared": 8,
+          "byte_compared": 2140251,
+          "native_calls": 2,
+          "raw_cpu_oracle": {
+            "raw_wall_records_checked": 59040,
+            "explicit_pair_cells": 59040,
+            "max_abs_cpu_cuda_thickness_mm": 3.1086244689504383e-15
+          }
+        },
+        "packed": {
+          "edge_manifest_sha256": "8f1df4cb45ef37450969c6aa1ad5072e64ef6023859372aebc8891d57ec8dcca",
+          "maps_compared": 8,
+          "byte_compared": 2140251,
+          "native_calls": 2,
+          "raw_cpu_oracle": {
+            "raw_wall_records_checked": 59040,
+            "explicit_pair_cells": 59040,
+            "max_abs_cpu_cuda_thickness_mm": 3.1086244689504383e-15
+          }
+        }
+      }
+    }
+  },
+  "refused": {
+    "slide": {
+      "parent_sha256": "1eed21b8f8bd2b125088740c151533ef2adb9777f0ef70544b612579bbd02ef6",
+      "refusal": {
+        "single": "unsupported parent",
+        "packed": "unsupported parent"
+      }
+    },
+    "missing-reference": {
+      "parent_sha256": "8b74eb042f4044931457a1c4fa5e232c19e8b52763482576df5e3e1609cc574c",
+      "refusal": {
+        "single": "unsupported parent",
+        "packed": "unsupported parent"
+      }
+    },
+    "noisy-change-fixture-only": {
+      "parent_sha256": "64c04c36caf78c8cd1f9f8f921d55f467f873fea9e8fe2b7be8595e63850356a",
+      "refusal": {
+        "single": "unsupported parent",
+        "packed": "unsupported parent"
+      }
+    }
+  }
+}

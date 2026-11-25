@@ -19,6 +19,10 @@ ConeFDK turns 720 measured X-ray projections of a walnut into a **512³ volume**
 
 These checks measure solver agreement. Only the walnut has qualified in the planned physical batch; the second object is still outstanding. [Batch coverage](reports/gb10/physical-coverage.json). Unless explicitly labeled Spark, benchmarks below retain their historical platforms and timings.
 
+## How sensitive is a wall-loss footprint to its edge threshold?
+
+In a **simulated** changed specimen, all nine reference/inspection threshold pairs found one connected region, but its footprint ranged from **253 to 275 cells**. The repeat control found none. A separate invalid-edge control retains its original four pairs and marks unknown cells explicitly. Two native CUDA backends on Spark reproduced the archived wall and classification files byte-for-byte. [Recompute the 22 cylindrical label grids without a GPU](platform/spark/QUICKSTART.md#offline-threshold-review) · [Pair-by-pair results](reports/gb10/directory-edge-qualification.json).
+
 ## Reconstruct just the region you need
 
 From a **source build**, `--roi x,y,z,nx,ny,nz` backprojects a box directly from the original projections. Its coordinates and voxel pitch belong to the full scan. On the same 720 walnut views, a 128 × 128 × 96 box took **0.317 s** versus **1.561 s** for the 512³ parent (six warm pairs; every box matched the corresponding parent bytes). The output was **6 MiB** instead of 512 MiB. The original v0.1.0 executable does not implement this option.
