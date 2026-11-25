@@ -70,20 +70,23 @@ extern "C" __global__ void pairs(const float *__restrict__ in, float2 *__restric
 }
 // Adjacent z planes reuse the same cone denominator and detector column.
 // Border interpolation is zero extended, not clamped to the nearest pixel.
-extern "C" __global__ void back(float *out, const float2 *__restrict__ views,
-                                const float2 *__restrict__ cs, Geom g, int first, int cnt, int z0,
-                                int depth) {
+template <bool roi>
+__device__ __forceinline__ void back_tile(float *out, const float2 *__restrict__ views,
+                                          const float2 *__restrict__ cs, Geom g, int first, int cnt,
+                                          int z0, int depth, int x0, int y0, int nx, int ny) {
     constexpr int lanes = 16;
     int ix = blockIdx.x * blockDim.x + threadIdx.x, iy = blockIdx.y * blockDim.y + threadIdx.y,
-        iz = blockIdx.z * lanes;
-    if (ix >= g.n || iy >= g.n || iz >= depth)
+        // Start on the reference grid's four-plane rounding group. Up to three
+        // leading lanes of the first ROI tile are inactive (also at slab seams).
+        iz = int(blockIdx.z) * lanes - (roi ? (z0 & 3) : 0);
+    if (ix >= nx || iy >= ny || iz >= depth)
         return;
-    float mid = (g.n - 1) * .5f, x = (ix - mid) * g.vox, y = (iy - mid) * g.vox;
-    unsigned long long plane = (unsigned long long)g.n * g.n, off = plane * iz + iy * g.n + ix;
+    float mid = (g.n - 1) * .5f, x = (ix + x0 - mid) * g.vox, y = (iy + y0 - mid) * g.vox;
+    unsigned long long plane = (unsigned long long)nx * ny, pixel = iy * nx + ix;
     float val[lanes];
 #pragma unroll
     for (int j = 0; j < lanes; j++)
-        val[j] = iz + j < depth ? out[off + j * plane] : 0;
+        val[j] = (!roi || iz + j >= 0) && iz + j < depth ? out[pixel + (iz + j) * plane] : 0;
     for (int a = 0; a < cnt; a++) {
         float2 b = cs[first + a];
         float r = 1.f / (g.R - x * b.y + y * b.x), m = g.D * r;
@@ -113,6 +116,18 @@ extern "C" __global__ void back(float *out, const float2 *__restrict__ views,
     }
 #pragma unroll
     for (int j = 0; j < lanes; j++)
-        if (iz + j < depth)
-            out[off + j * plane] = val[j];
+        if ((!roi || iz + j >= 0) && iz + j < depth)
+            out[pixel + (iz + j) * plane] = val[j];
+}
+
+extern "C" __global__ void back(float *out, const float2 *__restrict__ views,
+                                const float2 *__restrict__ cs, Geom g, int first, int cnt, int z0,
+                                int depth) {
+    back_tile<false>(out, views, cs, g, first, cnt, z0, depth, 0, 0, g.n, g.n);
+}
+
+extern "C" __global__ void back_roi(float *out, const float2 *__restrict__ views,
+                                    const float2 *__restrict__ cs, Geom g, int first, int cnt,
+                                    int z0, int depth, int x0, int y0, int nx, int ny) {
+    back_tile<true>(out, views, cs, g, first, cnt, z0, depth, x0, y0, nx, ny);
 }

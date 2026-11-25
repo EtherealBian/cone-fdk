@@ -1,0 +1,73 @@
+{
+  "original_release_sha256": "9efb4e96bced3a183a4516a48520bc5ec9a5f42890e40a83792acebc2712dd89",
+  "matched": true,
+  "source": "Uncropped path on the ROI-enabled build; comparison with the v0.1.0 output, five ASTRA plane checks in the fresh run.",
+  "binaries": {
+    "cone-fdk.exe": "71a8321ac210e5b7ac7ff1965687893b6cd4b6c269c10fb7c3d9f7cfb03a06e3",
+    "kernels.ptx": "6c5abfa460d760e1b76fa86c68f231540d8c710c6d926f0db7a6e7b50302f64a"
+  },
+  "run": {
+    "native": {
+      "gpu": "NVIDIA GeForce RTX 5060 Laptop GPU",
+      "driver_api": 13040,
+      "cufft_version": 11401,
+      "views": 180,
+      "n": 1296,
+      "batch": 16,
+      "roi_origin_xyz": [
+        0,
+        0,
+        0
+      ],
+      "output_shape_xyz": [
+        1296,
+        1296,
+        1296
+      ],
+      "output_bytes": 8707129344,
+      "voxel_spacing_mm": 0.03125,
+      "slab": 78,
+      "slabs": 17,
+      "launches_bp": 204,
+      "budget_bytes": 536870912,
+      "redzones_verified": true,
+      "peak_owned_bytes": 533745568,
+      "host_pinned_bytes": 9699328,
+      "fft_workspace_bytes": 0,
+      "free_before_bytes": 7383023616,
+      "free_at_allocation_bytes": 6837764096,
+      "filter_ms": 31.9152,
+      "bp_ms": 2127.2334,
+      "h2d_ms": 42.3469,
+      "d2h_ms": 476.902,
+      "wall_ms": 8199.5408,
+      "process_seconds": 8.263522400000511
+    },
+    "output_bytes": 8707129344,
+    "gpu_total_bytes_smi": 8546942976,
+    "sha256": "9efb4e96bced3a183a4516a48520bc5ec9a5f42890e40a83792acebc2712dd89",
+    "checked_planes": [
+      {
+        "z": 432,
+        "relative_l2": 0.00027744420977368145
+      },
+      {
+        "z": 623,
+        "relative_l2": 0.0002828172363311958
+      },
+      {
+        "z": 624,
+        "relative_l2": 0.00028312019664349775
+      },
+      {
+        "z": 648,
+        "relative_l2": 0.0002855945199622352
+      },
+      {
+        "z": 864,
+        "relative_l2": 0.0002760611745227993
+      }
+    ],
+    "verification": "Five physical planes only; not a full ASTRA volume."
+  }
+}

@@ -77,6 +77,14 @@ def test_direct_float64_oracle(tmp_path, signal, sign):
     assert np.linalg.norm(got - ref) / np.linalg.norm(ref) < 5e-6
     assert np.max(np.abs(got - ref)) / np.max(np.abs(ref)) < 1e-5
 
+    # Same reference (including negative angles / clipped detector) but no full
+    # volume in the native call. Asymmetric extents catch swapped axes.
+    roi = tmp_path / "off-axis.f32"
+    reconstruct(scan, roi, n, fov, 8, 4, roi="1,3,5,7,8,4")
+    part = np.fromfile(roi, "<f4").reshape(4, 8, 7)
+    expected = ref[5:9, 3:11, 1:8]
+    assert np.linalg.norm(part - expected) / np.linalg.norm(expected) < 5e-6
+
 
 @pytest.mark.parametrize("rows,cols", [(2, 2), (3, 8)])
 def test_minimum_fft_workspace_and_detector_guards(tmp_path, rows, cols):

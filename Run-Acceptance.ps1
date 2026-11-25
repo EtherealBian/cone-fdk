@@ -15,6 +15,7 @@ try {
     Run-Python scripts/stress.py
     Run-Python scripts/fetch.py --jobs $DownloadJobs
     Run-Python scripts/full_walnut.py
+    Run-Python scripts/validate_roi.py
     Run-Python scripts/report.py
     Write-Host "Complete: $PSScriptRoot\reports\RESULTS.md"
   } else {Write-Host 'Core gates passed. Oversize and 720-view scans were not rerun.'}

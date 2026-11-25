@@ -46,7 +46,9 @@ def dll_dirs():
     return list((base / "nvidia").glob("*/bin")) + [base / "astra"]
 
 
-def reconstruct(scan, out, n, fov, budget=768, batch=16, *, build=BUILD, host_memory=None):
+def reconstruct(
+    scan, out, n, fov, budget=768, batch=16, *, build=BUILD, host_memory=None, roi=None
+):
     env = os.environ.copy()
     env["PATH"] = os.pathsep.join(map(str, dll_dirs())) + os.pathsep + env.get("PATH", "")
     cmd = [
@@ -68,6 +70,8 @@ def reconstruct(scan, out, n, fov, budget=768, batch=16, *, build=BUILD, host_me
         "--batch",
         batch,
     ]
+    if roi is not None:
+        cmd.extend(["--roi", roi])
     if host_memory is not None:
         cmd.extend(["--host-memory", host_memory])
     t = time.perf_counter()
@@ -87,7 +91,7 @@ def reconstruct(scan, out, n, fov, budget=768, batch=16, *, build=BUILD, host_me
     return d
 
 
-def astra_run(scan, out, n, fov):
+def astra_run(scan, out, n, fov, *, centered_shape_xyz=None):
     # Same physical mm, unmodified absolute scale. No post-hoc registration or gain fit.
     _dll_directory_cookies = [os.add_dll_directory(str(p)) for p in dll_dirs() if p.is_dir()]
     import astra
@@ -96,8 +100,13 @@ def astra_run(scan, out, n, fov):
     t = time.perf_counter()
     s = np.memmap(scan.with_suffix(".f32"), "float32", "r", shape=(g.a, g.v, g.u))
     pg = astra.create_proj_geom("cone", g.du, g.dv, g.v, g.u, g.angles(), g.R, g.D - g.R)
-    r = fov / 2
-    vg = astra.create_vol_geom(n, n, n, -r, r, -r, r, -r, r)
+    # For independent ROI verification use a centered box enclosing the requested
+    # patch. No detector cropping or translation of ASTRA's rotation axis.
+    nx, ny, nz = centered_shape_xyz or (n, n, n)
+    if any(not 1 <= k <= n or (n - k) % 2 for k in (nx, ny, nz)):
+        raise ValueError("centered reference must align with the parent grid")
+    rx, ry, rz = (k * (fov / n) / 2 for k in (nx, ny, nz))
+    vg = astra.create_vol_geom(ny, nx, nz, -rx, rx, -ry, ry, -rz, rz)
     ids = []
     alg = None
     try:

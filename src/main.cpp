@@ -26,6 +26,23 @@ int integer(const std::string &s, int lo, int hi) {
         throw std::runtime_error("out of range integer: " + s);
     return n;
 }
+struct Box {
+    int x, y, z, nx, ny, nz;
+};
+Box parse_box(const std::string &text, int n) {
+    std::istringstream stream(text);
+    int v[6];
+    for (int i = 0; i < 6; ++i) {
+        std::string token;
+        if (!std::getline(stream, token, ',') || token.empty() ||
+            token.find_first_not_of("0123456789") != std::string::npos || token.size() > 4)
+            throw std::runtime_error("--roi expects x,y,z,nx,ny,nz (six unsigned grid integers)");
+        v[i] = integer(token, i < 3 ? 0 : 1, n);
+    }
+    if (!stream.eof() || v[0] + v[3] > n || v[1] + v[4] > n || v[2] + v[5] > n)
+        throw std::runtime_error("--roi is outside the reference grid or has extra fields");
+    return {v[0], v[1], v[2], v[3], v[4], v[5]};
+}
 int main() {
     try {
         auto argv = arguments();
@@ -33,7 +50,7 @@ int main() {
         if (argc == 2 && std::string(argv[1]) == "--help") {
             std::cout << "cone-fdk --geom scan.geom --input projections.f32 --output volume.f32 "
                          "--n 256 --fov 40 --budget 768 --batch 16 --ptx kernels.ptx "
-                         "[--host-memory auto|pageable]\nBudget in "
+                         "[--host-memory auto|pageable] [--roi x,y,z,nx,ny,nz]\nBudget in "
                          "MiB; fov in mm. Metrics to stdout as JSON.\n";
             return 0;
         }
@@ -42,7 +59,8 @@ int main() {
         std::set<std::string> keys = {"--geom", "--input",  "--output", "--n",
                                       "--fov",  "--budget", "--batch",  "--ptx"};
         for (int i = 1; i < argc; i += 2) {
-            if (i + 1 >= argc || (!keys.count(argv[i]) && argv[i] != "--host-memory") ||
+            if (i + 1 >= argc ||
+                (!keys.count(argv[i]) && argv[i] != "--host-memory" && argv[i] != "--roi") ||
                 options.count(argv[i]))
                 throw std::runtime_error("unknown/duplicate/incomplete argument");
             options[argv[i]] = argv[i + 1];
@@ -50,7 +68,7 @@ int main() {
         auto mode = options.count("--host-memory") ? options.at("--host-memory") : "auto";
         if (mode != "auto" && mode != "pageable")
             throw std::runtime_error("--host-memory expects auto or pageable");
-        if (options.size() - options.count("--host-memory") != keys.size())
+        if (options.size() - options.count("--host-memory") - options.count("--roi") != keys.size())
             throw std::runtime_error("missing argument; see --help");
         auto val = [&](const char *k) { return options.at(k); };
         auto dest = absolute(val("--output"));
@@ -65,6 +83,8 @@ int main() {
             magic != "CFDK1" || (meta >> junk))
             throw std::runtime_error("invalid CFDK1 geometry");
         g.n = integer(val("--n"), 2, 4096);
+        bool cropped = options.count("--roi") != 0;
+        Box box = cropped ? parse_box(val("--roi"), g.n) : Box{0, 0, 0, g.n, g.n, g.n};
         size_t pos;
         float fov = std::stof(val("--fov"), &pos);
         if (pos != val("--fov").size())
@@ -79,7 +99,7 @@ int main() {
         int k = 1;
         while (k < 2 * g.u)
             k *= 2;
-        size_t row = size_t(g.u) * g.v, plane = size_t(g.n) * g.n;
+        size_t row = size_t(g.u) * g.v, plane = size_t(box.nx) * box.ny;
         File in(absolute(val("--input")));
         if (in.size() != row * g.a * 4)
             throw std::runtime_error("projection file size mismatch");
@@ -91,9 +111,9 @@ int main() {
         if (free0 <= guard)
             throw std::runtime_error("GPU is busy: insufficient free device memory");
         size_t cap = std::min(budget, free0 - guard);
-        auto pre = gpu.kernel("pre"), sp = gpu.kernel("spectrum"), back = gpu.kernel("back"),
-             un = gpu.kernel("unpack"), ang = gpu.kernel("angles"), ramp = gpu.kernel("ramp"),
-             pairs = gpu.kernel("pairs");
+        auto pre = gpu.kernel("pre"), sp = gpu.kernel("spectrum"),
+             back = gpu.kernel(cropped ? "back_roi" : "back"), un = gpu.kernel("unpack"),
+             ang = gpu.kernel("angles"), ramp = gpu.kernel("ramp"), pairs = gpu.kernel("pairs");
         std::unique_ptr<Plan> plan;
         int slab = 0;
         size_t bytes = 0;
@@ -105,7 +125,7 @@ int main() {
             plan.reset(new Plan(gpu, k, (int)rows));
             bytes = base + plan->work;
             if (bytes + plane * 4 <= cap) {
-                slab = (int)std::min<size_t>(g.n, (cap - bytes) / (plane * 4));
+                slab = (int)std::min<size_t>(box.nz, (cap - bytes) / (plane * 4));
                 break;
             }
             plan.reset();
@@ -129,8 +149,8 @@ int main() {
         Timer timer(gpu);
         double filter = 0, bp = 0, h2d = 0, d2h = 0;
         int launches = 0;
-        for (int z = 0; z < g.n; z += slab) {
-            int depth = std::min(g.n - z, slab);
+        for (int z = 0; z < box.nz; z += slab) {
+            int depth = std::min(box.nz - z, slab);
             CK(gpu.cuMemsetD32_v2(block.p, 0, plane * depth));
             in.rewind();
             for (int first = 0; first < g.a; first += batch) {
@@ -156,8 +176,15 @@ int main() {
                            entries, totalPairs);
                 filter += timer.stop();
                 timer.start();
-                gpu.launch(back, up(g.n, 16), up(g.n, 8), up(depth, 16), 16, 8, block.p, freq.p,
-                           cs.p, g, first, actual, z, depth);
+                if (cropped) {
+                    int globalZ = box.z + z;
+                    gpu.launch(back, up(box.nx, 16), up(box.ny, 8), up(depth + (globalZ & 3), 16),
+                               16, 8, block.p, freq.p, cs.p, g, first, actual, globalZ, depth,
+                               box.x, box.y, box.nx, box.ny);
+                } else {
+                    gpu.launch(back, up(g.n, 16), up(g.n, 8), up(depth, 16), 16, 8, block.p, freq.p,
+                               cs.p, g, first, actual, z, depth);
+                }
                 bp += timer.stop();
                 launches++;
             }
@@ -178,8 +205,13 @@ int main() {
         std::cout << std::fixed << std::setprecision(4) << "{\"gpu\":\"" << gpu.name
                   << "\",\"driver_api\":" << gpu.driver << ",\"cufft_version\":" << gpu.fftver
                   << ",\"views\":" << g.a << ",\"n\":" << g.n << ",\"batch\":" << batch
-                  << ",\"slab\":" << slab << ",\"slabs\":" << up(g.n, slab)
-                  << ",\"launches_bp\":" << launches << ",\"budget_bytes\":" << budget
+                  << ",\"roi_origin_xyz\":[" << box.x << "," << box.y << "," << box.z << "]"
+                  << ",\"output_shape_xyz\":[" << box.nx << "," << box.ny << "," << box.nz << "]"
+                  << ",\"output_bytes\":" << plane * box.nz * 4
+                  << ",\"voxel_spacing_mm\":" << std::defaultfloat << std::setprecision(9) << g.vox
+                  << std::fixed << std::setprecision(4) << ",\"slab\":" << slab
+                  << ",\"slabs\":" << up(box.nz, slab) << ",\"launches_bp\":" << launches
+                  << ",\"budget_bytes\":" << budget
                   << ",\"redzones_verified\":true,\"peak_owned_bytes\":" << gpu.peak
                   << ",\"host_pinned_bytes\":" << host.pinnedBytes() + outChunk.pinnedBytes()
                   << ",\"fft_workspace_bytes\":" << plan->work << ",\"free_before_bytes\":" << free0
