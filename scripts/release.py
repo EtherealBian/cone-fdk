@@ -68,7 +68,7 @@ def build():
     ]
     for name, patterns in [
         ("src", ["*.cu", "*.cpp", "*.hpp"]),
-        ("scripts", ["*.py"]),
+        ("scripts", ["*.py", "cylinder_atlas.html"]),
         ("tests", ["*.py"]),
         ("fixtures", ["*.npz", "*.geom", "*.json", "*.txt"]),
         ("reports", ["*.md", "*.json", "*.png", "*.gif", "*.html", "*.xml", "*.txt"]),

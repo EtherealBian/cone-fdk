@@ -11,6 +11,7 @@ try {
   Run-Python scripts/accept.py all
   Run-Python scripts/validate_plane_phantom.py
   Run-Python scripts/validate_stack.py phantom
+  Run-Python scripts/validate_cylinder.py phantom
   Run-Python scripts/export_volume.py data/walnut-corrected-256.f32 --n 256 --fov 40 --out reports
   Run-Python scripts/benchmark.py
   if (!$CoreOnly) {
@@ -22,6 +23,7 @@ try {
     Run-Python scripts/validate_planner.py
     Run-Python scripts/validate_planes.py
     Run-Python scripts/validate_stack.py walnut
+    Run-Python scripts/validate_cylinder.py walnut
     Run-Python scripts/report.py
     Write-Host "Complete: $PSScriptRoot\reports\RESULTS.md"
   } else {Write-Host 'Core gates passed. Oversize and 720-view scans were not rerun.'}

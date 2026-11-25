@@ -15,7 +15,7 @@ p.add_argument("--astra", action="store_true")
 p.add_argument(
     "--planner",
     choices=["batch-first", "min-passes"],
-    help="native scheduling policy; min-passes requires --roi-list or --stack",
+    help="native scheduling policy; min-passes requires --roi-list, --stack or --cylinder",
 )
 group = p.add_mutually_exclusive_group()
 group.add_argument("--roi", help="zero-based x,y,z,nx,ny,nz on the full --n grid; native only")
@@ -30,6 +30,9 @@ group.add_argument(
 group.add_argument(
     "--stack", type=pathlib.Path, help="CFDKSTACK1 parallel sections; [depth,height,width]"
 )
+group.add_argument(
+    "--cylinder", type=pathlib.Path, help="CFDKCYL1 unwrapped sheets; [radius,height,azimuth]"
+)
 p.add_argument(
     "--stack-format", choices=["raw", "nrrd"], help="native --stack output; default raw FP32"
 )
@@ -39,10 +42,14 @@ if a.stack_format and a.stack is None:
 if a.astra and a.planner is not None:
     p.error("--planner applies only to the native engine")
 if a.astra and (
-    a.roi is not None or a.roi_list is not None or a.plane is not None or a.stack is not None
+    a.roi is not None
+    or a.roi_list is not None
+    or a.plane is not None
+    or a.stack is not None
+    or a.cylinder is not None
 ):
     p.error(
-        "region/plane/stack selection applies to the native engine, not the ASTRA full-volume runner"
+        "region/plane/stack/cylinder selection applies to the native engine, not the ASTRA full-volume runner"
     )
 print(
     json.dumps(
@@ -60,6 +67,7 @@ print(
             planner=a.planner,
             plane=a.plane,
             stack=a.stack,
+            cylinder=a.cylinder,
             stack_format=a.stack_format,
         ),
         indent=2,

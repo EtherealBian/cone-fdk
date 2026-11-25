@@ -62,6 +62,7 @@ def reconstruct(
     plane=None,
     stack=None,
     stack_format=None,
+    cylinder=None,
 ):
     env = os.environ.copy()
     env["PATH"] = os.pathsep.join(map(str, dll_dirs())) + os.pathsep + env.get("PATH", "")
@@ -92,6 +93,8 @@ def reconstruct(
         cmd.extend(["--plane", plane])
     if stack is not None:
         cmd.extend(["--stack", stack])
+    if cylinder is not None:
+        cmd.extend(["--cylinder", cylinder])
     if stack_format is not None:
         cmd.extend(["--stack-format", stack_format])
     if planner is not None:

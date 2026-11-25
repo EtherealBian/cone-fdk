@@ -9,3 +9,10 @@ struct Plane {
     double center[3], col[3], row[3];
 };
 static_assert(sizeof(Geom) == 44 && sizeof(Plane) == 80, "kernel ABI");
+// Physical frame for a cylindrical sheet. Host and CUDA share this layout.
+struct Cylinder {
+    int w, h;
+    double center[3], axis[3], seam[3], tangent[3];
+    double firstRadius, radialStep, pitch;
+};
+static_assert(sizeof(Cylinder) == 128, "cylinder kernel ABI");
