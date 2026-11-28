@@ -1,4 +1,10 @@
 build*/
+.venv/
 __pycache__/
-*.ncu-rep
-*.nsys-rep
+case/
+*.f32
+*.his
+*.DBF
+*.tgz
+views.geom
+geometry.xml

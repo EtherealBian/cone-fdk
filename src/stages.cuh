@@ -5,17 +5,21 @@ namespace fdk {
 inline int ceildiv(int a, int b) {
     return (a - 1) / b + 1;
 }
+struct View {
+    float c, s, ox, oy, angle_weight;
+};
 struct Stages {
     Geometry g;
-    int k, rows, entries;
+    int k, rows;
     Device<float> detector, response;
-    Device<float2> freq, cs;
+    Device<float2> freq;
+    Device<View> views;
     cufftHandle plan;
-    Stages(Geometry geom, int batch_size);
+    Stages(Geometry, int batch, const std::vector<View> &);
     ~Stages() {
         cufftDestroy(plan);
     }
-    void filter(int actual);
-    void backproject(float *out, int first, int actual);
+    void filter(int first, int actual);
+    void backproject(float *volume, int first, int actual);
 };
 } // namespace fdk

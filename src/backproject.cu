@@ -1,53 +1,50 @@
 #include "stages.cuh"
 
-extern "C" __global__ void back(float *__restrict__ out, const float2 *__restrict__ views,
-                                const float2 *__restrict__ cs, Geometry g, int first, int cnt) {
+extern "C" __global__ void back(float *__restrict__ out, const float2 *__restrict__ det,
+                                const fdk::View *__restrict__ views, Geometry g, int count) {
+    // RTK fixed axes: rotation about Y; X,Z form the gantry plane. The output
+    // is conventional C-order [Z,Y,X], with neighboring threads writing adjacent Xs.
     constexpr int lanes = 16;
-    int ix = blockIdx.x * blockDim.x + threadIdx.x, iy = blockIdx.y * blockDim.y + threadIdx.y,
-        iz = int(blockIdx.z) * lanes;
-    if (ix >= g.n || iy >= g.n)
+    int ix = blockIdx.x * blockDim.x + threadIdx.x, iz = blockIdx.y * blockDim.y + threadIdx.y;
+    int y0 = int(blockIdx.z) * lanes;
+    if (ix >= g.n || iz >= g.n)
         return;
-    float mid = (g.n - 1) * .5f, x = (ix - mid) * g.vox, y = (iy - mid) * g.vox;
-    unsigned long long plane = (unsigned long long)g.n * g.n, pixel = iy * g.n + ix;
-    float val[lanes];
+    constexpr float mid = (Geometry::n - 1) * .5f;
+    float x = (ix - mid) * g.vox, z = (iz - mid) * g.vox;
+    float *column = out + (iz * g.n + y0) * g.n + ix;
+    float sum[lanes];
 #pragma unroll
-    for (int j = 0; j < lanes; j++)
-        val[j] = iz + j < g.n ? out[pixel + (iz + j) * plane] : 0;
-    for (int a = 0; a < cnt; a++) {
-        float2 b = cs[first + a];
-        float r = 1.f / (g.R - x * b.y + y * b.x), m = g.D * r;
-        float u = fmaf((x * b.x + y * b.y), m / g.du, (g.u - 1) * .5f);
+    for (int j = 0; j < lanes; ++j)
+        sum[j] = column[j * g.n];
+    for (int i = 0; i < count; ++i) {
+        const auto p = views[i];
+        float inv = 1.f / (g.R - (p.s * x + p.c * z));
+        float mag = g.D * inv;
+        float u = ((p.c * x - p.s * z) * mag - p.ox) / g.du + (g.u - 1) * .5f;
         int ui = __float2int_rd(u);
-        float fu = u - ui;
-        if (ui < -1 || ui >= g.u)
+        if (ui < 0 || ui >= g.u - 1)
             continue;
-        int stride = g.u + 1, pixels = g.v * stride;
-        const float2 *p = views + (unsigned long long)a * (pixels + 2) + 1;
-        float w = g.R * r;
-        w *= w;
+        float fu = u - ui, w = g.R * inv;
+        const float2 *row0 = det + i * g.u * g.v + ui;
 #pragma unroll
-        for (int j = 0; j < lanes; j++) {
-            // Keep each original four-plane group's coordinate evaluation order;
-            // regrouping (base + j*vox) changes rounding at some pitches.
-            float z = (iz + (j & ~3) - mid) * g.vox;
-            float v = fmaf(z + (j & 3) * g.vox, m / g.dv, (g.v - 1) * .5f);
+        for (int j = 0; j < lanes; ++j) {
+            float v = (((y0 + j - mid) * g.vox) * mag - p.oy) / g.dv + (g.v - 1) * .5f;
             int vi = __float2int_rd(v);
-            float fv = v - vi;
-            // Clamp before multiplication as valid geometry can still project far off-panel.
-            int i = max(-2, min(g.v, vi)) * stride + (ui + 1);
-            float2 lo = p[max(-1, min(pixels, i))], hi = p[max(-1, min(pixels, i + stride))];
-            float s = fmaf(fu, lo.y, lo.x), t = fmaf(fu, hi.y, hi.x);
-            val[j] = fmaf(fmaf(fv, t - s, s), w, val[j]);
+            if (vi < 0 || vi >= g.v - 1)
+                continue;
+            float2 lo = row0[vi * g.u], hi = row0[(vi + 1) * g.u];
+            float a = fmaf(fu, lo.y, lo.x), b = fmaf(fu, hi.y, hi.x);
+            sum[j] = fmaf(fmaf(v - vi, b - a, a), w * w, sum[j]);
         }
     }
 #pragma unroll
-    for (int j = 0; j < lanes; j++)
-        if (iz + j < g.n)
-            out[pixel + (iz + j) * plane] = val[j];
+    for (int j = 0; j < lanes; ++j)
+        column[j * g.n] = sum[j];
 }
 
 void fdk::Stages::backproject(float *out, int first, int actual) {
-    dim3 grid(ceildiv(g.n, 16), ceildiv(g.n, 8), ceildiv(g.n, 16));
-    back<<<grid, dim3(16, 8)>>>(out, freq.p, cs.p, g, first, actual);
+    static_assert(Geometry::n % 16 == 0, "Y tiles must cover the fixed grid exactly");
+    dim3 grid(ceildiv(g.n, 16), ceildiv(g.n, 8), g.n / 16);
+    back<<<grid, dim3(16, 8)>>>(out, freq.p, views.p + first, g, actual);
     checked(cudaGetLastError());
 }
