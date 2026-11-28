@@ -1,8 +1,0 @@
-{
-  "format": "CFDK-threshold-atlas-protocol-v1",
-  "source": "External source-chain SHA-256. Rerun detached mask/label/face/index and anchor verification of every input. All threshold cells of a case share grid, edge parent, anchors, levels and gate. Withheld jobs produce reasons only.",
-  "votes": "At each cell count flagged and unknown over the ordered Cartesian product of global threshold pairs. Fully observed all flagged; fully observed all below; fully observed mixed; partially observed; all unknown form a disjoint partition. No estimated probabilities or imputation.",
-  "footprints": "On the cylindrical 4-neighbour grid, label the intersection of measured flagged cells, the union of measured flagged cells, and the union of flagged or unknown cells. IDs are first row-major index plus one, using only azimuth wrap. A path in a union may use different settings along its length and is not a path in one real threshold scenario.",
-  "adjacent_settings": "For each ordered right or down step of the threshold index square record an exact 3x3 support transition table, all positive-ID overlap counts, and per-ID support flowing to/from below or unknown. Component IDs are local to a setting, not object IDs. No nearest matching, persistence lifetime, monotonic nesting or physical defect identity is inferred.",
-  "acceptance": "Every per-map upstream check passes. Exact integer agreement with separate NumPy/SciPy calculations on every archived case, explicit split/merge/unknown and union-only path counterexamples; corrupted or incomplete lineage fails without a partial final. Offline deterministic; no GPU or network required."
-}

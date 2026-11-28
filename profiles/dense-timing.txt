@@ -1,0 +1,20 @@
+DGX Spark / GB10, CUDA 13.0.88, cuFFT 12.0, Nsight Systems 2025.3.2
+Walnut: 720 views, 296 detector rows x 280 columns, 512^3 FP32, FOV 40 mm, batch 16.
+CMake Release, native SM. No fsync; warm OS cache, no application clock lock.
+One Nsight Systems CUDA trace: child process wall = 1791.567420 ms; GPU kernel durations:
+back              45 launches    379.191680 ms
+vector_fft        90 launches     31.705728 ms
+spectrum          45 launches     15.578848 ms
+pre               45 launches      8.696512 ms
+unpack            45 launches      2.937568 ms
+pairs             45 launches      2.101440 ms
+ramp               1 launches      0.450336 ms
+angles             1 launches      0.002816 ms
+Filter = pre + cuFFT (vector_fft) + spectrum + unpack + pairs; excludes one-time ramp/angles.
+Unprofiled, separate process each time, same input and real output file (open/write/close):
+warm-up: 1525.578630 ms
+measured: 1486.881438 1556.570407 1485.949436 1503.516213 1527.334550 ms
+median: 1503.516213 ms
+Synthetic bench (n=256, views=16, repeats=9; CUDA events, median, effective boundary bytes/time):
+| Filter (cuFFT) | 0.37299 | n/a | 33.824 GB/s (effective) | n/a |
+| Backprojection | 1.08314 | n/a | 123.916 GB/s (effective) | n/a |

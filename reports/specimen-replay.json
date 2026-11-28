@@ -1,8 +1,0 @@
-{
-  "protocol": "Regenerated all five noisy cone acquisitions, recomputed both calibrated remounts per comparison, 27 global maps, truth matching, batch/resume and deterministic offline HTML. Exact qualification bytes compared to a prior run. Same toolchain, simulated specimens only.",
-  "projection_payloads": 5,
-  "comparisons": 3,
-  "pairs": 27,
-  "matched_qualification_sha256": "9e3f69b2900a0c61339047ba3eb0bf8aa32c7e40133d16f8866203d94b04d722",
-  "offline_html_sha256": "058d064f1b9d37b4c7c2022ed9247881fceb91fe4514bb9b0754e72f04170237"
-}

@@ -1,8 +1,0 @@
-{
-  "format": "CFDK-body-witness-v1",
-  "material_xyz_mm": [[7.55, 0, -5.65], [-4.5, 6.2, 5.4], [-3.0, -7.0, -5.65]],
-  "radius_mm": 0.50,
-  "level_per_mm": 0.070,
-  "search_half_mm": 1.65,
-  "residual_limit_mm": 0.050
-}
