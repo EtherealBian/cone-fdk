@@ -1,20 +1,38 @@
-DGX Spark / GB10, CUDA 13.0.88, cuFFT 12.0, Nsight Systems 2025.3.2
-Walnut: 720 views, 296 detector rows x 280 columns, 512^3 FP32, FOV 40 mm, batch 16.
-CMake Release, native SM. No fsync; warm OS cache, no application clock lock.
-One Nsight Systems CUDA trace: child process wall = 1791.567420 ms; GPU kernel durations:
-back              45 launches    379.191680 ms
-vector_fft        90 launches     31.705728 ms
-spectrum          45 launches     15.578848 ms
-pre               45 launches      8.696512 ms
-unpack            45 launches      2.937568 ms
-pairs             45 launches      2.101440 ms
-ramp               1 launches      0.450336 ms
-angles             1 launches      0.002816 ms
-Filter = pre + cuFFT (vector_fft) + spectrum + unpack + pairs; excludes one-time ramp/angles.
-Unprofiled, separate process each time, same input and real output file (open/write/close):
-warm-up: 1525.578630 ms
-measured: 1486.881438 1556.570407 1485.949436 1503.516213 1527.334550 ms
-median: 1503.516213 ms
-Synthetic bench (n=256, views=16, repeats=9; CUDA events, median, effective boundary bytes/time):
-| Filter (cuFFT) | 0.37299 | n/a | 33.824 GB/s (effective) | n/a |
-| Backprojection | 1.08314 | n/a | 123.916 GB/s (effective) | n/a |
+Measured on NVIDIA DGX Spark GB10 (SM 12.1), Release, CUDA 13.0.88 / cuFFT 12.0.
+Walnut: 720 x 296 x 280 projections, 512^3 FP32 volume, 40 mm FOV, batch 16.
+
+CLI wall time: warm OS cache, one warm-up then five independent processes.
+Python perf_counter_ns around subprocess.run; same ordinary output file, closed, no fsync.
+warmup_ms 1439.670995
+samples_ms 1467.714769 1544.548078 1521.954762 1632.012885 1589.298084
+median_ms 1544.548078
+
+Nsight Systems 2025.3.2: one separate CUDA trace, not included in the five runs.
+kernel        launches    total_ms
+angles              1     0.002816
+ramp                1     0.450240
+pre                45     8.748544
+cuFFT              90    31.195456
+spectrum           45    15.169952
+unpack             45     2.957056
+pairs              45     2.025824
+back               45   401.296064
+Filter (pre + cuFFT + spectrum + unpack + pairs): 60.096832 ms
+Backprojection (back): 401.296064 ms
+Backprojection logical effective bandwidth = 45 x 2 x 4 x 512^3 bytes / GPU kernel time = 120.41 GB/s.
+This counts volume reads and writes per batch; it does not measure DRAM bus traffic.
+
+Nsight Compute 2025.3.1.0: first launch per listed kernel, default clock/cache policy.
+kernel       achieved occupancy (%)    registers/thread
+angles                8.23                 18
+ramp                  8.09                 36
+pre                  77.27                 18
+spectrum             82.99                 16
+unpack               76.34                 17
+pairs                77.68                 24
+back                 58.05                 72
+
+From the repository root, after preparing the 720-view input:
+  nsys profile --trace=cuda --sample=none --cpuctxsw=none -o build/walnut ./build/cone-fdk build/walnut720.geom build/walnut720.f32 512 40 build/volume.f32
+  nsys stats --report cuda_gpu_kern_sum build/walnut.nsys-rep
+  ncu --kernel-name-base function -k 'regex:^(angles|ramp|pre|spectrum|unpack|pairs|back)$' -c 7 --metrics sm__warps_active.avg.pct_of_peak_sustained_active,launch__registers_per_thread --page raw --csv ./build/cone-fdk build/walnut720.geom build/walnut720.f32 512 40 /dev/null

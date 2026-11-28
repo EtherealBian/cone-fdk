@@ -1,0 +1,23 @@
+{
+  "device": "GPU #0: NVIDIA GB10, with 124609MB, CUDA compute capability 12.1",
+  "astra": "2.5.0",
+  "algorithm": "FDK_CUDA / ram-lak",
+  "views": 720,
+  "detector_vu": [
+    296,
+    280
+  ],
+  "volume_zyx": [
+    512,
+    512,
+    512
+  ],
+  "fov_mm": 40,
+  "corrected_input_sha256": "ecbc3166a420a31bd11cc0ba78f5469428de43726059c03a3af1ed6e5160b5a8",
+  "native_sha256": "868249894840a28eb9db08dd75b36c56e23aab83155fad38f8a971ed734be25f",
+  "astra_sha256": "97a80ed750b8fa64ff00544c9b7a28122851a92ebcf0938cd228eaa8e8323712",
+  "comparison": "all voxels in physical coordinates; no registration or gain fitting",
+  "rel_l2": 0.0002898929610212064,
+  "max_abs": 4.7359615564346313e-05,
+  "reference_abs_peak": 0.10855788737535477
+}

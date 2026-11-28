@@ -1,19 +1,11 @@
 #include "stages.cuh"
 
-/**
- * back — Accumulate one angle batch into a dense cubic volume.
- *
- * Thread mapping: 16 x 8 threads per block; one (x,y) and up to 16 z values per thread.
- * Memory: Register accumulators, global angle and detector tables, coalesced volume rows.
- * Occupancy: 58.02% achieved; 72 registers/thread (GB10, first launch).
- * Known bottleneck: See optimization-log, Z tiling and detector access.
- */
 extern "C" __global__ void back(float *__restrict__ out, const float2 *__restrict__ views,
                                 const float2 *__restrict__ cs, Geometry g, int first, int cnt) {
     constexpr int lanes = 16;
     int ix = blockIdx.x * blockDim.x + threadIdx.x, iy = blockIdx.y * blockDim.y + threadIdx.y,
         iz = int(blockIdx.z) * lanes;
-    if (ix >= g.n || iy >= g.n || iz >= g.n)
+    if (ix >= g.n || iy >= g.n)
         return;
     float mid = (g.n - 1) * .5f, x = (ix - mid) * g.vox, y = (iy - mid) * g.vox;
     unsigned long long plane = (unsigned long long)g.n * g.n, pixel = iy * g.n + ix;
@@ -57,5 +49,5 @@ extern "C" __global__ void back(float *__restrict__ out, const float2 *__restric
 void fdk::Stages::backproject(float *out, int first, int actual) {
     dim3 grid(ceildiv(g.n, 16), ceildiv(g.n, 8), ceildiv(g.n, 16));
     back<<<grid, dim3(16, 8)>>>(out, freq.p, cs.p, g, first, actual);
-    CUDA_CHECK_LAST();
+    checked(cudaGetLastError());
 }

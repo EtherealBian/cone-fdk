@@ -7,9 +7,8 @@ static void validate_inputs(const Projections &proj, const Geometry &g) {
           g.n >= 2 && g.n <= 4096 && g.vox > 0 && g.du > 0 && g.dv > 0 && g.D > g.R &&
           g.R > g.n * g.vox * .708f && std::abs(g.sign) == 1 &&
           std::isfinite(g.vox * g.n + g.du + g.dv + g.R + g.D + g.start)) ||
-        proj.size() != size_t(g.a) * g.v * g.u ||
-        !std::all_of(proj.begin(), proj.end(), [](float v) { return std::isfinite(v); }))
-        throw std::invalid_argument("invalid geometry, projection extent or sample");
+        proj.size() != size_t(g.a) * g.v * g.u)
+        throw std::invalid_argument("invalid geometry or projection extent");
 }
 void fdk_reconstruct(const Projections &proj, const Geometry &geo, Volume &out) {
     validate_inputs(proj, geo);
@@ -17,7 +16,7 @@ void fdk_reconstruct(const Projections &proj, const Geometry &geo, Volume &out) 
     const size_t pixels = size_t(geo.v) * geo.u, voxels = size_t(geo.n) * geo.n * geo.n;
     fdk::Stages stages(geo, batch);
     Device<float> volume(voxels);
-    CUDA_CHECK(cudaMemset(volume.p, 0, voxels * sizeof(float)));
+    checked(cudaMemset(volume.p, 0, voxels * sizeof(float)));
     for (int first = 0; first < geo.a; first += batch) {
         int actual = std::min(batch, geo.a - first);
         checked(cudaMemcpy(stages.detector.p, proj.data() + first * pixels,
